@@ -1,0 +1,65 @@
+{
+  "identity": {
+    "id": "session-a",
+    "appName": "greeting_agent",
+    "userId": "stark-apbm-probe-20261004-7c7e479f"
+  },
+  "event_count": 4,
+  "events": [
+    {
+      "id": "bbc51928-2578-4bb4-ae6b-ebca942075b0",
+      "author": "user",
+      "timestamp": 1791092246.599098,
+      "invocationId": "e-3cbc1653-9054-4554-9a13-1c68208183e5",
+      "role": "user",
+      "texts": [
+        "Remember this test marker for this conversation: amber-lantern-7c7e. Reply only with ACK followed by the marker. No tools or context lookup are needed."
+      ],
+      "tool_names": [],
+      "omitted_text_parts": 0
+    },
+    {
+      "id": "2e833e12-c623-498a-99f8-01b016b729c0",
+      "author": "greeting_agent",
+      "timestamp": 1791092246.856506,
+      "invocationId": "e-3cbc1653-9054-4554-9a13-1c68208183e5",
+      "role": "model",
+      "texts": [
+        "ACK amber-lantern-7c7e"
+      ],
+      "tool_names": [],
+      "omitted_text_parts": 0
+    },
+    {
+      "id": "195afd32-1b3b-41f8-be1c-3ef9e167c296",
+      "author": "user",
+      "timestamp": 1791093657.037685,
+      "invocationId": "e-f05257e4-b92a-45f2-a902-6f1cc9e691c4",
+      "role": "user",
+      "texts": [
+        "What test marker did I give you earlier in this conversation? Reply only with the marker. No tools or context lookup are needed."
+      ],
+      "tool_names": [],
+      "omitted_text_parts": 0
+    },
+    {
+      "id": "72daecf2-b7de-438f-a1e8-55b1f6d11449",
+      "author": "greeting_agent",
+      "timestamp": 1791093657.30992,
+      "invocationId": "e-f05257e4-b92a-45f2-a902-6f1cc9e691c4",
+      "role": "model",
+      "texts": [
+        "amber-lantern-7c7e"
+      ],
+      "tool_names": [],
+      "omitted_text_parts": 0
+    }
+  ],
+  "checks": {
+    "identity_matches": true,
+    "original_user_marker_present": true,
+    "original_ack_present": true,
+    "other_marker_absent": true,
+    "baseline_matches": true
+  }
+}

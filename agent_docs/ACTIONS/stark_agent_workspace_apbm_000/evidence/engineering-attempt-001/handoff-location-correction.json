@@ -1,0 +1,54 @@
+{
+  "recorded_at": "2026-10-04T22:14:42.603752+06:00",
+  "authority": "Director user instruction: put the QA handoff in QAM/HANDOFFS",
+  "canonical_handoff": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/HANDOFFS/QA_HANDOFF.md",
+  "compatibility_pointer": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QA_HANDOFF.md",
+  "source_candidate_unchanged": true,
+  "acceptance_criteria_unchanged": true,
+  "tests_rerun": false,
+  "reason": "Documentation relocation only; all 218 recorded candidate inputs still match",
+  "original_archive_preserved": "ENGINEERING_attempt-001.zip",
+  "corrected_archive": "ENGINEERING_attempt-002.zip",
+  "changed_documents": [
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QA_HANDOFF.md",
+      "before_sha256": "94d8c74767bd32ee13f5e7272745efa8c47700c77286e669fac8af827ee01f78",
+      "after_sha256": "f83bcb00d177869bee2c08c370dfb9c2b9f40605d1f85694bfd7f43d6404e473"
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/HANDOFFS/QA_HANDOFF.md",
+      "before_sha256": null,
+      "after_sha256": "65928d72654e99ac892574d3097edaad96cb948645499e629fa245971bc8eb1a"
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/QAM_ENTRY.md",
+      "before_sha256": "9a530a2931979bbabd5c8b71ebbcde6e3d0eaa5a5f40c34e40e5f84b9f9cdfd1",
+      "after_sha256": "98ac3e8081fcc8a21896faca30dc64ee9e6d3cdbe7d406d5902911203d2d113e"
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/QAM_MANIFEST.md",
+      "before_sha256": "020d587ef70598158edbeb10ac1e30b3571846b69a8cf1142c75ef74f48915ca",
+      "after_sha256": "1046e8184a548fc684383009924335cd73462cec6d791dc5ae8fa0a19c26afeb"
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/HANDOFFS/README.md",
+      "before_sha256": "8d26117a56f736139efc5998e799f0fc7b9ac12bccff298942fdcd2c6b950ba9",
+      "after_sha256": "cfee82c7eae1232b46155f78dd3fe9673d136ec34c8bd414a53bed4708b957fd"
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/evidence/engineering-attempt-001/REVIEW_START_HERE.md",
+      "before_sha256": "8c77838061ab1487c8374ed0fc902d824c211a52bcec6f58baf285cd50f86937",
+      "after_sha256": "fe1421643e7530b8c2e2971a20ede29b5045c8eed43fea19939d90d1db84eb83"
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/evidence/engineering-attempt-001/staging-paths.txt",
+      "before_sha256": "e814ec1d09544aafe1c92e202439be522c2b065ca628dc292ddf72f1b1b46bac",
+      "after_sha256": "7e4f360d8fe73a4b6d2d99829cb9fa567a736e626dc33d49be9f58fe1f1f178e"
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/EXECUTION_LOG.md",
+      "before_sha256": "ea7d99988f395c6d1011f3ebf9ecd05ec5490f9e4a1c564f5b35e5eedc32d423",
+      "after_sha256": "7fc13524d95be2bfd664e844238e6e741b27abef4e74636aaa9e9d1e8b49fc6b"
+    }
+  ]
+}

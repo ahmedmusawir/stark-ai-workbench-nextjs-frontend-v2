@@ -18,6 +18,7 @@
  */
 
 import { useEffect, useRef, useState } from "react";
+import { CopyControl } from "@/components/workspace/CopyControl";
 import {
   Check,
   Copy,
@@ -37,6 +38,7 @@ import {
 } from "@/utils/speech";
 
 interface MessageActionsProps {
+  workbench?: boolean;
   role: "user" | "assistant";
   content: string;
   isLast?: boolean;
@@ -52,6 +54,7 @@ export default function MessageActions({
   onEdit,
   onRegenerate,
   onFeedback,
+  workbench = false,
 }: MessageActionsProps) {
   const isAssistant = role === "assistant";
 
@@ -62,21 +65,22 @@ export default function MessageActions({
         (isAssistant ? "" : "justify-end")
       }
     >
-      <CopyButton content={content} />
+      {workbench ? <CopyControl text={content} label="Copy message"/> : <CopyButton content={content} />}
       {isAssistant && <ReadAloudButton content={content} />}
-      {isAssistant && (
+      {workbench && isAssistant && !isSpeechSupported() && <span className="ws-small">Read aloud unavailable in this browser.</span>}
+      {isAssistant && !workbench && (
         <FeedbackButton
           direction="up"
           onClick={() => onFeedback?.("up")}
         />
       )}
-      {isAssistant && (
+      {isAssistant && !workbench && (
         <FeedbackButton
           direction="down"
           onClick={() => onFeedback?.("down")}
         />
       )}
-      {isAssistant && isLast && onRegenerate && (
+      {!workbench && isAssistant && isLast && onRegenerate && (
         <ActionButton
           label="Regenerate response"
           onClick={onRegenerate}
@@ -84,7 +88,7 @@ export default function MessageActions({
           <RotateCw size={15} />
         </ActionButton>
       )}
-      {!isAssistant && onEdit && (
+      {!workbench && !isAssistant && onEdit && (
         <ActionButton label="Edit message" onClick={onEdit}>
           <Pencil size={15} />
         </ActionButton>

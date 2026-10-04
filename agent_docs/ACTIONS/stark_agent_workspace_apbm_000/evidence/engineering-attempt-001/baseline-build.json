@@ -1,0 +1,13 @@
+{
+  "check": "build",
+  "label": "baseline-build",
+  "command": [
+    "node",
+    "node_modules/next/dist/bin/next",
+    "build"
+  ],
+  "exit_code": 1,
+  "elapsed_seconds": 25.742,
+  "timestamp": "2026-10-04T21:35:08.464431+06:00",
+  "environment": "fresh minimal process environment; Node fail-closed network guard; fonts allowed for build only"
+}

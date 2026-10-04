@@ -1,0 +1,16 @@
+/* Additional conversation renderer values. Source-aligned oneLight/oneDark;
+   the approved core palette in TOKENS.css is unchanged. */
+:root {
+ --code-background: 230 1% 98%;
+ --code-foreground: 230 8% 24%;
+ --code-keyword: 301 63% 40%;
+ --code-string: 119 34% 32%;
+ --code-radius: .5rem;
+ --thread-width: 48rem;
+}
+.dark {
+ --code-background: 220 13% 18%;
+ --code-foreground: 220 14% 71%;
+ --code-keyword: 286 60% 67%;
+ --code-string: 95 38% 62%;
+}

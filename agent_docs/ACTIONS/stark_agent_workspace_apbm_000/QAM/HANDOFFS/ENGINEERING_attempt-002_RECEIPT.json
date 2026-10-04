@@ -1,0 +1,16 @@
+{
+  "attempt": 2,
+  "revision": "Director-requested QA handoff location correction",
+  "recorded_at": "2026-10-04T22:14:42.938589+06:00",
+  "repo_archive": "/home/moose/NEXTJS/stark-ai-workbench-nextjs-frontend-v2/agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/HANDOFFS/ENGINEERING_attempt-002.zip",
+  "shareable_copy": "/home/moose/Downloads/ENGINEERING_attempt-002.zip",
+  "downloads_copy_status": "VERIFIED IDENTICAL",
+  "sha256": "0a5970e030f93d0435661a1272ca740993b0f1be1d38237b7f6d04879d9a0684",
+  "bytes": 3876056,
+  "members": 189,
+  "crc_validation": "PASS",
+  "membership_hashes_validation": "PASS",
+  "source_candidate_unchanged": true,
+  "original_archive_preserved": "/home/moose/NEXTJS/stark-ai-workbench-nextjs-frontend-v2/agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/HANDOFFS/ENGINEERING_attempt-001.zip",
+  "copy_verified_at": "2026-10-04T22:15:11.400425+06:00"
+}

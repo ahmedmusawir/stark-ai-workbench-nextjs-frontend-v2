@@ -1,0 +1,16 @@
+{
+  "shape": "array",
+  "top_level_keys": [],
+  "row_count": 2,
+  "matching_sessions": [
+    {
+      "id": "session-a"
+    },
+    {
+      "id": "session-b"
+    }
+  ],
+  "checks": {
+    "both_discoverable": true
+  }
+}

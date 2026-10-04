@@ -1,5 +1,59 @@
 # Recovery State
 
+**CURRENT — 2026-10-04 22:15 Asia/Dhaka: QA handoff location corrected per Director.**
+
+Canonical handoff: `agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/HANDOFFS/QA_HANDOFF.md`; module-root document is only a compatibility pointer.
+Latest return: `/home/moose/Downloads/ENGINEERING_attempt-002.zip`, identical validated repository copy; supersedes 001 for document layout. Original archive preserved.
+Candidate/test results unchanged; all 218 recorded inputs still match. Independent QA/Lead adjudication pending.
+Next: Tony review/selective commit, then independent QA Q1 using corrected package and entry.
+Response: `agent_docs/RESPONSES/response_2026-10-04_221511_qa-handoff-location-correction.md`.
+
+--- Previous recovery records preserved below. ---
+
+# Recovery State
+
+**CURRENT — 2026-10-04 22:03 Asia/Dhaka: APBM_000 engineering return complete.**
+
+Last action: Implemented authorized workspace UI and isolated fixture tooling; build/TypeScript, targeted 57/57 and browser 33/33 pass. Full Jest 250 pass/37 individually documented inherited fail; zero new.
+Candidate: uncommitted on frontend-apbm, baseline/current HEAD 20ef380bdd6eed5e111d953d6404992add7a88a6. No Git mutations/live agent calls/dependency changes. Protected seams preserved.
+Return: `/home/moose/Downloads/ENGINEERING_attempt-001.zip`, identical repository QAM/HANDOFFS copy; indexed membership/SHA/CRC verified. Factual handoff: `agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QA_HANDOFF.md`.
+Pending: Tony review/selective commit, independent QA Q1 and QA Lead inherited-failure adjudication. Gate Q not issued; APBM_001 live guarantees unqualified.
+Next step: Share the ZIP; use its REVIEW_START_HERE and selective staging instructions; independent QA enters module QAM/AGENTS.md.
+Response: `agent_docs/RESPONSES/response_2026-10-04_220306_apbm-000-engineering-return.md`.
+
+--- Previous recovery records preserved below. ---
+
+# Recovery State
+
+**CURRENT — 2026-10-04 15:32 Asia/Dhaka: Designer theme extraction report logged.**
+
+Last action: Re-read CLAUDE.md and saved `agent_docs/RESPONSES/response_2026-10-04_153205_designer-theme-source-report.md` before screen output. Existing `/home/moose/Downloads/DESIGNER_THEME_SOURCE_PACK_v0_1.zip` revalidated unchanged.
+Pending: Designer workspace/style-tile approval package; earlier architecture decisions remain in the preserved records below.
+Next step: Share the ZIP with the Designer; preserve palette, dark/light modes and mobile/tablet/desktop requirements.
+Reporting: Save substantive reports under RESPONSES before displaying; end with generated-file links and next move. Only required documentation changed in this follow-up.
+
+--- Previous recovery records preserved below. ---
+
+
+**CURRENT — 2026-10-04 12:03 Asia/Dhaka: bounded ADK continuation complete — SUPPORTED FOR THE TESTED CASE.**
+
+Last action: Direct cloud probe verified both Director-created greeting_agent test sessions, listing, one resume each and stored history separation/append. Report: `agent_docs/RECON/RECON_ADK_CONTINUATION_20261004-115739.md`.
+Pending: JARVIS deployment/roster, authenticated ownership and catalogue recovery decisions. This is Engineer recon evidence, not Gate Q.
+Next step: Review `agent_docs/RESPONSES/response_2026-10-04_115739_adk-capability-continuation.md` and same-stem ZIP. Both existing test sessions remain identifiable with four events each. No product/configuration/Git mutations.
+Scope: 6 service GET requests and 2 POST requests; one additional unsent sandbox DNS access attempt separately logged. Prior frontend/auth/index/restart gaps are not certified by this probe.
+
+--- Previous recovery records preserved below. ---
+
+
+**CURRENT — 2026-10-03 23:48 Asia/Dhaka: Stark Agent Workspace APBM pilot recon complete.**
+
+Last action: Source/session-lifecycle inspection and installed checks completed on `frontend-apbm`, HEAD `20ef380bdd6eed5e111d953d6404992add7a88a6`. Report: `agent_docs/RECON/RECON_ADK_FRONTEND_20261003-234722.md`.
+Pending: JARVIS decisions on designated deployment/roster, authorized test identity and safe agent, ownership/recovery contract, design inputs and phase scope. Live probe BLOCKED/INCONCLUSIVE (0 sessions, 0 submissions, 0 reads).
+Next step: Architect reviews `agent_docs/RESPONSES/response_2026-10-03_234722_adk-frontend-recon.md` and same-stem ZIP. No old module assignment resumed; no fixes or Git mutations authorized/performed by recon.
+Checks: tsc pass; Jest 225 pass / 38 fail (26 pass / 10 fail suites); build blocked on Google Fonts fetch; lint script fails; npm audit DNS blocked; browser/boot unavailable.
+
+--- Historical recovery record preserved below; its branch, pending actions and green-board claims are not current authorization or verification. ---
+
 **⏸️ REPO PARKED 2026-07-26 — READ `session_2026-07-26.md` FIRST.** It is the
 complete re-entry guide: branch topology, module ledger, env/infra state,
 architecture cheat-sheet, and the full pending queue. The two headline facts:

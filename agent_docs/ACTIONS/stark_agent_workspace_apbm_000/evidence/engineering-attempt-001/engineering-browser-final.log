@@ -1,0 +1,139 @@
+(node:1277186) [DEP0205] DeprecationWarning: `module.register()` is deprecated. Use `module.registerHooks()` instead.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+
+Running 32 tests using 1 worker
+
+(node:1277435) [DEP0205] DeprecationWarning: `module.register()` is deprecated. Use `module.registerHooks()` instead.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+  ✓   1 tests/workspace/workspace.spec.ts:10:134 › render directory dark 375 (1.5s)
+  ✓   2 tests/workspace/workspace.spec.ts:10:134 › render directory dark 768 (2.0s)
+  ✓   3 tests/workspace/workspace.spec.ts:10:134 › render directory dark 1280 (1.3s)
+  ✓   4 tests/workspace/workspace.spec.ts:10:134 › render directory light 375 (1.3s)
+  ✓   5 tests/workspace/workspace.spec.ts:10:134 › render directory light 768 (1.3s)
+  ✓   6 tests/workspace/workspace.spec.ts:10:134 › render directory light 1280 (1.4s)
+  ✓   7 tests/workspace/workspace.spec.ts:10:134 › render workspace dark 375 (1.7s)
+  ✓   8 tests/workspace/workspace.spec.ts:10:134 › render workspace dark 768 (1.7s)
+  ✓   9 tests/workspace/workspace.spec.ts:10:134 › render workspace dark 1280 (1.5s)
+  ✓  10 tests/workspace/workspace.spec.ts:10:134 › render workspace light 375 (1.3s)
+  ✓  11 tests/workspace/workspace.spec.ts:10:134 › render workspace light 768 (1.2s)
+  ✓  12 tests/workspace/workspace.spec.ts:10:134 › render workspace light 1280 (1.2s)
+  ✓  13 tests/workspace/workspace.spec.ts:10:134 › render conversation dark 375 (1.3s)
+  ✘  14 tests/workspace/workspace.spec.ts:10:134 › render conversation dark 768 (1.4s)
+(node:1278209) [DEP0205] DeprecationWarning: `module.register()` is deprecated. Use `module.registerHooks()` instead.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+  ✘  15 tests/workspace/workspace.spec.ts:10:134 › render conversation dark 1280 (1.6s)
+(node:1278358) [DEP0205] DeprecationWarning: `module.register()` is deprecated. Use `module.registerHooks()` instead.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+  ✓  16 tests/workspace/workspace.spec.ts:10:134 › render conversation light 375 (1.7s)
+  ✘  17 tests/workspace/workspace.spec.ts:10:134 › render conversation light 768 (1.6s)
+(node:1278689) [DEP0205] DeprecationWarning: `module.register()` is deprecated. Use `module.registerHooks()` instead.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+  ✘  18 tests/workspace/workspace.spec.ts:10:134 › render conversation light 1280 (1.7s)
+(node:1278892) [DEP0205] DeprecationWarning: `module.register()` is deprecated. Use `module.registerHooks()` instead.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+  ✓  19 tests/workspace/workspace.spec.ts:23:5 › directory filter, neutral alternate roster and safe navigation/back (1.9s)
+  ✓  20 tests/workspace/workspace.spec.ts:26:5 › default dark, saved light and legacy system are preserved (2.3s)
+  ✓  21 tests/workspace/workspace.spec.ts:29:5 › invalid query cannot invoke services; empty/loading/unavailable roster distinct (2.5s)
+  ✓  22 tests/workspace/workspace.spec.ts:33:5 › fresh drafts, whitespace/IME and double-submit guard; durable returned ID binds once (1.9s)
+  ✓  23 tests/workspace/workspace.spec.ts:36:5 › navigation drawer traps focus, restores opener, closes at breakpoint and portal cleans up (1.5s)
+  ✓  24 tests/workspace/workspace.spec.ts:39:5 › context disclosure and nested dialogs isolate edits by agent/user and reset on reload (2.3s)
+  ✓  25 tests/workspace/workspace.spec.ts:43:5 › context focus gets safe destination when narrow resize hides content (1.2s)
+  ✓  26 tests/workspace/workspace.spec.ts:46:5 › missing/unavailable/access/uncertain/pending/failed/metadata states constrain callbacks (4.9s)
+  ✓  27 tests/workspace/workspace.spec.ts:57:5 › recents partial/recovered states and safe literal metadata actions with failure retention (3.1s)
+  ✓  28 tests/workspace/workspace.spec.ts:62:5 › late history cannot paint another session; clipboard fallback and no raw HTML (2.0s)
+  ✓  29 tests/workspace/workspace.spec.ts:66:5 › portal light/dark tokens present on first visible frame and modal Escape restores trigger (2.4s)
+  ✓  30 tests/workspace/workspace.spec.ts:70:5 › modal background inert, backdrop dismissal and listener/portal cleanup (1.6s)
+  ✓  31 tests/workspace/workspace.spec.ts:73:5 › real copy payloads and speech lifecycle with explicit browser doubles (1.4s)
+  ✓  32 tests/workspace/workspace.spec.ts:81:5 › metadata-warning successful send keeps returned ID and repeats only deliberate sends (2.1s)
+
+
+  1) tests/workspace/workspace.spec.ts:10:134 › render conversation dark 768 ───────────────────────
+
+    Error: expect(received).toBeTruthy()
+
+    Received: false
+
+      16 |   await expect(page.getByText('Here is a', {exact:false})).toBeVisible();
+      17 |   const scroll=await page.locator('.ws-thread-scroll').boundingBox(),composer=await page.locator('.ws-compose-wrap').boundingBox();expect(scroll!.y+scroll!.height).toBeLessThanOrEqual(composer!.y+1);expect(composer!.y+composer!.height).toBeLessThanOrEqual(901);
+    > 18 |   expect(await page.getByRole('region',{name:'Code block'}).evaluate(el=>el.scrollWidth>el.clientWidth)).toBeTruthy();expect(await page.getByRole('region',{name:'Message table'}).evaluate(el=>el.scrollWidth>el.clientWidth)).toBeTruthy();
+         |                                                                                                                                                                                                                                 ^
+      19 |   await expect(page.locator('.ws-thread script')).toHaveCount(0);
+      20 |  }
+      21 |  await page.screenshot({path:path.join(evidence,`screenshots/${view}-${theme}-${width}.png`),fullPage:view!=='conversation'});
+        at /home/moose/NEXTJS/stark-ai-workbench-nextjs-frontend-v2/tests/workspace/workspace.spec.ts:18:225
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    agent_docs/ACTIONS/stark_agent_workspace_apbm_000/evidence/engineering-attempt-001/browser-artifacts/workspace-render-conversation-dark-768/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: agent_docs/ACTIONS/stark_agent_workspace_apbm_000/evidence/engineering-attempt-001/browser-artifacts/workspace-render-conversation-dark-768/error-context.md
+
+  2) tests/workspace/workspace.spec.ts:10:134 › render conversation dark 1280 ──────────────────────
+
+    Error: expect(received).toBeTruthy()
+
+    Received: false
+
+      16 |   await expect(page.getByText('Here is a', {exact:false})).toBeVisible();
+      17 |   const scroll=await page.locator('.ws-thread-scroll').boundingBox(),composer=await page.locator('.ws-compose-wrap').boundingBox();expect(scroll!.y+scroll!.height).toBeLessThanOrEqual(composer!.y+1);expect(composer!.y+composer!.height).toBeLessThanOrEqual(901);
+    > 18 |   expect(await page.getByRole('region',{name:'Code block'}).evaluate(el=>el.scrollWidth>el.clientWidth)).toBeTruthy();expect(await page.getByRole('region',{name:'Message table'}).evaluate(el=>el.scrollWidth>el.clientWidth)).toBeTruthy();
+         |                                                                                                                                                                                                                                 ^
+      19 |   await expect(page.locator('.ws-thread script')).toHaveCount(0);
+      20 |  }
+      21 |  await page.screenshot({path:path.join(evidence,`screenshots/${view}-${theme}-${width}.png`),fullPage:view!=='conversation'});
+        at /home/moose/NEXTJS/stark-ai-workbench-nextjs-frontend-v2/tests/workspace/workspace.spec.ts:18:225
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    agent_docs/ACTIONS/stark_agent_workspace_apbm_000/evidence/engineering-attempt-001/browser-artifacts/workspace-render-conversation-dark-1280/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: agent_docs/ACTIONS/stark_agent_workspace_apbm_000/evidence/engineering-attempt-001/browser-artifacts/workspace-render-conversation-dark-1280/error-context.md
+
+  3) tests/workspace/workspace.spec.ts:10:134 › render conversation light 768 ──────────────────────
+
+    Error: expect(received).toBeTruthy()
+
+    Received: false
+
+      16 |   await expect(page.getByText('Here is a', {exact:false})).toBeVisible();
+      17 |   const scroll=await page.locator('.ws-thread-scroll').boundingBox(),composer=await page.locator('.ws-compose-wrap').boundingBox();expect(scroll!.y+scroll!.height).toBeLessThanOrEqual(composer!.y+1);expect(composer!.y+composer!.height).toBeLessThanOrEqual(901);
+    > 18 |   expect(await page.getByRole('region',{name:'Code block'}).evaluate(el=>el.scrollWidth>el.clientWidth)).toBeTruthy();expect(await page.getByRole('region',{name:'Message table'}).evaluate(el=>el.scrollWidth>el.clientWidth)).toBeTruthy();
+         |                                                                                                                                                                                                                                 ^
+      19 |   await expect(page.locator('.ws-thread script')).toHaveCount(0);
+      20 |  }
+      21 |  await page.screenshot({path:path.join(evidence,`screenshots/${view}-${theme}-${width}.png`),fullPage:view!=='conversation'});
+        at /home/moose/NEXTJS/stark-ai-workbench-nextjs-frontend-v2/tests/workspace/workspace.spec.ts:18:225
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    agent_docs/ACTIONS/stark_agent_workspace_apbm_000/evidence/engineering-attempt-001/browser-artifacts/workspace-render-conversation-light-768/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: agent_docs/ACTIONS/stark_agent_workspace_apbm_000/evidence/engineering-attempt-001/browser-artifacts/workspace-render-conversation-light-768/error-context.md
+
+  4) tests/workspace/workspace.spec.ts:10:134 › render conversation light 1280 ─────────────────────
+
+    Error: expect(received).toBeTruthy()
+
+    Received: false
+
+      16 |   await expect(page.getByText('Here is a', {exact:false})).toBeVisible();
+      17 |   const scroll=await page.locator('.ws-thread-scroll').boundingBox(),composer=await page.locator('.ws-compose-wrap').boundingBox();expect(scroll!.y+scroll!.height).toBeLessThanOrEqual(composer!.y+1);expect(composer!.y+composer!.height).toBeLessThanOrEqual(901);
+    > 18 |   expect(await page.getByRole('region',{name:'Code block'}).evaluate(el=>el.scrollWidth>el.clientWidth)).toBeTruthy();expect(await page.getByRole('region',{name:'Message table'}).evaluate(el=>el.scrollWidth>el.clientWidth)).toBeTruthy();
+         |                                                                                                                                                                                                                                 ^
+      19 |   await expect(page.locator('.ws-thread script')).toHaveCount(0);
+      20 |  }
+      21 |  await page.screenshot({path:path.join(evidence,`screenshots/${view}-${theme}-${width}.png`),fullPage:view!=='conversation'});
+        at /home/moose/NEXTJS/stark-ai-workbench-nextjs-frontend-v2/tests/workspace/workspace.spec.ts:18:225
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    agent_docs/ACTIONS/stark_agent_workspace_apbm_000/evidence/engineering-attempt-001/browser-artifacts/workspace-render-conversation-light-1280/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: agent_docs/ACTIONS/stark_agent_workspace_apbm_000/evidence/engineering-attempt-001/browser-artifacts/workspace-render-conversation-light-1280/error-context.md
+
+  4 failed
+    tests/workspace/workspace.spec.ts:10:134 › render conversation dark 768 ────────────────────────
+    tests/workspace/workspace.spec.ts:10:134 › render conversation dark 1280 ───────────────────────
+    tests/workspace/workspace.spec.ts:10:134 › render conversation light 768 ───────────────────────
+    tests/workspace/workspace.spec.ts:10:134 › render conversation light 1280 ──────────────────────
+  28 passed (1.2m)

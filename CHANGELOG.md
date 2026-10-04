@@ -1,5 +1,36 @@
 # Changelog
 
+## 2026-10-04 09:32 UTC — [Codex] Cody, Engineer
+
+- **Created:** `agent_docs/RESPONSES/response_2026-10-04_153205_designer-theme-source-report.md` — mirrored Designer theme-source report, artifact links and next move, saved before display.
+- **Updated:** `session_2026-10-04.md` — Director-authorized logging follow-up and archive verification.
+- **Updated:** `RECOVERY.md` — current Designer handoff and response-format convention.
+- **Reason:** Director requested repository response logging after the read-only extraction. Existing ZIP and application source unchanged.
+
+## 2026-10-04 06:03 UTC — [Codex] Cody, Engineer
+
+- **Created:** `agent_docs/RECON/RECON_ADK_CONTINUATION_20261004-115739.md` — bounded direct ADK continuation, verified two-session stored history and resume.
+- **Created:** `agent_docs/RESPONSES/response_2026-10-04_115739_adk-capability-continuation.md` — short return note saved before display.
+- **Created:** `agent_docs/RESPONSES/response_2026-10-04_115739_adk-capability-continuation.zip` and `agent_docs/RESPONSES/response_2026-10-04_115739_adk-capability-continuation_evidence/` — indexed sanitized ledger, events, verification and repo state.
+- **Created:** `session_2026-10-04.md` — authorization, access interruptions, request accounting and completion.
+- **Updated:** `RECOVERY.md` — current handoff, preserving historical records.
+- **Reason:** Director-authorized continuation only; no product/configuration/dependency/Git changes.
+
+## 2026-10-03 17:48 UTC — [Codex] Claudy recon seat
+
+- **Created:** `agent_docs/RECON/RECON_ADK_FRONTEND_20261003-234722.md` — evidence-labeled APBM pilot recon; live prerequisites blocked.
+- **Created:** `agent_docs/RESPONSES/response_2026-10-03_234722_adk-frontend-recon.md` — short Architect return note saved before display.
+- **Created:** `agent_docs/RESPONSES/response_2026-10-03_234722_adk-frontend-recon.zip` and `agent_docs/RESPONSES/response_2026-10-03_234722_adk-frontend-recon_evidence/` — indexed, sanitized supporting evidence and transfer package.
+- **Updated:** `session_2026-10-03.md` — recon authorization, findings and completion ledger.
+- **Updated:** `RECOVERY.md` — current recon handoff above preserved historical record.
+- **Reason:** Director-authorized kickoff recon; no source/config/test/SQL/dependency or Git changes.
+
+## 2026-10-03 17:36 UTC — [Codex] Codex
+
+- **Created:** `session_2026-10-03.md` — initialize the missing daily session and record startup context.
+- **Created:** `agent_docs/RESPONSES/response_2026-10-03_233630_session-and-response-logging.md` — save the response before screen output.
+- **Reason:** User follow-up on CLAUDE.md session and response logging requirements.
+
 ## 2026-07-20 13:51 UTC — [CC] Claude Code
 
 - **Updated:** `src/store/chatStore.ts` — FIX-003: persist key mode-namespaced (`adk-session-map-live`/`-mock`) with LIVE-only legacy adoption (F09); `_hasHydrated` flag + mismatch-safe `useHydrationReady()` gate (F06)
@@ -91,3 +122,19 @@
 - **Updated:** `src/services/chatService.ts` — live mode behind `NEXT_PUBLIC_CHAT_MODE` (mock default intact); BACKEND_SWAP_NOTES rewritten to the route-handler seam + D1(b) sentinel
 - **Updated:** `.env.example` — added `ADK_WRAPPER_URL` (placeholder) and `NEXT_PUBLIC_CHAT_MODE=mock`
 - **Reason:** BIM-001 "Prove the Wire" — approved implementation plan (`agent_docs/RESPONSES/response_2026-07-16_191653_bim001-implementation-plan.md`)
+
+## 2026-10-04 16:03 UTC — [CC] Cody Engineer
+
+- **Updated:** APBM_000 BASELINE_CHECK.md, EXECUTION_LOG.md, QA_HANDOFF.md and QAM/QAM_MANIFEST.md — bounded baseline, factual implementation/self-check return; independent QA authority unchanged.
+- **Added:** module evidence/engineering-attempt-001 — per-AC claims, exact source/protected-input hashes, before/after failure comparison, safe logs/screenshots, patch, reproduction and selective staging guidance.
+- **Added:** QAM/HANDOFFS/ENGINEERING_attempt-001.zip and receipt; identical validated Downloads copy, 186 indexed members.
+- **Updated:** session_2026-10-04.md and RECOVERY.md; added `agent_docs/RESPONSES/response_2026-10-04_220306_apbm-000-engineering-return.md` before screen report.
+- **Reason:** User-authorized APBM_000 Engineer build and return. Build/TypeScript, targeted 57/57, browser 33/33 passed; full Jest retains 37 baseline failures pending independent Lead adjudication. No live agents, protected-service/dependency/Git mutations.
+
+## 2026-10-04 16:15 UTC — [CC] Cody Engineer
+
+- **Moved:** APBM_000 canonical QA_HANDOFF.md body into QAM/HANDOFFS; root pointer retained for original instructions.
+- **Updated:** QAM entry/manifest/HANDOFFS README and Engineer review/staging/log records; added location correction hash record.
+- **Added:** corrected indexed ENGINEERING_attempt-002.zip, receipt and verified Downloads copy; 001 preserved.
+- **Updated:** session/recovery and saved response `agent_docs/RESPONSES/response_2026-10-04_221511_qa-handoff-location-correction.md` before screen.
+- **Reason:** Director requested the handoff in QAM/HANDOFFS. Product candidate and tests unchanged.

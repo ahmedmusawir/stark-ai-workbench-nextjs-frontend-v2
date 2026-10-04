@@ -1,0 +1,19 @@
+{
+  "primary": [
+    {"agentId":"jarvis","appName":"jarvis_agent","displayName":"Jarvis","description":"Your general assistant, with Google Search available.","icon":"spark"},
+    {"agentId":"greeting","appName":"greeting_agent","displayName":"Greeting Agent","description":"A conversational assistant with configured profile context.","icon":"chat"},
+    {"agentId":"calculator","appName":"calc_agent","displayName":"Calculator","description":"An assistant with a custom mathematics tool.","icon":"calc"},
+    {"agentId":"product","appName":"product_agent","displayName":"Product Agent","description":"An assistant using configured product context.","icon":"box"},
+    {"agentId":"ghl","appName":"ghl_mcp_agent","displayName":"GHL Agent","description":"An assistant connected to GoHighLevel through MCP.","icon":"link"}
+  ],
+  "alternate": [
+    {"agentId":"research","appName":"fixture_research","displayName":"Research companion","description":"An alternate configuration fixture for organizing questions and research notes.","icon":"file"},
+    {"agentId":"workshop","appName":"fixture_workshop","displayName":"Workshop assistant","description":"A second fixture for exploring ideas in separate conversations.","icon":"box"}
+  ],
+  "sessions": [
+    {"sessionId":"research-plan","title":"Planning the next research session","updated":"Today · 10:42 AM"},
+    {"sessionId":"compare-ideas","title":"Comparing approaches to a new idea","updated":"Yesterday · 4:15 PM"},
+    {"sessionId":"weekly-questions","title":"Questions to explore this week","updated":"2 Oct · 11:30 AM"},
+    {"sessionId":"basics","title":"A clearer explanation of the basics","updated":"1 Oct · 3:08 PM"}
+  ]
+}

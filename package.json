@@ -10,7 +10,8 @@
     "test": "jest",
     "test:integration": "jest --testPathPatterns=__tests__/api",
     "test:e2e": "playwright test",
-    "test:e2e:ui": "playwright test --ui"
+    "test:e2e:ui": "playwright test --ui",
+    "test:workspace": "playwright test --config playwright.workspace.config.ts"
   },
   "dependencies": {
     "@google-cloud/storage": "^7.21.0",

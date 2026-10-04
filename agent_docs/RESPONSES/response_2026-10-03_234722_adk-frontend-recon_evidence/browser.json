@@ -1,0 +1,18 @@
+{
+  "playwright_version": "1.59.1",
+  "configuration_files": [],
+  "engines": {
+    "chromium": {
+      "installed": false
+    },
+    "firefox": {
+      "installed": false
+    },
+    "webkit": {
+      "installed": false
+    }
+  },
+  "automation_tools_available": false,
+  "e2e_test_suite_found": false,
+  "evidence": "rg file search found Jest tests only; no Playwright imports/config; browser tool discovery returned zero; executable existence checked without profile access"
+}

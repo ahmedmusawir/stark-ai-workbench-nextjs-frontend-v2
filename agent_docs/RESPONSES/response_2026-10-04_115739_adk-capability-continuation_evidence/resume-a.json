@@ -1,0 +1,21 @@
+{
+  "event_count": 1,
+  "events": [
+    {
+      "id": "72daecf2-b7de-438f-a1e8-55b1f6d11449",
+      "author": "greeting_agent",
+      "timestamp": 1791093657.30992,
+      "invocationId": "e-f05257e4-b92a-45f2-a902-6f1cc9e691c4",
+      "role": "model",
+      "texts": [
+        "amber-lantern-7c7e"
+      ],
+      "tool_names": [],
+      "omitted_text_parts": 0
+    }
+  ],
+  "checks": {
+    "expected_marker_reply": true,
+    "tool_calls_observed": false
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "check": "workspace",
+  "label": "engineering-browser-final",
+  "command": [
+    "node",
+    "node_modules/@playwright/test/cli.js",
+    "test",
+    "--config",
+    "playwright.workspace.config.ts"
+  ],
+  "exit_code": 1,
+  "elapsed_seconds": 75.013,
+  "timestamp": "2026-10-04T21:52:55.241974+06:00",
+  "environment": "fresh minimal process environment; Node fail-closed network guard; fonts allowed for build only"
+}

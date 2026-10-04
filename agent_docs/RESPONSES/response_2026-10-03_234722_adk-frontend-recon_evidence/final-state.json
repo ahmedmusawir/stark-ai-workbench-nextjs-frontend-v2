@@ -1,0 +1,64 @@
+{
+  "measured_start": "2026-10-03T23:38:10.562786+06:00",
+  "package_audit_time": "2026-10-03T23:49:09.457092+06:00",
+  "measured_elapsed_seconds": 658.89,
+  "initial_intake_timed": false,
+  "root": "/home/moose/NEXTJS/stark-ai-workbench-nextjs-frontend-v2",
+  "branch": "frontend-apbm",
+  "head": "20ef380bdd6eed5e111d953d6404992add7a88a6",
+  "sanitized_remotes": [
+    {
+      "name": "origin",
+      "sanitized_identity": "github.com/ahmedmusawir/stark-ai-workbench-nextjs-frontend-v2.git"
+    }
+  ],
+  "initial_status": "M CHANGELOG.md\n?? agent_docs/PLANNING/STARK_AGENT_WORKSPACE_KICKOFF_v0_1.md\n?? agent_docs/RESPONSES/response_2026-10-03_233630_session-and-response-logging.md\n?? session_2026-10-03.md",
+  "tracked_files_checked": 345,
+  "tracked_files_changed_since_recon_start": [
+    "CHANGELOG.md",
+    "RECOVERY.md"
+  ],
+  "unexpected_tracked_changes": [],
+  "missing_tracked_files": [],
+  "historical_modules_preserved": true,
+  "source_config_tests_sql_lockfile_preserved": true,
+  "director_followup_interventions": 0,
+  "approval_stops": 0,
+  "repair_rounds": 0,
+  "live_probe_budget_used": {
+    "sessions": 0,
+    "message_submissions": 0,
+    "reads": 0
+  },
+  "incidental_artifacts": {
+    ".next": "created by attempted build; ignored, preserved",
+    "next-env.d.ts": "pre-existing; mtime remains before recon",
+    "tsconfig.tsbuildinfo": "pre-existing; mtime remains before recon",
+    "scratch": "/tmp/stark-apbm-recon-x1_h2yih; check logs/scripts/npm cache not wholesale archived"
+  },
+  "running_processes_created_by_recon": 0,
+  "archive_members": [
+    "agent_docs/RECON/RECON_ADK_FRONTEND_20261003-234722.md",
+    "agent_docs/RESPONSES/response_2026-10-03_234722_adk-frontend-recon.md",
+    "agent_docs/RESPONSES/response_2026-10-03_234722_adk-frontend-recon_evidence/FILE_INDEX.md",
+    "agent_docs/RESPONSES/response_2026-10-03_234722_adk-frontend-recon_evidence/audit.log",
+    "agent_docs/RESPONSES/response_2026-10-03_234722_adk-frontend-recon_evidence/boot.log",
+    "agent_docs/RESPONSES/response_2026-10-03_234722_adk-frontend-recon_evidence/browser.json",
+    "agent_docs/RESPONSES/response_2026-10-03_234722_adk-frontend-recon_evidence/build.log",
+    "agent_docs/RESPONSES/response_2026-10-03_234722_adk-frontend-recon_evidence/check-results.json",
+    "agent_docs/RESPONSES/response_2026-10-03_234722_adk-frontend-recon_evidence/final-state.json",
+    "agent_docs/RESPONSES/response_2026-10-03_234722_adk-frontend-recon_evidence/inspection-evidence.json",
+    "agent_docs/RESPONSES/response_2026-10-03_234722_adk-frontend-recon_evidence/inventory.json",
+    "agent_docs/RESPONSES/response_2026-10-03_234722_adk-frontend-recon_evidence/jest-excerpts.txt",
+    "agent_docs/RESPONSES/response_2026-10-03_234722_adk-frontend-recon_evidence/lint.log",
+    "agent_docs/RESPONSES/response_2026-10-03_234722_adk-frontend-recon_evidence/live-probe.json",
+    "agent_docs/RESPONSES/response_2026-10-03_234722_adk-frontend-recon_evidence/test-results.json"
+  ],
+  "sanitization": {
+    "method": "Explicit file allowlist; exact configured values (length >=8) checked privately; generic credential pattern scan; no live/private history fetched; no env/browser/dependency/archive inputs",
+    "credentials_or_config_values_found": 0,
+    "private_history_exported": false
+  },
+  "final_git_status": "M CHANGELOG.md\n M RECOVERY.md\n?? agent_docs/PLANNING/STARK_AGENT_WORKSPACE_KICKOFF_v0_1.md\n?? agent_docs/RECON/RECON_ADK_FRONTEND_20261003-234722.md\n?? agent_docs/RESPONSES/response_2026-10-03_233630_session-and-response-logging.md\n?? agent_docs/RESPONSES/response_2026-10-03_234722_adk-frontend-recon.md\n?? agent_docs/RESPONSES/response_2026-10-03_234722_adk-frontend-recon.zip\n?? agent_docs/RESPONSES/response_2026-10-03_234722_adk-frontend-recon_evidence/FILE_INDEX.md\n?? agent_docs/RESPONSES/response_2026-10-03_234722_adk-frontend-recon_evidence/audit.log\n?? agent_docs/RESPONSES/response_2026-10-03_234722_adk-frontend-recon_evidence/boot.log\n?? agent_docs/RESPONSES/response_2026-10-03_234722_adk-frontend-recon_evidence/browser.json\n?? agent_docs/RESPONSES/response_2026-10-03_234722_adk-frontend-recon_evidence/build.log\n?? agent_docs/RESPONSES/response_2026-10-03_234722_adk-frontend-recon_evidence/check-results.json\n?? agent_docs/RESPONSES/response_2026-10-03_234722_adk-frontend-recon_evidence/final-state.json\n?? agent_docs/RESPONSES/response_2026-10-03_234722_adk-frontend-recon_evidence/inspection-evidence.json\n?? agent_docs/RESPONSES/response_2026-10-03_234722_adk-frontend-recon_evidence/inventory.json\n?? agent_docs/RESPONSES/response_2026-10-03_234722_adk-frontend-recon_evidence/jest-excerpts.txt\n?? agent_docs/RESPONSES/response_2026-10-03_234722_adk-frontend-recon_evidence/lint.log\n?? agent_docs/RESPONSES/response_2026-10-03_234722_adk-frontend-recon_evidence/live-probe.json\n?? agent_docs/RESPONSES/response_2026-10-03_234722_adk-frontend-recon_evidence/test-results.json\n?? session_2026-10-03.md",
+  "archive_validation": "All 15 allowlisted members readable; matching content hashes verified on final ZIP; no extraneous members"
+}

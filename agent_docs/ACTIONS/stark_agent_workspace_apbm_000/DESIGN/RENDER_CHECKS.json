@@ -1,0 +1,1031 @@
+{
+  "browser": "153.0.8010.0",
+  "deviceScaleFactor": 2,
+  "scope": "Offline design artifacts only",
+  "results": [
+    {
+      "file": "agents-directory",
+      "theme": "dark",
+      "width": 375,
+      "state": "populated",
+      "filename": "agents-directory-dark-375.png",
+      "scrollWidth": 375,
+      "viewport": 375,
+      "fontLoaded": true,
+      "documentHeight": 1670,
+      "viewportHeight": 900,
+      "composer": null
+    },
+    {
+      "file": "agents-directory",
+      "theme": "dark",
+      "width": 768,
+      "state": "populated",
+      "filename": "agents-directory-dark-768.png",
+      "scrollWidth": 768,
+      "viewport": 768,
+      "fontLoaded": true,
+      "documentHeight": 1241,
+      "viewportHeight": 1000,
+      "composer": null
+    },
+    {
+      "file": "agents-directory",
+      "theme": "dark",
+      "width": 1280,
+      "state": "populated",
+      "filename": "agents-directory-dark-1280.png",
+      "scrollWidth": 1280,
+      "viewport": 1280,
+      "fontLoaded": true,
+      "documentHeight": 1197,
+      "viewportHeight": 1000,
+      "composer": null
+    },
+    {
+      "file": "agents-directory",
+      "theme": "light",
+      "width": 375,
+      "state": "populated",
+      "filename": "agents-directory-light-375.png",
+      "scrollWidth": 375,
+      "viewport": 375,
+      "fontLoaded": true,
+      "documentHeight": 1670,
+      "viewportHeight": 900,
+      "composer": null
+    },
+    {
+      "file": "agents-directory",
+      "theme": "light",
+      "width": 768,
+      "state": "populated",
+      "filename": "agents-directory-light-768.png",
+      "scrollWidth": 768,
+      "viewport": 768,
+      "fontLoaded": true,
+      "documentHeight": 1241,
+      "viewportHeight": 1000,
+      "composer": null
+    },
+    {
+      "file": "agents-directory",
+      "theme": "light",
+      "width": 1280,
+      "state": "populated",
+      "filename": "agents-directory-light-1280.png",
+      "scrollWidth": 1280,
+      "viewport": 1280,
+      "fontLoaded": true,
+      "documentHeight": 1197,
+      "viewportHeight": 1000,
+      "composer": null
+    },
+    {
+      "file": "workspace",
+      "theme": "dark",
+      "width": 375,
+      "state": "populated",
+      "filename": "workspace-dark-375.png",
+      "scrollWidth": 375,
+      "viewport": 375,
+      "fontLoaded": true,
+      "documentHeight": 1027,
+      "viewportHeight": 900,
+      "composer": null
+    },
+    {
+      "file": "workspace",
+      "theme": "dark",
+      "width": 768,
+      "state": "populated",
+      "filename": "workspace-dark-768.png",
+      "scrollWidth": 768,
+      "viewport": 768,
+      "fontLoaded": true,
+      "documentHeight": 1072,
+      "viewportHeight": 1000,
+      "composer": null
+    },
+    {
+      "file": "workspace",
+      "theme": "dark",
+      "width": 1280,
+      "state": "populated",
+      "filename": "workspace-dark-1280.png",
+      "scrollWidth": 1280,
+      "viewport": 1280,
+      "fontLoaded": true,
+      "documentHeight": 1078,
+      "viewportHeight": 1000,
+      "composer": null
+    },
+    {
+      "file": "workspace",
+      "theme": "light",
+      "width": 375,
+      "state": "populated",
+      "filename": "workspace-light-375.png",
+      "scrollWidth": 375,
+      "viewport": 375,
+      "fontLoaded": true,
+      "documentHeight": 1027,
+      "viewportHeight": 900,
+      "composer": null
+    },
+    {
+      "file": "workspace",
+      "theme": "light",
+      "width": 768,
+      "state": "populated",
+      "filename": "workspace-light-768.png",
+      "scrollWidth": 768,
+      "viewport": 768,
+      "fontLoaded": true,
+      "documentHeight": 1072,
+      "viewportHeight": 1000,
+      "composer": null
+    },
+    {
+      "file": "workspace",
+      "theme": "light",
+      "width": 1280,
+      "state": "populated",
+      "filename": "workspace-light-1280.png",
+      "scrollWidth": 1280,
+      "viewport": 1280,
+      "fontLoaded": true,
+      "documentHeight": 1078,
+      "viewportHeight": 1000,
+      "composer": null
+    },
+    {
+      "file": "conversation",
+      "theme": "dark",
+      "width": 375,
+      "state": "populated",
+      "filename": "conversation-dark-375.png",
+      "scrollWidth": 375,
+      "viewport": 375,
+      "fontLoaded": true,
+      "documentHeight": 900,
+      "viewportHeight": 900,
+      "composer": {
+        "top": 800,
+        "bottom": 862
+      }
+    },
+    {
+      "file": "conversation",
+      "theme": "dark",
+      "width": 768,
+      "state": "populated",
+      "filename": "conversation-dark-768.png",
+      "scrollWidth": 768,
+      "viewport": 768,
+      "fontLoaded": true,
+      "documentHeight": 1000,
+      "viewportHeight": 1000,
+      "composer": {
+        "top": 896,
+        "bottom": 958
+      }
+    },
+    {
+      "file": "conversation",
+      "theme": "dark",
+      "width": 1280,
+      "state": "populated",
+      "filename": "conversation-dark-1280.png",
+      "scrollWidth": 1280,
+      "viewport": 1280,
+      "fontLoaded": true,
+      "documentHeight": 1000,
+      "viewportHeight": 1000,
+      "composer": {
+        "top": 896,
+        "bottom": 958
+      }
+    },
+    {
+      "file": "conversation",
+      "theme": "light",
+      "width": 375,
+      "state": "populated",
+      "filename": "conversation-light-375.png",
+      "scrollWidth": 375,
+      "viewport": 375,
+      "fontLoaded": true,
+      "documentHeight": 900,
+      "viewportHeight": 900,
+      "composer": {
+        "top": 800,
+        "bottom": 862
+      }
+    },
+    {
+      "file": "conversation",
+      "theme": "light",
+      "width": 768,
+      "state": "populated",
+      "filename": "conversation-light-768.png",
+      "scrollWidth": 768,
+      "viewport": 768,
+      "fontLoaded": true,
+      "documentHeight": 1000,
+      "viewportHeight": 1000,
+      "composer": {
+        "top": 896,
+        "bottom": 958
+      }
+    },
+    {
+      "file": "conversation",
+      "theme": "light",
+      "width": 1280,
+      "state": "populated",
+      "filename": "conversation-light-1280.png",
+      "scrollWidth": 1280,
+      "viewport": 1280,
+      "fontLoaded": true,
+      "documentHeight": 1000,
+      "viewportHeight": 1000,
+      "composer": {
+        "top": 896,
+        "bottom": 958
+      }
+    },
+    {
+      "file": "style-tile",
+      "theme": "dark",
+      "width": 375,
+      "state": "populated",
+      "filename": "style-tile-dark-375.png",
+      "scrollWidth": 375,
+      "viewport": 375,
+      "fontLoaded": true,
+      "documentHeight": 3024,
+      "viewportHeight": 900,
+      "composer": null
+    },
+    {
+      "file": "style-tile",
+      "theme": "dark",
+      "width": 768,
+      "state": "populated",
+      "filename": "style-tile-dark-768.png",
+      "scrollWidth": 768,
+      "viewport": 768,
+      "fontLoaded": true,
+      "documentHeight": 2144,
+      "viewportHeight": 1000,
+      "composer": null
+    },
+    {
+      "file": "style-tile",
+      "theme": "dark",
+      "width": 1280,
+      "state": "populated",
+      "filename": "style-tile-dark-1280.png",
+      "scrollWidth": 1280,
+      "viewport": 1280,
+      "fontLoaded": true,
+      "documentHeight": 1831,
+      "viewportHeight": 1000,
+      "composer": null
+    },
+    {
+      "file": "style-tile",
+      "theme": "light",
+      "width": 375,
+      "state": "populated",
+      "filename": "style-tile-light-375.png",
+      "scrollWidth": 375,
+      "viewport": 375,
+      "fontLoaded": true,
+      "documentHeight": 3024,
+      "viewportHeight": 900,
+      "composer": null
+    },
+    {
+      "file": "style-tile",
+      "theme": "light",
+      "width": 768,
+      "state": "populated",
+      "filename": "style-tile-light-768.png",
+      "scrollWidth": 768,
+      "viewport": 768,
+      "fontLoaded": true,
+      "documentHeight": 2144,
+      "viewportHeight": 1000,
+      "composer": null
+    },
+    {
+      "file": "style-tile",
+      "theme": "light",
+      "width": 1280,
+      "state": "populated",
+      "filename": "style-tile-light-1280.png",
+      "scrollWidth": 1280,
+      "viewport": 1280,
+      "fontLoaded": true,
+      "documentHeight": 1831,
+      "viewportHeight": 1000,
+      "composer": null
+    },
+    {
+      "file": "agents-directory",
+      "theme": "dark",
+      "width": 1280,
+      "state": "empty",
+      "filename": "agents-directory-dark-1280-empty.png",
+      "scrollWidth": 1280,
+      "viewport": 1280,
+      "fontLoaded": true,
+      "documentHeight": 1000,
+      "viewportHeight": 1000,
+      "composer": null
+    },
+    {
+      "file": "agents-directory",
+      "theme": "dark",
+      "width": 1280,
+      "state": "no-results",
+      "filename": "agents-directory-dark-1280-no-results.png",
+      "scrollWidth": 1280,
+      "viewport": 1280,
+      "fontLoaded": true,
+      "documentHeight": 1000,
+      "viewportHeight": 1000,
+      "composer": null
+    },
+    {
+      "file": "agents-directory",
+      "theme": "dark",
+      "width": 1280,
+      "state": "loading",
+      "filename": "agents-directory-dark-1280-loading.png",
+      "scrollWidth": 1280,
+      "viewport": 1280,
+      "fontLoaded": true,
+      "documentHeight": 1000,
+      "viewportHeight": 1000,
+      "composer": null
+    },
+    {
+      "file": "agents-directory",
+      "theme": "dark",
+      "width": 1280,
+      "state": "unavailable",
+      "filename": "agents-directory-dark-1280-unavailable.png",
+      "scrollWidth": 1280,
+      "viewport": 1280,
+      "fontLoaded": true,
+      "documentHeight": 1000,
+      "viewportHeight": 1000,
+      "composer": null
+    },
+    {
+      "file": "workspace",
+      "theme": "dark",
+      "width": 1280,
+      "state": "empty",
+      "filename": "workspace-dark-1280-empty.png",
+      "scrollWidth": 1280,
+      "viewport": 1280,
+      "fontLoaded": true,
+      "documentHeight": 1078,
+      "viewportHeight": 1000,
+      "composer": null
+    },
+    {
+      "file": "workspace",
+      "theme": "dark",
+      "width": 1280,
+      "state": "loading",
+      "filename": "workspace-dark-1280-loading.png",
+      "scrollWidth": 1280,
+      "viewport": 1280,
+      "fontLoaded": true,
+      "documentHeight": 1078,
+      "viewportHeight": 1000,
+      "composer": null
+    },
+    {
+      "file": "workspace",
+      "theme": "dark",
+      "width": 1280,
+      "state": "unavailable",
+      "filename": "workspace-dark-1280-unavailable.png",
+      "scrollWidth": 1280,
+      "viewport": 1280,
+      "fontLoaded": true,
+      "documentHeight": 1078,
+      "viewportHeight": 1000,
+      "composer": null
+    },
+    {
+      "file": "workspace",
+      "theme": "dark",
+      "width": 1280,
+      "state": "partial",
+      "filename": "workspace-dark-1280-partial.png",
+      "scrollWidth": 1280,
+      "viewport": 1280,
+      "fontLoaded": true,
+      "documentHeight": 1078,
+      "viewportHeight": 1000,
+      "composer": null
+    },
+    {
+      "file": "workspace",
+      "theme": "dark",
+      "width": 1280,
+      "state": "recovered",
+      "filename": "workspace-dark-1280-recovered.png",
+      "scrollWidth": 1280,
+      "viewport": 1280,
+      "fontLoaded": true,
+      "documentHeight": 1096,
+      "viewportHeight": 1000,
+      "composer": null
+    },
+    {
+      "file": "conversation",
+      "theme": "dark",
+      "width": 1280,
+      "state": "empty",
+      "filename": "conversation-dark-1280-empty.png",
+      "scrollWidth": 1280,
+      "viewport": 1280,
+      "fontLoaded": true,
+      "documentHeight": 1000,
+      "viewportHeight": 1000,
+      "composer": {
+        "top": 896,
+        "bottom": 958
+      }
+    },
+    {
+      "file": "conversation",
+      "theme": "dark",
+      "width": 1280,
+      "state": "loading",
+      "filename": "conversation-dark-1280-loading.png",
+      "scrollWidth": 1280,
+      "viewport": 1280,
+      "fontLoaded": true,
+      "documentHeight": 1000,
+      "viewportHeight": 1000,
+      "composer": {
+        "top": 896,
+        "bottom": 958
+      }
+    },
+    {
+      "file": "conversation",
+      "theme": "dark",
+      "width": 1280,
+      "state": "unavailable",
+      "filename": "conversation-dark-1280-unavailable.png",
+      "scrollWidth": 1280,
+      "viewport": 1280,
+      "fontLoaded": true,
+      "documentHeight": 1000,
+      "viewportHeight": 1000,
+      "composer": {
+        "top": 896,
+        "bottom": 958
+      }
+    },
+    {
+      "file": "conversation",
+      "theme": "dark",
+      "width": 1280,
+      "state": "missing",
+      "filename": "conversation-dark-1280-missing.png",
+      "scrollWidth": 1280,
+      "viewport": 1280,
+      "fontLoaded": true,
+      "documentHeight": 1000,
+      "viewportHeight": 1000,
+      "composer": {
+        "top": 896,
+        "bottom": 958
+      }
+    },
+    {
+      "file": "conversation",
+      "theme": "dark",
+      "width": 1280,
+      "state": "pending",
+      "filename": "conversation-dark-1280-pending.png",
+      "scrollWidth": 1280,
+      "viewport": 1280,
+      "fontLoaded": true,
+      "documentHeight": 1000,
+      "viewportHeight": 1000,
+      "composer": {
+        "top": 896,
+        "bottom": 958
+      }
+    },
+    {
+      "file": "conversation",
+      "theme": "dark",
+      "width": 1280,
+      "state": "uncertain",
+      "filename": "conversation-dark-1280-uncertain.png",
+      "scrollWidth": 1280,
+      "viewport": 1280,
+      "fontLoaded": true,
+      "documentHeight": 1000,
+      "viewportHeight": 1000,
+      "composer": {
+        "top": 896,
+        "bottom": 958
+      }
+    },
+    {
+      "file": "conversation",
+      "theme": "dark",
+      "width": 1280,
+      "state": "failed",
+      "filename": "conversation-dark-1280-failed.png",
+      "scrollWidth": 1280,
+      "viewport": 1280,
+      "fontLoaded": true,
+      "documentHeight": 1000,
+      "viewportHeight": 1000,
+      "composer": {
+        "top": 896,
+        "bottom": 958
+      }
+    },
+    {
+      "file": "conversation",
+      "theme": "dark",
+      "width": 1280,
+      "state": "metadata",
+      "filename": "conversation-dark-1280-metadata.png",
+      "scrollWidth": 1280,
+      "viewport": 1280,
+      "fontLoaded": true,
+      "documentHeight": 1000,
+      "viewportHeight": 1000,
+      "composer": {
+        "top": 896,
+        "bottom": 958
+      }
+    },
+    {
+      "file": "conversation",
+      "theme": "dark",
+      "width": 1280,
+      "state": "unauthorized",
+      "filename": "conversation-dark-1280-unauthorized.png",
+      "scrollWidth": 1280,
+      "viewport": 1280,
+      "fontLoaded": true,
+      "documentHeight": 1000,
+      "viewportHeight": 1000,
+      "composer": {
+        "top": 896,
+        "bottom": 958
+      }
+    },
+    {
+      "file": "conversation",
+      "theme": "dark",
+      "width": 375,
+      "state": "missing",
+      "filename": "conversation-dark-375-missing.png",
+      "scrollWidth": 375,
+      "viewport": 375,
+      "fontLoaded": true,
+      "documentHeight": 900,
+      "viewportHeight": 900,
+      "composer": {
+        "top": 800,
+        "bottom": 862
+      }
+    },
+    {
+      "file": "conversation",
+      "theme": "dark",
+      "width": 375,
+      "state": "pending",
+      "filename": "conversation-dark-375-pending.png",
+      "scrollWidth": 375,
+      "viewport": 375,
+      "fontLoaded": true,
+      "documentHeight": 900,
+      "viewportHeight": 900,
+      "composer": {
+        "top": 800,
+        "bottom": 862
+      }
+    },
+    {
+      "file": "conversation",
+      "theme": "dark",
+      "width": 375,
+      "state": "uncertain",
+      "filename": "conversation-dark-375-uncertain.png",
+      "scrollWidth": 375,
+      "viewport": 375,
+      "fontLoaded": true,
+      "documentHeight": 900,
+      "viewportHeight": 900,
+      "composer": {
+        "top": 800,
+        "bottom": 862
+      }
+    },
+    {
+      "file": "conversation",
+      "theme": "dark",
+      "width": 375,
+      "state": "failed",
+      "filename": "conversation-dark-375-failed.png",
+      "scrollWidth": 375,
+      "viewport": 375,
+      "fontLoaded": true,
+      "documentHeight": 900,
+      "viewportHeight": 900,
+      "composer": {
+        "top": 800,
+        "bottom": 862
+      }
+    },
+    {
+      "file": "agents-directory",
+      "theme": "dark",
+      "width": 1280,
+      "state": "populated",
+      "roster": "alternate",
+      "filename": "agents-directory-dark-1280-alternate.png",
+      "scrollWidth": 1280,
+      "viewport": 1280,
+      "fontLoaded": true,
+      "documentHeight": 1000,
+      "viewportHeight": 1000,
+      "composer": null
+    },
+    {
+      "file": "agents-directory",
+      "theme": "light",
+      "width": 1280,
+      "state": "empty",
+      "filename": "agents-directory-light-1280-empty.png",
+      "scrollWidth": 1280,
+      "viewport": 1280,
+      "fontLoaded": true,
+      "documentHeight": 1000,
+      "viewportHeight": 1000,
+      "composer": null
+    },
+    {
+      "file": "agents-directory",
+      "theme": "light",
+      "width": 1280,
+      "state": "no-results",
+      "filename": "agents-directory-light-1280-no-results.png",
+      "scrollWidth": 1280,
+      "viewport": 1280,
+      "fontLoaded": true,
+      "documentHeight": 1000,
+      "viewportHeight": 1000,
+      "composer": null
+    },
+    {
+      "file": "agents-directory",
+      "theme": "light",
+      "width": 1280,
+      "state": "loading",
+      "filename": "agents-directory-light-1280-loading.png",
+      "scrollWidth": 1280,
+      "viewport": 1280,
+      "fontLoaded": true,
+      "documentHeight": 1000,
+      "viewportHeight": 1000,
+      "composer": null
+    },
+    {
+      "file": "agents-directory",
+      "theme": "light",
+      "width": 1280,
+      "state": "unavailable",
+      "filename": "agents-directory-light-1280-unavailable.png",
+      "scrollWidth": 1280,
+      "viewport": 1280,
+      "fontLoaded": true,
+      "documentHeight": 1000,
+      "viewportHeight": 1000,
+      "composer": null
+    },
+    {
+      "file": "workspace",
+      "theme": "light",
+      "width": 1280,
+      "state": "empty",
+      "filename": "workspace-light-1280-empty.png",
+      "scrollWidth": 1280,
+      "viewport": 1280,
+      "fontLoaded": true,
+      "documentHeight": 1078,
+      "viewportHeight": 1000,
+      "composer": null
+    },
+    {
+      "file": "workspace",
+      "theme": "light",
+      "width": 1280,
+      "state": "loading",
+      "filename": "workspace-light-1280-loading.png",
+      "scrollWidth": 1280,
+      "viewport": 1280,
+      "fontLoaded": true,
+      "documentHeight": 1078,
+      "viewportHeight": 1000,
+      "composer": null
+    },
+    {
+      "file": "workspace",
+      "theme": "light",
+      "width": 1280,
+      "state": "unavailable",
+      "filename": "workspace-light-1280-unavailable.png",
+      "scrollWidth": 1280,
+      "viewport": 1280,
+      "fontLoaded": true,
+      "documentHeight": 1078,
+      "viewportHeight": 1000,
+      "composer": null
+    },
+    {
+      "file": "workspace",
+      "theme": "light",
+      "width": 1280,
+      "state": "partial",
+      "filename": "workspace-light-1280-partial.png",
+      "scrollWidth": 1280,
+      "viewport": 1280,
+      "fontLoaded": true,
+      "documentHeight": 1078,
+      "viewportHeight": 1000,
+      "composer": null
+    },
+    {
+      "file": "workspace",
+      "theme": "light",
+      "width": 1280,
+      "state": "recovered",
+      "filename": "workspace-light-1280-recovered.png",
+      "scrollWidth": 1280,
+      "viewport": 1280,
+      "fontLoaded": true,
+      "documentHeight": 1096,
+      "viewportHeight": 1000,
+      "composer": null
+    },
+    {
+      "file": "conversation",
+      "theme": "light",
+      "width": 1280,
+      "state": "empty",
+      "filename": "conversation-light-1280-empty.png",
+      "scrollWidth": 1280,
+      "viewport": 1280,
+      "fontLoaded": true,
+      "documentHeight": 1000,
+      "viewportHeight": 1000,
+      "composer": {
+        "top": 896,
+        "bottom": 958
+      }
+    },
+    {
+      "file": "conversation",
+      "theme": "light",
+      "width": 1280,
+      "state": "loading",
+      "filename": "conversation-light-1280-loading.png",
+      "scrollWidth": 1280,
+      "viewport": 1280,
+      "fontLoaded": true,
+      "documentHeight": 1000,
+      "viewportHeight": 1000,
+      "composer": {
+        "top": 896,
+        "bottom": 958
+      }
+    },
+    {
+      "file": "conversation",
+      "theme": "light",
+      "width": 1280,
+      "state": "unavailable",
+      "filename": "conversation-light-1280-unavailable.png",
+      "scrollWidth": 1280,
+      "viewport": 1280,
+      "fontLoaded": true,
+      "documentHeight": 1000,
+      "viewportHeight": 1000,
+      "composer": {
+        "top": 896,
+        "bottom": 958
+      }
+    },
+    {
+      "file": "conversation",
+      "theme": "light",
+      "width": 1280,
+      "state": "missing",
+      "filename": "conversation-light-1280-missing.png",
+      "scrollWidth": 1280,
+      "viewport": 1280,
+      "fontLoaded": true,
+      "documentHeight": 1000,
+      "viewportHeight": 1000,
+      "composer": {
+        "top": 896,
+        "bottom": 958
+      }
+    },
+    {
+      "file": "conversation",
+      "theme": "light",
+      "width": 1280,
+      "state": "pending",
+      "filename": "conversation-light-1280-pending.png",
+      "scrollWidth": 1280,
+      "viewport": 1280,
+      "fontLoaded": true,
+      "documentHeight": 1000,
+      "viewportHeight": 1000,
+      "composer": {
+        "top": 896,
+        "bottom": 958
+      }
+    },
+    {
+      "file": "conversation",
+      "theme": "light",
+      "width": 1280,
+      "state": "uncertain",
+      "filename": "conversation-light-1280-uncertain.png",
+      "scrollWidth": 1280,
+      "viewport": 1280,
+      "fontLoaded": true,
+      "documentHeight": 1000,
+      "viewportHeight": 1000,
+      "composer": {
+        "top": 896,
+        "bottom": 958
+      }
+    },
+    {
+      "file": "conversation",
+      "theme": "light",
+      "width": 1280,
+      "state": "failed",
+      "filename": "conversation-light-1280-failed.png",
+      "scrollWidth": 1280,
+      "viewport": 1280,
+      "fontLoaded": true,
+      "documentHeight": 1000,
+      "viewportHeight": 1000,
+      "composer": {
+        "top": 896,
+        "bottom": 958
+      }
+    },
+    {
+      "file": "conversation",
+      "theme": "light",
+      "width": 1280,
+      "state": "metadata",
+      "filename": "conversation-light-1280-metadata.png",
+      "scrollWidth": 1280,
+      "viewport": 1280,
+      "fontLoaded": true,
+      "documentHeight": 1000,
+      "viewportHeight": 1000,
+      "composer": {
+        "top": 896,
+        "bottom": 958
+      }
+    },
+    {
+      "file": "conversation",
+      "theme": "light",
+      "width": 1280,
+      "state": "unauthorized",
+      "filename": "conversation-light-1280-unauthorized.png",
+      "scrollWidth": 1280,
+      "viewport": 1280,
+      "fontLoaded": true,
+      "documentHeight": 1000,
+      "viewportHeight": 1000,
+      "composer": {
+        "top": 896,
+        "bottom": 958
+      }
+    },
+    {
+      "file": "conversation",
+      "theme": "light",
+      "width": 375,
+      "state": "missing",
+      "filename": "conversation-light-375-missing.png",
+      "scrollWidth": 375,
+      "viewport": 375,
+      "fontLoaded": true,
+      "documentHeight": 900,
+      "viewportHeight": 900,
+      "composer": {
+        "top": 800,
+        "bottom": 862
+      }
+    },
+    {
+      "file": "conversation",
+      "theme": "light",
+      "width": 375,
+      "state": "pending",
+      "filename": "conversation-light-375-pending.png",
+      "scrollWidth": 375,
+      "viewport": 375,
+      "fontLoaded": true,
+      "documentHeight": 900,
+      "viewportHeight": 900,
+      "composer": {
+        "top": 800,
+        "bottom": 862
+      }
+    },
+    {
+      "file": "conversation",
+      "theme": "light",
+      "width": 375,
+      "state": "uncertain",
+      "filename": "conversation-light-375-uncertain.png",
+      "scrollWidth": 375,
+      "viewport": 375,
+      "fontLoaded": true,
+      "documentHeight": 900,
+      "viewportHeight": 900,
+      "composer": {
+        "top": 800,
+        "bottom": 862
+      }
+    },
+    {
+      "file": "conversation",
+      "theme": "light",
+      "width": 375,
+      "state": "failed",
+      "filename": "conversation-light-375-failed.png",
+      "scrollWidth": 375,
+      "viewport": 375,
+      "fontLoaded": true,
+      "documentHeight": 900,
+      "viewportHeight": 900,
+      "composer": {
+        "top": 800,
+        "bottom": 862
+      }
+    },
+    {
+      "file": "agents-directory",
+      "theme": "light",
+      "width": 1280,
+      "state": "populated",
+      "roster": "alternate",
+      "filename": "agents-directory-light-1280-alternate.png",
+      "scrollWidth": 1280,
+      "viewport": 1280,
+      "fontLoaded": true,
+      "documentHeight": 1000,
+      "viewportHeight": 1000,
+      "composer": null
+    }
+  ],
+  "additionalEvidence": [
+    "agents-directory-dark-1280-focus.png",
+    "agents-directory-light-1280-focus.png",
+    "workspace-dark-375-context.png",
+    "workspace-light-375-context.png",
+    "conversation-dark-375-context.png",
+    "conversation-dark-375-navigation.png",
+    "conversation-dark-375-code.png",
+    "conversation-dark-375-focus.png",
+    "conversation-light-375-context.png",
+    "conversation-light-375-navigation.png",
+    "conversation-light-375-code.png",
+    "conversation-light-375-focus.png"
+  ],
+  "errors": [],
+  "externalRequests": []
+}

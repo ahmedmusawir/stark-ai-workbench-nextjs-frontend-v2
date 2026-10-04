@@ -1,0 +1,17 @@
+{
+  "module_id": "stark_agent_workspace_apbm_000",
+  "packet_version": "1.0",
+  "stage": "AWAITING_ENGINEERING",
+  "evidence_baseline_sha": "20ef380bdd6eed5e111d953d6404992add7a88a6",
+  "product_candidate_sha": null,
+  "qa_head_sha": null,
+  "plan_sha256": null,
+  "rulings_sha256": null,
+  "qa_lead_approval_record": null,
+  "director_q2_release_record": null,
+  "attempt": 0,
+  "last_completed_checkpoint": "ARCHITECT_ASSEMBLY",
+  "next_action": "Engineer reads ../ENGINEERING_ENTRY.md and performs bounded entry preflight",
+  "gate_q": "NOT_ISSUED",
+  "note": "Routing aid only; no field grants permission without its owner record."
+}

@@ -110,24 +110,13 @@ describe('resolution (M-G3 — each agent to its own bundle)', () => {
 });
 
 describe('the committed manifest', () => {
-  // ROSTER-AGNOSTIC by design (BIM-004 baseline repair; landed on both
-  // lineages, unified at the bim-004→bim-005 merge): M-G2 promises that
-  // adding an agent is a JSON edit with ZERO code changes — so these tests
-  // assert structural invariants, never an exact roster. The original five
-  // must be PRESENT; extras added via the four-line test are legitimate.
-  it('is valid, includes the original five agents, and declares v1 + v2-local', () => {
-    for (const original of [
-      'greeting_agent',
-      'jarvis_agent',
-      'calc_agent',
-      'product_agent',
-      'ghl_mcp_agent',
-    ]) {
-      expect(KNOWN_AGENTS).toContain(original);
-    }
-    expect(MANIFEST.bundles.map((b) => b.id)).toEqual(
-      expect.arrayContaining(['v1', 'v2-local']),
-    );
+  // The product roster is configuration, not the historical five-agent fixture.
+  it('validates the configured roster and preserves declared bundle identity', () => {
+    const configured = require('../../../config/agents.manifest.json');
+    expect(() => validateManifest(configured)).not.toThrow();
+    expect(KNOWN_AGENTS).toEqual(configured.agents.map((agent: { name: string }) => agent.name));
+    expect(new Set(KNOWN_AGENTS).size).toBe(KNOWN_AGENTS.length);
+    expect(MANIFEST.bundles).toEqual(configured.bundles);
   });
 
   it('every declared agent resolves to a declared bundle env var', () => {

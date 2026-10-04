@@ -1,0 +1,103 @@
+{
+  "suite_counts": {
+    "passed": 26,
+    "failed": 10,
+    "total": 36
+  },
+  "test_counts": {
+    "passed": 225,
+    "failed": 38,
+    "total": 263
+  },
+  "failures_by_suite": {
+    "src/__tests__/api/agent-run.test.ts": {
+      "count": 9,
+      "tests": [
+        "POST /api/agent/run \u203a existing session: single native /run call with the ADK payload and a timeout signal",
+        "POST /api/agent/run \u203a null session (N5): creates session-${Date.now()} then runs; returns the generated id",
+        "POST /api/agent/run \u203a session-not-found (N6): create + retry exactly once, then success",
+        "POST /api/agent/run \u203a retry failure (N6): second run failure \u2192 502 { error }",
+        "POST /api/agent/run \u203a run succeeds with no model text \u2192 502 \"No model response in events\"",
+        "POST /api/agent/run \u203a passes through the Authorization header when present (R2)",
+        "POST /api/agent/run \u203a omits the Authorization header when absent",
+        "POST /api/agent/run \u203a returns 502 { error } when the bundle is unreachable",
+        "POST /api/agent/run \u203a returns 500 { error } and makes zero HTTP calls when ADK_BUNDLE_URL_V1 is unset"
+      ]
+    },
+    "src/__tests__/api/instructions-route.test.ts": {
+      "count": 8,
+      "tests": [
+        "/api/agent/instructions \u203a GET \u203a returns the instructions text from the derived path",
+        "/api/agent/instructions \u203a GET \u203a 500 naming GCS_BUCKET when unset",
+        "/api/agent/instructions \u203a GET \u203a 500 naming GCS_BASE_FOLDER when unset",
+        "/api/agent/instructions \u203a GET \u203a 502 on GCS failure",
+        "/api/agent/instructions \u203a PUT \u2014 the backup law (C-G3) \u203a backs up BEFORE writing, to a timestamped versions/ path",
+        "/api/agent/instructions \u203a PUT \u2014 the backup law (C-G3) \u203a a failed backup ABORTS the save \u2014 zero writes",
+        "/api/agent/instructions \u203a PUT \u2014 the backup law (C-G3) \u203a clean not-found (fresh agent) skips backup and writes, backup: null",
+        "/api/agent/instructions \u203a PUT \u2014 the backup law (C-G3) \u203a 500 naming the env var when unset"
+      ]
+    },
+    "src/__tests__/chat/chatStore.persist.test.ts": {
+      "count": 3,
+      "tests": [
+        "chatStore persistence (FIX-001) \u203a partialize: message content never reaches localStorage (F4)",
+        "chatStore persistence (FIX-001) \u203a hydration: stored value without selectedAgent keeps the default (back-compat)",
+        "chatStore persistence (FIX-001) \u203a SSR guard: storage getter throws (server: no window) \u2192 store still creates and works in-memory (F5)"
+      ]
+    },
+    "src/__tests__/config/manifest.test.ts": {
+      "count": 1,
+      "tests": [
+        "the committed manifest \u203a is valid, includes the original five agents, and declares v1 + v2-local"
+      ]
+    },
+    "src/__tests__/chat/chatStore.modeSplit.test.ts": {
+      "count": 1,
+      "tests": [
+        "chatStore mode-split persistence (FIX-003 F09) \u203a live never reads the mock world (no cross-contamination \u2014 H1)"
+      ]
+    },
+    "src/__tests__/api/agent-history.test.ts": {
+      "count": 7,
+      "tests": [
+        "POST /api/agent/history \u203a GETs the native session path with a timeout signal",
+        "POST /api/agent/history \u203a normalizes session events to { history: Message[] } (roles mapped, non-text skipped)",
+        "POST /api/agent/history \u203a returns { history: [] } for a valid session with empty events (the N7 shape)",
+        "POST /api/agent/history \u203a passes through the Authorization header when present (R2)",
+        "POST /api/agent/history \u203a returns 502 { error } when the upstream responds non-OK",
+        "POST /api/agent/history \u203a returns 502 { error } when the bundle is unreachable",
+        "POST /api/agent/history \u203a returns 500 { error } and makes zero HTTP calls when ADK_BUNDLE_URL_V1 is unset"
+      ]
+    },
+    "src/__tests__/chat/SessionPanel.test.tsx": {
+      "count": 6,
+      "tests": [
+        "SessionPanel (BIM-004) \u203a lists the selected agent's sessions with a New Chat button on top",
+        "SessionPanel (BIM-004) \u203a clicking a session activates it (pointer set, thread cleared)",
+        "SessionPanel (BIM-004) \u203a New Chat clears the pointer and shows a loaded-empty thread",
+        "SessionPanel (BIM-004) \u203a inline rename commits to the service and the store list",
+        "SessionPanel (BIM-004) \u203a archive removes the row from the visible list (P-G3)",
+        "SessionPanel (BIM-004) \u203a archiving the ACTIVE session starts a new chat"
+      ]
+    },
+    "src/__tests__/chat/ChatPageContent.test.tsx": {
+      "count": 1,
+      "tests": [
+        "ChatPageContent integration \u203a send flow: user message appears \u2192 assistant response appears"
+      ]
+    },
+    "src/__tests__/chat/MessageList.loading.test.tsx": {
+      "count": 1,
+      "tests": [
+        "MessageList history loading state (FIX-002b) \u203a renders fetched messages once loading clears"
+      ]
+    },
+    "src/__tests__/chat/AgentSwitcher.test.tsx": {
+      "count": 1,
+      "tests": [
+        "AgentSwitcher \u203a calls setSelectedAgent with the agent NAME when its label is clicked"
+      ]
+    }
+  },
+  "limitation": "Installed Jest tests only; ADK and Supabase calls mocked or fixture paths; no live persistence proof"
+}
