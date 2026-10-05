@@ -1,0 +1,23 @@
+Claudy — continue as independent QA Executor for Stark Agent Workspace APBM_000. Cody remains Engineer; JARVIS Master is Architect; JARVIS in the QA lab is QA Lead; Tony is Director.
+
+Work in /home/moose/NEXTJS/stark-ai-workbench-nextjs-frontend-v2 on qa/frontend-apbm-000. Do not switch branches, stage/commit/push or modify product, maintained tests, config, dependencies, canonical acceptance/rulings or Engineer evidence. One writer at a time. All QA records/tools/evidence remain within agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/.
+
+Read QAM/CLAUDE.md and QAM_ENTRY.md, then the installed Q1B_REVIEW.md, QAM_TEST_PLAN.md v0.2 and FINDINGS/DIRECTOR-OBS-001.md. Read actual contract/Engineer evidence/design dependencies referenced there. Preserve the original Q1 export and its hashes; packaging contract/ and qa-evidence/ aliases do not create root folders.
+
+Approved product reference: 22ce03ba3871ea53e5253f2e3f060a1bab3226a3.
+Baseline: 20ef380bdd6eed5e111d953d6404992add7a88a6.
+Approved v0.2 plan SHA256: 8ddb743f1be09d624bf79c8a602ad05fbd3cffbffbc2d8c6cfbaee16f8b80337.
+Acceptance SHA256: 57f8d9f4dec8ca826326067254b0916ef65ccd51b635a8ac6ead73e8ab469fcc.
+Rulings SHA256: 99d4c40f7094106f4386d4d8ff5535228feb653dcbe0fd948a14a0ff1ec3b36f.
+
+Before Q2, verify installed finalized bytes and exact owner records. Update QAM facts/state to reflect Q1b without inventing Director choices or release. Confirm current disk has only QAM/HANDOFFS/QA_HANDOFF.md as canonical and no module-root handoff/pointer; if placement is incomplete, report for Architect/Cody documentation correction, do not edit outside QAM. Preserve historical archives. You may prepare disposable QAM-only instruments; do not run the Q2 acceptance body until Tony has committed approved instructions and explicitly released Q2. Missing D4/D7/release: give one consolidated pending-decision report. N1 acknowledgement is nonblocking.
+
+Execute approved Q2 autonomously only after that release:
+- Product reference stays 22ce03b even if QAM documentation commits advance HEAD. Record actual execution HEAD; verify ancestry, all intervening changes, full pinned product/config/maintained-test/dependency/design equality in both Git and working tree, and unauthorized additions. Do not overwrite Q1 with its hardcoded-output script; use the Q2-owned identity instrument specified in plan 11.1.
+- Keep fixtures/tests in the permitted loopback-only namespace with Node/browser guards and all descendants confined. Never bypass access controls. Run the separate font-build exception only with Tony's D4 authorization AND plan 11.2 enforcement. Without either, mark affected build proof BLOCKED and execute other released safe checks; never broaden egress, expose .env values or call live services.
+- Follow all AC oracles/negative controls and the added offline DIRECTOR-OBS-001 A+B catalog/reopen scenarios. Inspect actual source to separate new frontend loss of a successful mocked entry from inherited catalog ambiguity. No live diagnostics or localStorage repair. Return a bounded Architect/Director diagnostic request if live evidence is still needed.
+- A/B inherited failures are accepted only at exact listed names. C is conditional SSR/no-storage, not roster: prove real import/reset/phase-000 non-impact as required; do not use a mocked reset spy alone. The manifest assertion was replaced, not repaired; inspect old/new bodies and independently preserve actual configured identities/bundle/urlEnv relationships. Keep full Jest exit 1 and 37 inherited failures visible, and flag any changed/new failure.
+- Use a path/port-only Engineer-spec QA copy with source/copy hashes and exact diff; own config/output paths; do not overwrite Engineer artifacts. No new 44px exceptions, product retries into green or fixture-to-live claims.
+- Bounds: <=3h active, one diagnostic retry per instrument failure, <=2 complete browser bodies with the second only after a recorded instrument fix. Preserve all original failures; report affected blockers once; continue independent safe checks. Product repairs require Lead classification -> Architect bounded scope -> Cody implementation -> Tony commit -> Lead retest binding.
+
+Return one indexed, sanitized Q2 attempt package under QAM/HANDOFFS with actual candidate/execution-HEAD/plan identities, exact commands/exits, literal expected/actual AC matrix, control evidence, findings (including DIRECTOR-OBS-001), unresolved decisions, deferred live claims and owned runtime teardown. No secret/env/auth-profile/HAR/private-transcript capture or recursive archives. Do not run Q5 until Lead disposition; do not issue Gate Q or product/process certification. QAM state fields alone never grant permission.

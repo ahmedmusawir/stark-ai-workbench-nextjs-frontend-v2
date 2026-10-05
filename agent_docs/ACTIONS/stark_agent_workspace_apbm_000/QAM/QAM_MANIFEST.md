@@ -27,3 +27,7 @@ Status: ENGINEERING FACTS COMPLETE; independent Q1 pending.
 Recorded 2026-10-04T21:59:35.844675+06:00. Engineer supplies facts only. QA must pin the committed candidate and derive its own plan. Any later source/test/config/dependency change requires impact classification; docs-only equivalence cannot be guessed from a newer HEAD.
 
 Director-requested path correction 2026-10-04T22:14:42.603752+06:00: QAM_ENTRY now reads HANDOFFS/QA_HANDOFF.md; source candidate and acceptance criteria unchanged. Original frozen-packet equality is historical; path correction is recorded in ../evidence/engineering-attempt-001/handoff-location-correction.json.
+
+## Current facts appended by QA Executor — 2026-10-05T18:26+06:00
+
+The historical rows above (UNCOMMITTED, pointer wording) are preserved as the record of that time. Current facts: product candidate **22ce03ba3871ea53e5253f2e3f060a1bab3226a3** (committed); QA branch qa/frontend-apbm-000; execution HEAD now 2f488e4 (Q1 QAM docs commit, candidate is ancestor). Q1 package Q1_attempt-001.zip sha256 aa7c3a5e…f0d5. Q1b: Lead approved plan v0.2 sha256 8ddb743f…0337 (Q1B_REVIEW.md ce02c5cb…fe2f), installed byte-exact, not yet committed. Director D4/D7/Q2 release: NONE. Q2 blockers: working-tree manifest roster swap + untracked agents.manifest_hermes.json (config drift); module-root QA_HANDOFF.md pointer still present. Open finding DIRECTOR-OBS-001 (+ Executor addendum 001). Gate Q NOT ISSUED.

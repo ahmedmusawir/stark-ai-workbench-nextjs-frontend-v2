@@ -1,0 +1,50 @@
+{
+  "st1": {
+    "product_candidate": "22ce03ba3871ea53e5253f2e3f060a1bab3226a3",
+    "execution_head": "20ef380bdd6eed5e111d953d6404992add7a88a6",
+    "worktree": "<repo>",
+    "raw_verdict": "PRODUCT_DRIFT_OR_IDENTITY_FAILURE",
+    "anomaly_kinds": [
+      "CANDIDATE_NOT_ANCESTOR",
+      "COMMITTED_DIFF_FROM_CANDIDATE",
+      "DOCS_OUTSIDE_QAM_CHANGED",
+      "PINNED_INPUT_WORKTREE_MISMATCH",
+      "PROTECTED_MISMATCH",
+      "QAM_CHANGED_UNLISTED_OR_HASH",
+      "QAM_UNTRACKED_UNLISTED_OR_HASH",
+      "ROOT_HANDOFF_POINTER_PRESENT",
+      "UNTRACKED_DOCS_OUTSIDE_QAM",
+      "UNTRACKED_PRODUCT_CONFIG_TEST_DEP",
+      "WORKTREE_DIFF_FROM_CANDIDATE"
+    ]
+  },
+  "st2": {
+    "product_candidate": "22ce03ba3871ea53e5253f2e3f060a1bab3226a3",
+    "execution_head": "22ce03ba3871ea53e5253f2e3f060a1bab3226a3",
+    "worktree": "<disposable>",
+    "raw_verdict": "PRODUCT_DRIFT_OR_IDENTITY_FAILURE",
+    "anomaly_kinds": [
+      "CHANGED_INVENTORY_MISMATCH",
+      "PINNED_INPUT_WORKTREE_MISMATCH",
+      "ROOT_HANDOFF_POINTER_PRESENT",
+      "UNTRACKED_PRODUCT_CONFIG_TEST_DEP",
+      "WORKTREE_DIFF_FROM_CANDIDATE"
+    ]
+  },
+  "st3": {
+    "product_candidate": "22ce03ba3871ea53e5253f2e3f060a1bab3226a3",
+    "execution_head": "2f488e40816eaa39ee8dcf7b340de75fcb9790cf",
+    "worktree": "<repo>",
+    "raw_verdict": "PRODUCT_DRIFT_OR_IDENTITY_FAILURE",
+    "anomaly_kinds": [
+      "PINNED_INPUT_WORKTREE_MISMATCH",
+      "PROTECTED_MISMATCH",
+      "QAM_CHANGED_UNLISTED_OR_HASH",
+      "QAM_UNTRACKED_UNLISTED_OR_HASH",
+      "ROOT_HANDOFF_POINTER_PRESENT",
+      "UNTRACKED_DOCS_OUTSIDE_QAM",
+      "UNTRACKED_PRODUCT_CONFIG_TEST_DEP",
+      "WORKTREE_DIFF_FROM_CANDIDATE"
+    ]
+  }
+}

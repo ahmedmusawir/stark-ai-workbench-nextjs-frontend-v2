@@ -1,0 +1,30 @@
+{
+  "package": "APBM000_Q1b_Lead_Return_2026-10-05",
+  "candidate": "22ce03ba3871ea53e5253f2e3f060a1bab3226a3",
+  "plan_sha256": "8ddb743f1be09d624bf79c8a602ad05fbd3cffbffbc2d8c6cfbaee16f8b80337",
+  "gate_q": "NOT_ISSUED",
+  "q2": "NOT_STARTED",
+  "installation": "Not installed in Tony VM repository",
+  "files": [
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/QAM_TEST_PLAN.md",
+      "bytes": 37865,
+      "sha256": "8ddb743f1be09d624bf79c8a602ad05fbd3cffbffbc2d8c6cfbaee16f8b80337"
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/Q1B_REVIEW.md",
+      "bytes": 17793,
+      "sha256": "ce02c5cb5432c688e25801000742d0f69ec7778c7ed1fea70badffd4d451fe2f"
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/FINDINGS/DIRECTOR-OBS-001.md",
+      "bytes": 4823,
+      "sha256": "11f614bf896cd1e5ee70d1527a7a87b34b7913245eca6dc85615f18d111b3f6d"
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/HANDOFFS/CLAUDY_Q1B_CONTINUATION.txt",
+      "bytes": 4723,
+      "sha256": "43f923be8245ebc08f4d003e86d2e2858305a0e441909b158ddb588cce50b225"
+    }
+  ]
+}

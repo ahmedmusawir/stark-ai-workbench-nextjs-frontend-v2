@@ -1,23 +1,45 @@
 {
   "module_id": "stark_agent_workspace_apbm_000",
   "packet_version": "1.0",
-  "stage": "Q1_COMPLETE_AWAITING_Q1B",
+  "stage": "Q1B_PLAN_APPROVED_PREP_EQUIVALENT_AWAITING_DIRECTOR",
   "evidence_baseline_sha": "20ef380bdd6eed5e111d953d6404992add7a88a6",
   "product_candidate_sha": "22ce03ba3871ea53e5253f2e3f060a1bab3226a3",
-  "qa_head_sha": "22ce03ba3871ea53e5253f2e3f060a1bab3226a3",
+  "qa_head_sha": "2f488e40816eaa39ee8dcf7b340de75fcb9790cf",
+  "qa_head_note": "2f488e4 = Tony's Q1 QAM documentation commit; 22ce03b is its ancestor. Full intervening-path and working-tree equality is re-proved at Q2-0 by the Q2 identity instrument (plan v0.2 \u00a711.1).",
   "qa_branch": "qa/frontend-apbm-000",
-  "plan_id": "QA-APBM000-PLAN v0.1 (draft)",
-  "plan_draft_sha256": "61ed590afcef110fb8135f1e85b332cc48f5ba704d6d84e813f4cd09f40179bd",
-  "plan_sha256": null,
+  "plan_id": "QA-APBM000-PLAN v0.2 (Lead-approved)",
+  "plan_sha256": "8ddb743f1be09d624bf79c8a602ad05fbd3cffbffbc2d8c6cfbaee16f8b80337",
+  "superseded_plan_sha256": "61ed590afcef110fb8135f1e85b332cc48f5ba704d6d84e813f4cd09f40179bd",
   "acceptance_sha256": "57f8d9f4dec8ca826326067254b0916ef65ccd51b635a8ac6ead73e8ab469fcc",
   "rulings_sha256": "99d4c40f7094106f4386d4d8ff5535228feb653dcbe0fd948a14a0ff1ec3b36f",
-  "qa_lead_approval_record": null,
+  "qa_lead_approval_record": "QAM/Q1B_REVIEW.md sha256 ce02c5cb5432c688e25801000742d0f69ec7778c7ed1fea70badffd4d451fe2f (installed byte-exact 2026-10-05; NOT YET COMMITTED)",
   "director_q2_release_record": null,
+  "director_pending": [
+    "D4 font-only build access",
+    "D7 controlled fixture comfort check or explicit omission",
+    "explicit Q2 release naming candidate 22ce03b, plan 8ddb743f and access choice"
+  ],
+  "q2_blockers": [
+    "Q1b records + Q2 prep records installed but uncommitted",
+    "Director D4/D7/explicit Q2 release missing"
+  ],
+  "open_findings": [
+    "FINDINGS/DIRECTOR-OBS-001.md (UNTRIAGED) + DIRECTOR-OBS-001_EXECUTOR-ADDENDUM-001.md"
+  ],
   "attempt": 1,
-  "last_completed_checkpoint": "Q1",
-  "q1_outcome": "READY_FOR_PLAN_REVIEW",
-  "q1_package": "HANDOFFS/Q1_attempt-001.zip",
-  "next_action": "QA Lead reviews Q1 package and decides D1-D8; Tony commits approved instructions and releases Q2. Executor does not start Q2 before both records exist.",
+  "last_completed_checkpoint": "Q1B (Lead plan approval)",
+  "next_action": "Tony: commit listed QAM paths; record D4/D7 and explicit Q2 release. Executor re-verifies identity at Q2-0, then runs Q2.",
   "gate_q": "NOT_ISSUED",
-  "note": "Routing aid only; no field grants permission without its owner record. plan_sha256 stays null until a Lead approval binds a plan hash."
+  "note": "Routing aid only; no field grants permission without its owner record.",
+  "nonblocking": [
+    "Module-root QA_HANDOFF.md pointer present: Architect/Cody placement correction",
+    "N1 acknowledgement"
+  ],
+  "q2_prep": "evidence/q2-prep-002/identity-post-restore.json raw_verdict PRODUCT_EQUIVALENT (0 blocking); q2-prep-001 preserved",
+  "resolved_2026_10_05": [
+    "manifest restored by Tony (sha 638e95a1 = candidate)",
+    "dev server already stopped (no Executor kill)",
+    "agents.manifest_hermes.json backed up to ~/APBM000_backups/agents.manifest_hermes_2026-10-05_184317.json and removed",
+    "next-env.d.ts restored to pinned 7b550dda"
+  ]
 }

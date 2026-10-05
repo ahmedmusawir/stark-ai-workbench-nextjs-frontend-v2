@@ -1,0 +1,182 @@
+{
+  "generated_at": "2026-10-05T18:30:39.325166+06:00",
+  "note": "Per-path expected hashes for approved QAM records/tooling. Not a blanket exemption; executor records labelled as such.",
+  "files": {
+    "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/HANDOFFS/Q1_REVIEW_START_HERE.md": {
+      "sha256": "d37013950f9436bdaa440355c08fbf0342720437d7adf50f43abc0f54e885bf9",
+      "source": "Q1_attempt-001 FILE_INDEX (committed 2f488e4)"
+    },
+    "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/QAM_TEST_PLAN.md": {
+      "sha256": "8ddb743f1be09d624bf79c8a602ad05fbd3cffbffbc2d8c6cfbaee16f8b80337",
+      "source": "Q1b Lead index Q1B_FILE_INDEX.json"
+    },
+    "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/QAM_PREFLIGHT.md": {
+      "sha256": "98bd95dc6c152097a283b9e67b819e8e54c98ec6adf8ad273e6da58e1baad9ce",
+      "source": "Q1_attempt-001 FILE_INDEX (committed 2f488e4)"
+    },
+    "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/QAM_STATE.json": {
+      "sha256": "0b9530bf60e1ca1ff3ac1ed0403691b918fa3b5ae16c46ddc17b6d6fc2501fab",
+      "source": "EXECUTOR_RECORD/EVIDENCE (pending Tony commit)"
+    },
+    "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/QAM_MANIFEST.md": {
+      "sha256": "5e405f98e6c49534fac4a7d0b272f299674ece655142ab5de70044a43da274c9",
+      "source": "EXECUTOR_RECORD_PENDING_TONY_COMMIT (QAM-only, non-product; hash refreshed at Q2-0)"
+    },
+    "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/QAM_RISK_REQUIREMENTS.md": {
+      "sha256": "99fc847e7411aa9a4271cdd9de1fe7970a224703d1bb9c63e20ed80e52f88045",
+      "source": "Q1_attempt-001 FILE_INDEX (committed 2f488e4)"
+    },
+    "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/QAM_CHECKPOINTS.md": {
+      "sha256": "24d16dc4663714c106cad7258fc14a33ebec596142b4a189d138ff0338a0e78d",
+      "source": "EXECUTOR_RECORD_PENDING_TONY_COMMIT (QAM-only, non-product; hash refreshed at Q2-0)"
+    },
+    "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/QAM_ENTRY.md": {
+      "sha256": "98ac3e8081fcc8a21896faca30dc64ee9e6d3cdbe7d406d5902911203d2d113e",
+      "source": "Q1_attempt-001 FILE_INDEX (committed 2f488e4)"
+    },
+    "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/AC_EVIDENCE_MATRIX.md": {
+      "sha256": "ed48c0aa9e3af47e0df02256f0b911fc90288294ce74649324a89d932736fac5",
+      "source": "Q1_attempt-001 FILE_INDEX (committed 2f488e4)"
+    },
+    "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/HANDOFFS/QA_HANDOFF.md": {
+      "sha256": "65928d72654e99ac892574d3097edaad96cb948645499e629fa245971bc8eb1a",
+      "source": "Q1_attempt-001 FILE_INDEX (committed 2f488e4)"
+    },
+    "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/AUTOMATION/q1_candidate_identity.py": {
+      "sha256": "3351a7a3e0b791a039c64a567ce4f1484d1224b5fed4bab068d4b64c9f6b013a",
+      "source": "Q1_attempt-001 FILE_INDEX (committed 2f488e4)"
+    },
+    "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/AUTOMATION/q1_jest_compare.py": {
+      "sha256": "00dfac52e626402e809638033dd63000e9d3dd08267b6df524f243597bc0717a",
+      "source": "Q1_attempt-001 FILE_INDEX (committed 2f488e4)"
+    },
+    "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/AUTOMATION/q1_export.py": {
+      "sha256": "61cc2fec9291fa27b91bd5b8011ab570fe7c38013ce73214dff11c95675be91f",
+      "source": "Q1_attempt-001 FILE_INDEX (committed 2f488e4)"
+    },
+    "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q1-attempt-001/INDEX.md": {
+      "sha256": "dfde4cf1f1bba3e4432d20425360910e8bb3701cf3c3ce6a5771b4d9be080eed",
+      "source": "Q1_attempt-001 FILE_INDEX (committed 2f488e4)"
+    },
+    "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q1-attempt-001/INHERITED_FAILURE_ASSESSMENT.md": {
+      "sha256": "dbd7c7d88f844b9050d06caf6b439a9a8924586b335f02c8940a85892a02573c",
+      "source": "Q1_attempt-001 FILE_INDEX (committed 2f488e4)"
+    },
+    "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q1-attempt-001/candidate-identity-check.json": {
+      "sha256": "f570a393a1443762cbae1ffa7b6b7ed56c3cbea7f9e5863b8725b8b58be24078",
+      "source": "Q1_attempt-001 FILE_INDEX (committed 2f488e4)"
+    },
+    "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q1-attempt-001/chrome-smoke.cjs": {
+      "sha256": "df5d32319850903bb2079bda7fabd0cd735e027b11af0752284a7fef7ce6461a",
+      "source": "Q1_attempt-001 FILE_INDEX (committed 2f488e4)"
+    },
+    "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q1-attempt-001/guard-controls.cjs": {
+      "sha256": "178532b3a4e58e77eefab862ed3016a1d76ab83ba109cd0abe4c3d31fe0ae10f",
+      "source": "Q1_attempt-001 FILE_INDEX (committed 2f488e4)"
+    },
+    "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q1-attempt-001/harness-probe.log": {
+      "sha256": "fc482b8b921b5ebf2af62d75c5ab36e40c95129bb4c6c73e230742ae7c54ec00",
+      "source": "Q1_attempt-001 FILE_INDEX (committed 2f488e4)"
+    },
+    "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q1-attempt-001/harness-probe3.log": {
+      "sha256": "fc482b8b921b5ebf2af62d75c5ab36e40c95129bb4c6c73e230742ae7c54ec00",
+      "source": "Q1_attempt-001 FILE_INDEX (committed 2f488e4)"
+    },
+    "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q1-attempt-001/jest-baseline-20ef380.json": {
+      "sha256": "792a38e1ecb9299ac078a8b7ad2c1d01b7314d616108109f103b82c7bf782960",
+      "source": "Q1_attempt-001 FILE_INDEX (committed 2f488e4)"
+    },
+    "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q1-attempt-001/jest-baseline-20ef380.log": {
+      "sha256": "08429a98c851d46417beed59c0d24e3490f607b24b063e373c8d7159beb3b2a6",
+      "source": "Q1_attempt-001 FILE_INDEX (committed 2f488e4)"
+    },
+    "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q1-attempt-001/jest-candidate-22ce03b.json": {
+      "sha256": "847900f9d6c19a65729f1affdfbaaa05a5c92d7fc1881cb4238820d320562a6c",
+      "source": "Q1_attempt-001 FILE_INDEX (committed 2f488e4)"
+    },
+    "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q1-attempt-001/jest-candidate-22ce03b.log": {
+      "sha256": "3915d4ffa05af03d2da75e69c46831703c737e7b638489ee8c03b93bc4d61060",
+      "source": "Q1_attempt-001 FILE_INDEX (committed 2f488e4)"
+    },
+    "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q1-attempt-001/jest-independent-comparison.json": {
+      "sha256": "add582598673a8f93345ea8289b7b0019e4ba5661c4bc8393aaecc32951f6dd4",
+      "source": "Q1_attempt-001 FILE_INDEX (committed 2f488e4)"
+    },
+    "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q1-attempt-001/readiness-results.json": {
+      "sha256": "bdff31d041082c499dfbc439ed5cb6a2b20d386f3458042890296ded7e19c4f0",
+      "source": "Q1_attempt-001 FILE_INDEX (committed 2f488e4)"
+    },
+    "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q1-attempt-001/tsc-candidate.log": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "source": "Q1_attempt-001 FILE_INDEX (committed 2f488e4)"
+    },
+    "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/HANDOFFS/Q1_attempt-001.zip": {
+      "sha256": "aa7c3a5e7c2f071123fe56323b33b560c9ddf04ac022415c6f178f69b85ef0d5",
+      "source": "Q1 receipt"
+    },
+    "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/HANDOFFS/Q1_attempt-001_RECEIPT.json": {
+      "sha256": "991063793ec1dd3b20be53bc94f787e92e9943943b164cdbd15ecaed8694b419",
+      "source": "Q1 export output (committed 2f488e4)"
+    },
+    "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/Q1B_REVIEW.md": {
+      "sha256": "ce02c5cb5432c688e25801000742d0f69ec7778c7ed1fea70badffd4d451fe2f",
+      "source": "Q1b Lead index Q1B_FILE_INDEX.json"
+    },
+    "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/FINDINGS/DIRECTOR-OBS-001.md": {
+      "sha256": "11f614bf896cd1e5ee70d1527a7a87b34b7913245eca6dc85615f18d111b3f6d",
+      "source": "Q1b Lead index Q1B_FILE_INDEX.json"
+    },
+    "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/HANDOFFS/CLAUDY_Q1B_CONTINUATION.txt": {
+      "sha256": "43f923be8245ebc08f4d003e86d2e2858305a0e441909b158ddb588cce50b225",
+      "source": "Q1b Lead index Q1B_FILE_INDEX.json"
+    },
+    "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/HANDOFFS/Q1B_FILE_INDEX.json": {
+      "sha256": "f73a7aa594bad41ada7ac6d7dbab5cea87a10b08104c830b1cc79f3d694ce356",
+      "source": "Q1b Lead delivery (index own file)"
+    },
+    "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/FINDINGS/DIRECTOR-OBS-001_EXECUTOR-ADDENDUM-001.md": {
+      "sha256": "dc7f08e22e268ee26921f6b7730c316483d2bf116969eb86bd5389a644e7f66c",
+      "source": "EXECUTOR_RECORD_PENDING_TONY_COMMIT (QAM-only, non-product; hash refreshed at Q2-0)"
+    },
+    "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/HANDOFFS/Q2_PENDING_DECISIONS_2026-10-05_182656.md": {
+      "sha256": "3d0c110c4feb588595abee5ad24226a26796e3ee14a23960382366e583966332",
+      "source": "EXECUTOR_RECORD_PENDING_TONY_COMMIT (QAM-only, non-product; hash refreshed at Q2-0)"
+    },
+    "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/AUTOMATION/q2_identity.py": {
+      "sha256": "703196058f1d878009d21a2dbdce6fd7dbabfc3341ab449b705af1b969c70f58",
+      "source": "EXECUTOR_RECORD_PENDING_TONY_COMMIT (QAM-only, non-product; hash refreshed at Q2-0)"
+    },
+    "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/AUTOMATION/q2_approved_qam_records.json": {
+      "sha256": null,
+      "source": "EXECUTOR_RECORD_PENDING_TONY_COMMIT (QAM-only, non-product; hash refreshed at Q2-0)"
+    },
+    "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-prep-001/INDEX.md": {
+      "sha256": "f96b642a11fa34d21697f876d28ae4901e4b1973e53aa60a93001bddb4b07a46",
+      "source": "EXECUTOR_EVIDENCE q2-prep-001 (pending Tony commit)"
+    },
+    "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-prep-001/identity-selftest-controls.json": {
+      "sha256": "486cb42624c4ddc8907edc87d9a4909225d842e2b4f87c0ded92746739ef774a",
+      "source": "EXECUTOR_EVIDENCE q2-prep-001 (pending Tony commit)"
+    },
+    "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-prep-001/identity-pre-release.json": {
+      "sha256": "0812a9c22a052bd87412c13d504eb11e14b336eae59f053ebabc4158550dceb2",
+      "source": "EXECUTOR_EVIDENCE q2-prep-001 (pending Tony commit)"
+    },
+    "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/HANDOFFS/Q2_PREP_STATUS_2026-10-05_183159.md": {
+      "sha256": "2f15a20c27e574c65332f24d437bad2686d684bc09eac0e820038113174050f0",
+      "source": "EXECUTOR_RECORD prep status 183159 (pending Tony commit)"
+    },
+    "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/HANDOFFS/Q2_PREP_STATUS_2026-10-05_184415.md": {
+      "sha256": "ed7b3477c8e835b2f2086ae50f8e74adce2b9506717c7c01f987223388210b2f",
+      "source": "EXECUTOR_RECORD/EVIDENCE (pending Tony commit)"
+    },
+    "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-prep-002/INDEX.md": {
+      "sha256": "35ddb0c0c46a7eb00ae368df24e6dc743bf9bc7b78a99634589b6ab096e78c3a",
+      "source": "EXECUTOR_RECORD/EVIDENCE (pending Tony commit)"
+    },
+    "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-prep-002/identity-post-restore.json": {
+      "sha256": "5a30e35686d8dccf4e50f059944223e92ab18edcb539a6c1c820e9a637e22e2b",
+      "source": "EXECUTOR_RECORD/EVIDENCE (pending Tony commit)"
+    }
+  }
+}
