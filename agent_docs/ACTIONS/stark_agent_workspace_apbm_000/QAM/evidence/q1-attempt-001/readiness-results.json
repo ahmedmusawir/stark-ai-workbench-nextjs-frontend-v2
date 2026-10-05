@@ -1,0 +1,39 @@
+{
+  "attempt": "q1-attempt-001",
+  "seat": "Independent QA Executor (Claudy, Claude Opus 5.5 / Claude Code). Not the Engineer session.",
+  "recorded_at": "2026-10-04T23:13:00+06:00",
+  "candidate": "22ce03ba3871ea53e5253f2e3f060a1bab3226a3",
+  "branch": "qa/frontend-apbm-000",
+  "status_note": "Readiness probes only. Not Q2 acceptance evidence except where QAM_TEST_PLAN marks reuse.",
+  "environment": {
+    "os_kernel": "Linux 7.0.0-31-generic",
+    "cpus": 4,
+    "node": "v26.7.0",
+    "npm": "11.19.0",
+    "next": "16.2.6",
+    "playwright_test": "1.59.1",
+    "jest": "30.0.5",
+    "typescript": "5.5.4",
+    "react": "19.2.4",
+    "zustand": "4.5.4",
+    "chrome": "Google Chrome 154.0.8037.92 at /opt/google/chrome/chrome",
+    "lockfile_changed_vs_baseline": false,
+    "fixture_port_43170_free_at_intake": true,
+    "qa_probe_port": 43181
+  },
+  "probes": [
+    {"id": "P1", "what": "Candidate identity vs Engineer pinned scope", "command": "python3 QAM/AUTOMATION/q1_candidate_identity.py", "result": "Product equivalent; docs-only extras; see candidate-identity-check.json and QAM_PREFLIGHT.md item 1", "raw_verdict_field": "DRIFT_OR_GAP_FOUND (strict script rule counts docs-only/untracked items; adjudicated in preflight)"},
+    {"id": "P2", "what": "TypeScript noEmit, guarded, env -i", "command": "node node_modules/typescript/bin/tsc --noEmit --incremental false", "exit": 0, "seconds": 11, "log": "tsc-candidate.log (empty = no diagnostics)"},
+    {"id": "P3", "what": "Full Jest candidate 22ce03b, guarded, env -i, --runInBand --ci", "exit": 1, "seconds": 21, "result": "30/9 suites, 250 pass / 37 fail / 287", "log": "jest-candidate-22ce03b.log"},
+    {"id": "P4", "what": "Full Jest baseline 20ef380 from read-only git archive extract in QA scratch (node_modules symlinked)", "exit": 1, "seconds": 27, "result": "26/10 suites, 225 pass / 38 fail / 263", "log": "jest-baseline-20ef380.log"},
+    {"id": "P5", "what": "Name-level comparison", "command": "python3 QAM/AUTOMATION/q1_jest_compare.py", "result": "0 new; 37 retained identical to Engineer list; first diagnostic line equal for all 37; 1 baseline failure absent in candidate (test renamed/rewritten, not repaired)", "file": "jest-independent-comparison.json"},
+    {"id": "P6", "what": "Engineer fixture harness boot on QA port 43181, curl probes, SIGTERM teardown", "result": "READY in 7s; / 200; bundle 200 (4.1MB); font 200; path traversal attempts 404; exit 0; own temp dir removed; port released. Residue: node-jiti cache dir in TMPDIR (not removed by harness).", "log": "harness-probe.log"},
+    {"id": "P7", "what": "Chrome launch smoke against harness", "attempt_1": "FAIL - QA instrument error: Chrome FATAL 'Socket path too long' because QA set TMPDIR to long scratch path", "attempt_2": "PASS with short TMPDIR: browser 154.0.8037.92, h1 'Your agents', request origins only http://127.0.0.1:43181", "script": "chrome-smoke.cjs"},
+    {"id": "P8", "what": "Node network guard negative controls (expected-red)", "script": "guard-controls.cjs", "result": {"fetch_external": "BLOCKED", "net_connect_obj": "BLOCKED", "net_connect_args": "BLOCKED", "http_request_host": "BLOCKED", "https_get_url": "BLOCKED", "loopback_allowed": "NOT_BLOCKED (correct)", "dgram_udp_send": "NOT_BLOCKED (gap)", "dns_lookup": "NOT_BLOCKED (gap)"}, "note": "UDP target was 192.0.2.1 (TEST-NET-1, non-routable) and DNS name example.invalid (reserved); child processes are also outside the in-process guard."},
+    {"id": "P9", "what": "OS-level isolation availability: unshare -rn with lo up", "result": "Available. Inside namespace: DNS EAI_AGAIN; harness READY; Chrome smoke PASS with only loopback origin; harness exit 0", "log": "harness-probe3.log"}
+  ],
+  "processes_left_running": "none (only the invoking shell matched)",
+  "git_mutations": 0,
+  "tracked_file_changes": 0,
+  "untracked_additions": "QAM/AUTOMATION/q1_*.py and QAM/evidence/q1-attempt-001/** only"
+}

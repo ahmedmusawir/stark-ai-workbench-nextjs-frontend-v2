@@ -1,0 +1,212 @@
+{
+  "recorded_at": "2026-10-04T23:05:12.074097+06:00",
+  "instrument": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/AUTOMATION/q1_candidate_identity.py",
+  "branch": "qa/frontend-apbm-000",
+  "head": "22ce03ba3871ea53e5253f2e3f060a1bab3226a3",
+  "head_parents": [
+    "20ef380bdd6eed5e111d953d6404992add7a88a6"
+  ],
+  "baseline": "20ef380bdd6eed5e111d953d6404992add7a88a6",
+  "status_porcelain": "?? agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/AUTOMATION/q1_candidate_identity.py\n",
+  "candidate_scope": {
+    "file_sha256": "338dbdf4ee6a93590ce3114b34b49e66ec8c90df1020205ff6ec38e5d63c87cf",
+    "inputs": 218,
+    "mismatches": [
+      {
+        "path": "next-env.d.ts",
+        "recorded": "7b550dda9686c16f36a17bf9051d5dbf31e98555b30d114ac49fc49a1e712651",
+        "head": null,
+        "worktree": "7b550dda9686c16f36a17bf9051d5dbf31e98555b30d114ac49fc49a1e712651"
+      }
+    ]
+  },
+  "changed_source_inventory": {
+    "entries": 28,
+    "mismatches": []
+  },
+  "protected_files": {
+    "compared": 191,
+    "mismatches": []
+  },
+  "frozen_packet": {
+    "compared": 171,
+    "mismatches": [
+      {
+        "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/HANDOFFS/README.md",
+        "recorded": "8d26117a56f736139efc5998e799f0fc7b9ac12bccff298942fdcd2c6b950ba9",
+        "head": "cfee82c7eae1232b46155f78dd3fe9673d136ec34c8bd414a53bed4708b957fd",
+        "explained_by_relocation": true
+      },
+      {
+        "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/QAM_ENTRY.md",
+        "recorded": "9a530a2931979bbabd5c8b71ebbcde6e3d0eaa5a5f40c34e40e5f84b9f9cdfd1",
+        "head": "98ac3e8081fcc8a21896faca30dc64ee9e6d3cdbe7d406d5902911203d2d113e",
+        "explained_by_relocation": true
+      }
+    ]
+  },
+  "relocation_docs": [
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QA_HANDOFF.md",
+      "after": "f83bcb00d177869bee2c08c370dfb9c2b9f40605d1f85694bfd7f43d6404e473",
+      "head": "f83bcb00d177869bee2c08c370dfb9c2b9f40605d1f85694bfd7f43d6404e473",
+      "equal": true
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/HANDOFFS/QA_HANDOFF.md",
+      "after": "65928d72654e99ac892574d3097edaad96cb948645499e629fa245971bc8eb1a",
+      "head": "65928d72654e99ac892574d3097edaad96cb948645499e629fa245971bc8eb1a",
+      "equal": true
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/QAM_ENTRY.md",
+      "after": "98ac3e8081fcc8a21896faca30dc64ee9e6d3cdbe7d406d5902911203d2d113e",
+      "head": "98ac3e8081fcc8a21896faca30dc64ee9e6d3cdbe7d406d5902911203d2d113e",
+      "equal": true
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/QAM_MANIFEST.md",
+      "after": "1046e8184a548fc684383009924335cd73462cec6d791dc5ae8fa0a19c26afeb",
+      "head": "1046e8184a548fc684383009924335cd73462cec6d791dc5ae8fa0a19c26afeb",
+      "equal": true
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/HANDOFFS/README.md",
+      "after": "cfee82c7eae1232b46155f78dd3fe9673d136ec34c8bd414a53bed4708b957fd",
+      "head": "cfee82c7eae1232b46155f78dd3fe9673d136ec34c8bd414a53bed4708b957fd",
+      "equal": true
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/evidence/engineering-attempt-001/REVIEW_START_HERE.md",
+      "after": "fe1421643e7530b8c2e2971a20ede29b5045c8eed43fea19939d90d1db84eb83",
+      "head": "fe1421643e7530b8c2e2971a20ede29b5045c8eed43fea19939d90d1db84eb83",
+      "equal": true
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/evidence/engineering-attempt-001/staging-paths.txt",
+      "after": "7e4f360d8fe73a4b6d2d99829cb9fa567a736e626dc33d49be9f58fe1f1f178e",
+      "head": "7e4f360d8fe73a4b6d2d99829cb9fa567a736e626dc33d49be9f58fe1f1f178e",
+      "equal": true
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/EXECUTION_LOG.md",
+      "after": "7fc13524d95be2bfd664e844238e6e741b27abef4e74636aaa9e9d1e8b49fc6b",
+      "head": "7fc13524d95be2bfd664e844238e6e741b27abef4e74636aaa9e9d1e8b49fc6b",
+      "equal": true
+    }
+  ],
+  "commit_vs_staging": {
+    "commit_paths": 404,
+    "staging_paths": 341,
+    "staging_not_in_commit": [],
+    "commit_outside_staging": {
+      "CHANGELOG.md": "M",
+      "RECOVERY.md": "M",
+      "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/HANDOFFS/ENGINEERING_attempt-001.zip": "A",
+      "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/HANDOFFS/ENGINEERING_attempt-001_RECEIPT.json": "A",
+      "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/HANDOFFS/ENGINEERING_attempt-002.zip": "A",
+      "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/HANDOFFS/ENGINEERING_attempt-002_RECEIPT.json": "A",
+      "agent_docs/PLANNING/STARK_AGENT_WORKSPACE_KICKOFF_v0_1.md": "A",
+      "agent_docs/RECON/RECON_ADK_CONTINUATION_20261004-115739.md": "A",
+      "agent_docs/RECON/RECON_ADK_FRONTEND_20261003-234722.md": "A",
+      "agent_docs/RESPONSES/response_2026-07-16_121728_stageA-scope-announcement.md": "D",
+      "agent_docs/RESPONSES/response_2026-07-16_143955_stageA-recon-headline.md": "D",
+      "agent_docs/RESPONSES/response_2026-07-16_191653_bim001-implementation-plan.md": "D",
+      "agent_docs/RESPONSES/response_2026-07-16_194121_bim001-execution-complete.md": "D",
+      "agent_docs/RESPONSES/response_2026-07-17_145856_g6-investigation.md": "D",
+      "agent_docs/RESPONSES/response_2026-07-17_150844_bim001-closeout.md": "D",
+      "agent_docs/RESPONSES/response_2026-07-18_130047_fix001-preflight-plan.md": "D",
+      "agent_docs/RESPONSES/response_2026-07-18_131303_fix001-execution-result.md": "D",
+      "agent_docs/RESPONSES/response_2026-07-18_145214_fix001-amendment-result.md": "D",
+      "agent_docs/RESPONSES/response_2026-07-18_161419_fix001-final-disposition.md": "D",
+      "agent_docs/RESPONSES/response_2026-07-18_163153_bim002-preflight-plan.md": "D",
+      "agent_docs/RESPONSES/response_2026-07-18_172056_bim002-execution-result.md": "D",
+      "agent_docs/RESPONSES/response_2026-07-19_140029_fix002-preflight-plan.md": "D",
+      "agent_docs/RESPONSES/response_2026-07-19_141545_fix002-execution-result.md": "D",
+      "agent_docs/RESPONSES/response_2026-07-19_171925_feat001-preflight-plan.md": "D",
+      "agent_docs/RESPONSES/response_2026-07-19_172910_feat001-execution-result.md": "D",
+      "agent_docs/RESPONSES/response_2026-07-19_183350_bim003-preflight-plan.md": "D",
+      "agent_docs/RESPONSES/response_2026-07-19_184207_bim003-execution-result.md": "D",
+      "agent_docs/RESPONSES/response_2026-07-19_190517_bim004-preflight-plan.md": "D",
+      "agent_docs/RESPONSES/response_2026-07-19_191938_bim004-execution-result.md": "D",
+      "agent_docs/RESPONSES/response_2026-07-20_001929_bim005-preflight-plan.md": "D",
+      "agent_docs/RESPONSES/response_2026-07-20_002531_bim005-execution-result.md": "D",
+      "agent_docs/RESPONSES/response_2026-07-20_193942_fix003-preflight-plan.md": "D",
+      "agent_docs/RESPONSES/response_2026-07-20_195136_fix003-execution-result.md": "D",
+      "agent_docs/RESPONSES/response_2026-10-03_234722_adk-frontend-recon_evidence/FILE_INDEX.md": "A",
+      "agent_docs/RESPONSES/response_2026-10-03_234722_adk-frontend-recon_evidence/audit.log": "A",
+      "agent_docs/RESPONSES/response_2026-10-03_234722_adk-frontend-recon_evidence/boot.log": "A",
+      "agent_docs/RESPONSES/response_2026-10-03_234722_adk-frontend-recon_evidence/browser.json": "A",
+      "agent_docs/RESPONSES/response_2026-10-03_234722_adk-frontend-recon_evidence/build.log": "A",
+      "agent_docs/RESPONSES/response_2026-10-03_234722_adk-frontend-recon_evidence/check-results.json": "A",
+      "agent_docs/RESPONSES/response_2026-10-03_234722_adk-frontend-recon_evidence/final-state.json": "A",
+      "agent_docs/RESPONSES/response_2026-10-03_234722_adk-frontend-recon_evidence/inspection-evidence.json": "A",
+      "agent_docs/RESPONSES/response_2026-10-03_234722_adk-frontend-recon_evidence/inventory.json": "A",
+      "agent_docs/RESPONSES/response_2026-10-03_234722_adk-frontend-recon_evidence/jest-excerpts.txt": "A",
+      "agent_docs/RESPONSES/response_2026-10-03_234722_adk-frontend-recon_evidence/lint.log": "A",
+      "agent_docs/RESPONSES/response_2026-10-03_234722_adk-frontend-recon_evidence/live-probe.json": "A",
+      "agent_docs/RESPONSES/response_2026-10-03_234722_adk-frontend-recon_evidence/test-results.json": "A",
+      "agent_docs/RESPONSES/response_2026-10-04_115739_adk-capability-continuation.md": "A",
+      "agent_docs/RESPONSES/response_2026-10-04_115739_adk-capability-continuation_evidence/FILE_INDEX.md": "A",
+      "agent_docs/RESPONSES/response_2026-10-04_115739_adk-capability-continuation_evidence/get-a-after.json": "A",
+      "agent_docs/RESPONSES/response_2026-10-04_115739_adk-capability-continuation_evidence/get-a-before.json": "A",
+      "agent_docs/RESPONSES/response_2026-10-04_115739_adk-capability-continuation_evidence/get-b-after.json": "A",
+      "agent_docs/RESPONSES/response_2026-10-04_115739_adk-capability-continuation_evidence/get-b-before.json": "A",
+      "agent_docs/RESPONSES/response_2026-10-04_115739_adk-capability-continuation_evidence/list.json": "A",
+      "agent_docs/RESPONSES/response_2026-10-04_115739_adk-capability-continuation_evidence/repo-state.json": "A",
+      "agent_docs/RESPONSES/response_2026-10-04_115739_adk-capability-continuation_evidence/request-ledger.json": "A",
+      "agent_docs/RESPONSES/response_2026-10-04_115739_adk-capability-continuation_evidence/resume-a.json": "A",
+      "agent_docs/RESPONSES/response_2026-10-04_115739_adk-capability-continuation_evidence/resume-b.json": "A",
+      "agent_docs/RESPONSES/response_2026-10-04_115739_adk-capability-continuation_evidence/verification.json": "A",
+      "agent_docs/RESPONSES/response_2026-10-04_153205_designer-theme-source-report.md": "A",
+      "agent_docs/RESPONSES/response_2026-10-04_220306_apbm-000-engineering-return.md": "A",
+      "agent_docs/RESPONSES/response_2026-10-04_221511_qa-handoff-location-correction.md": "A",
+      "session_2026-10-03.md": "A",
+      "session_2026-10-04.md": "A"
+    },
+    "deleted_in_commit": [
+      "agent_docs/RESPONSES/response_2026-07-16_121728_stageA-scope-announcement.md",
+      "agent_docs/RESPONSES/response_2026-07-16_143955_stageA-recon-headline.md",
+      "agent_docs/RESPONSES/response_2026-07-16_191653_bim001-implementation-plan.md",
+      "agent_docs/RESPONSES/response_2026-07-16_194121_bim001-execution-complete.md",
+      "agent_docs/RESPONSES/response_2026-07-17_145856_g6-investigation.md",
+      "agent_docs/RESPONSES/response_2026-07-17_150844_bim001-closeout.md",
+      "agent_docs/RESPONSES/response_2026-07-18_130047_fix001-preflight-plan.md",
+      "agent_docs/RESPONSES/response_2026-07-18_131303_fix001-execution-result.md",
+      "agent_docs/RESPONSES/response_2026-07-18_145214_fix001-amendment-result.md",
+      "agent_docs/RESPONSES/response_2026-07-18_161419_fix001-final-disposition.md",
+      "agent_docs/RESPONSES/response_2026-07-18_163153_bim002-preflight-plan.md",
+      "agent_docs/RESPONSES/response_2026-07-18_172056_bim002-execution-result.md",
+      "agent_docs/RESPONSES/response_2026-07-19_140029_fix002-preflight-plan.md",
+      "agent_docs/RESPONSES/response_2026-07-19_141545_fix002-execution-result.md",
+      "agent_docs/RESPONSES/response_2026-07-19_171925_feat001-preflight-plan.md",
+      "agent_docs/RESPONSES/response_2026-07-19_172910_feat001-execution-result.md",
+      "agent_docs/RESPONSES/response_2026-07-19_183350_bim003-preflight-plan.md",
+      "agent_docs/RESPONSES/response_2026-07-19_184207_bim003-execution-result.md",
+      "agent_docs/RESPONSES/response_2026-07-19_190517_bim004-preflight-plan.md",
+      "agent_docs/RESPONSES/response_2026-07-19_191938_bim004-execution-result.md",
+      "agent_docs/RESPONSES/response_2026-07-20_001929_bim005-preflight-plan.md",
+      "agent_docs/RESPONSES/response_2026-07-20_002531_bim005-execution-result.md",
+      "agent_docs/RESPONSES/response_2026-07-20_193942_fix003-preflight-plan.md",
+      "agent_docs/RESPONSES/response_2026-07-20_195136_fix003-execution-result.md"
+    ]
+  },
+  "undeclared_code_or_config_changes": {
+    "CHANGELOG.md": "M",
+    "RECOVERY.md": "M",
+    "session_2026-10-03.md": "A",
+    "session_2026-10-04.md": "A"
+  },
+  "contract_hashes_head": {
+    "ACCEPTANCE_SPEC.md": "57f8d9f4dec8ca826326067254b0916ef65ccd51b635a8ac6ead73e8ab469fcc",
+    "RULINGS_ADDENDUM.md": "99d4c40f7094106f4386d4d8ff5535228feb653dcbe0fd948a14a0ff1ec3b36f",
+    "GOVERNANCE.md": "8a14a89821ced98adc2e4605ff26b7b1346f8932704bf0dacdc9c961ab98b704",
+    "KNOWN_LIMITS.md": "5644192decec3da4b45a76bc30bd649a9cce97d7b26110b4b0fb060f4c351d04",
+    "DATA_CONTRACT.md": "3a2e5bece2887ff0ac13ca0914db5137594fc106f3ed8cbb34e6db47e7dbb6ff",
+    "FILE_SCOPE.md": "4db42a192806eb0373e8b84d6881eb7adb2b2e9e8f3153618b6252d18a126ba9",
+    "QAM/QAM_RISK_REQUIREMENTS.md": "99fc847e7411aa9a4271cdd9de1fe7970a224703d1bb9c63e20ed80e52f88045",
+    "QAM/HANDOFFS/QA_HANDOFF.md": "65928d72654e99ac892574d3097edaad96cb948645499e629fa245971bc8eb1a",
+    "QAM/QAM_ENTRY.md": "98ac3e8081fcc8a21896faca30dc64ee9e6d3cdbe7d406d5902911203d2d113e"
+  },
+  "verdict": "DRIFT_OR_GAP_FOUND"
+}
