@@ -1,0 +1,13 @@
+{
+  "stage": "ROSTER_REBIND_REVIEW",
+  "recorded_at": "2026-10-05T21:58:21.794400+06:00",
+  "repo_archive": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/HANDOFFS/ROSTER_REBIND_REVIEW_2026-10-05_215715.zip",
+  "shareable_copy": "/home/moose/Downloads/APBM000_Roster-Rebind-Review_2026-10-05_215715.zip",
+  "downloads_copy_status": "VERIFIED IDENTICAL",
+  "sha256": "9c938d2630253f6ea1ad9727b21d34b2275400042ecff8073402ca8997dcd4b6",
+  "bytes": 103596,
+  "members": 33,
+  "crc_validation": "PASS",
+  "membership_hashes_validation": "PASS",
+  "sensitive_scan": "PASS: no secret-pattern hits; no env/auth/profile/trace/build output"
+}

@@ -1,7 +1,7 @@
 {
   "module_id": "stark_agent_workspace_apbm_000",
   "packet_version": "1.0",
-  "stage": "REBIND_EVIDENCE_READY_AWAITING_LEAD_BINDING",
+  "stage": "Q2_RELEASED_HELD_AT_Q2_0_AWAITING_REBIND",
   "evidence_baseline_sha": "20ef380bdd6eed5e111d953d6404992add7a88a6",
   "product_candidate_sha": "22ce03ba3871ea53e5253f2e3f060a1bab3226a3",
   "qa_head_sha": "f21564cacb563ecddbf78b1685086c9489bf1c26",
@@ -16,16 +16,14 @@
   "director_q2_release_record": "HANDOFFS/DIRECTOR_Q2_RELEASE_2026-10-05_193516.md (verbatim; D4 ALLOW, D7 OMIT; release conditional on commit verification)",
   "director_pending": [],
   "q2_blockers": [
-    "QA Lead revised candidate/plan binding (L1-L6)",
-    "Single Director confirmation extending release to f21564c (Architect text), after Lead approval",
-    "Lead prep file LEAD_REMOTE_ROSTER_PREP_2026-10-05.md named by Director not found on disk"
+    "Execution HEAD f21564c carries Director product-config delta vs candidate 22ce03b (agents.manifest.json roster, -hermes added, copy deleted): fresh Lead candidate binding + Architect R000-03/AC000-21 ruling required (HANDOFFS/Q2_RULING_REQUEST_2026-10-05_193516.md)"
   ],
   "open_findings": [
     "FINDINGS/DIRECTOR-OBS-001.md (UNTRIAGED) + DIRECTOR-OBS-001_EXECUTOR-ADDENDUM-001.md"
   ],
   "attempt": 1,
   "last_completed_checkpoint": "Q1B (Lead plan approval)",
-  "next_action": "QA Lead reviews ROSTER_REBIND review package; then Director confirmation; then Executor Q2-0 with q2_identity_v2",
+  "next_action": "Architect ruling + Lead rebind (recommended: candidate f21564c). Then Executor re-verifies identity and runs Q2 under the recorded release.",
   "gate_q": "NOT_ISSUED",
   "note": "Routing aid only; no field grants permission without its owner record.",
   "nonblocking": [
@@ -40,9 +38,5 @@
     "next-env.d.ts restored to pinned 7b550dda"
   ],
   "diagnostics": "evidence/q2-prep-003: Jest at f21564c 286 pass / 1 fail (only class C remains); identity raw PRODUCT_DRIFT_OR_IDENTITY_FAILURE (config only)",
-  "standing_director_constraint": "Executor never changes/restores/renames config/agents.manifest*.json",
-  "architect_amendment": "HANDOFFS/ARCHITECT_REMOTE_ROSTER_AMENDMENT_2026-10-05.md sha256 57924e3f046bc521b3a91fe78cd17087e8b2f3dbd6aa05b11439a26cf459c7d9 (index-verified 9/9)",
-  "proposed_product_candidate_sha": "f21564cacb563ecddbf78b1685086c9489bf1c26",
-  "product_candidate_sha_note": "22ce03b remains the bound candidate until the Lead issues the rebind addendum",
-  "rebind_evidence": "evidence/remote-roster-rebind-001 (AMENDMENT_EVIDENCE_CONSISTENT; identity v2 PRODUCT_EQUIVALENT with bounded next-env flag, 1 blocking strict)"
+  "standing_director_constraint": "Executor never changes/restores/renames config/agents.manifest*.json"
 }
