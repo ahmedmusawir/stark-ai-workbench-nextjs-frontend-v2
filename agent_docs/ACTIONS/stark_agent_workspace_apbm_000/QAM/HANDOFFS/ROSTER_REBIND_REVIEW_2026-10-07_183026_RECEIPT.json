@@ -1,0 +1,17 @@
+{
+  "recorded_at": "2026-10-07T18:30:26.915772+06:00",
+  "repo_archive": "/home/moose/NEXTJS/stark-ai-workbench-nextjs-frontend-v2/agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/HANDOFFS/ROSTER_REBIND_REVIEW_2026-10-07_183026.zip",
+  "shareable_copy": "/home/moose/Downloads/APBM000_ROSTER_REBIND_REVIEW_2026-10-07_183026.zip",
+  "downloads_copy_status": "VERIFIED IDENTICAL",
+  "sha256": "c8ef0ee4129f531318f04970d7d28bb6d7b20d9f65a894d56151a083fa605a4b",
+  "bytes": 125711,
+  "members": 39,
+  "crc_validation": "PASS",
+  "member_size_and_hash_validation": "PASS",
+  "acceptance_testing_run": false,
+  "new_repository_records_inside_qam": true,
+  "responses_excluded_from_staging": true,
+  "prior_packages_preserved": true,
+  "copy_members_verified": 39,
+  "copy_verified_at": "2026-10-07T18:31:36.371874+06:00"
+}

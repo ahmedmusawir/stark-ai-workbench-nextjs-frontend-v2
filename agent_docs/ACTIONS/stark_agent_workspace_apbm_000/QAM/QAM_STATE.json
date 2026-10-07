@@ -1,31 +1,33 @@
 {
   "module_id": "stark_agent_workspace_apbm_000",
   "packet_version": "1.0",
-  "stage": "REBIND_EVIDENCE_READY_AWAITING_LEAD_BINDING",
+  "stage": "LEAD_APPROVED_REVISED_CANDIDATE_AWAITING_COMMIT_AND_REVISED_RELEASE",
   "evidence_baseline_sha": "20ef380bdd6eed5e111d953d6404992add7a88a6",
-  "product_candidate_sha": "22ce03ba3871ea53e5253f2e3f060a1bab3226a3",
-  "qa_head_sha": "f21564cacb563ecddbf78b1685086c9489bf1c26",
-  "qa_head_note": "2f488e4 = Tony's Q1 QAM documentation commit; 22ce03b is its ancestor. Full intervening-path and working-tree equality is re-proved at Q2-0 by the Q2 identity instrument (plan v0.2 \u00a711.1).",
+  "product_candidate_sha": "f21564cacb563ecddbf78b1685086c9489bf1c26",
+  "qa_head_sha": "a4abd2a9e4d9675a41653fdb66f3456feb11457a",
+  "qa_head_note": "a4abd2a is a committed documentation successor of proposed f21564c: 37 QAM paths, 1 historical RESPONSES document, zero product/config/test/dependency delta. Fresh raw identity evidence under remote-roster-rebind-002.",
   "qa_branch": "qa/frontend-apbm-000",
   "plan_id": "QA-APBM000-PLAN v0.2 (Lead-approved)",
   "plan_sha256": "8ddb743f1be09d624bf79c8a602ad05fbd3cffbffbc2d8c6cfbaee16f8b80337",
   "superseded_plan_sha256": "61ed590afcef110fb8135f1e85b332cc48f5ba704d6d84e813f4cd09f40179bd",
   "acceptance_sha256": "57f8d9f4dec8ca826326067254b0916ef65ccd51b635a8ac6ead73e8ab469fcc",
   "rulings_sha256": "99d4c40f7094106f4386d4d8ff5535228feb653dcbe0fd948a14a0ff1ec3b36f",
-  "qa_lead_approval_record": "QAM/Q1B_REVIEW.md sha256 ce02c5cb5432c688e25801000742d0f69ec7778c7ed1fea70badffd4d451fe2f (installed byte-exact 2026-10-05; NOT YET COMMITTED)",
-  "director_q2_release_record": "HANDOFFS/DIRECTOR_Q2_RELEASE_2026-10-05_193516.md (verbatim; D4 ALLOW, D7 OMIT; release conditional on commit verification)",
-  "director_pending": [],
+  "qa_lead_approval_record": "Q1B_REVIEW.md (original v0.2, historical) + HANDOFFS/LEAD_REMOTE_ROSTER_APPROVAL_2026-10-07.md (revised candidate f21564c), installed byte-exact 2026-10-07; commit pending",
+  "director_q2_release_record": "HISTORICAL: HANDOFFS/DIRECTOR_Q2_RELEASE_2026-10-05_193516.md (D4 ALLOW, D7 OMIT remain recorded). Revised-candidate release: PENDING",
+  "director_pending": [
+    "Single revised-candidate release confirmation (Architect amendment / Lead L5)"
+  ],
   "q2_blockers": [
-    "QA Lead revised candidate/plan binding (L1-L6)",
-    "Single Director confirmation extending release to f21564c (Architect text), after Lead approval",
-    "Lead prep file LEAD_REMOTE_ROSTER_PREP_2026-10-05.md named by Director not found on disk"
+    "Tony commit of the selective QAM list (approval + pending records)",
+    "Single revised-candidate release confirmation",
+    "Q2-0 verification under v2 tool + separate authority/tool hash gate"
   ],
   "open_findings": [
     "FINDINGS/DIRECTOR-OBS-001.md (UNTRIAGED) + DIRECTOR-OBS-001_EXECUTOR-ADDENDUM-001.md"
   ],
   "attempt": 1,
   "last_completed_checkpoint": "Q1B (Lead plan approval)",
-  "next_action": "QA Lead reviews ROSTER_REBIND review package; then Director confirmation; then Executor Q2-0 with q2_identity_v2",
+  "next_action": "Tony commits selective list and gives the one revised release; Executor records it, runs Q2-0 then the Q2 body",
   "gate_q": "NOT_ISSUED",
   "note": "Routing aid only; no field grants permission without its owner record.",
   "nonblocking": [
@@ -42,7 +44,11 @@
   "diagnostics": "evidence/q2-prep-003: Jest at f21564c 286 pass / 1 fail (only class C remains); identity raw PRODUCT_DRIFT_OR_IDENTITY_FAILURE (config only)",
   "standing_director_constraint": "Executor never changes/restores/renames config/agents.manifest*.json",
   "architect_amendment": "HANDOFFS/ARCHITECT_REMOTE_ROSTER_AMENDMENT_2026-10-05.md sha256 57924e3f046bc521b3a91fe78cd17087e8b2f3dbd6aa05b11439a26cf459c7d9 (index-verified 9/9)",
-  "proposed_product_candidate_sha": "f21564cacb563ecddbf78b1685086c9489bf1c26",
-  "product_candidate_sha_note": "22ce03b remains the bound candidate until the Lead issues the rebind addendum",
-  "rebind_evidence": "evidence/remote-roster-rebind-001 (AMENDMENT_EVIDENCE_CONSISTENT; identity v2 PRODUCT_EQUIVALENT with bounded next-env flag, 1 blocking strict)"
+  "product_candidate_sha_note": "Lead-approved 2026-10-07 (HANDOFFS/LEAD_REMOTE_ROSTER_APPROVAL_2026-10-07.md). 22ce03b is the historical product reference; baseline 20ef380 unchanged.",
+  "rebind_evidence": "evidence/remote-roster-rebind-001 (Lead-reviewed) and remote-roster-rebind-002 (Executor attempt 002, 2026-10-07 18:30; not in Lead review set)",
+  "last_preparation_record": "RESPONSES report 2026-10-07 (prep for revised release)",
+  "acceptance_testing_started_this_run": false,
+  "effective_plan": "QA-APBM000-PLAN v0.2 (8ddb743f...) + Lead binding addendum LEAD_REMOTE_ROSTER_APPROVAL_2026-10-07.md (c0380dfc...) + Architect amendment (57924e3f...)",
+  "binding_hashes_record": "HANDOFFS/LEAD_REMOTE_ROSTER_BINDING_HASHES_2026-10-07.json (0ccefad2...; all 9 pins verified locally 2026-10-07)",
+  "inherited_failures": "A/B waivers retired; only exact C (chatStore.persist SSR guard) conditionally deferred"
 }

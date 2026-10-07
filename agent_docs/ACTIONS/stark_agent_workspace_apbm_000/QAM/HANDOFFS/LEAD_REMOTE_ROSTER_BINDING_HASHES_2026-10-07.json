@@ -1,0 +1,46 @@
+{
+  "issued": "2026-10-07 Asia/Dhaka",
+  "product_candidate": "f21564cacb563ecddbf78b1685086c9489bf1c26",
+  "effective_plan": "QA-APBM000-PLAN v0.2 plus Lead remote-roster approval 2026-10-07 and Architect amendment 2026-10-05",
+  "gate_q": "NOT_ISSUED",
+  "revised_director_release": "PENDING",
+  "note": "This file excludes its own hash. Its exact hash is in the package index. Do not regenerate pins to accept drift.",
+  "files": [
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/QAM_TEST_PLAN.md",
+      "sha256": "8ddb743f1be09d624bf79c8a602ad05fbd3cffbffbc2d8c6cfbaee16f8b80337"
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/Q1B_REVIEW.md",
+      "sha256": "ce02c5cb5432c688e25801000742d0f69ec7778c7ed1fea70badffd4d451fe2f"
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/ACCEPTANCE_SPEC.md",
+      "sha256": "57f8d9f4dec8ca826326067254b0916ef65ccd51b635a8ac6ead73e8ab469fcc"
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/RULINGS_ADDENDUM.md",
+      "sha256": "99d4c40f7094106f4386d4d8ff5535228feb653dcbe0fd948a14a0ff1ec3b36f"
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/HANDOFFS/ARCHITECT_REMOTE_ROSTER_AMENDMENT_2026-10-05.md",
+      "sha256": "57924e3f046bc521b3a91fe78cd17087e8b2f3dbd6aa05b11439a26cf459c7d9"
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/AUTOMATION/q2_identity.py",
+      "sha256": "703196058f1d878009d21a2dbdce6fd7dbabfc3341ab449b705af1b969c70f58"
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/AUTOMATION/q2_identity_v2.py",
+      "sha256": "cf0968a2b29051eebdba10dd07bb4f36e69efcf35acf4a596acd75ce621cc5a2"
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/AUTOMATION/roster_amendment_2026-10-05.json",
+      "sha256": "8da8cb0b078e61b19e2772ad75d809370ce278fbdf5487ce25bff2b6a7c1bc25"
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/HANDOFFS/LEAD_REMOTE_ROSTER_APPROVAL_2026-10-07.md",
+      "sha256": "c0380dfcb951755b82af06881013635d60cad61829697978107e33b6f7fcef53"
+    }
+  ]
+}

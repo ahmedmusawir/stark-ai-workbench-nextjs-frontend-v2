@@ -1,0 +1,6 @@
+{
+  "before_sha256": "97f480fc7d95b376d3ecaf67fa748f3ab3d0d2467490419be3f19751b3249d88",
+  "after_sha256": "d80a7c9566fa0c1cb3c597ca5e3fbb6270770c4550d70c4e64e988cbb58e3787",
+  "diff_file": "qam-state-routing.diff",
+  "note": "Routing metadata only (Lead L6)."
+}
