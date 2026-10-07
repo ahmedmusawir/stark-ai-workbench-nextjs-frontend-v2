@@ -1,0 +1,83 @@
+{
+  "rules": {
+    "X02": {
+      "scanned": [
+        "src/components/workspace/CopyControl.tsx",
+        "src/components/workspace/DemoContext.tsx",
+        "src/components/workspace/Workspace.tsx",
+        "src/components/workspace/WorkspaceComposer.tsx",
+        "src/components/workspace/WorkspaceEntry.tsx",
+        "src/components/workspace/WorkspaceModal.tsx",
+        "src/components/workspace/navigation.ts",
+        "src/components/workspace/productionAdapter.ts",
+        "src/components/workspace/types.ts",
+        "src/app/(cyberize)/chat/AttachmentMenu.tsx",
+        "src/app/(cyberize)/chat/_workspace-tokens.scss",
+        "src/app/(cyberize)/chat/page.tsx",
+        "src/app/(cyberize)/chat/workspace.scss"
+      ],
+      "hits": [],
+      "control_seeded_flagged": true
+    },
+    "X12": {
+      "closure_files": 29,
+      "forbidden_hits": [],
+      "file_inputs_in_workspace_sources": [],
+      "presentation_closure_service_imports": [],
+      "packages": [
+        "@radix-ui/react-dialog",
+        "@radix-ui/react-dropdown-menu",
+        "@supabase/ssr",
+        "clsx",
+        "lucide-react",
+        "next-themes",
+        "next/headers",
+        "next/navigation",
+        "react",
+        "react-markdown",
+        "react-syntax-highlighter",
+        "react-syntax-highlighter/dist/cjs/styles/prism",
+        "remark-gfm",
+        "tailwind-merge",
+        "zustand",
+        "zustand/middleware"
+      ],
+      "control_seeded_flagged": true
+    },
+    "X14": {
+      "root_layout_props": "attribute=\"class\" defaultTheme=\"dark\" disableTransitionOnChange enableSystem",
+      "qa_fixture_props": "attribute=\"class\" defaultTheme=\"dark\" disableTransitionOnChange enableSystem",
+      "equal": true
+    },
+    "X15": {
+      "workspace_scss": {
+        "rules_checked": 24715,
+        "unscoped_selectors": [],
+        "unexpected_at_rules": []
+      },
+      "tokens_scss": {
+        "rules_checked": 4744,
+        "unscoped_selectors": [],
+        "unexpected_at_rules": []
+      },
+      "globals_scss_unchanged_vs_baseline": true,
+      "tailwind_config_unchanged_vs_baseline": true,
+      "control_seeded_flagged": true
+    },
+    "X20": {
+      "src_imports_tests_or_QAM": [],
+      "fixture_markers_in_product_source": [],
+      "workspace_source_review_toolbar_or_fixture_controls": [],
+      "layout_keeps_protectPage": true,
+      "build_marker_scan": "BLOCKED: no successful production build (Q2-4 BLOCKED)",
+      "control_seeded_marker_flagged": true
+    }
+  },
+  "verdict": {
+    "X02": true,
+    "X12": true,
+    "X14": true,
+    "X15": true,
+    "X20_source": true
+  }
+}

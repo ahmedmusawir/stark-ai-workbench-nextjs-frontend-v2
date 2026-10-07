@@ -1,0 +1,10 @@
+{
+ "https_non_font": "BLOCKED EAI_AGAIN",
+ "https_font_host_direct": "BLOCKED EAI_AGAIN",
+ "direct_ip_tcp": "BLOCKED ENETUNREACH",
+ "udp_send": "BLOCKED ENETUNREACH",
+ "dns_lookup": "BLOCKED EAI_AGAIN",
+ "child_process_curl": "BLOCKED",
+ "loopback_listeners": "0",
+ "all_blocked": true
+}

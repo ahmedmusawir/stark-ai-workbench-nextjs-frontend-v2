@@ -1,0 +1,2 @@
+tsc_exit=0 secs=11
+jest_exit=1 secs=23

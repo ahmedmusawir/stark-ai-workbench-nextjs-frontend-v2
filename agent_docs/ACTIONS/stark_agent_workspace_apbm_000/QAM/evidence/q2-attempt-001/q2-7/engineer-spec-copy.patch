@@ -1,0 +1,12 @@
+--- tests/workspace/workspace.spec.ts	2026-10-04 21:53:24.557170136 +0600
++++ agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/AUTOMATION/engineer-spec-copy/workspace.spec.ts	2026-10-07 19:23:08.863006716 +0600
+@@ -1,7 +1,7 @@
+ import { test, expect, type Page } from '@playwright/test';
+ import path from 'node:path';
+-const base='http://127.0.0.1:43170';
+-const evidence=path.resolve('agent_docs/ACTIONS/stark_agent_workspace_apbm_000/evidence/engineering-attempt-001');
++const base='http://127.0.0.1:43182';
++const evidence=path.resolve('agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-001/q2-7/engineer-copy-out');
+ const ledger=(page:Page)=>page.evaluate(()=>(window as unknown as {workspaceFixture:{ledger:Array<{action:string;message?:string;title?:string;session?:string}>}}).workspaceFixture.ledger);
+ test.beforeEach(async({page})=>{
+  await page.route('**/*',async route=>{const url=new URL(route.request().url());if(url.origin!==base){await route.abort();throw Error('Unexpected outbound browser request (address omitted)')}await route.continue()});

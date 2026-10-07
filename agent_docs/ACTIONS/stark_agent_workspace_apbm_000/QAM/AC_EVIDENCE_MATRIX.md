@@ -1,29 +1,29 @@
 # Independent AC evidence matrix
-Status: NOT RUN. Executor fills literal expected/actual, candidate/environment, evidence path/hash, qualifications and Lead disposition.
+Status: **Q2 attempt 001 EXECUTED. Executor-proposed grades, Lead disposition PENDING.** Candidate `f21564cacb563ecddbf78b1685086c9489bf1c26`. Execution HEAD `c4ed7042…`. Effective plan v0.2 (8ddb743f…) + Lead approval 2026-10-07 (c0380dfc…) + Architect amendment (57924e3f…). Environment: Node v26.7.0, Next 16.2.6, Playwright 1.59.1, Chrome 154. All test bodies ran in `unshare -rn` (loopback only). Evidence root: `evidence/q2-attempt-001/`. Grades are the Executor's literal results, not Gate Q.
 
-| AC | Result | Actual / evidence | Lead disposition |
+| AC | Result | Expected → actual / evidence | Lead disposition |
 |---|---|---|---|
-| AC000-01 | NOT RUN | No independent execution yet | PENDING |
-| AC000-02 | NOT RUN | No independent execution yet | PENDING |
-| AC000-03 | NOT RUN | No independent execution yet | PENDING |
-| AC000-04 | NOT RUN | No independent execution yet | PENDING |
-| AC000-05 | NOT RUN | No independent execution yet | PENDING |
-| AC000-06 | NOT RUN | No independent execution yet | PENDING |
-| AC000-07 | NOT RUN | No independent execution yet | PENDING |
-| AC000-08 | NOT RUN | No independent execution yet | PENDING |
-| AC000-09 | NOT RUN | No independent execution yet | PENDING |
-| AC000-10 | NOT RUN | No independent execution yet | PENDING |
-| AC000-11 | NOT RUN | No independent execution yet | PENDING |
-| AC000-12 | NOT RUN | No independent execution yet | PENDING |
-| AC000-13 | NOT RUN | No independent execution yet | PENDING |
-| AC000-14 | NOT RUN | No independent execution yet | PENDING |
-| AC000-15 | NOT RUN | No independent execution yet | PENDING |
-| AC000-16 | NOT RUN | No independent execution yet | PENDING |
-| AC000-17 | NOT RUN | No independent execution yet | PENDING |
-| AC000-18 | NOT RUN | No independent execution yet | PENDING |
-| AC000-19 | NOT RUN | No independent execution yet | PENDING |
-| AC000-20 | NOT RUN | No independent execution yet | PENDING |
-| AC000-21 | NOT RUN | No independent execution yet | PENDING |
-| AC000-22 | NOT RUN | No independent execution yet | PENDING |
-| AC000-23 | NOT RUN | No independent execution yet | PENDING |
-| AC000-24 | NOT RUN | No independent execution yet | PENDING |
+| AC000-01 | PASS | Local case-insensitive filter over name+description, distinct no-match / empty / loading / unavailable, 0 service calls, nothing fabricated → as expected (S-01 ×2). Approved roster projection exact, no URL/env names (J-01). Controls detected a fabricated-agent oracle. | PENDING |
+| AC000-02 | PASS | QR1/QR2 through the same components, neutral fallback "Configured agent workspace."; approved 6-agent roster renders in order (S-02). 0 hardcoded old/new roster literals in workspace sources (X-02; seeded branch flagged). | PENDING |
+| AC000-03 | PASS | 32-case query table + encode/parse round trip (J-03, wrong-oracle control detected). Back×3/Forward×3 restore each view; encoded IDs open; 9 invalid selectors show "Workspace unavailable" with ledger 0 (S-03). Real entry with invalid selector: 0 calls (J). Untrimmed whitespace session ID recorded as pass-through. | PENDING |
+| AC000-04 | PASS | Recents ready/empty/loading/unavailable/partial/recovered distinct; Try again = +1 list; recovery 0 writes; pixel control (same-state identical, distinct states differ) (S-04). Observation O-1: date shown as `10/4/2026` vs design `Today · 10:42 AM`. | PENDING |
+| AC000-05 | PASS | At 375/768/1280: no injected script/img/javascript: link executes or renders, `__qaXss` unset, table and code scroll internally, page overflow 0, user bubble right-aligned (S-05). innerHTML control fired the detector. | PENDING |
+| AC000-06 | PASS (qualified) | Whitespace rejected, one send on Enter, 5×Enter + 5×click while pending = still 1, Shift+Enter newline, IME isComposing/keyCode 229 ignored (S-06). Reachability: run-2 failure was a harness artifact (88px sibling above a 100dvh layout); targeted DIAG with sibling removed: composer 609–653 ≤ 700 → PASS. | PENDING |
+| AC000-07 | PASS | New Chat gives a fresh draft (twice, same URL), 0 send before deliberate send; returned ID binds once (URL, 0 history reads for it, +1 list); a late result after navigating away does not move the user (S-07). Draft mount through the real entry makes no create/run (J-07). | PENDING |
+| AC000-08 | PASS | Missing / unavailable / access-unavailable each distinct from empty (pixel diff); missing offers New conversation + Back with no recreate; retry = +1 history, 0 writes; access disables the composer (S-08). No user → 0 service calls, access copy (J-08). | PENDING |
+| AC000-09 | PASS | Resolved-uncertain, **rejected throw**, **35s pending then timeout rejection**: composer paused, attempted text visible, never "Message not sent", Check history = +1 history / 0 send, degraded empty read keeps uncertain; fixture rejection confirmed (S-09 ×3). Not-sent keeps an editable draft, 0 auto-resend (S-09). Legacy sentinels / missing ID → uncertain; rejection propagates (J-09). | PENDING |
+| AC000-10 | PASS | Pending role=status; metadata warning keeps ID and transcript, list read +1, 0 send (S-10). Late session-A history cannot paint B; identity switch mid-flight hides prior-user content; mis-keyed control detected (S-10). create false/throw → warning with ID kept (J-10). | PENDING |
+| AC000-11 | PASS | Whitespace rename disabled (0 calls); literal `<b>&amp;"'</b> 🚀` as text in row, aria-label and crumb; rename/archive failure keeps row and title with error; Escape ignored while pending; archive hides only (2 archive calls, no delete); focus to opener/heading (S-11). Exact service args row.id (J-11/J-21). HTML-detector control fired. | PENDING |
+| AC000-12 | PASS (qualified) | Disclosure literal in panel and dialogs; edit/add/preview/remove → no file input, no service calls, only same-origin font assets (S-12). No instructions/GCS/agent-API import in the closure (X-12, seeded import flagged). **Qualification:** the browser exact-origin abort control was not demonstrated (route fixture inactive; see report §Instrument gaps). Network confinement rests on the proven namespace. | PENDING |
+| AC000-13 | **FAIL (proposed)** | Demo state per agent/identity, cleared by reload/reset/identity change, never in storage (S-13 PASS, storage-scan control fired). No store write in render/SSR (J-13, SSR 5/5). **Sign-out with storage unavailable: `reset()` throws (class C) and `/auth` navigation is skipped → Q2-F01.** Per Lead L4, the C deferral is invalidated by demonstrated impact. | PENDING |
+| AC000-14 | PASS | Dark when unset under OS light and dark; saved light honored; saved `system` not rewritten; tokens: dark bg rgb(63,63,70), light rgb(255,255,255), fg matches, Inter, radius .75rem (S-14). Fixture ThemeProvider props = root layout (X-14). Control: without workspace CSS the token check fails. | PENDING |
+| AC000-15 | PASS | Every compiled selector branch scoped to `[data-workspace-theme]`; globals.scss/tailwind.config unchanged vs baseline (X-15, seeded `body{}` flagged). Sibling computed styles identical with/without workspace CSS in both themes; dialog themed on first frame inside the owned portal host; unmount → 0 portals, matchMedia listeners balanced (S-15). | PENDING |
+| AC000-16 | PASS | 18 required renders + 1023/1024/1025 ×2 + DPR-2 spot check (25): max overflow 0, composer never covers the last message (−40/−48px), breakpoint switch exactly at 1024 (S-16, 41 PNGs). Seeded 2000px control detected. Visual comparison with DESIGN/previews: faithful structure (O-1 noted). | PENDING |
+| AC000-17 | **FAIL (proposed)** | Drawer: focus contained, background inert, Escape/backdrop/Close dismiss and restore (PASS). Context + nested demo dialogs (PASS). Hidden nav copies unfocusable (PASS). **Breakpoint crossing focuses "All agents", not the aria-current item → Q2-F02. "Agents" breadcrumb 40×44 at 375 → Q2-F03.** | PENDING |
+| AC000-18 | PASS (qualified) | Disclosure aria-expanded/controls match visibility; collapsed content hidden; focus rescued to the trigger on resize; skip link → `#ws-main`; exactly one aria-current (DIAG S-18). Status regions shown in S-04/S-10/directory. **Visible focus:** source only (scoped `:focus-visible` 2px ring outline; composer via `:focus-within`); dynamic check NOT RUN (instrument bound). | PENDING |
+| AC000-19 | PASS | Copy message = raw Markdown; conversation = `## You … ## Kestrel Ops …`; code = plain `const x = 1;`; blocked clipboard → selected fallback textarea; speech double: 0 speak on load, Read aloud → Stop reading → cancel; speech removed → "Read aloud unavailable in this browser." (S-19). OS audio not claimed. | PENDING |
+| AC000-20 | **BLOCKED** | Source separation PASS: no src import of tests/QAM, no fixture markers in product source, layout keeps `protectPage`, QA harness refused seeded forbidden import (X-20). **Production build marker scan BLOCKED** (no successful build, Q2-4). | PENDING |
+| AC000-21 | PASS | Combined gate: 390 paths blob + worktree = candidate; 28/191/218 records consistent; exact 3-file amendment transition; bundles/urlEnv unchanged (Q2-0, X-21, J-01). Adapter binds exactly the existing chatService/sessionIndexService operations (J-21). Mutated-record controls STOP. Post-run identity still PRODUCT_EQUIVALENT. | PENDING |
+| AC000-22 | **BLOCKED** | tsc exit 0. Full Jest 286/1/287, exit 1, only exact C, 0 new (vs baseline: 37 resolved, 1 renamed). QA Jest 27/28 (1 = Q2-F01). Engineer-spec copy 33/33. QA browser 24/29 (2 product findings + 3 instrument). **Production build BLOCKED** (Turbopack cannot use the only no-egress font mechanism; 2 attempts). | PENDING |
+| AC000-23 | PASS | Q1 intake record (preflight items 1–5, identity) complete; notes N1/C1/G1/B1 carried. | PENDING |
+| AC000-24 | NOT RUN | Lead certification only. Gate Q NOT ISSUED. | PENDING |

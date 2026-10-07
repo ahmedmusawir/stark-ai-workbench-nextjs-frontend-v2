@@ -1,0 +1,637 @@
+(node:2448728) [DEP0205] DeprecationWarning: `module.register()` is deprecated. Use `module.registerHooks()` instead.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+
+Running 29 tests using 1 worker
+
+(node:2448813) [DEP0205] DeprecationWarning: `module.register()` is deprecated. Use `module.registerHooks()` instead.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+  ✓   1 agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/AUTOMATION/specs/s01_04_directory_nav_recents.spec.ts:4:5 › S-01 directory filter is local, case-insensitive over name+description; distinct no-results; no service calls (2.2s)
+  ✘   2 agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/AUTOMATION/specs/s01_04_directory_nav_recents.spec.ts:24:5 › S-01 empty / loading / unavailable roster are distinct and fabricate nothing (6.1s)
+(node:2449055) [DEP0205] DeprecationWarning: `module.register()` is deprecated. Use `module.registerHooks()` instead.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+  ✘   3 agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/AUTOMATION/specs/s01_04_directory_nav_recents.spec.ts:33:5 › S-02 alternate rosters use the same components; neutral fallbacks; approved roster renders exactly (6.1s)
+(node:2449228) [DEP0205] DeprecationWarning: `module.register()` is deprecated. Use `module.registerHooks()` instead.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+  ✘   4 agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/AUTOMATION/specs/s01_04_directory_nav_recents.spec.ts:47:5 › S-03 view identity: directory→workspace→conversation→draft, Back×3/Forward×3; encoded IDs (2.3s)
+(node:2449389) [DEP0205] DeprecationWarning: `module.register()` is deprecated. Use `module.registerHooks()` instead.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+  ✓   5 agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/AUTOMATION/specs/s01_04_directory_nav_recents.spec.ts:67:5 › S-03 invalid/contradictory selectors: safe unavailable state, zero service calls (5.1s)
+  ✘   6 agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/AUTOMATION/specs/s01_04_directory_nav_recents.spec.ts:74:5 › S-04 recents: ready/empty/loading/unavailable/partial/recovered are distinct; retry and recovery make no writes (1.3s)
+(node:2449656) [DEP0205] DeprecationWarning: `module.register()` is deprecated. Use `module.registerHooks()` instead.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+  ✘   7 agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/AUTOMATION/specs/s05_07_transcript_composer_draft.spec.ts:4:5 › S-05 transcript: markdown/GFM/code render; no injected markup executes; long content scrolls in its own region (1.5s)
+(node:2449804) [DEP0205] DeprecationWarning: `module.register()` is deprecated. Use `module.registerHooks()` instead.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+  ✘   8 agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/AUTOMATION/specs/s05_07_transcript_composer_draft.spec.ts:29:5 › S-06 composer: whitespace rejected; single send on Enter; repeat blocked while pending; Shift+Enter newline; IME Enter ignored (1.1s)
+(node:2449944) [DEP0205] DeprecationWarning: `module.register()` is deprecated. Use `module.registerHooks()` instead.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+  ✘   9 agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/AUTOMATION/specs/s05_07_transcript_composer_draft.spec.ts:46:5 › S-06 composer stays reachable at 375 with a long thread (1.4s)
+(node:2450090) [DEP0205] DeprecationWarning: `module.register()` is deprecated. Use `module.registerHooks()` instead.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+  ✘  10 agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/AUTOMATION/specs/s05_07_transcript_composer_draft.spec.ts:51:5 › S-07 New Chat: fresh local draft, clears old draft, no create/run before send; returned ID binds once; late result never hijacks (1.3s)
+(node:2450230) [DEP0205] DeprecationWarning: `module.register()` is deprecated. Use `module.registerHooks()` instead.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+  ✘  11 agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/AUTOMATION/specs/s08_11_states_mutations.spec.ts:8:5 › S-08 missing / unavailable / access-unavailable are distinct from empty with constrained actions (6.3s)
+(node:2450410) [DEP0205] DeprecationWarning: `module.register()` is deprecated. Use `module.registerHooks()` instead.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+  ✘  12 agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/AUTOMATION/specs/s08_11_states_mutations.spec.ts:27:7 › S-09 unknown outcome (resolved-uncertain): send paused, attempted text visible, only history inspection, never "not sent" (1.2s)
+(node:2450553) [DEP0205] DeprecationWarning: `module.register()` is deprecated. Use `module.registerHooks()` instead.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+  ✘  13 agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/AUTOMATION/specs/s08_11_states_mutations.spec.ts:27:7 › S-09 unknown outcome (rejected-throw): send paused, attempted text visible, only history inspection, never "not sent" (1.2s)
+(node:2450690) [DEP0205] DeprecationWarning: `module.register()` is deprecated. Use `module.registerHooks()` instead.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+  ✘  14 agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/AUTOMATION/specs/s08_11_states_mutations.spec.ts:27:7 › S-09 unknown outcome (pending-35s-then-timeout): send paused, attempted text visible, only history inspection, never "not sent" (1.2s)
+(node:2450833) [DEP0205] DeprecationWarning: `module.register()` is deprecated. Use `module.registerHooks()` instead.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+  ✘  15 agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/AUTOMATION/specs/s08_11_states_mutations.spec.ts:49:5 › S-09 confirmed not-sent keeps an editable draft and requires deliberate send (1.2s)
+(node:2450969) [DEP0205] DeprecationWarning: `module.register()` is deprecated. Use `module.registerHooks()` instead.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+  ✘  16 agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/AUTOMATION/specs/s08_11_states_mutations.spec.ts:57:5 › S-10 pending status; metadata warning keeps ID/transcript and offers list read only (1.2s)
+(node:2451116) [DEP0205] DeprecationWarning: `module.register()` is deprecated. Use `module.registerHooks()` instead.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+  ✓  17 agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/AUTOMATION/specs/s08_11_states_mutations.spec.ts:68:5 › S-10 late history cannot paint another session; identity switch mid-flight cannot surface prior-user content (2.9s)
+  ✘  18 agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/AUTOMATION/specs/s08_11_states_mutations.spec.ts:88:5 › S-11 rename/archive: whitespace rejected, literal punctuation, failure retention, archive hides only, focus destinations (7.2s)
+(node:2451350) [DEP0205] DeprecationWarning: `module.register()` is deprecated. Use `module.registerHooks()` instead.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+  ✘  19 agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/AUTOMATION/specs/s12_16_demo_theme_render.spec.ts:9:5 › S-12 demo context: permanent disclosure; edit/add/preview/remove make no network, upload or service calls (1.3s)
+(node:2451496) [DEP0205] DeprecationWarning: `module.register()` is deprecated. Use `module.registerHooks()` instead.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+  ✘  20 agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/AUTOMATION/specs/s12_16_demo_theme_render.spec.ts:26:5 › S-13 demo state is per agent and per identity; reload/reset clear it; never persisted (1.3s)
+(node:2451638) [DEP0205] DeprecationWarning: `module.register()` is deprecated. Use `module.registerHooks()` instead.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+  ✓  21 agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/AUTOMATION/specs/s12_16_demo_theme_render.spec.ts:43:5 › S-14 theme: dark when unset (either OS scheme); saved light honored; saved system not rewritten; tokens match design (7.0s)
+  ✓  22 agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/AUTOMATION/specs/s12_16_demo_theme_render.spec.ts:63:5 › S-15 scope: sibling styles unchanged by workspace CSS; dialogs themed on first visible frame; portal/listener teardown (3.0s)
+  ✓  23 agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/AUTOMATION/specs/s12_16_demo_theme_render.spec.ts:83:5 › S-16 render matrix 3 views × 2 themes × 375/768/1280 + 1023/1024/1025 + DPR2 spot check (34.3s)
+  ✘  24 agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/AUTOMATION/specs/s17_19_a11y_copy_obs.spec.ts:8:5 › S-17 drawer (375 dark): focus contained, background inert, Escape/backdrop/Close dismiss and restore; breakpoint crossing closes and focuses visible nav (6.9s)
+(node:2453186) [DEP0205] DeprecationWarning: `module.register()` is deprecated. Use `module.registerHooks()` instead.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+  ✓  25 agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/AUTOMATION/specs/s17_19_a11y_copy_obs.spec.ts:24:5 › S-17 context dialog (1280 light) and nested demo dialog (768 dark): containment, nested Escape, restore (1.9s)
+  ✘  26 agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/AUTOMATION/specs/s17_19_a11y_copy_obs.spec.ts:36:5 › S-17 controls: accessible names and ≥44×44 targets; hidden desktop/mobile copies unfocusable (7.9s)
+(node:2453430) [DEP0205] DeprecationWarning: `module.register()` is deprecated. Use `module.registerHooks()` instead.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+  ✘  27 agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/AUTOMATION/specs/s17_19_a11y_copy_obs.spec.ts:57:5 › S-18 disclosure aria/visibility, resize focus rescue, skip link, single aria-current, status regions, visible focus (1.3s)
+(node:2453574) [DEP0205] DeprecationWarning: `module.register()` is deprecated. Use `module.registerHooks()` instead.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+  ✘  28 agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/AUTOMATION/specs/s17_19_a11y_copy_obs.spec.ts:75:5 › S-19 copy payloads, blocked clipboard fallback, speech lifecycle, unavailable explanation, no autoplay (1.7s)
+(node:2453720) [DEP0205] DeprecationWarning: `module.register()` is deprecated. Use `module.registerHooks()` instead.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+  ✘  29 agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/AUTOMATION/specs/s17_19_a11y_copy_obs.spec.ts:101:5 › DIRECTOR-OBS-001 §11.3 browser A+B: two successful new chats both stay in recents; reopening A shows only A; no hidden archive/delete/recreate (1.4s)
+
+
+  1) agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/AUTOMATION/specs/s01_04_directory_nav_recents.spec.ts:24:5 › S-01 empty / loading / unavailable roster are distinct and fabricate nothing 
+
+    Error: [2mexpect([22m[31mlocator[39m[2m).[22mtoBeVisible[2m([22m[2m)[22m failed
+
+    Locator: getByText('Loading agents…')
+    Expected: visible
+    Timeout: 5000ms
+    Error: element(s) not found
+
+    Call log:
+    [2m  - Expect "toBeVisible" with timeout 5000ms[22m
+    [2m  - waiting for getByText('Loading agents…')[22m
+
+
+      25 |   const seen: Record<string, string> = {};
+      26 |   for (const [roster, status, text] of [['QR0', 'ready', 'No agents configured'], ['QR1', 'loading', 'Loading agents…'], ['QR1', 'unavailable', 'Agent configuration unavailable']]) {
+    > 27 |     await open(page, { roster, status }); await expect(page.getByText(text)).toBeVisible();
+         |                                                                              ^
+      28 |     expect(await page.locator('.ws-agent-card').count()).toBe(0); seen[`${roster}/${status}`] = text; expect(await ledger(page)).toEqual([]);
+      29 |   }
+      30 |   record('s01-roster-states', seen);
+        at ~/NEXTJS/stark-ai-workbench-nextjs-frontend-v2/agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/AUTOMATION/specs/s01_04_directory_nav_recents.spec.ts:27:78
+
+    Error Context: agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-001/q2-6/run1/artifacts/s01_04_directory_nav_recen-47e12-tinct-and-fabricate-nothing/error-context.md
+
+  2) agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/AUTOMATION/specs/s01_04_directory_nav_recents.spec.ts:33:5 › S-02 alternate rosters use the same components; neutral fallbacks; approved roster renders exactly 
+
+    Error: [2mexpect([22m[31mlocator[39m[2m).[22mtoHaveText[2m([22m[32mexpected[39m[2m)[22m failed
+
+    Locator: locator('.ws-agent-card').filter({ hasText: 'ATLAS mixed Case' }).locator('p')
+    Expected: [32m"Configured agent workspace."[39m
+    Timeout: 5000ms
+    Error: element(s) not found
+
+    Call log:
+    [2m  - Expect "toHaveText" with timeout 5000ms[22m
+    [2m  - waiting for locator('.ws-agent-card').filter({ hasText: 'ATLAS mixed Case' }).locator('p')[22m
+
+
+      35 |   await expect(page.locator('.ws-agent-card')).toHaveCount(1); await expect(page.locator('.ws-agent-card p')).toHaveText('Configured agent workspace.');
+      36 |   await open(page, { roster: 'QR1' });
+    > 37 |   await expect(page.locator('.ws-agent-card', { hasText: 'ATLAS mixed Case' }).locator('p')).toHaveText('Configured agent workspace.');
+         |                                                                                              ^
+      38 |   await open(page, { roster: 'R6' });
+      39 |   const names = await page.locator('.ws-agent-card h2').allInnerTexts();
+      40 |   expect(names).toEqual(['Greeting Agent', 'Jarvis', 'Calc Agent', 'Product Agent', 'GHL CRM Agent', 'MOOSE CRM Agent']);
+        at ~/NEXTJS/stark-ai-workbench-nextjs-frontend-v2/agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/AUTOMATION/specs/s01_04_directory_nav_recents.spec.ts:37:94
+
+    Error Context: agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-001/q2-6/run1/artifacts/s01_04_directory_nav_recen-95c36-oved-roster-renders-exactly/error-context.md
+
+  3) agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/AUTOMATION/specs/s01_04_directory_nav_recents.spec.ts:47:5 › S-03 view identity: directory→workspace→conversation→draft, Back×3/Forward×3; encoded IDs 
+
+    Error: [2mexpect([22m[31mlocator[39m[2m).[22mtoContainText[2m([22m[32mexpected[39m[2m)[22m failed
+
+    Locator: getByRole('heading', { level: 1 })
+    Expected substring: [32m"Very long agent name"[39m
+    Error: strict mode violation: getByRole('heading', { level: 1 }) resolved to 2 elements:
+        1) <h1>Sibling heading</h1> aka getByRole('heading', { name: 'Sibling heading' })
+        2) <h1>Very long agent name Very long agent name Very lo…</h1> aka getByRole('heading', { name: 'Very long agent name Very' })
+
+    Call log:
+    [2m  - Expect "toContainText" with timeout 5000ms[22m
+    [2m  - waiting for getByRole('heading', { level: 1 })[22m
+
+
+      60 |   await expect(page.getByText('Chat with Kestrel Ops')).toBeVisible();
+      61 |   for (const [q, name] of [['agent=a%26b%3Dc', 'Very long agent name'], ['agent=x%2F..%2Fy', 'Path Agent'], ['agent=%C3%BCn%C3%AF-%C5%9D', 'Unicode Agent'], ['agent=spaced+id', 'ATLAS mixed Case']]) {
+    > 62 |     await open(page, { query: q }); await expect(page.getByRole('heading', { level: 1 })).toContainText(name);
+         |                                                                                           ^
+      63 |   }
+      64 |   record('s03-history-steps', steps);
+      65 | });
+        at ~/NEXTJS/stark-ai-workbench-nextjs-frontend-v2/agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/AUTOMATION/specs/s01_04_directory_nav_recents.spec.ts:62:91
+
+    Error Context: agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-001/q2-6/run1/artifacts/s01_04_directory_nav_recen-76761-ack×3-Forward×3-encoded-IDs/error-context.md
+
+  4) agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/AUTOMATION/specs/s01_04_directory_nav_recents.spec.ts:74:5 › S-04 recents: ready/empty/loading/unavailable/partial/recovered are distinct; retry and recovery make no writes 
+
+    Error: [2mexpect([22m[31mreceived[39m[2m).[22mtoBeGreaterThan[2m([22m[32mexpected[39m[2m)[22m
+
+    Expected: > [32m0[39m
+    Received:   [31m0[39m
+
+       at _qa.ts:32
+
+      30 | export const count = async (page: Page, action: string) => (await ledger(page)).filter(c => c.action === action).length;
+      31 | export const pendingOf = (page: Page, action: string) => page.evaluate(a => (window as any).qa.pendingOf(a) as number[], action);
+    > 32 | export const resolveLast = async (page: Page, action: string, value: unknown) => { const ids = await pendingOf(page, action); expect(ids.length).toBeGreaterThan(0); await page.evaluate(([id, v]) => (window as any).qa.resolve(id, v), [ids[ids.length - 1], value] as const); };
+         |                                                                                                                                                  ^
+      33 | export const rejectLast = async (page: Page, action: string, msg: string) => { const ids = await pendingOf(page, action); expect(ids.length).toBeGreaterThan(0); await page.evaluate(([id, m]) => (window as any).qa.reject(id, m), [ids[ids.length - 1], msg] as const); };
+      34 | export const overflow = (page: Page) => page.evaluate(() => document.documentElement.scrollWidth - window.innerWidth);
+      35 | export const setTheme = (page: Page, t: 'dark' | 'light') => page.addInitScript(th => { try { localStorage.setItem('theme', th); } catch { /* */ } }, t);
+        at resolveLast (~/NEXTJS/stark-ai-workbench-nextjs-frontend-v2/agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/AUTOMATION/specs/_qa.ts:32:146)
+        at ~/NEXTJS/stark-ai-workbench-nextjs-frontend-v2/agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/AUTOMATION/specs/s01_04_directory_nav_recents.spec.ts:79:49
+
+    Error Context: agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-001/q2-6/run1/artifacts/s01_04_directory_nav_recen-65b38-and-recovery-make-no-writes/error-context.md
+
+  5) agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/AUTOMATION/specs/s05_07_transcript_composer_draft.spec.ts:4:5 › S-05 transcript: markdown/GFM/code render; no injected markup executes; long content scrolls in its own region 
+
+    Error: [2mexpect([22m[31mreceived[39m[2m).[22mtoBeLessThan[2m([22m[32mexpected[39m[2m)[22m
+
+    Expected: < [32m16[39m
+    Received:   [31m16[39m
+
+      19 |     expect(m.xss).toBeNull(); expect(m.scripts).toBe(0); expect(m.imgs).toBe(0); expect(m.jsLinks).toBe(0);
+      20 |     expect(m.tableScrolls).toBe(true); expect(m.codeScrolls).toBe(true); expect(m.overflow).toBeLessThanOrEqual(1); expect(m.bold).toBeGreaterThan(0);
+    > 21 |     expect(m.userRightGap).toBeLessThan(m.userLeftGap); // user bubble aligned right
+         |                            ^
+      22 |   }
+      23 |   expect(errors).toEqual([]); record('s05-transcript-metrics', metrics);
+      24 |   // CONTROL: the injection detector fires when the same string is injected unsafely
+        at ~/NEXTJS/stark-ai-workbench-nextjs-frontend-v2/agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/AUTOMATION/specs/s05_07_transcript_composer_draft.spec.ts:21:28
+
+    Error Context: agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-001/q2-6/run1/artifacts/s05_07_transcript_composer-70d3d-t-scrolls-in-its-own-region/error-context.md
+
+  6) agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/AUTOMATION/specs/s05_07_transcript_composer_draft.spec.ts:29:5 › S-06 composer: whitespace rejected; single send on Enter; repeat blocked while pending; Shift+Enter newline; IME Enter ignored 
+
+    Error: locator.fill: Error: strict mode violation: getByLabel('Message') resolved to 2 elements:
+        1) <textarea rows="1" id="_r_0_" placeholder="Message Kestrel Ops…"></textarea> aka getByRole('textbox', { name: 'Message' })
+        2) <button disabled type="submit" aria-label="Send message" class="ws-primary ws-icon">…</button> aka getByRole('button', { name: 'Send message' })
+
+    Call log:
+    [2m  - waiting for getByLabel('Message')[22m
+
+
+      30 |   await open(page, { query: 'agent=kestrel&new=1', preset: P.rows });
+      31 |   const box = page.getByLabel('Message'), sendBtn = page.getByRole('button', { name: 'Send message' });
+    > 32 |   await box.fill('   \n  '); await expect(sendBtn).toBeDisabled(); await box.press('Enter'); expect(await count(page, 'send')).toBe(0);
+         |             ^
+      33 |   await box.fill('line one'); await box.press('Shift+Enter'); await box.pressSequentially('line two'); expect(await box.inputValue()).toBe('line one\nline two'); expect(await count(page, 'send')).toBe(0);
+      34 |   await box.fill('ime text'); await box.evaluate(el => el.dispatchEvent(new KeyboardEvent('keydown', { key: 'Enter', bubbles: true, isComposing: true })));
+      35 |   await box.evaluate(el => { const e = new KeyboardEvent('keydown', { key: 'Enter', bubbles: true, cancelable: true }); Object.defineProperty(e, 'keyCode', { get: () => 229 }); el.dispatchEvent(e); });
+        at ~/NEXTJS/stark-ai-workbench-nextjs-frontend-v2/agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/AUTOMATION/specs/s05_07_transcript_composer_draft.spec.ts:32:13
+
+    Error Context: agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-001/q2-6/run1/artifacts/s05_07_transcript_composer-7fc0b-r-newline-IME-Enter-ignored/error-context.md
+
+  7) agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/AUTOMATION/specs/s05_07_transcript_composer_draft.spec.ts:46:5 › S-06 composer stays reachable at 375 with a long thread 
+
+    Error: locator.boundingBox: Error: strict mode violation: getByLabel('Message') resolved to 5 elements:
+        1) <button type="button" title="Copy message" aria-label="Copy message">…</button> aka getByRole('button', { name: 'Copy message' }).first()
+        2) <div tabindex="0" role="region" aria-label="Message table" class="overflow-x-auto my-3">…</div> aka getByRole('region', { name: 'Message table' })
+        3) <button type="button" title="Copy message" aria-label="Copy message">…</button> aka getByRole('button', { name: 'Copy message' }).nth(1)
+        4) <textarea rows="1" id="_r_0_" placeholder="Message Kestrel Ops…"></textarea> aka getByRole('textbox', { name: 'Message' })
+        5) <button disabled type="submit" aria-label="Send message" class="ws-primary ws-icon">…</button> aka getByRole('button', { name: 'Send message' })
+
+    Call log:
+    [2m  - waiting for getByLabel('Message')[22m
+
+
+      46 | test('S-06 composer stays reachable at 375 with a long thread', async ({ page }) => {
+      47 |   await page.setViewportSize({ width: 375, height: 700 }); await open(page, { query: 'agent=kestrel&session=A', preset: stressPreset });
+    > 48 |   const b = await page.getByLabel('Message').boundingBox(); expect(b).not.toBeNull(); expect(b!.y + b!.height).toBeLessThanOrEqual(700); expect(b!.y).toBeGreaterThan(0);
+         |                                              ^
+      49 | });
+      50 |
+      51 | test('S-07 New Chat: fresh local draft, clears old draft, no create/run before send; returned ID binds once; late result never hijacks', async ({ page }) => {
+        at ~/NEXTJS/stark-ai-workbench-nextjs-frontend-v2/agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/AUTOMATION/specs/s05_07_transcript_composer_draft.spec.ts:48:46
+
+    Error Context: agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-001/q2-6/run1/artifacts/s05_07_transcript_composer-cbaa3-e-at-375-with-a-long-thread/error-context.md
+
+  8) agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/AUTOMATION/specs/s05_07_transcript_composer_draft.spec.ts:51:5 › S-07 New Chat: fresh local draft, clears old draft, no create/run before send; returned ID binds once; late result never hijacks 
+
+    Error: [2mexpect([22m[31mlocator[39m[2m).[22mtoHaveValue[2m([22m[32mexpected[39m[2m)[22m failed
+
+    Locator: getByLabel('Message')
+    Expected: [32m""[39m
+    Error: strict mode violation: getByLabel('Message') resolved to 2 elements:
+        1) <textarea rows="1" id="_r_e_" placeholder="Message Kestrel Ops…"></textarea> aka getByRole('textbox', { name: 'Message' })
+        2) <button disabled type="submit" aria-label="Send message" class="ws-primary ws-icon">…</button> aka getByRole('button', { name: 'Send message' })
+
+    Call log:
+    [2m  - Expect "toHaveValue" with timeout 5000ms[22m
+    [2m  - waiting for getByLabel('Message')[22m
+
+
+      53 |   await page.getByLabel('Start a new conversation').fill('unsent workspace draft');
+      54 |   await page.locator('.ws-desktop').getByRole('button', { name: 'New chat' }).click();
+    > 55 |   await expect.poll(() => new URL(page.url()).search).toBe('?agent=kestrel&new=1'); await expect(page.getByLabel('Message')).toHaveValue('');
+         |                                                                                                                              ^
+      56 |   await page.getByLabel('Message').fill('draft one'); await page.locator('.ws-desktop').getByRole('button', { name: 'New chat' }).click();
+      57 |   await expect(page.getByLabel('Message')).toHaveValue(''); expect(await count(page, 'send')).toBe(0);
+      58 |   const listBefore = await count(page, 'list');
+        at ~/NEXTJS/stark-ai-workbench-nextjs-frontend-v2/agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/AUTOMATION/specs/s05_07_transcript_composer_draft.spec.ts:55:126
+
+    Error Context: agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-001/q2-6/run1/artifacts/s05_07_transcript_composer-1e887-e-late-result-never-hijacks/error-context.md
+
+  9) agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/AUTOMATION/specs/s08_11_states_mutations.spec.ts:8:5 › S-08 missing / unavailable / access-unavailable are distinct from empty with constrained actions 
+
+    Error: [2mexpect([22m[31mlocator[39m[2m).[22mtoBeVisible[2m([22m[2m)[22m failed
+
+    Locator: getByRole('heading', { name: 'Conversation not found' })
+    Expected: visible
+    Timeout: 5000ms
+    Error: element(s) not found
+
+    Call log:
+    [2m  - Expect "toBeVisible" with timeout 5000ms[22m
+    [2m  - waiting for getByRole('heading', { name: 'Conversation not found' })[22m
+
+
+      11 |   await expect(page.getByText('Chat with Kestrel Ops')).toBeVisible(); shots.empty = await main.screenshot();
+      12 |   await open(page, { query: 'agent=kestrel&session=A', preset: historyPreset(`() => ({ status: 'missing', messages: [] })`) });
+    > 13 |   await expect(page.getByRole('heading', { name: 'Conversation not found' })).toBeVisible();
+         |                                                                               ^
+      14 |   await expect(page.getByRole('button', { name: 'New conversation' })).toBeVisible(); await expect(page.getByRole('button', { name: 'Back to workspace' })).toBeVisible();
+      15 |   await expect(page.getByRole('button', { name: /Try loading again|Recreate|Restore/ })).toHaveCount(0); shots.missing = await main.screenshot();
+      16 |   await open(page, { query: 'agent=kestrel&session=A', preset: historyPreset(`() => new Error('history down')`) });
+        at ~/NEXTJS/stark-ai-workbench-nextjs-frontend-v2/agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/AUTOMATION/specs/s08_11_states_mutations.spec.ts:13:79
+
+    Error Context: agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-001/q2-6/run1/artifacts/s08_11_states_mutations-S--47a18-ty-with-constrained-actions/error-context.md
+
+  10) agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/AUTOMATION/specs/s08_11_states_mutations.spec.ts:27:7 › S-09 unknown outcome (resolved-uncertain): send paused, attempted text visible, only history inspection, never "not sent" 
+
+    Error: locator.fill: Error: strict mode violation: getByLabel('Message') resolved to 4 elements:
+        1) <button type="button" title="Copy message" aria-label="Copy message">…</button> aka getByRole('button', { name: 'Copy message' }).first()
+        2) <button type="button" title="Copy message" aria-label="Copy message">…</button> aka getByRole('button', { name: 'Copy message' }).nth(1)
+        3) <textarea rows="1" id="_r_0_" placeholder="Message Kestrel Ops…"></textarea> aka getByRole('textbox', { name: 'Message' })
+        4) <button disabled type="submit" aria-label="Send message" class="ws-primary ws-icon">…</button> aka getByRole('button', { name: 'Send message' })
+
+    Call log:
+    [2m  - waiting for getByLabel('Message')[22m
+
+
+      29 |     await open(page, { query: 'agent=kestrel&session=A', preset: P.rows });
+      30 |     await expect(page.getByText('only session A')).toBeVisible();
+    > 31 |     await page.getByLabel('Message').fill(`attempt ${mode}`); await page.getByLabel('Message').press('Enter');
+         |                                      ^
+      32 |     await expect(page.getByText('Waiting for a reply')).toBeVisible();
+      33 |     if (mode === 'resolved-uncertain') await resolveLast(page, 'send', { status: 'uncertain' });
+      34 |     else if (mode === 'rejected-throw') await rejectLast(page, 'send', 'network reset');
+        at ~/NEXTJS/stark-ai-workbench-nextjs-frontend-v2/agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/AUTOMATION/specs/s08_11_states_mutations.spec.ts:31:38
+
+    Error Context: agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-001/q2-6/run1/artifacts/s08_11_states_mutations-S--97a81--inspection-never-not-sent-/error-context.md
+
+  11) agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/AUTOMATION/specs/s08_11_states_mutations.spec.ts:27:7 › S-09 unknown outcome (rejected-throw): send paused, attempted text visible, only history inspection, never "not sent" 
+
+    Error: locator.fill: Error: strict mode violation: getByLabel('Message') resolved to 4 elements:
+        1) <button type="button" title="Copy message" aria-label="Copy message">…</button> aka getByRole('button', { name: 'Copy message' }).first()
+        2) <button type="button" title="Copy message" aria-label="Copy message">…</button> aka getByRole('button', { name: 'Copy message' }).nth(1)
+        3) <textarea rows="1" id="_r_0_" placeholder="Message Kestrel Ops…"></textarea> aka getByRole('textbox', { name: 'Message' })
+        4) <button disabled type="submit" aria-label="Send message" class="ws-primary ws-icon">…</button> aka getByRole('button', { name: 'Send message' })
+
+    Call log:
+    [2m  - waiting for getByLabel('Message')[22m
+
+
+      29 |     await open(page, { query: 'agent=kestrel&session=A', preset: P.rows });
+      30 |     await expect(page.getByText('only session A')).toBeVisible();
+    > 31 |     await page.getByLabel('Message').fill(`attempt ${mode}`); await page.getByLabel('Message').press('Enter');
+         |                                      ^
+      32 |     await expect(page.getByText('Waiting for a reply')).toBeVisible();
+      33 |     if (mode === 'resolved-uncertain') await resolveLast(page, 'send', { status: 'uncertain' });
+      34 |     else if (mode === 'rejected-throw') await rejectLast(page, 'send', 'network reset');
+        at ~/NEXTJS/stark-ai-workbench-nextjs-frontend-v2/agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/AUTOMATION/specs/s08_11_states_mutations.spec.ts:31:38
+
+    Error Context: agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-001/q2-6/run1/artifacts/s08_11_states_mutations-S--03bee--inspection-never-not-sent-/error-context.md
+
+  12) agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/AUTOMATION/specs/s08_11_states_mutations.spec.ts:27:7 › S-09 unknown outcome (pending-35s-then-timeout): send paused, attempted text visible, only history inspection, never "not sent" 
+
+    Error: locator.fill: Error: strict mode violation: getByLabel('Message') resolved to 4 elements:
+        1) <button type="button" title="Copy message" aria-label="Copy message">…</button> aka getByRole('button', { name: 'Copy message' }).first()
+        2) <button type="button" title="Copy message" aria-label="Copy message">…</button> aka getByRole('button', { name: 'Copy message' }).nth(1)
+        3) <textarea rows="1" id="_r_0_" placeholder="Message Kestrel Ops…"></textarea> aka getByRole('textbox', { name: 'Message' })
+        4) <button disabled type="submit" aria-label="Send message" class="ws-primary ws-icon">…</button> aka getByRole('button', { name: 'Send message' })
+
+    Call log:
+    [2m  - waiting for getByLabel('Message')[22m
+
+
+      29 |     await open(page, { query: 'agent=kestrel&session=A', preset: P.rows });
+      30 |     await expect(page.getByText('only session A')).toBeVisible();
+    > 31 |     await page.getByLabel('Message').fill(`attempt ${mode}`); await page.getByLabel('Message').press('Enter');
+         |                                      ^
+      32 |     await expect(page.getByText('Waiting for a reply')).toBeVisible();
+      33 |     if (mode === 'resolved-uncertain') await resolveLast(page, 'send', { status: 'uncertain' });
+      34 |     else if (mode === 'rejected-throw') await rejectLast(page, 'send', 'network reset');
+        at ~/NEXTJS/stark-ai-workbench-nextjs-frontend-v2/agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/AUTOMATION/specs/s08_11_states_mutations.spec.ts:31:38
+
+    Error Context: agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-001/q2-6/run1/artifacts/s08_11_states_mutations-S--16f16--inspection-never-not-sent-/error-context.md
+
+  13) agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/AUTOMATION/specs/s08_11_states_mutations.spec.ts:49:5 › S-09 confirmed not-sent keeps an editable draft and requires deliberate send 
+
+    Error: locator.fill: Error: strict mode violation: getByLabel('Message') resolved to 4 elements:
+        1) <button type="button" title="Copy message" aria-label="Copy message">…</button> aka getByRole('button', { name: 'Copy message' }).first()
+        2) <button type="button" title="Copy message" aria-label="Copy message">…</button> aka getByRole('button', { name: 'Copy message' }).nth(1)
+        3) <textarea rows="1" id="_r_0_" placeholder="Message Kestrel Ops…"></textarea> aka getByRole('textbox', { name: 'Message' })
+        4) <button disabled type="submit" aria-label="Send message" class="ws-primary ws-icon">…</button> aka getByRole('button', { name: 'Send message' })
+
+    Call log:
+    [2m  - waiting for getByLabel('Message')[22m
+
+
+      49 | test('S-09 confirmed not-sent keeps an editable draft and requires deliberate send', async ({ page }) => {
+      50 |   await open(page, { query: 'agent=kestrel&session=A', preset: P.rows });
+    > 51 |   await page.getByLabel('Message').fill('keep me'); await page.getByLabel('Message').press('Enter'); await resolveLast(page, 'send', { status: 'not-sent' });
+         |                                    ^
+      52 |   await expect(page.getByRole('heading', { name: 'Message not sent' })).toBeVisible(); await expect(page.getByLabel('Message')).toBeEnabled(); await expect(page.getByLabel('Message')).toHaveValue('keep me');
+      53 |   await page.waitForTimeout(500); expect(await count(page, 'send')).toBe(1);
+      54 |   await page.getByLabel('Message').press('Enter'); await expect.poll(() => count(page, 'send')).toBe(2);
+        at ~/NEXTJS/stark-ai-workbench-nextjs-frontend-v2/agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/AUTOMATION/specs/s08_11_states_mutations.spec.ts:51:36
+
+    Error Context: agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-001/q2-6/run1/artifacts/s08_11_states_mutations-S--2b9cf-nd-requires-deliberate-send/error-context.md
+
+  14) agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/AUTOMATION/specs/s08_11_states_mutations.spec.ts:57:5 › S-10 pending status; metadata warning keeps ID/transcript and offers list read only 
+
+    Error: locator.fill: Error: strict mode violation: getByLabel('Message') resolved to 2 elements:
+        1) <textarea rows="1" id="_r_0_" placeholder="Message Kestrel Ops…"></textarea> aka getByRole('textbox', { name: 'Message' })
+        2) <button disabled type="submit" aria-label="Send message" class="ws-primary ws-icon">…</button> aka getByRole('button', { name: 'Send message' })
+
+    Call log:
+    [2m  - waiting for getByLabel('Message')[22m
+
+
+      57 | test('S-10 pending status; metadata warning keeps ID/transcript and offers list read only', async ({ page }) => {
+      58 |   await open(page, { query: 'agent=kestrel&new=1', preset: P.rows });
+    > 59 |   await page.getByLabel('Message').fill('start'); await page.getByLabel('Message').press('Enter');
+         |                                    ^
+      60 |   await expect(page.locator('[role=status]', { hasText: 'Waiting for a reply' })).toBeVisible();
+      61 |   await resolveLast(page, 'send', { status: 'sent', sessionId: 'M1', reply: 'Confirmed reply', metadataWarning: true });
+      62 |   await expect.poll(() => new URL(page.url()).search).toBe('?agent=kestrel&session=M1');
+        at ~/NEXTJS/stark-ai-workbench-nextjs-frontend-v2/agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/AUTOMATION/specs/s08_11_states_mutations.spec.ts:59:36
+
+    Error Context: agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-001/q2-6/run1/artifacts/s08_11_states_mutations-S--b3479-t-and-offers-list-read-only/error-context.md
+
+  15) agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/AUTOMATION/specs/s08_11_states_mutations.spec.ts:88:5 › S-11 rename/archive: whitespace rejected, literal punctuation, failure retention, archive hides only, focus destinations 
+
+    Error: [2mexpect([22m[31mlocator[39m[2m).[22mtoContainText[2m([22m[32mexpected[39m[2m)[22m failed
+
+    Locator: locator('.ws-crumbs')
+    Expected substring: [32m"<b>&amp;\"'</b> 🚀"[39m
+    Received string:    [31m"AgentsKestrel OpsPlanning the launch"[39m
+    Timeout: 5000ms
+
+    Call log:
+    [2m  - Expect "toContainText" with timeout 5000ms[22m
+    [2m  - waiting for locator('.ws-crumbs')[22m
+    [2m    9 × locator resolved to <div class="ws-crumbs">…</div>[22m
+    [2m      - unexpected value "AgentsKestrel OpsPlanning the launch"[22m
+
+
+      107 |   await expect(page.getByText('Comparing options')).toHaveCount(0); await expect(page.getByRole('heading', { name: 'Recent conversations' })).toBeFocused();
+      108 |   const l = await ledger(page); expect(l.filter(c => c.action === 'archive').map(c => c.row)).toEqual(['row-b', 'row-b']); expect(l.some(c => !['list', 'rename', 'archive'].includes(c.action))).toBe(false);
+    > 109 |   await page.locator('.ws-recent-row a').first().click(); await expect(page.locator('.ws-crumbs')).toContainText(LIT);
+          |                                                                                                    ^
+      110 |   // CONTROL: the HTML-element detector finds an unsafe injection
+      111 |   await page.evaluate(() => { const d = document.createElement('div'); d.className = 'ws-recents'; d.innerHTML = '<b>x</b>'; document.body.appendChild(d); });
+      112 |   expect(await page.locator('.ws-recents b').count()).toBe(1);
+        at ~/NEXTJS/stark-ai-workbench-nextjs-frontend-v2/agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/AUTOMATION/specs/s08_11_states_mutations.spec.ts:109:100
+
+    Error Context: agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-001/q2-6/run1/artifacts/s08_11_states_mutations-S--09d88-des-only-focus-destinations/error-context.md
+
+  16) agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/AUTOMATION/specs/s12_16_demo_theme_render.spec.ts:9:5 › S-12 demo context: permanent disclosure; edit/add/preview/remove make no network, upload or service calls 
+
+    Error: locator.fill: Error: strict mode violation: getByRole('dialog', { name: 'Edit demo instructions' }).getByLabel('Demo instructions') resolved to 2 elements:
+        1) <button type="button" class="ws-icon" aria-label="Close Edit demo instructions">…</button> aka getByRole('button', { name: 'Close Edit demo instructions' })
+        2) <textarea class="ws-field" id="ws-demo-instructions">Be clear and practical. Explain the reasoning, th…</textarea> aka getByRole('textbox', { name: 'Demo instructions' })
+
+    Call log:
+    [2m  - waiting for getByRole('dialog', { name: 'Edit demo instructions' }).getByLabel('Demo instructions')[22m
+
+
+      13 |   const before = reqs.length, l0 = (await ledger(page)).length;
+      14 |   await ctx.getByRole('button', { name: 'Edit demo instructions' }).click(); const d = page.getByRole('dialog', { name: 'Edit demo instructions' });
+    > 15 |   await expect(d.locator('.ws-notice')).toHaveText(DISCLOSURE); await d.getByLabel('Demo instructions').fill('QA instructions A'); await d.getByRole('button', { name: 'Apply to demo' }).click();
+         |                                                                                                         ^
+      16 |   await expect(ctx.getByText('QA instructions A')).toBeVisible();
+      17 |   await ctx.getByRole('button', { name: 'Add sample document' }).click(); await page.getByRole('dialog', { name: 'Add sample document' }).getByRole('button', { name: 'Research checklist.md' }).click();
+      18 |   await ctx.getByRole('button', { name: 'Preview Research checklist.md' }).click(); await expect(page.getByRole('dialog', { name: 'Sample preview' })).toContainText('Fictional sample'); await page.keyboard.press('Escape');
+        at ~/NEXTJS/stark-ai-workbench-nextjs-frontend-v2/agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/AUTOMATION/specs/s12_16_demo_theme_render.spec.ts:15:105
+
+    Error Context: agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-001/q2-6/run1/artifacts/s12_16_demo_theme_render-S-b235d-ork-upload-or-service-calls/error-context.md
+
+  17) agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/AUTOMATION/specs/s12_16_demo_theme_render.spec.ts:26:5 › S-13 demo state is per agent and per identity; reload/reset clear it; never persisted 
+
+    Error: locator.fill: Error: strict mode violation: getByLabel('Demo instructions') resolved to 4 elements:
+        1) <button class="ws-icon" aria-label="Edit demo instructions">…</button> aka locator('[id="_r_1_"]').getByLabel('Edit demo instructions')
+        2) <div role="dialog" tabindex="-1" id="radix-_r_2_" data-state="open" class="ws-modal " aria-labelledby="radix-_r_3_">…</div> aka getByRole('dialog', { name: 'Edit demo instructions' })
+        3) <button type="button" class="ws-icon" aria-label="Close Edit demo instructions">…</button> aka getByRole('button', { name: 'Close Edit demo instructions' })
+        4) <textarea class="ws-field" id="ws-demo-instructions">Be clear and practical. Explain the reasoning, th…</textarea> aka getByRole('textbox', { name: 'Demo instructions' })
+
+    Call log:
+    [2m  - waiting for getByLabel('Demo instructions')[22m
+
+
+      26 | test('S-13 demo state is per agent and per identity; reload/reset clear it; never persisted', async ({ page }) => {
+      27 |   await open(page, { query: 'agent=kestrel', preset: P.rows });
+    > 28 |   const ctx = page.locator('.ws-context'); const edit = async (t: string) => { await ctx.getByRole('button', { name: 'Edit demo instructions' }).click(); await page.getByLabel('Demo instructions').fill(t); await page.getByRole('button', { name: 'Apply to demo' }).click(); };
+         |                                                                                                                                                                                                      ^
+      29 |   await edit('QA instructions A'); await page.locator('.ws-desktop').getByRole('link', { name: 'Path Agent' }).click();
+      30 |   await expect(page.getByRole('heading', { level: 1, name: 'Path Agent' })).toBeVisible(); await expect(ctx.getByText('QA instructions A')).toHaveCount(0);
+      31 |   await page.locator('.ws-desktop').getByRole('link', { name: 'Kestrel Ops' }).click(); await expect(ctx.getByText('QA instructions A')).toBeVisible();
+        at edit (~/NEXTJS/stark-ai-workbench-nextjs-frontend-v2/agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/AUTOMATION/specs/s12_16_demo_theme_render.spec.ts:28:198)
+        at ~/NEXTJS/stark-ai-workbench-nextjs-frontend-v2/agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/AUTOMATION/specs/s12_16_demo_theme_render.spec.ts:29:3
+
+    Error Context: agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-001/q2-6/run1/artifacts/s12_16_demo_theme_render-S-b27b3-et-clear-it-never-persisted/error-context.md
+
+  18) agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/AUTOMATION/specs/s17_19_a11y_copy_obs.spec.ts:8:5 › S-17 drawer (375 dark): focus contained, background inert, Escape/backdrop/Close dismiss and restore; breakpoint crossing closes and focuses visible nav 
+
+    Error: [2mexpect([22m[31mreceived[39m[2m).[22mtoBe[2m([22m[32mexpected[39m[2m) // Object.is equality[22m
+
+    Expected: [32m"page"[39m
+    Received: [31m"All agents"[39m
+
+    Call Log:
+    - Timeout 5000ms exceeded while waiting on the predicate
+
+      19 |   await page.setViewportSize({ width: 800, height: 800 }); await menu.click(); await expect(page.getByRole('dialog', { name: 'Navigation' })).toBeVisible();
+      20 |   await page.setViewportSize({ width: 1200, height: 800 }); await expect(page.getByRole('dialog', { name: 'Navigation' })).toBeHidden();
+    > 21 |   await expect.poll(() => page.evaluate(() => { const a = document.activeElement as HTMLElement | null; return a?.closest('.ws-desktop') ? (a.getAttribute('aria-current') || a.textContent) : null; })).toBe('page');
+         |   ^
+      22 | });
+      23 |
+      24 | test('S-17 context dialog (1280 light) and nested demo dialog (768 dark): containment, nested Escape, restore', async ({ page }) => {
+        at ~/NEXTJS/stark-ai-workbench-nextjs-frontend-v2/agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/AUTOMATION/specs/s17_19_a11y_copy_obs.spec.ts:21:3
+
+    Error Context: agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-001/q2-6/run1/artifacts/s17_19_a11y_copy_obs-S-17--dc879-ses-and-focuses-visible-nav/error-context.md
+
+  19) agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/AUTOMATION/specs/s17_19_a11y_copy_obs.spec.ts:36:5 › S-17 controls: accessible names and ≥44×44 targets; hidden desktop/mobile copies unfocusable 
+
+    Error: controls without names or below 44×44 (finding if non-empty)
+
+    [2mexpect([22m[31mreceived[39m[2m).[22mtoEqual[2m([22m[32mexpected[39m[2m) // deep equality[22m
+
+    [32m- Expected  -  1[39m
+    [31m+ Received  + 29[39m
+
+    [32m- Array [][39m
+    [31m+ Array [[39m
+    [31m+   Object {[39m
+    [31m+     "h": 44,[39m
+    [31m+     "inProse": false,[39m
+    [31m+     "name": "Agents",[39m
+    [31m+     "skip": false,[39m
+    [31m+     "tag": "A",[39m
+    [31m+     "view": "directory-375",[39m
+    [31m+     "w": 40,[39m
+    [31m+   },[39m
+    [31m+   Object {[39m
+    [31m+     "h": 44,[39m
+    [31m+     "inProse": false,[39m
+    [31m+     "name": "Agents",[39m
+    [31m+     "skip": false,[39m
+    [31m+     "tag": "A",[39m
+    [31m+     "view": "workspace-375",[39m
+    [31m+     "w": 40,[39m
+    [31m+   },[39m
+    [31m+   Object {[39m
+    [31m+     "h": 44,[39m
+    [31m+     "inProse": false,[39m
+    [31m+     "name": "Agents",[39m
+    [31m+     "skip": false,[39m
+    [31m+     "tag": "A",[39m
+    [31m+     "view": "conversation-375",[39m
+    [31m+     "w": 40,[39m
+    [31m+   },[39m
+    [31m+ ][39m
+
+      50 |   record('s17-names-targets', report);
+      51 |   const violations = Object.entries(report).flatMap(([k, v]) => (v as Array<Record<string, unknown>>).map(x => ({ view: k, ...x })));
+    > 52 |   expect.soft(violations, 'controls without names or below 44×44 (finding if non-empty)').toEqual([]);
+         |                                                                                           ^
+      53 |   // CONTROL: tab-loop detector reports escape when no trap exists
+      54 |   await page.setViewportSize({ width: 1280, height: 900 }); await open(page); await page.getByLabel('Find an agent').focus(); expect((await tabLoop(page, '.ws-filter', 5)).length).toBeGreaterThan(0);
+      55 | });
+        at ~/NEXTJS/stark-ai-workbench-nextjs-frontend-v2/agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/AUTOMATION/specs/s17_19_a11y_copy_obs.spec.ts:52:91
+
+    Error Context: agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-001/q2-6/run1/artifacts/s17_19_a11y_copy_obs-S-17--205d8-p-mobile-copies-unfocusable/error-context.md
+
+  20) agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/AUTOMATION/specs/s17_19_a11y_copy_obs.spec.ts:57:5 › S-18 disclosure aria/visibility, resize focus rescue, skip link, single aria-current, status regions, visible focus 
+
+    Error: [2mexpect([22m[31mlocator[39m[2m).[22mtoHaveAttribute[2m([22m[32mexpected[39m[2m)[22m failed
+
+    Locator: getByRole('button', { name: 'Demo context' })
+    Expected: [32m"true"[39m
+    Error: strict mode violation: getByRole('button', { name: 'Demo context' }) resolved to 2 elements:
+        1) <button aria-expanded="true" aria-controls="_r_1_" class="ws-disclosure-trigger">…</button> aka getByRole('button', { name: 'Demo context', exact: true })
+        2) <button class="ws-small">Reset demo context</button> aka getByRole('button', { name: 'Reset demo context' })
+
+    Call log:
+    [2m  - Expect "toHaveAttribute" with timeout 5000ms[22m
+    [2m  - waiting for getByRole('button', { name: 'Demo context' })[22m
+
+
+      59 |   const trig = page.getByRole('button', { name: 'Demo context' }); await expect(trig).toHaveAttribute('aria-expanded', 'false');
+      60 |   const id = await trig.getAttribute('aria-controls'); expect(await page.locator(`[id="${id}"]`).isHidden()).toBe(true);
+    > 61 |   await trig.click(); await expect(trig).toHaveAttribute('aria-expanded', 'true'); expect(await page.locator(`[id="${id}"]`).isVisible()).toBe(true); await trig.click();
+         |                                          ^
+      62 |   await page.setViewportSize({ width: 1280, height: 900 }); await expect(trig).toHaveAttribute('aria-expanded', 'true');
+      63 |   await page.getByRole('button', { name: 'Edit demo instructions' }).focus(); await page.setViewportSize({ width: 375, height: 900 });
+      64 |   await expect(trig).toBeFocused();
+        at ~/NEXTJS/stark-ai-workbench-nextjs-frontend-v2/agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/AUTOMATION/specs/s17_19_a11y_copy_obs.spec.ts:61:42
+
+    Error Context: agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-001/q2-6/run1/artifacts/s17_19_a11y_copy_obs-S-18--0f5a2-tatus-regions-visible-focus/error-context.md
+
+  21) agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/AUTOMATION/specs/s17_19_a11y_copy_obs.spec.ts:75:5 › S-19 copy payloads, blocked clipboard fallback, speech lifecycle, unavailable explanation, no autoplay 
+
+    Error: [2mexpect([22m[31mreceived[39m[2m).[22mtoBe[2m([22m[32mexpected[39m[2m) // Object.is equality[22m
+
+    Expected: [32m1[39m
+    Received: [31m0[39m
+
+      88 |   expect(clip).toEqual([md, `## You\n\nQ?\n\n## Kestrel Ops\n\n${md}`, 'const x = 1;']);
+      89 |   expect(clip[0]).not.toEqual(md + ' '); // CONTROL: recorder distinguishes a wrong payload
+    > 90 |   const rb = p.getByRole('button', { name: 'Read aloud' }); await rb.click(); expect(await p.evaluate(() => (window as any).__speech.speak)).toBe(1);
+         |                                                                                                                                              ^
+      91 |   const stop = p.getByRole('button', { name: 'Stop reading' }); await expect(stop).toBeVisible(); await stop.click(); expect(await p.evaluate(() => (window as any).__speech.cancel)).toBeGreaterThan(0);
+      92 |   await expect(p.getByRole('button', { name: 'Read aloud' })).toBeVisible(); await c.close();
+      93 |   c = await browser.newContext(); p = await c.newPage();
+        at ~/NEXTJS/stark-ai-workbench-nextjs-frontend-v2/agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/AUTOMATION/specs/s17_19_a11y_copy_obs.spec.ts:90:142
+
+    Error Context: agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-001/q2-6/run1/artifacts/s17_19_a11y_copy_obs-S-19--c3d8a-ble-explanation-no-autoplay/error-context.md
+
+  22) agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/AUTOMATION/specs/s17_19_a11y_copy_obs.spec.ts:101:5 › DIRECTOR-OBS-001 §11.3 browser A+B: two successful new chats both stay in recents; reopening A shows only A; no hidden archive/delete/recreate 
+
+    Error: locator.fill: Error: strict mode violation: getByLabel('Message') resolved to 2 elements:
+        1) <textarea rows="1" id="_r_e_" placeholder="Message Kestrel Ops…"></textarea> aka getByRole('textbox', { name: 'Message' })
+        2) <button disabled type="submit" aria-label="Send message" class="ws-primary ws-icon">…</button> aka getByRole('button', { name: 'Send message' })
+
+    Call log:
+    [2m  - waiting for getByLabel('Message')[22m
+
+
+      107 |   await page.getByLabel('Start a new conversation').fill('first chat'); await page.getByLabel('Start a new conversation').press('Enter');
+      108 |   await expect.poll(() => new URL(page.url()).search).toBe('?agent=kestrel&session=A'); await expect(page.getByText('reply in A')).toBeVisible();
+    > 109 |   await page.locator('.ws-desktop').getByRole('button', { name: 'New chat' }).click(); await page.getByLabel('Message').fill('second chat'); await page.getByLabel('Message').press('Enter');
+          |                                                                                                                         ^
+      110 |   await expect.poll(() => new URL(page.url()).search).toBe('?agent=kestrel&session=B'); await expect(page.getByText('reply in B')).toBeVisible(); await expect(page.getByText('reply in A')).toHaveCount(0);
+      111 |   await page.locator('.ws-crumbs').getByRole('link', { name: 'Kestrel Ops' }).click();
+      112 |   await expect(page.locator('.ws-recent-row strong')).toHaveText(['first chat', 'second chat']);
+        at ~/NEXTJS/stark-ai-workbench-nextjs-frontend-v2/agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/AUTOMATION/specs/s17_19_a11y_copy_obs.spec.ts:109:121
+
+    Error Context: agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-001/q2-6/run1/artifacts/s17_19_a11y_copy_obs-DIREC-0f2ba-den-archive-delete-recreate/error-context.md
+
+  22 failed
+    agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/AUTOMATION/specs/s01_04_directory_nav_recents.spec.ts:24:5 › S-01 empty / loading / unavailable roster are distinct and fabricate nothing 
+    agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/AUTOMATION/specs/s01_04_directory_nav_recents.spec.ts:33:5 › S-02 alternate rosters use the same components; neutral fallbacks; approved roster renders exactly 
+    agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/AUTOMATION/specs/s01_04_directory_nav_recents.spec.ts:47:5 › S-03 view identity: directory→workspace→conversation→draft, Back×3/Forward×3; encoded IDs 
+    agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/AUTOMATION/specs/s01_04_directory_nav_recents.spec.ts:74:5 › S-04 recents: ready/empty/loading/unavailable/partial/recovered are distinct; retry and recovery make no writes 
+    agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/AUTOMATION/specs/s05_07_transcript_composer_draft.spec.ts:4:5 › S-05 transcript: markdown/GFM/code render; no injected markup executes; long content scrolls in its own region 
+    agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/AUTOMATION/specs/s05_07_transcript_composer_draft.spec.ts:29:5 › S-06 composer: whitespace rejected; single send on Enter; repeat blocked while pending; Shift+Enter newline; IME Enter ignored 
+    agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/AUTOMATION/specs/s05_07_transcript_composer_draft.spec.ts:46:5 › S-06 composer stays reachable at 375 with a long thread 
+    agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/AUTOMATION/specs/s05_07_transcript_composer_draft.spec.ts:51:5 › S-07 New Chat: fresh local draft, clears old draft, no create/run before send; returned ID binds once; late result never hijacks 
+    agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/AUTOMATION/specs/s08_11_states_mutations.spec.ts:8:5 › S-08 missing / unavailable / access-unavailable are distinct from empty with constrained actions 
+    agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/AUTOMATION/specs/s08_11_states_mutations.spec.ts:27:7 › S-09 unknown outcome (resolved-uncertain): send paused, attempted text visible, only history inspection, never "not sent" 
+    agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/AUTOMATION/specs/s08_11_states_mutations.spec.ts:27:7 › S-09 unknown outcome (rejected-throw): send paused, attempted text visible, only history inspection, never "not sent" 
+    agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/AUTOMATION/specs/s08_11_states_mutations.spec.ts:27:7 › S-09 unknown outcome (pending-35s-then-timeout): send paused, attempted text visible, only history inspection, never "not sent" 
+    agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/AUTOMATION/specs/s08_11_states_mutations.spec.ts:49:5 › S-09 confirmed not-sent keeps an editable draft and requires deliberate send 
+    agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/AUTOMATION/specs/s08_11_states_mutations.spec.ts:57:5 › S-10 pending status; metadata warning keeps ID/transcript and offers list read only 
+    agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/AUTOMATION/specs/s08_11_states_mutations.spec.ts:88:5 › S-11 rename/archive: whitespace rejected, literal punctuation, failure retention, archive hides only, focus destinations 
+    agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/AUTOMATION/specs/s12_16_demo_theme_render.spec.ts:9:5 › S-12 demo context: permanent disclosure; edit/add/preview/remove make no network, upload or service calls 
+    agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/AUTOMATION/specs/s12_16_demo_theme_render.spec.ts:26:5 › S-13 demo state is per agent and per identity; reload/reset clear it; never persisted 
+    agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/AUTOMATION/specs/s17_19_a11y_copy_obs.spec.ts:8:5 › S-17 drawer (375 dark): focus contained, background inert, Escape/backdrop/Close dismiss and restore; breakpoint crossing closes and focuses visible nav 
+    agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/AUTOMATION/specs/s17_19_a11y_copy_obs.spec.ts:36:5 › S-17 controls: accessible names and ≥44×44 targets; hidden desktop/mobile copies unfocusable 
+    agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/AUTOMATION/specs/s17_19_a11y_copy_obs.spec.ts:57:5 › S-18 disclosure aria/visibility, resize focus rescue, skip link, single aria-current, status regions, visible focus 
+    agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/AUTOMATION/specs/s17_19_a11y_copy_obs.spec.ts:75:5 › S-19 copy payloads, blocked clipboard fallback, speech lifecycle, unavailable explanation, no autoplay 
+    agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/AUTOMATION/specs/s17_19_a11y_copy_obs.spec.ts:101:5 › DIRECTOR-OBS-001 §11.3 browser A+B: two successful new chats both stay in recents; reopening A shows only A; no hidden archive/delete/recreate 
+  7 passed (2.7m)

@@ -1,0 +1,661 @@
+{
+  "recorded_at": "2026-10-07T19:05:42.964639+06:00",
+  "gate": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/AUTOMATION/q2_gate.py",
+  "gate_sha256": "2d071df58a41df9fda7b59cf7769f6a15699eec7fdfde0be51f785ddaa0d52f6",
+  "candidate": "f21564cacb563ecddbf78b1685086c9489bf1c26",
+  "execution_head": "c4ed7042fa05fa638bdc6d4327ecba3448d44cef",
+  "records_manifest": {
+    "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/AUTOMATION/q2_qam_records_2026-10-07.json",
+    "sha256": "e92f0861f5a447304c7e46983077fd6cac5a04657f8961bea38bff1b0edcec57"
+  },
+  "binding_record": {
+    "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/HANDOFFS/LEAD_REMOTE_ROSTER_BINDING_HASHES_2026-10-07.json",
+    "sha256": "0ccefad21aa22eda91f400923722f276f31a79b326d93d9e05d1d1d52bc9d80c"
+  },
+  "checks": [
+    {
+      "check": "binding_record_matches_package_index",
+      "ok": true,
+      "detail": {
+        "actual": "0ccefad21aa22eda91f400923722f276f31a79b326d93d9e05d1d1d52bc9d80c"
+      }
+    },
+    {
+      "check": "binding_candidate",
+      "ok": true,
+      "detail": "f21564cacb563ecddbf78b1685086c9489bf1c26"
+    },
+    {
+      "check": "pin:QAM/QAM_TEST_PLAN.md",
+      "ok": true,
+      "detail": {
+        "expected": "8ddb743f1be09d624bf79c8a602ad05fbd3cffbffbc2d8c6cfbaee16f8b80337",
+        "actual": "8ddb743f1be09d624bf79c8a602ad05fbd3cffbffbc2d8c6cfbaee16f8b80337"
+      }
+    },
+    {
+      "check": "pin:QAM/Q1B_REVIEW.md",
+      "ok": true,
+      "detail": {
+        "expected": "ce02c5cb5432c688e25801000742d0f69ec7778c7ed1fea70badffd4d451fe2f",
+        "actual": "ce02c5cb5432c688e25801000742d0f69ec7778c7ed1fea70badffd4d451fe2f"
+      }
+    },
+    {
+      "check": "pin:ACCEPTANCE_SPEC.md",
+      "ok": true,
+      "detail": {
+        "expected": "57f8d9f4dec8ca826326067254b0916ef65ccd51b635a8ac6ead73e8ab469fcc",
+        "actual": "57f8d9f4dec8ca826326067254b0916ef65ccd51b635a8ac6ead73e8ab469fcc"
+      }
+    },
+    {
+      "check": "pin:RULINGS_ADDENDUM.md",
+      "ok": true,
+      "detail": {
+        "expected": "99d4c40f7094106f4386d4d8ff5535228feb653dcbe0fd948a14a0ff1ec3b36f",
+        "actual": "99d4c40f7094106f4386d4d8ff5535228feb653dcbe0fd948a14a0ff1ec3b36f"
+      }
+    },
+    {
+      "check": "pin:QAM/HANDOFFS/ARCHITECT_REMOTE_ROSTER_AMENDMENT_2026-10-05.md",
+      "ok": true,
+      "detail": {
+        "expected": "57924e3f046bc521b3a91fe78cd17087e8b2f3dbd6aa05b11439a26cf459c7d9",
+        "actual": "57924e3f046bc521b3a91fe78cd17087e8b2f3dbd6aa05b11439a26cf459c7d9"
+      }
+    },
+    {
+      "check": "pin:QAM/AUTOMATION/q2_identity.py",
+      "ok": true,
+      "detail": {
+        "expected": "703196058f1d878009d21a2dbdce6fd7dbabfc3341ab449b705af1b969c70f58",
+        "actual": "703196058f1d878009d21a2dbdce6fd7dbabfc3341ab449b705af1b969c70f58"
+      }
+    },
+    {
+      "check": "pin:QAM/AUTOMATION/q2_identity_v2.py",
+      "ok": true,
+      "detail": {
+        "expected": "cf0968a2b29051eebdba10dd07bb4f36e69efcf35acf4a596acd75ce621cc5a2",
+        "actual": "cf0968a2b29051eebdba10dd07bb4f36e69efcf35acf4a596acd75ce621cc5a2"
+      }
+    },
+    {
+      "check": "pin:QAM/AUTOMATION/roster_amendment_2026-10-05.json",
+      "ok": true,
+      "detail": {
+        "expected": "8da8cb0b078e61b19e2772ad75d809370ce278fbdf5487ce25bff2b6a7c1bc25",
+        "actual": "8da8cb0b078e61b19e2772ad75d809370ce278fbdf5487ce25bff2b6a7c1bc25"
+      }
+    },
+    {
+      "check": "pin:QAM/HANDOFFS/LEAD_REMOTE_ROSTER_APPROVAL_2026-10-07.md",
+      "ok": true,
+      "detail": {
+        "expected": "c0380dfcb951755b82af06881013635d60cad61829697978107e33b6f7fcef53",
+        "actual": "c0380dfcb951755b82af06881013635d60cad61829697978107e33b6f7fcef53"
+      }
+    },
+    {
+      "check": "records_manifest_matches_staging_pin",
+      "ok": true,
+      "detail": {
+        "expected": "e92f0861f5a447304c7e46983077fd6cac5a04657f8961bea38bff1b0edcec57",
+        "actual": "e92f0861f5a447304c7e46983077fd6cac5a04657f8961bea38bff1b0edcec57"
+      }
+    },
+    {
+      "check": "amendment_is_pinned_file",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "check": "approval_committed_at_HEAD",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "check": "branch",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "check": "candidate_ancestor_of_head",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "check": "no_merge_commits_after_candidate",
+      "ok": true,
+      "detail": []
+    },
+    {
+      "check": "index_empty",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "check": "no_next_dev_or_server_process",
+      "ok": true,
+      "detail": []
+    },
+    {
+      "check": "intervening_paths_only_QAM_or_listed_docs",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "check": "identity_tool_exit_0",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "identity_raw_verdict_PRODUCT_EQUIVALENT",
+      "ok": true,
+      "detail": "PRODUCT_EQUIVALENT"
+    }
+  ],
+  "intervening_commits": [
+    {
+      "commit": "a4abd2a9e4d9675a41653fdb66f3456feb11457a",
+      "subject": "6oct2026 - saving the work so far...",
+      "changes": [
+        [
+          "M",
+          "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/AUTOMATION/q2_approved_qam_records.json"
+        ],
+        [
+          "A",
+          "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/AUTOMATION/q2_identity_v2.py"
+        ],
+        [
+          "A",
+          "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/AUTOMATION/rebind_evidence.py"
+        ],
+        [
+          "A",
+          "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/AUTOMATION/rebind_export.py"
+        ],
+        [
+          "A",
+          "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/AUTOMATION/roster_amendment_2026-10-05.json"
+        ],
+        [
+          "A",
+          "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/HANDOFFS/ARCHITECT_PACKAGE_INDEX.json"
+        ],
+        [
+          "A",
+          "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/HANDOFFS/ARCHITECT_REMOTE_ROSTER_AMENDMENT_2026-10-05.md"
+        ],
+        [
+          "A",
+          "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/HANDOFFS/DIRECTOR_Q2_RELEASE_2026-10-05_193516.md"
+        ],
+        [
+          "A",
+          "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/HANDOFFS/Q2_RULING_REQUEST_2026-10-05_193516.md"
+        ],
+        [
+          "A",
+          "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/HANDOFFS/ROSTER_REBIND_REVIEW_2026-10-05_215715.md"
+        ],
+        [
+          "A",
+          "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/HANDOFFS/ROSTER_REBIND_REVIEW_2026-10-05_215715.zip"
+        ],
+        [
+          "A",
+          "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/HANDOFFS/ROSTER_REBIND_REVIEW_2026-10-05_215715_RECEIPT.json"
+        ],
+        [
+          "M",
+          "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/QAM_STATE.json"
+        ],
+        [
+          "A",
+          "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-prep-003/INDEX.md"
+        ],
+        [
+          "A",
+          "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-prep-003/identity-head-f21564c.json"
+        ],
+        [
+          "A",
+          "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-prep-003/jest-compare-candidate-vs-head.json"
+        ],
+        [
+          "A",
+          "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-prep-003/jest-head-f21564c.json"
+        ],
+        [
+          "A",
+          "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-prep-003/jest-head-f21564c.log"
+        ],
+        [
+          "A",
+          "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/remote-roster-rebind-001/INDEX.md"
+        ],
+        [
+          "A",
+          "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/remote-roster-rebind-001/blobs/new-config__agents.manifest-hermes.json"
+        ],
+        [
+          "A",
+          "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/remote-roster-rebind-001/blobs/new-config__agents.manifest.json"
+        ],
+        [
+          "A",
+          "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/remote-roster-rebind-001/blobs/old-config__agents.manifest.json"
+        ],
+        [
+          "A",
+          "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/remote-roster-rebind-001/blobs/old-config__agents.manifest_copy.json"
+        ],
+        [
+          "A",
+          "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/remote-roster-rebind-001/config-delta.patch"
+        ],
+        [
+          "A",
+          "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/remote-roster-rebind-001/identity-v2-f21564c-accept.json"
+        ],
+        [
+          "A",
+          "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/remote-roster-rebind-001/identity-v2-f21564c-strict.json"
+        ],
+        [
+          "A",
+          "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/remote-roster-rebind-001/identity-v2-selftest-controls.json"
+        ],
+        [
+          "A",
+          "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/remote-roster-rebind-001/q2_identity_v1_to_v2.diff"
+        ],
+        [
+          "A",
+          "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/remote-roster-rebind-001/rebind-evidence.json"
+        ],
+        [
+          "A",
+          "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/remote-roster-request-2026-10-05/HANDOFFS/DIRECTOR_Q2_RELEASE_2026-10-05_193516.md"
+        ],
+        [
+          "A",
+          "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/remote-roster-request-2026-10-05/HANDOFFS/Q2_RULING_REQUEST_2026-10-05_193516.md"
+        ],
+        [
+          "A",
+          "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/remote-roster-request-2026-10-05/QAM_STATE.json"
+        ],
+        [
+          "A",
+          "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/remote-roster-request-2026-10-05/evidence/q2-prep-003/INDEX.md"
+        ],
+        [
+          "A",
+          "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/remote-roster-request-2026-10-05/evidence/q2-prep-003/identity-head-f21564c.json"
+        ],
+        [
+          "A",
+          "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/remote-roster-request-2026-10-05/evidence/q2-prep-003/jest-compare-candidate-vs-head.json"
+        ],
+        [
+          "A",
+          "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/remote-roster-request-2026-10-05/evidence/q2-prep-003/jest-head-f21564c.json"
+        ],
+        [
+          "A",
+          "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/remote-roster-request-2026-10-05/evidence/q2-prep-003/jest-head-f21564c.log"
+        ],
+        [
+          "A",
+          "agent_docs/RESPONSES/response_2026-10-05_193516_apbm-000-q2-held-ruling-request.md"
+        ]
+      ]
+    },
+    {
+      "commit": "c4ed7042fa05fa638bdc6d4327ecba3448d44cef",
+      "subject": "APBM-000: Lead remote-roster approval installed (candidate f21564c), QAM routing + records manifest, attempt-002 records",
+      "changes": [
+        [
+          "A",
+          "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/AUTOMATION/q2_qam_records_2026-10-07.json"
+        ],
+        [
+          "A",
+          "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/HANDOFFS/CLAUDY_REMOTE_ROSTER_CONTINUATION_2026-10-07.txt"
+        ],
+        [
+          "A",
+          "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/HANDOFFS/LEAD_REMOTE_ROSTER_APPROVAL_2026-10-07.md"
+        ],
+        [
+          "A",
+          "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/HANDOFFS/LEAD_REMOTE_ROSTER_BINDING_HASHES_2026-10-07.json"
+        ],
+        [
+          "A",
+          "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/HANDOFFS/LEAD_REMOTE_ROSTER_PACKAGE_INDEX_2026-10-07.json"
+        ],
+        [
+          "A",
+          "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/HANDOFFS/LEAD_RETURN_START_HERE_2026-10-07.md"
+        ],
+        [
+          "A",
+          "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/HANDOFFS/LEAD_REVIEWED_QAM_PATHS_2026-10-07.json"
+        ],
+        [
+          "A",
+          "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/HANDOFFS/Q2_HOLD_LEAD_FILES_MISSING_2026-10-07_184448.md"
+        ],
+        [
+          "A",
+          "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/HANDOFFS/ROSTER_REBIND_REVIEW_2026-10-07_183026.md"
+        ],
+        [
+          "A",
+          "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/HANDOFFS/ROSTER_REBIND_REVIEW_2026-10-07_183026.zip"
+        ],
+        [
+          "A",
+          "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/HANDOFFS/ROSTER_REBIND_REVIEW_2026-10-07_183026_RECEIPT.json"
+        ],
+        [
+          "M",
+          "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/QAM_STATE.json"
+        ],
+        [
+          "A",
+          "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/lead-remote-roster-review-2026-10-07/VERIFICATION.json"
+        ],
+        [
+          "A",
+          "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-start-prep-2026-10-07/install-verification.json"
+        ],
+        [
+          "A",
+          "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-start-prep-2026-10-07/qam-state-routing.diff"
+        ],
+        [
+          "A",
+          "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-start-prep-2026-10-07/qam-state-routing.json"
+        ],
+        [
+          "A",
+          "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-start-prep-2026-10-07/selective-staging.json"
+        ],
+        [
+          "A",
+          "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-start-prep-2026-10-07/staging-paths.txt"
+        ],
+        [
+          "A",
+          "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/remote-roster-rebind-002/COMMANDS.md"
+        ],
+        [
+          "A",
+          "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/remote-roster-rebind-002/REVIEW_START_HERE.md"
+        ],
+        [
+          "A",
+          "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/remote-roster-rebind-002/architect-index-verification.json"
+        ],
+        [
+          "A",
+          "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/remote-roster-rebind-002/authority-and-tool-pins.json"
+        ],
+        [
+          "A",
+          "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/remote-roster-rebind-002/commit-succession.json"
+        ],
+        [
+          "A",
+          "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/remote-roster-rebind-002/config-evidence/blobs/new-config__agents.manifest-hermes.json"
+        ],
+        [
+          "A",
+          "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/remote-roster-rebind-002/config-evidence/blobs/new-config__agents.manifest.json"
+        ],
+        [
+          "A",
+          "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/remote-roster-rebind-002/config-evidence/blobs/old-config__agents.manifest.json"
+        ],
+        [
+          "A",
+          "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/remote-roster-rebind-002/config-evidence/blobs/old-config__agents.manifest_copy.json"
+        ],
+        [
+          "A",
+          "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/remote-roster-rebind-002/config-evidence/config-delta.patch"
+        ],
+        [
+          "A",
+          "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/remote-roster-rebind-002/config-evidence/rebind-evidence.json"
+        ],
+        [
+          "A",
+          "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/remote-roster-rebind-002/current-config-equality.json"
+        ],
+        [
+          "A",
+          "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/remote-roster-rebind-002/entry-state.json"
+        ],
+        [
+          "A",
+          "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/remote-roster-rebind-002/identity-current-bounded-variant.json"
+        ],
+        [
+          "A",
+          "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/remote-roster-rebind-002/identity-current-strict.json"
+        ],
+        [
+          "A",
+          "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/remote-roster-rebind-002/manifest-import-references.txt"
+        ],
+        [
+          "A",
+          "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/remote-roster-rebind-002/proposed-record-inventory.json"
+        ],
+        [
+          "A",
+          "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/remote-roster-rebind-002/scope-preservation.json"
+        ],
+        [
+          "A",
+          "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/remote-roster-rebind-002/selective-staging-paths.txt"
+        ],
+        [
+          "A",
+          "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/session_2026-10-07.md"
+        ],
+        [
+          "A",
+          "agent_docs/RESPONSES/response_2026-10-07_184448_apbm-000-q2-hold-lead-files-missing.md"
+        ],
+        [
+          "A",
+          "agent_docs/RESPONSES/response_2026-10-07_185841_apbm-000-lead-approval-installed-commit-list.md"
+        ]
+      ]
+    }
+  ],
+  "anomaly_dispositions": [
+    {
+      "kind": "QAM_UNTRACKED_UNLISTED_OR_HASH",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/AUTOMATION/q2_gate.py",
+      "class": "QAM",
+      "detail": {
+        "worktree": "2d071df58a41df9fda7b59cf7769f6a15699eec7fdfde0be51f785ddaa0d52f6",
+        "approved": null
+      },
+      "disposition": "ALLOWED",
+      "reason": "new append-only Q2 output / disposable instrument (untracked, not previously recorded)"
+    },
+    {
+      "kind": "QAM_UNTRACKED_UNLISTED_OR_HASH",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/HANDOFFS/DIRECTOR_Q2_RELEASE_REVISED_2026-10-07_190418.md",
+      "class": "QAM",
+      "detail": {
+        "worktree": "74565acbd4e7eec8179a96d10a9232618ca150ce3bd8c10eaaab48b4d121013c",
+        "approved": null
+      },
+      "disposition": "ALLOWED",
+      "reason": "authorized new release record (Lead L5)"
+    },
+    {
+      "kind": "QAM_UNTRACKED_UNLISTED_OR_HASH",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-001/q2-0/INSTRUMENT_LOG.md",
+      "class": "QAM",
+      "detail": {
+        "worktree": "368fe4127ffeae2c67424d794dd569c796906f1e7248bc97e306e1dc09cda215",
+        "approved": null
+      },
+      "disposition": "ALLOWED",
+      "reason": "new append-only Q2 output / disposable instrument (untracked, not previously recorded)"
+    },
+    {
+      "kind": "QAM_UNTRACKED_UNLISTED_OR_HASH",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-001/q2-0/attempt1-crashed-gate-identity-v2.json",
+      "class": "QAM",
+      "detail": {
+        "worktree": "a2bc7be575db9a0ef7f13f1950bc8c881b344e0de5c66dc4548f9b80b6f2d706",
+        "approved": null
+      },
+      "disposition": "ALLOWED",
+      "reason": "new append-only Q2 output / disposable instrument (untracked, not previously recorded)"
+    },
+    {
+      "kind": "QAM_UNTRACKED_UNLISTED_OR_HASH",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-001/q2-0/gate-fix-1.diff",
+      "class": "QAM",
+      "detail": {
+        "worktree": "45b1b3286fb4d9f09745bc46c299cd4f6834e49e7d16c1080ba19c8f35cfde45",
+        "approved": null
+      },
+      "disposition": "ALLOWED",
+      "reason": "new append-only Q2 output / disposable instrument (untracked, not previously recorded)"
+    },
+    {
+      "kind": "QAM_CHANGED_UNLISTED_OR_HASH",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/AUTOMATION/q2_qam_records_2026-10-07.json",
+      "class": "QAM",
+      "detail": {
+        "worktree": "e92f0861f5a447304c7e46983077fd6cac5a04657f8961bea38bff1b0edcec57",
+        "approved": null
+      },
+      "disposition": "ALLOWED",
+      "reason": "records manifest cannot list itself (Lead L6); pinned in selective-staging.json"
+    },
+    {
+      "kind": "QAM_CHANGED_UNLISTED_OR_HASH",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-start-prep-2026-10-07/selective-staging.json",
+      "class": "QAM",
+      "detail": {
+        "worktree": "95e3340bfbc4780d011cd937930e50f4c3b2a93361b0c2ddb4b0d231eb4710b4",
+        "approved": null
+      },
+      "disposition": "ALLOWED",
+      "reason": "staging record pins the records manifest (non-circular)"
+    },
+    {
+      "kind": "DOCS_OUTSIDE_QAM_CHANGED",
+      "path": "agent_docs/RESPONSES/response_2026-10-05_193516_apbm-000-q2-held-ruling-request.md",
+      "class": "DOCS_OUTSIDE_QAM",
+      "detail": {
+        "worktree": "602963ed091dc0881f69607bd897d38b83b8f78ccf39c1736a6b1557999b4a18"
+      },
+      "disposition": "ALLOWED_NONBLOCKING",
+      "reason": "historical RESPONSES documentation (Lead L6)"
+    },
+    {
+      "kind": "DOCS_OUTSIDE_QAM_CHANGED",
+      "path": "agent_docs/RESPONSES/response_2026-10-07_184448_apbm-000-q2-hold-lead-files-missing.md",
+      "class": "DOCS_OUTSIDE_QAM",
+      "detail": {
+        "worktree": "9ef808d8b83021d43f3c4a0db364bed397e556f522f96b015fda00211764b1eb"
+      },
+      "disposition": "ALLOWED_NONBLOCKING",
+      "reason": "historical RESPONSES documentation (Lead L6)"
+    },
+    {
+      "kind": "DOCS_OUTSIDE_QAM_CHANGED",
+      "path": "agent_docs/RESPONSES/response_2026-10-07_185841_apbm-000-lead-approval-installed-commit-list.md",
+      "class": "DOCS_OUTSIDE_QAM",
+      "detail": {
+        "worktree": "88ade533005b19416d7ff342ca0214538e9f8b40ebd1994f90407c1a5c9c40ea"
+      },
+      "disposition": "ALLOWED_NONBLOCKING",
+      "reason": "historical RESPONSES documentation (Lead L6)"
+    },
+    {
+      "kind": "AMENDED_TRANSITION_VERIFIED",
+      "path": "config/agents.manifest.json",
+      "class": "AMENDMENT",
+      "detail": {
+        "from": "638e95a166e9e196175bd630ce76560db1ef98dbe72d40f31d9a109782027ae8",
+        "to": "6c27f420127db7125a43ddba6347470b19d3be39769b44bb2b85bd6d9526b6d9"
+      },
+      "disposition": "ALLOWED",
+      "reason": "Architect amendment exact transition (Lead L1)"
+    },
+    {
+      "kind": "AMENDED_TRANSITION_VERIFIED",
+      "path": "config/agents.manifest copy.json",
+      "class": "AMENDMENT",
+      "detail": {
+        "from": "6c27f420127db7125a43ddba6347470b19d3be39769b44bb2b85bd6d9526b6d9",
+        "to": null
+      },
+      "disposition": "ALLOWED",
+      "reason": "Architect amendment exact transition (Lead L1)"
+    },
+    {
+      "kind": "AMENDED_TRANSITION_VERIFIED",
+      "path": "config/agents.manifest copy.json",
+      "class": "AMENDMENT",
+      "detail": {
+        "from": "6c27f420127db7125a43ddba6347470b19d3be39769b44bb2b85bd6d9526b6d9",
+        "to": null
+      },
+      "disposition": "ALLOWED",
+      "reason": "Architect amendment exact transition (Lead L1)"
+    },
+    {
+      "kind": "AMENDED_TRANSITION_VERIFIED",
+      "path": "config/agents.manifest.json",
+      "class": "AMENDMENT",
+      "detail": {
+        "from": "638e95a166e9e196175bd630ce76560db1ef98dbe72d40f31d9a109782027ae8",
+        "to": "6c27f420127db7125a43ddba6347470b19d3be39769b44bb2b85bd6d9526b6d9"
+      },
+      "disposition": "ALLOWED",
+      "reason": "Architect amendment exact transition (Lead L1)"
+    },
+    {
+      "kind": "NEXT_ENV_DEV_VARIANT",
+      "path": "next-env.d.ts",
+      "class": "GENERATED_BOUNDED",
+      "detail": {
+        "recorded": "7b550dda9686c16f36a17bf9051d5dbf31e98555b30d114ac49fc49a1e712651",
+        "worktree": "7ad303e40d4fddf44f156129e397511953a71481c5cfd86b1862649aaaf240cc",
+        "exact_dev_variant": true
+      },
+      "disposition": "ALLOWED",
+      "reason": "next-env.d.ts exact dev variant (Lead L3)"
+    },
+    {
+      "kind": "ROOT_HANDOFF_POINTER_PRESENT",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QA_HANDOFF.md",
+      "class": "PLACEMENT",
+      "detail": "Report to Architect/Cody; Executor does not edit outside QAM",
+      "disposition": "ALLOWED_NONBLOCKING",
+      "reason": "root pointer: documentation placement finding (Lead L6)"
+    }
+  ],
+  "identity_output": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-001/q2-0/q2-0-identity-v2.json",
+  "blocks": [],
+  "verdict": "Q2_0_PASS"
+}

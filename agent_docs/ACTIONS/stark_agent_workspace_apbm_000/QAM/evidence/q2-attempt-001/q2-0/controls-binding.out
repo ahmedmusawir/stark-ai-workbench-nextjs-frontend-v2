@@ -1,0 +1,12 @@
+{
+ "verdict": "Q2_0_STOP",
+ "execution_head": "c4ed7042fa05fa638bdc6d4327ecba3448d44cef",
+ "blocks": [
+  "binding_record_matches_package_index",
+  "pin:QAM/AUTOMATION/q2_identity_v2.py"
+ ],
+ "checks_failed": [
+  "binding_record_matches_package_index",
+  "pin:QAM/AUTOMATION/q2_identity_v2.py"
+ ]
+}

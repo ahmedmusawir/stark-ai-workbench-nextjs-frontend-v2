@@ -1,0 +1,72 @@
+{
+  "recorded_at": "2026-10-07T19:06:21.665267+06:00",
+  "instrument": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/AUTOMATION/q2_identity_v2.py",
+  "instrument_sha256": "cf0968a2b29051eebdba10dd07bb4f36e69efcf35acf4a596acd75ce621cc5a2",
+  "product_candidate": "22ce03ba3871ea53e5253f2e3f060a1bab3226a3",
+  "execution_head": "22ce03ba3871ea53e5253f2e3f060a1bab3226a3",
+  "branch": "qa/frontend-apbm-000",
+  "worktree": "<disposable>/wt",
+  "candidate_is_ancestor": true,
+  "intervening_commits": [],
+  "paths_compared_blob_and_worktree": 390,
+  "inventory_checked": 28,
+  "protected_checked": 191,
+  "pinned_checked": 218,
+  "approved_qam_manifest": null,
+  "amendment": null,
+  "amendment_sha256": null,
+  "accept_next_env_dev_variant": true,
+  "raw_anomalies": [
+    {
+      "kind": "WORKTREE_DIFF_FROM_CANDIDATE",
+      "path": "src/config/manifest.ts",
+      "class": "PRODUCT_CONFIG_TEST_DEP",
+      "detail": {
+        "candidate": "16e96c8884bfafe676c9b528a257a447af59b0e9adbf7fe5e6a8532f2ccba569",
+        "worktree": "649e4193f47e9fde00d00c847e635a6752d988d79ce5f155ca54ede4a1d44587"
+      }
+    },
+    {
+      "kind": "UNTRACKED_PRODUCT_CONFIG_TEST_DEP",
+      "path": "config/agents.manifest copy.json",
+      "class": "PRODUCT_CONFIG_TEST_DEP",
+      "detail": {
+        "worktree": "6c27f420127db7125a43ddba6347470b19d3be39769b44bb2b85bd6d9526b6d9"
+      }
+    },
+    {
+      "kind": "CHANGED_INVENTORY_MISMATCH",
+      "path": "src/config/manifest.ts",
+      "class": "PRODUCT_CONFIG_TEST_DEP",
+      "detail": "16e96c8884bfafe676c9b528a257a447af59b0e9adbf7fe5e6a8532f2ccba569"
+    },
+    {
+      "kind": "PINNED_INPUT_WORKTREE_MISMATCH",
+      "path": "next-env.d.ts",
+      "class": "PRODUCT_CONFIG_TEST_DEP",
+      "detail": {
+        "recorded": "7b550dda9686c16f36a17bf9051d5dbf31e98555b30d114ac49fc49a1e712651",
+        "worktree": "dabd74734b5b8c6d9afa4255aa00ea0af3b0985eec26b80ca472c5ef8d66829a",
+        "exact_dev_variant": false
+      }
+    },
+    {
+      "kind": "PINNED_INPUT_WORKTREE_MISMATCH",
+      "path": "src/config/manifest.ts",
+      "class": "PRODUCT_CONFIG_TEST_DEP",
+      "detail": {
+        "recorded": "16e96c8884bfafe676c9b528a257a447af59b0e9adbf7fe5e6a8532f2ccba569",
+        "worktree": "649e4193f47e9fde00d00c847e635a6752d988d79ce5f155ca54ede4a1d44587"
+      }
+    },
+    {
+      "kind": "ROOT_HANDOFF_POINTER_PRESENT",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QA_HANDOFF.md",
+      "class": "PLACEMENT",
+      "detail": "Report to Architect/Cody; Executor does not edit outside QAM"
+    }
+  ],
+  "raw_verdict": "PRODUCT_DRIFT_OR_IDENTITY_FAILURE",
+  "blocking_anomaly_count": 5,
+  "nonblocking_anomalies_need_adjudication": 1
+}

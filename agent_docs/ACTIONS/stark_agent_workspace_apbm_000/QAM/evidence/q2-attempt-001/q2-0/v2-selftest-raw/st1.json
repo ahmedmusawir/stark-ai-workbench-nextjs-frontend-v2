@@ -1,0 +1,4655 @@
+{
+  "recorded_at": "2026-10-07T19:06:17.316738+06:00",
+  "instrument": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/AUTOMATION/q2_identity_v2.py",
+  "instrument_sha256": "cf0968a2b29051eebdba10dd07bb4f36e69efcf35acf4a596acd75ce621cc5a2",
+  "product_candidate": "22ce03ba3871ea53e5253f2e3f060a1bab3226a3",
+  "execution_head": "20ef380bdd6eed5e111d953d6404992add7a88a6",
+  "branch": "qa/frontend-apbm-000",
+  "worktree": "<repo>",
+  "candidate_is_ancestor": false,
+  "intervening_commits": [],
+  "paths_compared_blob_and_worktree": 390,
+  "inventory_checked": 28,
+  "protected_checked": 191,
+  "pinned_checked": 218,
+  "approved_qam_manifest": null,
+  "amendment": null,
+  "amendment_sha256": null,
+  "accept_next_env_dev_variant": false,
+  "raw_anomalies": [
+    {
+      "kind": "CANDIDATE_NOT_ANCESTOR",
+      "path": "",
+      "class": "IDENTITY",
+      "detail": "22ce03ba3871ea53e5253f2e3f060a1bab3226a3 not ancestor of 20ef380bdd6eed5e111d953d6404992add7a88a6"
+    },
+    {
+      "kind": "COMMITTED_DIFF_FROM_CANDIDATE",
+      "path": "CHANGELOG.md",
+      "class": "PRODUCT_CONFIG_TEST_DEP",
+      "detail": {
+        "candidate": "1f25e6837253343f609397f0b444d28734336fa8314efa31fdef6d104f4a5600",
+        "head": "f6a4ef474ed26b0a3f71aab8d2a76f1ece0fb405af67dac54b860e8acfa42fff"
+      }
+    },
+    {
+      "kind": "COMMITTED_DIFF_FROM_CANDIDATE",
+      "path": "RECOVERY.md",
+      "class": "PRODUCT_CONFIG_TEST_DEP",
+      "detail": {
+        "candidate": "73bd6c0fba357bd38232734866cbb8c3cc5c6dbb006fe8a9070f27706e3d6a8a",
+        "head": "170f79eaa92448bcb477b10f05a91f0c8fc62ff4832d9d2f85c7a932e7430688"
+      }
+    },
+    {
+      "kind": "COMMITTED_DIFF_FROM_CANDIDATE",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/ACCEPTANCE_SPEC.md",
+      "class": "DESIGN_OR_CONTRACT",
+      "detail": {
+        "candidate": "57f8d9f4dec8ca826326067254b0916ef65ccd51b635a8ac6ead73e8ab469fcc",
+        "head": null
+      }
+    },
+    {
+      "kind": "COMMITTED_DIFF_FROM_CANDIDATE",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/DESIGN/ARCHITECT_HANDOFF.md",
+      "class": "DESIGN_OR_CONTRACT",
+      "detail": {
+        "candidate": "138cb4fe39159996e58f659d63aa838a9817f1122bcdedcac5c84f757cbf7bac",
+        "head": null
+      }
+    },
+    {
+      "kind": "COMMITTED_DIFF_FROM_CANDIDATE",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/DESIGN/ARTIFACT_CHECKS.json",
+      "class": "DESIGN_OR_CONTRACT",
+      "detail": {
+        "candidate": "81fc43c974f02b112cfec7ad3a8f62b5a635ba3660cb951d0ab8432a47f9e6a9",
+        "head": null
+      }
+    },
+    {
+      "kind": "COMMITTED_DIFF_FROM_CANDIDATE",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/DESIGN/ARTIFACT_INDEX.md",
+      "class": "DESIGN_OR_CONTRACT",
+      "detail": {
+        "candidate": "4a109b30abd2559053946dee050b058f6ed34a1be978fe61a22595385e8bb84a",
+        "head": null
+      }
+    },
+    {
+      "kind": "COMMITTED_DIFF_FROM_CANDIDATE",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/DESIGN/BASE.css",
+      "class": "DESIGN_OR_CONTRACT",
+      "detail": {
+        "candidate": "2407ec12ac508124899411f6a3600a90d396a7bc9f08ee69ff192b76e31692ff",
+        "head": null
+      }
+    },
+    {
+      "kind": "COMMITTED_DIFF_FROM_CANDIDATE",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/DESIGN/CHAT_TOKENS.css",
+      "class": "DESIGN_OR_CONTRACT",
+      "detail": {
+        "candidate": "7cdaaa2b39631241369ada83f2849f08c97364249e711b79f0a05ac24f6d1723",
+        "head": null
+      }
+    },
+    {
+      "kind": "COMMITTED_DIFF_FROM_CANDIDATE",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/DESIGN/COMPONENT_MANIFEST.md",
+      "class": "DESIGN_OR_CONTRACT",
+      "detail": {
+        "candidate": "eae956b5fb3eb0312926f9298ddbb35509b7e1a0d94139f89a92b08e3af46522",
+        "head": null
+      }
+    },
+    {
+      "kind": "COMMITTED_DIFF_FROM_CANDIDATE",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/DESIGN/CONTRAST_CHECKS.json",
+      "class": "DESIGN_OR_CONTRACT",
+      "detail": {
+        "candidate": "18c2908fb8330684e5108e214cfc0e40e63a9daf4a0deb7737204387a01a20a5",
+        "head": null
+      }
+    },
+    {
+      "kind": "COMMITTED_DIFF_FROM_CANDIDATE",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/DESIGN/DESIGN_RETURN.md",
+      "class": "DESIGN_OR_CONTRACT",
+      "detail": {
+        "candidate": "537f96038c0b794e5649987337806eabe0a313e51852632d11b6ba3f51fcb578",
+        "head": null
+      }
+    },
+    {
+      "kind": "COMMITTED_DIFF_FROM_CANDIDATE",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/DESIGN/ENGINEER_BRIEF.md",
+      "class": "DESIGN_OR_CONTRACT",
+      "detail": {
+        "candidate": "c14803090e58ddfc7d7e501a49e420a701bae624df4deaa2292f908e79bae7e5",
+        "head": null
+      }
+    },
+    {
+      "kind": "COMMITTED_DIFF_FROM_CANDIDATE",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/DESIGN/EVIDENCE.md",
+      "class": "DESIGN_OR_CONTRACT",
+      "detail": {
+        "candidate": "a4d7729997e8286fd15afe5d65f83e2f56927650d65646bc20241e4231f393da",
+        "head": null
+      }
+    },
+    {
+      "kind": "COMMITTED_DIFF_FROM_CANDIDATE",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/DESIGN/INTERACTION_CHECKS.json",
+      "class": "DESIGN_OR_CONTRACT",
+      "detail": {
+        "candidate": "1fcdd91298188f5a036f0b210fb8be55b216e91ac7d5fd17cdb927bb97c12c6e",
+        "head": null
+      }
+    },
+    {
+      "kind": "COMMITTED_DIFF_FROM_CANDIDATE",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/DESIGN/README.md",
+      "class": "DESIGN_OR_CONTRACT",
+      "detail": {
+        "candidate": "b299c75c0d5ae6919cf7ec314fe05d547eb79611f5249e1db4535f5bc7afa946",
+        "head": null
+      }
+    },
+    {
+      "kind": "COMMITTED_DIFF_FROM_CANDIDATE",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/DESIGN/RENDER_CHECKS.json",
+      "class": "DESIGN_OR_CONTRACT",
+      "detail": {
+        "candidate": "eef0eea1d31dd2efd32e24041e1b6481d678d2060e0ce755c85db954dcad37c6",
+        "head": null
+      }
+    },
+    {
+      "kind": "COMMITTED_DIFF_FROM_CANDIDATE",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/DESIGN/SHA256SUMS.txt",
+      "class": "DESIGN_OR_CONTRACT",
+      "detail": {
+        "candidate": "6e9b27b45c13234b633810d7f7575b34b246d54e009c778f9c82f8a7c8c8cb26",
+        "head": null
+      }
+    },
+    {
+      "kind": "COMMITTED_DIFF_FROM_CANDIDATE",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/DESIGN/SOURCE_INVENTORY.md",
+      "class": "DESIGN_OR_CONTRACT",
+      "detail": {
+        "candidate": "060ffb0a81283f240440e172f9bf8c279c20638caa3e004620f7db0037bb1ac3",
+        "head": null
+      }
+    },
+    {
+      "kind": "COMMITTED_DIFF_FROM_CANDIDATE",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/DESIGN/TAILWIND_MAPPING.md",
+      "class": "DESIGN_OR_CONTRACT",
+      "detail": {
+        "candidate": "045dab80c1e7f5c01058b4790017ef873fb40203bc8f8e46b93fda6d3788b640",
+        "head": null
+      }
+    },
+    {
+      "kind": "COMMITTED_DIFF_FROM_CANDIDATE",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/DESIGN/TAILWIND_MAPPING.ts",
+      "class": "DESIGN_OR_CONTRACT",
+      "detail": {
+        "candidate": "cd23e4931f4a0017c49c4fdcc8e1b329a2533f1954315b3aca3546b9be406bde",
+        "head": null
+      }
+    },
+    {
+      "kind": "COMMITTED_DIFF_FROM_CANDIDATE",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/DESIGN/TOKENS.css",
+      "class": "DESIGN_OR_CONTRACT",
+      "detail": {
+        "candidate": "a7f922c0d4f5e1f4452d3d3cdef9aee1efdb8c9da6c6eabc6e6b5b4ae93f0be0",
+        "head": null
+      }
+    },
+    {
+      "kind": "COMMITTED_DIFF_FROM_CANDIDATE",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/DESIGN/TOKEN_MAPPING.md",
+      "class": "DESIGN_OR_CONTRACT",
+      "detail": {
+        "candidate": "b7bd9cd1b10582a33c70a792feccbe08d68dac7213166545fa0f5453fb7d3bc5",
+        "head": null
+      }
+    },
+    {
+      "kind": "COMMITTED_DIFF_FROM_CANDIDATE",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/DESIGN/UI_SPEC.md",
+      "class": "DESIGN_OR_CONTRACT",
+      "detail": {
+        "candidate": "49e8478776796b4b0a1434517a5999b9d565ab8f9d5fb32043c65240bb0d2ca1",
+        "head": null
+      }
+    },
+    {
+      "kind": "COMMITTED_DIFF_FROM_CANDIDATE",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/DESIGN/WORKSPACE_TOKENS.scoped.css",
+      "class": "DESIGN_OR_CONTRACT",
+      "detail": {
+        "candidate": "6ebdf711d09b6ca698f2391af3e6ee4c316bc7e4108d691f73b7e670de474a8d",
+        "head": null
+      }
+    },
+    {
+      "kind": "COMMITTED_DIFF_FROM_CANDIDATE",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/DESIGN/agents-directory.html",
+      "class": "DESIGN_OR_CONTRACT",
+      "detail": {
+        "candidate": "004865cd1b51358bc70d4eb5d5ce6aea7acabf27965482369bad9f381a20dd38",
+        "head": null
+      }
+    },
+    {
+      "kind": "COMMITTED_DIFF_FROM_CANDIDATE",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/DESIGN/assets/Inter-400.ttf",
+      "class": "DESIGN_OR_CONTRACT",
+      "detail": {
+        "candidate": "1b08e7fc267a5c7e1d614100f604b83e7e8a0be241f0f288faa2b3ac93a683ba",
+        "head": null
+      }
+    },
+    {
+      "kind": "COMMITTED_DIFF_FROM_CANDIDATE",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/DESIGN/assets/Inter-500.ttf",
+      "class": "DESIGN_OR_CONTRACT",
+      "detail": {
+        "candidate": "8c883f63b2c4157d997319f2c8bc6995ed4357ef371940d31ca159004a4aae63",
+        "head": null
+      }
+    },
+    {
+      "kind": "COMMITTED_DIFF_FROM_CANDIDATE",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/DESIGN/assets/Inter-600.ttf",
+      "class": "DESIGN_OR_CONTRACT",
+      "detail": {
+        "candidate": "e7a1aaf7eda9f2fad4131725fa556265ec75ca7b2d756260173a040363e8d4f7",
+        "head": null
+      }
+    },
+    {
+      "kind": "COMMITTED_DIFF_FROM_CANDIDATE",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/DESIGN/assets/Inter-700.ttf",
+      "class": "DESIGN_OR_CONTRACT",
+      "detail": {
+        "candidate": "b37284b5701b6b168dfc770aa1a4ac492106422fd3ba76bc7641e37434e8019c",
+        "head": null
+      }
+    },
+    {
+      "kind": "COMMITTED_DIFF_FROM_CANDIDATE",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/DESIGN/assets/OFL.txt",
+      "class": "DESIGN_OR_CONTRACT",
+      "detail": {
+        "candidate": "5b9321a4298cfeb6b34354164a1c3afc3db114569984c502b9b35d988fd58c57",
+        "head": null
+      }
+    },
+    {
+      "kind": "COMMITTED_DIFF_FROM_CANDIDATE",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/DESIGN/build_final.py",
+      "class": "DESIGN_OR_CONTRACT",
+      "detail": {
+        "candidate": "a3b2a072725083b20f24cd38d032bf8877e2867009dbefcd79e527a06770dd49",
+        "head": null
+      }
+    },
+    {
+      "kind": "COMMITTED_DIFF_FROM_CANDIDATE",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/DESIGN/check_final.cjs",
+      "class": "DESIGN_OR_CONTRACT",
+      "detail": {
+        "candidate": "5766db3189edae3797aeb8a4cc294dfdcc9176cd5936d096f8ab66b56484936f",
+        "head": null
+      }
+    },
+    {
+      "kind": "COMMITTED_DIFF_FROM_CANDIDATE",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/DESIGN/conversation.html",
+      "class": "DESIGN_OR_CONTRACT",
+      "detail": {
+        "candidate": "3f6363ec04c18b9d6b21f8da7d3acac2c86b95aad9a12b85a6b97b8c7f680a9c",
+        "head": null
+      }
+    },
+    {
+      "kind": "COMMITTED_DIFF_FROM_CANDIDATE",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/DESIGN/fixtures.json",
+      "class": "DESIGN_OR_CONTRACT",
+      "detail": {
+        "candidate": "e873ad8cd473d4755af40dd1ea1f93db5aad6a894b954cd349106dd4a28b6670",
+        "head": null
+      }
+    },
+    {
+      "kind": "COMMITTED_DIFF_FROM_CANDIDATE",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/DESIGN/icons.json",
+      "class": "DESIGN_OR_CONTRACT",
+      "detail": {
+        "candidate": "51aa9108a20c39a89e6786803e56c70b84d3a5b281091b99b24d48a9b05aa5f3",
+        "head": null
+      }
+    },
+    {
+      "kind": "COMMITTED_DIFF_FROM_CANDIDATE",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/DESIGN/index.html",
+      "class": "DESIGN_OR_CONTRACT",
+      "detail": {
+        "candidate": "e0e4268572c7a4e235c9e9263431ef57e496930d55be49f289ad082490b60bec",
+        "head": null
+      }
+    },
+    {
+      "kind": "COMMITTED_DIFF_FROM_CANDIDATE",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/DESIGN/interactions.js",
+      "class": "DESIGN_OR_CONTRACT",
+      "detail": {
+        "candidate": "e5acc705e83edbb52c6a2e43bec83a831f3a91a9b90422aa4634b5e625c2cc60",
+        "head": null
+      }
+    },
+    {
+      "kind": "COMMITTED_DIFF_FROM_CANDIDATE",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/DESIGN/previews/agents-directory-dark-1280-alternate.png",
+      "class": "DESIGN_OR_CONTRACT",
+      "detail": {
+        "candidate": "0fa599dc65ca2ee142493c6a922ff8897444b5e91f1892626f5da1731381dfb6",
+        "head": null
+      }
+    },
+    {
+      "kind": "COMMITTED_DIFF_FROM_CANDIDATE",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/DESIGN/previews/agents-directory-dark-1280-empty.png",
+      "class": "DESIGN_OR_CONTRACT",
+      "detail": {
+        "candidate": "a08a1d2b12fb60bb987823423964aa21b27e7cb16d5d1b9b850331cb1e8be538",
+        "head": null
+      }
+    },
+    {
+      "kind": "COMMITTED_DIFF_FROM_CANDIDATE",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/DESIGN/previews/agents-directory-dark-1280-focus.png",
+      "class": "DESIGN_OR_CONTRACT",
+      "detail": {
+        "candidate": "9589a0a218923010bea706badbc4a80fddef3c78822c77e2ed8e6314fd8c393f",
+        "head": null
+      }
+    },
+    {
+      "kind": "COMMITTED_DIFF_FROM_CANDIDATE",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/DESIGN/previews/agents-directory-dark-1280-loading.png",
+      "class": "DESIGN_OR_CONTRACT",
+      "detail": {
+        "candidate": "189f03769405ef93e170a7b1d8320e53029c527100d35944cad33522744b81bd",
+        "head": null
+      }
+    },
+    {
+      "kind": "COMMITTED_DIFF_FROM_CANDIDATE",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/DESIGN/previews/agents-directory-dark-1280-no-results.png",
+      "class": "DESIGN_OR_CONTRACT",
+      "detail": {
+        "candidate": "a0697f69a089d7fd1fe2a3fc03f94372b0f1a71bc385b04fa5276a0c7e6496aa",
+        "head": null
+      }
+    },
+    {
+      "kind": "COMMITTED_DIFF_FROM_CANDIDATE",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/DESIGN/previews/agents-directory-dark-1280-unavailable.png",
+      "class": "DESIGN_OR_CONTRACT",
+      "detail": {
+        "candidate": "71bf1bcb543a553d70f923176e8570e1fd9424eaebfbc46350bea4678986e4d9",
+        "head": null
+      }
+    },
+    {
+      "kind": "COMMITTED_DIFF_FROM_CANDIDATE",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/DESIGN/previews/agents-directory-dark-1280.png",
+      "class": "DESIGN_OR_CONTRACT",
+      "detail": {
+        "candidate": "a135272eb7951ffb12d45d09c56ca2571b05331e17c1e10c43ad3634177019ba",
+        "head": null
+      }
+    },
+    {
+      "kind": "COMMITTED_DIFF_FROM_CANDIDATE",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/DESIGN/previews/agents-directory-dark-375.png",
+      "class": "DESIGN_OR_CONTRACT",
+      "detail": {
+        "candidate": "08c7cb5157a4ecf961ca2676fe4af8d452290ea10cebb60ae8421e7e97e1f658",
+        "head": null
+      }
+    },
+    {
+      "kind": "COMMITTED_DIFF_FROM_CANDIDATE",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/DESIGN/previews/agents-directory-dark-768.png",
+      "class": "DESIGN_OR_CONTRACT",
+      "detail": {
+        "candidate": "293f7dbdcc458d2ea8db4f056db486e5a8f3dbd1f651008f16ef29df99d93b55",
+        "head": null
+      }
+    },
+    {
+      "kind": "COMMITTED_DIFF_FROM_CANDIDATE",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/DESIGN/previews/agents-directory-light-1280-alternate.png",
+      "class": "DESIGN_OR_CONTRACT",
+      "detail": {
+        "candidate": "190a0764371cb6a980f16209b9c2766a70d0d91ad8e0cc9fee7c18ffca80f91f",
+        "head": null
+      }
+    },
+    {
+      "kind": "COMMITTED_DIFF_FROM_CANDIDATE",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/DESIGN/previews/agents-directory-light-1280-empty.png",
+      "class": "DESIGN_OR_CONTRACT",
+      "detail": {
+        "candidate": "bbcae0f72becb7c6d6c9d29f67ccec7b4c782551d4f1c35409e9dd9254579393",
+        "head": null
+      }
+    },
+    {
+      "kind": "COMMITTED_DIFF_FROM_CANDIDATE",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/DESIGN/previews/agents-directory-light-1280-focus.png",
+      "class": "DESIGN_OR_CONTRACT",
+      "detail": {
+        "candidate": "5261a501540f1a8a420db0ddc4cd52e1f11f3d2501942f3155a5f6d740ca8ca2",
+        "head": null
+      }
+    },
+    {
+      "kind": "COMMITTED_DIFF_FROM_CANDIDATE",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/DESIGN/previews/agents-directory-light-1280-loading.png",
+      "class": "DESIGN_OR_CONTRACT",
+      "detail": {
+        "candidate": "cd081e8afb2a4247b3b718100936e36d4ff5cc5e8146a6629df8ec0246e82f62",
+        "head": null
+      }
+    },
+    {
+      "kind": "COMMITTED_DIFF_FROM_CANDIDATE",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/DESIGN/previews/agents-directory-light-1280-no-results.png",
+      "class": "DESIGN_OR_CONTRACT",
+      "detail": {
+        "candidate": "abaa072814898262f9e341574c36633c4a1efc63b8b99dc7fc5bc1d584359581",
+        "head": null
+      }
+    },
+    {
+      "kind": "COMMITTED_DIFF_FROM_CANDIDATE",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/DESIGN/previews/agents-directory-light-1280-unavailable.png",
+      "class": "DESIGN_OR_CONTRACT",
+      "detail": {
+        "candidate": "6bb479bf4c691b8fb9ae345c638362197ba83a61a861f047b8bd4d44de34815c",
+        "head": null
+      }
+    },
+    {
+      "kind": "COMMITTED_DIFF_FROM_CANDIDATE",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/DESIGN/previews/agents-directory-light-1280.png",
+      "class": "DESIGN_OR_CONTRACT",
+      "detail": {
+        "candidate": "36e97cd299046308fdb92f9b94a4ef7f07d8cf4b8e31308bbedc7c4e65cffe50",
+        "head": null
+      }
+    },
+    {
+      "kind": "COMMITTED_DIFF_FROM_CANDIDATE",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/DESIGN/previews/agents-directory-light-375.png",
+      "class": "DESIGN_OR_CONTRACT",
+      "detail": {
+        "candidate": "53e02dfc3c4b956ac38dd6a280ba2ea9a59d0001ea4faea14dccbd9c97b7dffd",
+        "head": null
+      }
+    },
+    {
+      "kind": "COMMITTED_DIFF_FROM_CANDIDATE",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/DESIGN/previews/agents-directory-light-768.png",
+      "class": "DESIGN_OR_CONTRACT",
+      "detail": {
+        "candidate": "ef537544b07c02eb38d25d785efbe2e2cc2541ef98495d577c287ef330cf8a1a",
+        "head": null
+      }
+    },
+    {
+      "kind": "COMMITTED_DIFF_FROM_CANDIDATE",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/DESIGN/previews/conversation-dark-1280-empty.png",
+      "class": "DESIGN_OR_CONTRACT",
+      "detail": {
+        "candidate": "304c5d7dab4d9b3e057b6517cd029359e03a80099df9f6500ea4bb2bc0f8432f",
+        "head": null
+      }
+    },
+    {
+      "kind": "COMMITTED_DIFF_FROM_CANDIDATE",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/DESIGN/previews/conversation-dark-1280-failed.png",
+      "class": "DESIGN_OR_CONTRACT",
+      "detail": {
+        "candidate": "bb6ccf6684ed6e61e0d0bf5197d680b895d66920130900c954a37acd396ea10b",
+        "head": null
+      }
+    },
+    {
+      "kind": "COMMITTED_DIFF_FROM_CANDIDATE",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/DESIGN/previews/conversation-dark-1280-loading.png",
+      "class": "DESIGN_OR_CONTRACT",
+      "detail": {
+        "candidate": "6d6fab5c7e7228a36cf6ebf0bf82e9e9c6fe641d393700884413adb4e82e3bf2",
+        "head": null
+      }
+    },
+    {
+      "kind": "COMMITTED_DIFF_FROM_CANDIDATE",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/DESIGN/previews/conversation-dark-1280-metadata.png",
+      "class": "DESIGN_OR_CONTRACT",
+      "detail": {
+        "candidate": "7bd90a08b47259216028be1796979b74b5cf61ed4ca542d6e91212fbe38b4307",
+        "head": null
+      }
+    },
+    {
+      "kind": "COMMITTED_DIFF_FROM_CANDIDATE",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/DESIGN/previews/conversation-dark-1280-missing.png",
+      "class": "DESIGN_OR_CONTRACT",
+      "detail": {
+        "candidate": "273e043e968e4ba12efc8a8d1e9362e4e2ece23f9c989902229a430bd45a9c40",
+        "head": null
+      }
+    },
+    {
+      "kind": "COMMITTED_DIFF_FROM_CANDIDATE",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/DESIGN/previews/conversation-dark-1280-pending.png",
+      "class": "DESIGN_OR_CONTRACT",
+      "detail": {
+        "candidate": "024f75592c5f6eab74ba3766be2f82c2ea009da1d70e28762b4458262f10d996",
+        "head": null
+      }
+    },
+    {
+      "kind": "COMMITTED_DIFF_FROM_CANDIDATE",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/DESIGN/previews/conversation-dark-1280-unauthorized.png",
+      "class": "DESIGN_OR_CONTRACT",
+      "detail": {
+        "candidate": "fecc13329fefa0fe515bae04d2cb9b97b9a81bd6643524f3b31a8d1a6d87307e",
+        "head": null
+      }
+    },
+    {
+      "kind": "COMMITTED_DIFF_FROM_CANDIDATE",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/DESIGN/previews/conversation-dark-1280-unavailable.png",
+      "class": "DESIGN_OR_CONTRACT",
+      "detail": {
+        "candidate": "eb227c803b53c2f442097495380b9a9fef6aed77052956d3634ca28a87731e91",
+        "head": null
+      }
+    },
+    {
+      "kind": "COMMITTED_DIFF_FROM_CANDIDATE",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/DESIGN/previews/conversation-dark-1280-uncertain.png",
+      "class": "DESIGN_OR_CONTRACT",
+      "detail": {
+        "candidate": "e99886ad6fe61aeb5b9dff0d88ccb860d33e510d241dcfeeb1d08b48dffdf227",
+        "head": null
+      }
+    },
+    {
+      "kind": "COMMITTED_DIFF_FROM_CANDIDATE",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/DESIGN/previews/conversation-dark-1280.png",
+      "class": "DESIGN_OR_CONTRACT",
+      "detail": {
+        "candidate": "d0c15a69fbadc351690ced4695692eb6531ad78582f99a0c04da89697cd33284",
+        "head": null
+      }
+    },
+    {
+      "kind": "COMMITTED_DIFF_FROM_CANDIDATE",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/DESIGN/previews/conversation-dark-375-code.png",
+      "class": "DESIGN_OR_CONTRACT",
+      "detail": {
+        "candidate": "f8b33b9880dbcab540b8bc2bef4fa09ed976c928dc871dabd81c5f0e60f0703a",
+        "head": null
+      }
+    },
+    {
+      "kind": "COMMITTED_DIFF_FROM_CANDIDATE",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/DESIGN/previews/conversation-dark-375-context.png",
+      "class": "DESIGN_OR_CONTRACT",
+      "detail": {
+        "candidate": "b377be6f50d2d29cfc2e4e74e8d35d466bbbd01dbf462b494e79558a93e02510",
+        "head": null
+      }
+    },
+    {
+      "kind": "COMMITTED_DIFF_FROM_CANDIDATE",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/DESIGN/previews/conversation-dark-375-failed.png",
+      "class": "DESIGN_OR_CONTRACT",
+      "detail": {
+        "candidate": "c4f25e1279d61e16554ed2493405067475526d5bdbdbb6d9795d9459d675f21e",
+        "head": null
+      }
+    },
+    {
+      "kind": "COMMITTED_DIFF_FROM_CANDIDATE",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/DESIGN/previews/conversation-dark-375-focus.png",
+      "class": "DESIGN_OR_CONTRACT",
+      "detail": {
+        "candidate": "334b1cc969ad0813c660b55e3df38fcb545330def552d0b2b73c25fba2628954",
+        "head": null
+      }
+    },
+    {
+      "kind": "COMMITTED_DIFF_FROM_CANDIDATE",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/DESIGN/previews/conversation-dark-375-missing.png",
+      "class": "DESIGN_OR_CONTRACT",
+      "detail": {
+        "candidate": "ba389ceb3bb87703a3e563fb38ef251ac47500ba725d6bac7e1ac95b6a58001b",
+        "head": null
+      }
+    },
+    {
+      "kind": "COMMITTED_DIFF_FROM_CANDIDATE",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/DESIGN/previews/conversation-dark-375-navigation.png",
+      "class": "DESIGN_OR_CONTRACT",
+      "detail": {
+        "candidate": "5bff5cd8913a0b32b445b0b1a71a42dd7c3976bf13c38f2dca3466a87bcc21db",
+        "head": null
+      }
+    },
+    {
+      "kind": "COMMITTED_DIFF_FROM_CANDIDATE",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/DESIGN/previews/conversation-dark-375-pending.png",
+      "class": "DESIGN_OR_CONTRACT",
+      "detail": {
+        "candidate": "1f7a82d124e8aea49d71df0fd91546b31f245d4f1f1be8b1b28ed816c06e507b",
+        "head": null
+      }
+    },
+    {
+      "kind": "COMMITTED_DIFF_FROM_CANDIDATE",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/DESIGN/previews/conversation-dark-375-uncertain.png",
+      "class": "DESIGN_OR_CONTRACT",
+      "detail": {
+        "candidate": "9685f8fdfc18a3ce0987526b7bc0cf7014ca3aa679190b3fd2bd0fbf29e60183",
+        "head": null
+      }
+    },
+    {
+      "kind": "COMMITTED_DIFF_FROM_CANDIDATE",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/DESIGN/previews/conversation-dark-375.png",
+      "class": "DESIGN_OR_CONTRACT",
+      "detail": {
+        "candidate": "4f8f149a798018621fabd9d6f9a941e3143bf4491f36bf01d723554d01912d7d",
+        "head": null
+      }
+    },
+    {
+      "kind": "COMMITTED_DIFF_FROM_CANDIDATE",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/DESIGN/previews/conversation-dark-768.png",
+      "class": "DESIGN_OR_CONTRACT",
+      "detail": {
+        "candidate": "a71a198352a3fdd1fddaf64f70039cb0170cbf6a50597256bcb594d3bbe63ec6",
+        "head": null
+      }
+    },
+    {
+      "kind": "COMMITTED_DIFF_FROM_CANDIDATE",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/DESIGN/previews/conversation-light-1280-empty.png",
+      "class": "DESIGN_OR_CONTRACT",
+      "detail": {
+        "candidate": "105dcd11863cb1771e3beb6d98943ffe4fca13882cdfc5bff653a62b253d7b9d",
+        "head": null
+      }
+    },
+    {
+      "kind": "COMMITTED_DIFF_FROM_CANDIDATE",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/DESIGN/previews/conversation-light-1280-failed.png",
+      "class": "DESIGN_OR_CONTRACT",
+      "detail": {
+        "candidate": "d700123fc4083968d0f1f5bb098df333791a57e1620c853e41b0b7e6744454d0",
+        "head": null
+      }
+    },
+    {
+      "kind": "COMMITTED_DIFF_FROM_CANDIDATE",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/DESIGN/previews/conversation-light-1280-loading.png",
+      "class": "DESIGN_OR_CONTRACT",
+      "detail": {
+        "candidate": "a183df5ffdbd218e7d496648c76713543c9ab0d2e44d31daf05ed447109ecc0a",
+        "head": null
+      }
+    },
+    {
+      "kind": "COMMITTED_DIFF_FROM_CANDIDATE",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/DESIGN/previews/conversation-light-1280-metadata.png",
+      "class": "DESIGN_OR_CONTRACT",
+      "detail": {
+        "candidate": "bd689deb171912926a6781d85e42ceefee7361ffba2f691c6d5cb5199afd9628",
+        "head": null
+      }
+    },
+    {
+      "kind": "COMMITTED_DIFF_FROM_CANDIDATE",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/DESIGN/previews/conversation-light-1280-missing.png",
+      "class": "DESIGN_OR_CONTRACT",
+      "detail": {
+        "candidate": "8f37430ab5e093da7fd4e91803bcc706cfa1941f446e8261de13d8e06c9cef1c",
+        "head": null
+      }
+    },
+    {
+      "kind": "COMMITTED_DIFF_FROM_CANDIDATE",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/DESIGN/previews/conversation-light-1280-pending.png",
+      "class": "DESIGN_OR_CONTRACT",
+      "detail": {
+        "candidate": "453c19465f3dd34e3242f5442d89a8f98b97ee5813061415129985a284a71259",
+        "head": null
+      }
+    },
+    {
+      "kind": "COMMITTED_DIFF_FROM_CANDIDATE",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/DESIGN/previews/conversation-light-1280-unauthorized.png",
+      "class": "DESIGN_OR_CONTRACT",
+      "detail": {
+        "candidate": "3aa68fda476fbeffe677f1e04354eb094b841d88e020aea4b9b95805fef402e7",
+        "head": null
+      }
+    },
+    {
+      "kind": "COMMITTED_DIFF_FROM_CANDIDATE",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/DESIGN/previews/conversation-light-1280-unavailable.png",
+      "class": "DESIGN_OR_CONTRACT",
+      "detail": {
+        "candidate": "3a2250125b4a4a9849b57b8002fbe1f68eca3d41103796ddcc13c5bb3227c88e",
+        "head": null
+      }
+    },
+    {
+      "kind": "COMMITTED_DIFF_FROM_CANDIDATE",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/DESIGN/previews/conversation-light-1280-uncertain.png",
+      "class": "DESIGN_OR_CONTRACT",
+      "detail": {
+        "candidate": "7b0786b0adb23e422dee089c5613c97e22b33aefaced094d8b650ca2fbcb2c51",
+        "head": null
+      }
+    },
+    {
+      "kind": "COMMITTED_DIFF_FROM_CANDIDATE",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/DESIGN/previews/conversation-light-1280.png",
+      "class": "DESIGN_OR_CONTRACT",
+      "detail": {
+        "candidate": "0da4c2fe9d267efa9237db240e217cf29650d7e3a059cdc4c4de19b430d05dec",
+        "head": null
+      }
+    },
+    {
+      "kind": "COMMITTED_DIFF_FROM_CANDIDATE",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/DESIGN/previews/conversation-light-375-code.png",
+      "class": "DESIGN_OR_CONTRACT",
+      "detail": {
+        "candidate": "0d01108a09de59e91ddb36e28dde08749521f11389db727617513183c642e1d9",
+        "head": null
+      }
+    },
+    {
+      "kind": "COMMITTED_DIFF_FROM_CANDIDATE",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/DESIGN/previews/conversation-light-375-context.png",
+      "class": "DESIGN_OR_CONTRACT",
+      "detail": {
+        "candidate": "a1f7c4ef5e6426008d7a9e0b7177a9de3988a14f29e9cab888bcfbfdedb56c0d",
+        "head": null
+      }
+    },
+    {
+      "kind": "COMMITTED_DIFF_FROM_CANDIDATE",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/DESIGN/previews/conversation-light-375-failed.png",
+      "class": "DESIGN_OR_CONTRACT",
+      "detail": {
+        "candidate": "9c06ef5a01e83d4ee5ea48e96d2b1cc917e2709b52a83886037f5a2ef56ad14d",
+        "head": null
+      }
+    },
+    {
+      "kind": "COMMITTED_DIFF_FROM_CANDIDATE",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/DESIGN/previews/conversation-light-375-focus.png",
+      "class": "DESIGN_OR_CONTRACT",
+      "detail": {
+        "candidate": "13d7729ff38c32dae9890c5e3fbce3a80ce9d507b1a8ddf2eed974383e56f728",
+        "head": null
+      }
+    },
+    {
+      "kind": "COMMITTED_DIFF_FROM_CANDIDATE",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/DESIGN/previews/conversation-light-375-missing.png",
+      "class": "DESIGN_OR_CONTRACT",
+      "detail": {
+        "candidate": "b736ae71c6fabb9c9d0e4f0aebf423ca184cb130db319a2fcd447691ae2c4db4",
+        "head": null
+      }
+    },
+    {
+      "kind": "COMMITTED_DIFF_FROM_CANDIDATE",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/DESIGN/previews/conversation-light-375-navigation.png",
+      "class": "DESIGN_OR_CONTRACT",
+      "detail": {
+        "candidate": "60edb32eedf4cc171f5b655c55f98c99f565d51120679a33e2de7bfbf77a6e19",
+        "head": null
+      }
+    },
+    {
+      "kind": "COMMITTED_DIFF_FROM_CANDIDATE",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/DESIGN/previews/conversation-light-375-pending.png",
+      "class": "DESIGN_OR_CONTRACT",
+      "detail": {
+        "candidate": "734be1a93fb6abeb28b0b246725c9a202f6d2dbbbfaf5b1cd6a229335544c819",
+        "head": null
+      }
+    },
+    {
+      "kind": "COMMITTED_DIFF_FROM_CANDIDATE",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/DESIGN/previews/conversation-light-375-uncertain.png",
+      "class": "DESIGN_OR_CONTRACT",
+      "detail": {
+        "candidate": "2bc7b538195d84aef47197ee3011e3cf00206228ecbbba6257cc2b12ad004459",
+        "head": null
+      }
+    },
+    {
+      "kind": "COMMITTED_DIFF_FROM_CANDIDATE",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/DESIGN/previews/conversation-light-375.png",
+      "class": "DESIGN_OR_CONTRACT",
+      "detail": {
+        "candidate": "e4e38af39f3107c040adf74e393ea762eb6758930682a410b32e580eb974ad33",
+        "head": null
+      }
+    },
+    {
+      "kind": "COMMITTED_DIFF_FROM_CANDIDATE",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/DESIGN/previews/conversation-light-768.png",
+      "class": "DESIGN_OR_CONTRACT",
+      "detail": {
+        "candidate": "79624a643fcb6d6c1a3699ed3ae94e777eb3e4188794419d118401a636fc33e0",
+        "head": null
+      }
+    },
+    {
+      "kind": "COMMITTED_DIFF_FROM_CANDIDATE",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/DESIGN/previews/style-tile-dark-1280.png",
+      "class": "DESIGN_OR_CONTRACT",
+      "detail": {
+        "candidate": "a604b9c885173d6a1cdc77241d496be1904a0a67fcaeb85cfd55cb1885341056",
+        "head": null
+      }
+    },
+    {
+      "kind": "COMMITTED_DIFF_FROM_CANDIDATE",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/DESIGN/previews/style-tile-dark-375.png",
+      "class": "DESIGN_OR_CONTRACT",
+      "detail": {
+        "candidate": "70fe66c80ef7169e6893dbdecc8b49ef63cf80f1f7b773e955b6897c95eff515",
+        "head": null
+      }
+    },
+    {
+      "kind": "COMMITTED_DIFF_FROM_CANDIDATE",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/DESIGN/previews/style-tile-dark-768.png",
+      "class": "DESIGN_OR_CONTRACT",
+      "detail": {
+        "candidate": "600ad8b223ade425cd72f31fb6b636817c28ef4be759babe9e0641bbfd26663b",
+        "head": null
+      }
+    },
+    {
+      "kind": "COMMITTED_DIFF_FROM_CANDIDATE",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/DESIGN/previews/style-tile-light-1280.png",
+      "class": "DESIGN_OR_CONTRACT",
+      "detail": {
+        "candidate": "5728319dc9606a2737e89d82347da0270af63d0324873652378b018e054aa26f",
+        "head": null
+      }
+    },
+    {
+      "kind": "COMMITTED_DIFF_FROM_CANDIDATE",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/DESIGN/previews/style-tile-light-375.png",
+      "class": "DESIGN_OR_CONTRACT",
+      "detail": {
+        "candidate": "db74daddb64b52be6c77724268658076badf7167f2b61a8b8e988fea71e9fa48",
+        "head": null
+      }
+    },
+    {
+      "kind": "COMMITTED_DIFF_FROM_CANDIDATE",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/DESIGN/previews/style-tile-light-768.png",
+      "class": "DESIGN_OR_CONTRACT",
+      "detail": {
+        "candidate": "f551519d41f052c9b2d2b9cb7677e0c77674498140a9b225674a7627838fc45b",
+        "head": null
+      }
+    },
+    {
+      "kind": "COMMITTED_DIFF_FROM_CANDIDATE",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/DESIGN/previews/workspace-dark-1280-empty.png",
+      "class": "DESIGN_OR_CONTRACT",
+      "detail": {
+        "candidate": "bddcbb7ce0f45dbb985bb322d238b31bd15e2828403f65db6184d711f03fdb2e",
+        "head": null
+      }
+    },
+    {
+      "kind": "COMMITTED_DIFF_FROM_CANDIDATE",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/DESIGN/previews/workspace-dark-1280-loading.png",
+      "class": "DESIGN_OR_CONTRACT",
+      "detail": {
+        "candidate": "7312856f9699979bfbdef72e00dbc25b5a932e13bef2c5e9fdb8183db9a8bee2",
+        "head": null
+      }
+    },
+    {
+      "kind": "COMMITTED_DIFF_FROM_CANDIDATE",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/DESIGN/previews/workspace-dark-1280-partial.png",
+      "class": "DESIGN_OR_CONTRACT",
+      "detail": {
+        "candidate": "f3321d0c6116aa235fb542046e4b7686f643fe5ff4bb69ec69dc0d72caf8bb2b",
+        "head": null
+      }
+    },
+    {
+      "kind": "COMMITTED_DIFF_FROM_CANDIDATE",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/DESIGN/previews/workspace-dark-1280-recovered.png",
+      "class": "DESIGN_OR_CONTRACT",
+      "detail": {
+        "candidate": "6c6f750699b190e8503865df83454a6e1a317ae10a386786e6822583918e1ea0",
+        "head": null
+      }
+    },
+    {
+      "kind": "COMMITTED_DIFF_FROM_CANDIDATE",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/DESIGN/previews/workspace-dark-1280-unavailable.png",
+      "class": "DESIGN_OR_CONTRACT",
+      "detail": {
+        "candidate": "aca0727e775254b8bc0bd28980830310a66a775b6a81c3a2314417572121cfc1",
+        "head": null
+      }
+    },
+    {
+      "kind": "COMMITTED_DIFF_FROM_CANDIDATE",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/DESIGN/previews/workspace-dark-1280.png",
+      "class": "DESIGN_OR_CONTRACT",
+      "detail": {
+        "candidate": "3b4ad4f621095e94d4619efd31ca271c8281f256a42fe8593bebbda0f046fa02",
+        "head": null
+      }
+    },
+    {
+      "kind": "COMMITTED_DIFF_FROM_CANDIDATE",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/DESIGN/previews/workspace-dark-375-context.png",
+      "class": "DESIGN_OR_CONTRACT",
+      "detail": {
+        "candidate": "c0c1b4188f749370a9dfc0fb86e3072b3c5d9929219162d2de4aacb44cb75277",
+        "head": null
+      }
+    },
+    {
+      "kind": "COMMITTED_DIFF_FROM_CANDIDATE",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/DESIGN/previews/workspace-dark-375.png",
+      "class": "DESIGN_OR_CONTRACT",
+      "detail": {
+        "candidate": "3de8a27f62d432c723d54a20c22998d2d158d3d8bd6c4c1feed8ba0ae48a2b28",
+        "head": null
+      }
+    },
+    {
+      "kind": "COMMITTED_DIFF_FROM_CANDIDATE",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/DESIGN/previews/workspace-dark-768.png",
+      "class": "DESIGN_OR_CONTRACT",
+      "detail": {
+        "candidate": "e50f1b4139c551c38c3c9b0ce1dc51dd35c5c7fafb013fd533f549019ca52724",
+        "head": null
+      }
+    },
+    {
+      "kind": "COMMITTED_DIFF_FROM_CANDIDATE",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/DESIGN/previews/workspace-light-1280-empty.png",
+      "class": "DESIGN_OR_CONTRACT",
+      "detail": {
+        "candidate": "ac4c2ca3a16f651a8f21432ca1f4275218178482fcc228c1608f4f3b08e93202",
+        "head": null
+      }
+    },
+    {
+      "kind": "COMMITTED_DIFF_FROM_CANDIDATE",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/DESIGN/previews/workspace-light-1280-loading.png",
+      "class": "DESIGN_OR_CONTRACT",
+      "detail": {
+        "candidate": "34903aa25337566d5b256a9d9e5a0e26fc12e36225910b89f1eaafe9ee410fff",
+        "head": null
+      }
+    },
+    {
+      "kind": "COMMITTED_DIFF_FROM_CANDIDATE",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/DESIGN/previews/workspace-light-1280-partial.png",
+      "class": "DESIGN_OR_CONTRACT",
+      "detail": {
+        "candidate": "c25ef8424a04be1e38b42222f28e8dbe64c1ae1cee0e0915f40c1534286a2a5a",
+        "head": null
+      }
+    },
+    {
+      "kind": "COMMITTED_DIFF_FROM_CANDIDATE",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/DESIGN/previews/workspace-light-1280-recovered.png",
+      "class": "DESIGN_OR_CONTRACT",
+      "detail": {
+        "candidate": "edad2dce2772d170b4ab0f4ed9d77434cc74e613d4581d771389773fb07ee217",
+        "head": null
+      }
+    },
+    {
+      "kind": "COMMITTED_DIFF_FROM_CANDIDATE",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/DESIGN/previews/workspace-light-1280-unavailable.png",
+      "class": "DESIGN_OR_CONTRACT",
+      "detail": {
+        "candidate": "a452c44ce0d86fa740f7d83379608579a117efcd24b56840d938f7c27456069d",
+        "head": null
+      }
+    },
+    {
+      "kind": "COMMITTED_DIFF_FROM_CANDIDATE",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/DESIGN/previews/workspace-light-1280.png",
+      "class": "DESIGN_OR_CONTRACT",
+      "detail": {
+        "candidate": "116112758c0b3bad8fc30add8d0a5bfe0895c57e7ad53c3ee2b24a0ce4ae8ca1",
+        "head": null
+      }
+    },
+    {
+      "kind": "COMMITTED_DIFF_FROM_CANDIDATE",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/DESIGN/previews/workspace-light-375-context.png",
+      "class": "DESIGN_OR_CONTRACT",
+      "detail": {
+        "candidate": "69774d02342ac5162bd73c96cf151ebeb27adff7c54d544cb3820bfe3ea3c93a",
+        "head": null
+      }
+    },
+    {
+      "kind": "COMMITTED_DIFF_FROM_CANDIDATE",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/DESIGN/previews/workspace-light-375.png",
+      "class": "DESIGN_OR_CONTRACT",
+      "detail": {
+        "candidate": "e9810104778cffa879d8effda9ef27bea86d4a831bda1c5681ffa808be344483",
+        "head": null
+      }
+    },
+    {
+      "kind": "COMMITTED_DIFF_FROM_CANDIDATE",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/DESIGN/previews/workspace-light-768.png",
+      "class": "DESIGN_OR_CONTRACT",
+      "detail": {
+        "candidate": "69f74b7eac5ad0b752d840b5fd2668f6abce3250a7c3e97067d8e2270f4d2009",
+        "head": null
+      }
+    },
+    {
+      "kind": "COMMITTED_DIFF_FROM_CANDIDATE",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/DESIGN/reference/canonical-workspace.html",
+      "class": "DESIGN_OR_CONTRACT",
+      "detail": {
+        "candidate": "699e8ac3549b0261c2f2de7d1b26b1945b329008055513181012d7756e2ac955",
+        "head": null
+      }
+    },
+    {
+      "kind": "COMMITTED_DIFF_FROM_CANDIDATE",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/DESIGN/reference/preview.css",
+      "class": "DESIGN_OR_CONTRACT",
+      "detail": {
+        "candidate": "2407ec12ac508124899411f6a3600a90d396a7bc9f08ee69ff192b76e31692ff",
+        "head": null
+      }
+    },
+    {
+      "kind": "COMMITTED_DIFF_FROM_CANDIDATE",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/DESIGN/reference/preview.js",
+      "class": "DESIGN_OR_CONTRACT",
+      "detail": {
+        "candidate": "db0856366886718deb5a8b0634ed81e300ffe6e4be98d0742a347702d993935d",
+        "head": null
+      }
+    },
+    {
+      "kind": "COMMITTED_DIFF_FROM_CANDIDATE",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/DESIGN/reference/style-tile.html",
+      "class": "DESIGN_OR_CONTRACT",
+      "detail": {
+        "candidate": "be39c9ea1ff255224b411d662fa7ff3c06de7c5a3592ab4160de824fdbc00d60",
+        "head": null
+      }
+    },
+    {
+      "kind": "COMMITTED_DIFF_FROM_CANDIDATE",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/DESIGN/render_final.cjs",
+      "class": "DESIGN_OR_CONTRACT",
+      "detail": {
+        "candidate": "89f9eebf6b39043ebc225753df594222e38a284a01b512a9a0b1b45bb95128fd",
+        "head": null
+      }
+    },
+    {
+      "kind": "COMMITTED_DIFF_FROM_CANDIDATE",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/DESIGN/screens.css",
+      "class": "DESIGN_OR_CONTRACT",
+      "detail": {
+        "candidate": "a216ea147047dc1cf4f0cde3bc9c45eb35d5de351b4ef9f38b4ae56f8a6c704e",
+        "head": null
+      }
+    },
+    {
+      "kind": "COMMITTED_DIFF_FROM_CANDIDATE",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/DESIGN/style-tile.html",
+      "class": "DESIGN_OR_CONTRACT",
+      "detail": {
+        "candidate": "89c160e4d21a925fa59379edebc254a139f5c62782416dbd5f441bfa5b65596d",
+        "head": null
+      }
+    },
+    {
+      "kind": "COMMITTED_DIFF_FROM_CANDIDATE",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/DESIGN/token-values.json",
+      "class": "DESIGN_OR_CONTRACT",
+      "detail": {
+        "candidate": "b21d352663a65be72fb9227ed6d6636566a05412aaa835e909459354d8238ab4",
+        "head": null
+      }
+    },
+    {
+      "kind": "COMMITTED_DIFF_FROM_CANDIDATE",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/DESIGN/verify_artifacts.py",
+      "class": "DESIGN_OR_CONTRACT",
+      "detail": {
+        "candidate": "a937dc6375bfdf2adb4516aad2c46b780766d28021930b4ba0ba3b78cc27df18",
+        "head": null
+      }
+    },
+    {
+      "kind": "COMMITTED_DIFF_FROM_CANDIDATE",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/DESIGN/workspace.html",
+      "class": "DESIGN_OR_CONTRACT",
+      "detail": {
+        "candidate": "f2ec5f2027a0675aa25a43f9c8e58f89b48b91d0f69dfa374729d93e911c159e",
+        "head": null
+      }
+    },
+    {
+      "kind": "COMMITTED_DIFF_FROM_CANDIDATE",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/RULINGS_ADDENDUM.md",
+      "class": "DESIGN_OR_CONTRACT",
+      "detail": {
+        "candidate": "99d4c40f7094106f4386d4d8ff5535228feb653dcbe0fd948a14a0ff1ec3b36f",
+        "head": null
+      }
+    },
+    {
+      "kind": "WORKTREE_DIFF_FROM_CANDIDATE",
+      "path": "config/agents.manifest copy.json",
+      "class": "PRODUCT_CONFIG_TEST_DEP",
+      "detail": {
+        "candidate": "6c27f420127db7125a43ddba6347470b19d3be39769b44bb2b85bd6d9526b6d9",
+        "worktree": null
+      }
+    },
+    {
+      "kind": "WORKTREE_DIFF_FROM_CANDIDATE",
+      "path": "config/agents.manifest.json",
+      "class": "PRODUCT_CONFIG_TEST_DEP",
+      "detail": {
+        "candidate": "638e95a166e9e196175bd630ce76560db1ef98dbe72d40f31d9a109782027ae8",
+        "worktree": "6c27f420127db7125a43ddba6347470b19d3be39769b44bb2b85bd6d9526b6d9"
+      }
+    },
+    {
+      "kind": "COMMITTED_DIFF_FROM_CANDIDATE",
+      "path": "package.json",
+      "class": "PRODUCT_CONFIG_TEST_DEP",
+      "detail": {
+        "candidate": "cff291506080f2f3c4e4e1753cb866843194a0bef7845af10086c24432202ccc",
+        "head": "e65113f7e825ff463ad85dc5de9d9d532f05eccd78d1b3e0b228b04bb2be1ec8"
+      }
+    },
+    {
+      "kind": "COMMITTED_DIFF_FROM_CANDIDATE",
+      "path": "playwright.workspace.config.ts",
+      "class": "PRODUCT_CONFIG_TEST_DEP",
+      "detail": {
+        "candidate": "b1d4b8ea819c100fe475b9b65e44be481ed27f2fa6b315ce3b89fac62ea0d819",
+        "head": null
+      }
+    },
+    {
+      "kind": "COMMITTED_DIFF_FROM_CANDIDATE",
+      "path": "session_2026-10-03.md",
+      "class": "PRODUCT_CONFIG_TEST_DEP",
+      "detail": {
+        "candidate": "d6dfec61d215206b571ea0f861e8939b1d5c903eff7949c8b0e85bd6c988a0c8",
+        "head": null
+      }
+    },
+    {
+      "kind": "COMMITTED_DIFF_FROM_CANDIDATE",
+      "path": "session_2026-10-04.md",
+      "class": "PRODUCT_CONFIG_TEST_DEP",
+      "detail": {
+        "candidate": "32752b2605ea2abfc930e89384864b563a5ff1810b96054530a5544b12d63021",
+        "head": null
+      }
+    },
+    {
+      "kind": "COMMITTED_DIFF_FROM_CANDIDATE",
+      "path": "src/__tests__/config/manifest.test.ts",
+      "class": "PRODUCT_CONFIG_TEST_DEP",
+      "detail": {
+        "candidate": "8da25cc2e6bdd156bd2988909bbf98d8cd49653cd4f83b7b0cd6086be85c993f",
+        "head": "a05e3b7d540a25ae746625ae12661118a99afe7d37df9523f9cd17603fff167e"
+      }
+    },
+    {
+      "kind": "COMMITTED_DIFF_FROM_CANDIDATE",
+      "path": "src/__tests__/workspace/components.test.tsx",
+      "class": "PRODUCT_CONFIG_TEST_DEP",
+      "detail": {
+        "candidate": "b0c6c174354df5e17434cfbbafaf8eafcde30832c0f558688746d5f6f516309b",
+        "head": null
+      }
+    },
+    {
+      "kind": "COMMITTED_DIFF_FROM_CANDIDATE",
+      "path": "src/__tests__/workspace/navigation.test.ts",
+      "class": "PRODUCT_CONFIG_TEST_DEP",
+      "detail": {
+        "candidate": "0e14d5a044faec34ddc2a667f77c8e811b90479deee06a0e08ac7d632c8bdeff",
+        "head": null
+      }
+    },
+    {
+      "kind": "COMMITTED_DIFF_FROM_CANDIDATE",
+      "path": "src/__tests__/workspace/productionAdapter.test.ts",
+      "class": "PRODUCT_CONFIG_TEST_DEP",
+      "detail": {
+        "candidate": "73dd0540d0455b83ddd79b73ba0ca72da03373e727ef5bbefb12a826abb9f669",
+        "head": null
+      }
+    },
+    {
+      "kind": "COMMITTED_DIFF_FROM_CANDIDATE",
+      "path": "src/app/(cyberize)/chat/MessageActions.tsx",
+      "class": "PRODUCT_CONFIG_TEST_DEP",
+      "detail": {
+        "candidate": "9155028d57b93a6a45f4e75609839136f2c5a247536c7ce18c438346dbf354e2",
+        "head": "207d4eef599100131791261cc79abc02cd411a5118aa2a41a22969aae170c540"
+      }
+    },
+    {
+      "kind": "COMMITTED_DIFF_FROM_CANDIDATE",
+      "path": "src/app/(cyberize)/chat/MessageBubble.tsx",
+      "class": "PRODUCT_CONFIG_TEST_DEP",
+      "detail": {
+        "candidate": "da22f59460be757912df0fd155d292bc70f07e6a52dc18caadbea274f222472a",
+        "head": "7756abe22b73c568618dd9a4016bdf37a36acf0b3b3b463982d0e995bed768f3"
+      }
+    },
+    {
+      "kind": "COMMITTED_DIFF_FROM_CANDIDATE",
+      "path": "src/app/(cyberize)/chat/_workspace-tokens.scss",
+      "class": "PRODUCT_CONFIG_TEST_DEP",
+      "detail": {
+        "candidate": "6ebdf711d09b6ca698f2391af3e6ee4c316bc7e4108d691f73b7e670de474a8d",
+        "head": null
+      }
+    },
+    {
+      "kind": "COMMITTED_DIFF_FROM_CANDIDATE",
+      "path": "src/app/(cyberize)/chat/page.tsx",
+      "class": "PRODUCT_CONFIG_TEST_DEP",
+      "detail": {
+        "candidate": "e7305cb7055d72e888805ee0ba8869daa4c32ed071320faf3392074483a8df5c",
+        "head": "ad35bd6c4b5d93f61b8a5cd14f1312b0cc543ad0d7fc8c29383baebb2be6b739"
+      }
+    },
+    {
+      "kind": "COMMITTED_DIFF_FROM_CANDIDATE",
+      "path": "src/app/(cyberize)/chat/workspace.scss",
+      "class": "PRODUCT_CONFIG_TEST_DEP",
+      "detail": {
+        "candidate": "05bc90268c72c1c627770272c2d7a48dd6ebeda1eda40a48485f844c62048a7a",
+        "head": null
+      }
+    },
+    {
+      "kind": "COMMITTED_DIFF_FROM_CANDIDATE",
+      "path": "src/app/(cyberize)/layout.tsx",
+      "class": "PRODUCT_CONFIG_TEST_DEP",
+      "detail": {
+        "candidate": "3952b36ec896e1c4dbf7e3347a5a0e50cfdc5945ea76095cb59e4333f26c181a",
+        "head": "d86142144524bec683f26c907ff0d41473b1ace0b9c5377444a78aab986ad837"
+      }
+    },
+    {
+      "kind": "COMMITTED_DIFF_FROM_CANDIDATE",
+      "path": "src/components/common/AppShellPage.tsx",
+      "class": "PRODUCT_CONFIG_TEST_DEP",
+      "detail": {
+        "candidate": "9cf62ab838adbc65b9260da6557d2fa1d162793b8f9ff768ac61573f3a1d150d",
+        "head": "d2bf4bc860b5ecace3f09a1322833bfd4e51181e9654a2cc922ea6c56eea5097"
+      }
+    },
+    {
+      "kind": "COMMITTED_DIFF_FROM_CANDIDATE",
+      "path": "src/components/workspace/CopyControl.tsx",
+      "class": "PRODUCT_CONFIG_TEST_DEP",
+      "detail": {
+        "candidate": "c51d4eac2a3e2fec2b57f3aaaa520348eea8d715a4f0a4a5f587efc73852cfbd",
+        "head": null
+      }
+    },
+    {
+      "kind": "COMMITTED_DIFF_FROM_CANDIDATE",
+      "path": "src/components/workspace/DemoContext.tsx",
+      "class": "PRODUCT_CONFIG_TEST_DEP",
+      "detail": {
+        "candidate": "a592bf52d943bd7d007377ba6a1edbe204cd697646d06bfebf6a0a2257a1ebe6",
+        "head": null
+      }
+    },
+    {
+      "kind": "COMMITTED_DIFF_FROM_CANDIDATE",
+      "path": "src/components/workspace/Workspace.tsx",
+      "class": "PRODUCT_CONFIG_TEST_DEP",
+      "detail": {
+        "candidate": "b92dece3982fcceea2708c63afbbf8ab25e6fc8d7f92acbb3f6e8b372f9f7b08",
+        "head": null
+      }
+    },
+    {
+      "kind": "COMMITTED_DIFF_FROM_CANDIDATE",
+      "path": "src/components/workspace/WorkspaceComposer.tsx",
+      "class": "PRODUCT_CONFIG_TEST_DEP",
+      "detail": {
+        "candidate": "cdd1ef8e73a3afbd28c90da1cc7dae94741c59b00f13cad94cb617389874848c",
+        "head": null
+      }
+    },
+    {
+      "kind": "COMMITTED_DIFF_FROM_CANDIDATE",
+      "path": "src/components/workspace/WorkspaceEntry.tsx",
+      "class": "PRODUCT_CONFIG_TEST_DEP",
+      "detail": {
+        "candidate": "b38890e427bf5d9e4ae355bb9dbc0fb0e610b786da0a7bb521127f1a22854473",
+        "head": null
+      }
+    },
+    {
+      "kind": "COMMITTED_DIFF_FROM_CANDIDATE",
+      "path": "src/components/workspace/WorkspaceModal.tsx",
+      "class": "PRODUCT_CONFIG_TEST_DEP",
+      "detail": {
+        "candidate": "19bde310d4cedfa85e486192f2f10643ace86ed19f46e6aa96eb566baed1b397",
+        "head": null
+      }
+    },
+    {
+      "kind": "COMMITTED_DIFF_FROM_CANDIDATE",
+      "path": "src/components/workspace/navigation.ts",
+      "class": "PRODUCT_CONFIG_TEST_DEP",
+      "detail": {
+        "candidate": "08fe7948577981e087f8238ffb99dd807dabd65359ab556ffa1e2ea021001fda",
+        "head": null
+      }
+    },
+    {
+      "kind": "COMMITTED_DIFF_FROM_CANDIDATE",
+      "path": "src/components/workspace/productionAdapter.ts",
+      "class": "PRODUCT_CONFIG_TEST_DEP",
+      "detail": {
+        "candidate": "2b54d5817b1d4a8c87c644c325610835aedd9ef332bb1d3057f13dec8ba1d305",
+        "head": null
+      }
+    },
+    {
+      "kind": "COMMITTED_DIFF_FROM_CANDIDATE",
+      "path": "src/components/workspace/types.ts",
+      "class": "PRODUCT_CONFIG_TEST_DEP",
+      "detail": {
+        "candidate": "8b2f99f3a9d2179158157cfd83e8dad99bd3b1ac08c4699b9e1b830fa335eeb8",
+        "head": null
+      }
+    },
+    {
+      "kind": "COMMITTED_DIFF_FROM_CANDIDATE",
+      "path": "src/config/manifest.ts",
+      "class": "PRODUCT_CONFIG_TEST_DEP",
+      "detail": {
+        "candidate": "16e96c8884bfafe676c9b528a257a447af59b0e9adbf7fe5e6a8532f2ccba569",
+        "head": "f777700af84c884438c325521d2d6d198f17ff1bdc2062e208228d07d2a65aac"
+      }
+    },
+    {
+      "kind": "COMMITTED_DIFF_FROM_CANDIDATE",
+      "path": "tests/workspace/fixture-entry.tsx",
+      "class": "PRODUCT_CONFIG_TEST_DEP",
+      "detail": {
+        "candidate": "8c70b05bdbb761ca13a8a420ff22234839ee26829160642bffd57a76a29881eb",
+        "head": null
+      }
+    },
+    {
+      "kind": "COMMITTED_DIFF_FROM_CANDIDATE",
+      "path": "tests/workspace/harness.cjs",
+      "class": "PRODUCT_CONFIG_TEST_DEP",
+      "detail": {
+        "candidate": "c394916848ffaff7d50ac11bc62f7bbea9fb8de6f782a1c3963d63b2265f7617",
+        "head": null
+      }
+    },
+    {
+      "kind": "COMMITTED_DIFF_FROM_CANDIDATE",
+      "path": "tests/workspace/network-guard.cjs",
+      "class": "PRODUCT_CONFIG_TEST_DEP",
+      "detail": {
+        "candidate": "0ca6fe948d7e056338e09aac31a165fa88434e756a30e89a47614ecdddc3c04b",
+        "head": null
+      }
+    },
+    {
+      "kind": "COMMITTED_DIFF_FROM_CANDIDATE",
+      "path": "tests/workspace/ts-loader.cjs",
+      "class": "PRODUCT_CONFIG_TEST_DEP",
+      "detail": {
+        "candidate": "9aaa00d57c05958b7aeb14e36645278f8db5fa5c94e79c6765dd9bee81b38511",
+        "head": null
+      }
+    },
+    {
+      "kind": "COMMITTED_DIFF_FROM_CANDIDATE",
+      "path": "tests/workspace/workspace.spec.ts",
+      "class": "PRODUCT_CONFIG_TEST_DEP",
+      "detail": {
+        "candidate": "c28cf2b353acd8478e1a83257bff4476526497875e39292eece8bf2935de900a",
+        "head": null
+      }
+    },
+    {
+      "kind": "QAM_UNTRACKED_UNLISTED_OR_HASH",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/AUTOMATION/q2_gate.py",
+      "class": "QAM",
+      "detail": {
+        "worktree": "2d071df58a41df9fda7b59cf7769f6a15699eec7fdfde0be51f785ddaa0d52f6",
+        "approved": null
+      }
+    },
+    {
+      "kind": "QAM_UNTRACKED_UNLISTED_OR_HASH",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/HANDOFFS/DIRECTOR_Q2_RELEASE_REVISED_2026-10-07_190418.md",
+      "class": "QAM",
+      "detail": {
+        "worktree": "74565acbd4e7eec8179a96d10a9232618ca150ce3bd8c10eaaab48b4d121013c",
+        "approved": null
+      }
+    },
+    {
+      "kind": "QAM_UNTRACKED_UNLISTED_OR_HASH",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-001/q2-0/INSTRUMENT_LOG.md",
+      "class": "QAM",
+      "detail": {
+        "worktree": "368fe4127ffeae2c67424d794dd569c796906f1e7248bc97e306e1dc09cda215",
+        "approved": null
+      }
+    },
+    {
+      "kind": "QAM_UNTRACKED_UNLISTED_OR_HASH",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-001/q2-0/attempt1-crashed-gate-identity-v2.json",
+      "class": "QAM",
+      "detail": {
+        "worktree": "a2bc7be575db9a0ef7f13f1950bc8c881b344e0de5c66dc4548f9b80b6f2d706",
+        "approved": null
+      }
+    },
+    {
+      "kind": "QAM_UNTRACKED_UNLISTED_OR_HASH",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-001/q2-0/controls-binding.out",
+      "class": "QAM",
+      "detail": {
+        "worktree": "bf788c569c7c597f2ffb9fdc2e5ecd0fc8f9c12b5b0b18b283ada9e85c0b5a8c",
+        "approved": null
+      }
+    },
+    {
+      "kind": "QAM_UNTRACKED_UNLISTED_OR_HASH",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-001/q2-0/controls-records.out",
+      "class": "QAM",
+      "detail": {
+        "worktree": "ee1e689901d67adce032dc042416f615002aa7857b86946cde7fae76cbd8fed2",
+        "approved": null
+      }
+    },
+    {
+      "kind": "QAM_UNTRACKED_UNLISTED_OR_HASH",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-001/q2-0/controls/binding-mutated/q2-0-gate.json",
+      "class": "QAM",
+      "detail": {
+        "worktree": "965b653ee90821604cf3b3425f46e3d1cf0950c8f2db58a44c3ce2b0ebc8f609",
+        "approved": null
+      }
+    },
+    {
+      "kind": "QAM_UNTRACKED_UNLISTED_OR_HASH",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-001/q2-0/controls/binding-mutated/q2-0-identity-v2.json",
+      "class": "QAM",
+      "detail": {
+        "worktree": "7c68271bd5594fa0cb6e2228daaf5356de08bc5a31e5bac46263012450255417",
+        "approved": null
+      }
+    },
+    {
+      "kind": "QAM_UNTRACKED_UNLISTED_OR_HASH",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-001/q2-0/controls/records-mutated/q2-0-gate.json",
+      "class": "QAM",
+      "detail": {
+        "worktree": "6226514269db9df448c31b2404a37c081acdefa35eea7336432bc1b80403249b",
+        "approved": null
+      }
+    },
+    {
+      "kind": "QAM_UNTRACKED_UNLISTED_OR_HASH",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-001/q2-0/controls/records-mutated/q2-0-identity-v2.json",
+      "class": "QAM",
+      "detail": {
+        "worktree": "f55f5dc6f053ed234960c013889b18a606670849e9d0229f58096c167d567b0c",
+        "approved": null
+      }
+    },
+    {
+      "kind": "QAM_UNTRACKED_UNLISTED_OR_HASH",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-001/q2-0/gate-fix-1.diff",
+      "class": "QAM",
+      "detail": {
+        "worktree": "45b1b3286fb4d9f09745bc46c299cd4f6834e49e7d16c1080ba19c8f35cfde45",
+        "approved": null
+      }
+    },
+    {
+      "kind": "QAM_UNTRACKED_UNLISTED_OR_HASH",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-001/q2-0/q2-0-gate.json",
+      "class": "QAM",
+      "detail": {
+        "worktree": "6d3a5f81f54dbd9e9116ca6af32104d12c092111621ed0469144d7015b07daeb",
+        "approved": null
+      }
+    },
+    {
+      "kind": "QAM_UNTRACKED_UNLISTED_OR_HASH",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-001/q2-0/q2-0-identity-v2.json",
+      "class": "QAM",
+      "detail": {
+        "worktree": "2ae58cd069950a9d8700e6c1ab4dc841084a13dfe845d2afb5332e32da03f39f",
+        "approved": null
+      }
+    },
+    {
+      "kind": "QAM_UNTRACKED_UNLISTED_OR_HASH",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-001/q2-0/v2-selftest-summary.json",
+      "class": "QAM",
+      "detail": {
+        "worktree": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "approved": null
+      }
+    },
+    {
+      "kind": "DOCS_OUTSIDE_QAM_CHANGED",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/AGENTS.md",
+      "class": "DOCS_OUTSIDE_QAM",
+      "detail": {
+        "worktree": "1a4a850e7f2bf3247b566e1b67845bbfb38dfcfcd6aa55820708d29224141ee7"
+      }
+    },
+    {
+      "kind": "DOCS_OUTSIDE_QAM_CHANGED",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/APP_BRIEF.md",
+      "class": "DOCS_OUTSIDE_QAM",
+      "detail": {
+        "worktree": "2e9e42962a31885a055d5f8b0d14d990020fd9dc9bb49938f1f327869a30266a"
+      }
+    },
+    {
+      "kind": "DOCS_OUTSIDE_QAM_CHANGED",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/BASELINE_CHECK.md",
+      "class": "DOCS_OUTSIDE_QAM",
+      "detail": {
+        "worktree": "8049f3bf027147c5eea138cd6b0e756d4e9bc8632481d9a1433eb329c7da928f"
+      }
+    },
+    {
+      "kind": "DOCS_OUTSIDE_QAM_CHANGED",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/BUILD_PLAN.md",
+      "class": "DOCS_OUTSIDE_QAM",
+      "detail": {
+        "worktree": "46866a10ee1ac703bcf51c2d1b5d8a2e4e449efc766d089eebd0a62357162d92"
+      }
+    },
+    {
+      "kind": "DOCS_OUTSIDE_QAM_CHANGED",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/CLAUDE.md",
+      "class": "DOCS_OUTSIDE_QAM",
+      "detail": {
+        "worktree": "1a4a850e7f2bf3247b566e1b67845bbfb38dfcfcd6aa55820708d29224141ee7"
+      }
+    },
+    {
+      "kind": "DOCS_OUTSIDE_QAM_CHANGED",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/CLOSEOUT_RULES.md",
+      "class": "DOCS_OUTSIDE_QAM",
+      "detail": {
+        "worktree": "db9159a866971656978d04a17197391e821577524bb8468d8095c596df8bf2e5"
+      }
+    },
+    {
+      "kind": "DOCS_OUTSIDE_QAM_CHANGED",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/DATA_CONTRACT.md",
+      "class": "DOCS_OUTSIDE_QAM",
+      "detail": {
+        "worktree": "3a2e5bece2887ff0ac13ca0914db5137594fc106f3ed8cbb34e6db47e7dbb6ff"
+      }
+    },
+    {
+      "kind": "DOCS_OUTSIDE_QAM_CHANGED",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/DESIGN_RECONCILIATION.md",
+      "class": "DOCS_OUTSIDE_QAM",
+      "detail": {
+        "worktree": "671ea24c3257a6dd3a72a41a6f8550099fc7d4dbbc8789d7bb3cebfe0049dbf5"
+      }
+    },
+    {
+      "kind": "DOCS_OUTSIDE_QAM_CHANGED",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/ENGINEERING_ENTRY.md",
+      "class": "DOCS_OUTSIDE_QAM",
+      "detail": {
+        "worktree": "c7e625a14dbc316074827e7f8f34d5251d116fd4ac5a1293e1e46e63133b1773"
+      }
+    },
+    {
+      "kind": "DOCS_OUTSIDE_QAM_CHANGED",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/ENGINEER_LAUNCH.md",
+      "class": "DOCS_OUTSIDE_QAM",
+      "detail": {
+        "worktree": "d7d0ed1e3b1f6e6af931b725b18e545a5a308bb18b545de8298df48f4dd08dc0"
+      }
+    },
+    {
+      "kind": "DOCS_OUTSIDE_QAM_CHANGED",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/EXECUTION_LOG.md",
+      "class": "DOCS_OUTSIDE_QAM",
+      "detail": {
+        "worktree": "7fc13524d95be2bfd664e844238e6e741b27abef4e74636aaa9e9d1e8b49fc6b"
+      }
+    },
+    {
+      "kind": "DOCS_OUTSIDE_QAM_CHANGED",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/FILE_SCOPE.md",
+      "class": "DOCS_OUTSIDE_QAM",
+      "detail": {
+        "worktree": "4db42a192806eb0373e8b84d6881eb7adb2b2e9e8f3153618b6252d18a126ba9"
+      }
+    },
+    {
+      "kind": "DOCS_OUTSIDE_QAM_CHANGED",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/GOVERNANCE.md",
+      "class": "DOCS_OUTSIDE_QAM",
+      "detail": {
+        "worktree": "8a14a89821ced98adc2e4605ff26b7b1346f8932704bf0dacdc9c961ab98b704"
+      }
+    },
+    {
+      "kind": "DOCS_OUTSIDE_QAM_CHANGED",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/KNOWN_LIMITS.md",
+      "class": "DOCS_OUTSIDE_QAM",
+      "detail": {
+        "worktree": "5644192decec3da4b45a76bc30bd649a9cce97d7b26110b4b0fb060f4c351d04"
+      }
+    },
+    {
+      "kind": "DOCS_OUTSIDE_QAM_CHANGED",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/PACKET_INDEX.md",
+      "class": "DOCS_OUTSIDE_QAM",
+      "detail": {
+        "worktree": "fb1c03ddb1e28bf12799a4ee8f52639f2e6a6028a4e08985bdb201bc9ac284f7"
+      }
+    },
+    {
+      "kind": "DOCS_OUTSIDE_QAM_CHANGED",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/PACKET_MANIFEST.json",
+      "class": "DOCS_OUTSIDE_QAM",
+      "detail": {
+        "worktree": "75ae7323bfbc355233281d1770edc5342e0601b1cd6ad67bdb561aaf0381c239"
+      }
+    },
+    {
+      "kind": "DOCS_OUTSIDE_QAM_CHANGED",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/PHASE_MAP.md",
+      "class": "DOCS_OUTSIDE_QAM",
+      "detail": {
+        "worktree": "2350a409b94b76cfeb78679d80e6356b4e67ba1a4cf2a735b6e10608afbddc68"
+      }
+    },
+    {
+      "kind": "QAM_CHANGED_UNLISTED_OR_HASH",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/AC_EVIDENCE_MATRIX.md",
+      "class": "QAM",
+      "detail": {
+        "worktree": "ed48c0aa9e3af47e0df02256f0b911fc90288294ce74649324a89d932736fac5",
+        "approved": null
+      }
+    },
+    {
+      "kind": "QAM_CHANGED_UNLISTED_OR_HASH",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/AGENTS.md",
+      "class": "QAM",
+      "detail": {
+        "worktree": "bafa6303093ec8f9d4a3112f519dda08ca71353bf789f11281979900deaf29e1",
+        "approved": null
+      }
+    },
+    {
+      "kind": "QAM_CHANGED_UNLISTED_OR_HASH",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/AUTOMATION/README.md",
+      "class": "QAM",
+      "detail": {
+        "worktree": "a764acb9ea4861be552a9c9784fdba44c79f58f28adf9264c4f049313cd73811",
+        "approved": null
+      }
+    },
+    {
+      "kind": "QAM_CHANGED_UNLISTED_OR_HASH",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/AUTOMATION/q1_candidate_identity.py",
+      "class": "QAM",
+      "detail": {
+        "worktree": "3351a7a3e0b791a039c64a567ce4f1484d1224b5fed4bab068d4b64c9f6b013a",
+        "approved": null
+      }
+    },
+    {
+      "kind": "QAM_CHANGED_UNLISTED_OR_HASH",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/AUTOMATION/q1_export.py",
+      "class": "QAM",
+      "detail": {
+        "worktree": "61cc2fec9291fa27b91bd5b8011ab570fe7c38013ce73214dff11c95675be91f",
+        "approved": null
+      }
+    },
+    {
+      "kind": "QAM_CHANGED_UNLISTED_OR_HASH",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/AUTOMATION/q1_jest_compare.py",
+      "class": "QAM",
+      "detail": {
+        "worktree": "00dfac52e626402e809638033dd63000e9d3dd08267b6df524f243597bc0717a",
+        "approved": null
+      }
+    },
+    {
+      "kind": "QAM_CHANGED_UNLISTED_OR_HASH",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/AUTOMATION/q2_approved_qam_records.json",
+      "class": "QAM",
+      "detail": {
+        "worktree": "a46579e099cec599eb792c2c4886d653ec515ac034bf97437d0c38cf1b4cda30",
+        "approved": null
+      }
+    },
+    {
+      "kind": "QAM_CHANGED_UNLISTED_OR_HASH",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/AUTOMATION/q2_identity.py",
+      "class": "QAM",
+      "detail": {
+        "worktree": "703196058f1d878009d21a2dbdce6fd7dbabfc3341ab449b705af1b969c70f58",
+        "approved": null
+      }
+    },
+    {
+      "kind": "QAM_CHANGED_UNLISTED_OR_HASH",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/AUTOMATION/q2_identity_v2.py",
+      "class": "QAM",
+      "detail": {
+        "worktree": "cf0968a2b29051eebdba10dd07bb4f36e69efcf35acf4a596acd75ce621cc5a2",
+        "approved": null
+      }
+    },
+    {
+      "kind": "QAM_CHANGED_UNLISTED_OR_HASH",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/AUTOMATION/q2_qam_records_2026-10-07.json",
+      "class": "QAM",
+      "detail": {
+        "worktree": "e92f0861f5a447304c7e46983077fd6cac5a04657f8961bea38bff1b0edcec57",
+        "approved": null
+      }
+    },
+    {
+      "kind": "QAM_CHANGED_UNLISTED_OR_HASH",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/AUTOMATION/rebind_evidence.py",
+      "class": "QAM",
+      "detail": {
+        "worktree": "428d75f7aa3670789a13ab998169664dc703ac3a2ad979661a3ea7733e87b9e4",
+        "approved": null
+      }
+    },
+    {
+      "kind": "QAM_CHANGED_UNLISTED_OR_HASH",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/AUTOMATION/rebind_export.py",
+      "class": "QAM",
+      "detail": {
+        "worktree": "8f0dd305b863dd227985b5ec54ec72c8ba78364d9d4f3d485efe7c86f97f532e",
+        "approved": null
+      }
+    },
+    {
+      "kind": "QAM_CHANGED_UNLISTED_OR_HASH",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/AUTOMATION/roster_amendment_2026-10-05.json",
+      "class": "QAM",
+      "detail": {
+        "worktree": "8da8cb0b078e61b19e2772ad75d809370ce278fbdf5487ce25bff2b6a7c1bc25",
+        "approved": null
+      }
+    },
+    {
+      "kind": "QAM_CHANGED_UNLISTED_OR_HASH",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/CLAUDE.md",
+      "class": "QAM",
+      "detail": {
+        "worktree": "bafa6303093ec8f9d4a3112f519dda08ca71353bf789f11281979900deaf29e1",
+        "approved": null
+      }
+    },
+    {
+      "kind": "QAM_CHANGED_UNLISTED_OR_HASH",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/DIRECTOR_MANUAL_CHECK.md",
+      "class": "QAM",
+      "detail": {
+        "worktree": "7e05e1421d7977394e452b4836af9c78c20a0c69ceb0ebbae0aa17e1da053570",
+        "approved": null
+      }
+    },
+    {
+      "kind": "QAM_CHANGED_UNLISTED_OR_HASH",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/EXPORT_RULES.md",
+      "class": "QAM",
+      "detail": {
+        "worktree": "67cce56fb311a76a75506554bff1122db38579d16967e8bd35a386f2a30deb36",
+        "approved": null
+      }
+    },
+    {
+      "kind": "QAM_CHANGED_UNLISTED_OR_HASH",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/FINDINGS/DIRECTOR-OBS-001.md",
+      "class": "QAM",
+      "detail": {
+        "worktree": "11f614bf896cd1e5ee70d1527a7a87b34b7913245eca6dc85615f18d111b3f6d",
+        "approved": null
+      }
+    },
+    {
+      "kind": "QAM_CHANGED_UNLISTED_OR_HASH",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/FINDINGS/DIRECTOR-OBS-001_EXECUTOR-ADDENDUM-001.md",
+      "class": "QAM",
+      "detail": {
+        "worktree": "dc7f08e22e268ee26921f6b7730c316483d2bf116969eb86bd5389a644e7f66c",
+        "approved": null
+      }
+    },
+    {
+      "kind": "QAM_CHANGED_UNLISTED_OR_HASH",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/HANDOFFS/ARCHITECT_PACKAGE_INDEX.json",
+      "class": "QAM",
+      "detail": {
+        "worktree": "6ef5d402cfac93b967fce661645774e9c4d331b72b2bd9daf99d66bed236e1e0",
+        "approved": null
+      }
+    },
+    {
+      "kind": "QAM_CHANGED_UNLISTED_OR_HASH",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/HANDOFFS/ARCHITECT_REMOTE_ROSTER_AMENDMENT_2026-10-05.md",
+      "class": "QAM",
+      "detail": {
+        "worktree": "57924e3f046bc521b3a91fe78cd17087e8b2f3dbd6aa05b11439a26cf459c7d9",
+        "approved": null
+      }
+    },
+    {
+      "kind": "QAM_CHANGED_UNLISTED_OR_HASH",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/HANDOFFS/CLAUDY_Q1B_CONTINUATION.txt",
+      "class": "QAM",
+      "detail": {
+        "worktree": "43f923be8245ebc08f4d003e86d2e2858305a0e441909b158ddb588cce50b225",
+        "approved": null
+      }
+    },
+    {
+      "kind": "QAM_CHANGED_UNLISTED_OR_HASH",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/HANDOFFS/CLAUDY_REMOTE_ROSTER_CONTINUATION_2026-10-07.txt",
+      "class": "QAM",
+      "detail": {
+        "worktree": "63eb83d5768428177046b1c422194900418ee001762424b657a64d90a88e6b53",
+        "approved": null
+      }
+    },
+    {
+      "kind": "QAM_CHANGED_UNLISTED_OR_HASH",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/HANDOFFS/DIRECTOR_Q2_RELEASE_2026-10-05_193516.md",
+      "class": "QAM",
+      "detail": {
+        "worktree": "53c9a0dd297f87325e8b4c51cdcaebedd5b95fd67be23a9f22be89fddf9994c7",
+        "approved": null
+      }
+    },
+    {
+      "kind": "QAM_CHANGED_UNLISTED_OR_HASH",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/HANDOFFS/ENGINEERING_attempt-001.zip",
+      "class": "QAM",
+      "detail": {
+        "worktree": "a580b0c9958b2cde817bc088b8e0087d3b2fd22893bfd2c68acd5c636f5a24d1",
+        "approved": null
+      }
+    },
+    {
+      "kind": "QAM_CHANGED_UNLISTED_OR_HASH",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/HANDOFFS/ENGINEERING_attempt-001_RECEIPT.json",
+      "class": "QAM",
+      "detail": {
+        "worktree": "cc364a462db46adbb8972c94c5ed9b160896b2e323b59e976251bda0d9e0ffa5",
+        "approved": null
+      }
+    },
+    {
+      "kind": "QAM_CHANGED_UNLISTED_OR_HASH",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/HANDOFFS/ENGINEERING_attempt-002.zip",
+      "class": "QAM",
+      "detail": {
+        "worktree": "0a5970e030f93d0435661a1272ca740993b0f1be1d38237b7f6d04879d9a0684",
+        "approved": null
+      }
+    },
+    {
+      "kind": "QAM_CHANGED_UNLISTED_OR_HASH",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/HANDOFFS/ENGINEERING_attempt-002_RECEIPT.json",
+      "class": "QAM",
+      "detail": {
+        "worktree": "debce5359fdf06a65e910aa4d90cff09afb086c2761d18c1640726aab1085116",
+        "approved": null
+      }
+    },
+    {
+      "kind": "QAM_CHANGED_UNLISTED_OR_HASH",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/HANDOFFS/LEAD_REMOTE_ROSTER_APPROVAL_2026-10-07.md",
+      "class": "QAM",
+      "detail": {
+        "worktree": "c0380dfcb951755b82af06881013635d60cad61829697978107e33b6f7fcef53",
+        "approved": null
+      }
+    },
+    {
+      "kind": "QAM_CHANGED_UNLISTED_OR_HASH",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/HANDOFFS/LEAD_REMOTE_ROSTER_BINDING_HASHES_2026-10-07.json",
+      "class": "QAM",
+      "detail": {
+        "worktree": "0ccefad21aa22eda91f400923722f276f31a79b326d93d9e05d1d1d52bc9d80c",
+        "approved": null
+      }
+    },
+    {
+      "kind": "QAM_CHANGED_UNLISTED_OR_HASH",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/HANDOFFS/LEAD_REMOTE_ROSTER_PACKAGE_INDEX_2026-10-07.json",
+      "class": "QAM",
+      "detail": {
+        "worktree": "a5aa9b47a8e48cf874cfd27ffc16f3158f261f802117386dec58b68655b3ef4b",
+        "approved": null
+      }
+    },
+    {
+      "kind": "QAM_CHANGED_UNLISTED_OR_HASH",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/HANDOFFS/LEAD_RETURN_START_HERE_2026-10-07.md",
+      "class": "QAM",
+      "detail": {
+        "worktree": "8d7aec51969323dce68b2e4dba975b2b54165461fd911d7ad93b912c36c50d51",
+        "approved": null
+      }
+    },
+    {
+      "kind": "QAM_CHANGED_UNLISTED_OR_HASH",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/HANDOFFS/LEAD_REVIEWED_QAM_PATHS_2026-10-07.json",
+      "class": "QAM",
+      "detail": {
+        "worktree": "ee6cd6f97255bdd0038fd5e48b17fdbf77fb0337f812cb69cfa4c8c325d2984c",
+        "approved": null
+      }
+    },
+    {
+      "kind": "QAM_CHANGED_UNLISTED_OR_HASH",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/HANDOFFS/Q1B_FILE_INDEX.json",
+      "class": "QAM",
+      "detail": {
+        "worktree": "f73a7aa594bad41ada7ac6d7dbab5cea87a10b08104c830b1cc79f3d694ce356",
+        "approved": null
+      }
+    },
+    {
+      "kind": "QAM_CHANGED_UNLISTED_OR_HASH",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/HANDOFFS/Q1_REVIEW_START_HERE.md",
+      "class": "QAM",
+      "detail": {
+        "worktree": "d37013950f9436bdaa440355c08fbf0342720437d7adf50f43abc0f54e885bf9",
+        "approved": null
+      }
+    },
+    {
+      "kind": "QAM_CHANGED_UNLISTED_OR_HASH",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/HANDOFFS/Q1_attempt-001.zip",
+      "class": "QAM",
+      "detail": {
+        "worktree": "aa7c3a5e7c2f071123fe56323b33b560c9ddf04ac022415c6f178f69b85ef0d5",
+        "approved": null
+      }
+    },
+    {
+      "kind": "QAM_CHANGED_UNLISTED_OR_HASH",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/HANDOFFS/Q1_attempt-001_RECEIPT.json",
+      "class": "QAM",
+      "detail": {
+        "worktree": "991063793ec1dd3b20be53bc94f787e92e9943943b164cdbd15ecaed8694b419",
+        "approved": null
+      }
+    },
+    {
+      "kind": "QAM_CHANGED_UNLISTED_OR_HASH",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/HANDOFFS/Q2_HOLD_LEAD_FILES_MISSING_2026-10-07_184448.md",
+      "class": "QAM",
+      "detail": {
+        "worktree": "9ef808d8b83021d43f3c4a0db364bed397e556f522f96b015fda00211764b1eb",
+        "approved": null
+      }
+    },
+    {
+      "kind": "QAM_CHANGED_UNLISTED_OR_HASH",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/HANDOFFS/Q2_PENDING_DECISIONS_2026-10-05_182656.md",
+      "class": "QAM",
+      "detail": {
+        "worktree": "3d0c110c4feb588595abee5ad24226a26796e3ee14a23960382366e583966332",
+        "approved": null
+      }
+    },
+    {
+      "kind": "QAM_CHANGED_UNLISTED_OR_HASH",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/HANDOFFS/Q2_PREP_STATUS_2026-10-05_183159.md",
+      "class": "QAM",
+      "detail": {
+        "worktree": "2f15a20c27e574c65332f24d437bad2686d684bc09eac0e820038113174050f0",
+        "approved": null
+      }
+    },
+    {
+      "kind": "QAM_CHANGED_UNLISTED_OR_HASH",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/HANDOFFS/Q2_PREP_STATUS_2026-10-05_184415.md",
+      "class": "QAM",
+      "detail": {
+        "worktree": "ed7b3477c8e835b2f2086ae50f8e74adce2b9506717c7c01f987223388210b2f",
+        "approved": null
+      }
+    },
+    {
+      "kind": "QAM_CHANGED_UNLISTED_OR_HASH",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/HANDOFFS/Q2_RULING_REQUEST_2026-10-05_193516.md",
+      "class": "QAM",
+      "detail": {
+        "worktree": "602963ed091dc0881f69607bd897d38b83b8f78ccf39c1736a6b1557999b4a18",
+        "approved": null
+      }
+    },
+    {
+      "kind": "QAM_CHANGED_UNLISTED_OR_HASH",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/HANDOFFS/QA_HANDOFF.md",
+      "class": "QAM",
+      "detail": {
+        "worktree": "65928d72654e99ac892574d3097edaad96cb948645499e629fa245971bc8eb1a",
+        "approved": null
+      }
+    },
+    {
+      "kind": "QAM_CHANGED_UNLISTED_OR_HASH",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/HANDOFFS/README.md",
+      "class": "QAM",
+      "detail": {
+        "worktree": "cfee82c7eae1232b46155f78dd3fe9673d136ec34c8bd414a53bed4708b957fd",
+        "approved": null
+      }
+    },
+    {
+      "kind": "QAM_CHANGED_UNLISTED_OR_HASH",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/HANDOFFS/ROSTER_REBIND_REVIEW_2026-10-05_215715.md",
+      "class": "QAM",
+      "detail": {
+        "worktree": "2dfa59de9ea296af895b2a29ae7567ff563e302f90d0876416bad785fefb1b04",
+        "approved": null
+      }
+    },
+    {
+      "kind": "QAM_CHANGED_UNLISTED_OR_HASH",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/HANDOFFS/ROSTER_REBIND_REVIEW_2026-10-05_215715.zip",
+      "class": "QAM",
+      "detail": {
+        "worktree": "9c938d2630253f6ea1ad9727b21d34b2275400042ecff8073402ca8997dcd4b6",
+        "approved": null
+      }
+    },
+    {
+      "kind": "QAM_CHANGED_UNLISTED_OR_HASH",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/HANDOFFS/ROSTER_REBIND_REVIEW_2026-10-05_215715_RECEIPT.json",
+      "class": "QAM",
+      "detail": {
+        "worktree": "015568f0f283fc5552524f3f298be3d136d52420159917b5a1e1836fd73bedc0",
+        "approved": null
+      }
+    },
+    {
+      "kind": "QAM_CHANGED_UNLISTED_OR_HASH",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/HANDOFFS/ROSTER_REBIND_REVIEW_2026-10-07_183026.md",
+      "class": "QAM",
+      "detail": {
+        "worktree": "1309d30ee4cc36c5fd743c972f5d7b64ac5eda88b42a2425c76e962de5e934de",
+        "approved": null
+      }
+    },
+    {
+      "kind": "QAM_CHANGED_UNLISTED_OR_HASH",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/HANDOFFS/ROSTER_REBIND_REVIEW_2026-10-07_183026.zip",
+      "class": "QAM",
+      "detail": {
+        "worktree": "c8ef0ee4129f531318f04970d7d28bb6d7b20d9f65a894d56151a083fa605a4b",
+        "approved": null
+      }
+    },
+    {
+      "kind": "QAM_CHANGED_UNLISTED_OR_HASH",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/HANDOFFS/ROSTER_REBIND_REVIEW_2026-10-07_183026_RECEIPT.json",
+      "class": "QAM",
+      "detail": {
+        "worktree": "19490dc87b6fcd8d11e01e025f715a22205944d0d3136bffcc95a900c06c0755",
+        "approved": null
+      }
+    },
+    {
+      "kind": "QAM_CHANGED_UNLISTED_OR_HASH",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/PILOT_RESULTS.md",
+      "class": "QAM",
+      "detail": {
+        "worktree": "9e399e837650d88db3fda1b4d85132f0477b22ac4e88d73f3730d1e33067871b",
+        "approved": null
+      }
+    },
+    {
+      "kind": "QAM_CHANGED_UNLISTED_OR_HASH",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/Q1B_REVIEW.md",
+      "class": "QAM",
+      "detail": {
+        "worktree": "ce02c5cb5432c688e25801000742d0f69ec7778c7ed1fea70badffd4d451fe2f",
+        "approved": null
+      }
+    },
+    {
+      "kind": "QAM_CHANGED_UNLISTED_OR_HASH",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/QAM_CHECKPOINTS.md",
+      "class": "QAM",
+      "detail": {
+        "worktree": "24d16dc4663714c106cad7258fc14a33ebec596142b4a189d138ff0338a0e78d",
+        "approved": null
+      }
+    },
+    {
+      "kind": "QAM_CHANGED_UNLISTED_OR_HASH",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/QAM_ENTRY.md",
+      "class": "QAM",
+      "detail": {
+        "worktree": "98ac3e8081fcc8a21896faca30dc64ee9e6d3cdbe7d406d5902911203d2d113e",
+        "approved": null
+      }
+    },
+    {
+      "kind": "QAM_CHANGED_UNLISTED_OR_HASH",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/QAM_MANIFEST.md",
+      "class": "QAM",
+      "detail": {
+        "worktree": "5e405f98e6c49534fac4a7d0b272f299674ece655142ab5de70044a43da274c9",
+        "approved": null
+      }
+    },
+    {
+      "kind": "QAM_CHANGED_UNLISTED_OR_HASH",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/QAM_PREFLIGHT.md",
+      "class": "QAM",
+      "detail": {
+        "worktree": "98bd95dc6c152097a283b9e67b819e8e54c98ec6adf8ad273e6da58e1baad9ce",
+        "approved": null
+      }
+    },
+    {
+      "kind": "QAM_CHANGED_UNLISTED_OR_HASH",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/QAM_PROMPTS.md",
+      "class": "QAM",
+      "detail": {
+        "worktree": "25b21df1a1af790debf7c562ae38edaa406c738825622d46bb97975a8dd5f748",
+        "approved": null
+      }
+    },
+    {
+      "kind": "QAM_CHANGED_UNLISTED_OR_HASH",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/QAM_RISK_REQUIREMENTS.md",
+      "class": "QAM",
+      "detail": {
+        "worktree": "99fc847e7411aa9a4271cdd9de1fe7970a224703d1bb9c63e20ed80e52f88045",
+        "approved": null
+      }
+    },
+    {
+      "kind": "QAM_CHANGED_UNLISTED_OR_HASH",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/QAM_STATE.json",
+      "class": "QAM",
+      "detail": {
+        "worktree": "d80a7c9566fa0c1cb3c597ca5e3fbb6270770c4550d70c4e64e988cbb58e3787",
+        "approved": null
+      }
+    },
+    {
+      "kind": "QAM_CHANGED_UNLISTED_OR_HASH",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/QAM_TEST_PLAN.md",
+      "class": "QAM",
+      "detail": {
+        "worktree": "8ddb743f1be09d624bf79c8a602ad05fbd3cffbffbc2d8c6cfbaee16f8b80337",
+        "approved": null
+      }
+    },
+    {
+      "kind": "QAM_CHANGED_UNLISTED_OR_HASH",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/QA_CERTIFICATION.md",
+      "class": "QAM",
+      "detail": {
+        "worktree": "597e8be0e4cdbd1cab1ae8ee8151e027e005e80264b42f97e7a4ae136b5f9f51",
+        "approved": null
+      }
+    },
+    {
+      "kind": "QAM_CHANGED_UNLISTED_OR_HASH",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/QA_CLEANUP_REPORT.md",
+      "class": "QAM",
+      "detail": {
+        "worktree": "40da62a6711069b5ebd2a55932b5cfa51ce019db8629c9030e136317e2cf22ef",
+        "approved": null
+      }
+    },
+    {
+      "kind": "QAM_CHANGED_UNLISTED_OR_HASH",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/QA_EXECUTION_REPORT.md",
+      "class": "QAM",
+      "detail": {
+        "worktree": "7cb5123b404af13f59a650e8ea72b8e45f0e2e70d11d0d096dbe65c576cab35f",
+        "approved": null
+      }
+    },
+    {
+      "kind": "QAM_CHANGED_UNLISTED_OR_HASH",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/REPAIR_PROPOSAL.md",
+      "class": "QAM",
+      "detail": {
+        "worktree": "dfb674cca9a7ecc3926f82449a52a724497045d2ee40696feb82d4f2e2a14a36",
+        "approved": null
+      }
+    },
+    {
+      "kind": "QAM_CHANGED_UNLISTED_OR_HASH",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/README.md",
+      "class": "QAM",
+      "detail": {
+        "worktree": "f0cedb292b3573d90240a16c4a64d1933be3186535958d0b19bc7574df5d83aa",
+        "approved": null
+      }
+    },
+    {
+      "kind": "QAM_CHANGED_UNLISTED_OR_HASH",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/lead-remote-roster-review-2026-10-07/VERIFICATION.json",
+      "class": "QAM",
+      "detail": {
+        "worktree": "368e8b7338df2665d54e3daaf6755ff39ff82575b2d5ae1d0b7c3ae535320140",
+        "approved": null
+      }
+    },
+    {
+      "kind": "QAM_CHANGED_UNLISTED_OR_HASH",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q1-attempt-001/INDEX.md",
+      "class": "QAM",
+      "detail": {
+        "worktree": "dfde4cf1f1bba3e4432d20425360910e8bb3701cf3c3ce6a5771b4d9be080eed",
+        "approved": null
+      }
+    },
+    {
+      "kind": "QAM_CHANGED_UNLISTED_OR_HASH",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q1-attempt-001/INHERITED_FAILURE_ASSESSMENT.md",
+      "class": "QAM",
+      "detail": {
+        "worktree": "dbd7c7d88f844b9050d06caf6b439a9a8924586b335f02c8940a85892a02573c",
+        "approved": null
+      }
+    },
+    {
+      "kind": "QAM_CHANGED_UNLISTED_OR_HASH",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q1-attempt-001/candidate-identity-check.json",
+      "class": "QAM",
+      "detail": {
+        "worktree": "f570a393a1443762cbae1ffa7b6b7ed56c3cbea7f9e5863b8725b8b58be24078",
+        "approved": null
+      }
+    },
+    {
+      "kind": "QAM_CHANGED_UNLISTED_OR_HASH",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q1-attempt-001/chrome-smoke.cjs",
+      "class": "QAM",
+      "detail": {
+        "worktree": "df5d32319850903bb2079bda7fabd0cd735e027b11af0752284a7fef7ce6461a",
+        "approved": null
+      }
+    },
+    {
+      "kind": "QAM_CHANGED_UNLISTED_OR_HASH",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q1-attempt-001/guard-controls.cjs",
+      "class": "QAM",
+      "detail": {
+        "worktree": "178532b3a4e58e77eefab862ed3016a1d76ab83ba109cd0abe4c3d31fe0ae10f",
+        "approved": null
+      }
+    },
+    {
+      "kind": "QAM_CHANGED_UNLISTED_OR_HASH",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q1-attempt-001/harness-probe.log",
+      "class": "QAM",
+      "detail": {
+        "worktree": "fc482b8b921b5ebf2af62d75c5ab36e40c95129bb4c6c73e230742ae7c54ec00",
+        "approved": null
+      }
+    },
+    {
+      "kind": "QAM_CHANGED_UNLISTED_OR_HASH",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q1-attempt-001/harness-probe3.log",
+      "class": "QAM",
+      "detail": {
+        "worktree": "fc482b8b921b5ebf2af62d75c5ab36e40c95129bb4c6c73e230742ae7c54ec00",
+        "approved": null
+      }
+    },
+    {
+      "kind": "QAM_CHANGED_UNLISTED_OR_HASH",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q1-attempt-001/jest-baseline-20ef380.json",
+      "class": "QAM",
+      "detail": {
+        "worktree": "792a38e1ecb9299ac078a8b7ad2c1d01b7314d616108109f103b82c7bf782960",
+        "approved": null
+      }
+    },
+    {
+      "kind": "QAM_CHANGED_UNLISTED_OR_HASH",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q1-attempt-001/jest-baseline-20ef380.log",
+      "class": "QAM",
+      "detail": {
+        "worktree": "08429a98c851d46417beed59c0d24e3490f607b24b063e373c8d7159beb3b2a6",
+        "approved": null
+      }
+    },
+    {
+      "kind": "QAM_CHANGED_UNLISTED_OR_HASH",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q1-attempt-001/jest-candidate-22ce03b.json",
+      "class": "QAM",
+      "detail": {
+        "worktree": "847900f9d6c19a65729f1affdfbaaa05a5c92d7fc1881cb4238820d320562a6c",
+        "approved": null
+      }
+    },
+    {
+      "kind": "QAM_CHANGED_UNLISTED_OR_HASH",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q1-attempt-001/jest-candidate-22ce03b.log",
+      "class": "QAM",
+      "detail": {
+        "worktree": "3915d4ffa05af03d2da75e69c46831703c737e7b638489ee8c03b93bc4d61060",
+        "approved": null
+      }
+    },
+    {
+      "kind": "QAM_CHANGED_UNLISTED_OR_HASH",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q1-attempt-001/jest-independent-comparison.json",
+      "class": "QAM",
+      "detail": {
+        "worktree": "add582598673a8f93345ea8289b7b0019e4ba5661c4bc8393aaecc32951f6dd4",
+        "approved": null
+      }
+    },
+    {
+      "kind": "QAM_CHANGED_UNLISTED_OR_HASH",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q1-attempt-001/readiness-results.json",
+      "class": "QAM",
+      "detail": {
+        "worktree": "bdff31d041082c499dfbc439ed5cb6a2b20d386f3458042890296ded7e19c4f0",
+        "approved": null
+      }
+    },
+    {
+      "kind": "QAM_CHANGED_UNLISTED_OR_HASH",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q1-attempt-001/tsc-candidate.log",
+      "class": "QAM",
+      "detail": {
+        "worktree": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "approved": null
+      }
+    },
+    {
+      "kind": "QAM_CHANGED_UNLISTED_OR_HASH",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-prep-001/INDEX.md",
+      "class": "QAM",
+      "detail": {
+        "worktree": "f96b642a11fa34d21697f876d28ae4901e4b1973e53aa60a93001bddb4b07a46",
+        "approved": null
+      }
+    },
+    {
+      "kind": "QAM_CHANGED_UNLISTED_OR_HASH",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-prep-001/identity-pre-release.json",
+      "class": "QAM",
+      "detail": {
+        "worktree": "0812a9c22a052bd87412c13d504eb11e14b336eae59f053ebabc4158550dceb2",
+        "approved": null
+      }
+    },
+    {
+      "kind": "QAM_CHANGED_UNLISTED_OR_HASH",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-prep-001/identity-selftest-controls.json",
+      "class": "QAM",
+      "detail": {
+        "worktree": "486cb42624c4ddc8907edc87d9a4909225d842e2b4f87c0ded92746739ef774a",
+        "approved": null
+      }
+    },
+    {
+      "kind": "QAM_CHANGED_UNLISTED_OR_HASH",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-prep-002/INDEX.md",
+      "class": "QAM",
+      "detail": {
+        "worktree": "35ddb0c0c46a7eb00ae368df24e6dc743bf9bc7b78a99634589b6ab096e78c3a",
+        "approved": null
+      }
+    },
+    {
+      "kind": "QAM_CHANGED_UNLISTED_OR_HASH",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-prep-002/identity-post-restore.json",
+      "class": "QAM",
+      "detail": {
+        "worktree": "5a30e35686d8dccf4e50f059944223e92ab18edcb539a6c1c820e9a637e22e2b",
+        "approved": null
+      }
+    },
+    {
+      "kind": "QAM_CHANGED_UNLISTED_OR_HASH",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-prep-003/INDEX.md",
+      "class": "QAM",
+      "detail": {
+        "worktree": "c05af6cd3d1c7c2f0ed93cf015b5cc5cc18d319e3d9225eb0b2b2abadbc4f2bf",
+        "approved": null
+      }
+    },
+    {
+      "kind": "QAM_CHANGED_UNLISTED_OR_HASH",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-prep-003/identity-head-f21564c.json",
+      "class": "QAM",
+      "detail": {
+        "worktree": "3b815557bf3ac250ad632ed4f423ec380a9d83e5b64e2363c08a8c9556eedcb3",
+        "approved": null
+      }
+    },
+    {
+      "kind": "QAM_CHANGED_UNLISTED_OR_HASH",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-prep-003/jest-compare-candidate-vs-head.json",
+      "class": "QAM",
+      "detail": {
+        "worktree": "9bc723f3ca6095805a653f9e068c0a38d8ba778038c4fbf85f56a3a3f0901294",
+        "approved": null
+      }
+    },
+    {
+      "kind": "QAM_CHANGED_UNLISTED_OR_HASH",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-prep-003/jest-head-f21564c.json",
+      "class": "QAM",
+      "detail": {
+        "worktree": "bcbb403fb5c39f5cb0b4a671de779abf0c28321fa437845e2b60a977cad4c845",
+        "approved": null
+      }
+    },
+    {
+      "kind": "QAM_CHANGED_UNLISTED_OR_HASH",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-prep-003/jest-head-f21564c.log",
+      "class": "QAM",
+      "detail": {
+        "worktree": "534116a2a2c3e171fd7e0e42cabb9196adf7bf67d0afa71f0ac466d7f37a9065",
+        "approved": null
+      }
+    },
+    {
+      "kind": "QAM_CHANGED_UNLISTED_OR_HASH",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-start-prep-2026-10-07/install-verification.json",
+      "class": "QAM",
+      "detail": {
+        "worktree": "ad501c28b60d4f7e68488183f2733e0d9c2a019b76a312fb55425e45d1c26839",
+        "approved": null
+      }
+    },
+    {
+      "kind": "QAM_CHANGED_UNLISTED_OR_HASH",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-start-prep-2026-10-07/qam-state-routing.diff",
+      "class": "QAM",
+      "detail": {
+        "worktree": "c6d7ad275fbe45319f7a2261f3bd02f8425aa68bebd7c6a9c088e1b18cbd9414",
+        "approved": null
+      }
+    },
+    {
+      "kind": "QAM_CHANGED_UNLISTED_OR_HASH",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-start-prep-2026-10-07/qam-state-routing.json",
+      "class": "QAM",
+      "detail": {
+        "worktree": "dfbffe41c79090d9d858f86410c84a2303516a50d2a519f1f1c1dd04d8192b48",
+        "approved": null
+      }
+    },
+    {
+      "kind": "QAM_CHANGED_UNLISTED_OR_HASH",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-start-prep-2026-10-07/selective-staging.json",
+      "class": "QAM",
+      "detail": {
+        "worktree": "95e3340bfbc4780d011cd937930e50f4c3b2a93361b0c2ddb4b0d231eb4710b4",
+        "approved": null
+      }
+    },
+    {
+      "kind": "QAM_CHANGED_UNLISTED_OR_HASH",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-start-prep-2026-10-07/staging-paths.txt",
+      "class": "QAM",
+      "detail": {
+        "worktree": "86547d08b2487c7103354475c91d709ed440a5736e1bfaa56745f6aa5654944c",
+        "approved": null
+      }
+    },
+    {
+      "kind": "QAM_CHANGED_UNLISTED_OR_HASH",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/remote-roster-rebind-001/INDEX.md",
+      "class": "QAM",
+      "detail": {
+        "worktree": "5d81e2272ec284dd4648ae12cdd75dcfd34d34e77e70efd2fb1f5fd4d9b2ebaa",
+        "approved": null
+      }
+    },
+    {
+      "kind": "QAM_CHANGED_UNLISTED_OR_HASH",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/remote-roster-rebind-001/blobs/new-config__agents.manifest-hermes.json",
+      "class": "QAM",
+      "detail": {
+        "worktree": "638e95a166e9e196175bd630ce76560db1ef98dbe72d40f31d9a109782027ae8",
+        "approved": null
+      }
+    },
+    {
+      "kind": "QAM_CHANGED_UNLISTED_OR_HASH",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/remote-roster-rebind-001/blobs/new-config__agents.manifest.json",
+      "class": "QAM",
+      "detail": {
+        "worktree": "6c27f420127db7125a43ddba6347470b19d3be39769b44bb2b85bd6d9526b6d9",
+        "approved": null
+      }
+    },
+    {
+      "kind": "QAM_CHANGED_UNLISTED_OR_HASH",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/remote-roster-rebind-001/blobs/old-config__agents.manifest.json",
+      "class": "QAM",
+      "detail": {
+        "worktree": "638e95a166e9e196175bd630ce76560db1ef98dbe72d40f31d9a109782027ae8",
+        "approved": null
+      }
+    },
+    {
+      "kind": "QAM_CHANGED_UNLISTED_OR_HASH",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/remote-roster-rebind-001/blobs/old-config__agents.manifest_copy.json",
+      "class": "QAM",
+      "detail": {
+        "worktree": "6c27f420127db7125a43ddba6347470b19d3be39769b44bb2b85bd6d9526b6d9",
+        "approved": null
+      }
+    },
+    {
+      "kind": "QAM_CHANGED_UNLISTED_OR_HASH",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/remote-roster-rebind-001/config-delta.patch",
+      "class": "QAM",
+      "detail": {
+        "worktree": "2851f9c095c7dbce50421e08ad751b1aee47c2f9bf4016c9d02cb0497e8ec339",
+        "approved": null
+      }
+    },
+    {
+      "kind": "QAM_CHANGED_UNLISTED_OR_HASH",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/remote-roster-rebind-001/identity-v2-f21564c-accept.json",
+      "class": "QAM",
+      "detail": {
+        "worktree": "7d7a81b808b3510211900504eedd12d2d5fdb0d573c6b3a68f1f822bd91dbef7",
+        "approved": null
+      }
+    },
+    {
+      "kind": "QAM_CHANGED_UNLISTED_OR_HASH",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/remote-roster-rebind-001/identity-v2-f21564c-strict.json",
+      "class": "QAM",
+      "detail": {
+        "worktree": "3ebcf397653d6d368e88bf711f3291f4e220276fcf7ec2098ee14b60f4cb808e",
+        "approved": null
+      }
+    },
+    {
+      "kind": "QAM_CHANGED_UNLISTED_OR_HASH",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/remote-roster-rebind-001/identity-v2-selftest-controls.json",
+      "class": "QAM",
+      "detail": {
+        "worktree": "be1f4871d5e030903072c97a74d72dadb1dafd64e507b237ee5e6d34ed31afe2",
+        "approved": null
+      }
+    },
+    {
+      "kind": "QAM_CHANGED_UNLISTED_OR_HASH",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/remote-roster-rebind-001/q2_identity_v1_to_v2.diff",
+      "class": "QAM",
+      "detail": {
+        "worktree": "99ce6186159cc1de909e5c315df721181086ee3d4ca53af905ed5e26fcb4fc3c",
+        "approved": null
+      }
+    },
+    {
+      "kind": "QAM_CHANGED_UNLISTED_OR_HASH",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/remote-roster-rebind-001/rebind-evidence.json",
+      "class": "QAM",
+      "detail": {
+        "worktree": "24295cba036ec115fa6b4869c0f1af432dde3231fb690e243f962e6414d3344e",
+        "approved": null
+      }
+    },
+    {
+      "kind": "QAM_CHANGED_UNLISTED_OR_HASH",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/remote-roster-rebind-002/COMMANDS.md",
+      "class": "QAM",
+      "detail": {
+        "worktree": "319aed298cbb7e23a66f8baccaa0d065cafdcdecb54969ecc221aad4a5275fc7",
+        "approved": null
+      }
+    },
+    {
+      "kind": "QAM_CHANGED_UNLISTED_OR_HASH",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/remote-roster-rebind-002/REVIEW_START_HERE.md",
+      "class": "QAM",
+      "detail": {
+        "worktree": "7bdfa592dc347335eee6c370492ab842a95682af039fa4233ac92b9ddd3e6f0c",
+        "approved": null
+      }
+    },
+    {
+      "kind": "QAM_CHANGED_UNLISTED_OR_HASH",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/remote-roster-rebind-002/architect-index-verification.json",
+      "class": "QAM",
+      "detail": {
+        "worktree": "9be9eba3c321e2af9c7ac8ff633317c40c4a5783f0e1ea8eb5c8dc549d0d8081",
+        "approved": null
+      }
+    },
+    {
+      "kind": "QAM_CHANGED_UNLISTED_OR_HASH",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/remote-roster-rebind-002/authority-and-tool-pins.json",
+      "class": "QAM",
+      "detail": {
+        "worktree": "511b6e0db75f4d77762abf4fb1c7717577a082f09390de07f33f2923727e25b6",
+        "approved": null
+      }
+    },
+    {
+      "kind": "QAM_CHANGED_UNLISTED_OR_HASH",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/remote-roster-rebind-002/commit-succession.json",
+      "class": "QAM",
+      "detail": {
+        "worktree": "3da34c8c8863d431b7e4c467cc118f7ab8581cf9405acd14feb019ab5690e603",
+        "approved": null
+      }
+    },
+    {
+      "kind": "QAM_CHANGED_UNLISTED_OR_HASH",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/remote-roster-rebind-002/config-evidence/blobs/new-config__agents.manifest-hermes.json",
+      "class": "QAM",
+      "detail": {
+        "worktree": "638e95a166e9e196175bd630ce76560db1ef98dbe72d40f31d9a109782027ae8",
+        "approved": null
+      }
+    },
+    {
+      "kind": "QAM_CHANGED_UNLISTED_OR_HASH",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/remote-roster-rebind-002/config-evidence/blobs/new-config__agents.manifest.json",
+      "class": "QAM",
+      "detail": {
+        "worktree": "6c27f420127db7125a43ddba6347470b19d3be39769b44bb2b85bd6d9526b6d9",
+        "approved": null
+      }
+    },
+    {
+      "kind": "QAM_CHANGED_UNLISTED_OR_HASH",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/remote-roster-rebind-002/config-evidence/blobs/old-config__agents.manifest.json",
+      "class": "QAM",
+      "detail": {
+        "worktree": "638e95a166e9e196175bd630ce76560db1ef98dbe72d40f31d9a109782027ae8",
+        "approved": null
+      }
+    },
+    {
+      "kind": "QAM_CHANGED_UNLISTED_OR_HASH",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/remote-roster-rebind-002/config-evidence/blobs/old-config__agents.manifest_copy.json",
+      "class": "QAM",
+      "detail": {
+        "worktree": "6c27f420127db7125a43ddba6347470b19d3be39769b44bb2b85bd6d9526b6d9",
+        "approved": null
+      }
+    },
+    {
+      "kind": "QAM_CHANGED_UNLISTED_OR_HASH",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/remote-roster-rebind-002/config-evidence/config-delta.patch",
+      "class": "QAM",
+      "detail": {
+        "worktree": "2851f9c095c7dbce50421e08ad751b1aee47c2f9bf4016c9d02cb0497e8ec339",
+        "approved": null
+      }
+    },
+    {
+      "kind": "QAM_CHANGED_UNLISTED_OR_HASH",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/remote-roster-rebind-002/config-evidence/rebind-evidence.json",
+      "class": "QAM",
+      "detail": {
+        "worktree": "ae0ad265461938df2ce0dfc54dfdb52db1bed368cd45487bee39bec0d39194c8",
+        "approved": null
+      }
+    },
+    {
+      "kind": "QAM_CHANGED_UNLISTED_OR_HASH",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/remote-roster-rebind-002/current-config-equality.json",
+      "class": "QAM",
+      "detail": {
+        "worktree": "bc17d9daaaa8610320cee199ef95e63c917927baa6518c73d8c8ea8a1cfddd0b",
+        "approved": null
+      }
+    },
+    {
+      "kind": "QAM_CHANGED_UNLISTED_OR_HASH",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/remote-roster-rebind-002/entry-state.json",
+      "class": "QAM",
+      "detail": {
+        "worktree": "b05600cd8ca7ff053e4a76c59378f2b03ffd6a2108b80e1af9ebc4ac6fdc01e3",
+        "approved": null
+      }
+    },
+    {
+      "kind": "QAM_CHANGED_UNLISTED_OR_HASH",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/remote-roster-rebind-002/identity-current-bounded-variant.json",
+      "class": "QAM",
+      "detail": {
+        "worktree": "24ad4d9b4364678af08cbcd3c45a9cc8ad66cb92a530924b7fa102a64b8a9d73",
+        "approved": null
+      }
+    },
+    {
+      "kind": "QAM_CHANGED_UNLISTED_OR_HASH",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/remote-roster-rebind-002/identity-current-strict.json",
+      "class": "QAM",
+      "detail": {
+        "worktree": "c1e905962734ec0fc8353a3018cdad8562853963bb7254cd4b1a01f5436fce93",
+        "approved": null
+      }
+    },
+    {
+      "kind": "QAM_CHANGED_UNLISTED_OR_HASH",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/remote-roster-rebind-002/manifest-import-references.txt",
+      "class": "QAM",
+      "detail": {
+        "worktree": "cf57edeeb50dc0eabea46111ac20c10517539cb9cc72d3a62125aaa74fa1595b",
+        "approved": null
+      }
+    },
+    {
+      "kind": "QAM_CHANGED_UNLISTED_OR_HASH",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/remote-roster-rebind-002/proposed-record-inventory.json",
+      "class": "QAM",
+      "detail": {
+        "worktree": "1f67b2bb35c405b3294875511f76e8d9b01613efa2988b001fe928e8ff52c469",
+        "approved": null
+      }
+    },
+    {
+      "kind": "QAM_CHANGED_UNLISTED_OR_HASH",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/remote-roster-rebind-002/scope-preservation.json",
+      "class": "QAM",
+      "detail": {
+        "worktree": "2e5f67d301aa36d1eef621f02b6ae1d3b9e2116bf82344ed0aed143be16cbdc7",
+        "approved": null
+      }
+    },
+    {
+      "kind": "QAM_CHANGED_UNLISTED_OR_HASH",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/remote-roster-rebind-002/selective-staging-paths.txt",
+      "class": "QAM",
+      "detail": {
+        "worktree": "90029e68969ca14b121ec141bd39057e1d4ad43a54e1594a84f6f206bed6a0b8",
+        "approved": null
+      }
+    },
+    {
+      "kind": "QAM_CHANGED_UNLISTED_OR_HASH",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/remote-roster-request-2026-10-05/HANDOFFS/DIRECTOR_Q2_RELEASE_2026-10-05_193516.md",
+      "class": "QAM",
+      "detail": {
+        "worktree": "53c9a0dd297f87325e8b4c51cdcaebedd5b95fd67be23a9f22be89fddf9994c7",
+        "approved": null
+      }
+    },
+    {
+      "kind": "QAM_CHANGED_UNLISTED_OR_HASH",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/remote-roster-request-2026-10-05/HANDOFFS/Q2_RULING_REQUEST_2026-10-05_193516.md",
+      "class": "QAM",
+      "detail": {
+        "worktree": "602963ed091dc0881f69607bd897d38b83b8f78ccf39c1736a6b1557999b4a18",
+        "approved": null
+      }
+    },
+    {
+      "kind": "QAM_CHANGED_UNLISTED_OR_HASH",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/remote-roster-request-2026-10-05/QAM_STATE.json",
+      "class": "QAM",
+      "detail": {
+        "worktree": "aebbb36d42995e20639e0e275a0dd6412824614af9b8e5c14864621bb52a5c7b",
+        "approved": null
+      }
+    },
+    {
+      "kind": "QAM_CHANGED_UNLISTED_OR_HASH",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/remote-roster-request-2026-10-05/evidence/q2-prep-003/INDEX.md",
+      "class": "QAM",
+      "detail": {
+        "worktree": "c05af6cd3d1c7c2f0ed93cf015b5cc5cc18d319e3d9225eb0b2b2abadbc4f2bf",
+        "approved": null
+      }
+    },
+    {
+      "kind": "QAM_CHANGED_UNLISTED_OR_HASH",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/remote-roster-request-2026-10-05/evidence/q2-prep-003/identity-head-f21564c.json",
+      "class": "QAM",
+      "detail": {
+        "worktree": "3b815557bf3ac250ad632ed4f423ec380a9d83e5b64e2363c08a8c9556eedcb3",
+        "approved": null
+      }
+    },
+    {
+      "kind": "QAM_CHANGED_UNLISTED_OR_HASH",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/remote-roster-request-2026-10-05/evidence/q2-prep-003/jest-compare-candidate-vs-head.json",
+      "class": "QAM",
+      "detail": {
+        "worktree": "9bc723f3ca6095805a653f9e068c0a38d8ba778038c4fbf85f56a3a3f0901294",
+        "approved": null
+      }
+    },
+    {
+      "kind": "QAM_CHANGED_UNLISTED_OR_HASH",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/remote-roster-request-2026-10-05/evidence/q2-prep-003/jest-head-f21564c.json",
+      "class": "QAM",
+      "detail": {
+        "worktree": "bcbb403fb5c39f5cb0b4a671de779abf0c28321fa437845e2b60a977cad4c845",
+        "approved": null
+      }
+    },
+    {
+      "kind": "QAM_CHANGED_UNLISTED_OR_HASH",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/remote-roster-request-2026-10-05/evidence/q2-prep-003/jest-head-f21564c.log",
+      "class": "QAM",
+      "detail": {
+        "worktree": "534116a2a2c3e171fd7e0e42cabb9196adf7bf67d0afa71f0ac466d7f37a9065",
+        "approved": null
+      }
+    },
+    {
+      "kind": "QAM_CHANGED_UNLISTED_OR_HASH",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/session_2026-10-07.md",
+      "class": "QAM",
+      "detail": {
+        "worktree": "16f299edaf9148aacdd49767514503a558f31b643badb501be48585582c05e3c",
+        "approved": null
+      }
+    },
+    {
+      "kind": "DOCS_OUTSIDE_QAM_CHANGED",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QA_HANDOFF.md",
+      "class": "DOCS_OUTSIDE_QAM",
+      "detail": {
+        "worktree": "f83bcb00d177869bee2c08c370dfb9c2b9f40605d1f85694bfd7f43d6404e473"
+      }
+    },
+    {
+      "kind": "DOCS_OUTSIDE_QAM_CHANGED",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/START_HERE.md",
+      "class": "DOCS_OUTSIDE_QAM",
+      "detail": {
+        "worktree": "d41265f707e201cf7614c963169ce3eb9b6b1d080eef76fe8f18da1f700075de"
+      }
+    },
+    {
+      "kind": "DOCS_OUTSIDE_QAM_CHANGED",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/evidence/README.md",
+      "class": "DOCS_OUTSIDE_QAM",
+      "detail": {
+        "worktree": "4c37a5ba7216cdd9e25664492c7d4f360734bc8c585d60dda6f68667ab177181"
+      }
+    },
+    {
+      "kind": "DOCS_OUTSIDE_QAM_CHANGED",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/evidence/engineering-attempt-001/ENGINEER_AC_CLAIMS.md",
+      "class": "DOCS_OUTSIDE_QAM",
+      "detail": {
+        "worktree": "b306209674588d80b2decb6264dc7e2bbe81f5181d966278dad7f1158eed6137"
+      }
+    },
+    {
+      "kind": "DOCS_OUTSIDE_QAM_CHANGED",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/evidence/engineering-attempt-001/INHERITED_FAILURES.md",
+      "class": "DOCS_OUTSIDE_QAM",
+      "detail": {
+        "worktree": "4ca6e145095368fe169f1dd38c8c15bc0851d255103e04185946da847af83bc6"
+      }
+    },
+    {
+      "kind": "DOCS_OUTSIDE_QAM_CHANGED",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/evidence/engineering-attempt-001/REPRODUCTION.md",
+      "class": "DOCS_OUTSIDE_QAM",
+      "detail": {
+        "worktree": "577b9c08e99814d61d47a45add7e0f40bada652da5cfddb9d590ee783dcf3183"
+      }
+    },
+    {
+      "kind": "DOCS_OUTSIDE_QAM_CHANGED",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/evidence/engineering-attempt-001/REVIEW_START_HERE.md",
+      "class": "DOCS_OUTSIDE_QAM",
+      "detail": {
+        "worktree": "fe1421643e7530b8c2e2971a20ede29b5045c8eed43fea19939d90d1db84eb83"
+      }
+    },
+    {
+      "kind": "DOCS_OUTSIDE_QAM_CHANGED",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/evidence/engineering-attempt-001/SELECTIVE_STAGING.md",
+      "class": "DOCS_OUTSIDE_QAM",
+      "detail": {
+        "worktree": "72f8eee04f64bc7c9b73f9ab8c4e16bda352a47da51b3537cfb84713f663a270"
+      }
+    },
+    {
+      "kind": "DOCS_OUTSIDE_QAM_CHANGED",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/evidence/engineering-attempt-001/baseline-browser-diagnostic.json",
+      "class": "DOCS_OUTSIDE_QAM",
+      "detail": {
+        "worktree": "6ec207c4586f041793b930a15d978e0d29a3f4de3f5d2f0c362ce3bfb03fd0d5"
+      }
+    },
+    {
+      "kind": "DOCS_OUTSIDE_QAM_CHANGED",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/evidence/engineering-attempt-001/baseline-browser-diagnostic.log",
+      "class": "DOCS_OUTSIDE_QAM",
+      "detail": {
+        "worktree": "97eedfded79178f92adf3672ead770c87de566ec0fd34cd535b8e82786189ca8"
+      }
+    },
+    {
+      "kind": "DOCS_OUTSIDE_QAM_CHANGED",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/evidence/engineering-attempt-001/baseline-browser.json",
+      "class": "DOCS_OUTSIDE_QAM",
+      "detail": {
+        "worktree": "62122a954d109b5b5a4fcc234bbfb9ab2569c512602b8906d970cf42692bebf3"
+      }
+    },
+    {
+      "kind": "DOCS_OUTSIDE_QAM_CHANGED",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/evidence/engineering-attempt-001/baseline-browser.log",
+      "class": "DOCS_OUTSIDE_QAM",
+      "detail": {
+        "worktree": "c43223791e6e57ba22231e6309b27cf2c3bcd0f89d8a29343867047b371c726a"
+      }
+    },
+    {
+      "kind": "DOCS_OUTSIDE_QAM_CHANGED",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/evidence/engineering-attempt-001/baseline-build-diagnostic.json",
+      "class": "DOCS_OUTSIDE_QAM",
+      "detail": {
+        "worktree": "fea761a55da53bbe9aaee1c270e83d3533061d7569d21afc0fe7d2ebc7c934f6"
+      }
+    },
+    {
+      "kind": "DOCS_OUTSIDE_QAM_CHANGED",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/evidence/engineering-attempt-001/baseline-build-diagnostic.log",
+      "class": "DOCS_OUTSIDE_QAM",
+      "detail": {
+        "worktree": "1aa07cbc83350451d5d3e220647cd55036837e795e863f178bbf38d9c27a7058"
+      }
+    },
+    {
+      "kind": "DOCS_OUTSIDE_QAM_CHANGED",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/evidence/engineering-attempt-001/baseline-build.json",
+      "class": "DOCS_OUTSIDE_QAM",
+      "detail": {
+        "worktree": "2aabf51b2cc286e419b942655294f47e6167f5dfe4e64b38f6a0ee99fdeb6b7d"
+      }
+    },
+    {
+      "kind": "DOCS_OUTSIDE_QAM_CHANGED",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/evidence/engineering-attempt-001/baseline-build.log",
+      "class": "DOCS_OUTSIDE_QAM",
+      "detail": {
+        "worktree": "1639a49c5c634dc1abe6b58b2e957c6875beed963708a38a75ce5983bbbbfd13"
+      }
+    },
+    {
+      "kind": "DOCS_OUTSIDE_QAM_CHANGED",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/evidence/engineering-attempt-001/baseline-jest.json",
+      "class": "DOCS_OUTSIDE_QAM",
+      "detail": {
+        "worktree": "96d853daf74f8aa699766207b2f109d27fb86304732646919e11d3b6c9f66e1b"
+      }
+    },
+    {
+      "kind": "DOCS_OUTSIDE_QAM_CHANGED",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/evidence/engineering-attempt-001/baseline-jest.log",
+      "class": "DOCS_OUTSIDE_QAM",
+      "detail": {
+        "worktree": "105389ffade4904bdc477b77d02cca697701144e98201cd897871b036c897123"
+      }
+    },
+    {
+      "kind": "DOCS_OUTSIDE_QAM_CHANGED",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/evidence/engineering-attempt-001/baseline-tsc.json",
+      "class": "DOCS_OUTSIDE_QAM",
+      "detail": {
+        "worktree": "3b7a5fb89bd3d9e4984863da87a02dc063a13c9b0cc4cb33995fcfd67d6e8e94"
+      }
+    },
+    {
+      "kind": "DOCS_OUTSIDE_QAM_CHANGED",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/evidence/engineering-attempt-001/baseline-tsc.log",
+      "class": "DOCS_OUTSIDE_QAM",
+      "detail": {
+        "worktree": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    },
+    {
+      "kind": "DOCS_OUTSIDE_QAM_CHANGED",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/evidence/engineering-attempt-001/browser-artifacts/.last-run.json",
+      "class": "DOCS_OUTSIDE_QAM",
+      "detail": {
+        "worktree": "91d1c43004802cd49950d78eb11c8fa7d05da8ffffe219a8b13b2f561bc00903"
+      }
+    },
+    {
+      "kind": "DOCS_OUTSIDE_QAM_CHANGED",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/evidence/engineering-attempt-001/browser-first-failure-artifacts/.last-run.json",
+      "class": "DOCS_OUTSIDE_QAM",
+      "detail": {
+        "worktree": "e35c64b467c64328a50d08c8265f365bf5078b33107aaf831d7f75f55097b996"
+      }
+    },
+    {
+      "kind": "DOCS_OUTSIDE_QAM_CHANGED",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/evidence/engineering-attempt-001/browser-first-failure-artifacts/workspace-directory-filter-a59cf-er-and-safe-navigation-back/error-context.md",
+      "class": "DOCS_OUTSIDE_QAM",
+      "detail": {
+        "worktree": "3748d4b42275a8b0108c4d2e341d21aa53b641a2e701f6af79f84ae4f8b41177"
+      }
+    },
+    {
+      "kind": "DOCS_OUTSIDE_QAM_CHANGED",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/evidence/engineering-attempt-001/browser-first-failure-artifacts/workspace-directory-filter-a59cf-er-and-safe-navigation-back/test-failed-1.png",
+      "class": "DOCS_OUTSIDE_QAM",
+      "detail": {
+        "worktree": "bc5e8503847f9405c95495e87193a8fe071f55f4cea98b42a9611edd5da2ce74"
+      }
+    },
+    {
+      "kind": "DOCS_OUTSIDE_QAM_CHANGED",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/evidence/engineering-attempt-001/browser-first-failure-artifacts/workspace-render-conversation-dark-1280/error-context.md",
+      "class": "DOCS_OUTSIDE_QAM",
+      "detail": {
+        "worktree": "8a481599678bce63e7fb65eda77c0db9eb72d581c543d5f958d235d1bf6b1295"
+      }
+    },
+    {
+      "kind": "DOCS_OUTSIDE_QAM_CHANGED",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/evidence/engineering-attempt-001/browser-first-failure-artifacts/workspace-render-conversation-dark-1280/test-failed-1.png",
+      "class": "DOCS_OUTSIDE_QAM",
+      "detail": {
+        "worktree": "7978803e79543cca56cd5e931c1b395cc6d877c13eeca209ea5ca08b9df6a114"
+      }
+    },
+    {
+      "kind": "DOCS_OUTSIDE_QAM_CHANGED",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/evidence/engineering-attempt-001/browser-first-failure-artifacts/workspace-render-conversation-dark-375/error-context.md",
+      "class": "DOCS_OUTSIDE_QAM",
+      "detail": {
+        "worktree": "fa7a5a5f01fa1c4230df3d7d1c56b3017c0786970fbf72b5df7f209636c971ae"
+      }
+    },
+    {
+      "kind": "DOCS_OUTSIDE_QAM_CHANGED",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/evidence/engineering-attempt-001/browser-first-failure-artifacts/workspace-render-conversation-dark-375/test-failed-1.png",
+      "class": "DOCS_OUTSIDE_QAM",
+      "detail": {
+        "worktree": "348beb537af31dab6a421aaea0a2cd4125f6905d12650cbc1778c76016f9c026"
+      }
+    },
+    {
+      "kind": "DOCS_OUTSIDE_QAM_CHANGED",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/evidence/engineering-attempt-001/browser-first-failure-artifacts/workspace-render-conversation-dark-768/error-context.md",
+      "class": "DOCS_OUTSIDE_QAM",
+      "detail": {
+        "worktree": "27027e7c0cc857be9d41f53fb0b215facdc2ed384e5139a59341c52d544e4be8"
+      }
+    },
+    {
+      "kind": "DOCS_OUTSIDE_QAM_CHANGED",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/evidence/engineering-attempt-001/browser-first-failure-artifacts/workspace-render-conversation-dark-768/test-failed-1.png",
+      "class": "DOCS_OUTSIDE_QAM",
+      "detail": {
+        "worktree": "b6f912c100ba17e23a20d2f56d738525bac3409c4a299d192edff98d0d5daadb"
+      }
+    },
+    {
+      "kind": "DOCS_OUTSIDE_QAM_CHANGED",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/evidence/engineering-attempt-001/browser-first-failure-artifacts/workspace-render-conversation-light-1280/error-context.md",
+      "class": "DOCS_OUTSIDE_QAM",
+      "detail": {
+        "worktree": "c0325e7b7ba27137790b6b0f891f049fd8ec1843ac1dce2789f316f7335a57f4"
+      }
+    },
+    {
+      "kind": "DOCS_OUTSIDE_QAM_CHANGED",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/evidence/engineering-attempt-001/browser-first-failure-artifacts/workspace-render-conversation-light-1280/test-failed-1.png",
+      "class": "DOCS_OUTSIDE_QAM",
+      "detail": {
+        "worktree": "cf7ca335e053074241186c22239e660eac57e9bd3fc6d4bc55f7d7051284d5d8"
+      }
+    },
+    {
+      "kind": "DOCS_OUTSIDE_QAM_CHANGED",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/evidence/engineering-attempt-001/browser-first-failure-artifacts/workspace-render-conversation-light-375/error-context.md",
+      "class": "DOCS_OUTSIDE_QAM",
+      "detail": {
+        "worktree": "0d2afb544eebaa5b9799839d7b399066f47407cabb605bcd43cf788eddfb6bf2"
+      }
+    },
+    {
+      "kind": "DOCS_OUTSIDE_QAM_CHANGED",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/evidence/engineering-attempt-001/browser-first-failure-artifacts/workspace-render-conversation-light-375/test-failed-1.png",
+      "class": "DOCS_OUTSIDE_QAM",
+      "detail": {
+        "worktree": "237a0d619d4b611e4a5863aeee3f306d22e03103b092ad198d435b8ff831540d"
+      }
+    },
+    {
+      "kind": "DOCS_OUTSIDE_QAM_CHANGED",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/evidence/engineering-attempt-001/browser-first-failure-artifacts/workspace-render-conversation-light-768/error-context.md",
+      "class": "DOCS_OUTSIDE_QAM",
+      "detail": {
+        "worktree": "124b395c4f0bee2c8bdb81d68100a0ca8841e045a76576b09a341e9e0cf493a8"
+      }
+    },
+    {
+      "kind": "DOCS_OUTSIDE_QAM_CHANGED",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/evidence/engineering-attempt-001/browser-first-failure-artifacts/workspace-render-conversation-light-768/test-failed-1.png",
+      "class": "DOCS_OUTSIDE_QAM",
+      "detail": {
+        "worktree": "c381f97d538c31e0e75ea0dbfc957e628bc09ba6de49c68a983cf9487e777fac"
+      }
+    },
+    {
+      "kind": "DOCS_OUTSIDE_QAM_CHANGED",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/evidence/engineering-attempt-001/browser-first-failure-artifacts/workspace-render-directory-dark-1280/error-context.md",
+      "class": "DOCS_OUTSIDE_QAM",
+      "detail": {
+        "worktree": "46d672e20807995631cbfafaeaf4ffa8d9462c65c03cdef310afb0555aa39273"
+      }
+    },
+    {
+      "kind": "DOCS_OUTSIDE_QAM_CHANGED",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/evidence/engineering-attempt-001/browser-first-failure-artifacts/workspace-render-directory-dark-1280/test-failed-1.png",
+      "class": "DOCS_OUTSIDE_QAM",
+      "detail": {
+        "worktree": "cadff2e1eb892426b64746c4af59396192c5c665fc06e8985c2bed3fa52633c4"
+      }
+    },
+    {
+      "kind": "DOCS_OUTSIDE_QAM_CHANGED",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/evidence/engineering-attempt-001/browser-first-failure-artifacts/workspace-render-directory-dark-375/error-context.md",
+      "class": "DOCS_OUTSIDE_QAM",
+      "detail": {
+        "worktree": "4f64c3559e063873bf16fddf0bfc85a0bf3af3e738c5547937d34a6f49f72176"
+      }
+    },
+    {
+      "kind": "DOCS_OUTSIDE_QAM_CHANGED",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/evidence/engineering-attempt-001/browser-first-failure-artifacts/workspace-render-directory-dark-375/test-failed-1.png",
+      "class": "DOCS_OUTSIDE_QAM",
+      "detail": {
+        "worktree": "547fc52e212829343ad92755efc76e78ea1387dd18d2ab6d896ffaed09c6aa5c"
+      }
+    },
+    {
+      "kind": "DOCS_OUTSIDE_QAM_CHANGED",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/evidence/engineering-attempt-001/browser-first-failure-artifacts/workspace-render-directory-dark-768/error-context.md",
+      "class": "DOCS_OUTSIDE_QAM",
+      "detail": {
+        "worktree": "36dd64f7ae28bff6583bb68e186c1fdd5e42244789e2ce758865da2276dc50c2"
+      }
+    },
+    {
+      "kind": "DOCS_OUTSIDE_QAM_CHANGED",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/evidence/engineering-attempt-001/browser-first-failure-artifacts/workspace-render-directory-dark-768/test-failed-1.png",
+      "class": "DOCS_OUTSIDE_QAM",
+      "detail": {
+        "worktree": "1724516cba6a2876fa3782f54e6c03a3eaadb6bbab281bb629f8d49f469a89fa"
+      }
+    },
+    {
+      "kind": "DOCS_OUTSIDE_QAM_CHANGED",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/evidence/engineering-attempt-001/browser-first-failure-artifacts/workspace-render-directory-light-1280/error-context.md",
+      "class": "DOCS_OUTSIDE_QAM",
+      "detail": {
+        "worktree": "083a7c299c597d2474553d22ddf0a95f584e4c406ab80a22e22ca73a7ed5e595"
+      }
+    },
+    {
+      "kind": "DOCS_OUTSIDE_QAM_CHANGED",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/evidence/engineering-attempt-001/browser-first-failure-artifacts/workspace-render-directory-light-1280/test-failed-1.png",
+      "class": "DOCS_OUTSIDE_QAM",
+      "detail": {
+        "worktree": "bc77023a57d61a36a9af1e75eb766447a5507b6e3f4ecd68cd5be7bf7177b7d6"
+      }
+    },
+    {
+      "kind": "DOCS_OUTSIDE_QAM_CHANGED",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/evidence/engineering-attempt-001/browser-first-failure-artifacts/workspace-render-directory-light-375/error-context.md",
+      "class": "DOCS_OUTSIDE_QAM",
+      "detail": {
+        "worktree": "bbed946759b8ae7da8f7cd6a0e68e3b66207998931a30c2c5fcd991f57dffa4b"
+      }
+    },
+    {
+      "kind": "DOCS_OUTSIDE_QAM_CHANGED",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/evidence/engineering-attempt-001/browser-first-failure-artifacts/workspace-render-directory-light-375/test-failed-1.png",
+      "class": "DOCS_OUTSIDE_QAM",
+      "detail": {
+        "worktree": "086236e403b2d50174807e6db813e64d5debc18e2f1fbc569aadd4c36ab0fedd"
+      }
+    },
+    {
+      "kind": "DOCS_OUTSIDE_QAM_CHANGED",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/evidence/engineering-attempt-001/browser-first-failure-artifacts/workspace-render-directory-light-768/error-context.md",
+      "class": "DOCS_OUTSIDE_QAM",
+      "detail": {
+        "worktree": "e5c530b108a91907866ab58d1bfbb9266707b6b1a48ed65a919b1daaa48f7586"
+      }
+    },
+    {
+      "kind": "DOCS_OUTSIDE_QAM_CHANGED",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/evidence/engineering-attempt-001/browser-first-failure-artifacts/workspace-render-directory-light-768/test-failed-1.png",
+      "class": "DOCS_OUTSIDE_QAM",
+      "detail": {
+        "worktree": "040fc723ba7915ac1846e972609b182f3f84ee0cc06b35cf0a5c3cc840301a94"
+      }
+    },
+    {
+      "kind": "DOCS_OUTSIDE_QAM_CHANGED",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/evidence/engineering-attempt-001/browser-first-failure-artifacts/workspace-render-workspace-dark-1280/error-context.md",
+      "class": "DOCS_OUTSIDE_QAM",
+      "detail": {
+        "worktree": "9c7c304d0e10bf38321c141aaf8dd20a6a539eac2d11f6feec20f02cfa69c722"
+      }
+    },
+    {
+      "kind": "DOCS_OUTSIDE_QAM_CHANGED",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/evidence/engineering-attempt-001/browser-first-failure-artifacts/workspace-render-workspace-dark-1280/test-failed-1.png",
+      "class": "DOCS_OUTSIDE_QAM",
+      "detail": {
+        "worktree": "fb8fe22f92a7096df761e3860ba259101c59c5c7f5f4ba5911c0e073e0b19d12"
+      }
+    },
+    {
+      "kind": "DOCS_OUTSIDE_QAM_CHANGED",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/evidence/engineering-attempt-001/browser-first-failure-artifacts/workspace-render-workspace-dark-375/error-context.md",
+      "class": "DOCS_OUTSIDE_QAM",
+      "detail": {
+        "worktree": "9b63956fc891b6c4e4911625d1f84f44af4e162f02c01ad9d0b03f604745057d"
+      }
+    },
+    {
+      "kind": "DOCS_OUTSIDE_QAM_CHANGED",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/evidence/engineering-attempt-001/browser-first-failure-artifacts/workspace-render-workspace-dark-375/test-failed-1.png",
+      "class": "DOCS_OUTSIDE_QAM",
+      "detail": {
+        "worktree": "fe33b92eaed6650dad8b1c3e13de3bb5e643b2c4252d8005b35ee5a6c6fd5fcc"
+      }
+    },
+    {
+      "kind": "DOCS_OUTSIDE_QAM_CHANGED",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/evidence/engineering-attempt-001/browser-first-failure-artifacts/workspace-render-workspace-dark-768/error-context.md",
+      "class": "DOCS_OUTSIDE_QAM",
+      "detail": {
+        "worktree": "776ae152b4c37e30ef83df2463f84cbaf8dbdeeb68d2a84c9b60ef8f66a04b37"
+      }
+    },
+    {
+      "kind": "DOCS_OUTSIDE_QAM_CHANGED",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/evidence/engineering-attempt-001/browser-first-failure-artifacts/workspace-render-workspace-dark-768/test-failed-1.png",
+      "class": "DOCS_OUTSIDE_QAM",
+      "detail": {
+        "worktree": "f44560f9985587b81af7063752cff07bf6f38fc3f02495a90a3ec8d60d3458ca"
+      }
+    },
+    {
+      "kind": "DOCS_OUTSIDE_QAM_CHANGED",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/evidence/engineering-attempt-001/browser-first-failure-artifacts/workspace-render-workspace-light-1280/error-context.md",
+      "class": "DOCS_OUTSIDE_QAM",
+      "detail": {
+        "worktree": "c77b68987f414bff8f6a92f4ae733f837eb98bcdd0c5032f4103aad8be40b0ea"
+      }
+    },
+    {
+      "kind": "DOCS_OUTSIDE_QAM_CHANGED",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/evidence/engineering-attempt-001/browser-first-failure-artifacts/workspace-render-workspace-light-1280/test-failed-1.png",
+      "class": "DOCS_OUTSIDE_QAM",
+      "detail": {
+        "worktree": "6e38be707f3e34d8166b8af2dc91ab19085e9b95d83ca1839980cb637eaed2e8"
+      }
+    },
+    {
+      "kind": "DOCS_OUTSIDE_QAM_CHANGED",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/evidence/engineering-attempt-001/browser-first-failure-artifacts/workspace-render-workspace-light-375/error-context.md",
+      "class": "DOCS_OUTSIDE_QAM",
+      "detail": {
+        "worktree": "2e8c5c1353e1d3327ca363f31db8750485c6eea5b65ee86d5e72c4875180345b"
+      }
+    },
+    {
+      "kind": "DOCS_OUTSIDE_QAM_CHANGED",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/evidence/engineering-attempt-001/browser-first-failure-artifacts/workspace-render-workspace-light-375/test-failed-1.png",
+      "class": "DOCS_OUTSIDE_QAM",
+      "detail": {
+        "worktree": "dd596d61175c68135400b860ca2cf9caa0cfbf460854c610a0ce381fc93db6f4"
+      }
+    },
+    {
+      "kind": "DOCS_OUTSIDE_QAM_CHANGED",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/evidence/engineering-attempt-001/browser-first-failure-artifacts/workspace-render-workspace-light-768/error-context.md",
+      "class": "DOCS_OUTSIDE_QAM",
+      "detail": {
+        "worktree": "e7f59a8b1b6babaa236a9108ae0df1354b5abb0a9e9cc6e54d6bcfd6dfee691b"
+      }
+    },
+    {
+      "kind": "DOCS_OUTSIDE_QAM_CHANGED",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/evidence/engineering-attempt-001/browser-first-failure-artifacts/workspace-render-workspace-light-768/test-failed-1.png",
+      "class": "DOCS_OUTSIDE_QAM",
+      "detail": {
+        "worktree": "c9a8db8b8c14f309ee4d3efb3c39e917dc7ee745a2ffcf34fae940fc2c74038c"
+      }
+    },
+    {
+      "kind": "DOCS_OUTSIDE_QAM_CHANGED",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/evidence/engineering-attempt-001/browser-second-failure-artifacts/.last-run.json",
+      "class": "DOCS_OUTSIDE_QAM",
+      "detail": {
+        "worktree": "78b38438d404b228a8cd69c313ba98027de495bd1dfd9d09be6049dba32331b7"
+      }
+    },
+    {
+      "kind": "DOCS_OUTSIDE_QAM_CHANGED",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/evidence/engineering-attempt-001/browser-second-failure-artifacts/workspace-directory-filter-a59cf-er-and-safe-navigation-back/error-context.md",
+      "class": "DOCS_OUTSIDE_QAM",
+      "detail": {
+        "worktree": "a0f13496ca2613961cdead7c58e6c9eccafbb1f8e45661c2d153c8a56f1894c8"
+      }
+    },
+    {
+      "kind": "DOCS_OUTSIDE_QAM_CHANGED",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/evidence/engineering-attempt-001/browser-second-failure-artifacts/workspace-directory-filter-a59cf-er-and-safe-navigation-back/test-failed-1.png",
+      "class": "DOCS_OUTSIDE_QAM",
+      "detail": {
+        "worktree": "038500bbd4b9b3a191de880fd32261a142614ac6115b42bb226b0253d453b684"
+      }
+    },
+    {
+      "kind": "DOCS_OUTSIDE_QAM_CHANGED",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/evidence/engineering-attempt-001/browser-second-failure-artifacts/workspace-render-conversation-dark-1280/error-context.md",
+      "class": "DOCS_OUTSIDE_QAM",
+      "detail": {
+        "worktree": "58726f3a1d25365262c4c5cb0786de25d5f9a80fe66fd30b00c4fc25acc586b2"
+      }
+    },
+    {
+      "kind": "DOCS_OUTSIDE_QAM_CHANGED",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/evidence/engineering-attempt-001/browser-second-failure-artifacts/workspace-render-conversation-dark-1280/test-failed-1.png",
+      "class": "DOCS_OUTSIDE_QAM",
+      "detail": {
+        "worktree": "7978803e79543cca56cd5e931c1b395cc6d877c13eeca209ea5ca08b9df6a114"
+      }
+    },
+    {
+      "kind": "DOCS_OUTSIDE_QAM_CHANGED",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/evidence/engineering-attempt-001/browser-second-failure-artifacts/workspace-render-conversation-dark-768/error-context.md",
+      "class": "DOCS_OUTSIDE_QAM",
+      "detail": {
+        "worktree": "b74b43c37dfda004813071f9a7b68a665b2114e53e6ee70431ba71383b20245e"
+      }
+    },
+    {
+      "kind": "DOCS_OUTSIDE_QAM_CHANGED",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/evidence/engineering-attempt-001/browser-second-failure-artifacts/workspace-render-conversation-dark-768/test-failed-1.png",
+      "class": "DOCS_OUTSIDE_QAM",
+      "detail": {
+        "worktree": "b6f912c100ba17e23a20d2f56d738525bac3409c4a299d192edff98d0d5daadb"
+      }
+    },
+    {
+      "kind": "DOCS_OUTSIDE_QAM_CHANGED",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/evidence/engineering-attempt-001/browser-second-failure-artifacts/workspace-render-conversation-light-1280/error-context.md",
+      "class": "DOCS_OUTSIDE_QAM",
+      "detail": {
+        "worktree": "b860a0c53aaf68f5fb9e92619d6af3420f3e749ce0c51ae0995ff132825122dc"
+      }
+    },
+    {
+      "kind": "DOCS_OUTSIDE_QAM_CHANGED",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/evidence/engineering-attempt-001/browser-second-failure-artifacts/workspace-render-conversation-light-1280/test-failed-1.png",
+      "class": "DOCS_OUTSIDE_QAM",
+      "detail": {
+        "worktree": "cf7ca335e053074241186c22239e660eac57e9bd3fc6d4bc55f7d7051284d5d8"
+      }
+    },
+    {
+      "kind": "DOCS_OUTSIDE_QAM_CHANGED",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/evidence/engineering-attempt-001/browser-second-failure-artifacts/workspace-render-conversation-light-768/error-context.md",
+      "class": "DOCS_OUTSIDE_QAM",
+      "detail": {
+        "worktree": "caeb852a2fb837889f4a2bd0f09f863b2df22de7327bb6f6c9f1f69b7345c129"
+      }
+    },
+    {
+      "kind": "DOCS_OUTSIDE_QAM_CHANGED",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/evidence/engineering-attempt-001/browser-second-failure-artifacts/workspace-render-conversation-light-768/test-failed-1.png",
+      "class": "DOCS_OUTSIDE_QAM",
+      "detail": {
+        "worktree": "c381f97d538c31e0e75ea0dbfc957e628bc09ba6de49c68a983cf9487e777fac"
+      }
+    },
+    {
+      "kind": "DOCS_OUTSIDE_QAM_CHANGED",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/evidence/engineering-attempt-001/browser-third-failure-artifacts/.last-run.json",
+      "class": "DOCS_OUTSIDE_QAM",
+      "detail": {
+        "worktree": "4aba1cba6da2628e311458e58e76d496665dc05f28afa9c47cc84e051d87b985"
+      }
+    },
+    {
+      "kind": "DOCS_OUTSIDE_QAM_CHANGED",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/evidence/engineering-attempt-001/browser-third-failure-artifacts/workspace-render-conversation-dark-1280/error-context.md",
+      "class": "DOCS_OUTSIDE_QAM",
+      "detail": {
+        "worktree": "a18f8fed389f5d17603395cea16eb362f8ee0646f34d96b2976cb1753bf550ad"
+      }
+    },
+    {
+      "kind": "DOCS_OUTSIDE_QAM_CHANGED",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/evidence/engineering-attempt-001/browser-third-failure-artifacts/workspace-render-conversation-dark-1280/test-failed-1.png",
+      "class": "DOCS_OUTSIDE_QAM",
+      "detail": {
+        "worktree": "c3197a9806c887382ce5d0c3d641eba68d0b42f0de7c19fec04408bb0eadb1c8"
+      }
+    },
+    {
+      "kind": "DOCS_OUTSIDE_QAM_CHANGED",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/evidence/engineering-attempt-001/browser-third-failure-artifacts/workspace-render-conversation-dark-768/error-context.md",
+      "class": "DOCS_OUTSIDE_QAM",
+      "detail": {
+        "worktree": "7e45aa432239961582edd42759588b6f2809326f68e2681721309739d0a58b07"
+      }
+    },
+    {
+      "kind": "DOCS_OUTSIDE_QAM_CHANGED",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/evidence/engineering-attempt-001/browser-third-failure-artifacts/workspace-render-conversation-dark-768/test-failed-1.png",
+      "class": "DOCS_OUTSIDE_QAM",
+      "detail": {
+        "worktree": "9595faf3e1cc964eaab29b7b6f4d186efd8f3726833d6e5224a4b0622a77ba40"
+      }
+    },
+    {
+      "kind": "DOCS_OUTSIDE_QAM_CHANGED",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/evidence/engineering-attempt-001/browser-third-failure-artifacts/workspace-render-conversation-light-1280/error-context.md",
+      "class": "DOCS_OUTSIDE_QAM",
+      "detail": {
+        "worktree": "82f0a603b3ee0ef6b5b1278f1aabdfabf06ddebf49b1b668852e37a22f25d5a5"
+      }
+    },
+    {
+      "kind": "DOCS_OUTSIDE_QAM_CHANGED",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/evidence/engineering-attempt-001/browser-third-failure-artifacts/workspace-render-conversation-light-1280/test-failed-1.png",
+      "class": "DOCS_OUTSIDE_QAM",
+      "detail": {
+        "worktree": "037ac8c7a72a8fdb3c3af4e8145e7b049c7fe9009d144908d4b0fd7aec3a9272"
+      }
+    },
+    {
+      "kind": "DOCS_OUTSIDE_QAM_CHANGED",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/evidence/engineering-attempt-001/browser-third-failure-artifacts/workspace-render-conversation-light-768/error-context.md",
+      "class": "DOCS_OUTSIDE_QAM",
+      "detail": {
+        "worktree": "a6d73b8396d724d2ee71f37b796f902f94c5d89f531e30d064c5a291c045dd9f"
+      }
+    },
+    {
+      "kind": "DOCS_OUTSIDE_QAM_CHANGED",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/evidence/engineering-attempt-001/browser-third-failure-artifacts/workspace-render-conversation-light-768/test-failed-1.png",
+      "class": "DOCS_OUTSIDE_QAM",
+      "detail": {
+        "worktree": "fd9185f370618df4c5f19524af9545274e230210ee7c80f6f1e748215bc2e9e2"
+      }
+    },
+    {
+      "kind": "DOCS_OUTSIDE_QAM_CHANGED",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/evidence/engineering-attempt-001/build-network-guard.cjs",
+      "class": "DOCS_OUTSIDE_QAM",
+      "detail": {
+        "worktree": "7de4fc8a84d0cca8c7bc2d963e7301d8d8a724d2927e2d16a77d4eb3f2bf3a39"
+      }
+    },
+    {
+      "kind": "DOCS_OUTSIDE_QAM_CHANGED",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/evidence/engineering-attempt-001/candidate-identity.json",
+      "class": "DOCS_OUTSIDE_QAM",
+      "detail": {
+        "worktree": "a55b197b83399b73f1f794e53537a6c2e16e48c1434e3432db1ab560c057afd6"
+      }
+    },
+    {
+      "kind": "DOCS_OUTSIDE_QAM_CHANGED",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/evidence/engineering-attempt-001/candidate-scope.json",
+      "class": "DOCS_OUTSIDE_QAM",
+      "detail": {
+        "worktree": "338dbdf4ee6a93590ce3114b34b49e66ec8c90df1020205ff6ec38e5d63c87cf"
+      }
+    },
+    {
+      "kind": "DOCS_OUTSIDE_QAM_CHANGED",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/evidence/engineering-attempt-001/changed-source-inventory.json",
+      "class": "DOCS_OUTSIDE_QAM",
+      "detail": {
+        "worktree": "ac422c55e257cf9c5992ed35d1052701d966bae3bd48ecf95200ae34f6cb60ea"
+      }
+    },
+    {
+      "kind": "DOCS_OUTSIDE_QAM_CHANGED",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/evidence/engineering-attempt-001/engineering-browser-final.json",
+      "class": "DOCS_OUTSIDE_QAM",
+      "detail": {
+        "worktree": "ffc0a165fbcf78d8df07b4bc151b980fa0ca5a533e085674bc032261eeefe8d6"
+      }
+    },
+    {
+      "kind": "DOCS_OUTSIDE_QAM_CHANGED",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/evidence/engineering-attempt-001/engineering-browser-final.log",
+      "class": "DOCS_OUTSIDE_QAM",
+      "detail": {
+        "worktree": "4177f486b9d557bea5b329e08a43edc368ab305d9abac142fc09a40ab9c9fd96"
+      }
+    },
+    {
+      "kind": "DOCS_OUTSIDE_QAM_CHANGED",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/evidence/engineering-attempt-001/engineering-browser-first.json",
+      "class": "DOCS_OUTSIDE_QAM",
+      "detail": {
+        "worktree": "d3e32c3527d73557b71c67b53a017b3b08e1f4f8b571d81d7a710a52ff1f4c0f"
+      }
+    },
+    {
+      "kind": "DOCS_OUTSIDE_QAM_CHANGED",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/evidence/engineering-attempt-001/engineering-browser-first.log",
+      "class": "DOCS_OUTSIDE_QAM",
+      "detail": {
+        "worktree": "3ba886bbd4efdf8b29cdddc76101b62002c631a90318846d92e682b0612e29d8"
+      }
+    },
+    {
+      "kind": "DOCS_OUTSIDE_QAM_CHANGED",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/evidence/engineering-attempt-001/engineering-browser-second.json",
+      "class": "DOCS_OUTSIDE_QAM",
+      "detail": {
+        "worktree": "1d079a01aab5b0882ff925411c3bb986bfa744524d0ec4f3f26cd476be452fbe"
+      }
+    },
+    {
+      "kind": "DOCS_OUTSIDE_QAM_CHANGED",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/evidence/engineering-attempt-001/engineering-browser-second.log",
+      "class": "DOCS_OUTSIDE_QAM",
+      "detail": {
+        "worktree": "0498e8a9ff0520232bfe050139013adfdc69ebf9e8361b32f6c9903366e21912"
+      }
+    },
+    {
+      "kind": "DOCS_OUTSIDE_QAM_CHANGED",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/evidence/engineering-attempt-001/engineering-browser-verified.json",
+      "class": "DOCS_OUTSIDE_QAM",
+      "detail": {
+        "worktree": "1f01becce8ce5b140f109adbf0c93fa323e2dd78862c9e9f0edcb28e43b5cc06"
+      }
+    },
+    {
+      "kind": "DOCS_OUTSIDE_QAM_CHANGED",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/evidence/engineering-attempt-001/engineering-browser-verified.log",
+      "class": "DOCS_OUTSIDE_QAM",
+      "detail": {
+        "worktree": "a798ceab029532230981601ccc77786a5c5cead7125ad862aebe9ffeff940382"
+      }
+    },
+    {
+      "kind": "DOCS_OUTSIDE_QAM_CHANGED",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/evidence/engineering-attempt-001/engineering-build-final.json",
+      "class": "DOCS_OUTSIDE_QAM",
+      "detail": {
+        "worktree": "f4deded1899258aebe2b516ece1d669fb7d4c7c070ef3c80bfac4720d6f88758"
+      }
+    },
+    {
+      "kind": "DOCS_OUTSIDE_QAM_CHANGED",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/evidence/engineering-attempt-001/engineering-build-final.log",
+      "class": "DOCS_OUTSIDE_QAM",
+      "detail": {
+        "worktree": "0c368c221f77cb2b39dd9c799cbc874a93330d60534f5c8221c9b40fdeff700f"
+      }
+    },
+    {
+      "kind": "DOCS_OUTSIDE_QAM_CHANGED",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/evidence/engineering-attempt-001/engineering-jest-complete.json",
+      "class": "DOCS_OUTSIDE_QAM",
+      "detail": {
+        "worktree": "63c1e8c7bef58edc911550454c9f431836c38d4570a71b8ea5e43d6d3b4fa08b"
+      }
+    },
+    {
+      "kind": "DOCS_OUTSIDE_QAM_CHANGED",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/evidence/engineering-attempt-001/engineering-jest-complete.log",
+      "class": "DOCS_OUTSIDE_QAM",
+      "detail": {
+        "worktree": "6aa0c8026aac87b89773f1f6c1f60a4cbc4f122253c05f10010f9dc32be2f3c1"
+      }
+    },
+    {
+      "kind": "DOCS_OUTSIDE_QAM_CHANGED",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/evidence/engineering-attempt-001/engineering-jest-final.json",
+      "class": "DOCS_OUTSIDE_QAM",
+      "detail": {
+        "worktree": "e8927cee351565a13ec006db5d76fa1bae0a3d57169ae3e521fef341edd01299"
+      }
+    },
+    {
+      "kind": "DOCS_OUTSIDE_QAM_CHANGED",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/evidence/engineering-attempt-001/engineering-jest-final.log",
+      "class": "DOCS_OUTSIDE_QAM",
+      "detail": {
+        "worktree": "36fc7c1afdbb44970aed8bb6ade8a163cb946d0e7d19d43bec656c2414e19cab"
+      }
+    },
+    {
+      "kind": "DOCS_OUTSIDE_QAM_CHANGED",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/evidence/engineering-attempt-001/engineering-jest-verified.json",
+      "class": "DOCS_OUTSIDE_QAM",
+      "detail": {
+        "worktree": "c24fca9886e9b64009aa21e3faef569c7c566a75a004f9cce5f358d48ff81c0c"
+      }
+    },
+    {
+      "kind": "DOCS_OUTSIDE_QAM_CHANGED",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/evidence/engineering-attempt-001/engineering-jest-verified.log",
+      "class": "DOCS_OUTSIDE_QAM",
+      "detail": {
+        "worktree": "328da909e53982666d9117390af79e7465f3f64640cceb9e47ea3865b473cfa3"
+      }
+    },
+    {
+      "kind": "DOCS_OUTSIDE_QAM_CHANGED",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/evidence/engineering-attempt-001/engineering-targeted-first.json",
+      "class": "DOCS_OUTSIDE_QAM",
+      "detail": {
+        "worktree": "d58358708cc0e9b026dc41a53b1c8c3445382f99cbc6a52f886d489824674ea1"
+      }
+    },
+    {
+      "kind": "DOCS_OUTSIDE_QAM_CHANGED",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/evidence/engineering-attempt-001/engineering-targeted-first.log",
+      "class": "DOCS_OUTSIDE_QAM",
+      "detail": {
+        "worktree": "6205a6d55c8e1c32a6b98ff6765547204042226dd8334f83e698221bf282cacb"
+      }
+    },
+    {
+      "kind": "DOCS_OUTSIDE_QAM_CHANGED",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/evidence/engineering-attempt-001/engineering-targeted-second.json",
+      "class": "DOCS_OUTSIDE_QAM",
+      "detail": {
+        "worktree": "b70499d88671b440e08d064bd2ae83e2a9f1d8df954cdb934ed9a71abba76d73"
+      }
+    },
+    {
+      "kind": "DOCS_OUTSIDE_QAM_CHANGED",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/evidence/engineering-attempt-001/engineering-targeted-second.log",
+      "class": "DOCS_OUTSIDE_QAM",
+      "detail": {
+        "worktree": "97be5f74af63c879e602ced457672dd01fc725a55bcd99dbabfd13d096d5efbb"
+      }
+    },
+    {
+      "kind": "DOCS_OUTSIDE_QAM_CHANGED",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/evidence/engineering-attempt-001/engineering-targeted-verified.json",
+      "class": "DOCS_OUTSIDE_QAM",
+      "detail": {
+        "worktree": "a10c7b120618519dcca72b0a51da664081a1349e937720ce09071a59657249cc"
+      }
+    },
+    {
+      "kind": "DOCS_OUTSIDE_QAM_CHANGED",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/evidence/engineering-attempt-001/engineering-targeted-verified.log",
+      "class": "DOCS_OUTSIDE_QAM",
+      "detail": {
+        "worktree": "5949d9bf09276dedfdf28eb04ba3e680bbe042f768f9ad52492f8c39c99bc037"
+      }
+    },
+    {
+      "kind": "DOCS_OUTSIDE_QAM_CHANGED",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/evidence/engineering-attempt-001/engineering-tsc-final.json",
+      "class": "DOCS_OUTSIDE_QAM",
+      "detail": {
+        "worktree": "12040cbf16c595820ba4d68cb88cf64c38a9c07cb1b0f27a330e581573077c5a"
+      }
+    },
+    {
+      "kind": "DOCS_OUTSIDE_QAM_CHANGED",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/evidence/engineering-attempt-001/engineering-tsc-final.log",
+      "class": "DOCS_OUTSIDE_QAM",
+      "detail": {
+        "worktree": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    },
+    {
+      "kind": "DOCS_OUTSIDE_QAM_CHANGED",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/evidence/engineering-attempt-001/entry-identity.json",
+      "class": "DOCS_OUTSIDE_QAM",
+      "detail": {
+        "worktree": "063210b2d45eda770d2d5313050cb3bbce86e88dd1ab70211fb855df85d94214"
+      }
+    },
+    {
+      "kind": "DOCS_OUTSIDE_QAM_CHANGED",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/evidence/engineering-attempt-001/frozen-packet-equality.json",
+      "class": "DOCS_OUTSIDE_QAM",
+      "detail": {
+        "worktree": "a84f692e9c5a43ad41b9bff5c8f583a05fdff5ca277bc3bafee921e495afa64e"
+      }
+    },
+    {
+      "kind": "DOCS_OUTSIDE_QAM_CHANGED",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/evidence/engineering-attempt-001/handoff-location-correction.json",
+      "class": "DOCS_OUTSIDE_QAM",
+      "detail": {
+        "worktree": "650f3ad1c20e988d902b699b8360d5cc312644a96a6425ff222b79e43023498f"
+      }
+    },
+    {
+      "kind": "DOCS_OUTSIDE_QAM_CHANGED",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/evidence/engineering-attempt-001/inherited-jest-failures.json",
+      "class": "DOCS_OUTSIDE_QAM",
+      "detail": {
+        "worktree": "4133b57f2cfe7638a9c5cc33103c3784c5f39f26ffe38b4d8da3663c7b8ad22d"
+      }
+    },
+    {
+      "kind": "DOCS_OUTSIDE_QAM_CHANGED",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/evidence/engineering-attempt-001/jest-comparison.json",
+      "class": "DOCS_OUTSIDE_QAM",
+      "detail": {
+        "worktree": "c32d8a64c348f601e3fe73d95b397d1514e789ebc7d888b4fa400cf01940c7c9"
+      }
+    },
+    {
+      "kind": "DOCS_OUTSIDE_QAM_CHANGED",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/evidence/engineering-attempt-001/playwright-first-results.json",
+      "class": "DOCS_OUTSIDE_QAM",
+      "detail": {
+        "worktree": "d39d5fab3be65cdf2b50237e971357710a2b017fda6dad10679cf713fc462d8d"
+      }
+    },
+    {
+      "kind": "DOCS_OUTSIDE_QAM_CHANGED",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/evidence/engineering-attempt-001/playwright-results.json",
+      "class": "DOCS_OUTSIDE_QAM",
+      "detail": {
+        "worktree": "06f5d5684e06c3cd61ab60c617878ecd62e1b2f15ea4881bf617650753488176"
+      }
+    },
+    {
+      "kind": "DOCS_OUTSIDE_QAM_CHANGED",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/evidence/engineering-attempt-001/playwright-second-results.json",
+      "class": "DOCS_OUTSIDE_QAM",
+      "detail": {
+        "worktree": "a4a916b007e4996c7ccd2dcfe8009be0892424384f078a1bf4cea425875059c0"
+      }
+    },
+    {
+      "kind": "DOCS_OUTSIDE_QAM_CHANGED",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/evidence/engineering-attempt-001/playwright-third-results.json",
+      "class": "DOCS_OUTSIDE_QAM",
+      "detail": {
+        "worktree": "408494922a6c740b905f58f2b4dd5d95993554d6d3bac8f26227e0ce08e389f3"
+      }
+    },
+    {
+      "kind": "DOCS_OUTSIDE_QAM_CHANGED",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/evidence/engineering-attempt-001/product.patch",
+      "class": "DOCS_OUTSIDE_QAM",
+      "detail": {
+        "worktree": "bc0b130568c2d53162850cfa38c43e7adae923335e5cfc66065ea239f9b170e5"
+      }
+    },
+    {
+      "kind": "DOCS_OUTSIDE_QAM_CHANGED",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/evidence/engineering-attempt-001/protected-file-equality.json",
+      "class": "DOCS_OUTSIDE_QAM",
+      "detail": {
+        "worktree": "553c1e64b41b36c4334b43e22857d297c6a452e6c707d7ad821ba1a6dd4fc230"
+      }
+    },
+    {
+      "kind": "DOCS_OUTSIDE_QAM_CHANGED",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/evidence/engineering-attempt-001/safety-and-network.json",
+      "class": "DOCS_OUTSIDE_QAM",
+      "detail": {
+        "worktree": "6f909cd06bb0df30c83d05b821c1c5365a89738f83d99d176fe1449de0db2323"
+      }
+    },
+    {
+      "kind": "DOCS_OUTSIDE_QAM_CHANGED",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/evidence/engineering-attempt-001/screenshots/conversation-dark-1280.png",
+      "class": "DOCS_OUTSIDE_QAM",
+      "detail": {
+        "worktree": "9c35118ac8810af6c3bce1851b10826eea27a59bc43f2bd420b56c9e95e8a4a8"
+      }
+    },
+    {
+      "kind": "DOCS_OUTSIDE_QAM_CHANGED",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/evidence/engineering-attempt-001/screenshots/conversation-dark-375.png",
+      "class": "DOCS_OUTSIDE_QAM",
+      "detail": {
+        "worktree": "589a0723b92415080d5a8a8501faa597d77eccec08dc9aa8f51da15ca70f5936"
+      }
+    },
+    {
+      "kind": "DOCS_OUTSIDE_QAM_CHANGED",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/evidence/engineering-attempt-001/screenshots/conversation-dark-768.png",
+      "class": "DOCS_OUTSIDE_QAM",
+      "detail": {
+        "worktree": "19a95c316155b6ee7ecd2c1325f6e657d61fb62a44481916f8bc30c107bb06c6"
+      }
+    },
+    {
+      "kind": "DOCS_OUTSIDE_QAM_CHANGED",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/evidence/engineering-attempt-001/screenshots/conversation-light-1280.png",
+      "class": "DOCS_OUTSIDE_QAM",
+      "detail": {
+        "worktree": "79972c13c9e9fe51861070155bfd41c59c05c75d2bea95920db3b534b70b1b40"
+      }
+    },
+    {
+      "kind": "DOCS_OUTSIDE_QAM_CHANGED",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/evidence/engineering-attempt-001/screenshots/conversation-light-375.png",
+      "class": "DOCS_OUTSIDE_QAM",
+      "detail": {
+        "worktree": "409e9030de4775a954668913c10e3e2de31b5f351b737ffd2b1ed74748baea7b"
+      }
+    },
+    {
+      "kind": "DOCS_OUTSIDE_QAM_CHANGED",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/evidence/engineering-attempt-001/screenshots/conversation-light-768.png",
+      "class": "DOCS_OUTSIDE_QAM",
+      "detail": {
+        "worktree": "16d076ef7951a46e8c58d25a2de03e9fac566ee88bdc360a257aeed03a718274"
+      }
+    },
+    {
+      "kind": "DOCS_OUTSIDE_QAM_CHANGED",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/evidence/engineering-attempt-001/screenshots/directory-dark-1280.png",
+      "class": "DOCS_OUTSIDE_QAM",
+      "detail": {
+        "worktree": "90fcd792ca6e5e5bbede617b327529655dda4e1558920015fa554dfe431bdef5"
+      }
+    },
+    {
+      "kind": "DOCS_OUTSIDE_QAM_CHANGED",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/evidence/engineering-attempt-001/screenshots/directory-dark-375.png",
+      "class": "DOCS_OUTSIDE_QAM",
+      "detail": {
+        "worktree": "bc09bc1efa77c4a149b4e1f46a08a7ed95668890f8128afbc722148c5cecdfbd"
+      }
+    },
+    {
+      "kind": "DOCS_OUTSIDE_QAM_CHANGED",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/evidence/engineering-attempt-001/screenshots/directory-dark-768.png",
+      "class": "DOCS_OUTSIDE_QAM",
+      "detail": {
+        "worktree": "5947a515c9de4e90168279b444c2d6cdf231555648cb0b3b5e1b19d301b4708a"
+      }
+    },
+    {
+      "kind": "DOCS_OUTSIDE_QAM_CHANGED",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/evidence/engineering-attempt-001/screenshots/directory-light-1280.png",
+      "class": "DOCS_OUTSIDE_QAM",
+      "detail": {
+        "worktree": "ed23c8627f59a6bce8ea45c3e3314b2b4dcce18bad1c6e7d2463e1110f0d102d"
+      }
+    },
+    {
+      "kind": "DOCS_OUTSIDE_QAM_CHANGED",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/evidence/engineering-attempt-001/screenshots/directory-light-375.png",
+      "class": "DOCS_OUTSIDE_QAM",
+      "detail": {
+        "worktree": "00b68f1ec93a5ed49cbf2829436900d7ce5f06308b7be9194d69e212bfe01463"
+      }
+    },
+    {
+      "kind": "DOCS_OUTSIDE_QAM_CHANGED",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/evidence/engineering-attempt-001/screenshots/directory-light-768.png",
+      "class": "DOCS_OUTSIDE_QAM",
+      "detail": {
+        "worktree": "7bbc61253b81b1c3fec97b5948f994b2f038699cbe5c70b36a9255ba4a977075"
+      }
+    },
+    {
+      "kind": "DOCS_OUTSIDE_QAM_CHANGED",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/evidence/engineering-attempt-001/screenshots/workspace-dark-1280.png",
+      "class": "DOCS_OUTSIDE_QAM",
+      "detail": {
+        "worktree": "17ea25cbb244b0b4e6d8f2a2507688425927c41382b1f5ce28865b7bf9fe66df"
+      }
+    },
+    {
+      "kind": "DOCS_OUTSIDE_QAM_CHANGED",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/evidence/engineering-attempt-001/screenshots/workspace-dark-375.png",
+      "class": "DOCS_OUTSIDE_QAM",
+      "detail": {
+        "worktree": "0b30c9b4d2a238ab3b61e544215c7b90550f599f0b4db39c6324ec5c9e0e2fba"
+      }
+    },
+    {
+      "kind": "DOCS_OUTSIDE_QAM_CHANGED",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/evidence/engineering-attempt-001/screenshots/workspace-dark-768.png",
+      "class": "DOCS_OUTSIDE_QAM",
+      "detail": {
+        "worktree": "429c01f803f8f138fbbe59ac7b87e75cbe9d4aa78b519673b16c025cad6427fd"
+      }
+    },
+    {
+      "kind": "DOCS_OUTSIDE_QAM_CHANGED",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/evidence/engineering-attempt-001/screenshots/workspace-light-1280.png",
+      "class": "DOCS_OUTSIDE_QAM",
+      "detail": {
+        "worktree": "ba42365ddb4b72ab60b1b901cbb6c29137bb12aa9283e4d77648259b569c3e10"
+      }
+    },
+    {
+      "kind": "DOCS_OUTSIDE_QAM_CHANGED",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/evidence/engineering-attempt-001/screenshots/workspace-light-375.png",
+      "class": "DOCS_OUTSIDE_QAM",
+      "detail": {
+        "worktree": "28af6eb8db598802f1785062cb5ea43c8b84e09da9f92274c72de1858866e88a"
+      }
+    },
+    {
+      "kind": "DOCS_OUTSIDE_QAM_CHANGED",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/evidence/engineering-attempt-001/screenshots/workspace-light-768.png",
+      "class": "DOCS_OUTSIDE_QAM",
+      "detail": {
+        "worktree": "ab1c0a9afcc4f1d80c4fb4316186863b9e32afa42e041a8533d033b2229c29ed"
+      }
+    },
+    {
+      "kind": "DOCS_OUTSIDE_QAM_CHANGED",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/evidence/engineering-attempt-001/staging-paths.txt",
+      "class": "DOCS_OUTSIDE_QAM",
+      "detail": {
+        "worktree": "7e4f360d8fe73a4b6d2d99829cb9fa567a736e626dc33d49be9f58fe1f1f178e"
+      }
+    },
+    {
+      "kind": "DOCS_OUTSIDE_QAM_CHANGED",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/evidence/engineering-attempt-001/teardown-check.json",
+      "class": "DOCS_OUTSIDE_QAM",
+      "detail": {
+        "worktree": "b46a682b5febe072c3fd5c188f677fe0e35842e9b5a98b53389fd1714d602cb7"
+      }
+    },
+    {
+      "kind": "DOCS_OUTSIDE_QAM_CHANGED",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/references/FFM_OPERATING_MODEL_REFERENCE.md",
+      "class": "DOCS_OUTSIDE_QAM",
+      "detail": {
+        "worktree": "168b8545dfd44ace0283adfb570561fb7c05a8d86cc63b7777d3ba03fc00012e"
+      }
+    },
+    {
+      "kind": "DOCS_OUTSIDE_QAM_CHANGED",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/references/ORIGINAL_PHASE_MAP_REFERENCE.md",
+      "class": "DOCS_OUTSIDE_QAM",
+      "detail": {
+        "worktree": "e702b38bfd9b804e5bf3a7adcb737e797df107be2945107f04abfe101af28390"
+      }
+    },
+    {
+      "kind": "DOCS_OUTSIDE_QAM_CHANGED",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/references/QAM_MASTER_DRAFT_REFERENCE.md",
+      "class": "DOCS_OUTSIDE_QAM",
+      "detail": {
+        "worktree": "df084145954887674b47feb8b42cc179d90c9199e4f7281622084ac6add7379b"
+      }
+    },
+    {
+      "kind": "DOCS_OUTSIDE_QAM_CHANGED",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/references/README.md",
+      "class": "DOCS_OUTSIDE_QAM",
+      "detail": {
+        "worktree": "60c35bd780fe8be552ab8917882b02b00c928c6258492a338703ecbfd040534c"
+      }
+    },
+    {
+      "kind": "DOCS_OUTSIDE_QAM_CHANGED",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/references/SOURCE_RECON.md",
+      "class": "DOCS_OUTSIDE_QAM",
+      "detail": {
+        "worktree": "b5748403ff7e56d290d088843122c011d369dea9f72c608e66e8fb48981a0b59"
+      }
+    },
+    {
+      "kind": "DOCS_OUTSIDE_QAM_CHANGED",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/references/THEME_SOURCE_NOTES.md",
+      "class": "DOCS_OUTSIDE_QAM",
+      "detail": {
+        "worktree": "69bf422e58ee7bbf5023949f79f447ab4efcef9a8b185cd058f3ec62e671e604"
+      }
+    },
+    {
+      "kind": "DOCS_OUTSIDE_QAM_CHANGED",
+      "path": "agent_docs/PLANNING/STARK_AGENT_WORKSPACE_KICKOFF_v0_1.md",
+      "class": "DOCS_OUTSIDE_QAM",
+      "detail": {
+        "worktree": "8e24ef7ea033e248fb80774cfd3a317a5e553162dcc7082f1c64c135054b1fe5"
+      }
+    },
+    {
+      "kind": "DOCS_OUTSIDE_QAM_CHANGED",
+      "path": "agent_docs/RECON/RECON_ADK_CONTINUATION_20261004-115739.md",
+      "class": "DOCS_OUTSIDE_QAM",
+      "detail": {
+        "worktree": "e7dbfd8a29001b0b1b7ed6d7bdc830c1b4550d690e058870b0d914042494c053"
+      }
+    },
+    {
+      "kind": "DOCS_OUTSIDE_QAM_CHANGED",
+      "path": "agent_docs/RECON/RECON_ADK_FRONTEND_20261003-234722.md",
+      "class": "DOCS_OUTSIDE_QAM",
+      "detail": {
+        "worktree": "b5748403ff7e56d290d088843122c011d369dea9f72c608e66e8fb48981a0b59"
+      }
+    },
+    {
+      "kind": "DOCS_OUTSIDE_QAM_CHANGED",
+      "path": "agent_docs/RESPONSES/response_2026-07-16_121728_stageA-scope-announcement.md",
+      "class": "DOCS_OUTSIDE_QAM",
+      "detail": {
+        "worktree": null
+      }
+    },
+    {
+      "kind": "DOCS_OUTSIDE_QAM_CHANGED",
+      "path": "agent_docs/RESPONSES/response_2026-07-16_143955_stageA-recon-headline.md",
+      "class": "DOCS_OUTSIDE_QAM",
+      "detail": {
+        "worktree": null
+      }
+    },
+    {
+      "kind": "DOCS_OUTSIDE_QAM_CHANGED",
+      "path": "agent_docs/RESPONSES/response_2026-07-16_191653_bim001-implementation-plan.md",
+      "class": "DOCS_OUTSIDE_QAM",
+      "detail": {
+        "worktree": null
+      }
+    },
+    {
+      "kind": "DOCS_OUTSIDE_QAM_CHANGED",
+      "path": "agent_docs/RESPONSES/response_2026-07-16_194121_bim001-execution-complete.md",
+      "class": "DOCS_OUTSIDE_QAM",
+      "detail": {
+        "worktree": null
+      }
+    },
+    {
+      "kind": "DOCS_OUTSIDE_QAM_CHANGED",
+      "path": "agent_docs/RESPONSES/response_2026-07-17_145856_g6-investigation.md",
+      "class": "DOCS_OUTSIDE_QAM",
+      "detail": {
+        "worktree": null
+      }
+    },
+    {
+      "kind": "DOCS_OUTSIDE_QAM_CHANGED",
+      "path": "agent_docs/RESPONSES/response_2026-07-17_150844_bim001-closeout.md",
+      "class": "DOCS_OUTSIDE_QAM",
+      "detail": {
+        "worktree": null
+      }
+    },
+    {
+      "kind": "DOCS_OUTSIDE_QAM_CHANGED",
+      "path": "agent_docs/RESPONSES/response_2026-07-18_130047_fix001-preflight-plan.md",
+      "class": "DOCS_OUTSIDE_QAM",
+      "detail": {
+        "worktree": null
+      }
+    },
+    {
+      "kind": "DOCS_OUTSIDE_QAM_CHANGED",
+      "path": "agent_docs/RESPONSES/response_2026-07-18_131303_fix001-execution-result.md",
+      "class": "DOCS_OUTSIDE_QAM",
+      "detail": {
+        "worktree": null
+      }
+    },
+    {
+      "kind": "DOCS_OUTSIDE_QAM_CHANGED",
+      "path": "agent_docs/RESPONSES/response_2026-07-18_145214_fix001-amendment-result.md",
+      "class": "DOCS_OUTSIDE_QAM",
+      "detail": {
+        "worktree": null
+      }
+    },
+    {
+      "kind": "DOCS_OUTSIDE_QAM_CHANGED",
+      "path": "agent_docs/RESPONSES/response_2026-07-18_161419_fix001-final-disposition.md",
+      "class": "DOCS_OUTSIDE_QAM",
+      "detail": {
+        "worktree": null
+      }
+    },
+    {
+      "kind": "DOCS_OUTSIDE_QAM_CHANGED",
+      "path": "agent_docs/RESPONSES/response_2026-07-18_163153_bim002-preflight-plan.md",
+      "class": "DOCS_OUTSIDE_QAM",
+      "detail": {
+        "worktree": null
+      }
+    },
+    {
+      "kind": "DOCS_OUTSIDE_QAM_CHANGED",
+      "path": "agent_docs/RESPONSES/response_2026-07-18_172056_bim002-execution-result.md",
+      "class": "DOCS_OUTSIDE_QAM",
+      "detail": {
+        "worktree": null
+      }
+    },
+    {
+      "kind": "DOCS_OUTSIDE_QAM_CHANGED",
+      "path": "agent_docs/RESPONSES/response_2026-07-19_140029_fix002-preflight-plan.md",
+      "class": "DOCS_OUTSIDE_QAM",
+      "detail": {
+        "worktree": null
+      }
+    },
+    {
+      "kind": "DOCS_OUTSIDE_QAM_CHANGED",
+      "path": "agent_docs/RESPONSES/response_2026-07-19_141545_fix002-execution-result.md",
+      "class": "DOCS_OUTSIDE_QAM",
+      "detail": {
+        "worktree": null
+      }
+    },
+    {
+      "kind": "DOCS_OUTSIDE_QAM_CHANGED",
+      "path": "agent_docs/RESPONSES/response_2026-07-19_171925_feat001-preflight-plan.md",
+      "class": "DOCS_OUTSIDE_QAM",
+      "detail": {
+        "worktree": null
+      }
+    },
+    {
+      "kind": "DOCS_OUTSIDE_QAM_CHANGED",
+      "path": "agent_docs/RESPONSES/response_2026-07-19_172910_feat001-execution-result.md",
+      "class": "DOCS_OUTSIDE_QAM",
+      "detail": {
+        "worktree": null
+      }
+    },
+    {
+      "kind": "DOCS_OUTSIDE_QAM_CHANGED",
+      "path": "agent_docs/RESPONSES/response_2026-07-19_183350_bim003-preflight-plan.md",
+      "class": "DOCS_OUTSIDE_QAM",
+      "detail": {
+        "worktree": null
+      }
+    },
+    {
+      "kind": "DOCS_OUTSIDE_QAM_CHANGED",
+      "path": "agent_docs/RESPONSES/response_2026-07-19_184207_bim003-execution-result.md",
+      "class": "DOCS_OUTSIDE_QAM",
+      "detail": {
+        "worktree": null
+      }
+    },
+    {
+      "kind": "DOCS_OUTSIDE_QAM_CHANGED",
+      "path": "agent_docs/RESPONSES/response_2026-07-19_190517_bim004-preflight-plan.md",
+      "class": "DOCS_OUTSIDE_QAM",
+      "detail": {
+        "worktree": null
+      }
+    },
+    {
+      "kind": "DOCS_OUTSIDE_QAM_CHANGED",
+      "path": "agent_docs/RESPONSES/response_2026-07-19_191938_bim004-execution-result.md",
+      "class": "DOCS_OUTSIDE_QAM",
+      "detail": {
+        "worktree": null
+      }
+    },
+    {
+      "kind": "DOCS_OUTSIDE_QAM_CHANGED",
+      "path": "agent_docs/RESPONSES/response_2026-07-20_001929_bim005-preflight-plan.md",
+      "class": "DOCS_OUTSIDE_QAM",
+      "detail": {
+        "worktree": null
+      }
+    },
+    {
+      "kind": "DOCS_OUTSIDE_QAM_CHANGED",
+      "path": "agent_docs/RESPONSES/response_2026-07-20_002531_bim005-execution-result.md",
+      "class": "DOCS_OUTSIDE_QAM",
+      "detail": {
+        "worktree": null
+      }
+    },
+    {
+      "kind": "DOCS_OUTSIDE_QAM_CHANGED",
+      "path": "agent_docs/RESPONSES/response_2026-07-20_193942_fix003-preflight-plan.md",
+      "class": "DOCS_OUTSIDE_QAM",
+      "detail": {
+        "worktree": null
+      }
+    },
+    {
+      "kind": "DOCS_OUTSIDE_QAM_CHANGED",
+      "path": "agent_docs/RESPONSES/response_2026-07-20_195136_fix003-execution-result.md",
+      "class": "DOCS_OUTSIDE_QAM",
+      "detail": {
+        "worktree": null
+      }
+    },
+    {
+      "kind": "DOCS_OUTSIDE_QAM_CHANGED",
+      "path": "agent_docs/RESPONSES/response_2026-10-03_234722_adk-frontend-recon_evidence/FILE_INDEX.md",
+      "class": "DOCS_OUTSIDE_QAM",
+      "detail": {
+        "worktree": "c4159162f1e6ee93d897dd86b3893f83e0aec9f8a2b1445f8bef0c0d216edb30"
+      }
+    },
+    {
+      "kind": "DOCS_OUTSIDE_QAM_CHANGED",
+      "path": "agent_docs/RESPONSES/response_2026-10-03_234722_adk-frontend-recon_evidence/audit.log",
+      "class": "DOCS_OUTSIDE_QAM",
+      "detail": {
+        "worktree": "066e229af269b635b1cee208d51e54ad3a58b2478a84964dac04241214adcaf3"
+      }
+    },
+    {
+      "kind": "DOCS_OUTSIDE_QAM_CHANGED",
+      "path": "agent_docs/RESPONSES/response_2026-10-03_234722_adk-frontend-recon_evidence/boot.log",
+      "class": "DOCS_OUTSIDE_QAM",
+      "detail": {
+        "worktree": "faace5fb702704883c319df9ad48b99799060b19e81061b7ff01767207a84eed"
+      }
+    },
+    {
+      "kind": "DOCS_OUTSIDE_QAM_CHANGED",
+      "path": "agent_docs/RESPONSES/response_2026-10-03_234722_adk-frontend-recon_evidence/browser.json",
+      "class": "DOCS_OUTSIDE_QAM",
+      "detail": {
+        "worktree": "422fbd5b9b811365476ccac1a6bec60bfb9633b4f3af50bf1aa924b02d29eb3c"
+      }
+    },
+    {
+      "kind": "DOCS_OUTSIDE_QAM_CHANGED",
+      "path": "agent_docs/RESPONSES/response_2026-10-03_234722_adk-frontend-recon_evidence/build.log",
+      "class": "DOCS_OUTSIDE_QAM",
+      "detail": {
+        "worktree": "f0bd5fc1e68d4d9bd7c7c040acfe11573ccf04ccfeb7f3a64e859097093f2971"
+      }
+    },
+    {
+      "kind": "DOCS_OUTSIDE_QAM_CHANGED",
+      "path": "agent_docs/RESPONSES/response_2026-10-03_234722_adk-frontend-recon_evidence/check-results.json",
+      "class": "DOCS_OUTSIDE_QAM",
+      "detail": {
+        "worktree": "8e8ba4ee2d3e846aee84ff33db603d71e86a18d1eb2bb490fafd36b96696f442"
+      }
+    },
+    {
+      "kind": "DOCS_OUTSIDE_QAM_CHANGED",
+      "path": "agent_docs/RESPONSES/response_2026-10-03_234722_adk-frontend-recon_evidence/final-state.json",
+      "class": "DOCS_OUTSIDE_QAM",
+      "detail": {
+        "worktree": "664a03b0e64a18686d08372e31e0837345e326bd64a240a0bde9b442910362b3"
+      }
+    },
+    {
+      "kind": "DOCS_OUTSIDE_QAM_CHANGED",
+      "path": "agent_docs/RESPONSES/response_2026-10-03_234722_adk-frontend-recon_evidence/inspection-evidence.json",
+      "class": "DOCS_OUTSIDE_QAM",
+      "detail": {
+        "worktree": "e65d5ff6bbe803b415b7a0bc9e52042b5c2ca6715c2b8beafff30074dccb50ab"
+      }
+    },
+    {
+      "kind": "DOCS_OUTSIDE_QAM_CHANGED",
+      "path": "agent_docs/RESPONSES/response_2026-10-03_234722_adk-frontend-recon_evidence/inventory.json",
+      "class": "DOCS_OUTSIDE_QAM",
+      "detail": {
+        "worktree": "a33ced12a973d787abcb50cb27a1f47b8dba266b4375b263ddfdff8d26367d41"
+      }
+    },
+    {
+      "kind": "DOCS_OUTSIDE_QAM_CHANGED",
+      "path": "agent_docs/RESPONSES/response_2026-10-03_234722_adk-frontend-recon_evidence/jest-excerpts.txt",
+      "class": "DOCS_OUTSIDE_QAM",
+      "detail": {
+        "worktree": "db199da1561c6df16d1dee61639ee2c414ee7cdd384bd46d427dc9708c585c0b"
+      }
+    },
+    {
+      "kind": "DOCS_OUTSIDE_QAM_CHANGED",
+      "path": "agent_docs/RESPONSES/response_2026-10-03_234722_adk-frontend-recon_evidence/lint.log",
+      "class": "DOCS_OUTSIDE_QAM",
+      "detail": {
+        "worktree": "260b8ae8da12057e8bb8ef00a12d0f23244464dbb758fae0665a25280f2a82e9"
+      }
+    },
+    {
+      "kind": "DOCS_OUTSIDE_QAM_CHANGED",
+      "path": "agent_docs/RESPONSES/response_2026-10-03_234722_adk-frontend-recon_evidence/live-probe.json",
+      "class": "DOCS_OUTSIDE_QAM",
+      "detail": {
+        "worktree": "2cce2d2f18ea4b7df979b5a6ebed62e1032555cdf6faba1827eb5efe800fd4db"
+      }
+    },
+    {
+      "kind": "DOCS_OUTSIDE_QAM_CHANGED",
+      "path": "agent_docs/RESPONSES/response_2026-10-03_234722_adk-frontend-recon_evidence/test-results.json",
+      "class": "DOCS_OUTSIDE_QAM",
+      "detail": {
+        "worktree": "4fdfb3cb696e29639ba70ee83749bedf8f44bdbefe9fb2c8c1ac33755a8bb318"
+      }
+    },
+    {
+      "kind": "DOCS_OUTSIDE_QAM_CHANGED",
+      "path": "agent_docs/RESPONSES/response_2026-10-04_115739_adk-capability-continuation.md",
+      "class": "DOCS_OUTSIDE_QAM",
+      "detail": {
+        "worktree": "2a3d45bf8fee819fa4c8854de3dd492fc6f366297cdc7349d49d9e99bbdb9e58"
+      }
+    },
+    {
+      "kind": "DOCS_OUTSIDE_QAM_CHANGED",
+      "path": "agent_docs/RESPONSES/response_2026-10-04_115739_adk-capability-continuation_evidence/FILE_INDEX.md",
+      "class": "DOCS_OUTSIDE_QAM",
+      "detail": {
+        "worktree": "f2c1017e28c2b99e056519c591aefdd2ca0b56e48d88530a7660976e941c3c24"
+      }
+    },
+    {
+      "kind": "DOCS_OUTSIDE_QAM_CHANGED",
+      "path": "agent_docs/RESPONSES/response_2026-10-04_115739_adk-capability-continuation_evidence/get-a-after.json",
+      "class": "DOCS_OUTSIDE_QAM",
+      "detail": {
+        "worktree": "6ff7fb1fac237cee29bfa35411efd26174fe2600ba9f0455ea00d654aed5aa73"
+      }
+    },
+    {
+      "kind": "DOCS_OUTSIDE_QAM_CHANGED",
+      "path": "agent_docs/RESPONSES/response_2026-10-04_115739_adk-capability-continuation_evidence/get-a-before.json",
+      "class": "DOCS_OUTSIDE_QAM",
+      "detail": {
+        "worktree": "082ff5045ade7bbaea056d1468420f9b008b26c52ace67a149a24bb79694d0ed"
+      }
+    },
+    {
+      "kind": "DOCS_OUTSIDE_QAM_CHANGED",
+      "path": "agent_docs/RESPONSES/response_2026-10-04_115739_adk-capability-continuation_evidence/get-b-after.json",
+      "class": "DOCS_OUTSIDE_QAM",
+      "detail": {
+        "worktree": "b99f3b9252d806d8ce3ac24e8f04b3eb595dd120242866e94ab70fe9ae3a93f2"
+      }
+    },
+    {
+      "kind": "DOCS_OUTSIDE_QAM_CHANGED",
+      "path": "agent_docs/RESPONSES/response_2026-10-04_115739_adk-capability-continuation_evidence/get-b-before.json",
+      "class": "DOCS_OUTSIDE_QAM",
+      "detail": {
+        "worktree": "eb9f1fc86f92cbf82793765498d06392bc016ca885dae4c234cb7ca36f0690ef"
+      }
+    },
+    {
+      "kind": "DOCS_OUTSIDE_QAM_CHANGED",
+      "path": "agent_docs/RESPONSES/response_2026-10-04_115739_adk-capability-continuation_evidence/list.json",
+      "class": "DOCS_OUTSIDE_QAM",
+      "detail": {
+        "worktree": "78713c45a0185233842707c103257e4af3b3eaf5d9eb205248f0ec5e9b22c5fb"
+      }
+    },
+    {
+      "kind": "DOCS_OUTSIDE_QAM_CHANGED",
+      "path": "agent_docs/RESPONSES/response_2026-10-04_115739_adk-capability-continuation_evidence/repo-state.json",
+      "class": "DOCS_OUTSIDE_QAM",
+      "detail": {
+        "worktree": "a0a2d73975fc4d9d9b2a78a5e67bea22ba3e07418f6f2c00284078444b2670cf"
+      }
+    },
+    {
+      "kind": "DOCS_OUTSIDE_QAM_CHANGED",
+      "path": "agent_docs/RESPONSES/response_2026-10-04_115739_adk-capability-continuation_evidence/request-ledger.json",
+      "class": "DOCS_OUTSIDE_QAM",
+      "detail": {
+        "worktree": "d3b37af70ac57532828dcbf0dedd710445de090d77998597b49c25e11bcdd29e"
+      }
+    },
+    {
+      "kind": "DOCS_OUTSIDE_QAM_CHANGED",
+      "path": "agent_docs/RESPONSES/response_2026-10-04_115739_adk-capability-continuation_evidence/resume-a.json",
+      "class": "DOCS_OUTSIDE_QAM",
+      "detail": {
+        "worktree": "b8b953737e09b1c0749b2f82a5081007f9be131b6a3ed385e8d0c2260e1bcae7"
+      }
+    },
+    {
+      "kind": "DOCS_OUTSIDE_QAM_CHANGED",
+      "path": "agent_docs/RESPONSES/response_2026-10-04_115739_adk-capability-continuation_evidence/resume-b.json",
+      "class": "DOCS_OUTSIDE_QAM",
+      "detail": {
+        "worktree": "d2067dee0394eb8845394d59877446b30aacfb479aee4ea79243e4addf1eeed7"
+      }
+    },
+    {
+      "kind": "DOCS_OUTSIDE_QAM_CHANGED",
+      "path": "agent_docs/RESPONSES/response_2026-10-04_115739_adk-capability-continuation_evidence/verification.json",
+      "class": "DOCS_OUTSIDE_QAM",
+      "detail": {
+        "worktree": "9d3e844b490ebe6778cdbdf1f4ff130956eb1f02384c5a7cba95efc641b3d60e"
+      }
+    },
+    {
+      "kind": "DOCS_OUTSIDE_QAM_CHANGED",
+      "path": "agent_docs/RESPONSES/response_2026-10-04_153205_designer-theme-source-report.md",
+      "class": "DOCS_OUTSIDE_QAM",
+      "detail": {
+        "worktree": "6f015306ee1235eb60827dacec05e85ce388ef22f6e5ef701be329a0aa03aa01"
+      }
+    },
+    {
+      "kind": "DOCS_OUTSIDE_QAM_CHANGED",
+      "path": "agent_docs/RESPONSES/response_2026-10-04_220306_apbm-000-engineering-return.md",
+      "class": "DOCS_OUTSIDE_QAM",
+      "detail": {
+        "worktree": "c59032d0784e27a7c70b9c68c9bc2ba8d12db46406e427ae98f0400936f4f5d5"
+      }
+    },
+    {
+      "kind": "DOCS_OUTSIDE_QAM_CHANGED",
+      "path": "agent_docs/RESPONSES/response_2026-10-04_221511_qa-handoff-location-correction.md",
+      "class": "DOCS_OUTSIDE_QAM",
+      "detail": {
+        "worktree": "f9f47fa066a29e0cfe55de7c5f420ef90a509c14a2ba92e6ae6e26f3f848efb6"
+      }
+    },
+    {
+      "kind": "DOCS_OUTSIDE_QAM_CHANGED",
+      "path": "agent_docs/RESPONSES/response_2026-10-05_114929_apbm-000-q1-qa-intake.md",
+      "class": "DOCS_OUTSIDE_QAM",
+      "detail": {
+        "worktree": "5f2396aae0ee6687e4b4f460bb10b93d1fa2b84c8842eee97e52a0134e91a4ba"
+      }
+    },
+    {
+      "kind": "DOCS_OUTSIDE_QAM_CHANGED",
+      "path": "agent_docs/RESPONSES/response_2026-10-05_182656_apbm-000-q2-pending-decisions.md",
+      "class": "DOCS_OUTSIDE_QAM",
+      "detail": {
+        "worktree": "3d0c110c4feb588595abee5ad24226a26796e3ee14a23960382366e583966332"
+      }
+    },
+    {
+      "kind": "DOCS_OUTSIDE_QAM_CHANGED",
+      "path": "agent_docs/RESPONSES/response_2026-10-05_183159_apbm-000-q2-prep-still-blocked.md",
+      "class": "DOCS_OUTSIDE_QAM",
+      "detail": {
+        "worktree": "2f15a20c27e574c65332f24d437bad2686d684bc09eac0e820038113174050f0"
+      }
+    },
+    {
+      "kind": "DOCS_OUTSIDE_QAM_CHANGED",
+      "path": "agent_docs/RESPONSES/response_2026-10-05_193516_apbm-000-q2-held-ruling-request.md",
+      "class": "DOCS_OUTSIDE_QAM",
+      "detail": {
+        "worktree": "602963ed091dc0881f69607bd897d38b83b8f78ccf39c1736a6b1557999b4a18"
+      }
+    },
+    {
+      "kind": "DOCS_OUTSIDE_QAM_CHANGED",
+      "path": "agent_docs/RESPONSES/response_2026-10-07_184448_apbm-000-q2-hold-lead-files-missing.md",
+      "class": "DOCS_OUTSIDE_QAM",
+      "detail": {
+        "worktree": "9ef808d8b83021d43f3c4a0db364bed397e556f522f96b015fda00211764b1eb"
+      }
+    },
+    {
+      "kind": "DOCS_OUTSIDE_QAM_CHANGED",
+      "path": "agent_docs/RESPONSES/response_2026-10-07_185841_apbm-000-lead-approval-installed-commit-list.md",
+      "class": "DOCS_OUTSIDE_QAM",
+      "detail": {
+        "worktree": "88ade533005b19416d7ff342ca0214538e9f8b40ebd1994f90407c1a5c9c40ea"
+      }
+    },
+    {
+      "kind": "PROTECTED_MISMATCH",
+      "path": "config/agents.manifest.json",
+      "class": "PRODUCT_CONFIG_TEST_DEP",
+      "detail": [
+        "638e95a166e9e196175bd630ce76560db1ef98dbe72d40f31d9a109782027ae8",
+        "6c27f420127db7125a43ddba6347470b19d3be39769b44bb2b85bd6d9526b6d9"
+      ]
+    },
+    {
+      "kind": "PROTECTED_MISMATCH",
+      "path": "config/agents.manifest copy.json",
+      "class": "PRODUCT_CONFIG_TEST_DEP",
+      "detail": [
+        "6c27f420127db7125a43ddba6347470b19d3be39769b44bb2b85bd6d9526b6d9",
+        "None"
+      ]
+    },
+    {
+      "kind": "PINNED_INPUT_WORKTREE_MISMATCH",
+      "path": "config/agents.manifest copy.json",
+      "class": "PRODUCT_CONFIG_TEST_DEP",
+      "detail": {
+        "recorded": "6c27f420127db7125a43ddba6347470b19d3be39769b44bb2b85bd6d9526b6d9",
+        "worktree": null
+      }
+    },
+    {
+      "kind": "PINNED_INPUT_WORKTREE_MISMATCH",
+      "path": "config/agents.manifest.json",
+      "class": "PRODUCT_CONFIG_TEST_DEP",
+      "detail": {
+        "recorded": "638e95a166e9e196175bd630ce76560db1ef98dbe72d40f31d9a109782027ae8",
+        "worktree": "6c27f420127db7125a43ddba6347470b19d3be39769b44bb2b85bd6d9526b6d9"
+      }
+    },
+    {
+      "kind": "NEXT_ENV_DEV_VARIANT",
+      "path": "next-env.d.ts",
+      "class": "PRODUCT_CONFIG_TEST_DEP",
+      "detail": {
+        "recorded": "7b550dda9686c16f36a17bf9051d5dbf31e98555b30d114ac49fc49a1e712651",
+        "worktree": "7ad303e40d4fddf44f156129e397511953a71481c5cfd86b1862649aaaf240cc",
+        "exact_dev_variant": true
+      }
+    },
+    {
+      "kind": "ROOT_HANDOFF_POINTER_PRESENT",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QA_HANDOFF.md",
+      "class": "PLACEMENT",
+      "detail": "Report to Architect/Cody; Executor does not edit outside QAM"
+    }
+  ],
+  "raw_verdict": "PRODUCT_DRIFT_OR_IDENTITY_FAILURE",
+  "blocking_anomaly_count": 168,
+  "nonblocking_anomalies_need_adjudication": 372
+}

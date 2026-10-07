@@ -1,0 +1,57 @@
+(node:2463504) [DEP0205] DeprecationWarning: `module.register()` is deprecated. Use `module.registerHooks()` instead.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+
+Running 3 tests using 1 worker
+
+(node:2463593) [DEP0205] DeprecationWarning: `module.register()` is deprecated. Use `module.registerHooks()` instead.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+  ✓  1 agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/AUTOMATION/specs/diag_run2.spec.ts:5:5 › DIAG S-06: composer reachable at 375×700 with the harness sibling removed from layout (1.4s)
+  ✘  2 agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/AUTOMATION/specs/diag_run2.spec.ts:15:5 › DIAG S-12 control: an external browser request is aborted and logged by the exact-origin route policy (5.9s)
+(node:2463809) [DEP0205] DeprecationWarning: `module.register()` is deprecated. Use `module.registerHooks()` instead.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+  ✘  3 agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/AUTOMATION/specs/diag_run2.spec.ts:22:5 › DIAG S-18: disclosure (trigger hidden on desktop by design), resize focus rescue, skip link, aria-current, status, visible focus (2.0s)
+
+
+  1) agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/AUTOMATION/specs/diag_run2.spec.ts:15:5 › DIAG S-12 control: an external browser request is aborted and logged by the exact-origin route policy 
+
+    Error: [2mexpect([22m[31mreceived[39m[2m).[22mtoBe[2m([22m[32mexpected[39m[2m) // Object.is equality[22m
+
+    Expected: [32m1[39m
+    Received: [31m0[39m
+
+    Call Log:
+    - Timeout 5000ms exceeded while waiting on the predicate
+
+      16 |   await open(page, { query: 'agent=kestrel', preset: P.rows }); const b0 = blocked.length;
+      17 |   const res = await page.evaluate(() => fetch('https://192.0.2.10/qa-control').then(() => 'LOADED', e => 'ABORTED ' + String(e)));
+    > 18 |   await expect.poll(() => blocked.length).toBe(b0 + 1); expect(res).toMatch(/^ABORTED/);
+         |   ^
+      19 |   record('diag-s12-control', { result: res, blocked: blocked.slice(b0) });
+      20 | });
+      21 |
+        at ~/NEXTJS/stark-ai-workbench-nextjs-frontend-v2/agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/AUTOMATION/specs/diag_run2.spec.ts:18:3
+
+    Error Context: agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-001/q2-6/diag/artifacts/diag_run2-DIAG-S-12-contro-3baa1-e-exact-origin-route-policy/error-context.md
+
+  2) agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/AUTOMATION/specs/diag_run2.spec.ts:22:5 › DIAG S-18: disclosure (trigger hidden on desktop by design), resize focus rescue, skip link, aria-current, status, visible focus 
+
+    Error: [2mexpect([22m[31mreceived[39m[2m).[22mtoBeGreaterThan[2m([22m[32mexpected[39m[2m)[22m
+
+    Expected: > [32m0[39m
+    Received:   [31m0[39m
+
+      32 |   await page.getByLabel('Sibling input').focus(); await page.keyboard.press('Tab'); await expect(page.getByRole('link', { name: 'Skip to content' })).toBeFocused();
+      33 |   await page.keyboard.press('Enter'); await expect(page.locator('#ws-main')).toBeFocused();
+    > 34 |   expect(await page.locator('.ws-desktop [aria-current="page"]').count()).toBe(1); expect(await page.locator('.ws-root [role=status]').count()).toBeGreaterThan(0);
+         |                                                                                                                                                 ^
+      35 |   const focusStyle: Record<string, unknown> = {};
+      36 |   for (const t of ['dark', 'light'] as const) { await page.evaluate(th => document.documentElement.className = th, t);
+      37 |     await page.getByRole('button', { name: 'Actions for Planning the launch' }).focus(); await page.keyboard.press('Shift+Tab'); await page.keyboard.press('Tab');
+        at ~/NEXTJS/stark-ai-workbench-nextjs-frontend-v2/agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/AUTOMATION/specs/diag_run2.spec.ts:34:145
+
+    Error Context: agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-001/q2-6/diag/artifacts/diag_run2-DIAG-S-18-disclo-231ce-urrent-status-visible-focus/error-context.md
+
+  2 failed
+    agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/AUTOMATION/specs/diag_run2.spec.ts:15:5 › DIAG S-12 control: an external browser request is aborted and logged by the exact-origin route policy 
+    agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/AUTOMATION/specs/diag_run2.spec.ts:22:5 › DIAG S-18: disclosure (trigger hidden on desktop by design), resize focus rescue, skip link, aria-current, status, visible focus 
+  1 passed (19.2s)

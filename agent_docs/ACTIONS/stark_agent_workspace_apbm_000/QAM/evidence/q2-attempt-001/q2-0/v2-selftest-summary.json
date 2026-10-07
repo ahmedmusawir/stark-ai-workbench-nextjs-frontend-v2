@@ -1,0 +1,10 @@
+{
+  "non_ancestor_head": true,
+  "unauthorized_source_addition": true,
+  "mutated_product_file": true,
+  "mutated_copied_record": true,
+  "amendment_wrong_hash_blocks": true,
+  "roster_change_blocks_without_amendment": true,
+  "arbitrary_next_env_blocks": true,
+  "all_controls_red_as_expected": true
+}

@@ -1,0 +1,26 @@
+(node:2448364) [DEP0205] DeprecationWarning: `module.register()` is deprecated. Use `module.registerHooks()` instead.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+[WebServer] node:internal/modules/cjs/loader:1573
+[WebServer]   throw err;
+[WebServer]   ^
+[WebServer] 
+[WebServer] Error: Cannot find module './tests/workspace/network-guard.cjs'
+[WebServer] Require stack:
+[WebServer] - internal/preload
+[WebServer] [90m    at Module._resolveFilename (node:internal/modules/cjs/loader:1569:15)[39m
+[WebServer] [90m    at wrapResolveFilename (node:internal/modules/cjs/loader:1123:27)[39m
+[WebServer] [90m    at defaultResolveImplForCJSLoading (node:internal/modules/cjs/loader:1147:10)[39m
+[WebServer] [90m    at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1174:12)[39m
+[WebServer] [90m    at Module._load (node:internal/modules/cjs/loader:1346:5)[39m
+[WebServer] [90m    at wrapModuleLoad (node:internal/modules/cjs/loader:261:19)[39m
+[WebServer] [90m    at Module.require (node:internal/modules/cjs/loader:1679:12)[39m
+[WebServer] [90m    at node:internal/modules/cjs/loader:2235:12[39m
+[WebServer] [90m    at loadPreloadModules (node:internal/process/pre_execution:782:5)[39m
+[WebServer] [90m    at initializeModuleLoaders (node:internal/process/pre_execution:246:5)[39m {
+[WebServer]   code: [32m'MODULE_NOT_FOUND'[39m,
+[WebServer]   requireStack: [ [32m'internal/preload'[39m ]
+[WebServer] }
+[WebServer] 
+[WebServer] Node.js v26.7.0
+Error: Process from config.webServer was not able to start. Exit code: 1
+

@@ -1,0 +1,28 @@
+{
+  "sibling_diffs": {
+    "dark": [],
+    "light": []
+  },
+  "firstFrame": {
+    "inHost": true,
+    "bg": "rgb(255, 255, 255)",
+    "hostVar": "0.000 0.000% 100.000%"
+  },
+  "teardown": {
+    "before": {
+      "portals": 1,
+      "mm": {
+        "added": 1,
+        "removed": 0
+      }
+    },
+    "after": {
+      "portals": 0,
+      "mm": {
+        "added": 1,
+        "removed": 1
+      },
+      "inert": null
+    }
+  }
+}

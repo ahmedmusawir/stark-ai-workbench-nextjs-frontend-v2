@@ -1,0 +1,251 @@
+{
+  "config": {
+    "configFile": "/home/moose/NEXTJS/stark-ai-workbench-nextjs-frontend-v2/agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/AUTOMATION/playwright.qa.config.ts",
+    "rootDir": "/home/moose/NEXTJS/stark-ai-workbench-nextjs-frontend-v2/agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/AUTOMATION/specs",
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "/home/moose/NEXTJS/stark-ai-workbench-nextjs-frontend-v2/agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-001/q2-6/diag/artifacts",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "",
+        "name": "",
+        "testDir": "/home/moose/NEXTJS/stark-ai-workbench-nextjs-frontend-v2/agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/AUTOMATION/specs",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 60000
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "list",
+        null
+      ],
+      [
+        "json",
+        {
+          "outputFile": "/home/moose/NEXTJS/stark-ai-workbench-nextjs-frontend-v2/agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-001/q2-6/diag/playwright-results.json"
+        }
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "missing",
+    "updateSourceMethod": "patch",
+    "version": "1.59.1",
+    "workers": 1,
+    "webServer": {
+      "command": "node /home/moose/NEXTJS/stark-ai-workbench-nextjs-frontend-v2/agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/AUTOMATION/qa-harness.cjs",
+      "cwd": "/home/moose/NEXTJS/stark-ai-workbench-nextjs-frontend-v2",
+      "url": "http://127.0.0.1:43181/",
+      "reuseExistingServer": false,
+      "timeout": 120000,
+      "env": {
+        "QA_PORT": "43181",
+        "NODE_OPTIONS": ""
+      }
+    }
+  },
+  "suites": [
+    {
+      "title": "diag_run2.spec.ts",
+      "file": "diag_run2.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "DIAG S-06: composer reachable at 375×700 with the harness sibling removed from layout",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1363,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-07T13:37:22.132Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "a2414b8c0edeebdaf0e7-682f0654ded24116e32a",
+          "file": "diag_run2.spec.ts",
+          "line": 5,
+          "column": 5
+        },
+        {
+          "title": "DIAG S-12 control: an external browser request is aborted and logged by the exact-origin route policy",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 5874,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m1\u001b[39m\nReceived: \u001b[31m0\u001b[39m\n\nCall Log:\n- Timeout 5000ms exceeded while waiting on the predicate",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m1\u001b[39m\nReceived: \u001b[31m0\u001b[39m\n\nCall Log:\n- Timeout 5000ms exceeded while waiting on the predicate\n    at /home/moose/NEXTJS/stark-ai-workbench-nextjs-frontend-v2/agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/AUTOMATION/specs/diag_run2.spec.ts:18:3",
+                    "location": {
+                      "file": "/home/moose/NEXTJS/stark-ai-workbench-nextjs-frontend-v2/agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/AUTOMATION/specs/diag_run2.spec.ts",
+                      "column": 3,
+                      "line": 18
+                    },
+                    "snippet": "  16 |   await open(page, { query: 'agent=kestrel', preset: P.rows }); const b0 = blocked.length;\n  17 |   const res = await page.evaluate(() => fetch('https://192.0.2.10/qa-control').then(() => 'LOADED', e => 'ABORTED ' + String(e)));\n> 18 |   await expect.poll(() => blocked.length).toBe(b0 + 1); expect(res).toMatch(/^ABORTED/);\n     |   ^\n  19 |   record('diag-s12-control', { result: res, blocked: blocked.slice(b0) });\n  20 | });\n  21 |"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/home/moose/NEXTJS/stark-ai-workbench-nextjs-frontend-v2/agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/AUTOMATION/specs/diag_run2.spec.ts",
+                        "column": 3,
+                        "line": 18
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m1\u001b[39m\nReceived: \u001b[31m0\u001b[39m\n\nCall Log:\n- Timeout 5000ms exceeded while waiting on the predicate\n\n  16 |   await open(page, { query: 'agent=kestrel', preset: P.rows }); const b0 = blocked.length;\n  17 |   const res = await page.evaluate(() => fetch('https://192.0.2.10/qa-control').then(() => 'LOADED', e => 'ABORTED ' + String(e)));\n> 18 |   await expect.poll(() => blocked.length).toBe(b0 + 1); expect(res).toMatch(/^ABORTED/);\n     |   ^\n  19 |   record('diag-s12-control', { result: res, blocked: blocked.slice(b0) });\n  20 | });\n  21 |\n    at /home/moose/NEXTJS/stark-ai-workbench-nextjs-frontend-v2/agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/AUTOMATION/specs/diag_run2.spec.ts:18:3"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-07T13:37:24.007Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/home/moose/NEXTJS/stark-ai-workbench-nextjs-frontend-v2/agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-001/q2-6/diag/artifacts/diag_run2-DIAG-S-12-contro-3baa1-e-exact-origin-route-policy/error-context.md"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/home/moose/NEXTJS/stark-ai-workbench-nextjs-frontend-v2/agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/AUTOMATION/specs/diag_run2.spec.ts",
+                    "column": 3,
+                    "line": 18
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "a2414b8c0edeebdaf0e7-3b72f030943e4377028a",
+          "file": "diag_run2.spec.ts",
+          "line": 15,
+          "column": 5
+        },
+        {
+          "title": "DIAG S-18: disclosure (trigger hidden on desktop by design), resize focus rescue, skip link, aria-current, status, visible focus",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 2049,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeGreaterThan\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected: > \u001b[32m0\u001b[39m\nReceived:   \u001b[31m0\u001b[39m",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeGreaterThan\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected: > \u001b[32m0\u001b[39m\nReceived:   \u001b[31m0\u001b[39m\n    at /home/moose/NEXTJS/stark-ai-workbench-nextjs-frontend-v2/agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/AUTOMATION/specs/diag_run2.spec.ts:34:145",
+                    "location": {
+                      "file": "/home/moose/NEXTJS/stark-ai-workbench-nextjs-frontend-v2/agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/AUTOMATION/specs/diag_run2.spec.ts",
+                      "column": 145,
+                      "line": 34
+                    },
+                    "snippet": "  32 |   await page.getByLabel('Sibling input').focus(); await page.keyboard.press('Tab'); await expect(page.getByRole('link', { name: 'Skip to content' })).toBeFocused();\n  33 |   await page.keyboard.press('Enter'); await expect(page.locator('#ws-main')).toBeFocused();\n> 34 |   expect(await page.locator('.ws-desktop [aria-current=\"page\"]').count()).toBe(1); expect(await page.locator('.ws-root [role=status]').count()).toBeGreaterThan(0);\n     |                                                                                                                                                 ^\n  35 |   const focusStyle: Record<string, unknown> = {};\n  36 |   for (const t of ['dark', 'light'] as const) { await page.evaluate(th => document.documentElement.className = th, t);\n  37 |     await page.getByRole('button', { name: 'Actions for Planning the launch' }).focus(); await page.keyboard.press('Shift+Tab'); await page.keyboard.press('Tab');"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/home/moose/NEXTJS/stark-ai-workbench-nextjs-frontend-v2/agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/AUTOMATION/specs/diag_run2.spec.ts",
+                        "column": 145,
+                        "line": 34
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeGreaterThan\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected: > \u001b[32m0\u001b[39m\nReceived:   \u001b[31m0\u001b[39m\n\n  32 |   await page.getByLabel('Sibling input').focus(); await page.keyboard.press('Tab'); await expect(page.getByRole('link', { name: 'Skip to content' })).toBeFocused();\n  33 |   await page.keyboard.press('Enter'); await expect(page.locator('#ws-main')).toBeFocused();\n> 34 |   expect(await page.locator('.ws-desktop [aria-current=\"page\"]').count()).toBe(1); expect(await page.locator('.ws-root [role=status]').count()).toBeGreaterThan(0);\n     |                                                                                                                                                 ^\n  35 |   const focusStyle: Record<string, unknown> = {};\n  36 |   for (const t of ['dark', 'light'] as const) { await page.evaluate(th => document.documentElement.className = th, t);\n  37 |     await page.getByRole('button', { name: 'Actions for Planning the launch' }).focus(); await page.keyboard.press('Shift+Tab'); await page.keyboard.press('Tab');\n    at /home/moose/NEXTJS/stark-ai-workbench-nextjs-frontend-v2/agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/AUTOMATION/specs/diag_run2.spec.ts:34:145"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-07T13:37:30.769Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/home/moose/NEXTJS/stark-ai-workbench-nextjs-frontend-v2/agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-001/q2-6/diag/artifacts/diag_run2-DIAG-S-18-disclo-231ce-urrent-status-visible-focus/error-context.md"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/home/moose/NEXTJS/stark-ai-workbench-nextjs-frontend-v2/agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/AUTOMATION/specs/diag_run2.spec.ts",
+                    "column": 145,
+                    "line": 34
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "a2414b8c0edeebdaf0e7-5c6b663ac79cf539b28a",
+          "file": "diag_run2.spec.ts",
+          "line": 22,
+          "column": 5
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-10-07T13:37:14.302Z",
+    "duration": 19164.811,
+    "expected": 1,
+    "skipped": 0,
+    "unexpected": 2,
+    "flaky": 0
+  }
+}

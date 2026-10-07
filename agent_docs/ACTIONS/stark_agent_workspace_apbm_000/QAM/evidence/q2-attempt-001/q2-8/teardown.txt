@@ -1,0 +1,25 @@
+teardown_at=2026-10-07T19:38:29+06:00
+--- QA processes (harness/chrome/playwright/next): none (only the invoking shell matched the pattern)
+--- ports:
+43170/43181/43182/43183/3000 free
+--- run-owned TMPDIRs:
+/tmp/claude-1000/q2a
+/tmp/claude-1000/q2b
+/tmp/claude-1000/q2c
+/tmp/claude-1000/q2d
+/tmp/claude-1000/q2e
+/tmp/claude-1000/q2f
+removed /tmp/claude-1000/q2a
+removed /tmp/claude-1000/q2b
+removed /tmp/claude-1000/q2c
+removed /tmp/claude-1000/q2d
+removed /tmp/claude-1000/q2e
+removed /tmp/claude-1000/q2f
+--- generated/product state after Q2:
+next-env.d.ts sha256=7ad303e40d4fddf44f156129e397511953a71481c5cfd86b1862649aaaf240cc (pre-Q2 7ad303e4…; dev variant, accepted L3)
+config/agents.manifest.json sha256=6c27f420127db7125a43ddba6347470b19d3be39769b44bb2b85bd6d9526b6d9 (approved 6c27f420…)
+.next/BUILD_ID: absent — prior production output removed by failed Q2-4 builds
+--- tracked tree (git status, no optional locks):
+(only untracked QAM additions otherwise)
+staged=0
+real index mtime: 2026-10-07 19:03:17.107263949 +0600

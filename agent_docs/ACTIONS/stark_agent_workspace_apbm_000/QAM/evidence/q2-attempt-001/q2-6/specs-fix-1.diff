@@ -1,0 +1,238 @@
+diff -ru /tmp/claude-1000/q2f/specs.before/_qa.ts specs/_qa.ts
+--- /tmp/claude-1000/q2f/specs.before/_qa.ts	2026-10-07 19:29:51.557914883 +0600
++++ specs/_qa.ts	2026-10-07 19:29:51.684175421 +0600
+@@ -18,6 +18,7 @@
+ export const ROWS = [{ id: 'row-a', sessionId: 'A', title: 'Planning the launch', updatedAt: '2026-10-04T10:00:00Z' }, { id: 'row-b', sessionId: 'B', title: 'Comparing options', updatedAt: '2026-10-03T10:00:00Z' }];
+ export async function open(page: Page, o: { query?: string; roster?: string; status?: string; path?: string; preset?: string } = {}) {
+   if (o.preset) await page.addInitScript(`window.__qaPreset = ${o.preset};`);
++  await page.goto('about:blank');
+   await page.goto(`${o.path || '/'}${o.query ? '?' + o.query : ''}#roster=${o.roster || 'QR1'}&status=${o.status || 'ready'}`);
+   await page.waitForFunction(() => !!(window as any).qa);
+ }
+diff -ru /tmp/claude-1000/q2f/specs.before/s01_04_directory_nav_recents.spec.ts specs/s01_04_directory_nav_recents.spec.ts
+--- /tmp/claude-1000/q2f/specs.before/s01_04_directory_nav_recents.spec.ts	2026-10-07 19:29:51.557979891 +0600
++++ specs/s01_04_directory_nav_recents.spec.ts	2026-10-07 19:29:51.685926849 +0600
+@@ -3,7 +3,7 @@
+ 
+ test('S-01 directory filter is local, case-insensitive over name+description; distinct no-results; no service calls', async ({ page, errors }) => {
+   await open(page);
+-  await expect(page.getByRole('heading', { level: 1, name: 'Your agents' })).toBeVisible();
++  await expect(page.locator('.ws-root').getByRole('heading', { level: 1, name: 'Your agents' })).toBeVisible();
+   await expect(page.locator('.ws-count')).toHaveText('6 agents available');
+   const f = page.getByLabel('Find an agent');
+   const cards = () => page.locator('.ws-agent-card h2').allInnerTexts();
+@@ -48,18 +48,18 @@
+   await open(page, { preset: P.rows });
+   const view = async () => { const u = new URL(page.url()); return u.search; };
+   await page.locator('.ws-agent-card', { hasText: 'Kestrel Ops' }).click();
+-  expect(await view()).toBe('?agent=kestrel'); await expect(page.getByRole('heading', { level: 1, name: 'Kestrel Ops' })).toBeVisible();
++  expect(await view()).toBe('?agent=kestrel'); await expect(page.locator('.ws-root').getByRole('heading', { level: 1, name: 'Kestrel Ops' })).toBeVisible();
+   await page.getByRole('link', { name: /Planning the launch/ }).click();
+   expect(await view()).toBe('?agent=kestrel&session=A'); await expect(page.getByText('only session A')).toBeVisible();
+   await page.locator('.ws-desktop').getByRole('button', { name: 'New chat' }).click();
+   expect(await view()).toBe('?agent=kestrel&new=1'); await expect(page.getByText('Chat with Kestrel Ops')).toBeVisible();
+   const steps: string[] = [];
+   for (const exp of ['?agent=kestrel&session=A', '?agent=kestrel', '']) { await page.goBack(); await expect.poll(view).toBe(exp); steps.push(exp); }
+-  await expect(page.getByRole('heading', { level: 1, name: 'Your agents' })).toBeVisible();
++  await expect(page.locator('.ws-root').getByRole('heading', { level: 1, name: 'Your agents' })).toBeVisible();
+   for (const exp of ['?agent=kestrel', '?agent=kestrel&session=A', '?agent=kestrel&new=1']) { await page.goForward(); await expect.poll(view).toBe(exp); steps.push(exp); }
+   await expect(page.getByText('Chat with Kestrel Ops')).toBeVisible();
+   for (const [q, name] of [['agent=a%26b%3Dc', 'Very long agent name'], ['agent=x%2F..%2Fy', 'Path Agent'], ['agent=%C3%BCn%C3%AF-%C5%9D', 'Unicode Agent'], ['agent=spaced+id', 'ATLAS mixed Case']]) {
+-    await open(page, { query: q }); await expect(page.getByRole('heading', { level: 1 })).toContainText(name);
++    await open(page, { query: q }); await expect(page.locator('.ws-root').getByRole('heading', { level: 1 })).toContainText(name);
+   }
+   record('s03-history-steps', steps);
+ });
+@@ -67,7 +67,7 @@
+ test('S-03 invalid/contradictory selectors: safe unavailable state, zero service calls', async ({ page }) => {
+   const bad = ['agent=kestrel&new=0', 'agent=kestrel&new=1&session=s', 'session=s', 'agent=unknown', 'agent=kestrel&user=u2', 'agent=kestrel&agent=kestrel', 'agent=KESTREL', 'agent=kestrel&backend=x', 'agent=kestrel&session=%20'];
+   for (const q of bad) { await open(page, { query: q }); await expect(page.getByRole('heading', { name: 'Workspace unavailable' })).toBeVisible(); expect(await ledger(page)).toEqual([]); }
+-  await page.getByRole('button', { name: 'Back to all agents' }).click(); await expect(page.getByRole('heading', { level: 1, name: 'Your agents' })).toBeVisible();
++  await page.getByRole('button', { name: 'Back to all agents' }).click(); await expect(page.locator('.ws-root').getByRole('heading', { level: 1, name: 'Your agents' })).toBeVisible();
+   record('s03-invalid', bad);
+ });
+ 
+diff -ru /tmp/claude-1000/q2f/specs.before/s05_07_transcript_composer_draft.spec.ts specs/s05_07_transcript_composer_draft.spec.ts
+--- /tmp/claude-1000/q2f/specs.before/s05_07_transcript_composer_draft.spec.ts	2026-10-07 19:29:51.558107969 +0600
++++ specs/s05_07_transcript_composer_draft.spec.ts	2026-10-07 19:29:51.687763599 +0600
+@@ -8,7 +8,7 @@
+     await expect(page.locator('.ws-thread table')).toBeVisible();
+     const m = await page.evaluate(() => {
+       const t = document.querySelector('.ws-thread')!, table = t.querySelector('table')!.parentElement!, code = t.querySelector('.ws-code-scroll') as HTMLElement;
+-      const user = t.querySelector('.ws-turn')!.firstElementChild as HTMLElement; const ub = user.getBoundingClientRect(), tb = t.getBoundingClientRect();
++      const user = t.querySelector('.ws-turn')!.firstElementChild!.firstElementChild as HTMLElement; const ub = user.getBoundingClientRect(), tb = t.getBoundingClientRect();
+       return { xss: (window as any).__qaXss ?? null, scripts: t.querySelectorAll('script').length, imgs: t.querySelectorAll('img').length,
+         jsLinks: [...t.querySelectorAll('a')].filter(a => (a.getAttribute('href') || '').toLowerCase().startsWith('javascript')).length,
+         tableScrolls: table.scrollWidth > table.clientWidth, codeScrolls: !!code && code.scrollWidth > code.clientWidth,
+@@ -28,7 +28,7 @@
+ 
+ test('S-06 composer: whitespace rejected; single send on Enter; repeat blocked while pending; Shift+Enter newline; IME Enter ignored', async ({ page }) => {
+   await open(page, { query: 'agent=kestrel&new=1', preset: P.rows });
+-  const box = page.getByLabel('Message'), sendBtn = page.getByRole('button', { name: 'Send message' });
++  const box = page.getByLabel('Message', { exact: true }), sendBtn = page.getByRole('button', { name: 'Send message' });
+   await box.fill('   \n  '); await expect(sendBtn).toBeDisabled(); await box.press('Enter'); expect(await count(page, 'send')).toBe(0);
+   await box.fill('line one'); await box.press('Shift+Enter'); await box.pressSequentially('line two'); expect(await box.inputValue()).toBe('line one\nline two'); expect(await count(page, 'send')).toBe(0);
+   await box.fill('ime text'); await box.evaluate(el => el.dispatchEvent(new KeyboardEvent('keydown', { key: 'Enter', bubbles: true, isComposing: true })));
+@@ -40,33 +40,33 @@
+   expect(await count(page, 'send')).toBe(1); expect((await ledger(page)).find(c => c.action === 'send')!.message).toBe('ime text');
+   // CONTROL: the counter counts distinct deliberate sends (resolve, then send again -> 2)
+   await resolveLast(page, 'send', { status: 'sent', sessionId: 'S1', reply: 'ok' }); await expect(page.getByText('ok', { exact: true })).toBeVisible();
+-  await page.getByLabel('Message').fill('second'); await page.getByLabel('Message').press('Enter'); await expect.poll(() => count(page, 'send')).toBe(2);
++  await page.getByLabel('Message', { exact: true }).fill('second'); await page.getByLabel('Message', { exact: true }).press('Enter'); await expect.poll(() => count(page, 'send')).toBe(2);
+ });
+ 
+ test('S-06 composer stays reachable at 375 with a long thread', async ({ page }) => {
+   await page.setViewportSize({ width: 375, height: 700 }); await open(page, { query: 'agent=kestrel&session=A', preset: stressPreset });
+-  const b = await page.getByLabel('Message').boundingBox(); expect(b).not.toBeNull(); expect(b!.y + b!.height).toBeLessThanOrEqual(700); expect(b!.y).toBeGreaterThan(0);
++  const b = await page.getByLabel('Message', { exact: true }).boundingBox(); expect(b).not.toBeNull(); expect(b!.y + b!.height).toBeLessThanOrEqual(700); expect(b!.y).toBeGreaterThan(0);
+ });
+ 
+ test('S-07 New Chat: fresh local draft, clears old draft, no create/run before send; returned ID binds once; late result never hijacks', async ({ page }) => {
+   await open(page, { query: 'agent=kestrel', preset: P.rows });
+   await page.getByLabel('Start a new conversation').fill('unsent workspace draft');
+   await page.locator('.ws-desktop').getByRole('button', { name: 'New chat' }).click();
+-  await expect.poll(() => new URL(page.url()).search).toBe('?agent=kestrel&new=1'); await expect(page.getByLabel('Message')).toHaveValue('');
+-  await page.getByLabel('Message').fill('draft one'); await page.locator('.ws-desktop').getByRole('button', { name: 'New chat' }).click();
+-  await expect(page.getByLabel('Message')).toHaveValue(''); expect(await count(page, 'send')).toBe(0);
++  await expect.poll(() => new URL(page.url()).search).toBe('?agent=kestrel&new=1'); await expect(page.getByLabel('Message', { exact: true })).toHaveValue('');
++  await page.getByLabel('Message', { exact: true }).fill('draft one'); await page.locator('.ws-desktop').getByRole('button', { name: 'New chat' }).click();
++  await expect(page.getByLabel('Message', { exact: true })).toHaveValue(''); expect(await count(page, 'send')).toBe(0);
+   const listBefore = await count(page, 'list');
+-  await page.getByLabel('Message').fill('bind me'); await page.getByLabel('Message').press('Enter');
++  await page.getByLabel('Message', { exact: true }).fill('bind me'); await page.getByLabel('Message', { exact: true }).press('Enter');
+   await resolveLast(page, 'send', { status: 'sent', sessionId: 'created-X', reply: 'Bound reply' });
+   await expect.poll(() => new URL(page.url()).search).toBe('?agent=kestrel&session=created-X');
+   await expect(page.getByText('Bound reply')).toBeVisible();
+   expect((await ledger(page)).filter(c => c.action === 'history' && c.session === 'created-X').length).toBe(0);
+   await expect.poll(() => count(page, 'list')).toBe(listBefore + 1);
+   // late result after navigating away must not move the user
+-  await page.locator('.ws-desktop').getByRole('button', { name: 'New chat' }).click(); await page.getByLabel('Message').fill('late'); await page.getByLabel('Message').press('Enter');
++  await page.locator('.ws-desktop').getByRole('button', { name: 'New chat' }).click(); await page.getByLabel('Message', { exact: true }).fill('late'); await page.getByLabel('Message', { exact: true }).press('Enter');
+   await page.locator('.ws-desktop').getByRole('link', { name: 'All agents' }).click(); await expect.poll(() => new URL(page.url()).search).toBe('');
+   await resolveLast(page, 'send', { status: 'sent', sessionId: 'late-Y', reply: 'late reply' });
+-  await page.waitForTimeout(300); expect(new URL(page.url()).search).toBe(''); await expect(page.getByRole('heading', { level: 1, name: 'Your agents' })).toBeVisible();
++  await page.waitForTimeout(300); expect(new URL(page.url()).search).toBe(''); await expect(page.locator('.ws-root').getByRole('heading', { level: 1, name: 'Your agents' })).toBeVisible();
+   // CONTROL: a ledger with a pre-send 'send' entry is detected as a violation
+   const fake = [{ action: 'send' }, ...(await ledger(page))]; expect(fake.findIndex(c => c.action === 'send')).toBe(0);
+   record('s07-ledger', await ledger(page)); expect(await pendingOf(page, 'send')).toEqual([]);
+diff -ru /tmp/claude-1000/q2f/specs.before/s08_11_states_mutations.spec.ts specs/s08_11_states_mutations.spec.ts
+--- /tmp/claude-1000/q2f/specs.before/s08_11_states_mutations.spec.ts	2026-10-07 19:29:51.558163694 +0600
++++ specs/s08_11_states_mutations.spec.ts	2026-10-07 19:29:51.688201513 +0600
+@@ -18,7 +18,7 @@
+   const h0 = await count(page, 'history'); await page.getByRole('button', { name: 'Try loading again' }).click();
+   await expect.poll(() => count(page, 'history')).toBe(h0 + 1); expect(await writes(page)).toBe(0);
+   await open(page, { query: 'agent=kestrel&session=A', preset: historyPreset(`() => ({ status: 'access-unavailable', messages: [] })`) });
+-  await expect(page.getByRole('heading', { name: 'Conversation access unavailable' })).toBeVisible(); await expect(page.getByLabel('Message')).toBeDisabled(); shots.access = await main.screenshot();
++  await expect(page.getByRole('heading', { name: 'Conversation access unavailable' })).toBeVisible(); await expect(page.getByLabel('Message', { exact: true })).toBeDisabled(); shots.access = await main.screenshot();
+   for (const k of ['missing', 'unavailable', 'access']) expect(Buffer.compare(shots.empty, shots[k])).not.toBe(0);
+   for (const [k, b] of Object.entries(shots)) fs.writeFileSync(path.join(SHOTS, `s08-${k}.png`), b);
+ });
+@@ -28,7 +28,7 @@
+     test.setTimeout(mode === 'pending-35s-then-timeout' ? 90000 : 30000);
+     await open(page, { query: 'agent=kestrel&session=A', preset: P.rows });
+     await expect(page.getByText('only session A')).toBeVisible();
+-    await page.getByLabel('Message').fill(`attempt ${mode}`); await page.getByLabel('Message').press('Enter');
++    await page.getByLabel('Message', { exact: true }).fill(`attempt ${mode}`); await page.getByLabel('Message', { exact: true }).press('Enter');
+     await expect(page.getByText('Waiting for a reply')).toBeVisible();
+     if (mode === 'resolved-uncertain') await resolveLast(page, 'send', { status: 'uncertain' });
+     else if (mode === 'rejected-throw') await rejectLast(page, 'send', 'network reset');
+@@ -36,7 +36,7 @@
+     await expect(page.getByRole('heading', { name: 'Send outcome unknown' })).toBeVisible();
+     await expect(page.getByText('Message not sent')).toHaveCount(0);
+     await expect(page.locator('.ws-thread').getByText(`attempt ${mode}`)).toBeVisible();
+-    await expect(page.getByLabel('Message')).toBeDisabled();
++    await expect(page.getByLabel('Message', { exact: true })).toBeDisabled();
+     if (mode !== 'resolved-uncertain') expect((await page.evaluate(() => (window as any).qa.rejections)).length).toBe(1); // control: fixture really rejected
+     const h0 = await count(page, 'history'); await page.evaluate(() => { (window as any).qa.auto.history = () => ({ status: 'empty', messages: [] }); });
+     await page.getByRole('button', { name: 'Check history' }).click(); await expect.poll(() => count(page, 'history')).toBe(h0 + 1);
+@@ -48,15 +48,15 @@
+ 
+ test('S-09 confirmed not-sent keeps an editable draft and requires deliberate send', async ({ page }) => {
+   await open(page, { query: 'agent=kestrel&session=A', preset: P.rows });
+-  await page.getByLabel('Message').fill('keep me'); await page.getByLabel('Message').press('Enter'); await resolveLast(page, 'send', { status: 'not-sent' });
+-  await expect(page.getByRole('heading', { name: 'Message not sent' })).toBeVisible(); await expect(page.getByLabel('Message')).toBeEnabled(); await expect(page.getByLabel('Message')).toHaveValue('keep me');
++  await page.getByLabel('Message', { exact: true }).fill('keep me'); await page.getByLabel('Message', { exact: true }).press('Enter'); await resolveLast(page, 'send', { status: 'not-sent' });
++  await expect(page.getByRole('heading', { name: 'Message not sent' })).toBeVisible(); await expect(page.getByLabel('Message', { exact: true })).toBeEnabled(); await expect(page.getByLabel('Message', { exact: true })).toHaveValue('keep me');
+   await page.waitForTimeout(500); expect(await count(page, 'send')).toBe(1);
+-  await page.getByLabel('Message').press('Enter'); await expect.poll(() => count(page, 'send')).toBe(2);
++  await page.getByLabel('Message', { exact: true }).press('Enter'); await expect.poll(() => count(page, 'send')).toBe(2);
+ });
+ 
+ test('S-10 pending status; metadata warning keeps ID/transcript and offers list read only', async ({ page }) => {
+   await open(page, { query: 'agent=kestrel&new=1', preset: P.rows });
+-  await page.getByLabel('Message').fill('start'); await page.getByLabel('Message').press('Enter');
++  await page.getByLabel('Message', { exact: true }).fill('start'); await page.getByLabel('Message', { exact: true }).press('Enter');
+   await expect(page.locator('[role=status]', { hasText: 'Waiting for a reply' })).toBeVisible();
+   await resolveLast(page, 'send', { status: 'sent', sessionId: 'M1', reply: 'Confirmed reply', metadataWarning: true });
+   await expect.poll(() => new URL(page.url()).search).toBe('?agent=kestrel&session=M1');
+@@ -106,6 +106,7 @@
+   await page.getByRole('button', { name: 'Actions for Comparing options' }).click(); await dlg.getByRole('button', { name: 'Archive conversation' }).click(); await resolveLast(page, 'archive', undefined);
+   await expect(page.getByText('Comparing options')).toHaveCount(0); await expect(page.getByRole('heading', { name: 'Recent conversations' })).toBeFocused();
+   const l = await ledger(page); expect(l.filter(c => c.action === 'archive').map(c => c.row)).toEqual(['row-b', 'row-b']); expect(l.some(c => !['list', 'rename', 'archive'].includes(c.action))).toBe(false);
++  await page.evaluate(lit => { (window as any).qa.auto.list = () => ({ status: 'ready', rows: [{ id: 'row-a', sessionId: 'A', title: lit }] }); (window as any).qa.auto.history = () => ({ status: 'ready', messages: [] }); }, LIT);
+   await page.locator('.ws-recent-row a').first().click(); await expect(page.locator('.ws-crumbs')).toContainText(LIT);
+   // CONTROL: the HTML-element detector finds an unsafe injection
+   await page.evaluate(() => { const d = document.createElement('div'); d.className = 'ws-recents'; d.innerHTML = '<b>x</b>'; document.body.appendChild(d); });
+diff -ru /tmp/claude-1000/q2f/specs.before/s12_16_demo_theme_render.spec.ts specs/s12_16_demo_theme_render.spec.ts
+--- /tmp/claude-1000/q2f/specs.before/s12_16_demo_theme_render.spec.ts	2026-10-07 19:29:51.558203379 +0600
++++ specs/s12_16_demo_theme_render.spec.ts	2026-10-07 19:29:51.686175314 +0600
+@@ -12,7 +12,7 @@
+   const ctx = page.locator('.ws-context'); await expect(ctx.locator('.ws-notice')).toHaveText(DISCLOSURE);
+   const before = reqs.length, l0 = (await ledger(page)).length;
+   await ctx.getByRole('button', { name: 'Edit demo instructions' }).click(); const d = page.getByRole('dialog', { name: 'Edit demo instructions' });
+-  await expect(d.locator('.ws-notice')).toHaveText(DISCLOSURE); await d.getByLabel('Demo instructions').fill('QA instructions A'); await d.getByRole('button', { name: 'Apply to demo' }).click();
++  await expect(d.locator('.ws-notice')).toHaveText(DISCLOSURE); await d.getByLabel('Demo instructions', { exact: true }).fill('QA instructions A'); await d.getByRole('button', { name: 'Apply to demo' }).click();
+   await expect(ctx.getByText('QA instructions A')).toBeVisible();
+   await ctx.getByRole('button', { name: 'Add sample document' }).click(); await page.getByRole('dialog', { name: 'Add sample document' }).getByRole('button', { name: 'Research checklist.md' }).click();
+   await ctx.getByRole('button', { name: 'Preview Research checklist.md' }).click(); await expect(page.getByRole('dialog', { name: 'Sample preview' })).toContainText('Fictional sample'); await page.keyboard.press('Escape');
+@@ -25,9 +25,9 @@
+ 
+ test('S-13 demo state is per agent and per identity; reload/reset clear it; never persisted', async ({ page }) => {
+   await open(page, { query: 'agent=kestrel', preset: P.rows });
+-  const ctx = page.locator('.ws-context'); const edit = async (t: string) => { await ctx.getByRole('button', { name: 'Edit demo instructions' }).click(); await page.getByLabel('Demo instructions').fill(t); await page.getByRole('button', { name: 'Apply to demo' }).click(); };
++  const ctx = page.locator('.ws-context'); const edit = async (t: string) => { await ctx.getByRole('button', { name: 'Edit demo instructions' }).click(); await page.getByLabel('Demo instructions', { exact: true }).fill(t); await page.getByRole('button', { name: 'Apply to demo' }).click(); };
+   await edit('QA instructions A'); await page.locator('.ws-desktop').getByRole('link', { name: 'Path Agent' }).click();
+-  await expect(page.getByRole('heading', { level: 1, name: 'Path Agent' })).toBeVisible(); await expect(ctx.getByText('QA instructions A')).toHaveCount(0);
++  await expect(page.locator('.ws-root').getByRole('heading', { level: 1, name: 'Path Agent' })).toBeVisible(); await expect(ctx.getByText('QA instructions A')).toHaveCount(0);
+   await page.locator('.ws-desktop').getByRole('link', { name: 'Kestrel Ops' }).click(); await expect(ctx.getByText('QA instructions A')).toBeVisible();
+   const scan = () => page.evaluate(async () => { const vals = [...Object.keys(localStorage).map(k => localStorage.getItem(k)), ...Object.keys(sessionStorage).map(k => sessionStorage.getItem(k))].join('\n');
+     const dbs = (indexedDB as any).databases ? (await (indexedDB as any).databases()).map((d: any) => d.name).join(',') : ''; return vals + dbs; });
+diff -ru /tmp/claude-1000/q2f/specs.before/s17_19_a11y_copy_obs.spec.ts specs/s17_19_a11y_copy_obs.spec.ts
+--- /tmp/claude-1000/q2f/specs.before/s17_19_a11y_copy_obs.spec.ts	2026-10-07 19:29:51.558376532 +0600
++++ specs/s17_19_a11y_copy_obs.spec.ts	2026-10-07 19:29:51.689715720 +0600
+@@ -56,7 +56,7 @@
+ 
+ test('S-18 disclosure aria/visibility, resize focus rescue, skip link, single aria-current, status regions, visible focus', async ({ page }) => {
+   await page.setViewportSize({ width: 375, height: 900 }); await open(page, { query: 'agent=kestrel', preset: P.rows });
+-  const trig = page.getByRole('button', { name: 'Demo context' }); await expect(trig).toHaveAttribute('aria-expanded', 'false');
++  const trig = page.getByRole('button', { name: 'Demo context', exact: true }); await expect(trig).toHaveAttribute('aria-expanded', 'false');
+   const id = await trig.getAttribute('aria-controls'); expect(await page.locator(`[id="${id}"]`).isHidden()).toBe(true);
+   await trig.click(); await expect(trig).toHaveAttribute('aria-expanded', 'true'); expect(await page.locator(`[id="${id}"]`).isVisible()).toBe(true); await trig.click();
+   await page.setViewportSize({ width: 1280, height: 900 }); await expect(trig).toHaveAttribute('aria-expanded', 'true');
+@@ -79,7 +79,7 @@
+   await p.addInitScript(() => { (window as any).__clip = []; (window as any).__speech = { speak: 0, cancel: 0 };
+     Object.defineProperty(navigator, 'clipboard', { value: { writeText: async (t: string) => { (window as any).__clip.push(t); } }, configurable: true });
+     class U { text: string; onstart?: () => void; onend?: () => void; onerror?: () => void; constructor(t: string) { this.text = t; } } (window as any).SpeechSynthesisUtterance = U;
+-    (window as any).speechSynthesis = { speaking: false, speak(u: U) { (window as any).__speech.speak++; this.speaking = true; u.onstart?.(); }, cancel() { (window as any).__speech.cancel++; this.speaking = false; }, getVoices: () => [] }; });
++    Object.defineProperty(window, 'speechSynthesis', { configurable: true, writable: true, value: { speaking: false, speak(u: U) { (window as any).__speech.speak++; this.speaking = true; u.onstart?.(); }, cancel() { (window as any).__speech.cancel++; this.speaking = false; }, getVoices: () => [] } }); });
+   await open(p, { query: 'agent=kestrel&session=A', preset });
+   await expect(p.locator('.ws-thread code').first()).toBeVisible(); expect(await p.evaluate(() => (window as any).__speech.speak)).toBe(0);
+   await p.locator('.ws-turn').nth(1).getByRole('button', { name: 'Copy message' }).click();
+@@ -91,7 +91,7 @@
+   const stop = p.getByRole('button', { name: 'Stop reading' }); await expect(stop).toBeVisible(); await stop.click(); expect(await p.evaluate(() => (window as any).__speech.cancel)).toBeGreaterThan(0);
+   await expect(p.getByRole('button', { name: 'Read aloud' })).toBeVisible(); await c.close();
+   c = await browser.newContext(); p = await c.newPage();
+-  await p.addInitScript(() => { Object.defineProperty(navigator, 'clipboard', { value: { writeText: async () => { throw new Error('denied'); } }, configurable: true }); delete (window as any).speechSynthesis; });
++  await p.addInitScript(() => { Object.defineProperty(navigator, 'clipboard', { value: { writeText: async () => { throw new Error('denied'); } }, configurable: true }); delete (window as any).speechSynthesis; try { delete (Window.prototype as any).speechSynthesis; } catch { /* */ } });
+   await open(p, { query: 'agent=kestrel&session=A', preset }); await p.locator('.ws-turn').nth(1).getByRole('button', { name: 'Copy message' }).click();
+   await expect(p.getByText('Clipboard unavailable. Select and copy the text below.')).toBeVisible(); const ta = p.getByLabel('Text to copy manually'); await expect(ta).toHaveValue(md);
+   await ta.focus(); expect(await ta.evaluate((e: HTMLTextAreaElement) => [e.selectionStart, e.selectionEnd])).toEqual([0, md.length]);
+@@ -106,7 +106,7 @@
+   await open(page, { query: 'agent=kestrel', preset });
+   await page.getByLabel('Start a new conversation').fill('first chat'); await page.getByLabel('Start a new conversation').press('Enter');
+   await expect.poll(() => new URL(page.url()).search).toBe('?agent=kestrel&session=A'); await expect(page.getByText('reply in A')).toBeVisible();
+-  await page.locator('.ws-desktop').getByRole('button', { name: 'New chat' }).click(); await page.getByLabel('Message').fill('second chat'); await page.getByLabel('Message').press('Enter');
++  await page.locator('.ws-desktop').getByRole('button', { name: 'New chat' }).click(); await page.getByLabel('Message', { exact: true }).fill('second chat'); await page.getByLabel('Message', { exact: true }).press('Enter');
+   await expect.poll(() => new URL(page.url()).search).toBe('?agent=kestrel&session=B'); await expect(page.getByText('reply in B')).toBeVisible(); await expect(page.getByText('reply in A')).toHaveCount(0);
+   await page.locator('.ws-crumbs').getByRole('link', { name: 'Kestrel Ops' }).click();
+   await expect(page.locator('.ws-recent-row strong')).toHaveText(['first chat', 'second chat']);

@@ -1,0 +1,46 @@
+[
+  {
+    "action": "list",
+    "agent": "kestrel",
+    "seq": 1
+  },
+  {
+    "action": "send",
+    "agent": "kestrel",
+    "session": null,
+    "message": "first chat",
+    "seq": 2
+  },
+  {
+    "action": "list",
+    "agent": "kestrel",
+    "seq": 3
+  },
+  {
+    "action": "list",
+    "agent": "kestrel",
+    "seq": 4
+  },
+  {
+    "action": "send",
+    "agent": "kestrel",
+    "session": null,
+    "message": "second chat",
+    "seq": 5
+  },
+  {
+    "action": "list",
+    "agent": "kestrel",
+    "seq": 6
+  },
+  {
+    "action": "list",
+    "agent": "kestrel",
+    "seq": 7
+  },
+  {
+    "action": "list",
+    "agent": "kestrel",
+    "seq": 8
+  }
+]

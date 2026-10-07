@@ -1,0 +1,78 @@
+FAIL agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/AUTOMATION/jest/qa_entry_props.test.tsx
+  ● Console
+
+    console.log
+      CLASS_C_SEAM_RESULT {"pushed":[],"rendered":true,"resetThrew":"TypeError: Cannot read properties of undefined (reading 'setItem')","unhandledRejections":[]}
+
+      at Object.<anonymous> (agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/AUTOMATION/jest/qa_entry_props.test.tsx:60:13)
+
+  ● CLASS C seam (real store, storage getter throws): sign-out must still navigate to /auth
+
+    expect(received).toEqual(expected) // deep equality
+
+    - Expected  - 3
+    + Received  + 1
+
+    - Array [
+    -   "/auth",
+    - ]
+    + Array []
+
+      61 |   } finally { spy.mockRestore(); }
+      62 |   expect(result.rendered).toBe(true); expect(result.renderThrew).toBeUndefined();
+    > 63 |   expect(result.pushed).toEqual(['/auth']);
+         |                         ^
+      64 | });
+      65 |
+
+      at Object.<anonymous> (agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/AUTOMATION/jest/qa_entry_props.test.tsx:63:25)
+
+  ● CLASS C seam (real store, storage getter throws): sign-out must still navigate to /auth
+
+    TypeError: Cannot read properties of undefined (reading 'setItem')
+
+      193 |       setHistoryLoading: (loading) => set({ isHistoryLoading: loading }),
+      194 |       setError: (error) => set({ error }),
+    > 195 |       reset: () => set(INITIAL_STATE),
+          |                    ^
+      196 |     }),
+      197 |     {
+      198 |       name: PERSIST_KEY, // FIX-003 (F09): mode-namespaced
+
+      at Object.setItem (node_modules/zustand/middleware.js:304:22)
+      at setItem (node_modules/zustand/middleware.js:495:22)
+      at node_modules/zustand/middleware.js:507:12
+      at Object.reset (src/store/chatStore.ts:195:20)
+      at src/components/workspace/WorkspaceEntry.tsx:15:270
+
+  ● CLASS C seam (real store, storage getter throws): sign-out must still navigate to /auth
+
+    TypeError: Cannot read properties of undefined (reading 'setItem')
+
+      193 |       setHistoryLoading: (loading) => set({ isHistoryLoading: loading }),
+      194 |       setError: (error) => set({ error }),
+    > 195 |       reset: () => set(INITIAL_STATE),
+          |                    ^
+      196 |     }),
+      197 |     {
+      198 |       name: PERSIST_KEY, // FIX-003 (F09): mode-namespaced
+
+      at Object.setItem (node_modules/zustand/middleware.js:304:22)
+      at setItem (node_modules/zustand/middleware.js:495:22)
+      at node_modules/zustand/middleware.js:507:12
+      at Object.reset (src/store/chatStore.ts:195:20)
+      at src/components/workspace/WorkspaceEntry.tsx:15:270
+
+PASS agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/AUTOMATION/jest/qa_entry_render.test.tsx
+(node:2442155) ExperimentalWarning: localStorage is not available because --localstorage-file was not provided.
+(Use `node --trace-warnings ...` to show where the warning was created)
+PASS agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/AUTOMATION/jest/qa_entry_ssr.test.tsx
+PASS agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/AUTOMATION/jest/qa_adapter.test.ts
+PASS agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/AUTOMATION/jest/qa_navigation_manifest.test.ts
+
+Test Suites: 1 failed, 4 passed, 5 total
+Tests:       1 failed, 27 passed, 28 total
+Snapshots:   0 total
+Time:        4.175 s, estimated 8 s
+Ran all test suites.
+Test results written to: ../../../..<run-tmp>/qa-jest2.json

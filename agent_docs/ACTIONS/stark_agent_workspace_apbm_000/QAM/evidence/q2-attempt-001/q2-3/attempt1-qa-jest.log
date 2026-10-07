@@ -1,0 +1,132 @@
+(node:2441697) ExperimentalWarning: localStorage is not available because --localstorage-file was not provided.
+(Use `node --trace-warnings ...` to show where the warning was created)
+PASS agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/AUTOMATION/jest/qa_adapter.test.ts
+PASS agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/AUTOMATION/jest/qa_navigation_manifest.test.ts
+FAIL agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/AUTOMATION/jest/qa_entry_props.test.tsx
+  ● Console
+
+    console.log
+      CLASS_C_SEAM_RESULT {"pushed":[],"resetApplied":true}
+
+      at Object.<anonymous> (agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/AUTOMATION/jest/qa_entry_props.test.tsx:63:11)
+
+  ● CLASS C seam (real store, storage getter throws): sign-out must still navigate to /auth
+
+    Hooks cannot be defined inside tests. Hook of type "afterEach" is nested within "CLASS C seam (real store, storage getter throws): sign-out must still navigate to /auth".
+
+      47 |     await new Promise<void>((done) => {
+      48 |       jest.isolateModules(() => {
+    > 49 |         const React = require('react'); const { render: r } = require('@testing-library/react');
+         |                                                               ^
+      50 |         const { WorkspaceEntry: E } = require('@/components/workspace/WorkspaceEntry');
+      51 |         const { useChatStore: store } = require('@/store/chatStore');
+      52 |         nav.push.mockImplementation((u: string) => result.pushed.push(u)); auth.logout.mockResolvedValue(undefined);
+
+      at eventHandler (node_modules/jest-circus/build/jestAdapterInit.js:111:44)
+      at Object.<anonymous> (node_modules/@testing-library/react/dist/index.js:27:5)
+      at agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/AUTOMATION/jest/qa_entry_props.test.tsx:49:63
+      at agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/AUTOMATION/jest/qa_entry_props.test.tsx:48:12
+      at Object.<anonymous> (agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/AUTOMATION/jest/qa_entry_props.test.tsx:47:11)
+
+  ● CLASS C seam (real store, storage getter throws): sign-out must still navigate to /auth
+
+    Hooks cannot be defined inside tests. Hook of type "beforeAll" is nested within "CLASS C seam (real store, storage getter throws): sign-out must still navigate to /auth".
+
+      47 |     await new Promise<void>((done) => {
+      48 |       jest.isolateModules(() => {
+    > 49 |         const React = require('react'); const { render: r } = require('@testing-library/react');
+         |                                                               ^
+      50 |         const { WorkspaceEntry: E } = require('@/components/workspace/WorkspaceEntry');
+      51 |         const { useChatStore: store } = require('@/store/chatStore');
+      52 |         nav.push.mockImplementation((u: string) => result.pushed.push(u)); auth.logout.mockResolvedValue(undefined);
+
+      at eventHandler (node_modules/jest-circus/build/jestAdapterInit.js:111:44)
+      at Object.<anonymous> (node_modules/@testing-library/react/dist/index.js:44:5)
+      at agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/AUTOMATION/jest/qa_entry_props.test.tsx:49:63
+      at agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/AUTOMATION/jest/qa_entry_props.test.tsx:48:12
+      at Object.<anonymous> (agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/AUTOMATION/jest/qa_entry_props.test.tsx:47:11)
+
+  ● CLASS C seam (real store, storage getter throws): sign-out must still navigate to /auth
+
+    Hooks cannot be defined inside tests. Hook of type "afterAll" is nested within "CLASS C seam (real store, storage getter throws): sign-out must still navigate to /auth".
+
+      47 |     await new Promise<void>((done) => {
+      48 |       jest.isolateModules(() => {
+    > 49 |         const React = require('react'); const { render: r } = require('@testing-library/react');
+         |                                                               ^
+      50 |         const { WorkspaceEntry: E } = require('@/components/workspace/WorkspaceEntry');
+      51 |         const { useChatStore: store } = require('@/store/chatStore');
+      52 |         nav.push.mockImplementation((u: string) => result.pushed.push(u)); auth.logout.mockResolvedValue(undefined);
+
+      at eventHandler (node_modules/jest-circus/build/jestAdapterInit.js:111:44)
+      at Object.<anonymous> (node_modules/@testing-library/react/dist/index.js:48:5)
+      at agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/AUTOMATION/jest/qa_entry_props.test.tsx:49:63
+      at agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/AUTOMATION/jest/qa_entry_props.test.tsx:48:12
+      at Object.<anonymous> (agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/AUTOMATION/jest/qa_entry_props.test.tsx:47:11)
+
+  ● CLASS C seam (real store, storage getter throws): sign-out must still navigate to /auth
+
+    expect(received).toEqual(expected) // deep equality
+
+    - Expected  - 3
+    + Received  + 1
+
+    - Array [
+    -   "/auth",
+    - ]
+    + Array []
+
+      63 |   console.log('CLASS_C_SEAM_RESULT ' + JSON.stringify(result));
+      64 |   expect(result.renderThrew).toBeUndefined();
+    > 65 |   expect(result.pushed).toEqual(['/auth']);
+         |                         ^
+      66 | });
+      67 |
+
+      at Object.<anonymous> (agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/AUTOMATION/jest/qa_entry_props.test.tsx:65:25)
+
+  ● CLASS C seam (real store, storage getter throws): sign-out must still navigate to /auth
+
+    TypeError: Cannot read properties of undefined (reading 'setItem')
+
+      193 |       setHistoryLoading: (loading) => set({ isHistoryLoading: loading }),
+      194 |       setError: (error) => set({ error }),
+    > 195 |       reset: () => set(INITIAL_STATE),
+          |                    ^
+      196 |     }),
+      197 |     {
+      198 |       name: PERSIST_KEY, // FIX-003 (F09): mode-namespaced
+
+      at Object.setItem (node_modules/zustand/middleware.js:304:22)
+      at setItem (node_modules/zustand/middleware.js:495:22)
+      at node_modules/zustand/middleware.js:507:12
+      at Object.reset (src/store/chatStore.ts:195:20)
+      at src/components/workspace/WorkspaceEntry.tsx:15:270
+
+  ● CLASS C seam (real store, storage getter throws): sign-out must still navigate to /auth
+
+    TypeError: Cannot read properties of undefined (reading 'setItem')
+
+      193 |       setHistoryLoading: (loading) => set({ isHistoryLoading: loading }),
+      194 |       setError: (error) => set({ error }),
+    > 195 |       reset: () => set(INITIAL_STATE),
+          |                    ^
+      196 |     }),
+      197 |     {
+      198 |       name: PERSIST_KEY, // FIX-003 (F09): mode-namespaced
+
+      at Object.setItem (node_modules/zustand/middleware.js:304:22)
+      at setItem (node_modules/zustand/middleware.js:495:22)
+      at node_modules/zustand/middleware.js:507:12
+      at Object.reset (src/store/chatStore.ts:195:20)
+      at src/components/workspace/WorkspaceEntry.tsx:15:270
+
+PASS agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/AUTOMATION/jest/qa_entry_render.test.tsx (5.465 s)
+PASS agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/AUTOMATION/jest/qa_entry_ssr.test.tsx
+
+Test Suites: 1 failed, 4 passed, 5 total
+Tests:       1 failed, 27 passed, 28 total
+Snapshots:   0 total
+Time:        8.434 s
+Ran all test suites.
+Test results written to: ../../../..<run-tmp>/qa-jest.json

@@ -1,10 +1,10 @@
 {
   "module_id": "stark_agent_workspace_apbm_000",
   "packet_version": "1.0",
-  "stage": "LEAD_APPROVED_REVISED_CANDIDATE_AWAITING_COMMIT_AND_REVISED_RELEASE",
+  "stage": "Q2_ATTEMPT_001_EXECUTED_AWAITING_LEAD_ADJUDICATION",
   "evidence_baseline_sha": "20ef380bdd6eed5e111d953d6404992add7a88a6",
   "product_candidate_sha": "f21564cacb563ecddbf78b1685086c9489bf1c26",
-  "qa_head_sha": "a4abd2a9e4d9675a41653fdb66f3456feb11457a",
+  "qa_head_sha": "c4ed7042fa05fa638bdc6d4327ecba3448d44cef",
   "qa_head_note": "a4abd2a is a committed documentation successor of proposed f21564c: 37 QAM paths, 1 historical RESPONSES document, zero product/config/test/dependency delta. Fresh raw identity evidence under remote-roster-rebind-002.",
   "qa_branch": "qa/frontend-apbm-000",
   "plan_id": "QA-APBM000-PLAN v0.2 (Lead-approved)",
@@ -13,21 +13,19 @@
   "acceptance_sha256": "57f8d9f4dec8ca826326067254b0916ef65ccd51b635a8ac6ead73e8ab469fcc",
   "rulings_sha256": "99d4c40f7094106f4386d4d8ff5535228feb653dcbe0fd948a14a0ff1ec3b36f",
   "qa_lead_approval_record": "Q1B_REVIEW.md (original v0.2, historical) + HANDOFFS/LEAD_REMOTE_ROSTER_APPROVAL_2026-10-07.md (revised candidate f21564c), installed byte-exact 2026-10-07; commit pending",
-  "director_q2_release_record": "HISTORICAL: HANDOFFS/DIRECTOR_Q2_RELEASE_2026-10-05_193516.md (D4 ALLOW, D7 OMIT remain recorded). Revised-candidate release: PENDING",
-  "director_pending": [
-    "Single revised-candidate release confirmation (Architect amendment / Lead L5)"
-  ],
-  "q2_blockers": [
-    "Tony commit of the selective QAM list (approval + pending records)",
-    "Single revised-candidate release confirmation",
-    "Q2-0 verification under v2 tool + separate authority/tool hash gate"
-  ],
+  "director_q2_release_record": "HANDOFFS/DIRECTOR_Q2_RELEASE_REVISED_2026-10-07_190418.md (verbatim; D4 ALLOW, D7 OMIT)",
+  "director_pending": [],
+  "q2_blockers": [],
   "open_findings": [
-    "FINDINGS/DIRECTOR-OBS-001.md (UNTRIAGED) + DIRECTOR-OBS-001_EXECUTOR-ADDENDUM-001.md"
+    "FINDINGS/Q2-F01_signout_storage_unavailable.md",
+    "FINDINGS/Q2-F02_drawer_breakpoint_focus_target.md",
+    "FINDINGS/Q2-F03_breadcrumb_target_size.md",
+    "FINDINGS/Q2-F04_manifest_test_bundle_coverage.md",
+    "FINDINGS/DIRECTOR-OBS-001.md (+ addenda 001, 002; UNTRIAGED-live)"
   ],
   "attempt": 1,
-  "last_completed_checkpoint": "Q1B (Lead plan approval)",
-  "next_action": "Tony commits selective list and gives the one revised release; Executor records it, runs Q2-0 then the Q2 body",
+  "last_completed_checkpoint": "Q2 (attempt 001)",
+  "next_action": "QA Lead adjudicates Q2 attempt 001 (findings, build route, instrument gaps). No Q5 before Lead disposition.",
   "gate_q": "NOT_ISSUED",
   "note": "Routing aid only; no field grants permission without its owner record.",
   "nonblocking": [
@@ -50,5 +48,8 @@
   "acceptance_testing_started_this_run": false,
   "effective_plan": "QA-APBM000-PLAN v0.2 (8ddb743f...) + Lead binding addendum LEAD_REMOTE_ROSTER_APPROVAL_2026-10-07.md (c0380dfc...) + Architect amendment (57924e3f...)",
   "binding_hashes_record": "HANDOFFS/LEAD_REMOTE_ROSTER_BINDING_HASHES_2026-10-07.json (0ccefad2...; all 9 pins verified locally 2026-10-07)",
-  "inherited_failures": "A/B waivers retired; only exact C (chatStore.persist SSR guard) conditionally deferred"
+  "inherited_failures": "A/B retired (all pass); C deferral invalidated by Q2-F01 pending Lead classification",
+  "q2_summary": "Q2-0 PASS; tsc 0; Jest 286/1 (exact C); QA Jest 27/28; build BLOCKED; static PASS; browser run2 24/29; engineer copy 33/33; post-run PRODUCT_EQUIVALENT",
+  "proposed_ac_grades": "18 PASS (3 qualified); AC000-13 FAIL; AC000-17 FAIL; AC000-20 BLOCKED; AC000-22 BLOCKED; AC000-24 NOT RUN",
+  "q2_package": "HANDOFFS/Q2_attempt-001.zip"
 }

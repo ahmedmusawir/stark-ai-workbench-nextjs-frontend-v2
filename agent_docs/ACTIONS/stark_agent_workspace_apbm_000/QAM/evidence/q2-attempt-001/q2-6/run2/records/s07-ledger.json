@@ -1,0 +1,36 @@
+[
+  {
+    "action": "list",
+    "agent": "kestrel",
+    "seq": 1
+  },
+  {
+    "action": "list",
+    "agent": "kestrel",
+    "seq": 2
+  },
+  {
+    "action": "send",
+    "agent": "kestrel",
+    "session": null,
+    "message": "bind me",
+    "seq": 3
+  },
+  {
+    "action": "list",
+    "agent": "kestrel",
+    "seq": 4
+  },
+  {
+    "action": "list",
+    "agent": "kestrel",
+    "seq": 5
+  },
+  {
+    "action": "send",
+    "agent": "kestrel",
+    "session": null,
+    "message": "late",
+    "seq": 6
+  }
+]
