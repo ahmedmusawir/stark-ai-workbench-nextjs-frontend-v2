@@ -1,5 +1,19 @@
 # Recovery State
 
+**CURRENT — 2026-10-08 09:10 Asia/Dhaka: APBM_000 Q2 attempt 001 DONE; waiting for QA Lead adjudication / Architect close-out.**
+
+Seat on reboot: independent QA Executor (Claudy). Enter via `agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/CLAUDE.md` → `QAM_ENTRY.md`; read `QAM/QAM_STATE.json`, `QAM/HANDOFFS/Q2_attempt-001_REVIEW_START_HERE.md`, `QAM/AC_EVIDENCE_MATRIX.md`.
+Branch `qa/frontend-apbm-000`, HEAD `24ccf30` (pushed). Product candidate `f21564c` (Tony's cloud roster, Lead-approved 2026-10-07; Architect roster amendment 2026-10-05). Effective plan v0.2 + Lead approval addendum.
+Q2 result: Q2-0 PASS; tsc 0; Jest 286/1 (only class C); QA Jest 27/28; build BLOCKED (Turbopack vs no-egress font lane); browser 24/29; Engineer copy 33/33. Proposed: AC000-13 FAIL (Q2-F01 sign-out with storage blocked), AC000-17 FAIL (F02 drawer focus, F03 40x44 crumb), AC000-20/22 BLOCKED. Gate Q NOT ISSUED; Q5 not started.
+Package to Lead: `~/Downloads/APBM000_Q2_attempt-001_QA-Lead-Package_2026-10-07_194132.zip` (sha 27aec35a…).
+Pending: Lead classification of F01–F04 + build route + instrument gaps; Architect close-out; optional bounded live diagnostic for DIRECTOR-OBS-001.
+Standing rules: NEVER touch config/agents.manifest*.json; no Git mutations; QA reports inside QAM; one writer at a time (a second Executor session wrote a stale note 2026-10-08 09:07 — close it).
+Uncommitted now: QAM session_2026-10-07.md, QAM_STATE.json, RETURN_NOTE_2026-10-08_090728.md (+ its staging edit), this RECOVERY.md and root session_2026-10-08.md.
+
+--- Previous recovery records preserved below. ---
+
+# Recovery State
+
 **CURRENT — 2026-10-04 22:15 Asia/Dhaka: QA handoff location corrected per Director.**
 
 Canonical handoff: `agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/HANDOFFS/QA_HANDOFF.md`; module-root document is only a compatibility pointer.
@@ -200,3 +214,9 @@ endpoints tracked.
   routes → ADK bundle, no middleman; wrapper convicted post-mortem on the history bug.
 - Board: 25 suites / 174 tests, tsc clean, build clean. Docs commit + N11 = Coordinator.
 - Only known breakage: `npm run lint` (pre-existing B1, out of scope).
+
+---
+
+## Astra-only reboot pointer — 2026-10-08T09:09:10.872775+06:00
+
+Astra/Cody should read [astra_RECOVERY.md](astra_RECOVERY.md) and [astra_session_2026-10-08.md](astra_session_2026-10-08.md) before restarting work. Tony clarified the remote-roster instruction was for Claudy/QA; Astra must await a new Engineer assignment. This pointer does not change Claudy's QA state or earlier records. Future Astra session filenames use the `astra_` prefix.

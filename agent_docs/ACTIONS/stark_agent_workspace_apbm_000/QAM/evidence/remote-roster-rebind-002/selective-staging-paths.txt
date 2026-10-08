@@ -1,3 +1,4 @@
+agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/HANDOFFS/RETURN_NOTE_2026-10-08_090728.md
 agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/HANDOFFS/ROSTER_REBIND_REVIEW_2026-10-07_183026.md
 agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/HANDOFFS/ROSTER_REBIND_REVIEW_2026-10-07_183026.zip
 agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/HANDOFFS/ROSTER_REBIND_REVIEW_2026-10-07_183026_RECEIPT.json

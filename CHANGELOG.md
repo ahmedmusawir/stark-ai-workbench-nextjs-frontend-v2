@@ -138,3 +138,10 @@
 - **Added:** corrected indexed ENGINEERING_attempt-002.zip, receipt and verified Downloads copy; 001 preserved.
 - **Updated:** session/recovery and saved response `agent_docs/RESPONSES/response_2026-10-04_221511_qa-handoff-location-correction.md` before screen.
 - **Reason:** Director requested the handoff in QAM/HANDOFFS. Product candidate and tests unchanged.
+
+## 2026-10-08 03:09 UTC — [CC] Astra / Cody Engineer
+
+- Added `astra_session_2026-10-08.md` and `astra_RECOVERY.md` for Director-requested isolated reboot memory.
+- Appended an Astra-only discovery pointer to shared RECOVERY; preserved existing history and all QA records.
+- Saved `agent_docs/RESPONSES/response_2026-10-08_090910_astra-reboot-checkpoint.md` before display; no staging performed.
+- Director clarified the remote-roster assignment belonged to QA/Claudy. Astra will not resume it. Repository package CRC/hash verified; old Downloads copy currently absent; no replacement export or tests run.

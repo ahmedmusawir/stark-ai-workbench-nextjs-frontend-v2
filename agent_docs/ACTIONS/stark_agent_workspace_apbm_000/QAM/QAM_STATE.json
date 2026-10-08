@@ -4,7 +4,7 @@
   "stage": "Q2_ATTEMPT_001_EXECUTED_AWAITING_LEAD_ADJUDICATION",
   "evidence_baseline_sha": "20ef380bdd6eed5e111d953d6404992add7a88a6",
   "product_candidate_sha": "f21564cacb563ecddbf78b1685086c9489bf1c26",
-  "qa_head_sha": "c4ed7042fa05fa638bdc6d4327ecba3448d44cef",
+  "qa_head_sha": "24ccf30 (Q2 attempt 001 committed and pushed; 253 QAM paths)",
   "qa_head_note": "a4abd2a is a committed documentation successor of proposed f21564c: 37 QAM paths, 1 historical RESPONSES document, zero product/config/test/dependency delta. Fresh raw identity evidence under remote-roster-rebind-002.",
   "qa_branch": "qa/frontend-apbm-000",
   "plan_id": "QA-APBM000-PLAN v0.2 (Lead-approved)",
@@ -51,5 +51,6 @@
   "inherited_failures": "A/B retired (all pass); C deferral invalidated by Q2-F01 pending Lead classification",
   "q2_summary": "Q2-0 PASS; tsc 0; Jest 286/1 (exact C); QA Jest 27/28; build BLOCKED; static PASS; browser run2 24/29; engineer copy 33/33; post-run PRODUCT_EQUIVALENT",
   "proposed_ac_grades": "18 PASS (3 qualified); AC000-13 FAIL; AC000-17 FAIL; AC000-20 BLOCKED; AC000-22 BLOCKED; AC000-24 NOT RUN",
-  "q2_package": "HANDOFFS/Q2_attempt-001.zip"
+  "q2_package": "HANDOFFS/Q2_attempt-001.zip",
+  "concurrency_note": "2026-10-08 09:07 a second Executor session wrote a stale RETURN_NOTE (pre-approval state). Preserved; superseded by session_2026-10-07.md 09:09 entry. One writer at a time."
 }
