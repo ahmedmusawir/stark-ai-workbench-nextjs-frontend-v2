@@ -1,0 +1,59 @@
+{
+  "previous_full_result": {
+    "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/dependency-reconciliation-001/2026-10-08_124256_BDT/full.json",
+    "passed": 289,
+    "failed": 1,
+    "target": {
+      "ancestorTitles": [
+        "AddMemberForm"
+      ],
+      "duration": 21,
+      "failing": false,
+      "failureDetails": [
+        {
+          "matcherResult": {
+            "message": "expect(jest.fn()).not.toHaveBeenCalled()\n\nExpected number of calls: 0\nReceived number of calls: 1\n\n1: \"/admin-portal\"",
+            "pass": true
+          }
+        }
+      ],
+      "failureMessages": [
+        "Error: expect(jest.fn()).not.toHaveBeenCalled()\n\nExpected number of calls: 0\nReceived number of calls: 1\n\n1: \"/admin-portal\"\n    at Object.<anonymous> (/home/moose/nextjs/10XLAB/stark-ai-workbench-nextjs-frontend-v2/src/__tests__/admin/AddMemberForm.test.tsx:152:26)"
+      ],
+      "fullName": "AddMemberForm does not redirect when addMember returns an error",
+      "invocations": 1,
+      "location": null,
+      "numPassingAsserts": 1,
+      "retryReasons": [],
+      "startAt": 1791441938433,
+      "status": "failed",
+      "title": "does not redirect when addMember returns an error"
+    }
+  },
+  "current_full_result": {
+    "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/addmember-test-repair-001/2026-10-11_134025_BDT/full.json",
+    "passed": 290,
+    "failed": 0,
+    "target": {
+      "ancestorTitles": [
+        "AddMemberForm"
+      ],
+      "duration": 22,
+      "failing": false,
+      "failureDetails": [],
+      "failureMessages": [],
+      "fullName": "AddMemberForm does not redirect when addMember returns an error",
+      "invocations": 1,
+      "location": null,
+      "numPassingAsserts": 4,
+      "retryReasons": [],
+      "startAt": 1791704523376,
+      "status": "passed",
+      "title": "does not redirect when addMember returns an error"
+    }
+  },
+  "same_full_suite_test_names": true,
+  "tests_removed": [],
+  "current_skipped": 0,
+  "interpretation": "Authorized maintained-test lifecycle repair; source-confirmed pending submission defect. Historical callback origin untraced. Earlier failure remains durable evidence, not waived or overwritten."
+}

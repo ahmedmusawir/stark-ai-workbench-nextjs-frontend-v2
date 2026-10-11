@@ -1,0 +1,112 @@
+diff --git a/src/__tests__/admin/AddMemberForm.test.tsx b/src/__tests__/admin/AddMemberForm.test.tsx
+index ab7405e..ed641e6 100644
+--- a/src/__tests__/admin/AddMemberForm.test.tsx
++++ b/src/__tests__/admin/AddMemberForm.test.tsx
+@@ -3,19 +3,21 @@
+  */
+ 
+ import React from 'react';
+-import { render, screen, fireEvent, waitFor } from '@testing-library/react';
++import { act, render, screen, fireEvent, waitFor } from '@testing-library/react';
+ import '@testing-library/jest-dom';
+ import AddMemberForm from '@/app/(admin)/admin-portal/add-member/AddMemberForm';
+ import { useRouter } from 'next/navigation';
+ import { addMember } from '@/app/(admin)/admin-portal/actions';
+ 
++const mockToast = jest.fn();
++
+ jest.mock('@/app/(admin)/admin-portal/actions', () => ({
+   addMember: jest.fn(),
+ }));
+ 
+ jest.mock('@/components/ui/use-toast', () => ({
+   useToast: () => ({
+-    toast: jest.fn(),
++    toast: mockToast,
+   }),
+ }));
+ 
+@@ -27,7 +29,11 @@ describe('AddMemberForm', () => {
+   const mockRefresh = jest.fn();
+ 
+   beforeEach(() => {
+-    jest.clearAllMocks();
++    addMemberMock.mockReset();
++    useRouterMock.mockReset();
++    mockPush.mockReset();
++    mockRefresh.mockReset();
++    mockToast.mockReset();
+     useRouterMock.mockReturnValue({
+       push: mockPush,
+       replace: jest.fn(),
+@@ -46,9 +52,11 @@ describe('AddMemberForm', () => {
+   });
+ 
+   it('shows loading state when form is submitted', async () => {
+-    addMemberMock.mockImplementation(
+-      () => new Promise((resolve) => setTimeout(() => resolve({}), 100))
+-    );
++    let resolveSubmission!: (result: Awaited<ReturnType<typeof addMember>>) => void;
++    const submission = new Promise<Awaited<ReturnType<typeof addMember>>>((resolve) => {
++      resolveSubmission = resolve;
++    });
++    addMemberMock.mockReturnValueOnce(submission);
+ 
+     render(<AddMemberForm />);
+ 
+@@ -61,8 +69,24 @@ describe('AddMemberForm', () => {
+     const submitButton = screen.getByRole('button', { name: /create member/i });
+     fireEvent.click(submitButton);
+ 
++    try {
++      await waitFor(() => {
++        expect(submitButton).toBeDisabled();
++        expect(submitButton).toHaveTextContent('Creating...');
++      });
++      expect(mockToast).not.toHaveBeenCalled();
++      expect(mockPush).not.toHaveBeenCalled();
++    } finally {
++      // Settle this submission before cleanup, even if its loading assertion fails.
++      await act(async () => {
++        resolveSubmission({});
++        await submission;
++      });
++    }
++
+     await waitFor(() => {
+-      expect(submitButton).toBeDisabled();
++      expect(mockPush).toHaveBeenCalledWith('/admin-portal');
++      expect(submitButton).toBeEnabled();
+     });
+   });
+ 
+@@ -113,6 +137,8 @@ describe('AddMemberForm', () => {
+         email: 'jane@example.com',
+         password: 'password123',
+       });
++      expect(mockPush).toHaveBeenCalledWith('/admin-portal');
++      expect(screen.getByRole('button', { name: /create member/i })).toBeEnabled();
+     });
+   });
+ 
+@@ -130,6 +156,7 @@ describe('AddMemberForm', () => {
+ 
+     await waitFor(() => {
+       expect(mockPush).toHaveBeenCalledWith('/admin-portal');
++      expect(screen.getByRole('button', { name: /create member/i })).toBeEnabled();
+     });
+   });
+ 
+@@ -147,6 +174,12 @@ describe('AddMemberForm', () => {
+ 
+     await waitFor(() => {
+       expect(addMemberMock).toHaveBeenCalled();
++      expect(mockToast).toHaveBeenCalledWith({
++        title: 'Error creating member',
++        description: 'A user with the email "jane@example.com" already exists.',
++        variant: 'destructive',
++      });
++      expect(screen.getByRole('button', { name: /create member/i })).toBeEnabled();
+     });
+ 
+     expect(mockPush).not.toHaveBeenCalled();

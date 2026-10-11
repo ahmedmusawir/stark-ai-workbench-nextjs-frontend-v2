@@ -1,0 +1,24 @@
+{
+  "command": [
+    "unshare",
+    "-rn",
+    "npm",
+    "test",
+    "--",
+    "--runInBand",
+    "--runTestsByPath",
+    "src/__tests__/admin/AddMemberForm.test.tsx",
+    "--testNamePattern=^AddMemberForm does not redirect when addMember returns an error$",
+    "--json",
+    "--outputFile=/home/moose/nextjs/10XLAB/stark-ai-workbench-nextjs-frontend-v2/agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/addmember-diagnostic-001/2026-10-08_131602_BDT/isolated.json"
+  ],
+  "cwd": "/home/moose/nextjs/10XLAB/stark-ai-workbench-nextjs-frontend-v2",
+  "started_at": "2026-10-08T07:16:40.316566+00:00",
+  "seconds": 1.076,
+  "exit_code": 0,
+  "log": "isolated.log",
+  "network": "unshare -rn, no external network; sanitized environment; no QA font hook",
+  "scope": "Only the one named failing test; other tests filtered out",
+  "invocations": 1,
+  "full_suite_rerun": false
+}

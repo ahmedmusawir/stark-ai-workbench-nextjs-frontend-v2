@@ -1,0 +1,531 @@
+{
+  "restored_only": "package-lock.json",
+  "full_head": "9c50884d4c4513b6969311d5be7c05828104ed3d",
+  "sha256": "f81ea7545863bf12dcb33912a8d43d042abe06aa7b95ff8831af647cdaaeae49",
+  "git_index_unchanged": true,
+  "cache_preflight": {
+    "present_integrity_blobs": 783,
+    "missing_integrity_blobs": 49,
+    "missing": [
+      {
+        "path": "node_modules/@emnapi/core",
+        "version": "1.4.5",
+        "optional": true,
+        "os": null,
+        "cpu": null
+      },
+      {
+        "path": "node_modules/@emnapi/wasi-threads",
+        "version": "1.0.4",
+        "optional": true,
+        "os": null,
+        "cpu": null
+      },
+      {
+        "path": "node_modules/@img/sharp-darwin-arm64",
+        "version": "0.34.5",
+        "optional": true,
+        "os": [
+          "darwin"
+        ],
+        "cpu": [
+          "arm64"
+        ]
+      },
+      {
+        "path": "node_modules/@img/sharp-darwin-x64",
+        "version": "0.34.5",
+        "optional": true,
+        "os": [
+          "darwin"
+        ],
+        "cpu": [
+          "x64"
+        ]
+      },
+      {
+        "path": "node_modules/@img/sharp-libvips-darwin-arm64",
+        "version": "1.2.4",
+        "optional": true,
+        "os": [
+          "darwin"
+        ],
+        "cpu": [
+          "arm64"
+        ]
+      },
+      {
+        "path": "node_modules/@img/sharp-libvips-darwin-x64",
+        "version": "1.2.4",
+        "optional": true,
+        "os": [
+          "darwin"
+        ],
+        "cpu": [
+          "x64"
+        ]
+      },
+      {
+        "path": "node_modules/@img/sharp-libvips-linux-arm",
+        "version": "1.2.4",
+        "optional": true,
+        "os": [
+          "linux"
+        ],
+        "cpu": [
+          "arm"
+        ]
+      },
+      {
+        "path": "node_modules/@img/sharp-libvips-linux-arm64",
+        "version": "1.2.4",
+        "optional": true,
+        "os": [
+          "linux"
+        ],
+        "cpu": [
+          "arm64"
+        ]
+      },
+      {
+        "path": "node_modules/@img/sharp-libvips-linux-ppc64",
+        "version": "1.2.4",
+        "optional": true,
+        "os": [
+          "linux"
+        ],
+        "cpu": [
+          "ppc64"
+        ]
+      },
+      {
+        "path": "node_modules/@img/sharp-libvips-linux-riscv64",
+        "version": "1.2.4",
+        "optional": true,
+        "os": [
+          "linux"
+        ],
+        "cpu": [
+          "riscv64"
+        ]
+      },
+      {
+        "path": "node_modules/@img/sharp-libvips-linux-s390x",
+        "version": "1.2.4",
+        "optional": true,
+        "os": [
+          "linux"
+        ],
+        "cpu": [
+          "s390x"
+        ]
+      },
+      {
+        "path": "node_modules/@img/sharp-libvips-linuxmusl-arm64",
+        "version": "1.2.4",
+        "optional": true,
+        "os": [
+          "linux"
+        ],
+        "cpu": [
+          "arm64"
+        ]
+      },
+      {
+        "path": "node_modules/@img/sharp-linux-arm",
+        "version": "0.34.5",
+        "optional": true,
+        "os": [
+          "linux"
+        ],
+        "cpu": [
+          "arm"
+        ]
+      },
+      {
+        "path": "node_modules/@img/sharp-linux-arm64",
+        "version": "0.34.5",
+        "optional": true,
+        "os": [
+          "linux"
+        ],
+        "cpu": [
+          "arm64"
+        ]
+      },
+      {
+        "path": "node_modules/@img/sharp-linux-ppc64",
+        "version": "0.34.5",
+        "optional": true,
+        "os": [
+          "linux"
+        ],
+        "cpu": [
+          "ppc64"
+        ]
+      },
+      {
+        "path": "node_modules/@img/sharp-linux-riscv64",
+        "version": "0.34.5",
+        "optional": true,
+        "os": [
+          "linux"
+        ],
+        "cpu": [
+          "riscv64"
+        ]
+      },
+      {
+        "path": "node_modules/@img/sharp-linux-s390x",
+        "version": "0.34.5",
+        "optional": true,
+        "os": [
+          "linux"
+        ],
+        "cpu": [
+          "s390x"
+        ]
+      },
+      {
+        "path": "node_modules/@img/sharp-linuxmusl-arm64",
+        "version": "0.34.5",
+        "optional": true,
+        "os": [
+          "linux"
+        ],
+        "cpu": [
+          "arm64"
+        ]
+      },
+      {
+        "path": "node_modules/@img/sharp-wasm32",
+        "version": "0.34.5",
+        "optional": true,
+        "os": null,
+        "cpu": [
+          "wasm32"
+        ]
+      },
+      {
+        "path": "node_modules/@img/sharp-win32-arm64",
+        "version": "0.34.5",
+        "optional": true,
+        "os": [
+          "win32"
+        ],
+        "cpu": [
+          "arm64"
+        ]
+      },
+      {
+        "path": "node_modules/@img/sharp-win32-ia32",
+        "version": "0.34.5",
+        "optional": true,
+        "os": [
+          "win32"
+        ],
+        "cpu": [
+          "ia32"
+        ]
+      },
+      {
+        "path": "node_modules/@img/sharp-win32-x64",
+        "version": "0.34.5",
+        "optional": true,
+        "os": [
+          "win32"
+        ],
+        "cpu": [
+          "x64"
+        ]
+      },
+      {
+        "path": "node_modules/@napi-rs/wasm-runtime",
+        "version": "0.2.12",
+        "optional": true,
+        "os": null,
+        "cpu": null
+      },
+      {
+        "path": "node_modules/@next/swc-darwin-arm64",
+        "version": "16.2.6",
+        "optional": true,
+        "os": [
+          "darwin"
+        ],
+        "cpu": [
+          "arm64"
+        ]
+      },
+      {
+        "path": "node_modules/@next/swc-darwin-x64",
+        "version": "16.2.6",
+        "optional": true,
+        "os": [
+          "darwin"
+        ],
+        "cpu": [
+          "x64"
+        ]
+      },
+      {
+        "path": "node_modules/@next/swc-linux-arm64-gnu",
+        "version": "16.2.6",
+        "optional": true,
+        "os": [
+          "linux"
+        ],
+        "cpu": [
+          "arm64"
+        ]
+      },
+      {
+        "path": "node_modules/@next/swc-linux-arm64-musl",
+        "version": "16.2.6",
+        "optional": true,
+        "os": [
+          "linux"
+        ],
+        "cpu": [
+          "arm64"
+        ]
+      },
+      {
+        "path": "node_modules/@next/swc-win32-arm64-msvc",
+        "version": "16.2.6",
+        "optional": true,
+        "os": [
+          "win32"
+        ],
+        "cpu": [
+          "arm64"
+        ]
+      },
+      {
+        "path": "node_modules/@next/swc-win32-x64-msvc",
+        "version": "16.2.6",
+        "optional": true,
+        "os": [
+          "win32"
+        ],
+        "cpu": [
+          "x64"
+        ]
+      },
+      {
+        "path": "node_modules/@tybys/wasm-util",
+        "version": "0.10.0",
+        "optional": true,
+        "os": null,
+        "cpu": null
+      },
+      {
+        "path": "node_modules/@unrs/resolver-binding-android-arm-eabi",
+        "version": "1.11.1",
+        "optional": true,
+        "os": [
+          "android"
+        ],
+        "cpu": [
+          "arm"
+        ]
+      },
+      {
+        "path": "node_modules/@unrs/resolver-binding-android-arm64",
+        "version": "1.11.1",
+        "optional": true,
+        "os": [
+          "android"
+        ],
+        "cpu": [
+          "arm64"
+        ]
+      },
+      {
+        "path": "node_modules/@unrs/resolver-binding-darwin-arm64",
+        "version": "1.11.1",
+        "optional": true,
+        "os": [
+          "darwin"
+        ],
+        "cpu": [
+          "arm64"
+        ]
+      },
+      {
+        "path": "node_modules/@unrs/resolver-binding-darwin-x64",
+        "version": "1.11.1",
+        "optional": true,
+        "os": [
+          "darwin"
+        ],
+        "cpu": [
+          "x64"
+        ]
+      },
+      {
+        "path": "node_modules/@unrs/resolver-binding-freebsd-x64",
+        "version": "1.11.1",
+        "optional": true,
+        "os": [
+          "freebsd"
+        ],
+        "cpu": [
+          "x64"
+        ]
+      },
+      {
+        "path": "node_modules/@unrs/resolver-binding-linux-arm-gnueabihf",
+        "version": "1.11.1",
+        "optional": true,
+        "os": [
+          "linux"
+        ],
+        "cpu": [
+          "arm"
+        ]
+      },
+      {
+        "path": "node_modules/@unrs/resolver-binding-linux-arm-musleabihf",
+        "version": "1.11.1",
+        "optional": true,
+        "os": [
+          "linux"
+        ],
+        "cpu": [
+          "arm"
+        ]
+      },
+      {
+        "path": "node_modules/@unrs/resolver-binding-linux-arm64-gnu",
+        "version": "1.11.1",
+        "optional": true,
+        "os": [
+          "linux"
+        ],
+        "cpu": [
+          "arm64"
+        ]
+      },
+      {
+        "path": "node_modules/@unrs/resolver-binding-linux-arm64-musl",
+        "version": "1.11.1",
+        "optional": true,
+        "os": [
+          "linux"
+        ],
+        "cpu": [
+          "arm64"
+        ]
+      },
+      {
+        "path": "node_modules/@unrs/resolver-binding-linux-ppc64-gnu",
+        "version": "1.11.1",
+        "optional": true,
+        "os": [
+          "linux"
+        ],
+        "cpu": [
+          "ppc64"
+        ]
+      },
+      {
+        "path": "node_modules/@unrs/resolver-binding-linux-riscv64-gnu",
+        "version": "1.11.1",
+        "optional": true,
+        "os": [
+          "linux"
+        ],
+        "cpu": [
+          "riscv64"
+        ]
+      },
+      {
+        "path": "node_modules/@unrs/resolver-binding-linux-riscv64-musl",
+        "version": "1.11.1",
+        "optional": true,
+        "os": [
+          "linux"
+        ],
+        "cpu": [
+          "riscv64"
+        ]
+      },
+      {
+        "path": "node_modules/@unrs/resolver-binding-linux-s390x-gnu",
+        "version": "1.11.1",
+        "optional": true,
+        "os": [
+          "linux"
+        ],
+        "cpu": [
+          "s390x"
+        ]
+      },
+      {
+        "path": "node_modules/@unrs/resolver-binding-wasm32-wasi",
+        "version": "1.11.1",
+        "optional": true,
+        "os": null,
+        "cpu": [
+          "wasm32"
+        ]
+      },
+      {
+        "path": "node_modules/@unrs/resolver-binding-win32-arm64-msvc",
+        "version": "1.11.1",
+        "optional": true,
+        "os": [
+          "win32"
+        ],
+        "cpu": [
+          "arm64"
+        ]
+      },
+      {
+        "path": "node_modules/@unrs/resolver-binding-win32-ia32-msvc",
+        "version": "1.11.1",
+        "optional": true,
+        "os": [
+          "win32"
+        ],
+        "cpu": [
+          "ia32"
+        ]
+      },
+      {
+        "path": "node_modules/@unrs/resolver-binding-win32-x64-msvc",
+        "version": "1.11.1",
+        "optional": true,
+        "os": [
+          "win32"
+        ],
+        "cpu": [
+          "x64"
+        ]
+      },
+      {
+        "path": "node_modules/fsevents",
+        "version": "2.3.3",
+        "optional": true,
+        "os": [
+          "darwin"
+        ],
+        "cpu": null
+      },
+      {
+        "path": "node_modules/playwright/node_modules/fsevents",
+        "version": "2.3.2",
+        "optional": true,
+        "os": [
+          "darwin"
+        ],
+        "cpu": null
+      }
+    ],
+    "lockfile_resolved_hosts": {
+      "registry.npmjs.org": 832
+    }
+  },
+  "runtime_policy": "No .nvmrc/.node-version/packageManager/engines Node/npm pin present. Historical Node26.7/npm11.19 are execution facts, not repository requirements. Current Node24.15/npm11.12.1 retained."
+}

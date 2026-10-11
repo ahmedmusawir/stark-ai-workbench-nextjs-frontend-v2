@@ -1,0 +1,21 @@
+{
+  "command": [
+    "unshare",
+    "-rn",
+    "npm",
+    "test",
+    "--",
+    "--runInBand",
+    "--runTestsByPath",
+    "src/__tests__/admin/AddMemberForm.test.tsx",
+    "--json",
+    "--outputFile=/home/moose/nextjs/10XLAB/stark-ai-workbench-nextjs-frontend-v2/agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/addmember-test-repair-001/2026-10-11_134025_BDT/addmember.json"
+  ],
+  "cwd": "/home/moose/nextjs/10XLAB/stark-ai-workbench-nextjs-frontend-v2",
+  "started_at": "2026-10-11T07:41:31.492474+00:00",
+  "seconds": 1.241,
+  "exit_code": 0,
+  "log": "addmember.log",
+  "invocations": 1,
+  "network": "unshare -rn; no external network or live service access; sanitized environment; no QA font hook"
+}

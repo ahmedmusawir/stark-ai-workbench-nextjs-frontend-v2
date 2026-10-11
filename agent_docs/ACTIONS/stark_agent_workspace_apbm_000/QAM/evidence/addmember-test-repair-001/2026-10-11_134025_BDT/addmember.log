@@ -1,0 +1,20 @@
+
+> adk-agent-harness-nextjs-frontend-v1@0.1.0 test
+> jest --runInBand --runTestsByPath src/__tests__/admin/AddMemberForm.test.tsx --json --outputFile=/home/moose/nextjs/10XLAB/stark-ai-workbench-nextjs-frontend-v2/agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/addmember-test-repair-001/2026-10-11_134025_BDT/addmember.json
+
+PASS src/__tests__/admin/AddMemberForm.test.tsx
+  AddMemberForm
+    ✓ renders all required form fields (66 ms)
+    ✓ shows loading state when form is submitted (43 ms)
+    ✓ validates that passwords match before submission (30 ms)
+    ✓ validates required fields on empty submit (17 ms)
+    ✓ calls addMember with correct data on valid submission (26 ms)
+    ✓ redirects to admin-portal dashboard on successful creation (25 ms)
+    ✓ does not redirect when addMember returns an error (24 ms)
+
+Test Suites: 1 passed, 1 total
+Tests:       7 passed, 7 total
+Snapshots:   0 total
+Time:        0.845 s, estimated 1 s
+Ran all test suites within paths "src/__tests__/admin/AddMemberForm.test.tsx".
+Test results written to: agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/addmember-test-repair-001/2026-10-11_134025_BDT/addmember.json

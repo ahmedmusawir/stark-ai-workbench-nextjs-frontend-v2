@@ -1,0 +1,3 @@
+The diagnostic package is ready: [Downloads copy](/home/moose/Downloads/APBM000_DEPENDENCY_DIAGNOSTIC_REVIEW_2026-10-08_131602_BDT.zip) and [QAM original](/home/moose/nextjs/10XLAB/stark-ai-workbench-nextjs-frontend-v2/agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/HANDOFFS/APBM000_DEPENDENCY_DIAGNOSTIC_REVIEW_2026-10-08_131602_BDT.zip). Both copies have matching verified hashes.
+
+The error-path test passed when run alone once. Its earlier full-suite failure remains unresolved. The diagnostic proposes a test-lifecycle correction for Architect/QA Lead approval; no product edits, waiver or full-suite rerun occurred. Gate Q remains pending.

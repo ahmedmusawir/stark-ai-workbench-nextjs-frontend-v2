@@ -1,0 +1,81 @@
+{
+  "recorded_at": "2026-10-11T07:43:21.100822+00:00",
+  "checks": [
+    {
+      "command": [
+        "unshare",
+        "-rn",
+        "npm",
+        "test",
+        "--",
+        "--runInBand",
+        "--runTestsByPath",
+        "src/__tests__/admin/AddMemberForm.test.tsx",
+        "--json",
+        "--outputFile=/home/moose/nextjs/10XLAB/stark-ai-workbench-nextjs-frontend-v2/agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/addmember-test-repair-001/2026-10-11_134025_BDT/addmember.json"
+      ],
+      "cwd": "/home/moose/nextjs/10XLAB/stark-ai-workbench-nextjs-frontend-v2",
+      "started_at": "2026-10-11T07:41:31.492474+00:00",
+      "seconds": 1.241,
+      "exit_code": 0,
+      "log": "addmember.log",
+      "invocations": 1,
+      "network": "unshare -rn; no external network or live service access; sanitized environment; no QA font hook"
+    },
+    {
+      "command": [
+        "unshare",
+        "-rn",
+        "npm",
+        "test",
+        "--",
+        "--runInBand",
+        "--json",
+        "--outputFile=/home/moose/nextjs/10XLAB/stark-ai-workbench-nextjs-frontend-v2/agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/addmember-test-repair-001/2026-10-11_134025_BDT/full.json"
+      ],
+      "cwd": "/home/moose/nextjs/10XLAB/stark-ai-workbench-nextjs-frontend-v2",
+      "started_at": "2026-10-11T07:41:57.887527+00:00",
+      "seconds": 9.5,
+      "exit_code": 0,
+      "log": "full.log",
+      "invocations": 1,
+      "network": "unshare -rn; no external network or live service access; sanitized environment; no QA font hook"
+    },
+    {
+      "command": [
+        "unshare",
+        "-rn",
+        "npx",
+        "--no-install",
+        "tsc",
+        "--noEmit"
+      ],
+      "cwd": "/home/moose/nextjs/10XLAB/stark-ai-workbench-nextjs-frontend-v2",
+      "started_at": "2026-10-11T07:42:00.200539+00:00",
+      "seconds": 1.575,
+      "exit_code": 0,
+      "log": "typecheck.log",
+      "invocations": 1,
+      "network": "unshare -rn; no external network or live service access; sanitized environment; no QA font hook"
+    }
+  ],
+  "addmember": {
+    "passed": 7,
+    "failed": 0,
+    "skipped": 0
+  },
+  "full": {
+    "passed": 290,
+    "failed": 0,
+    "suites": 40,
+    "skipped": 0
+  },
+  "typecheck_exit_code": 0,
+  "executions_per_check": 1,
+  "browser_rerun": false,
+  "historical_failures_preserved": true,
+  "waiver": false,
+  "defect": "Source-confirmed incomplete submission lifecycle in maintained test",
+  "historical_callback_origin": "Not conclusively traced",
+  "gate_q": "PENDING"
+}

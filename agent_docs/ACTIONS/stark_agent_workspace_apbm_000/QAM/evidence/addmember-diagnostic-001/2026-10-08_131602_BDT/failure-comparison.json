@@ -1,0 +1,239 @@
+{
+  "target_test": "AddMemberForm does not redirect when addMember returns an error",
+  "assertion": "expect(mockPush).not.toHaveBeenCalled()",
+  "expected_calls": 0,
+  "actual_calls": 1,
+  "actual_argument": "/admin-portal",
+  "stack_location": "src/__tests__/admin/AddMemberForm.test.tsx:152:26",
+  "failure_messages_and_stack_byte_identical": true,
+  "runs": {
+    "earlier_baseline": {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/engineering-repair-001/baseline-full.json",
+      "sha256": "a491106c89a1126123b8c2870268c3058dfddee86c0264bbda752c3b5e4f1530",
+      "suite_counts": {
+        "passed": 286,
+        "failed": 1
+      },
+      "target_test": {
+        "ancestorTitles": [
+          "AddMemberForm"
+        ],
+        "duration": 21,
+        "failing": false,
+        "failureDetails": [
+          {
+            "matcherResult": {
+              "message": "expect(jest.fn()).not.toHaveBeenCalled()\n\nExpected number of calls: 0\nReceived number of calls: 1\n\n1: \"/admin-portal\"",
+              "pass": true
+            }
+          }
+        ],
+        "failureMessages": [
+          "Error: expect(jest.fn()).not.toHaveBeenCalled()\n\nExpected number of calls: 0\nReceived number of calls: 1\n\n1: \"/admin-portal\"\n    at Object.<anonymous> (/home/moose/nextjs/10XLAB/stark-ai-workbench-nextjs-frontend-v2/src/__tests__/admin/AddMemberForm.test.tsx:152:26)"
+        ],
+        "fullName": "AddMemberForm does not redirect when addMember returns an error",
+        "invocations": 1,
+        "location": null,
+        "numPassingAsserts": 1,
+        "retryMessages": [],
+        "retryReasons": [],
+        "status": "failed",
+        "title": "does not redirect when addMember returns an error",
+        "startAt": 1791434992911
+      },
+      "test_timing": [
+        {
+          "name": "AddMemberForm renders all required form fields",
+          "status": "passed",
+          "startAt": 1791434992772,
+          "duration": 19
+        },
+        {
+          "name": "AddMemberForm shows loading state when form is submitted",
+          "status": "passed",
+          "startAt": 1791434992791,
+          "duration": 28
+        },
+        {
+          "name": "AddMemberForm validates that passwords match before submission",
+          "status": "passed",
+          "startAt": 1791434992819,
+          "duration": 37
+        },
+        {
+          "name": "AddMemberForm validates required fields on empty submit",
+          "status": "passed",
+          "startAt": 1791434992856,
+          "duration": 13
+        },
+        {
+          "name": "AddMemberForm calls addMember with correct data on valid submission",
+          "status": "passed",
+          "startAt": 1791434992869,
+          "duration": 23
+        },
+        {
+          "name": "AddMemberForm redirects to admin-portal dashboard on successful creation",
+          "status": "passed",
+          "startAt": 1791434992892,
+          "duration": 19
+        },
+        {
+          "name": "AddMemberForm does not redirect when addMember returns an error",
+          "status": "failed",
+          "startAt": 1791434992911,
+          "duration": 21
+        }
+      ]
+    },
+    "earlier_final": {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/engineering-repair-001/full.json",
+      "sha256": "042b91453946d139600120d88a1aa67c87a1d1ae996a424905418bfdae18c54b",
+      "suite_counts": {
+        "passed": 290,
+        "failed": 0
+      },
+      "target_test": {
+        "ancestorTitles": [
+          "AddMemberForm"
+        ],
+        "duration": 21,
+        "failing": false,
+        "failureDetails": [],
+        "failureMessages": [],
+        "fullName": "AddMemberForm does not redirect when addMember returns an error",
+        "invocations": 1,
+        "location": null,
+        "numPassingAsserts": 2,
+        "retryMessages": [],
+        "retryReasons": [],
+        "status": "passed",
+        "title": "does not redirect when addMember returns an error",
+        "startAt": 1791435449111
+      },
+      "test_timing": [
+        {
+          "name": "AddMemberForm renders all required form fields",
+          "status": "passed",
+          "startAt": 1791435448907,
+          "duration": 64
+        },
+        {
+          "name": "AddMemberForm shows loading state when form is submitted",
+          "status": "passed",
+          "startAt": 1791435448972,
+          "duration": 40
+        },
+        {
+          "name": "AddMemberForm validates that passwords match before submission",
+          "status": "passed",
+          "startAt": 1791435449012,
+          "duration": 40
+        },
+        {
+          "name": "AddMemberForm validates required fields on empty submit",
+          "status": "passed",
+          "startAt": 1791435449052,
+          "duration": 14
+        },
+        {
+          "name": "AddMemberForm calls addMember with correct data on valid submission",
+          "status": "passed",
+          "startAt": 1791435449066,
+          "duration": 23
+        },
+        {
+          "name": "AddMemberForm redirects to admin-portal dashboard on successful creation",
+          "status": "passed",
+          "startAt": 1791435449089,
+          "duration": 22
+        },
+        {
+          "name": "AddMemberForm does not redirect when addMember returns an error",
+          "status": "passed",
+          "startAt": 1791435449111,
+          "duration": 21
+        }
+      ]
+    },
+    "reconciled_full": {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/dependency-reconciliation-001/2026-10-08_124256_BDT/full.json",
+      "sha256": "fd34761a5e80fe486663091b05c3bd7c18bc35f64bb042e58df0c3e1ef5de3b6",
+      "suite_counts": {
+        "passed": 289,
+        "failed": 1
+      },
+      "target_test": {
+        "ancestorTitles": [
+          "AddMemberForm"
+        ],
+        "duration": 21,
+        "failing": false,
+        "failureDetails": [
+          {
+            "matcherResult": {
+              "message": "expect(jest.fn()).not.toHaveBeenCalled()\n\nExpected number of calls: 0\nReceived number of calls: 1\n\n1: \"/admin-portal\"",
+              "pass": true
+            }
+          }
+        ],
+        "failureMessages": [
+          "Error: expect(jest.fn()).not.toHaveBeenCalled()\n\nExpected number of calls: 0\nReceived number of calls: 1\n\n1: \"/admin-portal\"\n    at Object.<anonymous> (/home/moose/nextjs/10XLAB/stark-ai-workbench-nextjs-frontend-v2/src/__tests__/admin/AddMemberForm.test.tsx:152:26)"
+        ],
+        "fullName": "AddMemberForm does not redirect when addMember returns an error",
+        "invocations": 1,
+        "location": null,
+        "numPassingAsserts": 1,
+        "retryReasons": [],
+        "startAt": 1791441938433,
+        "status": "failed",
+        "title": "does not redirect when addMember returns an error"
+      },
+      "test_timing": [
+        {
+          "name": "AddMemberForm renders all required form fields",
+          "status": "passed",
+          "startAt": 1791441938283,
+          "duration": 24
+        },
+        {
+          "name": "AddMemberForm shows loading state when form is submitted",
+          "status": "passed",
+          "startAt": 1791441938308,
+          "duration": 37
+        },
+        {
+          "name": "AddMemberForm validates that passwords match before submission",
+          "status": "passed",
+          "startAt": 1791441938345,
+          "duration": 29
+        },
+        {
+          "name": "AddMemberForm validates required fields on empty submit",
+          "status": "passed",
+          "startAt": 1791441938374,
+          "duration": 14
+        },
+        {
+          "name": "AddMemberForm calls addMember with correct data on valid submission",
+          "status": "passed",
+          "startAt": 1791441938388,
+          "duration": 23
+        },
+        {
+          "name": "AddMemberForm redirects to admin-portal dashboard on successful creation",
+          "status": "passed",
+          "startAt": 1791441938411,
+          "duration": 22
+        },
+        {
+          "name": "AddMemberForm does not redirect when addMember returns an error",
+          "status": "failed",
+          "startAt": 1791441938433,
+          "duration": 21
+        }
+      ]
+    }
+  },
+  "conclusion": "Identical observable failure signature. Causal origin of push is not captured; matching underlying mechanism remains a hypothesis."
+}

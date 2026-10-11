@@ -1,10 +1,8 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import "./fonts/inter.css";
 import "./globals.scss";
 import { Toaster } from "@/components/ui/toaster";
 import { ThemeProvider } from "./providers/ThemeProvider";
-
-const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Moose Next Framework v3",
@@ -18,7 +16,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={`${inter.className} bg-white dark:bg-zinc-700 text-zinc-900 dark:text-zinc-100`}>
+      <body className="inter-font bg-white dark:bg-zinc-700 text-zinc-900 dark:text-zinc-100">
         <ThemeProvider
           attribute="class"
           defaultTheme="dark"

@@ -1,0 +1,22 @@
+[
+  {
+    "source": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/engineering-repair-001/run_verification.py",
+    "new": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/dependency-reconciliation-001/2026-10-08_124256_BDT/run_verification.py",
+    "changes": "Root resolution for dated evidence subdirectory; output stays at new runner parent"
+  },
+  {
+    "source": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/engineering-repair-001/run_browser.py",
+    "new": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/dependency-reconciliation-001/2026-10-08_124256_BDT/run_browser.py",
+    "changes": "Root resolution for dated evidence subdirectory; browser config path only"
+  },
+  {
+    "source": "tests/workspace/repair.spec.ts",
+    "new": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/dependency-reconciliation-001/2026-10-08_124256_BDT/browser/repair.spec.ts",
+    "only_change": "Evidence output path; all assertions/test bodies unchanged"
+  },
+  {
+    "source": "tests/workspace/repair.config.ts",
+    "new": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/dependency-reconciliation-001/2026-10-08_124256_BDT/repair.config.ts",
+    "only_change": "Evidence output directory and relocated spec; original engineering fixture reused"
+  }
+]

@@ -1,0 +1,14 @@
+{
+  "started_at": "2026-10-11T07:41:57.887527+00:00",
+  "command": [
+    "unshare",
+    "-rn",
+    "npm",
+    "test",
+    "--",
+    "--runInBand",
+    "--json",
+    "--outputFile=/home/moose/nextjs/10XLAB/stark-ai-workbench-nextjs-frontend-v2/agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/addmember-test-repair-001/2026-10-11_134025_BDT/full.json"
+  ],
+  "authorized_invocations": 1
+}

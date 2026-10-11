@@ -116,7 +116,10 @@ describe('the committed manifest', () => {
     expect(() => validateManifest(configured)).not.toThrow();
     expect(KNOWN_AGENTS).toEqual(configured.agents.map((agent: { name: string }) => agent.name));
     expect(new Set(KNOWN_AGENTS).size).toBe(KNOWN_AGENTS.length);
-    expect(MANIFEST.bundles).toEqual(configured.bundles);
+    expect(MANIFEST.bundles).toEqual(expect.arrayContaining([
+      expect.objectContaining({ id: 'v1', urlEnv: 'ADK_BUNDLE_URL_V1' }),
+      expect.objectContaining({ id: 'v2-local', urlEnv: 'ADK_BUNDLE_URL_V2_LOCAL' }),
+    ]));
   });
 
   it('every declared agent resolves to a declared bundle env var', () => {

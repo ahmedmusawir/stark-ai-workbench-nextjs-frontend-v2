@@ -1,0 +1,1891 @@
+{
+  "parent_sha": "9c50884d4c4513b6969311d5be7c05828104ed3d",
+  "files": [
+    {
+      "path": "CHANGELOG.md",
+      "category": "preserved earlier record / current authorized handoff",
+      "proposed_staging": true,
+      "bytes": 17820,
+      "sha256": "e69dec2e747c62e658f0162c9802f47b111cf09ce455bff8f5231d1a5f3fe060"
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/HANDOFFS/ADDMEMBERFORM_FAILURE_DIAGNOSTIC_001_2026-10-08.md",
+      "category": "preserved earlier record / current authorized handoff",
+      "proposed_staging": true,
+      "bytes": 3958,
+      "sha256": "bbfaced30cf2933c6c7b7630ed4ecba6d5790fb029bcae7a16bc90707e633239"
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/HANDOFFS/ADDMEMBER_TEST_REPAIR_001_RETURN.md",
+      "category": "preserved earlier record / current authorized handoff",
+      "proposed_staging": true,
+      "bytes": 7020,
+      "sha256": "8dda360849724bbc7791c80fea37d1f8ab3ea9c06587eef3ff0927ff9676f39c"
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/HANDOFFS/ARCHITECT_ADDMEMBER_TEST_REPAIR_001_2026-10-11.md",
+      "category": "preserved earlier record / current authorized handoff",
+      "proposed_staging": true,
+      "bytes": 2278,
+      "sha256": "c39d530f0805bf53c968fa7bccd02121c07b428a30c72b001ae39b91b6a2198b"
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/HANDOFFS/ARCHITECT_ENGINEERING_REPAIR_001_2026-10-08.md",
+      "category": "preserved earlier record / current authorized handoff",
+      "proposed_staging": true,
+      "bytes": 7914,
+      "sha256": "1d6b0f3988e0456d35d806ac704d9f7ec5014c62d80a949345682e5db02d3a2d"
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/HANDOFFS/ARCHITECT_Q2_REPAIR_REQUEST_2026-10-07.txt",
+      "category": "preserved earlier record / current authorized handoff",
+      "proposed_staging": true,
+      "bytes": 2024,
+      "sha256": "2c1ce0f718dd652f8144114397105892add3f03af791ee7cca539a9370e2b7c7"
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/HANDOFFS/DEPENDENCY_RECONCILIATION_001_RETURN.md",
+      "category": "preserved earlier record / current authorized handoff",
+      "proposed_staging": true,
+      "bytes": 11464,
+      "sha256": "8154d9e792bbdc970344736d4f04df38ca872f6793a862c8105bdc2bb77169a1"
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/HANDOFFS/ENGINEERING_REPAIR_001_RETURN.md",
+      "category": "preserved earlier record / current authorized handoff",
+      "proposed_staging": true,
+      "bytes": 16490,
+      "sha256": "8dd60e18650286717e8aa1a0f9ed0718c038b4eacb814f774216887d86b5d945"
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/HANDOFFS/LEAD_Q2_DISPOSITION_2026-10-07.md",
+      "category": "preserved earlier record / current authorized handoff",
+      "proposed_staging": true,
+      "bytes": 12019,
+      "sha256": "d5b120e87fd56b214a7cf32b64433b7c6f8b0f608c2e16937e33052eccc6b94a"
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/HANDOFFS/LEAD_Q2_DISPOSITION_INDEX_2026-10-07.json",
+      "category": "preserved earlier record / current authorized handoff",
+      "proposed_staging": true,
+      "bytes": 776,
+      "sha256": "2c17b8d4d8a3c5205a892cec732c92b0fe94d112a4e3ef51e819d7eae667199c"
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/HANDOFFS/QA_HANDOFF.md",
+      "category": "preserved earlier record / current authorized handoff",
+      "proposed_staging": true,
+      "bytes": 16861,
+      "sha256": "e096fc24a246e3be55617e113ad0aecc5444b05b71f72f4fdd4622cf3dddb4c5"
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/addmember-diagnostic-001/2026-10-08_131602_BDT/AUTHORIZED_INSTRUCTION.md",
+      "category": "preserved earlier record / current authorized handoff",
+      "proposed_staging": true,
+      "bytes": 957,
+      "sha256": "2694bbd0f3c42841914e727222947b5d6f2c1d3d9dcd54a8127ce67bac3ded85"
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/addmember-diagnostic-001/2026-10-08_131602_BDT/EXPORT_COMPLETION.md",
+      "category": "preserved earlier record / current authorized handoff",
+      "proposed_staging": true,
+      "bytes": 637,
+      "sha256": "efbb92b79fd26d5712453106a2954fd1d4d75accbcacf63b4da9d213d411c633"
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/addmember-diagnostic-001/2026-10-08_131602_BDT/EXPORT_RECEIPT.json",
+      "category": "preserved earlier record / current authorized handoff",
+      "proposed_staging": true,
+      "bytes": 944,
+      "sha256": "a3a5455b632a7fe54cdae00b42dc72765d8789f6151c91911afae54e95c2c720"
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/addmember-diagnostic-001/2026-10-08_131602_BDT/PACKAGE_README.md",
+      "category": "preserved earlier record / current authorized handoff",
+      "proposed_staging": true,
+      "bytes": 1756,
+      "sha256": "8a390bbd540eebbbe90d32a483b4e28195f19ae20dd59beb236c4890a9afdd33"
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/addmember-diagnostic-001/2026-10-08_131602_BDT/SESSION.md",
+      "category": "preserved earlier record / current authorized handoff",
+      "proposed_staging": true,
+      "bytes": 1326,
+      "sha256": "9aaf0b409af806ca3efdeca538033724d4c6a960ecf82fbbda4bc5920e84571a"
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/addmember-diagnostic-001/2026-10-08_131602_BDT/TONY_REPORT.md",
+      "category": "preserved earlier record / current authorized handoff",
+      "proposed_staging": true,
+      "bytes": 653,
+      "sha256": "3ae97941a74e8d1bdf07fcf15e829d4d240fba3a2d6eb28c17ff6d0f1c029655"
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/addmember-diagnostic-001/2026-10-08_131602_BDT/cleanup-source-observation.json",
+      "category": "preserved earlier record / current authorized handoff",
+      "proposed_staging": true,
+      "bytes": 1742,
+      "sha256": "ef68375733333a644f449a0197b4dde6165c52da128e03c00520daa984fcec5a"
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/addmember-diagnostic-001/2026-10-08_131602_BDT/diagnostic-outcome.json",
+      "category": "preserved earlier record / current authorized handoff",
+      "proposed_staging": true,
+      "bytes": 770,
+      "sha256": "0ab8d01842a65e36e0b6dfea701bbca7bb547e056515948896b877440b6c1f20"
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/addmember-diagnostic-001/2026-10-08_131602_BDT/entry-state.json",
+      "category": "preserved earlier record / current authorized handoff",
+      "proposed_staging": true,
+      "bytes": 28385,
+      "sha256": "878c49530d5e985df79564121e02dadb7e00f0f1a1b04407e325acc03d737af4"
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/addmember-diagnostic-001/2026-10-08_131602_BDT/failure-comparison.json",
+      "category": "preserved earlier record / current authorized handoff",
+      "proposed_staging": true,
+      "bytes": 8418,
+      "sha256": "fc3cbcaa3ec351e264e8502ef84794d8c54f3aedaac1fc6ccd6193a31b5b732b"
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/addmember-diagnostic-001/2026-10-08_131602_BDT/isolated-command.json",
+      "category": "preserved earlier record / current authorized handoff",
+      "proposed_staging": true,
+      "bytes": 888,
+      "sha256": "01a79029e41181cbcb7693f4ff64106d79385081336519f36754a63c74b86e62"
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/addmember-diagnostic-001/2026-10-08_131602_BDT/isolated-invocation.json",
+      "category": "preserved earlier record / current authorized handoff",
+      "proposed_staging": true,
+      "bytes": 570,
+      "sha256": "816822926e9d28e7e072305d1c660dba7099fb0a744767b36a2cbc121c279db2"
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/addmember-diagnostic-001/2026-10-08_131602_BDT/isolated.json",
+      "category": "preserved earlier record / current authorized handoff",
+      "proposed_staging": true,
+      "bytes": 3277,
+      "sha256": "b32a499cad1af0a46450271018f7336fb3bb3ce7bcd8f534570103e65f1bfa07"
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/addmember-diagnostic-001/2026-10-08_131602_BDT/isolated.log",
+      "category": "preserved earlier record / current authorized handoff",
+      "proposed_staging": true,
+      "bytes": 1288,
+      "sha256": "97a0efd54c998e0f5fd542b19337f99fd8c34cefdbd156c52329c151ff9cf485"
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/addmember-diagnostic-001/2026-10-08_131602_BDT/package-git-status.txt",
+      "category": "preserved earlier record / current authorized handoff",
+      "proposed_staging": true,
+      "bytes": 28463,
+      "sha256": "c375c865bad1167df537fe14c62402939f4ca47981a8ae30f1098e90d998c746"
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/addmember-diagnostic-001/2026-10-08_131602_BDT/run_isolated.py",
+      "category": "preserved earlier record / current authorized handoff",
+      "proposed_staging": true,
+      "bytes": 1722,
+      "sha256": "0db325aec1ba40d38415ed0032bfbedb57e4bac135ec0fb9a1c30df27ff33159"
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/addmember-test-repair-001/2026-10-11_134025_BDT/AddMemberForm.after.tsx",
+      "category": "new repair evidence",
+      "proposed_staging": true,
+      "bytes": 7201,
+      "sha256": "7464084c92123346d6b123347f3951952ee6585e85119b5391e257718f3629c3"
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/addmember-test-repair-001/2026-10-11_134025_BDT/AddMemberForm.before.tsx",
+      "category": "new repair evidence",
+      "proposed_staging": true,
+      "bytes": 5857,
+      "sha256": "3b0b12f283c31dc28de3025b6e1ea20b0d6994693a1087d2f0e4aacdbf132761"
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/addmember-test-repair-001/2026-10-11_134025_BDT/EXECUTION_LOG.md",
+      "category": "new repair evidence",
+      "proposed_staging": true,
+      "bytes": 1954,
+      "sha256": "47f55fd4332227afbf0a56ff7b5d53debcd5a151e4faf034672134e9a5a748dc"
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/addmember-test-repair-001/2026-10-11_134025_BDT/SESSION.md",
+      "category": "new repair evidence",
+      "proposed_staging": true,
+      "bytes": 1696,
+      "sha256": "43d88b31362b53366365ceaab2dd13821f443cd30e61fa730537040a0b37f1a7"
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/addmember-test-repair-001/2026-10-11_134025_BDT/TONY_REPORT.md",
+      "category": "new repair evidence",
+      "proposed_staging": true,
+      "bytes": 663,
+      "sha256": "bb84b683d7518f56318888ad01ba297fb48d6b0bac8a8c70676c414a4e4d405e"
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/addmember-test-repair-001/2026-10-11_134025_BDT/addmember-command.json",
+      "category": "new repair evidence",
+      "proposed_staging": true,
+      "bytes": 722,
+      "sha256": "de2ce9fdeac0ea4b00b375a46bd4fecf736cdd1c1479600188c60726983ccbb8"
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/addmember-test-repair-001/2026-10-11_134025_BDT/addmember-invocation.json",
+      "category": "new repair evidence",
+      "proposed_staging": true,
+      "bytes": 481,
+      "sha256": "81a4828ea327a9dba398330ace7a648aea554d7106d8adc231ddb41e773c0692"
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/addmember-test-repair-001/2026-10-11_134025_BDT/addmember.json",
+      "category": "new repair evidence",
+      "proposed_staging": true,
+      "bytes": 3258,
+      "sha256": "1a25c6b8a221ff01da46852fd98ca7986391e21fcc883dd759b33ae2799f0dd2"
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/addmember-test-repair-001/2026-10-11_134025_BDT/addmember.log",
+      "category": "new repair evidence",
+      "proposed_staging": true,
+      "bytes": 1197,
+      "sha256": "021f7a4c76e553773e15279fa439a9161448447c6b94142b7a1f1e361fa405fb"
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/addmember-test-repair-001/2026-10-11_134025_BDT/candidate-identity.json",
+      "category": "new repair evidence",
+      "proposed_staging": true,
+      "sha256": null,
+      "note": "No recursive inventory/identity self-hash"
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/addmember-test-repair-001/2026-10-11_134025_BDT/combined-product-test.patch",
+      "category": "new repair evidence",
+      "proposed_staging": true,
+      "bytes": 323650,
+      "sha256": "5a07022fca3eb577884b3c418bb3b6789ce6069144771420c3048f6cd545ae59"
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/addmember-test-repair-001/2026-10-11_134025_BDT/current-status.txt",
+      "category": "new repair evidence",
+      "proposed_staging": true,
+      "bytes": 33539,
+      "sha256": "95f80d5f634b95797d6dc1965baafc2b28a6f9979e0da2765ac80da99a7d1868"
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/addmember-test-repair-001/2026-10-11_134025_BDT/entry-state.json",
+      "category": "new repair evidence",
+      "proposed_staging": true,
+      "bytes": 76693,
+      "sha256": "0fb18e694ad41058c5f4205fa0d64a214aac5c3feda9a7ca2ab9a881b00bbec2"
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/addmember-test-repair-001/2026-10-11_134025_BDT/evidence-index.json",
+      "category": "new repair evidence",
+      "proposed_staging": true,
+      "sha256": null,
+      "note": "No recursive inventory/identity self-hash"
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/addmember-test-repair-001/2026-10-11_134025_BDT/full-command.json",
+      "category": "new repair evidence",
+      "proposed_staging": true,
+      "bytes": 636,
+      "sha256": "6f14fd09a9188219524d8ce652bbaa809a5493d7ed2f24bc816ae12422e1cafd"
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/addmember-test-repair-001/2026-10-11_134025_BDT/full-invocation.json",
+      "category": "new repair evidence",
+      "proposed_staging": true,
+      "bytes": 402,
+      "sha256": "04af6a0645f8d87672a580ba0c76ed0322847f95c44225f406f2f0985b7ddd9e"
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/addmember-test-repair-001/2026-10-11_134025_BDT/full.json",
+      "category": "new repair evidence",
+      "proposed_staging": true,
+      "bytes": 125179,
+      "sha256": "a14cf4e6a540c181be3f9dfb288cdc5ff84afde068f0e4c10f78c63fd68a030e"
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/addmember-test-repair-001/2026-10-11_134025_BDT/full.log",
+      "category": "new repair evidence",
+      "proposed_staging": true,
+      "bytes": 14671,
+      "sha256": "4ed6405846ed6f9319d6e731c41a20eaf3fff1825472a7e5993d56abef233e45"
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/addmember-test-repair-001/2026-10-11_134025_BDT/preservation-check.json",
+      "category": "new repair evidence",
+      "proposed_staging": true,
+      "bytes": 33054,
+      "sha256": "585defe671dcb950c383b96fa64327177658d3d6f7619f3a6ff8ec839bb7cb2e"
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/addmember-test-repair-001/2026-10-11_134025_BDT/protected-source-hashes.json",
+      "category": "new repair evidence",
+      "proposed_staging": true,
+      "bytes": 877,
+      "sha256": "9bb741816d17f8c2d5adb064600643a19bc0e7d0fc13fa02933768d48d6cec5b"
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/addmember-test-repair-001/2026-10-11_134025_BDT/record-changes.patch",
+      "category": "new repair evidence",
+      "proposed_staging": true,
+      "bytes": 22045,
+      "sha256": "66601f983837d07e98ec3bd03b5a48513ecb1d5ed97d3600e461207bec3738d4"
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/addmember-test-repair-001/2026-10-11_134025_BDT/run_verification.py",
+      "category": "new repair evidence",
+      "proposed_staging": true,
+      "bytes": 2072,
+      "sha256": "7508cf3fafd119b1a76d18da14b7ce8537fae94f88b61175eb33f685b3c187ee"
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/addmember-test-repair-001/2026-10-11_134025_BDT/source-change.json",
+      "category": "new repair evidence",
+      "proposed_staging": true,
+      "bytes": 1056,
+      "sha256": "a19a0ac3fc28f9d962cf9160609a98eed8b894ed28fd9e2bf0604720844f4b36"
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/addmember-test-repair-001/2026-10-11_134025_BDT/staging-notes.md",
+      "category": "new repair evidence",
+      "proposed_staging": true,
+      "bytes": 1138,
+      "sha256": "a65185f54e02bbfd1cc0212ec0a6b34c250a87cd48e4607a9c863a949056e1fd"
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/addmember-test-repair-001/2026-10-11_134025_BDT/staging-paths.txt",
+      "category": "new repair evidence",
+      "proposed_staging": true,
+      "bytes": 32203,
+      "sha256": "bbb231bc17396a36f1f876d285b8ec921c2a77af7e151bea67702d9cc2c832c4"
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/addmember-test-repair-001/2026-10-11_134025_BDT/test-only.patch",
+      "category": "new repair evidence",
+      "proposed_staging": true,
+      "bytes": 3741,
+      "sha256": "891ea17411a49f152d73a53ff3bf4d472045359ff85c42c6a9b2f6173cdd300d"
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/addmember-test-repair-001/2026-10-11_134025_BDT/typecheck-command.json",
+      "category": "new repair evidence",
+      "proposed_staging": true,
+      "bytes": 430,
+      "sha256": "ea6976fac1d890d98c8d79560bf6489fff6168edc9c985b44a00ccaa3c694d81"
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/addmember-test-repair-001/2026-10-11_134025_BDT/typecheck-invocation.json",
+      "category": "new repair evidence",
+      "proposed_staging": true,
+      "bytes": 189,
+      "sha256": "c9b1dbf99cf251798791b6ce3826b3b021037cb6314a2b088c0953940b180ab9"
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/addmember-test-repair-001/2026-10-11_134025_BDT/typecheck.log",
+      "category": "new repair evidence",
+      "proposed_staging": true,
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/addmember-test-repair-001/2026-10-11_134025_BDT/verification-comparison.json",
+      "category": "new repair evidence",
+      "proposed_staging": true,
+      "bytes": 2251,
+      "sha256": "6d494ef2b80db21e1e42442625b4685d2700b91dffd68deb8b2d5d464a3943aa"
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/addmember-test-repair-001/2026-10-11_134025_BDT/verification-summary.json",
+      "category": "new repair evidence",
+      "proposed_staging": true,
+      "bytes": 2562,
+      "sha256": "5ea53c3fcb51a12cf31aeed4353ddb10b894c56bf0f0afaf723dca401bb00e3f"
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/addmember-test-repair-001/2026-10-11_134025_BDT/whitespace-check.json",
+      "category": "new repair evidence",
+      "proposed_staging": true,
+      "bytes": 110,
+      "sha256": "90d9a77eaf08533cefcb4a0655490051e2f04adc9164a49690c802fb7a0d40ca"
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/dependency-reconciliation-001/2026-10-08_124256_BDT/AUTHORIZED_INSTRUCTION.md",
+      "category": "preserved earlier record / current authorized handoff",
+      "proposed_staging": true,
+      "bytes": 1936,
+      "sha256": "8d7b52ab5f0146d8ecc77ee10bdb3a3795fefb1a1c8ebf59675c5650ddd8912b"
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/dependency-reconciliation-001/2026-10-08_124256_BDT/EXECUTION_LOG.md",
+      "category": "preserved earlier record / current authorized handoff",
+      "proposed_staging": true,
+      "bytes": 2556,
+      "sha256": "20cbcf3daefc328db777772c407df5461245219cddb82bc142ca16f19d18e0b1"
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/dependency-reconciliation-001/2026-10-08_124256_BDT/FULL_SUITE_FAILURE.md",
+      "category": "preserved earlier record / current authorized handoff",
+      "proposed_staging": true,
+      "bytes": 1488,
+      "sha256": "09425d3753e942bdce0cb71c6122c8c8dcf7a0dcd4e969f3ae630a8df54b9966"
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/dependency-reconciliation-001/2026-10-08_124256_BDT/INHERITED_PACKAGE_LOCK_BACKUP.json",
+      "category": "preserved earlier record / current authorized handoff",
+      "proposed_staging": true,
+      "bytes": 466430,
+      "sha256": "c62a48123a50b5289a6179ebafb1a13960f1c3636992ddcc0df0b435ebf556eb"
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/dependency-reconciliation-001/2026-10-08_124256_BDT/LEAD_RECORD_READ.md",
+      "category": "preserved earlier record / current authorized handoff",
+      "proposed_staging": true,
+      "bytes": 997,
+      "sha256": "dd72029fbc6f0aaa1eb22509868e6a1cbe14c524c5923012e163f6782ad48659"
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/dependency-reconciliation-001/2026-10-08_124256_BDT/SESSION.md",
+      "category": "preserved earlier record / current authorized handoff",
+      "proposed_staging": true,
+      "bytes": 1279,
+      "sha256": "7621f66c31e64e72b60148bd4a3ea57bc64b794cb6d37c8f12c0125569d17974"
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/dependency-reconciliation-001/2026-10-08_124256_BDT/TONY_REPORT.md",
+      "category": "preserved earlier record / current authorized handoff",
+      "proposed_staging": true,
+      "bytes": 753,
+      "sha256": "35abf9fed12594a2c508409241b987cad65515e95391699a42d013a3b54b7948"
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/dependency-reconciliation-001/2026-10-08_124256_BDT/VERIFICATION_SUMMARY.md",
+      "category": "preserved earlier record / current authorized handoff",
+      "proposed_staging": true,
+      "bytes": 722,
+      "sha256": "ae4124c3fa254b5dc4908ffd94acb54f7f9a27dbc2f54adffd8235c750036e83"
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/dependency-reconciliation-001/2026-10-08_124256_BDT/browser-command.json",
+      "category": "preserved earlier record / current authorized handoff",
+      "proposed_staging": true,
+      "bytes": 919,
+      "sha256": "dd9006b27d9eae0955bfb7f8f8918a476e94e84eb1af9387cd3f07d809d8768f"
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/dependency-reconciliation-001/2026-10-08_124256_BDT/browser-results.json",
+      "category": "preserved earlier record / current authorized handoff",
+      "proposed_staging": true,
+      "bytes": 30758,
+      "sha256": "79593f952bf3d63c985af7f4338675524b2695b2102938cdc2ce498ec4324b70"
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/dependency-reconciliation-001/2026-10-08_124256_BDT/browser.log",
+      "category": "preserved earlier record / current authorized handoff",
+      "proposed_staging": true,
+      "bytes": 6132,
+      "sha256": "451a34729f623fd7efe411fa37fbe165009d6b2853f68fdb5d3fcc4594e28be6"
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/dependency-reconciliation-001/2026-10-08_124256_BDT/browser/repair.spec.ts",
+      "category": "preserved earlier record / current authorized handoff",
+      "proposed_staging": true,
+      "bytes": 6412,
+      "sha256": "366d84a754ca40a424e99d7e967ba49e52f868d68a9bdc79e15a12967feb80d8"
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/dependency-reconciliation-001/2026-10-08_124256_BDT/candidate-identity.json",
+      "category": "preserved earlier record / current authorized handoff",
+      "proposed_staging": true,
+      "bytes": 30031,
+      "sha256": "8472a93469ffbe1f26914542be6ee87520d5e206215562a0d5ce158d45746676"
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/dependency-reconciliation-001/2026-10-08_124256_BDT/committed-lock-identity.json",
+      "category": "preserved earlier record / current authorized handoff",
+      "proposed_staging": true,
+      "bytes": 161,
+      "sha256": "4bdca1962c39b17c02343eb8da7a1fa734a8b4a51f1f1574a92e5b6e880adb27"
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/dependency-reconciliation-001/2026-10-08_124256_BDT/conversation-dark-1280-metrics.json",
+      "category": "preserved earlier record / current authorized handoff",
+      "proposed_staging": true,
+      "bytes": 106,
+      "sha256": "7db58c7cf93c2c022076a5c69e997ad4a94061f477960b0772d705b92f2d4066"
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/dependency-reconciliation-001/2026-10-08_124256_BDT/conversation-dark-375-metrics.json",
+      "category": "preserved earlier record / current authorized handoff",
+      "proposed_staging": true,
+      "bytes": 98,
+      "sha256": "f3bb42f5f70accc948f35339cac1d387903b82382d18190e20525ad97963fd2c"
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/dependency-reconciliation-001/2026-10-08_124256_BDT/conversation-dark-768-metrics.json",
+      "category": "preserved earlier record / current authorized handoff",
+      "proposed_staging": true,
+      "bytes": 105,
+      "sha256": "ff1d4523bea243891d8412c1706eda3ca7d67ec7743e05d7fba7306aac3bfced"
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/dependency-reconciliation-001/2026-10-08_124256_BDT/conversation-light-1280-metrics.json",
+      "category": "preserved earlier record / current authorized handoff",
+      "proposed_staging": true,
+      "bytes": 106,
+      "sha256": "7db58c7cf93c2c022076a5c69e997ad4a94061f477960b0772d705b92f2d4066"
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/dependency-reconciliation-001/2026-10-08_124256_BDT/conversation-light-375-metrics.json",
+      "category": "preserved earlier record / current authorized handoff",
+      "proposed_staging": true,
+      "bytes": 98,
+      "sha256": "f3bb42f5f70accc948f35339cac1d387903b82382d18190e20525ad97963fd2c"
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/dependency-reconciliation-001/2026-10-08_124256_BDT/conversation-light-768-metrics.json",
+      "category": "preserved earlier record / current authorized handoff",
+      "proposed_staging": true,
+      "bytes": 105,
+      "sha256": "ff1d4523bea243891d8412c1706eda3ca7d67ec7743e05d7fba7306aac3bfced"
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/dependency-reconciliation-001/2026-10-08_124256_BDT/current-status.txt",
+      "category": "preserved earlier record / current authorized handoff",
+      "proposed_staging": true,
+      "bytes": 26612,
+      "sha256": "1db9484d3df086022de9950841eb05f93973084f8a696b16d63737530a4abfac"
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/dependency-reconciliation-001/2026-10-08_124256_BDT/directory-dark-1280-metrics.json",
+      "category": "preserved earlier record / current authorized handoff",
+      "proposed_staging": true,
+      "bytes": 106,
+      "sha256": "7db58c7cf93c2c022076a5c69e997ad4a94061f477960b0772d705b92f2d4066"
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/dependency-reconciliation-001/2026-10-08_124256_BDT/directory-dark-375-metrics.json",
+      "category": "preserved earlier record / current authorized handoff",
+      "proposed_staging": true,
+      "bytes": 98,
+      "sha256": "f3bb42f5f70accc948f35339cac1d387903b82382d18190e20525ad97963fd2c"
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/dependency-reconciliation-001/2026-10-08_124256_BDT/directory-dark-768-metrics.json",
+      "category": "preserved earlier record / current authorized handoff",
+      "proposed_staging": true,
+      "bytes": 105,
+      "sha256": "ff1d4523bea243891d8412c1706eda3ca7d67ec7743e05d7fba7306aac3bfced"
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/dependency-reconciliation-001/2026-10-08_124256_BDT/directory-light-1280-metrics.json",
+      "category": "preserved earlier record / current authorized handoff",
+      "proposed_staging": true,
+      "bytes": 106,
+      "sha256": "7db58c7cf93c2c022076a5c69e997ad4a94061f477960b0772d705b92f2d4066"
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/dependency-reconciliation-001/2026-10-08_124256_BDT/directory-light-375-metrics.json",
+      "category": "preserved earlier record / current authorized handoff",
+      "proposed_staging": true,
+      "bytes": 98,
+      "sha256": "f3bb42f5f70accc948f35339cac1d387903b82382d18190e20525ad97963fd2c"
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/dependency-reconciliation-001/2026-10-08_124256_BDT/directory-light-768-metrics.json",
+      "category": "preserved earlier record / current authorized handoff",
+      "proposed_staging": true,
+      "bytes": 105,
+      "sha256": "ff1d4523bea243891d8412c1706eda3ca7d67ec7743e05d7fba7306aac3bfced"
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/dependency-reconciliation-001/2026-10-08_124256_BDT/entry-state.json",
+      "category": "preserved earlier record / current authorized handoff",
+      "proposed_staging": true,
+      "bytes": 34915,
+      "sha256": "2526c9702338c32f94de83830a1992e63e495413a28410a43af296a240e8de86"
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/dependency-reconciliation-001/2026-10-08_124256_BDT/evidence-index.json",
+      "category": "preserved earlier record / current authorized handoff",
+      "proposed_staging": true,
+      "bytes": 72221,
+      "sha256": "476a2c6979920cb7643a6d6790393d4ad6bb91854087840e57c25b2c5d41e2e8"
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/dependency-reconciliation-001/2026-10-08_124256_BDT/focused-command.json",
+      "category": "preserved earlier record / current authorized handoff",
+      "proposed_staging": true,
+      "bytes": 1038,
+      "sha256": "602b7672e203314708535e23ccdf157bbc37c6821888004085c4676988f3bff1"
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/dependency-reconciliation-001/2026-10-08_124256_BDT/focused.json",
+      "category": "preserved earlier record / current authorized handoff",
+      "proposed_staging": true,
+      "bytes": 29256,
+      "sha256": "7a349a5c2814da67a358430d238d067e4fe22a606bfac9a8c90628b7695ca150"
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/dependency-reconciliation-001/2026-10-08_124256_BDT/focused.log",
+      "category": "preserved earlier record / current authorized handoff",
+      "proposed_staging": true,
+      "bytes": 3208,
+      "sha256": "0b739b4fd165f3ac736cbe4f5fbf6337f3c36d35ffd7868fa3196d66593e160d"
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/dependency-reconciliation-001/2026-10-08_124256_BDT/full-command.json",
+      "category": "preserved earlier record / current authorized handoff",
+      "proposed_staging": true,
+      "bytes": 599,
+      "sha256": "d64bef794cbf664c8a794b8f3e1c7cad7f3f5b93d061176eb82a5721a03d16c8"
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/dependency-reconciliation-001/2026-10-08_124256_BDT/full-suite-failure.json",
+      "category": "preserved earlier record / current authorized handoff",
+      "proposed_staging": true,
+      "bytes": 1599,
+      "sha256": "9eb2dc372cd85c611c95d9f5c09f628cc592c3f000b3f5b926b09b000c7b780b"
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/dependency-reconciliation-001/2026-10-08_124256_BDT/full.json",
+      "category": "preserved earlier record / current authorized handoff",
+      "proposed_staging": true,
+      "bytes": 126463,
+      "sha256": "fd34761a5e80fe486663091b05c3bd7c18bc35f64bb042e58df0c3e1ef5de3b6"
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/dependency-reconciliation-001/2026-10-08_124256_BDT/full.log",
+      "category": "preserved earlier record / current authorized handoff",
+      "proposed_staging": true,
+      "bytes": 16046,
+      "sha256": "c0743168d02d7ca1580d3bbca16799df0dbbf47e0488645f521ed9d2a1536f4d"
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/dependency-reconciliation-001/2026-10-08_124256_BDT/inherited-package-lock.diff",
+      "category": "preserved earlier record / current authorized handoff",
+      "proposed_staging": true,
+      "bytes": 197953,
+      "sha256": "183d53ecee485b8f6608401023cab237201a6dae1e0dd2751f7c1e231ddeed20"
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/dependency-reconciliation-001/2026-10-08_124256_BDT/installed-versions.json",
+      "category": "preserved earlier record / current authorized handoff",
+      "proposed_staging": true,
+      "bytes": 1863,
+      "sha256": "0861c7da793d0bd1cd4091d84d30133b9215b9f41ad2d2fd2a73e6f838ce1e41"
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/dependency-reconciliation-001/2026-10-08_124256_BDT/lead-record-installation.json",
+      "category": "preserved earlier record / current authorized handoff",
+      "proposed_staging": true,
+      "bytes": 1373,
+      "sha256": "2bd5362ffaaa98b1e2d6f19ce05ed1793ec5574e4d875cfbad17e79a396e4eba"
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/dependency-reconciliation-001/2026-10-08_124256_BDT/lock-restoration.json",
+      "category": "preserved earlier record / current authorized handoff",
+      "proposed_staging": true,
+      "bytes": 11257,
+      "sha256": "b674b42144fe6d54161e093112e45021aebd16154191364a2cfde92ef4abf63b"
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/dependency-reconciliation-001/2026-10-08_124256_BDT/npm-ci-command.json",
+      "category": "preserved earlier record / current authorized handoff",
+      "proposed_staging": true,
+      "bytes": 526,
+      "sha256": "85542eee7a484e1074f22495a034d573c23869c8f0de32f8ee7d83e7202794a2"
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/dependency-reconciliation-001/2026-10-08_124256_BDT/npm-ci.log",
+      "category": "preserved earlier record / current authorized handoff",
+      "proposed_staging": true,
+      "bytes": 2845,
+      "sha256": "7a68635067f1b1caae6f3090340fcb10c4419459c03475ea87a6e1c8694eb6b5"
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/dependency-reconciliation-001/2026-10-08_124256_BDT/output-destination-adjustments.json",
+      "category": "preserved earlier record / current authorized handoff",
+      "proposed_staging": true,
+      "bytes": 1343,
+      "sha256": "2448e346c6d9684b555870f91a83d06c3422440efcca043ac4e3ee8ef82ad298"
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/dependency-reconciliation-001/2026-10-08_124256_BDT/preservation-check.json",
+      "category": "preserved earlier record / current authorized handoff",
+      "proposed_staging": true,
+      "bytes": 14121,
+      "sha256": "dc8cdc6d8ca3a03ec4ccdc96c503d21594e868f8df3e6196671565004a12285b"
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/dependency-reconciliation-001/2026-10-08_124256_BDT/product.patch",
+      "category": "preserved earlier record / current authorized handoff",
+      "proposed_staging": true,
+      "bytes": 319909,
+      "sha256": "fac3f21262dca396f5c7b7d71143bbfff1a0f21a809f0278315f1d4d7beebaaa"
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/dependency-reconciliation-001/2026-10-08_124256_BDT/record-changes.patch",
+      "category": "preserved earlier record / current authorized handoff",
+      "proposed_staging": true,
+      "bytes": 37065,
+      "sha256": "41b1e79ea08f690840b273d01f940564da8e37bb6675cdcc966be78a05065e55"
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/dependency-reconciliation-001/2026-10-08_124256_BDT/repair.config.ts",
+      "category": "preserved earlier record / current authorized handoff",
+      "proposed_staging": true,
+      "bytes": 1056,
+      "sha256": "5072b5b98eda502d8bd1f633d9f24db3e6370afa0233ece2e92fa03051954124"
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/dependency-reconciliation-001/2026-10-08_124256_BDT/run_browser.py",
+      "category": "preserved earlier record / current authorized handoff",
+      "proposed_staging": true,
+      "bytes": 1977,
+      "sha256": "3791942a4686111fef4007fe03a1406a40f2c9db808c260eb907247936051566"
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/dependency-reconciliation-001/2026-10-08_124256_BDT/run_verification.py",
+      "category": "preserved earlier record / current authorized handoff",
+      "proposed_staging": true,
+      "bytes": 2107,
+      "sha256": "0f5f2946d3b76290d37ba75dee40bc1a8d272031eda61e927d7c6c911cd12f3a"
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/dependency-reconciliation-001/2026-10-08_124256_BDT/screens/conversation-dark-1280.png",
+      "category": "preserved earlier record / current authorized handoff",
+      "proposed_staging": true,
+      "bytes": 123191,
+      "sha256": "bf2c7db409ba5793071df53a7b7f73e026998794af65136e557fe047abcadf47"
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/dependency-reconciliation-001/2026-10-08_124256_BDT/screens/conversation-dark-375.png",
+      "category": "preserved earlier record / current authorized handoff",
+      "proposed_staging": true,
+      "bytes": 60189,
+      "sha256": "001ee68e7df75b7b1868b3158fac144cb6127ff29a05f6bad1deddf2cbb3514e"
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/dependency-reconciliation-001/2026-10-08_124256_BDT/screens/conversation-dark-768.png",
+      "category": "preserved earlier record / current authorized handoff",
+      "proposed_staging": true,
+      "bytes": 90094,
+      "sha256": "9eac774722e2e6bc8e79dd6098c2e4ca17891e35a72809b3cd019ff80eba5bd8"
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/dependency-reconciliation-001/2026-10-08_124256_BDT/screens/conversation-light-1280.png",
+      "category": "preserved earlier record / current authorized handoff",
+      "proposed_staging": true,
+      "bytes": 117850,
+      "sha256": "0e2f3e6d6cd5087b5d18fbebc6c2c1f3282158492a9143ea1c438d5a0d06869d"
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/dependency-reconciliation-001/2026-10-08_124256_BDT/screens/conversation-light-375.png",
+      "category": "preserved earlier record / current authorized handoff",
+      "proposed_staging": true,
+      "bytes": 56525,
+      "sha256": "d02088de996c0cda872a33aae55febe2d40e9fed981711f7b4e9ca400d4568bd"
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/dependency-reconciliation-001/2026-10-08_124256_BDT/screens/conversation-light-768.png",
+      "category": "preserved earlier record / current authorized handoff",
+      "proposed_staging": true,
+      "bytes": 85179,
+      "sha256": "7153df8af900084c00300dd80dff21daccf2cfa3902c2888ef5b3d5e44b751d7"
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/dependency-reconciliation-001/2026-10-08_124256_BDT/screens/directory-dark-1280.png",
+      "category": "preserved earlier record / current authorized handoff",
+      "proposed_staging": true,
+      "bytes": 67185,
+      "sha256": "9b567b23b19a0cd37c1f92d07add083b02407d8843366c43dcd08a849bf99f0b"
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/dependency-reconciliation-001/2026-10-08_124256_BDT/screens/directory-dark-375.png",
+      "category": "preserved earlier record / current authorized handoff",
+      "proposed_staging": true,
+      "bytes": 45126,
+      "sha256": "1e32abafa42edd62b0a39e33dfdef372da8b9610e9212dee217a5a4d97cbd71f"
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/dependency-reconciliation-001/2026-10-08_124256_BDT/screens/directory-dark-768.png",
+      "category": "preserved earlier record / current authorized handoff",
+      "proposed_staging": true,
+      "bytes": 49447,
+      "sha256": "fc30d1501b7ea5650006c5c1c2efb826eb0b39480774a744859a06dfac6e5ec7"
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/dependency-reconciliation-001/2026-10-08_124256_BDT/screens/directory-light-1280.png",
+      "category": "preserved earlier record / current authorized handoff",
+      "proposed_staging": true,
+      "bytes": 66712,
+      "sha256": "75e3072e8a6a73e381d25e063915b43f05fc1d92285644611db74fa237ff2828"
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/dependency-reconciliation-001/2026-10-08_124256_BDT/screens/directory-light-375.png",
+      "category": "preserved earlier record / current authorized handoff",
+      "proposed_staging": true,
+      "bytes": 44626,
+      "sha256": "280d6a900ed571eeddb573ebee0652d014bbb3fa421a11d7f84c013935ba9998"
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/dependency-reconciliation-001/2026-10-08_124256_BDT/screens/directory-light-768.png",
+      "category": "preserved earlier record / current authorized handoff",
+      "proposed_staging": true,
+      "bytes": 49003,
+      "sha256": "4597e27ee2d67f2afe8cfdc702902132abe9cfcd9fdd72a5f6ba78fdefab0ef0"
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/dependency-reconciliation-001/2026-10-08_124256_BDT/screens/workspace-dark-1280.png",
+      "category": "preserved earlier record / current authorized handoff",
+      "proposed_staging": true,
+      "bytes": 89922,
+      "sha256": "e895a34673580bb8df83367d273e5d76d5fceb87ad47844faa30ceecfd89f002"
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/dependency-reconciliation-001/2026-10-08_124256_BDT/screens/workspace-dark-375.png",
+      "category": "preserved earlier record / current authorized handoff",
+      "proposed_staging": true,
+      "bytes": 46803,
+      "sha256": "18e422d2620220e4f5ca3a4b4d34e954a547081aa47e33fd35cd80a9362eeeaf"
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/dependency-reconciliation-001/2026-10-08_124256_BDT/screens/workspace-dark-768.png",
+      "category": "preserved earlier record / current authorized handoff",
+      "proposed_staging": true,
+      "bytes": 52805,
+      "sha256": "f44560f9985587b81af7063752cff07bf6f38fc3f02495a90a3ec8d60d3458ca"
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/dependency-reconciliation-001/2026-10-08_124256_BDT/screens/workspace-light-1280.png",
+      "category": "preserved earlier record / current authorized handoff",
+      "proposed_staging": true,
+      "bytes": 89124,
+      "sha256": "565d8d39e40f852f1acbfc09b93b494b72af6cb0043b32beedc7a8c50c3d0150"
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/dependency-reconciliation-001/2026-10-08_124256_BDT/screens/workspace-light-375.png",
+      "category": "preserved earlier record / current authorized handoff",
+      "proposed_staging": true,
+      "bytes": 45835,
+      "sha256": "aa6d34b5bc091435ecd503cfcdb073266d80db77e819a08a1c43545c9edaf3ec"
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/dependency-reconciliation-001/2026-10-08_124256_BDT/screens/workspace-light-768.png",
+      "category": "preserved earlier record / current authorized handoff",
+      "proposed_staging": true,
+      "bytes": 51907,
+      "sha256": "c9a8db8b8c14f309ee4d3efb3c39e917dc7ee745a2ffcf34fae940fc2c74038c"
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/dependency-reconciliation-001/2026-10-08_124256_BDT/staging-notes.md",
+      "category": "preserved earlier record / current authorized handoff",
+      "proposed_staging": true,
+      "bytes": 1532,
+      "sha256": "ed4a242c57cd9ae523d77b572d05b30e733d39fd630fe16ae41570aa1340ebfa"
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/dependency-reconciliation-001/2026-10-08_124256_BDT/staging-paths.txt",
+      "category": "preserved earlier record / current authorized handoff",
+      "proposed_staging": true,
+      "bytes": 25561,
+      "sha256": "40e44906faae1bff79763163b2f4a18a34c3e1ce0a8353ab9e38e5539abc3c2b"
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/dependency-reconciliation-001/2026-10-08_124256_BDT/typecheck-command.json",
+      "category": "preserved earlier record / current authorized handoff",
+      "proposed_staging": true,
+      "bytes": 387,
+      "sha256": "692c087e2e3ecde659554b2aeb49e164879e2fb08c9e2201af1645a1ddf60e32"
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/dependency-reconciliation-001/2026-10-08_124256_BDT/typecheck.log",
+      "category": "preserved earlier record / current authorized handoff",
+      "proposed_staging": true,
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/dependency-reconciliation-001/2026-10-08_124256_BDT/typography-1280-fallback.json",
+      "category": "preserved earlier record / current authorized handoff",
+      "proposed_staging": true,
+      "bytes": 7403,
+      "sha256": "307866b0239f65e1fe93331b29c8a4a0b2096ebf923245accf745793d376c3e5"
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/dependency-reconciliation-001/2026-10-08_124256_BDT/typography-1280-loaded.json",
+      "category": "preserved earlier record / current authorized handoff",
+      "proposed_staging": true,
+      "bytes": 7417,
+      "sha256": "30b9c11e0d7653ff0c63401229fad08048b4ab8fee4bab13d9980b02e2c7d766"
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/dependency-reconciliation-001/2026-10-08_124256_BDT/typography-375-fallback.json",
+      "category": "preserved earlier record / current authorized handoff",
+      "proposed_staging": true,
+      "bytes": 7393,
+      "sha256": "8daa6f76c40334595f3bf7b8aa5343448723aa450b80134abcd34aad393fbec4"
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/dependency-reconciliation-001/2026-10-08_124256_BDT/typography-375-loaded.json",
+      "category": "preserved earlier record / current authorized handoff",
+      "proposed_staging": true,
+      "bytes": 7407,
+      "sha256": "5d00b328b5d8ce4a8ecd5d0f8cbb7f2b9fa3ddac891ad0e726888418b8c80181"
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/dependency-reconciliation-001/2026-10-08_124256_BDT/verification-summary.json",
+      "category": "preserved earlier record / current authorized handoff",
+      "proposed_staging": true,
+      "bytes": 3729,
+      "sha256": "38f8f11bc43742aa7753b8ff8f88fbb389a8073e9dda86cc098d6b9c576cd210"
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/dependency-reconciliation-001/2026-10-08_124256_BDT/whitespace-check.json",
+      "category": "preserved earlier record / current authorized handoff",
+      "proposed_staging": true,
+      "bytes": 110,
+      "sha256": "90d9a77eaf08533cefcb4a0655490051e2f04adc9164a49690c802fb7a0d40ca"
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/dependency-reconciliation-001/2026-10-08_124256_BDT/workspace-dark-1280-metrics.json",
+      "category": "preserved earlier record / current authorized handoff",
+      "proposed_staging": true,
+      "bytes": 106,
+      "sha256": "7db58c7cf93c2c022076a5c69e997ad4a94061f477960b0772d705b92f2d4066"
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/dependency-reconciliation-001/2026-10-08_124256_BDT/workspace-dark-375-metrics.json",
+      "category": "preserved earlier record / current authorized handoff",
+      "proposed_staging": true,
+      "bytes": 98,
+      "sha256": "f3bb42f5f70accc948f35339cac1d387903b82382d18190e20525ad97963fd2c"
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/dependency-reconciliation-001/2026-10-08_124256_BDT/workspace-dark-768-metrics.json",
+      "category": "preserved earlier record / current authorized handoff",
+      "proposed_staging": true,
+      "bytes": 105,
+      "sha256": "ff1d4523bea243891d8412c1706eda3ca7d67ec7743e05d7fba7306aac3bfced"
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/dependency-reconciliation-001/2026-10-08_124256_BDT/workspace-light-1280-metrics.json",
+      "category": "preserved earlier record / current authorized handoff",
+      "proposed_staging": true,
+      "bytes": 106,
+      "sha256": "7db58c7cf93c2c022076a5c69e997ad4a94061f477960b0772d705b92f2d4066"
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/dependency-reconciliation-001/2026-10-08_124256_BDT/workspace-light-375-metrics.json",
+      "category": "preserved earlier record / current authorized handoff",
+      "proposed_staging": true,
+      "bytes": 98,
+      "sha256": "f3bb42f5f70accc948f35339cac1d387903b82382d18190e20525ad97963fd2c"
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/dependency-reconciliation-001/2026-10-08_124256_BDT/workspace-light-768-metrics.json",
+      "category": "preserved earlier record / current authorized handoff",
+      "proposed_staging": true,
+      "bytes": 105,
+      "sha256": "ff1d4523bea243891d8412c1706eda3ca7d67ec7743e05d7fba7306aac3bfced"
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/engineering-repair-001-review-2026-10-08_112512_BDT/EVIDENCE_INDEX.md",
+      "category": "preserved earlier record / current authorized handoff",
+      "proposed_staging": true,
+      "bytes": 28582,
+      "sha256": "6fa45d4890e88c32b8216c06f7f5a3160d19a9e65d3bfc8b0eaa04bba821d281"
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/engineering-repair-001-review-2026-10-08_112512_BDT/EXPORT_COMPLETION.md",
+      "category": "preserved earlier record / current authorized handoff",
+      "proposed_staging": true,
+      "bytes": 687,
+      "sha256": "15c442528984a0e5f2d0cc6d587c5f51bafaa056709035a61870a215ac11808b"
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/engineering-repair-001-review-2026-10-08_112512_BDT/EXPORT_RECEIPT.json",
+      "category": "preserved earlier record / current authorized handoff",
+      "proposed_staging": true,
+      "bytes": 1503,
+      "sha256": "c418c9316ecabf61f5178c6540330226aba06f876fda18bfd756f77520f90b4d"
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/engineering-repair-001-review-2026-10-08_112512_BDT/INHERITED_LOCKFILE.md",
+      "category": "preserved earlier record / current authorized handoff",
+      "proposed_staging": true,
+      "bytes": 1777,
+      "sha256": "2ec7fb37c15fc2ff4841543c2427de51abdb6f703e39ca0433155daf862b11a4"
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/engineering-repair-001-review-2026-10-08_112512_BDT/INHERITED_LOCKFILE_ANALYSIS.json",
+      "category": "preserved earlier record / current authorized handoff",
+      "proposed_staging": true,
+      "bytes": 28580,
+      "sha256": "423c98dbda8261858b2b02bf0bfcda54e40a64f94f8a537d7cfacb1d840dda32"
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/engineering-repair-001-review-2026-10-08_112512_BDT/INTER_PROVENANCE_AND_HASHES.md",
+      "category": "preserved earlier record / current authorized handoff",
+      "proposed_staging": true,
+      "bytes": 2233,
+      "sha256": "72db877c2fc943367f3d77bd9621700ea6d6bed5507757ca04c614cbcde8189c"
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/engineering-repair-001-review-2026-10-08_112512_BDT/MISSING_LEAD_DISPOSITION.md",
+      "category": "preserved earlier record / current authorized handoff",
+      "proposed_staging": true,
+      "bytes": 914,
+      "sha256": "76af6af95fbd067e68bbaadb012fbc475601cd331677320935a77e75986412e9"
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/engineering-repair-001-review-2026-10-08_112512_BDT/PACKAGING_INSTRUCTION_2026-10-08.md",
+      "category": "preserved earlier record / current authorized handoff",
+      "proposed_staging": true,
+      "bytes": 1131,
+      "sha256": "875e69165905b4761cc11a305d9a45295c4df90c5f62063cb79b2707800c5355"
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/engineering-repair-001-review-2026-10-08_112512_BDT/README.md",
+      "category": "preserved earlier record / current authorized handoff",
+      "proposed_staging": true,
+      "bytes": 3192,
+      "sha256": "b3faf6977f8a746ed9837f1e0eb9d4b5feae8781743671837ac086629457a999"
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/engineering-repair-001-review-2026-10-08_112512_BDT/SESSION.md",
+      "category": "preserved earlier record / current authorized handoff",
+      "proposed_staging": true,
+      "bytes": 1573,
+      "sha256": "a479718cdd5a0872a122f3b83b11343fee7c75acf691d1d6f0cda9259acc2a50"
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/engineering-repair-001-review-2026-10-08_112512_BDT/TONY_EXPORT_REPORT.md",
+      "category": "preserved earlier record / current authorized handoff",
+      "proposed_staging": true,
+      "bytes": 1073,
+      "sha256": "176630f2ec2b1c55dcc25a5b5e47788129685069d733c319e060adb4360d2f3f"
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/engineering-repair-001-review-2026-10-08_112512_BDT/VERIFICATION_SUMMARY.json",
+      "category": "preserved earlier record / current authorized handoff",
+      "proposed_staging": true,
+      "bytes": 3935,
+      "sha256": "e90e4e02159c62dd0eed2d8a120d0bff12169af4e967a5ad8b00293708159c2a"
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/engineering-repair-001-review-2026-10-08_112512_BDT/VERIFICATION_SUMMARY.md",
+      "category": "preserved earlier record / current authorized handoff",
+      "proposed_staging": true,
+      "bytes": 2267,
+      "sha256": "ae5b22181266ec232d3abb9e082c2e3fedde02ddca1fd360823ede68aba54ddc"
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/engineering-repair-001-review-2026-10-08_112512_BDT/checkout-state.json",
+      "category": "preserved earlier record / current authorized handoff",
+      "proposed_staging": true,
+      "bytes": 13978,
+      "sha256": "8a426694504b6ddc8a61ef3cffa50cf9b579210db249e8ba3ef1ce08583b2aec"
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/engineering-repair-001-review-2026-10-08_112512_BDT/git-status.txt",
+      "category": "preserved earlier record / current authorized handoff",
+      "proposed_staging": true,
+      "bytes": 12987,
+      "sha256": "9c2beda46821270ecbffd472b51f07ccf6eb7051fce6b5927f281e263ff99c49"
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/engineering-repair-001-review-2026-10-08_112512_BDT/post-export-git-status.txt",
+      "category": "preserved earlier record / current authorized handoff",
+      "proposed_staging": true,
+      "bytes": 14086,
+      "sha256": "bb2e26adb2efc8065e821ed6e1d241bcb91bcab879efca05bfd7169a4ec04358"
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/engineering-repair-001-review-2026-10-08_112512_BDT/product-test-paths.txt",
+      "category": "preserved earlier record / current authorized handoff",
+      "proposed_staging": true,
+      "bytes": 661,
+      "sha256": "6b7077378f67babe663905f17965cfa2b472fe9e4a3c18df5c6569d08c299117"
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/engineering-repair-001-review-2026-10-08_112512_BDT/staging-paths.txt",
+      "category": "preserved earlier record / current authorized handoff",
+      "proposed_staging": true,
+      "bytes": 10951,
+      "sha256": "74fb1d75990d527d5e8d94a6de7014dbfd9230f7e61fef7c78c3ece27f888f63"
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/engineering-repair-001/EXECUTION_LOG.md",
+      "category": "preserved earlier record / current authorized handoff",
+      "proposed_staging": true,
+      "bytes": 6355,
+      "sha256": "99d76dfa149469d5f39ceb469b17993564f776469933dbed9096e13229467850"
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/engineering-repair-001/MISSING_EVIDENCE.md",
+      "category": "preserved earlier record / current authorized handoff",
+      "proposed_staging": true,
+      "bytes": 2596,
+      "sha256": "662a13f99a9d2062caffd20a4c2e4c68e538d6c68ccd54cd5813dbe60d5d70fb"
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/engineering-repair-001/TONY_REPORT.md",
+      "category": "preserved earlier record / current authorized handoff",
+      "proposed_staging": true,
+      "bytes": 819,
+      "sha256": "064416ba59a05f2b026533be274d2c71cb7ec19c900dc8aa6d4f3b09eee4fec2"
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/engineering-repair-001/astra_session_2026-10-08.md",
+      "category": "preserved earlier record / current authorized handoff",
+      "proposed_staging": true,
+      "bytes": 1195,
+      "sha256": "3d214ae1b9f507709ef3f779c0bf276e1b17d050b5bcdf04c3c105a562df8716"
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/engineering-repair-001/baseline-full-command.json",
+      "category": "preserved earlier record / current authorized handoff",
+      "proposed_staging": true,
+      "bytes": 589,
+      "sha256": "48e673876858a6368c5f5bd0d4ba9829941731d1634a3aed00266325ee4c6598"
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/engineering-repair-001/baseline-full.json",
+      "category": "preserved earlier record / current authorized handoff",
+      "proposed_staging": true,
+      "bytes": 130015,
+      "sha256": "a491106c89a1126123b8c2870268c3058dfddee86c0264bbda752c3b5e4f1530"
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/engineering-repair-001/baseline-full.log",
+      "category": "preserved earlier record / current authorized handoff",
+      "proposed_staging": true,
+      "bytes": 15960,
+      "sha256": "b37dc03b688f9f32d3b2f517b4af29248b6336f474824c6b967315de02f1baf1"
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/engineering-repair-001/baseline-only-failure-source.json",
+      "category": "preserved earlier record / current authorized handoff",
+      "proposed_staging": true,
+      "bytes": 360,
+      "sha256": "f5a52ad18612752d9e6b7bdd5230c1cdd539842a07231929f85fe4244e44a9f2"
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/engineering-repair-001/browser-command.json",
+      "category": "preserved earlier record / current authorized handoff",
+      "proposed_staging": true,
+      "bytes": 791,
+      "sha256": "bf47098c95d09f54d6db1611d08723b13dd9047faa00d0fab29fb6d012dc46aa"
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/engineering-repair-001/browser-initial-command.json",
+      "category": "preserved earlier record / current authorized handoff",
+      "proposed_staging": true,
+      "bytes": 790,
+      "sha256": "967a219562a4f6ed0bec893db8c89027ab8b600da94b4a8c2dff1de03120ac87"
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/engineering-repair-001/browser-initial-results.json",
+      "category": "preserved earlier record / current authorized handoff",
+      "proposed_staging": true,
+      "bytes": 30387,
+      "sha256": "c0880b78d260adb5d2f1838ed751b626e61a319a1e471d9cad038f21f6a37ea8"
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/engineering-repair-001/browser-initial.log",
+      "category": "preserved earlier record / current authorized handoff",
+      "proposed_staging": true,
+      "bytes": 3243,
+      "sha256": "7707b7ec92f2f5215c981c805e3cd5b72e7d88bad544e39203f6c898a31b67a1"
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/engineering-repair-001/browser-results.json",
+      "category": "preserved earlier record / current authorized handoff",
+      "proposed_staging": true,
+      "bytes": 30388,
+      "sha256": "004edd8924e67bd4a5fbb6f9c3a9dd4eeffc28dfd2a760d0453278dcd5ec4b2b"
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/engineering-repair-001/browser.log",
+      "category": "preserved earlier record / current authorized handoff",
+      "proposed_staging": true,
+      "bytes": 3242,
+      "sha256": "7af5592a60633e1058da93c6e4a22a190119d5eab941aab64cd724b1595cb8c6"
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/engineering-repair-001/browser_harness.cjs",
+      "category": "preserved earlier record / current authorized handoff",
+      "proposed_staging": true,
+      "bytes": 5626,
+      "sha256": "a9fb0cb41f0a1f01196855334b4cf993e6560ed972a3cd720171547db7a937ce"
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/engineering-repair-001/conversation-dark-1280-metrics.json",
+      "category": "preserved earlier record / current authorized handoff",
+      "proposed_staging": true,
+      "bytes": 106,
+      "sha256": "7db58c7cf93c2c022076a5c69e997ad4a94061f477960b0772d705b92f2d4066"
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/engineering-repair-001/conversation-dark-375-metrics.json",
+      "category": "preserved earlier record / current authorized handoff",
+      "proposed_staging": true,
+      "bytes": 98,
+      "sha256": "f3bb42f5f70accc948f35339cac1d387903b82382d18190e20525ad97963fd2c"
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/engineering-repair-001/conversation-dark-768-metrics.json",
+      "category": "preserved earlier record / current authorized handoff",
+      "proposed_staging": true,
+      "bytes": 105,
+      "sha256": "ff1d4523bea243891d8412c1706eda3ca7d67ec7743e05d7fba7306aac3bfced"
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/engineering-repair-001/conversation-light-1280-metrics.json",
+      "category": "preserved earlier record / current authorized handoff",
+      "proposed_staging": true,
+      "bytes": 106,
+      "sha256": "7db58c7cf93c2c022076a5c69e997ad4a94061f477960b0772d705b92f2d4066"
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/engineering-repair-001/conversation-light-375-metrics.json",
+      "category": "preserved earlier record / current authorized handoff",
+      "proposed_staging": true,
+      "bytes": 98,
+      "sha256": "f3bb42f5f70accc948f35339cac1d387903b82382d18190e20525ad97963fd2c"
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/engineering-repair-001/conversation-light-768-metrics.json",
+      "category": "preserved earlier record / current authorized handoff",
+      "proposed_staging": true,
+      "bytes": 105,
+      "sha256": "ff1d4523bea243891d8412c1706eda3ca7d67ec7743e05d7fba7306aac3bfced"
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/engineering-repair-001/directory-dark-1280-metrics.json",
+      "category": "preserved earlier record / current authorized handoff",
+      "proposed_staging": true,
+      "bytes": 106,
+      "sha256": "7db58c7cf93c2c022076a5c69e997ad4a94061f477960b0772d705b92f2d4066"
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/engineering-repair-001/directory-dark-375-metrics.json",
+      "category": "preserved earlier record / current authorized handoff",
+      "proposed_staging": true,
+      "bytes": 98,
+      "sha256": "f3bb42f5f70accc948f35339cac1d387903b82382d18190e20525ad97963fd2c"
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/engineering-repair-001/directory-dark-768-metrics.json",
+      "category": "preserved earlier record / current authorized handoff",
+      "proposed_staging": true,
+      "bytes": 105,
+      "sha256": "ff1d4523bea243891d8412c1706eda3ca7d67ec7743e05d7fba7306aac3bfced"
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/engineering-repair-001/directory-light-1280-metrics.json",
+      "category": "preserved earlier record / current authorized handoff",
+      "proposed_staging": true,
+      "bytes": 106,
+      "sha256": "7db58c7cf93c2c022076a5c69e997ad4a94061f477960b0772d705b92f2d4066"
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/engineering-repair-001/directory-light-375-metrics.json",
+      "category": "preserved earlier record / current authorized handoff",
+      "proposed_staging": true,
+      "bytes": 98,
+      "sha256": "f3bb42f5f70accc948f35339cac1d387903b82382d18190e20525ad97963fd2c"
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/engineering-repair-001/directory-light-768-metrics.json",
+      "category": "preserved earlier record / current authorized handoff",
+      "proposed_staging": true,
+      "bytes": 105,
+      "sha256": "ff1d4523bea243891d8412c1706eda3ca7d67ec7743e05d7fba7306aac3bfced"
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/engineering-repair-001/entry-state.json",
+      "category": "preserved earlier record / current authorized handoff",
+      "proposed_staging": true,
+      "bytes": 1630,
+      "sha256": "ab4bb6c6833cc104799c12684309e6e6037edae89cf61a22e1dbd216150c0080"
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/engineering-repair-001/file-inventory.json",
+      "category": "preserved earlier record / current authorized handoff",
+      "proposed_staging": true,
+      "bytes": 33830,
+      "sha256": "3348e08d4818e78ccfe8511a0858b9096e71cff916837b171593eeb70223d0be"
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/engineering-repair-001/final-review-command.json",
+      "category": "preserved earlier record / current authorized handoff",
+      "proposed_staging": true,
+      "bytes": 160,
+      "sha256": "6fe2df81e622dcbe3d699bf5a8422bacc7ecdda343a3fe854c700587c9a73d88"
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/engineering-repair-001/final-review.log",
+      "category": "preserved earlier record / current authorized handoff",
+      "proposed_staging": true,
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/engineering-repair-001/focused-before-repair-command.json",
+      "category": "preserved earlier record / current authorized handoff",
+      "proposed_staging": true,
+      "bytes": 1010,
+      "sha256": "48db0516c6ccd4bf789269486283bfc28aa909cf36172fd4f6eda593038b86bc"
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/engineering-repair-001/focused-before-repair.json",
+      "category": "preserved earlier record / current authorized handoff",
+      "proposed_staging": true,
+      "bytes": 57204,
+      "sha256": "8c6150ffd90017dffcadc714b4e71c5f34eb5aed195d235690efe49a99712b6b"
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/engineering-repair-001/focused-before-repair.log",
+      "category": "preserved earlier record / current authorized handoff",
+      "proposed_staging": true,
+      "bytes": 13996,
+      "sha256": "4f2cc3d3c36c2642c17f1bcf74beefd1287a6d61c5ee294f51a80b4ac6fcfb2f"
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/engineering-repair-001/focused-command.json",
+      "category": "preserved earlier record / current authorized handoff",
+      "proposed_staging": true,
+      "bytes": 1010,
+      "sha256": "baffa85d663cd4fefccde42019b09896eaebd712639fe10f91528e9c6ec4de76"
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/engineering-repair-001/focused-setup-command.json",
+      "category": "preserved earlier record / current authorized handoff",
+      "proposed_staging": true,
+      "bytes": 1016,
+      "sha256": "bac8845d4509b1132bf98000c0c6ec150ac23a73b51767c233490a6b13d60166"
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/engineering-repair-001/focused-setup.log",
+      "category": "preserved earlier record / current authorized handoff",
+      "proposed_staging": true,
+      "bytes": 38877,
+      "sha256": "60eb958131b074ed0d47f1f575b2bffcb89246d26361e470e2375dfeafec9171"
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/engineering-repair-001/focused.json",
+      "category": "preserved earlier record / current authorized handoff",
+      "proposed_staging": true,
+      "bytes": 30473,
+      "sha256": "93b3239a8cd36b51b51de250d9f86b5ab95643eed729e3f35a447f3b1e4ee534"
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/engineering-repair-001/focused.log",
+      "category": "preserved earlier record / current authorized handoff",
+      "proposed_staging": true,
+      "bytes": 3165,
+      "sha256": "59f038ecbd5fec60525679bd504a9e8bff9f0cf9f9043fabbf6ff84aa7823f89"
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/engineering-repair-001/font-and-protected-verification.json",
+      "category": "preserved earlier record / current authorized handoff",
+      "proposed_staging": true,
+      "bytes": 1345,
+      "sha256": "4abea25bc0d5303e774d1f1f29f532440b1873a0c2313e338f775328ad3daf44"
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/engineering-repair-001/font-before.css",
+      "category": "preserved earlier record / current authorized handoff",
+      "proposed_staging": true,
+      "bytes": 2436,
+      "sha256": "9556df344d8f4970f51834d9b946019dead7b0289047491d396bcc3e731acd9e"
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/engineering-repair-001/font-cache-matches.json",
+      "category": "preserved earlier record / current authorized handoff",
+      "proposed_staging": true,
+      "bytes": 1239,
+      "sha256": "68883dd8ee0e6d35c7226ce87ac48a582e7877ba7f4317bda4101ddc37072ed5"
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/engineering-repair-001/font-retrieval.json",
+      "category": "preserved earlier record / current authorized handoff",
+      "proposed_staging": true,
+      "bytes": 3792,
+      "sha256": "cae4084e7576016634a72f27165d788500d21e8090dac269f3a2bf2057c1570a"
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/engineering-repair-001/font-source-google.css",
+      "category": "preserved earlier record / current authorized handoff",
+      "proposed_staging": true,
+      "bytes": 2535,
+      "sha256": "9b6ad588c451f646d506bc6badb76ecc384691fba35615f0f7d2e175150d6580"
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/engineering-repair-001/full-command.json",
+      "category": "preserved earlier record / current authorized handoff",
+      "proposed_staging": true,
+      "bytes": 570,
+      "sha256": "b439bb9808e57cba8b6b5b63c93836230faa0e4a9d8c2ed5ae637cd757458687"
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/engineering-repair-001/full.json",
+      "category": "preserved earlier record / current authorized handoff",
+      "proposed_staging": true,
+      "bytes": 130690,
+      "sha256": "042b91453946d139600120d88a1aa67c87a1d1ae996a424905418bfdae18c54b"
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/engineering-repair-001/full.log",
+      "category": "preserved earlier record / current authorized handoff",
+      "proposed_staging": true,
+      "bytes": 14621,
+      "sha256": "09f9da0c78da3a44ef581b9f06c12d615b7a41f7363597d0141dc795a6a8d30d"
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/engineering-repair-001/jest-comparison.json",
+      "category": "preserved earlier record / current authorized handoff",
+      "proposed_staging": true,
+      "bytes": 1429,
+      "sha256": "f97d474317afeff233c0f01e2f38af6f66824cbb6350fd51cedc1321c9797479"
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/engineering-repair-001/pre-existing-lock.diff",
+      "category": "preserved earlier record / current authorized handoff",
+      "proposed_staging": true,
+      "bytes": 197953,
+      "sha256": "183d53ecee485b8f6608401023cab237201a6dae1e0dd2751f7c1e231ddeed20"
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/engineering-repair-001/product.patch",
+      "category": "preserved earlier record / current authorized handoff",
+      "proposed_staging": true,
+      "bytes": 319909,
+      "sha256": "fac3f21262dca396f5c7b7d71143bbfff1a0f21a809f0278315f1d4d7beebaaa"
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/engineering-repair-001/repair-authored.patch",
+      "category": "preserved earlier record / current authorized handoff",
+      "proposed_staging": true,
+      "bytes": 350642,
+      "sha256": "f23db04f472e5d4f09261110ee35818e362c01fc383c99e792467a34c9385b08"
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/engineering-repair-001/repair-identity.json",
+      "category": "preserved earlier record / current authorized handoff",
+      "proposed_staging": true,
+      "bytes": 12559,
+      "sha256": "5d3bf2886658f3373c8dadf760ecae5a105603865ff917485d4f5bfeb9dafdda"
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/engineering-repair-001/run_browser.py",
+      "category": "preserved earlier record / current authorized handoff",
+      "proposed_staging": true,
+      "bytes": 1743,
+      "sha256": "f69f719a083c1cd877d93d5c2c499783ef9a31845c19a3543caa3bcfddc1d9e3"
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/engineering-repair-001/run_verification.py",
+      "category": "preserved earlier record / current authorized handoff",
+      "proposed_staging": true,
+      "bytes": 2071,
+      "sha256": "3cb542bf8de1fe7c7992f1c97783becbcec5d5f05b016b5b9337e8b53ba2bc5e"
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/engineering-repair-001/screens/conversation-dark-1280.png",
+      "category": "preserved earlier record / current authorized handoff",
+      "proposed_staging": true,
+      "bytes": 123191,
+      "sha256": "bf2c7db409ba5793071df53a7b7f73e026998794af65136e557fe047abcadf47"
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/engineering-repair-001/screens/conversation-dark-375.png",
+      "category": "preserved earlier record / current authorized handoff",
+      "proposed_staging": true,
+      "bytes": 60189,
+      "sha256": "001ee68e7df75b7b1868b3158fac144cb6127ff29a05f6bad1deddf2cbb3514e"
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/engineering-repair-001/screens/conversation-dark-768.png",
+      "category": "preserved earlier record / current authorized handoff",
+      "proposed_staging": true,
+      "bytes": 90094,
+      "sha256": "9eac774722e2e6bc8e79dd6098c2e4ca17891e35a72809b3cd019ff80eba5bd8"
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/engineering-repair-001/screens/conversation-light-1280.png",
+      "category": "preserved earlier record / current authorized handoff",
+      "proposed_staging": true,
+      "bytes": 117850,
+      "sha256": "0e2f3e6d6cd5087b5d18fbebc6c2c1f3282158492a9143ea1c438d5a0d06869d"
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/engineering-repair-001/screens/conversation-light-375.png",
+      "category": "preserved earlier record / current authorized handoff",
+      "proposed_staging": true,
+      "bytes": 56528,
+      "sha256": "2204ff95325e647d68f674276002abd931cceea96dbeed0acc2b920c95f329ff"
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/engineering-repair-001/screens/conversation-light-768.png",
+      "category": "preserved earlier record / current authorized handoff",
+      "proposed_staging": true,
+      "bytes": 85179,
+      "sha256": "7153df8af900084c00300dd80dff21daccf2cfa3902c2888ef5b3d5e44b751d7"
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/engineering-repair-001/screens/directory-dark-1280.png",
+      "category": "preserved earlier record / current authorized handoff",
+      "proposed_staging": true,
+      "bytes": 67227,
+      "sha256": "6c67cc952103ff4680762eb257052694718eb7d719c4159f4526f1b7a92c5c9e"
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/engineering-repair-001/screens/directory-dark-375.png",
+      "category": "preserved earlier record / current authorized handoff",
+      "proposed_staging": true,
+      "bytes": 45126,
+      "sha256": "1e32abafa42edd62b0a39e33dfdef372da8b9610e9212dee217a5a4d97cbd71f"
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/engineering-repair-001/screens/directory-dark-768.png",
+      "category": "preserved earlier record / current authorized handoff",
+      "proposed_staging": true,
+      "bytes": 49447,
+      "sha256": "fc30d1501b7ea5650006c5c1c2efb826eb0b39480774a744859a06dfac6e5ec7"
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/engineering-repair-001/screens/directory-light-1280.png",
+      "category": "preserved earlier record / current authorized handoff",
+      "proposed_staging": true,
+      "bytes": 66712,
+      "sha256": "75e3072e8a6a73e381d25e063915b43f05fc1d92285644611db74fa237ff2828"
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/engineering-repair-001/screens/directory-light-375.png",
+      "category": "preserved earlier record / current authorized handoff",
+      "proposed_staging": true,
+      "bytes": 44626,
+      "sha256": "280d6a900ed571eeddb573ebee0652d014bbb3fa421a11d7f84c013935ba9998"
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/engineering-repair-001/screens/directory-light-768.png",
+      "category": "preserved earlier record / current authorized handoff",
+      "proposed_staging": true,
+      "bytes": 49003,
+      "sha256": "4597e27ee2d67f2afe8cfdc702902132abe9cfcd9fdd72a5f6ba78fdefab0ef0"
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/engineering-repair-001/screens/workspace-dark-1280.png",
+      "category": "preserved earlier record / current authorized handoff",
+      "proposed_staging": true,
+      "bytes": 89922,
+      "sha256": "e895a34673580bb8df83367d273e5d76d5fceb87ad47844faa30ceecfd89f002"
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/engineering-repair-001/screens/workspace-dark-375.png",
+      "category": "preserved earlier record / current authorized handoff",
+      "proposed_staging": true,
+      "bytes": 46803,
+      "sha256": "18e422d2620220e4f5ca3a4b4d34e954a547081aa47e33fd35cd80a9362eeeaf"
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/engineering-repair-001/screens/workspace-dark-768.png",
+      "category": "preserved earlier record / current authorized handoff",
+      "proposed_staging": true,
+      "bytes": 52805,
+      "sha256": "f44560f9985587b81af7063752cff07bf6f38fc3f02495a90a3ec8d60d3458ca"
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/engineering-repair-001/screens/workspace-light-1280.png",
+      "category": "preserved earlier record / current authorized handoff",
+      "proposed_staging": true,
+      "bytes": 89124,
+      "sha256": "565d8d39e40f852f1acbfc09b93b494b72af6cb0043b32beedc7a8c50c3d0150"
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/engineering-repair-001/screens/workspace-light-375.png",
+      "category": "preserved earlier record / current authorized handoff",
+      "proposed_staging": true,
+      "bytes": 45835,
+      "sha256": "aa6d34b5bc091435ecd503cfcdb073266d80db77e819a08a1c43545c9edaf3ec"
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/engineering-repair-001/screens/workspace-light-768.png",
+      "category": "preserved earlier record / current authorized handoff",
+      "proposed_staging": true,
+      "bytes": 51907,
+      "sha256": "c9a8db8b8c14f309ee4d3efb3c39e917dc7ee745a2ffcf34fae940fc2c74038c"
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/engineering-repair-001/snapshot_repair.py",
+      "category": "preserved earlier record / current authorized handoff",
+      "proposed_staging": true,
+      "bytes": 4414,
+      "sha256": "10e8f86c87ef0aa3c223f730535c887a7acf84a66cf6c7aeee25227e09939590"
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/engineering-repair-001/staging-paths.txt",
+      "category": "preserved earlier record / current authorized handoff",
+      "proposed_staging": true,
+      "bytes": 10951,
+      "sha256": "74fb1d75990d527d5e8d94a6de7014dbfd9230f7e61fef7c78c3ece27f888f63"
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/engineering-repair-001/typecheck-command.json",
+      "category": "preserved earlier record / current authorized handoff",
+      "proposed_staging": true,
+      "bytes": 386,
+      "sha256": "2fb6983293b98ec7ed4bd200d223b7a2b1e1b618378c796390d80ea3fdd013fc"
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/engineering-repair-001/typecheck-initial-command.json",
+      "category": "preserved earlier record / current authorized handoff",
+      "proposed_staging": true,
+      "bytes": 396,
+      "sha256": "5713a61c2f29ad832be0157047003a6a3121857d9f024ca3a8c7fed5341ba573"
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/engineering-repair-001/typecheck-initial.log",
+      "category": "preserved earlier record / current authorized handoff",
+      "proposed_staging": true,
+      "bytes": 546,
+      "sha256": "4f239e528c30e9cb205d4ed832adfdc94eb8e2f10b45ddc6b4e8ff88b3189fae"
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/engineering-repair-001/typecheck.log",
+      "category": "preserved earlier record / current authorized handoff",
+      "proposed_staging": true,
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/engineering-repair-001/typography-1280-fallback.json",
+      "category": "preserved earlier record / current authorized handoff",
+      "proposed_staging": true,
+      "bytes": 7403,
+      "sha256": "307866b0239f65e1fe93331b29c8a4a0b2096ebf923245accf745793d376c3e5"
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/engineering-repair-001/typography-1280-loaded.json",
+      "category": "preserved earlier record / current authorized handoff",
+      "proposed_staging": true,
+      "bytes": 7417,
+      "sha256": "30b9c11e0d7653ff0c63401229fad08048b4ab8fee4bab13d9980b02e2c7d766"
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/engineering-repair-001/typography-375-fallback.json",
+      "category": "preserved earlier record / current authorized handoff",
+      "proposed_staging": true,
+      "bytes": 7393,
+      "sha256": "8daa6f76c40334595f3bf7b8aa5343448723aa450b80134abcd34aad393fbec4"
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/engineering-repair-001/typography-375-loaded.json",
+      "category": "preserved earlier record / current authorized handoff",
+      "proposed_staging": true,
+      "bytes": 7407,
+      "sha256": "5d00b328b5d8ce4a8ecd5d0f8cbb7f2b9fa3ddac891ad0e726888418b8c80181"
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/engineering-repair-001/verify_inputs.py",
+      "category": "preserved earlier record / current authorized handoff",
+      "proposed_staging": true,
+      "bytes": 2316,
+      "sha256": "4d7997265781cb6eef1d6a806d4ca19dd90358d6c4fb86cdc092404ad118045f"
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/engineering-repair-001/workspace-dark-1280-metrics.json",
+      "category": "preserved earlier record / current authorized handoff",
+      "proposed_staging": true,
+      "bytes": 106,
+      "sha256": "7db58c7cf93c2c022076a5c69e997ad4a94061f477960b0772d705b92f2d4066"
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/engineering-repair-001/workspace-dark-375-metrics.json",
+      "category": "preserved earlier record / current authorized handoff",
+      "proposed_staging": true,
+      "bytes": 98,
+      "sha256": "f3bb42f5f70accc948f35339cac1d387903b82382d18190e20525ad97963fd2c"
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/engineering-repair-001/workspace-dark-768-metrics.json",
+      "category": "preserved earlier record / current authorized handoff",
+      "proposed_staging": true,
+      "bytes": 105,
+      "sha256": "ff1d4523bea243891d8412c1706eda3ca7d67ec7743e05d7fba7306aac3bfced"
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/engineering-repair-001/workspace-light-1280-metrics.json",
+      "category": "preserved earlier record / current authorized handoff",
+      "proposed_staging": true,
+      "bytes": 106,
+      "sha256": "7db58c7cf93c2c022076a5c69e997ad4a94061f477960b0772d705b92f2d4066"
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/engineering-repair-001/workspace-light-375-metrics.json",
+      "category": "preserved earlier record / current authorized handoff",
+      "proposed_staging": true,
+      "bytes": 98,
+      "sha256": "f3bb42f5f70accc948f35339cac1d387903b82382d18190e20525ad97963fd2c"
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/engineering-repair-001/workspace-light-768-metrics.json",
+      "category": "preserved earlier record / current authorized handoff",
+      "proposed_staging": true,
+      "bytes": 105,
+      "sha256": "ff1d4523bea243891d8412c1706eda3ca7d67ec7743e05d7fba7306aac3bfced"
+    },
+    {
+      "path": "src/__tests__/admin/AddMemberForm.test.tsx",
+      "category": "maintained test repair",
+      "proposed_staging": true,
+      "bytes": 7201,
+      "sha256": "7464084c92123346d6b123347f3951952ee6585e85119b5391e257718f3629c3"
+    },
+    {
+      "path": "src/__tests__/config/manifest.test.ts",
+      "category": "preserved workspace product/test",
+      "proposed_staging": true,
+      "bytes": 5226,
+      "sha256": "dc9416b89d26679f2d9a2e0b6465a8d4c6d4f017b6e03196e801ad17b2cd06dd"
+    },
+    {
+      "path": "src/__tests__/workspace/signout.test.tsx",
+      "category": "preserved workspace product/test",
+      "proposed_staging": true,
+      "bytes": 6268,
+      "sha256": "8b6c36e675758350040adc701d2355c1ff351e0913a0dbfd5800c4effa1f0825"
+    },
+    {
+      "path": "src/app/(cyberize)/chat/workspace.scss",
+      "category": "preserved workspace product/test",
+      "proposed_staging": true,
+      "bytes": 13450,
+      "sha256": "e94e87308cd799a9f2a5c22232e9e122513c90fe7d6218e509377cde9b98c3cb"
+    },
+    {
+      "path": "src/app/fonts/inter.css",
+      "category": "preserved workspace product/test",
+      "proposed_staging": true,
+      "bytes": 2441,
+      "sha256": "d938dbdef3cf817e1c17cb1ed1f1509ce1f0d2c40e147534754ada14a9edbf93"
+    },
+    {
+      "path": "src/app/fonts/inter/OFL.txt",
+      "category": "preserved workspace product/test",
+      "proposed_staging": true,
+      "bytes": 4377,
+      "sha256": "5b9321a4298cfeb6b34354164a1c3afc3db114569984c502b9b35d988fd58c57"
+    },
+    {
+      "path": "src/app/fonts/inter/PROVENANCE.json",
+      "category": "preserved workspace product/test",
+      "proposed_staging": true,
+      "bytes": 4742,
+      "sha256": "e869422eeae3aa9821f90f0a8be3f2f7fdaa4760b6f816f29275abf18674a8f7"
+    },
+    {
+      "path": "src/app/fonts/inter/inter-cyrillic-ext.woff2",
+      "category": "preserved workspace product/test",
+      "proposed_staging": true,
+      "bytes": 25844,
+      "sha256": "fccca918fea40089dacadc7045861314d1a6bc91f1f323cc1eeb22ebcdb321b5"
+    },
+    {
+      "path": "src/app/fonts/inter/inter-cyrillic.woff2",
+      "category": "preserved workspace product/test",
+      "proposed_staging": true,
+      "bytes": 18744,
+      "sha256": "aebf2ab4a4ce6810d73c1ac7be7cafb4e5ec4cee2d6db5fb3e09691747ec4bd6"
+    },
+    {
+      "path": "src/app/fonts/inter/inter-greek-ext.woff2",
+      "category": "preserved workspace product/test",
+      "proposed_staging": true,
+      "bytes": 11272,
+      "sha256": "a2e2c783ca6f9c20486e81e72a279203e86730bbf8f01ff6a5ee9dbd09e1c271"
+    },
+    {
+      "path": "src/app/fonts/inter/inter-greek.woff2",
+      "category": "preserved workspace product/test",
+      "proposed_staging": true,
+      "bytes": 19044,
+      "sha256": "46dd4cdca58c26ae87cc6927657bf83b2e8abfc39ffd0ab176e301a8d28d22bf"
+    },
+    {
+      "path": "src/app/fonts/inter/inter-latin-ext.woff2",
+      "category": "preserved workspace product/test",
+      "proposed_staging": true,
+      "bytes": 85272,
+      "sha256": "a28eb6d3ccb534ae0c94ca999371df024aab60b08c3c8a5720ee9e32fa0faaa2"
+    },
+    {
+      "path": "src/app/fonts/inter/inter-latin.woff2",
+      "category": "preserved workspace product/test",
+      "proposed_staging": true,
+      "bytes": 48432,
+      "sha256": "c940764593d0fe5d596be327ca7558855e018039fb78509aa21921fd3644c3e4"
+    },
+    {
+      "path": "src/app/fonts/inter/inter-vietnamese.woff2",
+      "category": "preserved workspace product/test",
+      "proposed_staging": true,
+      "bytes": 10280,
+      "sha256": "8db00ff46c67b22cda8bed865acf7077651cac8d2841d5b40980556b48961931"
+    },
+    {
+      "path": "src/app/layout.tsx",
+      "category": "preserved workspace product/test",
+      "proposed_staging": true,
+      "bytes": 845,
+      "sha256": "661b76b5ccab7d11182104fb1c3d08c4467136409f076b6cee1180c2de0e76cd"
+    },
+    {
+      "path": "src/components/workspace/Workspace.tsx",
+      "category": "preserved workspace product/test",
+      "proposed_staging": true,
+      "bytes": 22360,
+      "sha256": "a6764df377c0c0f7da1abff9f8349c496c74635eeabb81a642d743bb7460a74e"
+    },
+    {
+      "path": "src/components/workspace/WorkspaceEntry.tsx",
+      "category": "preserved workspace product/test",
+      "proposed_staging": true,
+      "bytes": 1502,
+      "sha256": "be4129a02d5a3a742ec0d47ad29afc8c9488c777bb21b649abef8296df2c9926"
+    },
+    {
+      "path": "tests/workspace/repair.config.ts",
+      "category": "preserved workspace product/test",
+      "proposed_staging": true,
+      "bytes": 926,
+      "sha256": "4940b3abd4071910d44f93bb98275fc7acdc68cc8586b524b684d8a91e8012f6"
+    },
+    {
+      "path": "tests/workspace/repair.spec.ts",
+      "category": "preserved workspace product/test",
+      "proposed_staging": true,
+      "bytes": 6383,
+      "sha256": "d1aaeed571c99f571312524c17293415e4bec5b9e9b70544f0fb047b466e9afc"
+    }
+  ],
+  "excluded": [
+    "package-lock.json",
+    "new review ZIP/delivery receipt",
+    "archives",
+    "credentials",
+    ".env files",
+    "RESPONSES",
+    "node_modules",
+    "caches"
+  ]
+}

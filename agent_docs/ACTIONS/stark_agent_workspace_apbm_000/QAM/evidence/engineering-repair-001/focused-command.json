@@ -1,0 +1,27 @@
+{
+  "command": [
+    "unshare",
+    "-rn",
+    "npm",
+    "test",
+    "--",
+    "--runInBand",
+    "--runTestsByPath",
+    "src/__tests__/workspace/signout.test.tsx",
+    "src/__tests__/workspace/navigation.test.ts",
+    "src/__tests__/workspace/components.test.tsx",
+    "src/__tests__/workspace/productionAdapter.test.ts",
+    "src/__tests__/chat/chatStore.persist.test.ts",
+    "src/__tests__/chat/chatStore.modeSplit.test.ts",
+    "src/__tests__/chat/chatStore.sessions.test.ts",
+    "src/__tests__/config/manifest.test.ts",
+    "--json",
+    "--outputFile=/home/moose/nextjs/10XLAB/stark-ai-workbench-nextjs-frontend-v2/agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/engineering-repair-001/focused.json"
+  ],
+  "cwd": "/home/moose/nextjs/10XLAB/stark-ai-workbench-nextjs-frontend-v2",
+  "started_at": "2026-10-08T04:54:03.151849+00:00",
+  "seconds": 1.698,
+  "exit_code": 0,
+  "log": "focused.log",
+  "network": "unshare -rn; no network interfaces except down loopback; no QA font hook"
+}

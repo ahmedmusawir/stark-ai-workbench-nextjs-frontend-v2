@@ -12,5 +12,14 @@ export function WorkspaceEntry() {
   const userId = user && typeof user === 'object' && 'id' in user ? String(user.id ?? '') : '';
   const services = useMemo(() => createProductionWorkspaceServices(userId), [userId]);
   const identityKey = JSON.stringify([userId, process.env.NEXT_PUBLIC_CHAT_MODE === 'live' ? 'live' : 'mock', agents.map(a => [a.id,a.backendId])]);
-  return <Workspace identityKey={identityKey} canOperate={!!userId} agents={agents} services={services} query={query.toString()} navigate={next => router.push('/chat' + (next ? '?' + next : ''))} onSignOut={() => { void logout().finally(() => { useChatStore.getState().reset(); router.push('/auth'); }); }}/>
+  const finishSignOut = () => {
+    try {
+      useChatStore.getState().reset();
+    } catch {
+      // Zustand applies reset's in-memory state before persisting it. A blocked
+      // storage write must not prevent navigation after that state is cleared.
+    }
+    router.push('/auth');
+  };
+  return <Workspace identityKey={identityKey} canOperate={!!userId} agents={agents} services={services} query={query.toString()} navigate={next => router.push('/chat' + (next ? '?' + next : ''))} onSignOut={() => { void logout().then(finishSignOut, finishSignOut); }}/>
 }

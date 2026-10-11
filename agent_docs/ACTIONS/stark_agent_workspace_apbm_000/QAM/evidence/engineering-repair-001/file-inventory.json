@@ -1,0 +1,792 @@
+{
+  "parent_sha": "9c50884d4c4513b6969311d5be7c05828104ed3d",
+  "files": [
+    {
+      "path": "CHANGELOG.md",
+      "proposed_staging": true,
+      "kind": "engineering record",
+      "bytes": 15880,
+      "sha256": "740ea1d9f70404855f99087959c2b21db53ce239ae705ef55a6c91db74d95811"
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/HANDOFFS/ARCHITECT_ENGINEERING_REPAIR_001_2026-10-08.md",
+      "proposed_staging": true,
+      "kind": "engineering record",
+      "bytes": 7914,
+      "sha256": "1d6b0f3988e0456d35d806ac704d9f7ec5014c62d80a949345682e5db02d3a2d"
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/HANDOFFS/ENGINEERING_REPAIR_001_RETURN.md",
+      "proposed_staging": true,
+      "kind": "engineering record",
+      "bytes": 16490,
+      "sha256": "8dd60e18650286717e8aa1a0f9ed0718c038b4eacb814f774216887d86b5d945"
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/HANDOFFS/QA_HANDOFF.md",
+      "proposed_staging": true,
+      "kind": "engineering record",
+      "bytes": 12502,
+      "sha256": "506e8464c661b3b8cd450885bf70e4aa6e72cb1f4919f176dfa07c8c7ab58316"
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/engineering-repair-001/EXECUTION_LOG.md",
+      "proposed_staging": true,
+      "kind": "engineering record",
+      "bytes": 6355,
+      "sha256": "99d76dfa149469d5f39ceb469b17993564f776469933dbed9096e13229467850"
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/engineering-repair-001/MISSING_EVIDENCE.md",
+      "proposed_staging": true,
+      "kind": "engineering record",
+      "bytes": 2596,
+      "sha256": "662a13f99a9d2062caffd20a4c2e4c68e538d6c68ccd54cd5813dbe60d5d70fb"
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/engineering-repair-001/TONY_REPORT.md",
+      "proposed_staging": true,
+      "kind": "engineering record",
+      "bytes": 819,
+      "sha256": "064416ba59a05f2b026533be274d2c71cb7ec19c900dc8aa6d4f3b09eee4fec2"
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/engineering-repair-001/astra_session_2026-10-08.md",
+      "proposed_staging": true,
+      "kind": "engineering record",
+      "bytes": 1195,
+      "sha256": "3d214ae1b9f507709ef3f779c0bf276e1b17d050b5bcdf04c3c105a562df8716"
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/engineering-repair-001/baseline-full-command.json",
+      "proposed_staging": true,
+      "kind": "engineering record",
+      "bytes": 589,
+      "sha256": "48e673876858a6368c5f5bd0d4ba9829941731d1634a3aed00266325ee4c6598"
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/engineering-repair-001/baseline-full.json",
+      "proposed_staging": true,
+      "kind": "engineering record",
+      "bytes": 130015,
+      "sha256": "a491106c89a1126123b8c2870268c3058dfddee86c0264bbda752c3b5e4f1530"
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/engineering-repair-001/baseline-full.log",
+      "proposed_staging": true,
+      "kind": "engineering record",
+      "bytes": 15960,
+      "sha256": "b37dc03b688f9f32d3b2f517b4af29248b6336f474824c6b967315de02f1baf1"
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/engineering-repair-001/baseline-only-failure-source.json",
+      "proposed_staging": true,
+      "kind": "engineering record",
+      "bytes": 360,
+      "sha256": "f5a52ad18612752d9e6b7bdd5230c1cdd539842a07231929f85fe4244e44a9f2"
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/engineering-repair-001/browser-artifacts/.last-run.json",
+      "proposed_staging": false,
+      "kind": "engineering record",
+      "bytes": 45,
+      "sha256": "91d1c43004802cd49950d78eb11c8fa7d05da8ffffe219a8b13b2f561bc00903"
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/engineering-repair-001/browser-command.json",
+      "proposed_staging": true,
+      "kind": "engineering record",
+      "bytes": 791,
+      "sha256": "bf47098c95d09f54d6db1611d08723b13dd9047faa00d0fab29fb6d012dc46aa"
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/engineering-repair-001/browser-initial-command.json",
+      "proposed_staging": true,
+      "kind": "engineering record",
+      "bytes": 790,
+      "sha256": "967a219562a4f6ed0bec893db8c89027ab8b600da94b4a8c2dff1de03120ac87"
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/engineering-repair-001/browser-initial-results.json",
+      "proposed_staging": true,
+      "kind": "engineering record",
+      "bytes": 30387,
+      "sha256": "c0880b78d260adb5d2f1838ed751b626e61a319a1e471d9cad038f21f6a37ea8"
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/engineering-repair-001/browser-initial.log",
+      "proposed_staging": true,
+      "kind": "engineering record",
+      "bytes": 3243,
+      "sha256": "7707b7ec92f2f5215c981c805e3cd5b72e7d88bad544e39203f6c898a31b67a1"
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/engineering-repair-001/browser-results.json",
+      "proposed_staging": true,
+      "kind": "engineering record",
+      "bytes": 30388,
+      "sha256": "004edd8924e67bd4a5fbb6f9c3a9dd4eeffc28dfd2a760d0453278dcd5ec4b2b"
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/engineering-repair-001/browser.log",
+      "proposed_staging": true,
+      "kind": "engineering record",
+      "bytes": 3242,
+      "sha256": "7af5592a60633e1058da93c6e4a22a190119d5eab941aab64cd724b1595cb8c6"
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/engineering-repair-001/browser_harness.cjs",
+      "proposed_staging": true,
+      "kind": "engineering record",
+      "bytes": 5626,
+      "sha256": "a9fb0cb41f0a1f01196855334b4cf993e6560ed972a3cd720171547db7a937ce"
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/engineering-repair-001/conversation-dark-1280-metrics.json",
+      "proposed_staging": true,
+      "kind": "engineering record",
+      "bytes": 106,
+      "sha256": "7db58c7cf93c2c022076a5c69e997ad4a94061f477960b0772d705b92f2d4066"
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/engineering-repair-001/conversation-dark-375-metrics.json",
+      "proposed_staging": true,
+      "kind": "engineering record",
+      "bytes": 98,
+      "sha256": "f3bb42f5f70accc948f35339cac1d387903b82382d18190e20525ad97963fd2c"
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/engineering-repair-001/conversation-dark-768-metrics.json",
+      "proposed_staging": true,
+      "kind": "engineering record",
+      "bytes": 105,
+      "sha256": "ff1d4523bea243891d8412c1706eda3ca7d67ec7743e05d7fba7306aac3bfced"
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/engineering-repair-001/conversation-light-1280-metrics.json",
+      "proposed_staging": true,
+      "kind": "engineering record",
+      "bytes": 106,
+      "sha256": "7db58c7cf93c2c022076a5c69e997ad4a94061f477960b0772d705b92f2d4066"
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/engineering-repair-001/conversation-light-375-metrics.json",
+      "proposed_staging": true,
+      "kind": "engineering record",
+      "bytes": 98,
+      "sha256": "f3bb42f5f70accc948f35339cac1d387903b82382d18190e20525ad97963fd2c"
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/engineering-repair-001/conversation-light-768-metrics.json",
+      "proposed_staging": true,
+      "kind": "engineering record",
+      "bytes": 105,
+      "sha256": "ff1d4523bea243891d8412c1706eda3ca7d67ec7743e05d7fba7306aac3bfced"
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/engineering-repair-001/directory-dark-1280-metrics.json",
+      "proposed_staging": true,
+      "kind": "engineering record",
+      "bytes": 106,
+      "sha256": "7db58c7cf93c2c022076a5c69e997ad4a94061f477960b0772d705b92f2d4066"
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/engineering-repair-001/directory-dark-375-metrics.json",
+      "proposed_staging": true,
+      "kind": "engineering record",
+      "bytes": 98,
+      "sha256": "f3bb42f5f70accc948f35339cac1d387903b82382d18190e20525ad97963fd2c"
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/engineering-repair-001/directory-dark-768-metrics.json",
+      "proposed_staging": true,
+      "kind": "engineering record",
+      "bytes": 105,
+      "sha256": "ff1d4523bea243891d8412c1706eda3ca7d67ec7743e05d7fba7306aac3bfced"
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/engineering-repair-001/directory-light-1280-metrics.json",
+      "proposed_staging": true,
+      "kind": "engineering record",
+      "bytes": 106,
+      "sha256": "7db58c7cf93c2c022076a5c69e997ad4a94061f477960b0772d705b92f2d4066"
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/engineering-repair-001/directory-light-375-metrics.json",
+      "proposed_staging": true,
+      "kind": "engineering record",
+      "bytes": 98,
+      "sha256": "f3bb42f5f70accc948f35339cac1d387903b82382d18190e20525ad97963fd2c"
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/engineering-repair-001/directory-light-768-metrics.json",
+      "proposed_staging": true,
+      "kind": "engineering record",
+      "bytes": 105,
+      "sha256": "ff1d4523bea243891d8412c1706eda3ca7d67ec7743e05d7fba7306aac3bfced"
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/engineering-repair-001/entry-state.json",
+      "proposed_staging": true,
+      "kind": "engineering record",
+      "bytes": 1630,
+      "sha256": "ab4bb6c6833cc104799c12684309e6e6037edae89cf61a22e1dbd216150c0080"
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/engineering-repair-001/file-inventory.json",
+      "proposed_staging": true,
+      "kind": "engineering record",
+      "sha256": null,
+      "note": "Identity/inventory cross-reference; no recursive self hash. Inventory hash is recorded in repair-identity.json."
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/engineering-repair-001/final-review-command.json",
+      "proposed_staging": true,
+      "kind": "engineering record",
+      "bytes": 160,
+      "sha256": "6fe2df81e622dcbe3d699bf5a8422bacc7ecdda343a3fe854c700587c9a73d88"
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/engineering-repair-001/final-review.log",
+      "proposed_staging": true,
+      "kind": "engineering record",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/engineering-repair-001/focused-before-repair-command.json",
+      "proposed_staging": true,
+      "kind": "engineering record",
+      "bytes": 1010,
+      "sha256": "48db0516c6ccd4bf789269486283bfc28aa909cf36172fd4f6eda593038b86bc"
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/engineering-repair-001/focused-before-repair.json",
+      "proposed_staging": true,
+      "kind": "engineering record",
+      "bytes": 57204,
+      "sha256": "8c6150ffd90017dffcadc714b4e71c5f34eb5aed195d235690efe49a99712b6b"
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/engineering-repair-001/focused-before-repair.log",
+      "proposed_staging": true,
+      "kind": "engineering record",
+      "bytes": 13996,
+      "sha256": "4f2cc3d3c36c2642c17f1bcf74beefd1287a6d61c5ee294f51a80b4ac6fcfb2f"
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/engineering-repair-001/focused-command.json",
+      "proposed_staging": true,
+      "kind": "engineering record",
+      "bytes": 1010,
+      "sha256": "baffa85d663cd4fefccde42019b09896eaebd712639fe10f91528e9c6ec4de76"
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/engineering-repair-001/focused-setup-command.json",
+      "proposed_staging": true,
+      "kind": "engineering record",
+      "bytes": 1016,
+      "sha256": "bac8845d4509b1132bf98000c0c6ec150ac23a73b51767c233490a6b13d60166"
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/engineering-repair-001/focused-setup.log",
+      "proposed_staging": true,
+      "kind": "engineering record",
+      "bytes": 38877,
+      "sha256": "60eb958131b074ed0d47f1f575b2bffcb89246d26361e470e2375dfeafec9171"
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/engineering-repair-001/focused.json",
+      "proposed_staging": true,
+      "kind": "engineering record",
+      "bytes": 30473,
+      "sha256": "93b3239a8cd36b51b51de250d9f86b5ab95643eed729e3f35a447f3b1e4ee534"
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/engineering-repair-001/focused.log",
+      "proposed_staging": true,
+      "kind": "engineering record",
+      "bytes": 3165,
+      "sha256": "59f038ecbd5fec60525679bd504a9e8bff9f0cf9f9043fabbf6ff84aa7823f89"
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/engineering-repair-001/font-and-protected-verification.json",
+      "proposed_staging": true,
+      "kind": "engineering record",
+      "bytes": 1345,
+      "sha256": "4abea25bc0d5303e774d1f1f29f532440b1873a0c2313e338f775328ad3daf44"
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/engineering-repair-001/font-before.css",
+      "proposed_staging": true,
+      "kind": "engineering record",
+      "bytes": 2436,
+      "sha256": "9556df344d8f4970f51834d9b946019dead7b0289047491d396bcc3e731acd9e"
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/engineering-repair-001/font-cache-matches.json",
+      "proposed_staging": true,
+      "kind": "engineering record",
+      "bytes": 1239,
+      "sha256": "68883dd8ee0e6d35c7226ce87ac48a582e7877ba7f4317bda4101ddc37072ed5"
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/engineering-repair-001/font-retrieval.json",
+      "proposed_staging": true,
+      "kind": "engineering record",
+      "bytes": 3792,
+      "sha256": "cae4084e7576016634a72f27165d788500d21e8090dac269f3a2bf2057c1570a"
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/engineering-repair-001/font-source-google.css",
+      "proposed_staging": true,
+      "kind": "engineering record",
+      "bytes": 2535,
+      "sha256": "9b6ad588c451f646d506bc6badb76ecc384691fba35615f0f7d2e175150d6580"
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/engineering-repair-001/full-command.json",
+      "proposed_staging": true,
+      "kind": "engineering record",
+      "bytes": 570,
+      "sha256": "b439bb9808e57cba8b6b5b63c93836230faa0e4a9d8c2ed5ae637cd757458687"
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/engineering-repair-001/full.json",
+      "proposed_staging": true,
+      "kind": "engineering record",
+      "bytes": 130690,
+      "sha256": "042b91453946d139600120d88a1aa67c87a1d1ae996a424905418bfdae18c54b"
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/engineering-repair-001/full.log",
+      "proposed_staging": true,
+      "kind": "engineering record",
+      "bytes": 14621,
+      "sha256": "09f9da0c78da3a44ef581b9f06c12d615b7a41f7363597d0141dc795a6a8d30d"
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/engineering-repair-001/jest-comparison.json",
+      "proposed_staging": true,
+      "kind": "engineering record",
+      "bytes": 1429,
+      "sha256": "f97d474317afeff233c0f01e2f38af6f66824cbb6350fd51cedc1321c9797479"
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/engineering-repair-001/pre-existing-lock.diff",
+      "proposed_staging": true,
+      "kind": "engineering record",
+      "bytes": 197953,
+      "sha256": "183d53ecee485b8f6608401023cab237201a6dae1e0dd2751f7c1e231ddeed20"
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/engineering-repair-001/product.patch",
+      "proposed_staging": true,
+      "kind": "engineering record",
+      "bytes": 319909,
+      "sha256": "fac3f21262dca396f5c7b7d71143bbfff1a0f21a809f0278315f1d4d7beebaaa"
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/engineering-repair-001/repair-authored.patch",
+      "proposed_staging": true,
+      "kind": "engineering record",
+      "bytes": 350642,
+      "sha256": "f23db04f472e5d4f09261110ee35818e362c01fc383c99e792467a34c9385b08"
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/engineering-repair-001/repair-identity.json",
+      "proposed_staging": true,
+      "kind": "engineering record",
+      "sha256": null,
+      "note": "Identity/inventory cross-reference; no recursive self hash. Inventory hash is recorded in repair-identity.json."
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/engineering-repair-001/run_browser.py",
+      "proposed_staging": true,
+      "kind": "engineering record",
+      "bytes": 1743,
+      "sha256": "f69f719a083c1cd877d93d5c2c499783ef9a31845c19a3543caa3bcfddc1d9e3"
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/engineering-repair-001/run_verification.py",
+      "proposed_staging": true,
+      "kind": "engineering record",
+      "bytes": 2071,
+      "sha256": "3cb542bf8de1fe7c7992f1c97783becbcec5d5f05b016b5b9337e8b53ba2bc5e"
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/engineering-repair-001/screens/conversation-dark-1280.png",
+      "proposed_staging": true,
+      "kind": "engineering record",
+      "bytes": 123191,
+      "sha256": "bf2c7db409ba5793071df53a7b7f73e026998794af65136e557fe047abcadf47"
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/engineering-repair-001/screens/conversation-dark-375.png",
+      "proposed_staging": true,
+      "kind": "engineering record",
+      "bytes": 60189,
+      "sha256": "001ee68e7df75b7b1868b3158fac144cb6127ff29a05f6bad1deddf2cbb3514e"
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/engineering-repair-001/screens/conversation-dark-768.png",
+      "proposed_staging": true,
+      "kind": "engineering record",
+      "bytes": 90094,
+      "sha256": "9eac774722e2e6bc8e79dd6098c2e4ca17891e35a72809b3cd019ff80eba5bd8"
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/engineering-repair-001/screens/conversation-light-1280.png",
+      "proposed_staging": true,
+      "kind": "engineering record",
+      "bytes": 117850,
+      "sha256": "0e2f3e6d6cd5087b5d18fbebc6c2c1f3282158492a9143ea1c438d5a0d06869d"
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/engineering-repair-001/screens/conversation-light-375.png",
+      "proposed_staging": true,
+      "kind": "engineering record",
+      "bytes": 56528,
+      "sha256": "2204ff95325e647d68f674276002abd931cceea96dbeed0acc2b920c95f329ff"
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/engineering-repair-001/screens/conversation-light-768.png",
+      "proposed_staging": true,
+      "kind": "engineering record",
+      "bytes": 85179,
+      "sha256": "7153df8af900084c00300dd80dff21daccf2cfa3902c2888ef5b3d5e44b751d7"
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/engineering-repair-001/screens/directory-dark-1280.png",
+      "proposed_staging": true,
+      "kind": "engineering record",
+      "bytes": 67227,
+      "sha256": "6c67cc952103ff4680762eb257052694718eb7d719c4159f4526f1b7a92c5c9e"
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/engineering-repair-001/screens/directory-dark-375.png",
+      "proposed_staging": true,
+      "kind": "engineering record",
+      "bytes": 45126,
+      "sha256": "1e32abafa42edd62b0a39e33dfdef372da8b9610e9212dee217a5a4d97cbd71f"
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/engineering-repair-001/screens/directory-dark-768.png",
+      "proposed_staging": true,
+      "kind": "engineering record",
+      "bytes": 49447,
+      "sha256": "fc30d1501b7ea5650006c5c1c2efb826eb0b39480774a744859a06dfac6e5ec7"
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/engineering-repair-001/screens/directory-light-1280.png",
+      "proposed_staging": true,
+      "kind": "engineering record",
+      "bytes": 66712,
+      "sha256": "75e3072e8a6a73e381d25e063915b43f05fc1d92285644611db74fa237ff2828"
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/engineering-repair-001/screens/directory-light-375.png",
+      "proposed_staging": true,
+      "kind": "engineering record",
+      "bytes": 44626,
+      "sha256": "280d6a900ed571eeddb573ebee0652d014bbb3fa421a11d7f84c013935ba9998"
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/engineering-repair-001/screens/directory-light-768.png",
+      "proposed_staging": true,
+      "kind": "engineering record",
+      "bytes": 49003,
+      "sha256": "4597e27ee2d67f2afe8cfdc702902132abe9cfcd9fdd72a5f6ba78fdefab0ef0"
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/engineering-repair-001/screens/workspace-dark-1280.png",
+      "proposed_staging": true,
+      "kind": "engineering record",
+      "bytes": 89922,
+      "sha256": "e895a34673580bb8df83367d273e5d76d5fceb87ad47844faa30ceecfd89f002"
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/engineering-repair-001/screens/workspace-dark-375.png",
+      "proposed_staging": true,
+      "kind": "engineering record",
+      "bytes": 46803,
+      "sha256": "18e422d2620220e4f5ca3a4b4d34e954a547081aa47e33fd35cd80a9362eeeaf"
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/engineering-repair-001/screens/workspace-dark-768.png",
+      "proposed_staging": true,
+      "kind": "engineering record",
+      "bytes": 52805,
+      "sha256": "f44560f9985587b81af7063752cff07bf6f38fc3f02495a90a3ec8d60d3458ca"
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/engineering-repair-001/screens/workspace-light-1280.png",
+      "proposed_staging": true,
+      "kind": "engineering record",
+      "bytes": 89124,
+      "sha256": "565d8d39e40f852f1acbfc09b93b494b72af6cb0043b32beedc7a8c50c3d0150"
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/engineering-repair-001/screens/workspace-light-375.png",
+      "proposed_staging": true,
+      "kind": "engineering record",
+      "bytes": 45835,
+      "sha256": "aa6d34b5bc091435ecd503cfcdb073266d80db77e819a08a1c43545c9edaf3ec"
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/engineering-repair-001/screens/workspace-light-768.png",
+      "proposed_staging": true,
+      "kind": "engineering record",
+      "bytes": 51907,
+      "sha256": "c9a8db8b8c14f309ee4d3efb3c39e917dc7ee745a2ffcf34fae940fc2c74038c"
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/engineering-repair-001/snapshot_repair.py",
+      "proposed_staging": true,
+      "kind": "engineering record",
+      "bytes": 4414,
+      "sha256": "10e8f86c87ef0aa3c223f730535c887a7acf84a66cf6c7aeee25227e09939590"
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/engineering-repair-001/staging-paths.txt",
+      "proposed_staging": true,
+      "kind": "engineering record",
+      "bytes": 10951,
+      "sha256": "74fb1d75990d527d5e8d94a6de7014dbfd9230f7e61fef7c78c3ece27f888f63"
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/engineering-repair-001/typecheck-command.json",
+      "proposed_staging": true,
+      "kind": "engineering record",
+      "bytes": 386,
+      "sha256": "2fb6983293b98ec7ed4bd200d223b7a2b1e1b618378c796390d80ea3fdd013fc"
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/engineering-repair-001/typecheck-initial-command.json",
+      "proposed_staging": true,
+      "kind": "engineering record",
+      "bytes": 396,
+      "sha256": "5713a61c2f29ad832be0157047003a6a3121857d9f024ca3a8c7fed5341ba573"
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/engineering-repair-001/typecheck-initial.log",
+      "proposed_staging": true,
+      "kind": "engineering record",
+      "bytes": 546,
+      "sha256": "4f239e528c30e9cb205d4ed832adfdc94eb8e2f10b45ddc6b4e8ff88b3189fae"
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/engineering-repair-001/typecheck.log",
+      "proposed_staging": true,
+      "kind": "engineering record",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/engineering-repair-001/typography-1280-fallback.json",
+      "proposed_staging": true,
+      "kind": "engineering record",
+      "bytes": 7403,
+      "sha256": "307866b0239f65e1fe93331b29c8a4a0b2096ebf923245accf745793d376c3e5"
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/engineering-repair-001/typography-1280-loaded.json",
+      "proposed_staging": true,
+      "kind": "engineering record",
+      "bytes": 7417,
+      "sha256": "30b9c11e0d7653ff0c63401229fad08048b4ab8fee4bab13d9980b02e2c7d766"
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/engineering-repair-001/typography-375-fallback.json",
+      "proposed_staging": true,
+      "kind": "engineering record",
+      "bytes": 7393,
+      "sha256": "8daa6f76c40334595f3bf7b8aa5343448723aa450b80134abcd34aad393fbec4"
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/engineering-repair-001/typography-375-loaded.json",
+      "proposed_staging": true,
+      "kind": "engineering record",
+      "bytes": 7407,
+      "sha256": "5d00b328b5d8ce4a8ecd5d0f8cbb7f2b9fa3ddac891ad0e726888418b8c80181"
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/engineering-repair-001/verify_inputs.py",
+      "proposed_staging": true,
+      "kind": "engineering record",
+      "bytes": 2316,
+      "sha256": "4d7997265781cb6eef1d6a806d4ca19dd90358d6c4fb86cdc092404ad118045f"
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/engineering-repair-001/workspace-dark-1280-metrics.json",
+      "proposed_staging": true,
+      "kind": "engineering record",
+      "bytes": 106,
+      "sha256": "7db58c7cf93c2c022076a5c69e997ad4a94061f477960b0772d705b92f2d4066"
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/engineering-repair-001/workspace-dark-375-metrics.json",
+      "proposed_staging": true,
+      "kind": "engineering record",
+      "bytes": 98,
+      "sha256": "f3bb42f5f70accc948f35339cac1d387903b82382d18190e20525ad97963fd2c"
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/engineering-repair-001/workspace-dark-768-metrics.json",
+      "proposed_staging": true,
+      "kind": "engineering record",
+      "bytes": 105,
+      "sha256": "ff1d4523bea243891d8412c1706eda3ca7d67ec7743e05d7fba7306aac3bfced"
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/engineering-repair-001/workspace-light-1280-metrics.json",
+      "proposed_staging": true,
+      "kind": "engineering record",
+      "bytes": 106,
+      "sha256": "7db58c7cf93c2c022076a5c69e997ad4a94061f477960b0772d705b92f2d4066"
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/engineering-repair-001/workspace-light-375-metrics.json",
+      "proposed_staging": true,
+      "kind": "engineering record",
+      "bytes": 98,
+      "sha256": "f3bb42f5f70accc948f35339cac1d387903b82382d18190e20525ad97963fd2c"
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/engineering-repair-001/workspace-light-768-metrics.json",
+      "proposed_staging": true,
+      "kind": "engineering record",
+      "bytes": 105,
+      "sha256": "ff1d4523bea243891d8412c1706eda3ca7d67ec7743e05d7fba7306aac3bfced"
+    },
+    {
+      "path": "src/__tests__/config/manifest.test.ts",
+      "proposed_staging": true,
+      "kind": "product/test",
+      "bytes": 5226,
+      "sha256": "dc9416b89d26679f2d9a2e0b6465a8d4c6d4f017b6e03196e801ad17b2cd06dd"
+    },
+    {
+      "path": "src/__tests__/workspace/signout.test.tsx",
+      "proposed_staging": true,
+      "kind": "product/test",
+      "bytes": 6268,
+      "sha256": "8b6c36e675758350040adc701d2355c1ff351e0913a0dbfd5800c4effa1f0825"
+    },
+    {
+      "path": "src/app/(cyberize)/chat/workspace.scss",
+      "proposed_staging": true,
+      "kind": "product/test",
+      "bytes": 13450,
+      "sha256": "e94e87308cd799a9f2a5c22232e9e122513c90fe7d6218e509377cde9b98c3cb"
+    },
+    {
+      "path": "src/app/fonts/inter.css",
+      "proposed_staging": true,
+      "kind": "product/test",
+      "bytes": 2441,
+      "sha256": "d938dbdef3cf817e1c17cb1ed1f1509ce1f0d2c40e147534754ada14a9edbf93"
+    },
+    {
+      "path": "src/app/fonts/inter/OFL.txt",
+      "proposed_staging": true,
+      "kind": "product/test",
+      "bytes": 4377,
+      "sha256": "5b9321a4298cfeb6b34354164a1c3afc3db114569984c502b9b35d988fd58c57"
+    },
+    {
+      "path": "src/app/fonts/inter/PROVENANCE.json",
+      "proposed_staging": true,
+      "kind": "product/test",
+      "bytes": 4742,
+      "sha256": "e869422eeae3aa9821f90f0a8be3f2f7fdaa4760b6f816f29275abf18674a8f7"
+    },
+    {
+      "path": "src/app/fonts/inter/inter-cyrillic-ext.woff2",
+      "proposed_staging": true,
+      "kind": "product/test",
+      "bytes": 25844,
+      "sha256": "fccca918fea40089dacadc7045861314d1a6bc91f1f323cc1eeb22ebcdb321b5"
+    },
+    {
+      "path": "src/app/fonts/inter/inter-cyrillic.woff2",
+      "proposed_staging": true,
+      "kind": "product/test",
+      "bytes": 18744,
+      "sha256": "aebf2ab4a4ce6810d73c1ac7be7cafb4e5ec4cee2d6db5fb3e09691747ec4bd6"
+    },
+    {
+      "path": "src/app/fonts/inter/inter-greek-ext.woff2",
+      "proposed_staging": true,
+      "kind": "product/test",
+      "bytes": 11272,
+      "sha256": "a2e2c783ca6f9c20486e81e72a279203e86730bbf8f01ff6a5ee9dbd09e1c271"
+    },
+    {
+      "path": "src/app/fonts/inter/inter-greek.woff2",
+      "proposed_staging": true,
+      "kind": "product/test",
+      "bytes": 19044,
+      "sha256": "46dd4cdca58c26ae87cc6927657bf83b2e8abfc39ffd0ab176e301a8d28d22bf"
+    },
+    {
+      "path": "src/app/fonts/inter/inter-latin-ext.woff2",
+      "proposed_staging": true,
+      "kind": "product/test",
+      "bytes": 85272,
+      "sha256": "a28eb6d3ccb534ae0c94ca999371df024aab60b08c3c8a5720ee9e32fa0faaa2"
+    },
+    {
+      "path": "src/app/fonts/inter/inter-latin.woff2",
+      "proposed_staging": true,
+      "kind": "product/test",
+      "bytes": 48432,
+      "sha256": "c940764593d0fe5d596be327ca7558855e018039fb78509aa21921fd3644c3e4"
+    },
+    {
+      "path": "src/app/fonts/inter/inter-vietnamese.woff2",
+      "proposed_staging": true,
+      "kind": "product/test",
+      "bytes": 10280,
+      "sha256": "8db00ff46c67b22cda8bed865acf7077651cac8d2841d5b40980556b48961931"
+    },
+    {
+      "path": "src/app/layout.tsx",
+      "proposed_staging": true,
+      "kind": "product/test",
+      "bytes": 845,
+      "sha256": "661b76b5ccab7d11182104fb1c3d08c4467136409f076b6cee1180c2de0e76cd"
+    },
+    {
+      "path": "src/components/workspace/Workspace.tsx",
+      "proposed_staging": true,
+      "kind": "product/test",
+      "bytes": 22360,
+      "sha256": "a6764df377c0c0f7da1abff9f8349c496c74635eeabb81a642d743bb7460a74e"
+    },
+    {
+      "path": "src/components/workspace/WorkspaceEntry.tsx",
+      "proposed_staging": true,
+      "kind": "product/test",
+      "bytes": 1502,
+      "sha256": "be4129a02d5a3a742ec0d47ad29afc8c9488c777bb21b649abef8296df2c9926"
+    },
+    {
+      "path": "tests/workspace/repair.config.ts",
+      "proposed_staging": true,
+      "kind": "product/test",
+      "bytes": 926,
+      "sha256": "4940b3abd4071910d44f93bb98275fc7acdc68cc8586b524b684d8a91e8012f6"
+    },
+    {
+      "path": "tests/workspace/repair.spec.ts",
+      "proposed_staging": true,
+      "kind": "product/test",
+      "bytes": 6383,
+      "sha256": "d1aaeed571c99f571312524c17293415e4bec5b9e9b70544f0fb047b466e9afc"
+    }
+  ],
+  "excluded_preexisting_change": [
+    "package-lock.json"
+  ]
+}

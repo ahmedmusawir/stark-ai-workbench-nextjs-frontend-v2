@@ -1,5 +1,19 @@
 # Changelog
 
+## 2026-10-11 — [Codex] Cody, Engineer — APBM_000 AddMember test repair 001
+
+- Changed only `src/__tests__/admin/AddMemberForm.test.tsx` source: replaced the loading timer with a controlled, awaited deferred submission; stable toast/local mock resets and terminal-outcome waits retain all seven tests and prior assertions.
+- Source confirms the incomplete pending-submission lifecycle; the historical unexpected callback was not conclusively traced. Original failures/diagnostic evidence preserved.
+- Restored committed dependency verification, each once offline: complete file 7/7, full maintained Jest 290/290 (40 suites), typecheck exit 0. No retries or browser run; production/workspace/dependency/QA instruments unchanged.
+- Recorded Architect authorization, return, new QAM evidence/diff/hashes/staging list and updated canonical handoff. Uncommitted; Gate Q pending; no waiver, independent QA execution or closeout.
+
+## 2026-10-08 — [Codex] Cody, Engineer — APBM_000 dependency reconciliation 001
+
+- Installed and read the supplied Q2 Lead disposition and companion records under module `QAM/HANDOFFS/`; source/member hashes verified, no conflicts or new QA authorization.
+- Preserved the inherited lockfile and exact HEAD diff as dated QAM evidence, restored only the active lockfile from committed HEAD, and installed 782 matching packages using offline `npm ci`; no package.json, product, maintained assertion or Git index changes.
+- Reverification on committed dependencies: focused 64/64, typecheck exit 0, same offline engineering browser 27/27; full Jest 289 passed / 1 failed, exit 1 (unchanged AddMemberForm error-path redirect assertion). No rerun, unrelated fix or waiver.
+- Added dependency-reconciliation return/evidence and updated canonical QA handoff/staging guidance. F01–F04/local Inter and all earlier evidence preserved; independent production build/acceptance remain with Claudy/Lead. Gate Q pending.
+
 ## 2026-10-04 09:32 UTC — [Codex] Cody, Engineer
 
 - **Created:** `agent_docs/RESPONSES/response_2026-10-04_153205_designer-theme-source-report.md` — mirrored Designer theme-source report, artifact links and next move, saved before display.
@@ -145,3 +159,12 @@
 - Appended an Astra-only discovery pointer to shared RECOVERY; preserved existing history and all QA records.
 - Saved `agent_docs/RESPONSES/response_2026-10-08_090910_astra-reboot-checkpoint.md` before display; no staging performed.
 - Director clarified the remote-roster assignment belonged to QA/Claudy. Astra will not resume it. Repository package CRC/hash verified; old Downloads copy currently absent; no replacement export or tests run.
+
+## 2026-10-08 05:09 UTC — [Codex] Cody, Engineer — APBM_000 repair 001
+
+- **Repaired:** entry sign-out after real-store persistence failures; visible current drawer-return focus; mobile breadcrumb 44px minimum; independent v1/v2-local URL-env assertions.
+- **Added:** real-store maintained sign-out tests and isolated engineering browser regressions/config; seven exact Inter WOFF2, original OFL/provenance and ordinary CSS font wiring. Root providers/metadata/unrelated behavior preserved.
+- **Recorded:** verbatim Architect instruction, canonical handoff, repair return, commands/exits, font hashes, protected equality, patches/inventory and explicit staging list under QAM. Existing lockfile diff preserved.
+- **Verified:** focused 64/64; full maintained Jest 290/290 (40 suites); typecheck exit 0; offline engineering browser 27/27. Baseline-only AddMemberForm failure and setup iterations retained; no old storage waiver reinstated.
+- **Pending:** missing post-Q2 Lead disposition and next approved independent normal offline build/output separation proof. Gate Q pending; no Q5/closeout. No Git/dependency/backend/API/schema/roster changes by Engineer.
+- **Reason:** Tony's explicit Architect-authorized bounded repair instruction of 8 October 2026.

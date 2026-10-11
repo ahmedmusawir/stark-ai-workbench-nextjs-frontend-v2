@@ -1,0 +1,20 @@
+{
+  "source": "node_modules/@testing-library/react",
+  "installed_version": "16.3.2",
+  "sanitized_runner_has_no_skip_cleanup_flag": true,
+  "source_excerpts": {
+    "dist/index.js": {
+      "full_installed_file_sha256": "41e78e4a9bb806f2bb167bde3084489fa001f4fc8d9670f13d9a236da98f8cf6",
+      "first_line": 21,
+      "last_line": 40,
+      "excerpt": "// if you don't like this then either import the `pure` module\n// or set the RTL_SKIP_AUTO_CLEANUP env variable to 'true'.\nif (typeof process === 'undefined' || !process.env?.RTL_SKIP_AUTO_CLEANUP) {\n  // ignore teardown() in code coverage because Jest does not support it\n  /* istanbul ignore else */\n  if (typeof afterEach === 'function') {\n    afterEach(() => {\n      (0, _pure.cleanup)();\n    });\n  } else if (typeof teardown === 'function') {\n    // Block is guarded by `typeof` check.\n    // eslint does not support `typeof` guards.\n    // eslint-disable-next-line no-undef\n    teardown(() => {\n      (0, _pure.cleanup)();\n    });\n  }\n\n  // No test setup with other test runners available\n  /* istanbul ignore else */"
+    },
+    "dist/pure.js": {
+      "full_installed_file_sha256": "96f6ca07ac9a54db1d9ee17ee34474f9361176102c55870d6d7783afab7539c5",
+      "first_line": 301,
+      "last_line": 315,
+      "excerpt": "function cleanup() {\n  mountedRootEntries.forEach(({\n    root,\n    container\n  }) => {\n    (0, _actCompat.default)(() => {\n      root.unmount();\n    });\n    if (container.parentNode === document.body) {\n      document.body.removeChild(container);\n    }\n  });\n  mountedRootEntries.length = 0;\n  mountedContainers.clear();\n}"
+    }
+  },
+  "purpose": "Read-only evidence of automatic unmount; not a dependency copy for production"
+}

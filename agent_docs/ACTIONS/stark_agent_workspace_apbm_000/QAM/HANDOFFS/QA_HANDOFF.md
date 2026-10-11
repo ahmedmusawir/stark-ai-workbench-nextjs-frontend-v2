@@ -1,3 +1,49 @@
+# Current engineering handoff — AddMember maintained-test repair 001, 11 October 2026
+
+Latest return: [ADDMEMBER_TEST_REPAIR_001_RETURN.md](ADDMEMBER_TEST_REPAIR_001_RETURN.md), authorized by [Architect instruction](ARCHITECT_ADDMEMBER_TEST_REPAIR_001_2026-10-11.md). Only new source delta: `src/__tests__/admin/AddMemberForm.test.tsx`. Branch `qa/frontend-apbm-000`, full HEAD/repair parent `9c50884d4c4513b6969311d5be7c05828104ed3d`; candidate remains **UNCOMMITTED**.
+
+The source-confirmed pending-submission defect is repaired with a controlled deferred loading action that resolves/settles before teardown, explicit terminal success/error waits, stable toast mock and local mock resets. All seven tests and existing assertions/order remain. Historical unexpected callback origin remains untraced; earlier failure/diagnostic evidence is preserved.
+
+On restored committed dependencies, each authorized check ran once: **complete AddMemberForm file 7/7**, then **full maintained Jest 290/290 (40 suites)** and **typecheck exit 0**, with established network denial. No browser rerun was needed. Test-only diff SHA-256 `891ea17411a49f152d73a53ff3bf4d472045359ff85c42c6a9b2f6173cdd300d`; after-test SHA-256 `7464084c92123346d6b123347f3951952ee6585e85119b5391e257718f3629c3`. New results/inventory and [updated staging list](../evidence/addmember-test-repair-001/2026-10-11_134025_BDT/staging-paths.txt) live in `QAM/evidence/addmember-test-repair-001/2026-10-11_134025_BDT/`.
+
+F01–F04/local Inter, production form, global Jest config/setup, dependencies and independent QA instruments are unchanged. No waiver or certificate is issued by these Engineer results. Tony controls commits; Architect/QA Lead must bind the actual candidate/next plan. Claudy retains independent acceptance and the normal installed offline production build/output separation scan. **Gate Q pending; D4 ALLOW/D7 OMIT; no independent attempt, Q5 or closeout.**
+
+---
+
+## Historical dependency reconciliation 001 handoff — preserved
+
+The latest return is [DEPENDENCY_RECONCILIATION_001_RETURN.md](DEPENDENCY_RECONCILIATION_001_RETURN.md). Branch `qa/frontend-apbm-000`, current full HEAD/repair parent `9c50884d4c4513b6969311d5be7c05828104ed3d`; repairs remain **UNCOMMITTED**, with unchanged product patch SHA-256 `fac3f21262dca396f5c7b7d71143bbfff1a0f21a809f0278315f1d4d7beebaaa`.
+
+The supplied [Lead disposition](LEAD_Q2_DISPOSITION_2026-10-07.md) is now installed and read, SHA-256 `d5b120e87fd56b214a7cf32b64433b7c6f8b0f608c2e16937e33052eccc6b94a`. It returns bounded repair/evidence work, invalidates the old F01 waiver and **does not approve a new QA attempt**. Earlier missing-record statements below are historical snapshots.
+
+Tony authorized return to committed dependencies. The inherited lockfile is backed up as evidence (SHA-256 `c62a48123a50b5289a6179ebafb1a13960f1c3636992ddcc0df0b435ebf556eb`). Only `package-lock.json` was restored from HEAD; active SHA-256 `f81ea7545863bf12dcb33912a8d43d042abe06aa7b95ff8831af647cdaaeae49`, unchanged by successful offline `npm ci`. Node v24.15.0 / npm 11.12.1; actual Next 16.2.6, Jest 30.0.5, TypeScript 5.5.4, Playwright 1.59.1, Zustand 4.5.4. No package.json/index/product/test-assertion changes.
+
+**Current reverification:** focused **64/64**, typecheck **exit 0**, same engineering offline browser **27/27**; full maintained Jest **289 passed / 1 failed / 290**, exit **1**. Failure: unchanged `AddMemberForm does not redirect when addMember returns an error`, unexpected `/admin-portal` push. Pending asynchronous test work is a likely but unconfirmed mechanism. This failure is not waived; no rerun or unrelated fix occurred. Full-suite acceptance remains unresolved.
+
+New evidence and [updated explicit staging list](../evidence/dependency-reconciliation-001/2026-10-08_124256_BDT/staging-paths.txt): `QAM/evidence/dependency-reconciliation-001/2026-10-08_124256_BDT/`. All earlier results and original Q2 evidence are preserved. The active lockfile is clean against HEAD; backups are QAM evidence. Archives, caches, credentials and RESPONSES are excluded from staging.
+
+Claudy/Lead retain independent instrument corrections, next-candidate/plan approval, acceptance execution and normal offline production build/output identity/separation scan. **Gate Q pending; no certification, Q5 or closeout. D4 ALLOW, D7 OMIT retained.**
+
+---
+
+## Historical bounded repair 001 handoff — preserved
+
+Cody's authorized F01–F04 and exact local-Inter repair is complete and **UNCOMMITTED** on `qa/frontend-apbm-000`, parent/current HEAD `9c50884d4c4513b6969311d5be7c05828104ed3d`. Full mechanisms, exact changed-file list, font provenance, commands/exits, limitations and independent next work: [ENGINEERING_REPAIR_001_RETURN.md](ENGINEERING_REPAIR_001_RETURN.md).
+
+Repair identity: [product.patch](../evidence/engineering-repair-001/product.patch) SHA-256 `fac3f21262dca396f5c7b7d71143bbfff1a0f21a809f0278315f1d4d7beebaaa`; final [repair-identity.json](../evidence/engineering-repair-001/repair-identity.json). Review the explicit [staging list](../evidence/engineering-repair-001/staging-paths.txt). Pre-existing `package-lock.json` change is preserved and excluded. Tony has not committed this repair; no repaired SHA exists.
+
+Final self-checks: focused maintained Jest **64/64**, full maintained Jest **290/290** (40 suites), typecheck **exit 0**, offline engineering browser **27/27** (18 render combinations). Original Q2 findings/evidence and independent QA assertions/instruments are unchanged. Real-store tests prove in-memory user/chat/draft/demo clearing and navigation under blocked storage; mocked logout does not prove server logout/token revocation. Both literal bundle/env mappings and remote roster remain intact.
+
+Seven Inter binaries/source CSS match original Q2 hashes; license/provenance are in product paths. Seven ranges, 100–900 normal/swap and current fallback metrics retained. Offline loaded/fallback root typography metrics match prior declarations. Normal production build/output identity/separation scan are **NOT RUN here**, owned by the next Lead-approved QA attempt with network denied and no QA font hook.
+
+The post-Q2 7 October QA Lead disposition is missing; installed 7 October roster approval is not that later disposition. [Missing evidence audit](../evidence/engineering-repair-001/MISSING_EVIDENCE.md). Architect's recorded instruction authorizes repair, not independent retest or certification. QA must repin Tony's actual repair commit and obtain a next-attempt approval. **Gate Q pending; no Q5/closeout. D4 ALLOW, D7 OMIT retained.**
+
+---
+
+## Historical 4 October engineering return — preserved verbatim
+
+The following candidate/status/test counts are historical; current repair routing is supplied above. Original evidence is preserved.
+
 # APBM_000 — factual engineering handoff, engineering attempt 001 / corrected return 002
 
 Tony: review this uncommitted candidate and its 37 individually documented inherited test failures. Selectively commit the reviewed candidate, then hand independent QA the committed identity on intended `qa/frontend-apbm-000` for Q1 intake via `../AGENTS.md`. QA Lead must adjudicate retained failures; Q2 needs its own approved plan and Director release. **No Gate Q certificate is issued.**

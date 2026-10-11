@@ -1,0 +1,78 @@
+{
+  "node": "v24.15.0",
+  "npm": "11.12.1",
+  "chrome": "Google Chrome 150.0.7871.114",
+  "required_node_npm_pin": "None in repository; historical versions retained as historical facts only",
+  "next_node_requirement": ">=20.9.0",
+  "key_dependencies": {
+    "next": {
+      "installed": "16.2.6",
+      "committed_lock": "16.2.6",
+      "matches": true
+    },
+    "jest": {
+      "installed": "30.0.5",
+      "committed_lock": "30.0.5",
+      "matches": true
+    },
+    "jest-environment-jsdom": {
+      "installed": "30.3.0",
+      "committed_lock": "30.3.0",
+      "matches": true
+    },
+    "typescript": {
+      "installed": "5.5.4",
+      "committed_lock": "5.5.4",
+      "matches": true
+    },
+    "@playwright/test": {
+      "installed": "1.59.1",
+      "committed_lock": "1.59.1",
+      "matches": true
+    },
+    "zustand": {
+      "installed": "4.5.4",
+      "committed_lock": "4.5.4",
+      "matches": true
+    },
+    "react": {
+      "installed": "19.2.4",
+      "committed_lock": "19.2.4",
+      "matches": true
+    },
+    "react-dom": {
+      "installed": "19.2.4",
+      "committed_lock": "19.2.4",
+      "matches": true
+    },
+    "sass": {
+      "installed": "1.77.8",
+      "committed_lock": "1.77.8",
+      "matches": true
+    },
+    "tailwindcss": {
+      "installed": "3.4.6",
+      "committed_lock": "3.4.6",
+      "matches": true
+    },
+    "postcss": {
+      "installed": "8.5.15",
+      "committed_lock": "8.5.15",
+      "matches": true
+    },
+    "@google-cloud/storage": {
+      "installed": "7.21.0",
+      "committed_lock": "7.21.0",
+      "matches": true
+    },
+    "@tailwindcss/typography": {
+      "installed": "0.5.13",
+      "committed_lock": "0.5.13",
+      "matches": true
+    }
+  },
+  "installed_locked_entries_checked": 782,
+  "required_entries_missing": [],
+  "version_mismatches": [],
+  "lock_still_matches_head": true
+}

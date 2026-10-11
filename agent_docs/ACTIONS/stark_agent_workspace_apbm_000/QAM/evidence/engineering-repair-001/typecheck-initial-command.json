@@ -1,0 +1,15 @@
+{
+  "command": [
+    "unshare",
+    "-rn",
+    "node",
+    "node_modules/typescript/bin/tsc",
+    "--noEmit"
+  ],
+  "cwd": "/home/moose/nextjs/10XLAB/stark-ai-workbench-nextjs-frontend-v2",
+  "started_at": "2026-10-08T04:54:04.229615+00:00",
+  "seconds": 4.086,
+  "exit_code": 2,
+  "log": "typecheck.log",
+  "network": "unshare -rn; no network interfaces except down loopback; no QA font hook"
+}

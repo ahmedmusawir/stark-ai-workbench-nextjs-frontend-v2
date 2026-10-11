@@ -1,0 +1,12 @@
+{
+  "started_at": "2026-10-11T07:42:00.200539+00:00",
+  "command": [
+    "unshare",
+    "-rn",
+    "npx",
+    "--no-install",
+    "tsc",
+    "--noEmit"
+  ],
+  "authorized_invocations": 1
+}

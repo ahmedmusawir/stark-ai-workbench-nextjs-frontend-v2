@@ -52,7 +52,8 @@ function WorkspaceSession({ agents, rosterStatus = 'ready', canOperate = true, s
   useEffect(() => { setDrawer(false); setContextOpen(false); setActionRow(null); }, [query]);
   useEffect(() => {
     const media = matchMedia('(min-width:1024px)');
-    const update = () => { if (media.matches && drawerOpen.current) { setDrawer(false); setTimeout(() => (desktopNav.current?.querySelector('[aria-current]') as HTMLElement || desktopNav.current?.querySelector('a'))?.focus(), 0); } };
+    // The modal's close-autofocus callback owns restoration after teardown.
+    const update = () => { if (media.matches && drawerOpen.current) setDrawer(false); };
     media.addEventListener('change', update); return () => media.removeEventListener('change', update);
   }, []);
   useEffect(() => {
@@ -167,7 +168,11 @@ function WorkspaceSession({ agents, rosterStatus = 'ready', canOperate = true, s
         </div></div><div className="ws-compose-wrap">{composer()}<p className="ws-small">Enter to send · Shift + Enter for a new line</p></div>
       </> : null}
     </main></div>
-    <WorkspaceModal open={drawer} onOpenChange={setDrawer} title="Navigation" drawer returnFocus={() => matchMedia('(min-width:1024px)').matches ? desktopNav.current?.querySelector<HTMLElement>('[aria-current], a') ?? null : menuButton.current}><nav className="ws-drawer-nav" aria-label="Mobile workspace navigation">{navigation}</nav></WorkspaceModal>
+    <WorkspaceModal open={drawer} onOpenChange={setDrawer} title="Navigation" drawer returnFocus={() => {
+      if (!matchMedia('(min-width:1024px)').matches) return menuButton.current;
+      const visible = (selector: string) => Array.from(desktopNav.current?.querySelectorAll<HTMLElement>(selector) ?? []).find(el => el.getClientRects().length > 0 && getComputedStyle(el).visibility === 'visible');
+      return visible('[aria-current="page"]') ?? visible('a') ?? main.current;
+    }}><nav className="ws-drawer-nav" aria-label="Mobile workspace navigation">{navigation}</nav></WorkspaceModal>
     <WorkspaceModal open={contextOpen} onOpenChange={setContextOpen} title="Demo context">{context}</WorkspaceModal>
     <WorkspaceModal open={!!actionRow} onOpenChange={open => { if (!open && !mutation) setActionRow(null); }} title="Conversation actions" returnFocus={() => archived.current ? recentHeading.current : rowOpener.current}><label htmlFor="ws-rename">Conversation title</label><input id="ws-rename" className="ws-field" value={rename} onChange={e => setRename(e.target.value)}/>{mutationError && <p role="alert">{mutationError}</p>}<div className="ws-dialog-actions"><button className="ws-primary" disabled={mutation || !rename.trim()} onClick={() => void handleMutation(false)}>Save name</button><button disabled={mutation} onClick={() => void handleMutation(true)}>Archive conversation</button></div><p className="ws-small">Archive hides the conversation from the list. It does not delete its history.</p></WorkspaceModal>
   </div>;
