@@ -1,0 +1,14 @@
+{
+  "test": [
+    "F03/fonts: workspace light 768 has no page overflow"
+  ],
+  "status": "passed",
+  "origin": "http://127.0.0.1:43183",
+  "counters": {
+    "contexts": 0,
+    "pages": 1,
+    "requests": 4
+  },
+  "events": [],
+  "unexpected": 0
+}

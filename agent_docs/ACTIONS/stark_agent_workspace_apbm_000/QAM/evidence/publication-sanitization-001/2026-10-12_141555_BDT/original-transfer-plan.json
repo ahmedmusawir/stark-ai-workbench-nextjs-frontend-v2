@@ -1,0 +1,94 @@
+{
+  "authorization": "Tony confirmed prior approval in current Architect follow-up: preserve originals privately outside Git and create separately identified sanitized copies for Git. No completed prior follow-up found.",
+  "private_file_digest_not_recorded": true,
+  "sources": [
+    {
+      "source": "/home/moose/nextjs/10XLAB/stark-ai-workbench-nextjs-frontend-v2/agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/HANDOFFS/Q2_attempt-002_ADDENDUM-001.zip",
+      "source_location": "repository",
+      "original_repository_path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/HANDOFFS/Q2_attempt-002_ADDENDUM-001.zip",
+      "private_retention_path": "/home/moose/APBM000_private_retention/2026-10-12_141555_BDT/repository/agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/HANDOFFS/Q2_attempt-002_ADDENDUM-001.zip",
+      "kind": "archive",
+      "bytes": 161936,
+      "original_record_or_archive_sha256": "c5797efc9876a6128d4ab33896bd8e9983e6f4a4fec15cff2d7bcf015d6c8181",
+      "original_mode": "0o664",
+      "original_mtime_ns": 1791721995406561696
+    },
+    {
+      "source": "/home/moose/nextjs/10XLAB/stark-ai-workbench-nextjs-frontend-v2/agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/HANDOFFS/Q5_attempt-002.zip",
+      "source_location": "repository",
+      "original_repository_path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/HANDOFFS/Q5_attempt-002.zip",
+      "private_retention_path": "/home/moose/APBM000_private_retention/2026-10-12_141555_BDT/repository/agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/HANDOFFS/Q5_attempt-002.zip",
+      "kind": "archive",
+      "bytes": 168003,
+      "original_record_or_archive_sha256": "45e91d29f449eadc8813ae84dff17882a453f0eb84f2337975369f5c24ca20f1",
+      "original_mode": "0o664",
+      "original_mtime_ns": 1791725174833142671
+    },
+    {
+      "source": "/home/moose/nextjs/10XLAB/stark-ai-workbench-nextjs-frontend-v2/agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/HANDOFFS/Q5_attempt-002_REVIEW-002.zip",
+      "source_location": "repository",
+      "original_repository_path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/HANDOFFS/Q5_attempt-002_REVIEW-002.zip",
+      "private_retention_path": "/home/moose/APBM000_private_retention/2026-10-12_141555_BDT/repository/agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/HANDOFFS/Q5_attempt-002_REVIEW-002.zip",
+      "kind": "archive",
+      "bytes": 380408,
+      "original_record_or_archive_sha256": "86b060bcb43449bb96f7768620281eba1a03edd60ef28315227ef9eb3538bb65",
+      "original_mode": "0o664",
+      "original_mtime_ns": 1791784898668164150
+    },
+    {
+      "source": "/home/moose/nextjs/10XLAB/stark-ai-workbench-nextjs-frontend-v2/agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002-addendum-001/q5-proposal/Q5_PROPOSAL_PATHS.json",
+      "source_location": "repository",
+      "original_repository_path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002-addendum-001/q5-proposal/Q5_PROPOSAL_PATHS.json",
+      "private_retention_path": "/home/moose/APBM000_private_retention/2026-10-12_141555_BDT/repository/agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002-addendum-001/q5-proposal/Q5_PROPOSAL_PATHS.json",
+      "kind": "record",
+      "bytes": 310956,
+      "original_record_or_archive_sha256": "242f95eb508e55e5a81f3e660197857fded1d730e97494d92ebd181590d6e7ed",
+      "original_mode": "0o664",
+      "original_mtime_ns": 1791721984567378490
+    },
+    {
+      "source": "/home/moose/nextjs/10XLAB/stark-ai-workbench-nextjs-frontend-v2/agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q5-attempt-002/POST_Q5_INVENTORY.json",
+      "source_location": "repository",
+      "original_repository_path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q5-attempt-002/POST_Q5_INVENTORY.json",
+      "private_retention_path": "/home/moose/APBM000_private_retention/2026-10-12_141555_BDT/repository/agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q5-attempt-002/POST_Q5_INVENTORY.json",
+      "kind": "record",
+      "bytes": 315063,
+      "original_record_or_archive_sha256": "1ec752dc4e8354992178b3e8461e9ca49252b3eb65d5c802b96596d2beca17f0",
+      "original_mode": "0o664",
+      "original_mtime_ns": 1791725117219798585
+    },
+    {
+      "source": "/home/moose/Downloads/APBM000_Q2_attempt-002_ADDENDUM-001_2026-10-11_183315_BDT.zip",
+      "source_location": "Downloads",
+      "original_repository_path": null,
+      "private_retention_path": "/home/moose/APBM000_private_retention/2026-10-12_141555_BDT/downloads/APBM000_Q2_attempt-002_ADDENDUM-001_2026-10-11_183315_BDT.zip",
+      "kind": "archive",
+      "bytes": 161936,
+      "original_record_or_archive_sha256": "c5797efc9876a6128d4ab33896bd8e9983e6f4a4fec15cff2d7bcf015d6c8181",
+      "original_mode": "0o664",
+      "original_mtime_ns": 1791721995412524202
+    },
+    {
+      "source": "/home/moose/Downloads/APBM000_Q5_attempt-002_2026-10-11_192614_BDT.zip",
+      "source_location": "Downloads",
+      "original_repository_path": null,
+      "private_retention_path": "/home/moose/APBM000_private_retention/2026-10-12_141555_BDT/downloads/APBM000_Q5_attempt-002_2026-10-11_192614_BDT.zip",
+      "kind": "archive",
+      "bytes": 168003,
+      "original_record_or_archive_sha256": "45e91d29f449eadc8813ae84dff17882a453f0eb84f2337975369f5c24ca20f1",
+      "original_mode": "0o664",
+      "original_mtime_ns": 1791725174839328850
+    },
+    {
+      "source": "/home/moose/Downloads/APBM000_Q5_attempt-002_REVIEW-002_2026-10-12_120138_BDT.zip",
+      "source_location": "Downloads",
+      "original_repository_path": null,
+      "private_retention_path": "/home/moose/APBM000_private_retention/2026-10-12_141555_BDT/downloads/APBM000_Q5_attempt-002_REVIEW-002_2026-10-12_120138_BDT.zip",
+      "kind": "archive",
+      "bytes": 380408,
+      "original_record_or_archive_sha256": "86b060bcb43449bb96f7768620281eba1a03edd60ef28315227ef9eb3538bb65",
+      "original_mode": "0o664",
+      "original_mtime_ns": 1791784898681002102
+    }
+  ]
+}

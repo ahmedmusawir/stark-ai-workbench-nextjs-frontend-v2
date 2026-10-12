@@ -1,0 +1,14 @@
+{
+  "test": [
+    "F02: normal mobile Close still restores the menu trigger"
+  ],
+  "status": "passed",
+  "origin": "http://127.0.0.1:43183",
+  "counters": {
+    "contexts": 0,
+    "pages": 1,
+    "requests": 4
+  },
+  "events": [],
+  "unexpected": 0
+}

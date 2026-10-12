@@ -1,0 +1,14 @@
+{
+  "test": [
+    "S-15 scope: sibling styles unchanged by workspace CSS; dialogs themed on first visible frame; portal/listener teardown"
+  ],
+  "status": "passed",
+  "origin": "http://127.0.0.1:43181",
+  "counters": {
+    "contexts": 0,
+    "pages": 1,
+    "requests": 20
+  },
+  "events": [],
+  "unexpected": 0
+}

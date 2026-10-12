@@ -1,0 +1,1 @@
+{"verdict": "GATE_STOP", "failed": ["G1 branch", "G2 HEAD is candidate or QAM-only descendant", "G9 working tree/index: no product drift, staged, untracked or ignored source inputs", "G10 pinned contract/roster/lock/font/OFL/provenance bytes", "G10b next-env.d.ts is one of the two binding-pinned variants"], "error": null, "checks": 17}

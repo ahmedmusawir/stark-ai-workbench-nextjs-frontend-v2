@@ -1,0 +1,9 @@
+{
+  "freeze_manifest": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002/preparation/INSTRUMENT_FREEZE.json",
+  "freeze_sha256": "2b05c3e291627886053a3363adcec9bc47072f697a6f04c29f3d9ffbf8c0d1cf",
+  "approved_inventory": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002/preparation/APPROVED_INVENTORY.json",
+  "approved_sha256": "773a03d0be1de8aff8ef09e1efc9e60bbc1e1381fa53d1433e4318b12a0a6ab8",
+  "instrument_count": 21,
+  "preexisting_untracked": 40,
+  "written": "2026-10-11T17:59:30+06:00"
+}

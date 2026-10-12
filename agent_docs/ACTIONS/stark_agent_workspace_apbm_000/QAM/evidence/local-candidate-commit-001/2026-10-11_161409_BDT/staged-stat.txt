@@ -1,0 +1,270 @@
+ CHANGELOG.md                                       |    23 +
+ ...MEMBERFORM_FAILURE_DIAGNOSTIC_001_2026-10-08.md |    22 +
+ .../HANDOFFS/ADDMEMBER_TEST_REPAIR_001_RETURN.md   |    57 +
+ ...CHITECT_ADDMEMBER_TEST_REPAIR_001_2026-10-11.md |    51 +
+ .../ARCHITECT_ENGINEERING_REPAIR_001_2026-10-08.md |   212 +
+ .../ARCHITECT_Q2_REPAIR_REQUEST_2026-10-07.txt     |    39 +
+ .../DEPENDENCY_RECONCILIATION_001_RETURN.md        |    92 +
+ .../QAM/HANDOFFS/ENGINEERING_REPAIR_001_RETURN.md  |   114 +
+ .../QAM/HANDOFFS/LEAD_Q2_DISPOSITION_2026-10-07.md |    80 +
+ .../LEAD_Q2_DISPOSITION_INDEX_2026-10-07.json      |    20 +
+ .../QAM/HANDOFFS/QA_HANDOFF.md                     |    46 +
+ .../QA_LEAD_REPAIRED_CANDIDATE_INTAKE_001.md       |    36 +
+ .../AUTHORIZED_INSTRUCTION.md                      |     3 +
+ .../2026-10-08_131602_BDT/EXPORT_COMPLETION.md     |     3 +
+ .../2026-10-08_131602_BDT/EXPORT_RECEIPT.json      |    18 +
+ .../2026-10-08_131602_BDT/PACKAGE_README.md        |     9 +
+ .../2026-10-08_131602_BDT/SESSION.md               |     7 +
+ .../2026-10-08_131602_BDT/TONY_REPORT.md           |     3 +
+ .../cleanup-source-observation.json                |    20 +
+ .../2026-10-08_131602_BDT/diagnostic-outcome.json  |    22 +
+ .../2026-10-08_131602_BDT/entry-state.json         |    28 +
+ .../2026-10-08_131602_BDT/failure-comparison.json  |   239 +
+ .../2026-10-08_131602_BDT/isolated-command.json    |    24 +
+ .../2026-10-08_131602_BDT/isolated-invocation.json |    17 +
+ .../2026-10-08_131602_BDT/isolated.json            |     1 +
+ .../2026-10-08_131602_BDT/isolated.log             |    20 +
+ .../2026-10-08_131602_BDT/package-git-status.txt   |   233 +
+ .../2026-10-08_131602_BDT/run_isolated.py          |    34 +
+ .../2026-10-11_134025_BDT/AddMemberForm.after.tsx  |   187 +
+ .../2026-10-11_134025_BDT/AddMemberForm.before.tsx |   154 +
+ .../2026-10-11_134025_BDT/EXECUTION_LOG.md         |    11 +
+ .../2026-10-11_134025_BDT/SESSION.md               |     9 +
+ .../2026-10-11_134025_BDT/TONY_REPORT.md           |     3 +
+ .../2026-10-11_134025_BDT/addmember-command.json   |    21 +
+ .../addmember-invocation.json                      |    16 +
+ .../2026-10-11_134025_BDT/addmember.json           |     1 +
+ .../2026-10-11_134025_BDT/addmember.log            |    20 +
+ .../2026-10-11_134025_BDT/candidate-identity.json  |    32 +
+ .../combined-product-test.patch                    |  5016 ++++++++
+ .../2026-10-11_134025_BDT/current-status.txt       |   272 +
+ .../2026-10-11_134025_BDT/entry-state.json         |   289 +
+ .../2026-10-11_134025_BDT/evidence-index.json      |  1891 +++
+ .../2026-10-11_134025_BDT/full-command.json        |    19 +
+ .../2026-10-11_134025_BDT/full-invocation.json     |    14 +
+ .../2026-10-11_134025_BDT/full.json                |     1 +
+ .../2026-10-11_134025_BDT/full.log                 |   263 +
+ .../2026-10-11_134025_BDT/preservation-check.json  |   277 +
+ .../protected-source-hashes.json                   |    26 +
+ .../2026-10-11_134025_BDT/record-changes.patch     |   211 +
+ .../2026-10-11_134025_BDT/run_verification.py      |    41 +
+ .../2026-10-11_134025_BDT/source-change.json       |    19 +
+ .../2026-10-11_134025_BDT/staging-notes.md         |     7 +
+ .../2026-10-11_134025_BDT/staging-paths.txt        |   269 +
+ .../2026-10-11_134025_BDT/test-only.patch          |   112 +
+ .../2026-10-11_134025_BDT/typecheck-command.json   |    17 +
+ .../typecheck-invocation.json                      |    12 +
+ .../2026-10-11_134025_BDT/typecheck.log            |     0
+ .../verification-comparison.json                   |    59 +
+ .../verification-summary.json                      |    81 +
+ .../2026-10-11_134025_BDT/whitespace-check.json    |    10 +
+ .../AUTHORIZED_INSTRUCTION.md                      |    11 +
+ .../2026-10-08_124256_BDT/EXECUTION_LOG.md         |    13 +
+ .../2026-10-08_124256_BDT/FULL_SUITE_FAILURE.md    |     7 +
+ .../INHERITED_PACKAGE_LOCK_BACKUP.json             | 12855 +++++++++++++++++++
+ .../2026-10-08_124256_BDT/LEAD_RECORD_READ.md      |     5 +
+ .../2026-10-08_124256_BDT/SESSION.md               |     7 +
+ .../2026-10-08_124256_BDT/TONY_REPORT.md           |     5 +
+ .../2026-10-08_124256_BDT/VERIFICATION_SUMMARY.md  |    13 +
+ .../2026-10-08_124256_BDT/browser-command.json     |    22 +
+ .../2026-10-08_124256_BDT/browser-results.json     |  1002 ++
+ .../2026-10-08_124256_BDT/browser.log              |    33 +
+ .../2026-10-08_124256_BDT/browser/repair.spec.ts   |   107 +
+ .../2026-10-08_124256_BDT/candidate-identity.json  |   104 +
+ .../committed-lock-identity.json                   |     5 +
+ .../conversation-dark-1280-metrics.json            |     9 +
+ .../conversation-dark-375-metrics.json             |     9 +
+ .../conversation-dark-768-metrics.json             |     9 +
+ .../conversation-light-1280-metrics.json           |     9 +
+ .../conversation-light-375-metrics.json            |     9 +
+ .../conversation-light-768-metrics.json            |     9 +
+ .../2026-10-08_124256_BDT/current-status.txt       |   219 +
+ .../directory-dark-1280-metrics.json               |     9 +
+ .../directory-dark-375-metrics.json                |     9 +
+ .../directory-dark-768-metrics.json                |     9 +
+ .../directory-light-1280-metrics.json              |     9 +
+ .../directory-light-375-metrics.json               |     9 +
+ .../directory-light-768-metrics.json               |     9 +
+ .../2026-10-08_124256_BDT/entry-state.json         |   133 +
+ .../2026-10-08_124256_BDT/evidence-index.json      |  1528 +++
+ .../2026-10-08_124256_BDT/focused-command.json     |    27 +
+ .../2026-10-08_124256_BDT/focused.json             |     1 +
+ .../2026-10-08_124256_BDT/focused.log              |    47 +
+ .../2026-10-08_124256_BDT/full-command.json        |    18 +
+ .../2026-10-08_124256_BDT/full-suite-failure.json  |    34 +
+ .../2026-10-08_124256_BDT/full.json                |     1 +
+ .../2026-10-08_124256_BDT/full.log                 |   304 +
+ .../inherited-package-lock.diff                    |  4815 +++++++
+ .../2026-10-08_124256_BDT/installed-versions.json  |    78 +
+ .../lead-record-installation.json                  |    31 +
+ .../2026-10-08_124256_BDT/lock-restoration.json    |   531 +
+ .../2026-10-08_124256_BDT/npm-ci-command.json      |    20 +
+ .../2026-10-08_124256_BDT/npm-ci.log               |    45 +
+ .../output-destination-adjustments.json            |    22 +
+ .../2026-10-08_124256_BDT/preservation-check.json  |   149 +
+ .../2026-10-08_124256_BDT/product.patch            |  4904 +++++++
+ .../2026-10-08_124256_BDT/record-changes.patch     |   327 +
+ .../2026-10-08_124256_BDT/repair.config.ts         |    13 +
+ .../2026-10-08_124256_BDT/run_browser.py           |    28 +
+ .../2026-10-08_124256_BDT/run_verification.py      |    33 +
+ .../screens/conversation-dark-1280.png             |   Bin 0 -> 123191 bytes
+ .../screens/conversation-dark-375.png              |   Bin 0 -> 60189 bytes
+ .../screens/conversation-dark-768.png              |   Bin 0 -> 90094 bytes
+ .../screens/conversation-light-1280.png            |   Bin 0 -> 117850 bytes
+ .../screens/conversation-light-375.png             |   Bin 0 -> 56525 bytes
+ .../screens/conversation-light-768.png             |   Bin 0 -> 85179 bytes
+ .../screens/directory-dark-1280.png                |   Bin 0 -> 67185 bytes
+ .../screens/directory-dark-375.png                 |   Bin 0 -> 45126 bytes
+ .../screens/directory-dark-768.png                 |   Bin 0 -> 49447 bytes
+ .../screens/directory-light-1280.png               |   Bin 0 -> 66712 bytes
+ .../screens/directory-light-375.png                |   Bin 0 -> 44626 bytes
+ .../screens/directory-light-768.png                |   Bin 0 -> 49003 bytes
+ .../screens/workspace-dark-1280.png                |   Bin 0 -> 89922 bytes
+ .../screens/workspace-dark-375.png                 |   Bin 0 -> 46803 bytes
+ .../screens/workspace-dark-768.png                 |   Bin 0 -> 52805 bytes
+ .../screens/workspace-light-1280.png               |   Bin 0 -> 89124 bytes
+ .../screens/workspace-light-375.png                |   Bin 0 -> 45835 bytes
+ .../screens/workspace-light-768.png                |   Bin 0 -> 51907 bytes
+ .../2026-10-08_124256_BDT/staging-notes.md         |     9 +
+ .../2026-10-08_124256_BDT/staging-paths.txt        |   216 +
+ .../2026-10-08_124256_BDT/typecheck-command.json   |    16 +
+ .../2026-10-08_124256_BDT/typecheck.log            |     0
+ .../typography-1280-fallback.json                  |   348 +
+ .../typography-1280-loaded.json                    |   348 +
+ .../typography-375-fallback.json                   |   348 +
+ .../typography-375-loaded.json                     |   348 +
+ .../verification-summary.json                      |   110 +
+ .../2026-10-08_124256_BDT/whitespace-check.json    |    10 +
+ .../workspace-dark-1280-metrics.json               |     9 +
+ .../workspace-dark-375-metrics.json                |     9 +
+ .../workspace-dark-768-metrics.json                |     9 +
+ .../workspace-light-1280-metrics.json              |     9 +
+ .../workspace-light-375-metrics.json               |     9 +
+ .../workspace-light-768-metrics.json               |     9 +
+ .../EVIDENCE_INDEX.md                              |   136 +
+ .../EXPORT_COMPLETION.md                           |     5 +
+ .../EXPORT_RECEIPT.json                            |    37 +
+ .../INHERITED_LOCKFILE.md                          |    23 +
+ .../INHERITED_LOCKFILE_ANALYSIS.json               |  1202 ++
+ .../INTER_PROVENANCE_AND_HASHES.md                 |    19 +
+ .../MISSING_LEAD_DISPOSITION.md                    |     9 +
+ .../PACKAGING_INSTRUCTION_2026-10-08.md            |     9 +
+ .../README.md                                      |    17 +
+ .../SESSION.md                                     |    13 +
+ .../TONY_EXPORT_REPORT.md                          |    10 +
+ .../VERIFICATION_SUMMARY.json                      |    99 +
+ .../VERIFICATION_SUMMARY.md                        |    18 +
+ .../checkout-state.json                            |    21 +
+ .../git-status.txt                                 |   124 +
+ .../post-export-git-status.txt                     |   132 +
+ .../product-test-paths.txt                         |    18 +
+ .../staging-paths.txt                              |   111 +
+ .../engineering-repair-001/EXECUTION_LOG.md        |    50 +
+ .../engineering-repair-001/MISSING_EVIDENCE.md     |    13 +
+ .../evidence/engineering-repair-001/TONY_REPORT.md |     7 +
+ .../astra_session_2026-10-08.md                    |     9 +
+ .../baseline-full-command.json                     |    18 +
+ .../engineering-repair-001/baseline-full.json      |     1 +
+ .../engineering-repair-001/baseline-full.log       |   303 +
+ .../baseline-only-failure-source.json              |    10 +
+ .../engineering-repair-001/browser-command.json    |    22 +
+ .../browser-initial-command.json                   |    22 +
+ .../browser-initial-results.json                   |  1002 ++
+ .../engineering-repair-001/browser-initial.log     |    33 +
+ .../engineering-repair-001/browser-results.json    |  1002 ++
+ .../evidence/engineering-repair-001/browser.log    |    33 +
+ .../engineering-repair-001/browser_harness.cjs     |    54 +
+ .../conversation-dark-1280-metrics.json            |     9 +
+ .../conversation-dark-375-metrics.json             |     9 +
+ .../conversation-dark-768-metrics.json             |     9 +
+ .../conversation-light-1280-metrics.json           |     9 +
+ .../conversation-light-375-metrics.json            |     9 +
+ .../conversation-light-768-metrics.json            |     9 +
+ .../directory-dark-1280-metrics.json               |     9 +
+ .../directory-dark-375-metrics.json                |     9 +
+ .../directory-dark-768-metrics.json                |     9 +
+ .../directory-light-1280-metrics.json              |     9 +
+ .../directory-light-375-metrics.json               |     9 +
+ .../directory-light-768-metrics.json               |     9 +
+ .../engineering-repair-001/entry-state.json        |    22 +
+ .../engineering-repair-001/file-inventory.json     |   792 ++
+ .../final-review-command.json                      |    10 +
+ .../engineering-repair-001/final-review.log        |     0
+ .../focused-before-repair-command.json             |    27 +
+ .../focused-before-repair.json                     |     1 +
+ .../focused-before-repair.log                      |   257 +
+ .../engineering-repair-001/focused-command.json    |    27 +
+ .../focused-setup-command.json                     |    27 +
+ .../engineering-repair-001/focused-setup.log       |   703 +
+ .../evidence/engineering-repair-001/focused.json   |     1 +
+ .../evidence/engineering-repair-001/focused.log    |    47 +
+ .../font-and-protected-verification.json           |    26 +
+ .../engineering-repair-001/font-before.css         |    78 +
+ .../engineering-repair-001/font-cache-matches.json |    30 +
+ .../engineering-repair-001/font-retrieval.json     |    91 +
+ .../engineering-repair-001/font-source-google.css  |    63 +
+ .../engineering-repair-001/full-command.json       |    18 +
+ .../QAM/evidence/engineering-repair-001/full.json  |     1 +
+ .../QAM/evidence/engineering-repair-001/full.log   |   263 +
+ .../engineering-repair-001/jest-comparison.json    |    30 +
+ .../engineering-repair-001/pre-existing-lock.diff  |  4815 +++++++
+ .../evidence/engineering-repair-001/product.patch  |  4904 +++++++
+ .../engineering-repair-001/repair-authored.patch   |  5285 ++++++++
+ .../engineering-repair-001/repair-identity.json    |    20 +
+ .../evidence/engineering-repair-001/run_browser.py |    28 +
+ .../engineering-repair-001/run_verification.py     |    33 +
+ .../screens/conversation-dark-1280.png             |   Bin 0 -> 123191 bytes
+ .../screens/conversation-dark-375.png              |   Bin 0 -> 60189 bytes
+ .../screens/conversation-dark-768.png              |   Bin 0 -> 90094 bytes
+ .../screens/conversation-light-1280.png            |   Bin 0 -> 117850 bytes
+ .../screens/conversation-light-375.png             |   Bin 0 -> 56528 bytes
+ .../screens/conversation-light-768.png             |   Bin 0 -> 85179 bytes
+ .../screens/directory-dark-1280.png                |   Bin 0 -> 67227 bytes
+ .../screens/directory-dark-375.png                 |   Bin 0 -> 45126 bytes
+ .../screens/directory-dark-768.png                 |   Bin 0 -> 49447 bytes
+ .../screens/directory-light-1280.png               |   Bin 0 -> 66712 bytes
+ .../screens/directory-light-375.png                |   Bin 0 -> 44626 bytes
+ .../screens/directory-light-768.png                |   Bin 0 -> 49003 bytes
+ .../screens/workspace-dark-1280.png                |   Bin 0 -> 89922 bytes
+ .../screens/workspace-dark-375.png                 |   Bin 0 -> 46803 bytes
+ .../screens/workspace-dark-768.png                 |   Bin 0 -> 52805 bytes
+ .../screens/workspace-light-1280.png               |   Bin 0 -> 89124 bytes
+ .../screens/workspace-light-375.png                |   Bin 0 -> 45835 bytes
+ .../screens/workspace-light-768.png                |   Bin 0 -> 51907 bytes
+ .../engineering-repair-001/snapshot_repair.py      |    75 +
+ .../engineering-repair-001/staging-paths.txt       |   111 +
+ .../engineering-repair-001/typecheck-command.json  |    16 +
+ .../typecheck-initial-command.json                 |    15 +
+ .../engineering-repair-001/typecheck-initial.log   |     5 +
+ .../evidence/engineering-repair-001/typecheck.log  |     0
+ .../typography-1280-fallback.json                  |   348 +
+ .../typography-1280-loaded.json                    |   348 +
+ .../typography-375-fallback.json                   |   348 +
+ .../typography-375-loaded.json                     |   348 +
+ .../engineering-repair-001/verify_inputs.py        |    31 +
+ .../workspace-dark-1280-metrics.json               |     9 +
+ .../workspace-dark-375-metrics.json                |     9 +
+ .../workspace-dark-768-metrics.json                |     9 +
+ .../workspace-light-1280-metrics.json              |     9 +
+ .../workspace-light-375-metrics.json               |     9 +
+ .../workspace-light-768-metrics.json               |     9 +
+ src/__tests__/admin/AddMemberForm.test.tsx         |    47 +-
+ src/__tests__/config/manifest.test.ts              |     5 +-
+ src/__tests__/workspace/signout.test.tsx           |   112 +
+ src/app/(cyberize)/chat/workspace.scss             |     2 +-
+ src/app/fonts/inter.css                            |    78 +
+ src/app/fonts/inter/OFL.txt                        |    93 +
+ src/app/fonts/inter/PROVENANCE.json                |    88 +
+ src/app/fonts/inter/inter-cyrillic-ext.woff2       |   Bin 0 -> 25844 bytes
+ src/app/fonts/inter/inter-cyrillic.woff2           |   Bin 0 -> 18744 bytes
+ src/app/fonts/inter/inter-greek-ext.woff2          |   Bin 0 -> 11272 bytes
+ src/app/fonts/inter/inter-greek.woff2              |   Bin 0 -> 19044 bytes
+ src/app/fonts/inter/inter-latin-ext.woff2          |   Bin 0 -> 85272 bytes
+ src/app/fonts/inter/inter-latin.woff2              |   Bin 0 -> 48432 bytes
+ src/app/fonts/inter/inter-vietnamese.woff2         |   Bin 0 -> 10280 bytes
+ src/app/layout.tsx                                 |     6 +-
+ src/components/workspace/Workspace.tsx             |     9 +-
+ src/components/workspace/WorkspaceEntry.tsx        |    11 +-
+ tests/workspace/repair.config.ts                   |    13 +
+ tests/workspace/repair.spec.ts                     |   107 +
+ 269 files changed, 64788 insertions(+), 16 deletions(-)

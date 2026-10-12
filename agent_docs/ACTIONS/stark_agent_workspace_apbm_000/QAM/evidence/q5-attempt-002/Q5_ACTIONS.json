@@ -1,0 +1,184 @@
+{
+  "record": "Q5 attempt-002 execution",
+  "started": "2026-10-11T19:24:55+06:00",
+  "candidate": "8eb5789d9021ad06c15db36db74419a2b5c68fc5",
+  "checks": [
+    {
+      "check": "HEAD is candidate",
+      "ok": true
+    },
+    {
+      "check": "index empty",
+      "ok": true
+    },
+    {
+      "check": "authoritative proposal hash",
+      "ok": true,
+      "sha256": "242f95eb508e55e5a81f3e660197857fded1d730e97494d92ebd181590d6e7ed"
+    },
+    {
+      "check": "RECOVERY.md current = reviewed worktree hash",
+      "ok": true,
+      "sha256": "adcc855d541adad5987182665cf45769ede74cc949f47b769eb8534d4f316b2e",
+      "bytes": 16361
+    },
+    {
+      "check": "prepend = reviewed 1,030 bytes",
+      "ok": true,
+      "sha256": "44a8159729f1117ea3c2deb86c94aa729a1d5a444705851b21eaa2e723ff671d"
+    },
+    {
+      "check": "remainder = Lead hash = HEAD blob",
+      "ok": true,
+      "sha256": "edfffe35c9226c36ce8b8e12acff2375617b664fa3d7ec9cc94a16a03d83fcb8"
+    },
+    {
+      "check": "QA_RECOVERY.md absent or identical",
+      "ok": true,
+      "exists": false
+    },
+    {
+      "check": "root session = reviewed hash and QAM copy identical",
+      "ok": true,
+      "sha256": "4ce2ae025240574f09def856f67f3de022a9a454f8d3339443b8100daa1552d6",
+      "qam_copy": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002-addendum-001/root-files/root-session_2026-10-11.md.txt"
+    },
+    {
+      "check": "root session untracked",
+      "ok": true
+    },
+    {
+      "check": "exactly five cache/DELETE rows",
+      "ok": true,
+      "paths": [
+        "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002/acceptance/G-diag-s20/artifacts/.last-run.json",
+        "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002/acceptance/G/artifacts/.last-run.json",
+        "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002/acceptance/H/repair-copy/browser-artifacts/.last-run.json",
+        "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002/acceptance/H/workspace-copy/artifacts/.last-run.json",
+        "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002/preparation/policy-controls/artifacts/.last-run.json"
+      ]
+    },
+    {
+      "check": "cache verified: agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002/acceptance/G-diag-s20/artifacts/.last-run.json",
+      "ok": true,
+      "sha256": "91d1c43004802cd49950d78eb11c8fa7d05da8ffffe219a8b13b2f561bc00903",
+      "recorded": "91d1c43004802cd49950d78eb11c8fa7d05da8ffffe219a8b13b2f561bc00903",
+      "status": "?? agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002/acceptance/G-diag-s20/artifacts/.last-run.json"
+    },
+    {
+      "check": "cache verified: agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002/acceptance/G/artifacts/.last-run.json",
+      "ok": true,
+      "sha256": "91d1c43004802cd49950d78eb11c8fa7d05da8ffffe219a8b13b2f561bc00903",
+      "recorded": "91d1c43004802cd49950d78eb11c8fa7d05da8ffffe219a8b13b2f561bc00903",
+      "status": "?? agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002/acceptance/G/artifacts/.last-run.json"
+    },
+    {
+      "check": "cache verified: agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002/acceptance/H/repair-copy/browser-artifacts/.last-run.json",
+      "ok": true,
+      "sha256": "91d1c43004802cd49950d78eb11c8fa7d05da8ffffe219a8b13b2f561bc00903",
+      "recorded": "91d1c43004802cd49950d78eb11c8fa7d05da8ffffe219a8b13b2f561bc00903",
+      "status": "?? agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002/acceptance/H/repair-copy/browser-artifacts/.last-run.json"
+    },
+    {
+      "check": "cache verified: agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002/acceptance/H/workspace-copy/artifacts/.last-run.json",
+      "ok": true,
+      "sha256": "91d1c43004802cd49950d78eb11c8fa7d05da8ffffe219a8b13b2f561bc00903",
+      "recorded": "91d1c43004802cd49950d78eb11c8fa7d05da8ffffe219a8b13b2f561bc00903",
+      "status": "?? agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002/acceptance/H/workspace-copy/artifacts/.last-run.json"
+    },
+    {
+      "check": "cache verified: agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002/preparation/policy-controls/artifacts/.last-run.json",
+      "ok": true,
+      "sha256": "91d1c43004802cd49950d78eb11c8fa7d05da8ffffe219a8b13b2f561bc00903",
+      "recorded": "91d1c43004802cd49950d78eb11c8fa7d05da8ffffe219a8b13b2f561bc00903",
+      "status": "?? agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002/preparation/policy-controls/artifacts/.last-run.json"
+    }
+  ],
+  "actions": [
+    {
+      "at": "2026-10-11T19:24:55+06:00",
+      "action": "create QAM/QA_RECOVERY.md with the exact 1,030-byte prepend",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/QA_RECOVERY.md",
+      "after_sha256": "44a8159729f1117ea3c2deb86c94aa729a1d5a444705851b21eaa2e723ff671d"
+    },
+    {
+      "at": "2026-10-11T19:24:55+06:00",
+      "action": "remove the 1,030-byte prepend from root RECOVERY.md",
+      "before_sha256": "adcc855d541adad5987182665cf45769ede74cc949f47b769eb8534d4f316b2e",
+      "after_sha256": "edfffe35c9226c36ce8b8e12acff2375617b664fa3d7ec9cc94a16a03d83fcb8"
+    },
+    {
+      "at": "2026-10-11T19:24:55+06:00",
+      "action": "delete root session_2026-10-11.md (preserved at agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002-addendum-001/root-files/root-session_2026-10-11.md.txt)",
+      "before_sha256": "4ce2ae025240574f09def856f67f3de022a9a454f8d3339443b8100daa1552d6"
+    },
+    {
+      "at": "2026-10-11T19:24:55+06:00",
+      "action": "delete cache",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002/acceptance/G-diag-s20/artifacts/.last-run.json",
+      "before_sha256": "91d1c43004802cd49950d78eb11c8fa7d05da8ffffe219a8b13b2f561bc00903",
+      "bytes": 45
+    },
+    {
+      "at": "2026-10-11T19:24:55+06:00",
+      "action": "delete cache",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002/acceptance/G/artifacts/.last-run.json",
+      "before_sha256": "91d1c43004802cd49950d78eb11c8fa7d05da8ffffe219a8b13b2f561bc00903",
+      "bytes": 45
+    },
+    {
+      "at": "2026-10-11T19:24:55+06:00",
+      "action": "delete cache",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002/acceptance/H/repair-copy/browser-artifacts/.last-run.json",
+      "before_sha256": "91d1c43004802cd49950d78eb11c8fa7d05da8ffffe219a8b13b2f561bc00903",
+      "bytes": 45
+    },
+    {
+      "at": "2026-10-11T19:24:55+06:00",
+      "action": "delete cache",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002/acceptance/H/workspace-copy/artifacts/.last-run.json",
+      "before_sha256": "91d1c43004802cd49950d78eb11c8fa7d05da8ffffe219a8b13b2f561bc00903",
+      "bytes": 45
+    },
+    {
+      "at": "2026-10-11T19:24:55+06:00",
+      "action": "delete cache",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002/preparation/policy-controls/artifacts/.last-run.json",
+      "before_sha256": "91d1c43004802cd49950d78eb11c8fa7d05da8ffffe219a8b13b2f561bc00903",
+      "bytes": 45
+    }
+  ],
+  "post": [
+    {
+      "check": "QA_RECOVERY.md = exact prepend",
+      "ok": true,
+      "sha256": "44a8159729f1117ea3c2deb86c94aa729a1d5a444705851b21eaa2e723ff671d"
+    },
+    {
+      "check": "RECOVERY.md = edfffe35\u2026 and clean vs HEAD",
+      "ok": true
+    },
+    {
+      "check": "root session removed",
+      "ok": true
+    },
+    {
+      "check": "five caches removed",
+      "ok": true
+    },
+    {
+      "check": "failed-run cache preserved",
+      "ok": true
+    },
+    {
+      "check": "HEAD still candidate",
+      "ok": true
+    },
+    {
+      "check": "no product/test/dependency status",
+      "ok": true
+    }
+  ],
+  "finished": "2026-10-11T19:24:55+06:00",
+  "result": "COMPLETE"
+}

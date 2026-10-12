@@ -1,0 +1,8 @@
+C0-mirror-baseline exit=2
+NC1-tampered-binding-hash exit=2
+NC5-unapproved-instrument-hash exit=2
+NC2-unauthorized-source-addition exit=2
+NC3-changed-source exit=2
+NC6-unfrozen-executable exit=2
+NC4-non-ancestor-head exit=2
+C0b-mirror-restored exit=2

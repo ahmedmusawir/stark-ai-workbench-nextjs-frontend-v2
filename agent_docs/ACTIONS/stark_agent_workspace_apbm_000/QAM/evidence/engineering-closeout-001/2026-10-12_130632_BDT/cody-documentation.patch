@@ -1,0 +1,706 @@
+diff --git a/CLAUDE.md b/CLAUDE.md
+--- a/CLAUDE.md
++++ b/CLAUDE.md
+@@ -5,6 +5,10 @@
+ > _Version: 3.1 | July 2026_
+ 
+ ---
++
++## APBM_000 QA record placement — Architect disposition, 12 October 2026
++
++For `agent_docs/ACTIONS/stark_agent_workspace_apbm_000/` only, all future QA-related recovery, session, response/report and handoff records belong inside its `QAM/`. Use `QAM/QA_RECOVERY.md`, `QAM/session_YYYY-MM-DD.md` (or a seat-prefixed session inside QAM), and canonical `QAM/HANDOFFS/QA_HANDOFF.md`. These destinations override this file's root RECOVERY/session and `agent_docs/RESPONSES/` placement rules for this module's QA-related work. Preserve historical root recovery/session/response records and pointers unchanged; no relocation or deletion follows from this exception. All unrelated root-protocol requirements remain in force. Check the current QAM recovery/state and explicit writer handoff before resuming.
+ 
+ ## Role Definition
+ 
+diff --git a/agent_docs/ACTIONS/stark_agent_workspace_apbm_000/START_HERE.md b/agent_docs/ACTIONS/stark_agent_workspace_apbm_000/START_HERE.md
+--- a/agent_docs/ACTIONS/stark_agent_workspace_apbm_000/START_HERE.md
++++ b/agent_docs/ACTIONS/stark_agent_workspace_apbm_000/START_HERE.md
+@@ -2,6 +2,8 @@
+ Version 1.0 · 4 October 2026 · Architect: JARVIS Master · Director: Tony Stark
+ 
+ **Status: Architect-assembled assignment ready for Engineer entry on `frontend-apbm`, subject to the bounded baseline/environment preflight. No implementation or QA pass has occurred.**
++
++For current routing, read `QAM/QA_RECOVERY.md` and `QAM/QAM_STATE.json` before acting on the preserved assembly-era instructions below. Future QA session/recovery records and the canonical factual handoff are inside QAM.
+ 
+ ## Tony's next move
+ 
+@@ -28,6 +30,6 @@
+ 
+ ## Package authority
+ 
+-Read `GOVERNANCE.md`, `RULINGS_ADDENDUM.md`, `ACCEPTANCE_SPEC.md`, and `ENGINEERING_ENTRY.md`. Module root owns the only acceptance and factual handoff. QAM references those files instead of duplicating editable contracts. `DESIGN/` and `references/` are immutable evidence; this module's explicit phase boundary governs the Designer's eventual-product requirements.
++Read `GOVERNANCE.md`, `RULINGS_ADDENDUM.md`, `ACCEPTANCE_SPEC.md`, and `ENGINEERING_ENTRY.md`. Module root owns the only acceptance contract. The canonical factual handoff is `QAM/HANDOFFS/QA_HANDOFF.md`; QAM references the acceptance contract instead of duplicating it. `DESIGN/` and `references/` are immutable evidence; this module's explicit phase boundary governs the Designer's eventual-product requirements.
+ 
+ A null candidate SHA or NOT RUN evidence field is an honest pre-execution state. The Engineer completes facts; QA pins the committed candidate. No one may turn templates into PASS records without execution.
+diff --git a/agent_docs/ACTIONS/stark_agent_workspace_apbm_000/ENGINEERING_ENTRY.md b/agent_docs/ACTIONS/stark_agent_workspace_apbm_000/ENGINEERING_ENTRY.md
+--- a/agent_docs/ACTIONS/stark_agent_workspace_apbm_000/ENGINEERING_ENTRY.md
++++ b/agent_docs/ACTIONS/stark_agent_workspace_apbm_000/ENGINEERING_ENTRY.md
+@@ -20,6 +20,6 @@
+ 
+ ## Finish in the same assignment
+ 
+-Fill QA_HANDOFF, QAM_MANIFEST facts, BASELINE_CHECK, changed-file/source inventory, self-check matrix and safe evidence. Leave independent plan/approval/certification pending. Export one indexed engineering return per QA_HANDOFF. Update repository reporting/session/recovery/changelog per applicable logging instructions. Give Tony exact selective staging guidance and the future QA entry path. Do not commit, open QA branch, start QA or fill Gate Q yourself.
++Fill QAM/HANDOFFS/QA_HANDOFF.md, QAM_MANIFEST facts, BASELINE_CHECK, changed-file/source inventory, self-check matrix and safe evidence. Leave independent plan/approval/certification pending. Export one indexed engineering return per QA_HANDOFF. Update repository reporting/session/recovery/changelog per applicable logging instructions. Give Tony exact selective staging guidance and the future QA entry path. Do not commit, open QA branch, start QA or fill Gate Q yourself.
+ 
+ Stop for wrong repo/branch, material product drift, contradiction affecting acceptance, necessary protected edits, missing access that prevents required proof, accidental external traffic or sensitive capture, candidate contamination/concurrent writes. Give one report containing finding, affected ACs, evidence, owner and smallest decision. Routine implementation choices inside the contract do not require another prompt.
+diff --git a/agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/QAM_ENTRY.md b/agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/QAM_ENTRY.md
+--- a/agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/QAM_ENTRY.md
++++ b/agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/QAM_ENTRY.md
+@@ -1,4 +1,6 @@
+ # QAM entry — self-sufficient QA dispatch
++
++Read `QA_RECOVERY.md` and `QAM_STATE.json` first for current routing and writer ownership. Future QA session/recovery records stay inside QAM, and the canonical factual handoff is `HANDOFFS/QA_HANDOFF.md`; historical root pointers are retained as history.
+ 
+ Read ../GOVERNANCE.md, ../ACCEPTANCE_SPEC.md, ../RULINGS_ADDENDUM.md, HANDOFFS/QA_HANDOFF.md, ../KNOWN_LIMITS.md, then QAM_STATE.json, QAM_MANIFEST.md, QAM_PREFLIGHT.md, QAM_RISK_REQUIREMENTS.md, QAM_TEST_PLAN.md, QAM_CHECKPOINTS.md and QAM_PROMPTS.md. Resolve referenced actual evidence rather than relying on memory. Record which files were loaded and which seat you occupy.
+ 
+diff --git a/agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/QAM_STATE.json b/agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/QAM_STATE.json
+--- a/agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/QAM_STATE.json
++++ b/agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/QAM_STATE.json
+@@ -1,11 +1,11 @@
+ {
+   "module_id": "stark_agent_workspace_apbm_000",
+   "packet_version": "1.0",
+-  "stage": "Q5_ATTEMPT_002_RECONCILED_AWAITING_GATE_Q",
++  "stage": "READY_FOR_ARCHITECT_REVIEW_DIRECTOR_DISPOSITION",
+   "evidence_baseline_sha": "20ef380bdd6eed5e111d953d6404992add7a88a6",
+   "product_candidate_sha": "8eb5789d9021ad06c15db36db74419a2b5c68fc5",
+-  "qa_head_sha": "8eb5789d9021ad06c15db36db74419a2b5c68fc5 (execution HEAD = candidate; attempt-002 QA records uncommitted by design per Lead approval)",
+-  "qa_head_note": "a4abd2a is a committed documentation successor of proposed f21564c: 37 QAM paths, 1 historical RESPONSES document, zero product/config/test/dependency delta. Fresh raw identity evidence under remote-roster-rebind-002.",
++  "qa_head_sha": "8eb5789d9021ad06c15db36db74419a2b5c68fc5",
++  "qa_head_note": "Actual checkout HEAD equals certified candidate; outstanding independent QA and engineering-closeout documentation is uncommitted and separately inventoried.",
+   "qa_branch": "qa/frontend-apbm-000",
+   "plan_id": "QA-APBM000-PLAN v0.3 (Lead-approved 2026-10-11)",
+   "plan_sha256": "6b3f5df3e89c6a873684248b4ce790173726218c6379161c100564f785199c04",
+@@ -20,9 +20,9 @@
+     "FINDINGS/DIRECTOR-OBS-001.md (+ addenda 001-003; UNTRIAGED-live)"
+   ],
+   "attempt": 2,
+-  "last_completed_checkpoint": "Q5 (attempt 002)",
+-  "next_action": "QA Lead certification review of the Q5 reconciliation package; Gate Q decision with separate process verdict. Tony owns Git; Architect owns closeout.",
+-  "gate_q": "PENDING",
++  "last_completed_checkpoint": "Gate Q and accepted Q5 for exact candidate",
++  "next_action": "Architect reviews bounded engineering closeout; Tony decides retention/publication of held digest-bearing originals and archives, then reviews selective Git scope. No further independent acceptance execution or cleanup.",
++  "gate_q": "PASS",
+   "note": "Routing aid only; no field grants permission without its owner record.",
+   "nonblocking": [
+     "Module-root QA_HANDOFF.md pointer present: Architect/Cody placement correction",
+@@ -41,7 +41,7 @@
+   "product_candidate_sha_note": "Lead-approved 2026-10-07 (HANDOFFS/LEAD_REMOTE_ROSTER_APPROVAL_2026-10-07.md). 22ce03b is the historical product reference; baseline 20ef380 unchanged.",
+   "rebind_evidence": "evidence/remote-roster-rebind-001 (Lead-reviewed) and remote-roster-rebind-002 (Executor attempt 002, 2026-10-07 18:30; not in Lead review set)",
+   "last_preparation_record": "RESPONSES report 2026-10-07 (prep for revised release)",
+-  "acceptance_testing_started_this_run": true,
++  "acceptance_testing_started_this_run": false,
+   "effective_plan": "QA-APBM000-PLAN v0.3 (6b3f5df3\u2026) + LEAD_RETEST_002_APPROVAL (72e1970d\u2026) + binding (06aed917\u2026)",
+   "binding_hashes_record": "HANDOFFS/LEAD_REMOTE_ROSTER_BINDING_HASHES_2026-10-07.json (0ccefad2...; all 9 pins verified locally 2026-10-07)",
+   "inherited_failures": "none active for 8eb5789d (no waiver used)",
+@@ -106,7 +106,137 @@
+     "PD-Q5-01 .env.local digest computed by Q5 proposal generator (disclosed 2026-10-12; for Lead/Director decision)"
+   ],
+   "current_review_package": "HANDOFFS/Q5_attempt-002_REVIEW-002.zip (earlier Q5_attempt-002.zip preserved unchanged)",
+-  "session_closed": "2026-10-12 12:05 BDT \u2014 session ended cleanly after returning the REVIEW-002 package",
+-  "recovery_entry": "QA_RECOVERY.md (appended pointer) \u2192 QAM_STATE.json \u2192 session_2026-10-12.md",
+-  "current_review_package_sha256": "86b060bcb43449bb96f7768620281eba1a03edd60ef28315227ef9eb3538bb65"
++  "session_closed": null,
++  "recovery_entry": "QA_RECOVERY.md latest append \u2192 QAM_STATE.json \u2192 astra_session_2026-10-12.md",
++  "current_review_package_sha256": "86b060bcb43449bb96f7768620281eba1a03edd60ef28315227ef9eb3538bb65",
++  "history_routing_pre_engineering_closeout_2026_10_12": {
++    "module_id": "stark_agent_workspace_apbm_000",
++    "packet_version": "1.0",
++    "stage": "Q5_ATTEMPT_002_RECONCILED_AWAITING_GATE_Q",
++    "evidence_baseline_sha": "20ef380bdd6eed5e111d953d6404992add7a88a6",
++    "product_candidate_sha": "8eb5789d9021ad06c15db36db74419a2b5c68fc5",
++    "qa_head_sha": "8eb5789d9021ad06c15db36db74419a2b5c68fc5 (execution HEAD = candidate; attempt-002 QA records uncommitted by design per Lead approval)",
++    "qa_head_note": "a4abd2a is a committed documentation successor of proposed f21564c: 37 QAM paths, 1 historical RESPONSES document, zero product/config/test/dependency delta. Fresh raw identity evidence under remote-roster-rebind-002.",
++    "qa_branch": "qa/frontend-apbm-000",
++    "plan_id": "QA-APBM000-PLAN v0.3 (Lead-approved 2026-10-11)",
++    "plan_sha256": "6b3f5df3e89c6a873684248b4ce790173726218c6379161c100564f785199c04",
++    "superseded_plan_sha256": "8ddb743f1be09d624bf79c8a602ad05fbd3cffbffbc2d8c6cfbaee16f8b80337",
++    "acceptance_sha256": "57f8d9f4dec8ca826326067254b0916ef65ccd51b635a8ac6ead73e8ab469fcc",
++    "rulings_sha256": "99d4c40f7094106f4386d4d8ff5535228feb653dcbe0fd948a14a0ff1ec3b36f",
++    "qa_lead_approval_record": "HANDOFFS/LEAD_RETEST_002_APPROVAL_2026-10-11.md + HANDOFFS/LEAD_RETEST_002_BINDING_2026-10-11.json (06aed917\u2026)",
++    "director_q2_release_record": "HANDOFFS/DIRECTOR_Q2_RELEASE_002_2026-10-11_174045_BDT.txt (adb0a642\u2026; D4 ALLOW, D7 OMIT)",
++    "director_pending": [],
++    "q2_blockers": [],
++    "open_findings": [
++      "FINDINGS/DIRECTOR-OBS-001.md (+ addenda 001-003; UNTRIAGED-live)"
++    ],
++    "attempt": 2,
++    "last_completed_checkpoint": "Q5 (attempt 002)",
++    "next_action": "QA Lead certification review of the Q5 reconciliation package; Gate Q decision with separate process verdict. Tony owns Git; Architect owns closeout.",
++    "gate_q": "PENDING",
++    "note": "Routing aid only; no field grants permission without its owner record.",
++    "nonblocking": [
++      "Module-root QA_HANDOFF.md pointer present: Architect/Cody placement correction",
++      "N1 acknowledgement"
++    ],
++    "q2_prep": "evidence/q2-prep-002/identity-post-restore.json raw_verdict PRODUCT_EQUIVALENT (0 blocking); q2-prep-001 preserved",
++    "resolved_2026_10_05": [
++      "manifest restored by Tony (sha 638e95a1 = candidate)",
++      "dev server already stopped (no Executor kill)",
++      "agents.manifest_hermes.json backed up to ~/APBM000_backups/agents.manifest_hermes_2026-10-05_184317.json and removed",
++      "next-env.d.ts restored to pinned 7b550dda"
++    ],
++    "diagnostics": "evidence/q2-prep-003: Jest at f21564c 286 pass / 1 fail (only class C remains); identity raw PRODUCT_DRIFT_OR_IDENTITY_FAILURE (config only)",
++    "standing_director_constraint": "Executor never changes/restores/renames config/agents.manifest*.json",
++    "architect_amendment": "HANDOFFS/ARCHITECT_REMOTE_ROSTER_AMENDMENT_2026-10-05.md sha256 57924e3f046bc521b3a91fe78cd17087e8b2f3dbd6aa05b11439a26cf459c7d9 (index-verified 9/9)",
++    "product_candidate_sha_note": "Lead-approved 2026-10-07 (HANDOFFS/LEAD_REMOTE_ROSTER_APPROVAL_2026-10-07.md). 22ce03b is the historical product reference; baseline 20ef380 unchanged.",
++    "rebind_evidence": "evidence/remote-roster-rebind-001 (Lead-reviewed) and remote-roster-rebind-002 (Executor attempt 002, 2026-10-07 18:30; not in Lead review set)",
++    "last_preparation_record": "RESPONSES report 2026-10-07 (prep for revised release)",
++    "acceptance_testing_started_this_run": true,
++    "effective_plan": "QA-APBM000-PLAN v0.3 (6b3f5df3\u2026) + LEAD_RETEST_002_APPROVAL (72e1970d\u2026) + binding (06aed917\u2026)",
++    "binding_hashes_record": "HANDOFFS/LEAD_REMOTE_ROSTER_BINDING_HASHES_2026-10-07.json (0ccefad2...; all 9 pins verified locally 2026-10-07)",
++    "inherited_failures": "none active for 8eb5789d (no waiver used)",
++    "q2_summary": "attempt-002: gate post-build PASS 17/17; tsc 0; build 0 (first successful normal offline build); Jest 290/290; QA Jest 31/31; browser 34/34; secondary 33/33 + 27/27",
++    "proposed_ac_grades": "attempt-002: 23 PASS; AC000-24 NOT RUN",
++    "q2_package": "HANDOFFS/Q2_attempt-002.zip",
++    "concurrency_note": "2026-10-08 09:07 a second Executor session wrote a stale RETURN_NOTE (pre-approval state). Preserved; superseded by session_2026-10-07.md 09:09 entry. One writer at a time.",
++    "history_routing_attempt_001": {
++      "stage": "Q2_ATTEMPT_001_EXECUTED_AWAITING_LEAD_ADJUDICATION",
++      "product_candidate_sha": "f21564cacb563ecddbf78b1685086c9489bf1c26",
++      "qa_head_sha": "24ccf30 (Q2 attempt 001 committed and pushed; 253 QAM paths)",
++      "plan_id": "QA-APBM000-PLAN v0.2 (Lead-approved)",
++      "plan_sha256": "8ddb743f1be09d624bf79c8a602ad05fbd3cffbffbc2d8c6cfbaee16f8b80337",
++      "attempt": 1,
++      "last_completed_checkpoint": "Q2 (attempt 001)",
++      "next_action": "QA Lead adjudicates Q2 attempt 001 (findings, build route, instrument gaps). No Q5 before Lead disposition.",
++      "q2_summary": "Q2-0 PASS; tsc 0; Jest 286/1 (exact C); QA Jest 27/28; build BLOCKED; static PASS; browser run2 24/29; engineer copy 33/33; post-run PRODUCT_EQUIVALENT",
++      "proposed_ac_grades": "18 PASS (3 qualified); AC000-13 FAIL; AC000-17 FAIL; AC000-20 BLOCKED; AC000-22 BLOCKED; AC000-24 NOT RUN",
++      "q2_package": "HANDOFFS/Q2_attempt-001.zip",
++      "effective_plan": "QA-APBM000-PLAN v0.2 (8ddb743f...) + Lead binding addendum LEAD_REMOTE_ROSTER_APPROVAL_2026-10-07.md (c0380dfc...) + Architect amendment (57924e3f...)",
++      "binding_hashes_record": "HANDOFFS/LEAD_REMOTE_ROSTER_BINDING_HASHES_2026-10-07.json (0ccefad2...; all 9 pins verified locally 2026-10-07)",
++      "director_q2_release_record": "HANDOFFS/DIRECTOR_Q2_RELEASE_REVISED_2026-10-07_190418.md (verbatim; D4 ALLOW, D7 OMIT)",
++      "open_findings": [
++        "FINDINGS/Q2-F01_signout_storage_unavailable.md",
++        "FINDINGS/Q2-F02_drawer_breakpoint_focus_target.md",
++        "FINDINGS/Q2-F03_breadcrumb_target_size.md",
++        "FINDINGS/Q2-F04_manifest_test_bundle_coverage.md",
++        "FINDINGS/DIRECTOR-OBS-001.md (+ addenda 001, 002; UNTRIAGED-live)"
++      ]
++    },
++    "attempt_002_evidence": "evidence/q2-attempt-002/ (EXECUTION_REPORT.md, AC_MATRIX.md, INSTRUMENT_RETRY_LEDGER.md, INDEX.md)",
++    "history_routing_attempt_002_pre_disposition": {
++      "stage": "Q2_ATTEMPT_002_EXECUTED_AWAITING_LEAD_DISPOSITION",
++      "next_action": "QA Lead dispositions attempt-002 findings (F01\u2013F04 retest PASS, closure recommended), next-env/E-before-B disposition, then Q5 authorization and Gate Q. No Q5 before Lead disposition.",
++      "open_findings": [
++        "FINDINGS/Q2-F01..F04 (+ _RETEST-002 addenda recommending closure)",
++        "FINDINGS/DIRECTOR-OBS-001.md (+ addenda 001-003; UNTRIAGED-live)"
++      ]
++    },
++    "lead_disposition_attempt_002": "HANDOFFS/LEAD_Q2_ATTEMPT_002_DISPOSITION_ADDENDUM_INSTRUCTION_2026-10-11_182616_BDT.txt (1617184f\u2026): F01\u2013F04 RESOLVED within tested fixture scope; build/regression/font diagnostic accepted; OS-Inter qualification retained; next-env transition accepted for this candidate; proceeding after GATE_STOP recorded as process deviation PD-002-01 (no future overrides)",
++    "resolved_findings": [
++      "Q2-F01",
++      "Q2-F02",
++      "Q2-F03",
++      "Q2-F04 (Lead disposition appended 2026-10-11)"
++    ],
++    "addendum_001": "evidence/q2-attempt-002-addendum-001/ (forbidden-import control PASS; root-file placement proposal; Q5 proposal NOT EXECUTED)",
++    "history_routing_pre_q5": {
++      "stage": "Q2_ATTEMPT_002_LEAD_DISPOSITIONED_ADDENDUM_001_RETURNED",
++      "next_action": "QA Lead reviews addendum 001, rules on root-file placement (proposal A) and authorizes Q5 per Q5_PROPOSAL; then Gate Q. No Q5 before authorization."
++    },
++    "q5": "evidence/q5-attempt-002/ (Q5_STATUS.md, Q5_ACTIONS.json, Q5_AMENDED_DISPOSITION.md, POST_Q5_INVENTORY.json); authorization HANDOFFS/LEAD_Q5_AUTHORIZATION_2026-10-11_192313_BDT.txt (307e9d86\u2026)",
++    "q5_package": "HANDOFFS/Q5_attempt-002.zip",
++    "qa_recovery_pointer": "QA_RECOVERY.md (byte-exact preserved root prepend); root RECOVERY.md restored to HEAD bytes edfffe35\u2026",
++    "history_routing_pre_reconciliation": {
++      "stage": "Q5_ATTEMPT_002_COMPLETE_AWAITING_GATE_Q",
++      "next_action": "QA Lead certification review and Gate Q decision. Architect owns engineering/phase closeout; Tony owns Git."
++    },
++    "q5_reconciliation": "evidence/q5-attempt-002/reconciliation-2026-10-12/ (ruling HANDOFFS/LEAD_Q5_RECONCILIATION_RULING_2026-10-12_115503_BDT.txt)",
++    "process_deviations": [
++      "PD-002-01 proceeded after GATE_STOP without ruling (no future override)",
++      "PD-Q5-01 .env.local digest computed by Q5 proposal generator (disclosed 2026-10-12; for Lead/Director decision)"
++    ],
++    "current_review_package": "HANDOFFS/Q5_attempt-002_REVIEW-002.zip (earlier Q5_attempt-002.zip preserved unchanged)",
++    "session_closed": "2026-10-12 12:05 BDT \u2014 session ended cleanly after returning the REVIEW-002 package",
++    "recovery_entry": "QA_RECOVERY.md (appended pointer) \u2192 QAM_STATE.json \u2192 session_2026-10-12.md",
++    "current_review_package_sha256": "86b060bcb43449bb96f7768620281eba1a03edd60ef28315227ef9eb3538bb65"
++  },
++  "certified_candidate_sha": "8eb5789d9021ad06c15db36db74419a2b5c68fc5",
++  "certificate_record": "HANDOFFS/APBM000_GATE_Q_CERTIFICATE_2026-10-12.txt",
++  "certificate_sha256": "6cfe664f5c10f2aa2ee810328db6e465869af9607af82b6a2ae5d921cac43a49",
++  "certified_scope": "Fixture-qualified workspace UI and source/build regression under independent plan v0.3 passed; F01\u2013F04 are resolved within tested fixture scope. No live ADK/Supabase/GCS/GHL integration, durable-session/persistence, authenticated production-route, server logout, token-revocation, deployment or Gate D certification. DIRECTOR-OBS-001 remains UNTRIAGED-live; O-1 remains an observation. Earlier fallback rows are qualified by OS-installed Inter; use the accepted targeted fallback diagnostic. Q5's 51-minute inventory gap, filtered status excerpt and path-classified Executor-document entries remain disclosed; no contemporaneous inventory is reconstructed.",
++  "q5_status": "ACCEPTED / COMPLETE",
++  "process_verdict": "NONCOMPLIANT",
++  "engineering_closeout": "IN PROGRESS",
++  "active_writer": "Cody",
++  "claudy_status": "PAUSED",
++  "ownership_transfer_record": "HANDOFFS/ENGINEERING_CLOSEOUT_001_OWNERSHIP_TRANSFER.md",
++  "git_integration": "PENDING TONY",
++  "apbm_001": "NOT LAUNCHED",
++  "D4": "ALLOW",
++  "D7": "OMIT",
++  "publication_hold_paths_record": "evidence/engineering-closeout-001/2026-10-12_130632_BDT/publication-hold-paths.json",
++  "closeout_review_readiness": "READY FOR ARCHITECT REVIEW / DIRECTOR DISPOSITION",
++  "engineering_closeout_report": "HANDOFFS/ENGINEERING_CLOSEOUT_001_RETURN.md",
++  "carried_forward_issues": "HANDOFFS/APBM_001_CARRIED_FORWARD_ISSUES_2026-10-12.md"
+ }
+diff --git a/agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/QAM_CHECKPOINTS.md b/agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/QAM_CHECKPOINTS.md
+--- a/agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/QAM_CHECKPOINTS.md
++++ b/agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/QAM_CHECKPOINTS.md
+@@ -51,3 +51,14 @@
+ |---|---|
+ | Q5 reconciliation | Lead ruling 2026-10-12 11:55: the 2026-10-11 Q5 post-state is accepted as expected; evidence reconciled and packaged as `HANDOFFS/Q5_attempt-002_REVIEW-002.zip` (current review package) |
+ | Gate Q | PENDING — QA Lead certification review + separate process verdict |
++
++
++## Current Architect-authorized engineering closeout — 2026-10-12T13:10:40.681454+06:00
++
++Earlier pending/status blocks above are preserved as dated history. Controlling independent record: [APBM000_GATE_Q_CERTIFICATE_2026-10-12.txt](HANDOFFS/APBM000_GATE_Q_CERTIFICATE_2026-10-12.txt), SHA-256 `6cfe664f5c10f2aa2ee810328db6e465869af9607af82b6a2ae5d921cac43a49`, for exact candidate `8eb5789d9021ad06c15db36db74419a2b5c68fc5` on `qa/frontend-apbm-000`. Gate Q **PASS** for the certified bounded scope; Q5 **ACCEPTED / COMPLETE**; process verdict **NONCOMPLIANT**. Engineering closeout **IN PROGRESS**, Git integration **PENDING TONY**, APBM_001 **NOT LAUNCHED**. Cody is the sole active writer; Claudy is paused under the explicit Architect transfer. D4 **ALLOW**, D7 **OMIT**.
++
++Fixture-qualified workspace UI and source/build regression under independent plan v0.3 passed; F01–F04 are resolved within tested fixture scope. No live ADK/Supabase/GCS/GHL integration, durable-session/persistence, authenticated production-route, server logout, token-revocation, deployment or Gate D certification. DIRECTOR-OBS-001 remains UNTRIAGED-live; O-1 remains an observation. Earlier fallback rows are qualified by OS-installed Inter; use the accepted targeted fallback diagnostic. Q5's 51-minute inventory gap, filtered status excerpt and path-classified Executor-document entries remain disclosed; no contemporaneous inventory is reconstructed.
++
++PD-002-01 (proceeded after GATE_STOP without ruling) and PD-Q5-01 (earlier private-file digest generation) remain process violations; no future override or retrospective permission. Preserve the two digest-bearing originals and derivative archives unchanged. Tony's retention/publication decision is required before committing/publishing those payloads; they are excluded from the new closeout ZIP. No redaction or credential rotation is ordered by the available evidence. Instruments, Engineer-suite copies, historical failures, failed-run/Engineer caches and Stage E output remain retained; Gate Q grants no deletion authority.
++
++No suite/build/live probe or product/test/dependency/config/acceptance/roster change is part of this closeout. Stop at **READY FOR ARCHITECT REVIEW / DIRECTOR DISPOSITION**; final engineering closure, Git integration and APBM_001 launch await their owners.
+diff --git a/agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/QAM_MANIFEST.md b/agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/QAM_MANIFEST.md
+--- a/agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/QAM_MANIFEST.md
++++ b/agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/QAM_MANIFEST.md
+@@ -37,3 +37,14 @@
+ Earlier rows and appendices are preserved as dated history. Current: product candidate **8eb5789d9021ad06c15db36db74419a2b5c68fc5** (parent 9c50884d…, branch qa/frontend-apbm-000; execution HEAD = candidate). Plan **QA-APBM000-PLAN v0.3** `6b3f5df3…` (v0.2 preserved in HANDOFFS). Director release `HANDOFFS/DIRECTOR_Q2_RELEASE_002_2026-10-11_174045_BDT.txt`. Environment: Node 24.15.0, npm 11.12.1, Next 16.2.6, Jest 30.0.5, TypeScript 5.5.4, Playwright 1.59.1, Chrome 150.0.7871.114. QA ports 43181 (QA harness), 43182 (workspace copy), 43183 (repair copy); all test bodies in `unshare -rn` via `AUTOMATION/a2_run.sh`. Gate `AUTOMATION/q2a2_gate.py` (post-build GATE_PASS 17/17). Results and evidence: `evidence/q2-attempt-002/` (EXECUTION_REPORT.md, AC_MATRIX.md, INSTRUMENT_RETRY_LEDGER.md). Gate Q PENDING; AC000-24 NOT RUN.
+ 
+ Q5 appended 2026-10-11T19:25+06:00: bounded Q5 complete for candidate 8eb5789d…; root `RECOVERY.md` restored to HEAD bytes, root session pointer removed, QA recovery pointer kept inside QAM (`QA_RECOVERY.md`); records `evidence/q5-attempt-002/`. Gate Q PENDING.
++
++
++## Current Architect-authorized engineering closeout — 2026-10-12T13:10:40.681454+06:00
++
++Earlier pending/status blocks above are preserved as dated history. Controlling independent record: [APBM000_GATE_Q_CERTIFICATE_2026-10-12.txt](HANDOFFS/APBM000_GATE_Q_CERTIFICATE_2026-10-12.txt), SHA-256 `6cfe664f5c10f2aa2ee810328db6e465869af9607af82b6a2ae5d921cac43a49`, for exact candidate `8eb5789d9021ad06c15db36db74419a2b5c68fc5` on `qa/frontend-apbm-000`. Gate Q **PASS** for the certified bounded scope; Q5 **ACCEPTED / COMPLETE**; process verdict **NONCOMPLIANT**. Engineering closeout **IN PROGRESS**, Git integration **PENDING TONY**, APBM_001 **NOT LAUNCHED**. Cody is the sole active writer; Claudy is paused under the explicit Architect transfer. D4 **ALLOW**, D7 **OMIT**.
++
++Fixture-qualified workspace UI and source/build regression under independent plan v0.3 passed; F01–F04 are resolved within tested fixture scope. No live ADK/Supabase/GCS/GHL integration, durable-session/persistence, authenticated production-route, server logout, token-revocation, deployment or Gate D certification. DIRECTOR-OBS-001 remains UNTRIAGED-live; O-1 remains an observation. Earlier fallback rows are qualified by OS-installed Inter; use the accepted targeted fallback diagnostic. Q5's 51-minute inventory gap, filtered status excerpt and path-classified Executor-document entries remain disclosed; no contemporaneous inventory is reconstructed.
++
++PD-002-01 (proceeded after GATE_STOP without ruling) and PD-Q5-01 (earlier private-file digest generation) remain process violations; no future override or retrospective permission. Preserve the two digest-bearing originals and derivative archives unchanged. Tony's retention/publication decision is required before committing/publishing those payloads; they are excluded from the new closeout ZIP. No redaction or credential rotation is ordered by the available evidence. Instruments, Engineer-suite copies, historical failures, failed-run/Engineer caches and Stage E output remain retained; Gate Q grants no deletion authority.
++
++No suite/build/live probe or product/test/dependency/config/acceptance/roster change is part of this closeout. Stop at **READY FOR ARCHITECT REVIEW / DIRECTOR DISPOSITION**; final engineering closure, Git integration and APBM_001 launch await their owners.
+diff --git a/agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/QA_RECOVERY.md b/agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/QA_RECOVERY.md
+--- a/agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/QA_RECOVERY.md
++++ b/agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/QA_RECOVERY.md
+@@ -19,3 +19,14 @@
+ **Current review package:** `HANDOFFS/Q5_attempt-002_REVIEW-002.zip` (sha `86b060bc…`).
+ **Read next:** `QAM_STATE.json` → `session_2026-10-12.md` → `HANDOFFS/Q5_attempt-002_REVIEW-002_START_HERE.md`.
+ **Rules:** sole writer (Cody paused); no Git mutation; no product edits; no cleanup repetition; root RECOVERY.md stays at HEAD bytes; all QA records inside QAM. Open: PD-Q5-01 decision.
++
++
++## Current Architect-authorized engineering closeout — 2026-10-12T13:10:40.681454+06:00
++
++Earlier pending/status blocks above are preserved as dated history. Controlling independent record: [APBM000_GATE_Q_CERTIFICATE_2026-10-12.txt](HANDOFFS/APBM000_GATE_Q_CERTIFICATE_2026-10-12.txt), SHA-256 `6cfe664f5c10f2aa2ee810328db6e465869af9607af82b6a2ae5d921cac43a49`, for exact candidate `8eb5789d9021ad06c15db36db74419a2b5c68fc5` on `qa/frontend-apbm-000`. Gate Q **PASS** for the certified bounded scope; Q5 **ACCEPTED / COMPLETE**; process verdict **NONCOMPLIANT**. Engineering closeout **IN PROGRESS**, Git integration **PENDING TONY**, APBM_001 **NOT LAUNCHED**. Cody is the sole active writer; Claudy is paused under the explicit Architect transfer. D4 **ALLOW**, D7 **OMIT**.
++
++Fixture-qualified workspace UI and source/build regression under independent plan v0.3 passed; F01–F04 are resolved within tested fixture scope. No live ADK/Supabase/GCS/GHL integration, durable-session/persistence, authenticated production-route, server logout, token-revocation, deployment or Gate D certification. DIRECTOR-OBS-001 remains UNTRIAGED-live; O-1 remains an observation. Earlier fallback rows are qualified by OS-installed Inter; use the accepted targeted fallback diagnostic. Q5's 51-minute inventory gap, filtered status excerpt and path-classified Executor-document entries remain disclosed; no contemporaneous inventory is reconstructed.
++
++PD-002-01 (proceeded after GATE_STOP without ruling) and PD-Q5-01 (earlier private-file digest generation) remain process violations; no future override or retrospective permission. Preserve the two digest-bearing originals and derivative archives unchanged. Tony's retention/publication decision is required before committing/publishing those payloads; they are excluded from the new closeout ZIP. No redaction or credential rotation is ordered by the available evidence. Instruments, Engineer-suite copies, historical failures, failed-run/Engineer caches and Stage E output remain retained; Gate Q grants no deletion authority.
++
++No suite/build/live probe or product/test/dependency/config/acceptance/roster change is part of this closeout. Stop at **READY FOR ARCHITECT REVIEW / DIRECTOR DISPOSITION**; final engineering closure, Git integration and APBM_001 launch await their owners.
+diff --git a/agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/HANDOFFS/QA_HANDOFF.md b/agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/HANDOFFS/QA_HANDOFF.md
+--- a/agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/HANDOFFS/QA_HANDOFF.md
++++ b/agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/HANDOFFS/QA_HANDOFF.md
+@@ -96,3 +96,14 @@
+ ## Director-requested documentation relocation
+ 
+ Corrected 2026-10-04T22:14:42.603752+06:00: canonical factual handoff moved to `QAM/HANDOFFS/QA_HANDOFF.md`. The module-root file is only a compatibility pointer for original entry references. QAM entry, manifest and handoff-folder README now point here. Return 002 supersedes return 001 for document placement; source candidate, tests, results and acceptance criteria are unchanged. Original return/evidence remain historical records. The original frozen-file equality observation predates this authorized QAM_ENTRY documentation-path correction; see `../../evidence/engineering-attempt-001/handoff-location-correction.json`.
++
++
++## Current Architect-authorized engineering closeout — 2026-10-12T13:10:40.681454+06:00
++
++Earlier pending/status blocks above are preserved as dated history. Controlling independent record: [APBM000_GATE_Q_CERTIFICATE_2026-10-12.txt](APBM000_GATE_Q_CERTIFICATE_2026-10-12.txt), SHA-256 `6cfe664f5c10f2aa2ee810328db6e465869af9607af82b6a2ae5d921cac43a49`, for exact candidate `8eb5789d9021ad06c15db36db74419a2b5c68fc5` on `qa/frontend-apbm-000`. Gate Q **PASS** for the certified bounded scope; Q5 **ACCEPTED / COMPLETE**; process verdict **NONCOMPLIANT**. Engineering closeout **IN PROGRESS**, Git integration **PENDING TONY**, APBM_001 **NOT LAUNCHED**. Cody is the sole active writer; Claudy is paused under the explicit Architect transfer. D4 **ALLOW**, D7 **OMIT**.
++
++Fixture-qualified workspace UI and source/build regression under independent plan v0.3 passed; F01–F04 are resolved within tested fixture scope. No live ADK/Supabase/GCS/GHL integration, durable-session/persistence, authenticated production-route, server logout, token-revocation, deployment or Gate D certification. DIRECTOR-OBS-001 remains UNTRIAGED-live; O-1 remains an observation. Earlier fallback rows are qualified by OS-installed Inter; use the accepted targeted fallback diagnostic. Q5's 51-minute inventory gap, filtered status excerpt and path-classified Executor-document entries remain disclosed; no contemporaneous inventory is reconstructed.
++
++PD-002-01 (proceeded after GATE_STOP without ruling) and PD-Q5-01 (earlier private-file digest generation) remain process violations; no future override or retrospective permission. Preserve the two digest-bearing originals and derivative archives unchanged. Tony's retention/publication decision is required before committing/publishing those payloads; they are excluded from the new closeout ZIP. No redaction or credential rotation is ordered by the available evidence. Instruments, Engineer-suite copies, historical failures, failed-run/Engineer caches and Stage E output remain retained; Gate Q grants no deletion authority.
++
++No suite/build/live probe or product/test/dependency/config/acceptance/roster change is part of this closeout. Stop at **READY FOR ARCHITECT REVIEW / DIRECTOR DISPOSITION**; final engineering closure, Git integration and APBM_001 launch await their owners.
+diff --git a/agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/QA_CERTIFICATION.md b/agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/QA_CERTIFICATION.md
+--- a/agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/QA_CERTIFICATION.md
++++ b/agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/QA_CERTIFICATION.md
+@@ -4,3 +4,14 @@
+ The Lead's actual certificate must state module/version, product candidate/full SHA, QA HEAD/docs-successor relation, exact acceptance/rulings/plan identity, environment and fixture boundary, per-AC verdict, inherited failure dispositions, cleanup acceptance, remaining limits and decision/date/attribution. Record separate product and pilot-process verdicts.
+ 
+ Even a PASS is limited to APBM_000 UI/fixture/source/build scope. It does not certify live ADK sessions, API authorization, durable metadata, backend switching, Hermes contexts, cloud access or deployment. Any unresolved mandatory AC or required proof means BLOCKED/FAIL, not blanket PASS.
++
++
++## Current Architect-authorized engineering closeout — 2026-10-12T13:10:40.681454+06:00
++
++Earlier pending/status blocks above are preserved as dated history. Controlling independent record: [APBM000_GATE_Q_CERTIFICATE_2026-10-12.txt](HANDOFFS/APBM000_GATE_Q_CERTIFICATE_2026-10-12.txt), SHA-256 `6cfe664f5c10f2aa2ee810328db6e465869af9607af82b6a2ae5d921cac43a49`, for exact candidate `8eb5789d9021ad06c15db36db74419a2b5c68fc5` on `qa/frontend-apbm-000`. Gate Q **PASS** for the certified bounded scope; Q5 **ACCEPTED / COMPLETE**; process verdict **NONCOMPLIANT**. Engineering closeout **IN PROGRESS**, Git integration **PENDING TONY**, APBM_001 **NOT LAUNCHED**. Cody is the sole active writer; Claudy is paused under the explicit Architect transfer. D4 **ALLOW**, D7 **OMIT**.
++
++Fixture-qualified workspace UI and source/build regression under independent plan v0.3 passed; F01–F04 are resolved within tested fixture scope. No live ADK/Supabase/GCS/GHL integration, durable-session/persistence, authenticated production-route, server logout, token-revocation, deployment or Gate D certification. DIRECTOR-OBS-001 remains UNTRIAGED-live; O-1 remains an observation. Earlier fallback rows are qualified by OS-installed Inter; use the accepted targeted fallback diagnostic. Q5's 51-minute inventory gap, filtered status excerpt and path-classified Executor-document entries remain disclosed; no contemporaneous inventory is reconstructed.
++
++PD-002-01 (proceeded after GATE_STOP without ruling) and PD-Q5-01 (earlier private-file digest generation) remain process violations; no future override or retrospective permission. Preserve the two digest-bearing originals and derivative archives unchanged. Tony's retention/publication decision is required before committing/publishing those payloads; they are excluded from the new closeout ZIP. No redaction or credential rotation is ordered by the available evidence. Instruments, Engineer-suite copies, historical failures, failed-run/Engineer caches and Stage E output remain retained; Gate Q grants no deletion authority.
++
++No suite/build/live probe or product/test/dependency/config/acceptance/roster change is part of this closeout. Stop at **READY FOR ARCHITECT REVIEW / DIRECTOR DISPOSITION**; final engineering closure, Git integration and APBM_001 launch await their owners.
+diff --git a/agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/QA_CLEANUP_REPORT.md b/agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/QA_CLEANUP_REPORT.md
+--- a/agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/QA_CLEANUP_REPORT.md
++++ b/agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/QA_CLEANUP_REPORT.md
+@@ -8,3 +8,14 @@
+ If separately authorized credentials were introduced, follow that ruling's exact lifecycle, value-scan before deletion, removal and post-deletion pattern scan/Director rotation attestation. Do not claim value scanning after source credentials no longer exist. Unexpected live credentials/access are a stop condition under the default pack.
+ 
+ Record removed paths, retained paths/hashes, no-source-change proof, exceptions and next Lead decision. Cleanup never reclassifies failed results or independently issues certification.
++
++
++## Current Architect-authorized engineering closeout — 2026-10-12T13:10:40.681454+06:00
++
++Earlier pending/status blocks above are preserved as dated history. Controlling independent record: [APBM000_GATE_Q_CERTIFICATE_2026-10-12.txt](HANDOFFS/APBM000_GATE_Q_CERTIFICATE_2026-10-12.txt), SHA-256 `6cfe664f5c10f2aa2ee810328db6e465869af9607af82b6a2ae5d921cac43a49`, for exact candidate `8eb5789d9021ad06c15db36db74419a2b5c68fc5` on `qa/frontend-apbm-000`. Gate Q **PASS** for the certified bounded scope; Q5 **ACCEPTED / COMPLETE**; process verdict **NONCOMPLIANT**. Engineering closeout **IN PROGRESS**, Git integration **PENDING TONY**, APBM_001 **NOT LAUNCHED**. Cody is the sole active writer; Claudy is paused under the explicit Architect transfer. D4 **ALLOW**, D7 **OMIT**.
++
++Fixture-qualified workspace UI and source/build regression under independent plan v0.3 passed; F01–F04 are resolved within tested fixture scope. No live ADK/Supabase/GCS/GHL integration, durable-session/persistence, authenticated production-route, server logout, token-revocation, deployment or Gate D certification. DIRECTOR-OBS-001 remains UNTRIAGED-live; O-1 remains an observation. Earlier fallback rows are qualified by OS-installed Inter; use the accepted targeted fallback diagnostic. Q5's 51-minute inventory gap, filtered status excerpt and path-classified Executor-document entries remain disclosed; no contemporaneous inventory is reconstructed.
++
++PD-002-01 (proceeded after GATE_STOP without ruling) and PD-Q5-01 (earlier private-file digest generation) remain process violations; no future override or retrospective permission. Preserve the two digest-bearing originals and derivative archives unchanged. Tony's retention/publication decision is required before committing/publishing those payloads; they are excluded from the new closeout ZIP. No redaction or credential rotation is ordered by the available evidence. Instruments, Engineer-suite copies, historical failures, failed-run/Engineer caches and Stage E output remain retained; Gate Q grants no deletion authority.
++
++No suite/build/live probe or product/test/dependency/config/acceptance/roster change is part of this closeout. Stop at **READY FOR ARCHITECT REVIEW / DIRECTOR DISPOSITION**; final engineering closure, Git integration and APBM_001 launch await their owners.
+diff --git a/agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/HANDOFFS/APBM000_GATE_Q_CERTIFICATE_2026-10-12.txt b/agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/HANDOFFS/APBM000_GATE_Q_CERTIFICATE_2026-10-12.txt
+new file mode 100644
+--- /dev/null
++++ b/agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/HANDOFFS/APBM000_GATE_Q_CERTIFICATE_2026-10-12.txt
+@@ -0,0 +1,68 @@
++APBM_000 — QA LEAD CERTIFICATE AND ARCHITECT HANDOFF
++Issued: 12 October 2026, Asia/Dhaka
++Issuer: JARVIS, independent QA Lead
++
++DECISION
++Gate Q: PASS for the exact candidate and bounded APBM_000 scope below.
++Q5 bounded cleanup: ACCEPTED / COMPLETE.
++Process verdict: NONCOMPLIANT — documented deviations retained; this is not a clean-process endorsement.
++Engineering closeout: PENDING Architect.
++Merge, deployment, Gate D and APBM_001 launch: NOT authorized by this certificate.
++
++IDENTITY
++Candidate: 8eb5789d9021ad06c15db36db74419a2b5c68fc5
++Parent: 9c50884d4c4513b6969311d5be7c05828104ed3d
++Branch: qa/frontend-apbm-000
++Independent plan: v0.3
++D4 ALLOW; D7 OMIT.
++
++CERTIFIED SCOPE
++Fixture-qualified workspace UI, source/build regression and the approved repaired candidate under plan v0.3. F01–F04 are resolved within tested fixture scope. The certificate combines the previously reviewed Q2 attempt-002 and Addendum-001 evidence with the accepted Q5 completion evidence; no acceptance suite was repeated for this review.
++
++Accepted evidence includes maintained Jest 290/290, QA Jest 31/31, independent browser 33 ordinary passes plus one expected-failure detector control (34 expected outcomes), secondary browser suites 33/33 and 27/27, TypeScript success, normal offline production build, production-output checks, responsive renders, keyboard/focus controls and the targeted font-fallback diagnostic. Addendum-001 supplies the current forbidden-import negative control and allowed twin.
++
++CLEANUP REVIEW
++Reviewed package:
++APBM000_Q5_attempt-002_REVIEW-002_2026-10-12_120138_BDT.zip
++SHA-256: 86b060bcb43449bb96f7768620281eba1a03edd60ef28315227ef9eb3538bb65
++FILE_INDEX SHA-256:
++7f00f13b2fee8c8d1e9f2c9558023a73aa9bdfe91cc83fae10a13c3caca16f7f
++
++Independent archive review verified all 69 indexed members (70 archive files including the self-excluded index), their sizes and hashes, and the supplied receipt. Forty-two supplied historical/preservation rows were independently matched to included bytes. Seventeen overlapping addendum files were compared: only the authorized session and state records changed.
++
++The executor's final gate records 17/17 PASS, exact candidate HEAD, empty staging area and no product/test/dependency drift. Its reconciliation records 16/16 postconditions, 592 preserved paths, seven authorized cleanup targets, three append-only updates, one state rewrite preserving history, 26 new records and no unexplained differences. These are exported checkout observations, not a direct QA Lead inspection of the VM.
++
++Option A is accepted: the exact 1,030-byte prepend is retained in QAM/QA_RECOVERY.md; root RECOVERY.md returned to its preserved HEAD bytes; only the matching root session pointer and five authorized passed-run caches were removed. Failed-run and Engineer caches, instruments, copies, historical evidence and Stage E output remain retained. No comfort check is required.
++
++INVENTORY QUALIFICATION
++There was no complete inventory at the exact mutation instant; the latest full pre-cleanup inventory preceded it by approximately 51 minutes. The pre-status excerpt omitted untracked evidence, and executor-document gate entries were path-classified rather than universally hashed. The seven mutation targets had contemporaneous pre-action hashes. Original package indexes, instrument freezes, post-inventory, action receipts and fresh reconciliation provide sufficient corroboration for this bounded cleanup. The gaps remain disclosed; no reconstructed record is treated as contemporaneous.
++
++PROCESS VERDICT
++PD-002-01: execution proceeded after GATE_STOP without the required ruling. The generated next-env transition was accepted for this candidate only. No future override is authorized.
++
++PD-Q5-01: the proposal generator read .env.local in-process to calculate its SHA-256, contrary to the presence-only restriction. The digest entered the proposal/post-inventory and derivative packages. The reviewed generator supports digest generation; the supplied records do not show credential values exported. This does not establish absence of every possible exposure. Earlier blanket "never read" claims are inaccurate and superseded by this disclosure, including historical boilerplate in gate output.
++
++Lead disposition: record PD-Q5-01 as a process violation, not a product defect or retroactive permission. Do not rerun the generator, re-read or re-hash the private file. Preserve originals unchanged for audit. Director owns the retention/distribution decision before repository publication of affected records or packages. No credential rotation or redaction is ordered from the available evidence. Any sanitized derivative requires explicit direction, separate identity and linkage to its preserved original.
++
++These deviations do not invalidate the reviewed bounded product evidence; hence scoped Gate Q PASS and a separate NONCOMPLIANT process verdict. This grants no general exception to forbidden-zone rules.
++
++LIMITATIONS
++No certification of live ADK/Supabase/GCS/GHL integration, authenticated production-route behavior, durable live sessions/persistence, server logout or token revocation. DIRECTOR-OBS-001 remains UNTRIAGED-live; offline success does not diagnose the disappearing-conversation report.
++OS-installed Inter qualified the original blocked-font rows; use the accepted targeted diagnostic for fallback proof. O-1 remains an observation, not re-graded.
++
++CHECKOUT AND OWNERSHIP
++The tree is not clean. Captured status has 556 QAM entries: 14 modified and 542 untracked; the package and receipt add two further untracked entries. No entries outside QAM and nothing staged at capture. This certificate will add another durable record when installed.
++
++All new QA records remain inside QAM. Claudy must pause after recording this disposition and updating QA routing/status. Cody resumes only when Architect explicitly takes over the checkout. No automatic instrument deletion after Gate Q.
++
++ARCHITECT HANDOFF
++1. Record this certificate under QAM/HANDOFFS and update QA status to Gate Q PASS for this exact candidate and scope; retain historical pending records unchanged, with a current disposition pointing here.
++2. Accept the checkout handoff explicitly before directing Cody's engineering closeout. Preserve the product candidate; product changes require QA impact review.
++3. Carry PD-002-01, PD-Q5-01 and all scope limitations into closeout. Obtain Tony's disposition on retaining/publishing the digest-bearing records before their commit/push. No new QA test release is requested.
++4. Separately resolve historical root RECOVERY/session wording and the broader root-protocol conflict. Optional relocation of historical startup evidence under AUTOMATION/agent_docs requires an explicit path-level decision and byte-preservation check. These were excluded from QA cleanup.
++5. Reconcile retained QA assets and pre-existing Cody records/archives into a reviewed commit inventory. Do not assume all untracked files are disposable or stage everything blindly. Preserve maintained-test harness dependencies.
++6. Tony retains commit, merge and push ownership. Verify the intended committed state and clean working tree during closeout, and synchronize local main after any GitHub merge.
++7. APBM_000 engineering closure and APBM_001 launch require their own Architect/Director decisions.
++
++No further acceptance retest or cleanup is requested by this certificate.
++
+diff --git a/agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/HANDOFFS/ARCHITECT_ENGINEERING_CLOSEOUT_001_2026-10-12.md b/agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/HANDOFFS/ARCHITECT_ENGINEERING_CLOSEOUT_001_2026-10-12.md
+new file mode 100644
+--- /dev/null
++++ b/agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/HANDOFFS/ARCHITECT_ENGINEERING_CLOSEOUT_001_2026-10-12.md
+@@ -0,0 +1,114 @@
++# Architect-authorized bounded engineering closeout
++
++Received 12 October 2026. Instruction recorded below; the supplied independent certificate is installed unchanged as [APBM000_GATE_Q_CERTIFICATE_2026-10-12.txt](APBM000_GATE_Q_CERTIFICATE_2026-10-12.txt). The quoted certificate in Tony's message is not reconstructed as another approval.
++
++```text
++Cody — Architect authorizes bounded APBM_000 engineering closeout.
++
++OWNERSHIP
++Architect accepts the independent QA handoff and assigns you the
++engineering checkout. Claudy must be paused before you write.
++Verify the handoff from the current records; never run both writers.
++
++IDENTITY
++Repository: stark-ai-workbench-nextjs-frontend-v2
++Branch: qa/frontend-apbm-000
++Certified candidate:
++8eb5789d9021ad06c15db36db74419a2b5c68fc5
++
++Use the actual checkout. Verify branch, HEAD, staging and working
++changes first. Expected outstanding changes are QA records.
++Do not switch branches, pull, stage, commit, merge, push or clean.
++Tony retains Git operations.
++
++AUTHORITATIVE RETURN
++APBM000_GATE_Q_CERTIFICATE_2026-10-12.txt
++Certificate SHA-256:
++6cfe664f5c10f2aa2ee810328db6e465869af9607af82b6a2ae5d921cac43a49
++
++Q5 REVIEW-002 archive SHA-256:
++86b060bcb43449bb96f7768620281eba1a03edd60ef28315227ef9eb3538bb65
++
++Read both. Do not unpack historical records over the live checkout.
++
++1. RECORD CERTIFICATION
++Install the supplied certificate byte-for-byte under:
++agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/HANDOFFS/
++If already installed identically, reuse it.
++Update current QA routing/status and checkpoint records:
++- Gate Q PASS for the exact candidate and certified scope.
++- Q5 ACCEPTED / COMPLETE.
++- Process verdict NONCOMPLIANT.
++- Engineering closeout IN PROGRESS.
++- Cody is the active writer; Claudy is paused.
++- Git integration pending Tony.
++- APBM_001 NOT LAUNCHED.
++Preserve historical pending records. Link current disposition to the
++certificate; do not rewrite earlier reports or archived packages.
++
++2. PREPARE ENGINEERING CLOSEOUT
++Reconcile the existing engineering completion/checkpoint records
++against the certificate and effective module rulings. This explicitly
++authorizes bounded current-status documentation updates.
++Keep these distinctions visible:
++- Fixture-qualified workspace UI and source/build regression passed.
++- F01–F04 resolved within tested fixture scope.
++- PD-002-01 and PD-Q5-01 remain recorded.
++- DIRECTOR-OBS-001 remains UNTRIAGED-live.
++- No live integration, durable-session, authenticated production-route,
++  server logout, token-revocation, deployment or Gate D certification.
++- Preserve the font-fallback and inventory qualifications.
++Do not change product code, tests, dependencies, configuration,
++acceptance criteria or the cloud roster. No suite/build rerun or
++live-service probe is requested.
++
++3. PRESERVE RETAINED MATERIAL
++Keep instruments, Engineer-suite copies, historical failures,
++failed-run and Engineer caches, and Stage E output.
++D4 ALLOW and D7 OMIT remain unchanged.
++Gate Q grants no additional deletion authority.
++Reconcile all outstanding QA assets and pre-existing Cody
++records/archives into a path-specific proposed commit inventory.
++Classify what belongs in Git, what needs a Director decision, and
++what remains local. Preserve maintained-test harness dependencies.
++Do not treat every untracked file as disposable.
++
++4. DIGEST-BEARING RECORDS — PUBLICATION HOLD
++PD-Q5-01 concerns the earlier .env.local digest in:
++- Q5_PROPOSAL_PATHS.json
++- POST_Q5_INVENTORY.json
++- Packages containing those records, including Addendum-001,
++  Q5 and Q5 REVIEW-002.
++Preserve originals unchanged. Do not read or hash .env.local.
++Do not rerun the proposal generator.
++Using existing evidence only, identify affected paths and archives
++for Tony's retention/publication decision. Report paths, not the
++private-file digest. Do not redact, redistribute, or include those
++payloads in a new closeout ZIP before his decision.
++
++5. ROOT-PROTOCOL DISPOSITION
++Historical root records remain preserved as history.
++No historical startup-output relocation is authorized.
++Inspect the active entry instructions. Make the smallest scoped
++documentation amendment needed to establish that this module's
++future QA recovery/session/handoff records belong inside QAM,
++including QA_RECOVERY.md and HANDOFFS/QA_HANDOFF.md.
++Preserve unrelated root-protocol requirements.
++Record the exact amendment and any remaining historical pointers
++in the closeout report. Do not erase historical recovery blocks.
++
++6. RETURN
++Keep new QA-related records inside QAM.
++Return one indexed closeout review ZIP in the actual Downloads
++folder, containing:
++- Certificate and explicit ownership-transfer record.
++- Current status and documentation diffs.
++- Closeout report and carried-forward APBM_001 issues.
++- Proposed commit inventory and publication-hold path list.
++- Read-only identity/status evidence showing product preservation.
++Exclude digest-bearing payloads pending Tony's decision; list the
++excluded originals and their existing locations instead.
++Stop at READY FOR ARCHITECT REVIEW / DIRECTOR DISPOSITION.
++Do not claim a clean tree, completed Git integration, final
++engineering closure, or APBM_001 launch without actual evidence.
++```
+diff --git a/agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/HANDOFFS/ENGINEERING_CLOSEOUT_001_OWNERSHIP_TRANSFER.md b/agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/HANDOFFS/ENGINEERING_CLOSEOUT_001_OWNERSHIP_TRANSFER.md
+new file mode 100644
+--- /dev/null
++++ b/agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/HANDOFFS/ENGINEERING_CLOSEOUT_001_OWNERSHIP_TRANSFER.md
+@@ -0,0 +1,11 @@
++# APBM_000 checkout ownership transfer
++
++2026-10-12T13:10:40.681454+06:00 · Cody, Engineer. Authority: [Architect closeout instruction](ARCHITECT_ENGINEERING_CLOSEOUT_001_2026-10-12.md), supplied directly by Tony, explicitly accepting the independent QA handoff and assigning this checkout to Cody.
++
++**Active writer: Cody. Claudy: PAUSED for this bounded engineering closeout.**
++
++Before writing, Cody read Claudy's `QAM/session_2026-10-12.md`, whose final block closes the session, and `QAM_STATE.json`, whose `session_closed` field records a clean end at 12:05 BDT. The authoritative certificate and Q5 REVIEW-002 archive/index hashes match. All 69 indexed archive members were verified without extraction over the checkout. The starting QAM records remained hash-identical through preflight; no concurrent write was observed. This record implements the Architect's explicit checkout transfer and supersedes the earlier recovery routing that kept Cody paused.
++
++Repository `/home/moose/nextjs/10XLAB/stark-ai-workbench-nextjs-frontend-v2`; branch `qa/frontend-apbm-000`; full HEAD/certified candidate `8eb5789d9021ad06c15db36db74419a2b5c68fc5`; parent `9c50884d4c4513b6969311d5be7c05828104ed3d`. Index empty. Starting tree: **560 QAM entries, 14 modified and 546 untracked; none outside QAM.** The certificate's captured 556 + two export entries is a prior snapshot; current counts include subsequent durable records. Current identity/status evidence: [entry-identity-status.json](../evidence/engineering-closeout-001/2026-10-12_130632_BDT/entry-identity-status.json).
++
++Allowed work: current certification/routing/checkpoint documentation, the scoped future-QAM entry amendment, retention/publication classification and safe review export. No product/test/dependency/config/acceptance/roster edit; no tests/build/live probes, Git mutation, cleanup, final closure or APBM_001 launch. Retained independent instruments remain Claudy's work; Cody does not modify them. If another writer changes the checkout, stop before conflicting edits. Tony retains staging, commit, merge and push ownership.
+diff --git a/agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/astra_session_2026-10-12.md b/agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/astra_session_2026-10-12.md
+new file mode 100644
+--- /dev/null
++++ b/agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/astra_session_2026-10-12.md
+@@ -0,0 +1,7 @@
++# Astra / Cody session — bounded engineering closeout, 12 October 2026
++
++2026-10-12T13:10:40.681454+06:00 — APPROVED / IN PROGRESS. Architect accepted the independent handoff and transferred the writer slot to Cody; Claudy paused. Certificate installed byte-for-byte (SHA-256 `6cfe664f5c10f2aa2ee810328db6e465869af9607af82b6a2ae5d921cac43a49`), Gate Q PASS for `8eb5789d9021ad06c15db36db74419a2b5c68fc5` and bounded fixture/source/build scope. Q5 ACCEPTED / COMPLETE; process NONCOMPLIANT. No Git mutation, product edit, test/build run or live probe. Starting 560 QAM changes, index empty; protected product equal candidate.
++
++Current routing: QA_RECOVERY.md latest append → QAM_STATE.json → HANDOFFS/ENGINEERING_CLOSEOUT_001_OWNERSHIP_TRANSFER.md. Pre-existing root/session histories and the exact recovery prepend are retained. Publication-hold originals/archives preserved and excluded from new package. Task stops at review/disposition readiness; engineering closure, Git integration and APBM_001 remain pending their owners.
++
++2026-10-12T13:16:15.034351+06:00 — Documentation preparation COMPLETE; review export/preservation validation pending. Bounded task stops at READY FOR ARCHITECT REVIEW / DIRECTOR DISPOSITION. Engineering closeout remains IN PROGRESS; Git pending Tony; APBM_001 NOT LAUNCHED. No tests/build/Git/private-file access or cleanup.
+diff --git a/agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/HANDOFFS/ENGINEERING_CLOSEOUT_001_RETURN.md b/agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/HANDOFFS/ENGINEERING_CLOSEOUT_001_RETURN.md
+new file mode 100644
+--- /dev/null
++++ b/agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/HANDOFFS/ENGINEERING_CLOSEOUT_001_RETURN.md
+@@ -0,0 +1,64 @@
++# APBM_000 bounded engineering closeout review
++
++2026-10-12T13:16:15.034351+06:00 · Cody, Engineer. **READY FOR ARCHITECT REVIEW / DIRECTOR DISPOSITION.** Engineering closeout remains **IN PROGRESS**; Git integration **PENDING TONY**; APBM_001 **NOT LAUNCHED**. This is documentation preparation, not final engineering closure.
++
++## Certification and checkout
++
++Installed the supplied [QA Lead certificate](APBM000_GATE_Q_CERTIFICATE_2026-10-12.txt) byte-for-byte, SHA-256 `6cfe664f5c10f2aa2ee810328db6e465869af9607af82b6a2ae5d921cac43a49`. It records **Gate Q PASS**, **Q5 ACCEPTED / COMPLETE**, and a separate **NONCOMPLIANT process verdict** for candidate **`8eb5789d9021ad06c15db36db74419a2b5c68fc5`**, parent `9c50884d4c4513b6969311d5be7c05828104ed3d`, branch `qa/frontend-apbm-000`, plan v0.3. Cody records the Lead's verdict; he does not issue a new certificate.
++
++Read Q5 REVIEW-002 directly from `/home/moose/Downloads/APBM000_Q5_attempt-002_REVIEW-002_2026-10-12_120138_BDT.zip`; archive SHA-256 `86b060bcb43449bb96f7768620281eba1a03edd60ef28315227ef9eb3538bb65`, index SHA-256 `7f00f13b2fee8c8d1e9f2c9558023a73aa9bdfe91cc83fae10a13c3caca16f7f`. CRC and all 69 indexed members/70 archive files match. No historical archive was extracted over the checkout.
++
++Actual checkout is `/home/moose/nextjs/10XLAB/stark-ai-workbench-nextjs-frontend-v2`. Starting HEAD equals the certified candidate; index empty; **560 outstanding QAM-only entries (14 modified, 546 untracked)**. The certificate's 556 + two export entries describes its earlier capture, not a reconstructed current count. All 223 inspected tracked product/test/config/dependency inputs match the candidate. Read-only entry/final evidence and full status identify the actual dirty tree; no clean-tree or Git-integration claim is made.
++
++[Ownership transfer](ENGINEERING_CLOSEOUT_001_OWNERSHIP_TRANSFER.md) is explicit: Architect accepts the independent handoff, Cody is the active writer and Claudy is paused. Claudy's latest session records a clean close at 12:05; unchanged preflight hashes corroborate no concurrent writer changes. No Git command that changes branch, index, history or files was run.
++
++## Reconciliation of completion/checkpoint records
++
++| Record | Preserved historical statement | Current disposition / action |
++| --- | --- | --- |
++| Module `EXECUTION_LOG.md`, `BASELINE_CHECK.md` | Original build baseline, inherited failures and Engineer self-checks | Kept unchanged. Latest repair/reconciliation/test returns and the independent certificate provide the current reviewed result. |
++| Module `START_HERE.md`, `CLOSEOUT_RULES.md`, `PHASE_MAP.md` | Assembly-era “no implementation / not authorized yet / ready for preflight” wording | Preserved as dated history; current routing points into QAM. This Architect instruction authorizes documentation preparation only. No APBM_001 launch or Git integration inferred. |
++| QAM `QAM_STATE.json` | Awaiting Gate Q / Claudy routing | Prior complete state retained in `history_routing_pre_engineering_closeout_2026_10_12`; current fields record exact certified identity, Lead verdicts, Cody ownership and pending closeout/Git/001 decisions. |
++| QAM manifest/checkpoints/recovery/certification/cleanup report | Historical pending/not-issued/not-run blocks | Appended a current certificate-linked disposition; every prior byte remains as a prefix. The exact 1,030-byte recovery prepend remains untouched. |
++| Canonical `HANDOFFS/QA_HANDOFF.md` | Earlier uncommitted/pending engineering snapshots | Appended current independent certificate and bounded closeout disposition. Older reports and archives remain unchanged. |
++
++## Certified scope and limitations
++
++Fixture-qualified workspace UI and source/build regression passed; F01–F04 resolved **within tested fixture scope**. Certificate accepts maintained Jest 290/290, QA Jest 31/31, independent browser **33 ordinary passes plus one expected-failure detector control** (34 expected outcomes), secondary suites 33/33 and 27/27, TypeScript, normal offline production build/output checks, responsive/focus controls and targeted font-fallback diagnostic. These are accepted prior independent results; no suite/build was run for closeout.
++
++No certification of live ADK/Supabase/GCS/GHL integration, durable live sessions/persistence, authenticated production-route behavior, server logout, token revocation, deployment or Gate D. DIRECTOR-OBS-001 remains **UNTRIAGED-live**; offline success does not diagnose Tony's disappearing-conversation report. No transcript localStorage shortcut, live probe or roster/config change. O-1 remains an observation, not re-graded.
++
++**Font qualification:** original blocked-font rows, secondary repair fallback rows and older Engineer fallback evidence were affected by OS-installed Inter. Use the accepted targeted diagnostic with system Inter hidden. It reports fallback text-advance differences (h1 −16.86 px, Latin line +5.64 px, label −33.28 px, button +2.39 px) and zero overflow; it does not establish pixel equality or loading-performance equivalence. Exact seven production font assets/declarations/license remain committed and unchanged. Ordinary CSS has no Next automatic Latin font preload; no loading-timing benchmark is claimed.
++
++**Inventory qualification:** no full inventory exists at the exact Q5 mutation instant; the latest full pre-cleanup inventory was approximately 51 minutes earlier. Pre-status filtered untracked evidence and Executor-document gates used path classes rather than universal hashes. Seven cleanup targets had contemporaneous hashes; package indexes/freezes/action receipts/post-inventory/reconciliation corroborated bounded Q5. Gaps remain disclosed. This closeout's entry/final snapshots are fresh documentation-preservation evidence, not reconstructed Q5 contemporaneous records.
++
++**Process deviations remain:** PD-002-01 proceeded after GATE_STOP without the required ruling; next-env transition accepted for this candidate only, with no future override. PD-Q5-01 generated the earlier private-file digest against the presence-only restriction; historical blanket “never read” claims are superseded by the Lead's disclosure. Available records do not show credential-value export, and do not prove absence of every possible exposure. Neither deviation is erased by product Gate Q PASS.
++
++## Retention and proposed Git scope
++
++No deletion, cleanup or relocation occurred. Instruments, eight Engineer-suite dependency/copy files, original failures, failed-run and Engineer caches, old Cody records/archives and Stage E production output remain retained. The maintained repair harness references `QAM/evidence/engineering-repair-001/` directly; `browser_harness.cjs`, related network/loader/fixture sources and test configuration stay available. D4 **ALLOW**, D7 **OMIT**; no comfort check or additional deletion authority.
++
++[Proposed commit inventory](../evidence/engineering-closeout-001/2026-10-12_130632_BDT/proposed-commit-inventory.json) enumerates every observed QAM asset, outstanding path, protected harness dependency and retained output path with its proposed class. [Proposed Git paths](../evidence/engineering-closeout-001/2026-10-12_130632_BDT/proposed-git-paths.txt) is an explicit review proposal, not an approval or executed staging list. Existing versioned unchanged assets need no staging. Durable safe QAM records/evidence, accepted independent instruments/copies and the scoped entry updates are proposed for Git; archives, caches, build output and installed dependencies remain local. Digest-bearing originals/packages require Tony's decision. Historical nested startup paths require a path-level disposition before placement changes; no relocation is proposed as an executed change.
++
++[Publication-hold path list](PUBLICATION_HOLD_PATHS_2026-10-12.md) gives the two original JSON paths and six archive-copy paths. None of those payloads is in the new ZIP. Their originals stay unchanged. No private-file digest is printed here; `.env.local` was not read or hashed and the proposal generator was not rerun. Tony owns retention/publication before affected commit/push/distribution. No redaction, derivative or credential rotation is ordered.
++
++## Exact root-protocol amendment and historical pointers
++
++Only entry/placement documentation changes outside QAM:
++
++- Root `CLAUDE.md`: one APBM_000-specific destination override for future QA recovery/session/response/report/handoff records, using QAM/QA_RECOVERY.md, QAM sessions and QAM/HANDOFFS/QA_HANDOFF.md. Unrelated protocols remain unchanged; no historical root block is removed.
++- Module `START_HERE.md`: adds current QAM recovery/state routing and corrects the active factual-handoff location while keeping acceptance at module root. Original assembly status and launch history remain.
++- Module `ENGINEERING_ENTRY.md`: explicitly names the canonical QAM/HANDOFFS/QA_HANDOFF.md destination.
++- QAM `QAM_ENTRY.md`: reads QA_RECOVERY/QAM_STATE first for current ownership/routing and reiterates QAM session/handoff placement.
++
++Exact new documentation delta from the actual entry bytes: [cody-documentation.patch](../evidence/engineering-closeout-001/2026-10-12_130632_BDT/cody-documentation.patch). Allowed paths, before snapshots and append-prefix/state-history checks are supplied. This does not rewrite acceptance, rulings, independent test assertions or root Git history.
++
++Historical pointers remain: root `RECOVERY.md` (including old QA pending blocks and Astra-only pointer), `astra_RECOVERY.md`, `astra_session_2026-10-08.md`, older root `session_2026-10-08.md` if present, and module-root `QA_HANDOFF.md` compatibility pointer. Root RECOVERY remains at HEAD bytes. Existing nested `QAM/AUTOMATION/agent_docs/...` attempt-001 startup result/cache paths stay at their original locations; no relocation/untracking/deletion is authorized. The path inventory marks these historical placement items for Director review. Current records are in QAM and route through the latest recovery append.
++
++## Verification and return boundary
++
++Read-only checks: actual branch/full HEAD/index/status; authoritative certificate/archive/index/member identities; candidate equality of 223 tracked product inputs; before/after hashes of every pre-existing QAM file outside the 11 allowed documentation updates; preserved prefixes/state history; Stage E path/stat preservation; proposed-list exclusions; documentation whitespace; ZIP CRC/membership/file hashes and identical Downloads copy. Exact command/result scope is in the supplied evidence. No Jest, TypeScript, browser, build, proposal generator, private-file hashing or live-service command executed.
++
++The tree remains dirty with QA work plus authorized entry/closeout documentation. Git integration is pending Tony. Final engineering closure and APBM_001 are not authorized or complete.
++
++**NEXT STEP for Tony:** Send the closeout review ZIP to the Architect. Decide retention/publication for the listed held originals and archive copies before affected Git publication. After Architect review and that disposition, review the explicit selective Git proposal; Tony retains all Git operations. Do not launch APBM_001 from this package.
+diff --git a/agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/HANDOFFS/APBM_001_CARRIED_FORWARD_ISSUES_2026-10-12.md b/agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/HANDOFFS/APBM_001_CARRIED_FORWARD_ISSUES_2026-10-12.md
+new file mode 100644
+--- /dev/null
++++ b/agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/HANDOFFS/APBM_001_CARRIED_FORWARD_ISSUES_2026-10-12.md
+@@ -0,0 +1,21 @@
++# Carried-forward issues — APBM_001 NOT LAUNCHED
++
++2026-10-12T13:16:15.034351+06:00 · Cody, Engineer. This is an issue handoff, not a new module, acceptance contract, implementation instruction or live-access permission. Baseline for any future authorized recon must be the actual integrated HEAD, not automatically the certified candidate `8eb5789d9021ad06c15db36db74419a2b5c68fc5`.
++
++| Item | Confirmed scope/qualification | Future decision / owner |
++| --- | --- | --- |
++| DIRECTOR-OBS-001 | Disappearing-conversation live cause remains **UNTRIAGED-live**. Offline catalogue/reopen/fresh-mount scenarios do not rank live causes. | Architect scopes a bounded live diagnostic if Tony requests it; no transcript localStorage shortcut. |
++| Server identity and access boundary | APBM_000 preserves the connector and page guard; server-bound ownership, API authorization and real cross-user isolation remain unqualified. | APBM_001 affected-source recon, approved identity contract, dedicated accounts and access budget. |
++| Durable sessions and asynchronous isolation | Fixture UI separation is certified; actual create/list/reload/resume, durable history and full conversation-key/request-generation isolation are not. | Future frozen acceptance and bounded native ADK session/event qualification. |
++| Catalogue/schema/RLS/backend dimension | Current schema/RLS and backend-scoped catalogue ownership are not certified. | Verify actual Supabase schema/RLS before any separately authorized migration. |
++| Error and recovery semantics | Typed presentation is fixture-tested; live history/index error mapping, metadata recovery and blind recreate/resend risks remain unqualified. | Architect-approved error contract and safe recovery; no automatic resend or durable transcript workaround. |
++| Config switching and bridge targets | Tony's current cloud roster and both bundle/urlEnv mappings remain unchanged. | Future reversible two-contract fixture swap and a named second live ADK/A2A/Hermes target if available; no generic compatibility certificate. |
++| Auth/lifecycle | F01 passes mocked logout/state-clearing/navigation tests. Authenticated production routes, server logout and token revocation are not certified. | Separately authorized identity/session lifecycle qualification; do not infer live guarantees from F01. |
++| Deployment / Gate D | No deployment, merge or Gate D certificate is supplied by Gate Q. | Tony/Architect explicitly authorize release and deployed-revision qualification. |
++| PD-002-01 | Proceeding after GATE_STOP without ruling remains recorded. Generated next-env transition accepted for this candidate only. | Carry process NONCOMPLIANT; future gates require the actual owner's ruling, no inherited override. |
++| PD-Q5-01 | Earlier private-file digest generation violated presence-only policy. Originals and derivative packages are on publication hold. | Tony decides retention/publication before affected commit/push/distribution. No generator rerun, private-file read/hash, redaction or rotation ordered. |
++| Font-fallback qualification | OS-installed Inter masked earlier blocked-font rows; accepted targeted diagnostic hides it and proves fallback. Ordinary CSS removes automatic Latin preload; timing is unbenchmarked. | Retain qualifications and diagnostic provenance; no redesign or performance claim. |
++| Inventory qualification | Q5 lacks a full inventory at the mutation instant; 51-minute gap, filtered pre-status and path-classified document entries remain disclosed. | Preserve historical evidence and label any future snapshot honestly; never reconstruct contemporaneous proof. |
++| O-1 date-format observation | Observation remains ungraded; no new product defect follows from a screenshot sample. | Future requirement/design comparison if separately scoped. |
++
++APBM_000 engineering closure, Git integration and APBM_001 launch require separate Architect/Director decisions. D4 ALLOW and D7 OMIT remain unchanged; no new service access or cleanup is authorized here.
+diff --git a/agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/HANDOFFS/PUBLICATION_HOLD_PATHS_2026-10-12.md b/agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/HANDOFFS/PUBLICATION_HOLD_PATHS_2026-10-12.md
+new file mode 100644
+--- /dev/null
++++ b/agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/HANDOFFS/PUBLICATION_HOLD_PATHS_2026-10-12.md
+@@ -0,0 +1,21 @@
++# Publication hold — Tony's retention/distribution decision
++
++PD-Q5-01 is a process violation. Preserve the originals below unchanged. Do not stage/publish the affected records or distribute their packages before Tony's disposition. No private-file digest is reproduced here. `.env.local` was not read or hashed for this closeout; comparison used existing evidence only. No payload was redacted or redistributed in the new ZIP. This list is not a removal or sanitized-derivative instruction.
++
++## Affected repository records and packages
++
++- `agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/HANDOFFS/Q2_attempt-002_ADDENDUM-001.zip` — contains publication-hold payload(s).
++- `agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/HANDOFFS/Q5_attempt-002.zip` — contains publication-hold payload(s).
++- `agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/HANDOFFS/Q5_attempt-002_REVIEW-002.zip` — contains publication-hold payload(s).
++- `agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002-addendum-001/q5-proposal/Q5_PROPOSAL_PATHS.json` — contains earlier private-file digest from existing evidence.
++- `agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q5-attempt-002/POST_Q5_INVENTORY.json` — contains earlier private-file digest from existing evidence.
++
++## Affected Downloads copies
++
++- `/home/moose/Downloads/APBM000_Q2_attempt-002_ADDENDUM-001_2026-10-11_183315_BDT.zip` — contains publication-hold payload(s).
++- `/home/moose/Downloads/APBM000_Q5_attempt-002_2026-10-11_192614_BDT.zip` — contains publication-hold payload(s).
++- `/home/moose/Downloads/APBM000_Q5_attempt-002_REVIEW-002_2026-10-12_120138_BDT.zip` — contains publication-hold payload(s).
++
++The machine path list [publication-hold-paths.json](../evidence/engineering-closeout-001/2026-10-12_130632_BDT/publication-hold-paths.json) identifies affected member paths without their payload or sensitive digest. Two record originals and three repository archives plus three Downloads copies were identified. No additional matching payload was found in the existing QAM records and APBM000 archives examined. This is a bounded existing-evidence scan, not proof of absence of every possible exposure elsewhere.
++
++**Decision for Tony:** how to retain and whether to publish/distribute these originals. Any sanitized derivative needs explicit direction, separate identity and linkage to its preserved original. The proposed Git path list excludes these paths until that decision. Other archived review packages remain local and preserved; nothing is deleted.
+diff --git a/agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/HANDOFFS/ENGINEERING_CLOSEOUT_001_REVIEW_START_HERE.md b/agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/HANDOFFS/ENGINEERING_CLOSEOUT_001_REVIEW_START_HERE.md
+new file mode 100644
+--- /dev/null
++++ b/agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/HANDOFFS/ENGINEERING_CLOSEOUT_001_REVIEW_START_HERE.md
+@@ -0,0 +1,16 @@
++# Architect closeout review / Director disposition
++
++**READY FOR ARCHITECT REVIEW / DIRECTOR DISPOSITION.** Gate Q PASS for `8eb5789d9021ad06c15db36db74419a2b5c68fc5` and bounded fixture/source/build scope; Q5 ACCEPTED / COMPLETE; process NONCOMPLIANT. Engineering closeout IN PROGRESS, Git integration pending Tony, APBM_001 NOT LAUNCHED. Cody active writer; Claudy paused. D4 ALLOW / D7 OMIT.
++
++Read these supplied records:
++
++- [QA Lead certificate](APBM000_GATE_Q_CERTIFICATE_2026-10-12.txt) and [explicit ownership transfer](ENGINEERING_CLOSEOUT_001_OWNERSHIP_TRANSFER.md).
++- [Closeout report](ENGINEERING_CLOSEOUT_001_RETURN.md) and [carried-forward APBM_001 issues](APBM_001_CARRIED_FORWARD_ISSUES_2026-10-12.md).
++- [Publication hold paths](PUBLICATION_HOLD_PATHS_2026-10-12.md): two originals and six ZIP copies excluded from this package, preserved at their existing locations. No sensitive digest is reproduced.
++- [Path-specific commit inventory](../evidence/engineering-closeout-001/2026-10-12_130632_BDT/proposed-commit-inventory.json) and [proposed Git paths](../evidence/engineering-closeout-001/2026-10-12_130632_BDT/proposed-git-paths.txt); proposal only, nothing staged.
++- [Exact Cody documentation diff](../evidence/engineering-closeout-001/2026-10-12_130632_BDT/cody-documentation.patch), current routing/status documents, [entry identity/status](../evidence/engineering-closeout-001/2026-10-12_130632_BDT/entry-identity-status.json) and [final preservation evidence](../evidence/engineering-closeout-001/2026-10-12_130632_BDT/final-preservation-status.json).
++- [Indexed package files](../evidence/engineering-closeout-001/2026-10-12_130632_BDT/FILE_INDEX.json). Every payload has a path/size/SHA-256; the index excludes its own hash, recorded in the external export receipt.
++
++The certificate is installed byte-for-byte. Historical reports, archives, startup paths, root recovery blocks, instruments, copies, caches and Stage E output remain retained. No product/test/dependency/config/acceptance/roster edit, test/build/live probe, Git mutation or cleanup was performed. Original font and inventory qualifications/process deviations remain visible. This package contains neither the digest-bearing payloads nor nested archives, private environment, credentials, dependencies, caches or build output. It is a review package; it is not a reconstructed Q5 record or a complete application checkout.
++
++**NEXT STEP for Tony:** Hand this ZIP to the Architect and make the listed retention/publication decision. Engineering closure, selective Git integration and APBM_001 launch require their owners' later decisions.

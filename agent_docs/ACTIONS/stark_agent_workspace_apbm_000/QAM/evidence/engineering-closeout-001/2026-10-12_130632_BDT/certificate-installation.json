@@ -1,0 +1,8 @@
+{
+  "source": "/home/moose/Downloads/APBM000_GATE_Q_CERTIFICATE_2026-10-12.txt",
+  "destination": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/HANDOFFS/APBM000_GATE_Q_CERTIFICATE_2026-10-12.txt",
+  "sha256": "6cfe664f5c10f2aa2ee810328db6e465869af9607af82b6a2ae5d921cac43a49",
+  "bytes": 7402,
+  "disposition": "Supplied certificate installed byte-for-byte",
+  "no_archive_extraction": true
+}

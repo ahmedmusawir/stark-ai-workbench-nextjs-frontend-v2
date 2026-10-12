@@ -3,6 +3,8 @@ Version 1.0 · 4 October 2026 · Architect: JARVIS Master · Director: Tony Star
 
 **Status: Architect-assembled assignment ready for Engineer entry on `frontend-apbm`, subject to the bounded baseline/environment preflight. No implementation or QA pass has occurred.**
 
+For current routing, read `QAM/QA_RECOVERY.md` and `QAM/QAM_STATE.json` before acting on the preserved assembly-era instructions below. Future QA session/recovery records and the canonical factual handoff are inside QAM.
+
 ## Tony's next move
 
 Extract this folder under `agent_docs/ACTIONS/` in `stark-ai-workbench-nextjs-frontend-v2`. The resulting path must be `agent_docs/ACTIONS/stark_agent_workspace_apbm_000/START_HERE.md` (one module folder, not doubled). Keep the existing branch. Give Cody the prompt in `ENGINEER_LAUNCH.md`. No new full recon, backend probe, or Designer round is needed unless the entry check finds material product drift.
@@ -28,6 +30,6 @@ Cody and Claudy are interchangeable providers, but Engineer and independent QA E
 
 ## Package authority
 
-Read `GOVERNANCE.md`, `RULINGS_ADDENDUM.md`, `ACCEPTANCE_SPEC.md`, and `ENGINEERING_ENTRY.md`. Module root owns the only acceptance and factual handoff. QAM references those files instead of duplicating editable contracts. `DESIGN/` and `references/` are immutable evidence; this module's explicit phase boundary governs the Designer's eventual-product requirements.
+Read `GOVERNANCE.md`, `RULINGS_ADDENDUM.md`, `ACCEPTANCE_SPEC.md`, and `ENGINEERING_ENTRY.md`. Module root owns the only acceptance contract. The canonical factual handoff is `QAM/HANDOFFS/QA_HANDOFF.md`; QAM references the acceptance contract instead of duplicating it. `DESIGN/` and `references/` are immutable evidence; this module's explicit phase boundary governs the Designer's eventual-product requirements.
 
 A null candidate SHA or NOT RUN evidence field is an honest pre-execution state. The Engineer completes facts; QA pins the committed candidate. No one may turn templates into PASS records without execution.

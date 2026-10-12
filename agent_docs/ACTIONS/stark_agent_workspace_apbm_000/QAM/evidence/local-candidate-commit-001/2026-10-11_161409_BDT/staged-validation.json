@@ -1,0 +1,831 @@
+{
+  "approved_count": 269,
+  "exact_scope_match": true,
+  "all_staged_blob_hashes_match_review": true,
+  "full_whitespace_exit": 2,
+  "full_whitespace_warnings": [
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/addmember-test-repair-001/2026-10-11_134025_BDT/combined-product-test.patch",
+      "line": 7,
+      "kind": "trailing whitespace.",
+      "reviewed_bytes_unchanged": true
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/addmember-test-repair-001/2026-10-11_134025_BDT/combined-product-test.patch",
+      "line": 15,
+      "kind": "trailing whitespace.",
+      "reviewed_bytes_unchanged": true
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/addmember-test-repair-001/2026-10-11_134025_BDT/combined-product-test.patch",
+      "line": 21,
+      "kind": "trailing whitespace.",
+      "reviewed_bytes_unchanged": true
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/addmember-test-repair-001/2026-10-11_134025_BDT/combined-product-test.patch",
+      "line": 28,
+      "kind": "trailing whitespace.",
+      "reviewed_bytes_unchanged": true
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/addmember-test-repair-001/2026-10-11_134025_BDT/combined-product-test.patch",
+      "line": 31,
+      "kind": "trailing whitespace.",
+      "reviewed_bytes_unchanged": true
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/addmember-test-repair-001/2026-10-11_134025_BDT/combined-product-test.patch",
+      "line": 44,
+      "kind": "trailing whitespace.",
+      "reviewed_bytes_unchanged": true
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/addmember-test-repair-001/2026-10-11_134025_BDT/combined-product-test.patch",
+      "line": 54,
+      "kind": "trailing whitespace.",
+      "reviewed_bytes_unchanged": true
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/addmember-test-repair-001/2026-10-11_134025_BDT/combined-product-test.patch",
+      "line": 56,
+      "kind": "trailing whitespace.",
+      "reviewed_bytes_unchanged": true
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/addmember-test-repair-001/2026-10-11_134025_BDT/combined-product-test.patch",
+      "line": 60,
+      "kind": "trailing whitespace.",
+      "reviewed_bytes_unchanged": true
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/addmember-test-repair-001/2026-10-11_134025_BDT/combined-product-test.patch",
+      "line": 82,
+      "kind": "trailing whitespace.",
+      "reviewed_bytes_unchanged": true
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/addmember-test-repair-001/2026-10-11_134025_BDT/combined-product-test.patch",
+      "line": 91,
+      "kind": "trailing whitespace.",
+      "reviewed_bytes_unchanged": true
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/addmember-test-repair-001/2026-10-11_134025_BDT/combined-product-test.patch",
+      "line": 93,
+      "kind": "trailing whitespace.",
+      "reviewed_bytes_unchanged": true
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/addmember-test-repair-001/2026-10-11_134025_BDT/combined-product-test.patch",
+      "line": 99,
+      "kind": "trailing whitespace.",
+      "reviewed_bytes_unchanged": true
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/addmember-test-repair-001/2026-10-11_134025_BDT/combined-product-test.patch",
+      "line": 101,
+      "kind": "trailing whitespace.",
+      "reviewed_bytes_unchanged": true
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/addmember-test-repair-001/2026-10-11_134025_BDT/combined-product-test.patch",
+      "line": 111,
+      "kind": "trailing whitespace.",
+      "reviewed_bytes_unchanged": true
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/addmember-test-repair-001/2026-10-11_134025_BDT/combined-product-test.patch",
+      "line": 127,
+      "kind": "trailing whitespace.",
+      "reviewed_bytes_unchanged": true
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/addmember-test-repair-001/2026-10-11_134025_BDT/combined-product-test.patch",
+      "line": 151,
+      "kind": "trailing whitespace.",
+      "reviewed_bytes_unchanged": true
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/addmember-test-repair-001/2026-10-11_134025_BDT/combined-product-test.patch",
+      "line": 441,
+      "kind": "trailing whitespace.",
+      "reviewed_bytes_unchanged": true
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/addmember-test-repair-001/2026-10-11_134025_BDT/full.log",
+      "line": 38,
+      "kind": "trailing whitespace.",
+      "reviewed_bytes_unchanged": true
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/addmember-test-repair-001/2026-10-11_134025_BDT/full.log",
+      "line": 40,
+      "kind": "trailing whitespace.",
+      "reviewed_bytes_unchanged": true
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/addmember-test-repair-001/2026-10-11_134025_BDT/full.log",
+      "line": 45,
+      "kind": "trailing whitespace.",
+      "reviewed_bytes_unchanged": true
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/addmember-test-repair-001/2026-10-11_134025_BDT/full.log",
+      "line": 66,
+      "kind": "trailing whitespace.",
+      "reviewed_bytes_unchanged": true
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/addmember-test-repair-001/2026-10-11_134025_BDT/full.log",
+      "line": 68,
+      "kind": "trailing whitespace.",
+      "reviewed_bytes_unchanged": true
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/addmember-test-repair-001/2026-10-11_134025_BDT/full.log",
+      "line": 73,
+      "kind": "trailing whitespace.",
+      "reviewed_bytes_unchanged": true
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/addmember-test-repair-001/2026-10-11_134025_BDT/full.log",
+      "line": 101,
+      "kind": "trailing whitespace.",
+      "reviewed_bytes_unchanged": true
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/addmember-test-repair-001/2026-10-11_134025_BDT/full.log",
+      "line": 103,
+      "kind": "trailing whitespace.",
+      "reviewed_bytes_unchanged": true
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/addmember-test-repair-001/2026-10-11_134025_BDT/full.log",
+      "line": 108,
+      "kind": "trailing whitespace.",
+      "reviewed_bytes_unchanged": true
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/addmember-test-repair-001/2026-10-11_134025_BDT/full.log",
+      "line": 129,
+      "kind": "trailing whitespace.",
+      "reviewed_bytes_unchanged": true
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/addmember-test-repair-001/2026-10-11_134025_BDT/full.log",
+      "line": 131,
+      "kind": "trailing whitespace.",
+      "reviewed_bytes_unchanged": true
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/addmember-test-repair-001/2026-10-11_134025_BDT/full.log",
+      "line": 136,
+      "kind": "trailing whitespace.",
+      "reviewed_bytes_unchanged": true
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/addmember-test-repair-001/2026-10-11_134025_BDT/full.log",
+      "line": 157,
+      "kind": "trailing whitespace.",
+      "reviewed_bytes_unchanged": true
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/addmember-test-repair-001/2026-10-11_134025_BDT/full.log",
+      "line": 159,
+      "kind": "trailing whitespace.",
+      "reviewed_bytes_unchanged": true
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/addmember-test-repair-001/2026-10-11_134025_BDT/full.log",
+      "line": 164,
+      "kind": "trailing whitespace.",
+      "reviewed_bytes_unchanged": true
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/addmember-test-repair-001/2026-10-11_134025_BDT/full.log",
+      "line": 185,
+      "kind": "trailing whitespace.",
+      "reviewed_bytes_unchanged": true
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/addmember-test-repair-001/2026-10-11_134025_BDT/full.log",
+      "line": 187,
+      "kind": "trailing whitespace.",
+      "reviewed_bytes_unchanged": true
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/addmember-test-repair-001/2026-10-11_134025_BDT/full.log",
+      "line": 192,
+      "kind": "trailing whitespace.",
+      "reviewed_bytes_unchanged": true
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/addmember-test-repair-001/2026-10-11_134025_BDT/record-changes.patch",
+      "line": 7,
+      "kind": "trailing whitespace.",
+      "reviewed_bytes_unchanged": true
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/addmember-test-repair-001/2026-10-11_134025_BDT/record-changes.patch",
+      "line": 23,
+      "kind": "trailing whitespace.",
+      "reviewed_bytes_unchanged": true
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/addmember-test-repair-001/2026-10-11_134025_BDT/record-changes.patch",
+      "line": 90,
+      "kind": "trailing whitespace.",
+      "reviewed_bytes_unchanged": true
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/addmember-test-repair-001/2026-10-11_134025_BDT/test-only.patch",
+      "line": 7,
+      "kind": "trailing whitespace.",
+      "reviewed_bytes_unchanged": true
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/addmember-test-repair-001/2026-10-11_134025_BDT/test-only.patch",
+      "line": 15,
+      "kind": "trailing whitespace.",
+      "reviewed_bytes_unchanged": true
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/addmember-test-repair-001/2026-10-11_134025_BDT/test-only.patch",
+      "line": 21,
+      "kind": "trailing whitespace.",
+      "reviewed_bytes_unchanged": true
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/addmember-test-repair-001/2026-10-11_134025_BDT/test-only.patch",
+      "line": 28,
+      "kind": "trailing whitespace.",
+      "reviewed_bytes_unchanged": true
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/addmember-test-repair-001/2026-10-11_134025_BDT/test-only.patch",
+      "line": 31,
+      "kind": "trailing whitespace.",
+      "reviewed_bytes_unchanged": true
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/addmember-test-repair-001/2026-10-11_134025_BDT/test-only.patch",
+      "line": 44,
+      "kind": "trailing whitespace.",
+      "reviewed_bytes_unchanged": true
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/addmember-test-repair-001/2026-10-11_134025_BDT/test-only.patch",
+      "line": 54,
+      "kind": "trailing whitespace.",
+      "reviewed_bytes_unchanged": true
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/addmember-test-repair-001/2026-10-11_134025_BDT/test-only.patch",
+      "line": 56,
+      "kind": "trailing whitespace.",
+      "reviewed_bytes_unchanged": true
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/addmember-test-repair-001/2026-10-11_134025_BDT/test-only.patch",
+      "line": 60,
+      "kind": "trailing whitespace.",
+      "reviewed_bytes_unchanged": true
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/addmember-test-repair-001/2026-10-11_134025_BDT/test-only.patch",
+      "line": 82,
+      "kind": "trailing whitespace.",
+      "reviewed_bytes_unchanged": true
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/addmember-test-repair-001/2026-10-11_134025_BDT/test-only.patch",
+      "line": 91,
+      "kind": "trailing whitespace.",
+      "reviewed_bytes_unchanged": true
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/addmember-test-repair-001/2026-10-11_134025_BDT/test-only.patch",
+      "line": 93,
+      "kind": "trailing whitespace.",
+      "reviewed_bytes_unchanged": true
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/addmember-test-repair-001/2026-10-11_134025_BDT/test-only.patch",
+      "line": 99,
+      "kind": "trailing whitespace.",
+      "reviewed_bytes_unchanged": true
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/addmember-test-repair-001/2026-10-11_134025_BDT/test-only.patch",
+      "line": 101,
+      "kind": "trailing whitespace.",
+      "reviewed_bytes_unchanged": true
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/addmember-test-repair-001/2026-10-11_134025_BDT/test-only.patch",
+      "line": 111,
+      "kind": "trailing whitespace.",
+      "reviewed_bytes_unchanged": true
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/dependency-reconciliation-001/2026-10-08_124256_BDT/browser.log",
+      "line": 1,
+      "kind": "trailing whitespace.",
+      "reviewed_bytes_unchanged": true
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/dependency-reconciliation-001/2026-10-08_124256_BDT/full.log",
+      "line": 59,
+      "kind": "trailing whitespace.",
+      "reviewed_bytes_unchanged": true
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/dependency-reconciliation-001/2026-10-08_124256_BDT/full.log",
+      "line": 61,
+      "kind": "trailing whitespace.",
+      "reviewed_bytes_unchanged": true
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/dependency-reconciliation-001/2026-10-08_124256_BDT/full.log",
+      "line": 66,
+      "kind": "trailing whitespace.",
+      "reviewed_bytes_unchanged": true
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/dependency-reconciliation-001/2026-10-08_124256_BDT/full.log",
+      "line": 87,
+      "kind": "trailing whitespace.",
+      "reviewed_bytes_unchanged": true
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/dependency-reconciliation-001/2026-10-08_124256_BDT/full.log",
+      "line": 89,
+      "kind": "trailing whitespace.",
+      "reviewed_bytes_unchanged": true
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/dependency-reconciliation-001/2026-10-08_124256_BDT/full.log",
+      "line": 94,
+      "kind": "trailing whitespace.",
+      "reviewed_bytes_unchanged": true
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/dependency-reconciliation-001/2026-10-08_124256_BDT/full.log",
+      "line": 119,
+      "kind": "trailing whitespace.",
+      "reviewed_bytes_unchanged": true
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/dependency-reconciliation-001/2026-10-08_124256_BDT/full.log",
+      "line": 121,
+      "kind": "trailing whitespace.",
+      "reviewed_bytes_unchanged": true
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/dependency-reconciliation-001/2026-10-08_124256_BDT/full.log",
+      "line": 126,
+      "kind": "trailing whitespace.",
+      "reviewed_bytes_unchanged": true
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/dependency-reconciliation-001/2026-10-08_124256_BDT/full.log",
+      "line": 147,
+      "kind": "trailing whitespace.",
+      "reviewed_bytes_unchanged": true
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/dependency-reconciliation-001/2026-10-08_124256_BDT/full.log",
+      "line": 149,
+      "kind": "trailing whitespace.",
+      "reviewed_bytes_unchanged": true
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/dependency-reconciliation-001/2026-10-08_124256_BDT/full.log",
+      "line": 154,
+      "kind": "trailing whitespace.",
+      "reviewed_bytes_unchanged": true
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/dependency-reconciliation-001/2026-10-08_124256_BDT/full.log",
+      "line": 175,
+      "kind": "trailing whitespace.",
+      "reviewed_bytes_unchanged": true
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/dependency-reconciliation-001/2026-10-08_124256_BDT/full.log",
+      "line": 177,
+      "kind": "trailing whitespace.",
+      "reviewed_bytes_unchanged": true
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/dependency-reconciliation-001/2026-10-08_124256_BDT/full.log",
+      "line": 182,
+      "kind": "trailing whitespace.",
+      "reviewed_bytes_unchanged": true
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/dependency-reconciliation-001/2026-10-08_124256_BDT/full.log",
+      "line": 203,
+      "kind": "trailing whitespace.",
+      "reviewed_bytes_unchanged": true
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/dependency-reconciliation-001/2026-10-08_124256_BDT/full.log",
+      "line": 205,
+      "kind": "trailing whitespace.",
+      "reviewed_bytes_unchanged": true
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/dependency-reconciliation-001/2026-10-08_124256_BDT/full.log",
+      "line": 210,
+      "kind": "trailing whitespace.",
+      "reviewed_bytes_unchanged": true
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/dependency-reconciliation-001/2026-10-08_124256_BDT/product.patch",
+      "line": 15,
+      "kind": "trailing whitespace.",
+      "reviewed_bytes_unchanged": true
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/dependency-reconciliation-001/2026-10-08_124256_BDT/product.patch",
+      "line": 39,
+      "kind": "trailing whitespace.",
+      "reviewed_bytes_unchanged": true
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/dependency-reconciliation-001/2026-10-08_124256_BDT/product.patch",
+      "line": 329,
+      "kind": "trailing whitespace.",
+      "reviewed_bytes_unchanged": true
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/dependency-reconciliation-001/2026-10-08_124256_BDT/record-changes.patch",
+      "line": 7,
+      "kind": "trailing whitespace.",
+      "reviewed_bytes_unchanged": true
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/dependency-reconciliation-001/2026-10-08_124256_BDT/record-changes.patch",
+      "line": 16,
+      "kind": "trailing whitespace.",
+      "reviewed_bytes_unchanged": true
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/dependency-reconciliation-001/2026-10-08_124256_BDT/record-changes.patch",
+      "line": 71,
+      "kind": "trailing whitespace.",
+      "reviewed_bytes_unchanged": true
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/engineering-repair-001/baseline-full.log",
+      "line": 92,
+      "kind": "trailing whitespace.",
+      "reviewed_bytes_unchanged": true
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/engineering-repair-001/baseline-full.log",
+      "line": 94,
+      "kind": "trailing whitespace.",
+      "reviewed_bytes_unchanged": true
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/engineering-repair-001/baseline-full.log",
+      "line": 99,
+      "kind": "trailing whitespace.",
+      "reviewed_bytes_unchanged": true
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/engineering-repair-001/baseline-full.log",
+      "line": 120,
+      "kind": "trailing whitespace.",
+      "reviewed_bytes_unchanged": true
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/engineering-repair-001/baseline-full.log",
+      "line": 122,
+      "kind": "trailing whitespace.",
+      "reviewed_bytes_unchanged": true
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/engineering-repair-001/baseline-full.log",
+      "line": 127,
+      "kind": "trailing whitespace.",
+      "reviewed_bytes_unchanged": true
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/engineering-repair-001/baseline-full.log",
+      "line": 162,
+      "kind": "trailing whitespace.",
+      "reviewed_bytes_unchanged": true
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/engineering-repair-001/baseline-full.log",
+      "line": 164,
+      "kind": "trailing whitespace.",
+      "reviewed_bytes_unchanged": true
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/engineering-repair-001/baseline-full.log",
+      "line": 169,
+      "kind": "trailing whitespace.",
+      "reviewed_bytes_unchanged": true
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/engineering-repair-001/baseline-full.log",
+      "line": 190,
+      "kind": "trailing whitespace.",
+      "reviewed_bytes_unchanged": true
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/engineering-repair-001/baseline-full.log",
+      "line": 192,
+      "kind": "trailing whitespace.",
+      "reviewed_bytes_unchanged": true
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/engineering-repair-001/baseline-full.log",
+      "line": 197,
+      "kind": "trailing whitespace.",
+      "reviewed_bytes_unchanged": true
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/engineering-repair-001/baseline-full.log",
+      "line": 218,
+      "kind": "trailing whitespace.",
+      "reviewed_bytes_unchanged": true
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/engineering-repair-001/baseline-full.log",
+      "line": 220,
+      "kind": "trailing whitespace.",
+      "reviewed_bytes_unchanged": true
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/engineering-repair-001/baseline-full.log",
+      "line": 225,
+      "kind": "trailing whitespace.",
+      "reviewed_bytes_unchanged": true
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/engineering-repair-001/baseline-full.log",
+      "line": 246,
+      "kind": "trailing whitespace.",
+      "reviewed_bytes_unchanged": true
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/engineering-repair-001/baseline-full.log",
+      "line": 248,
+      "kind": "trailing whitespace.",
+      "reviewed_bytes_unchanged": true
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/engineering-repair-001/baseline-full.log",
+      "line": 253,
+      "kind": "trailing whitespace.",
+      "reviewed_bytes_unchanged": true
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/engineering-repair-001/browser-initial.log",
+      "line": 1,
+      "kind": "trailing whitespace.",
+      "reviewed_bytes_unchanged": true
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/engineering-repair-001/browser.log",
+      "line": 1,
+      "kind": "trailing whitespace.",
+      "reviewed_bytes_unchanged": true
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/engineering-repair-001/focused-setup.log",
+      "line": 10,
+      "kind": "trailing whitespace.",
+      "reviewed_bytes_unchanged": true
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/engineering-repair-001/focused-setup.log",
+      "line": 12,
+      "kind": "trailing whitespace.",
+      "reviewed_bytes_unchanged": true
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/engineering-repair-001/focused-setup.log",
+      "line": 17,
+      "kind": "trailing whitespace.",
+      "reviewed_bytes_unchanged": true
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/engineering-repair-001/focused-setup.log",
+      "line": 38,
+      "kind": "trailing whitespace.",
+      "reviewed_bytes_unchanged": true
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/engineering-repair-001/focused-setup.log",
+      "line": 40,
+      "kind": "trailing whitespace.",
+      "reviewed_bytes_unchanged": true
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/engineering-repair-001/focused-setup.log",
+      "line": 45,
+      "kind": "trailing whitespace.",
+      "reviewed_bytes_unchanged": true
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/engineering-repair-001/focused-setup.log",
+      "line": 66,
+      "kind": "trailing whitespace.",
+      "reviewed_bytes_unchanged": true
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/engineering-repair-001/focused-setup.log",
+      "line": 68,
+      "kind": "trailing whitespace.",
+      "reviewed_bytes_unchanged": true
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/engineering-repair-001/focused-setup.log",
+      "line": 73,
+      "kind": "trailing whitespace.",
+      "reviewed_bytes_unchanged": true
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/engineering-repair-001/font-before.css",
+      "line": 78,
+      "kind": "new blank line at EOF.",
+      "reviewed_bytes_unchanged": true
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/engineering-repair-001/full.log",
+      "line": 40,
+      "kind": "trailing whitespace.",
+      "reviewed_bytes_unchanged": true
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/engineering-repair-001/full.log",
+      "line": 42,
+      "kind": "trailing whitespace.",
+      "reviewed_bytes_unchanged": true
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/engineering-repair-001/full.log",
+      "line": 47,
+      "kind": "trailing whitespace.",
+      "reviewed_bytes_unchanged": true
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/engineering-repair-001/full.log",
+      "line": 68,
+      "kind": "trailing whitespace.",
+      "reviewed_bytes_unchanged": true
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/engineering-repair-001/full.log",
+      "line": 70,
+      "kind": "trailing whitespace.",
+      "reviewed_bytes_unchanged": true
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/engineering-repair-001/full.log",
+      "line": 75,
+      "kind": "trailing whitespace.",
+      "reviewed_bytes_unchanged": true
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/engineering-repair-001/full.log",
+      "line": 102,
+      "kind": "trailing whitespace.",
+      "reviewed_bytes_unchanged": true
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/engineering-repair-001/full.log",
+      "line": 104,
+      "kind": "trailing whitespace.",
+      "reviewed_bytes_unchanged": true
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/engineering-repair-001/full.log",
+      "line": 109,
+      "kind": "trailing whitespace.",
+      "reviewed_bytes_unchanged": true
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/engineering-repair-001/full.log",
+      "line": 130,
+      "kind": "trailing whitespace.",
+      "reviewed_bytes_unchanged": true
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/engineering-repair-001/full.log",
+      "line": 132,
+      "kind": "trailing whitespace.",
+      "reviewed_bytes_unchanged": true
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/engineering-repair-001/full.log",
+      "line": 137,
+      "kind": "trailing whitespace.",
+      "reviewed_bytes_unchanged": true
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/engineering-repair-001/full.log",
+      "line": 158,
+      "kind": "trailing whitespace.",
+      "reviewed_bytes_unchanged": true
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/engineering-repair-001/full.log",
+      "line": 160,
+      "kind": "trailing whitespace.",
+      "reviewed_bytes_unchanged": true
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/engineering-repair-001/full.log",
+      "line": 165,
+      "kind": "trailing whitespace.",
+      "reviewed_bytes_unchanged": true
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/engineering-repair-001/full.log",
+      "line": 186,
+      "kind": "trailing whitespace.",
+      "reviewed_bytes_unchanged": true
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/engineering-repair-001/full.log",
+      "line": 188,
+      "kind": "trailing whitespace.",
+      "reviewed_bytes_unchanged": true
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/engineering-repair-001/full.log",
+      "line": 193,
+      "kind": "trailing whitespace.",
+      "reviewed_bytes_unchanged": true
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/engineering-repair-001/product.patch",
+      "line": 15,
+      "kind": "trailing whitespace.",
+      "reviewed_bytes_unchanged": true
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/engineering-repair-001/product.patch",
+      "line": 39,
+      "kind": "trailing whitespace.",
+      "reviewed_bytes_unchanged": true
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/engineering-repair-001/product.patch",
+      "line": 329,
+      "kind": "trailing whitespace.",
+      "reviewed_bytes_unchanged": true
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/engineering-repair-001/repair-authored.patch",
+      "line": 42,
+      "kind": "trailing whitespace.",
+      "reviewed_bytes_unchanged": true
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/engineering-repair-001/repair-authored.patch",
+      "line": 58,
+      "kind": "trailing whitespace.",
+      "reviewed_bytes_unchanged": true
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/engineering-repair-001/repair-authored.patch",
+      "line": 82,
+      "kind": "trailing whitespace.",
+      "reviewed_bytes_unchanged": true
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/engineering-repair-001/repair-authored.patch",
+      "line": 710,
+      "kind": "trailing whitespace.",
+      "reviewed_bytes_unchanged": true
+    },
+    {
+      "path": "src/app/fonts/inter/OFL.txt",
+      "line": 21,
+      "kind": "trailing whitespace.",
+      "reviewed_bytes_unchanged": true
+    }
+  ],
+  "source_and_handoff_whitespace_exit": 0,
+  "whitespace_disposition": "Preserve exact approved raw logs, unified patch context, mediator CSS snapshot and verified OFL license; no edited executable source or maintained-test whitespace finding.",
+  "unstaged_tracked_changes": false,
+  "credential_scan_rules": [
+    "private-key",
+    "github-token",
+    "aws-access-key",
+    "openai-style-secret",
+    "jwt-value"
+  ],
+  "credential_scan_hits": [],
+  "staged_full_patch_sha256": "ea9f58cac6f47d4296ad0e912bd96ae28016884acb7bec3b6756b0160166f6e5",
+  "git_add_exit": 0
+}

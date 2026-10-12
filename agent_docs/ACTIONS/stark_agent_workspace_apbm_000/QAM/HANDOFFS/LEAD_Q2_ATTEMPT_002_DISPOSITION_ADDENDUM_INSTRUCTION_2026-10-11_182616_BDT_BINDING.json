@@ -1,0 +1,21 @@
+{
+  "record": "QA Lead disposition of Q2 attempt-002 + bounded addendum instruction (relayed by the Director in the Claudy session)",
+  "file": "HANDOFFS/LEAD_Q2_ATTEMPT_002_DISPOSITION_ADDENDUM_INSTRUCTION_2026-10-11_182616_BDT.txt",
+  "sha256": "1617184f1dc57666e270c699a8b2b2d12bfac4390e86db60f35d0a586c6b32e6",
+  "received": "2026-10-11 18:26:16 BDT (first Executor tool timestamp)",
+  "candidate_sha": "8eb5789d9021ad06c15db36db74419a2b5c68fc5",
+  "attempt_002_package_sha256": "34e8768bd1546dd16bb3058a71e5ceb3e2fa769f071415ecd63a9da064d71e10",
+  "bound": "30 minutes (18:26 -> 18:56)",
+  "D4": "ALLOW",
+  "D7": "OMIT",
+  "gate_q": "PENDING",
+  "not_authorized": [
+    "product repairs",
+    "Git mutation",
+    "live-service expansion",
+    "closeout",
+    "Q5 execution",
+    "full-suite or production-build rerun",
+    "future gate overrides"
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "RECOVERY.md": {
+    "tracked": true,
+    "head_blob_sha256": "edfffe35c9226c36ce8b8e12acff2375617b664fa3d7ec9cc94a16a03d83fcb8",
+    "worktree_sha256": "adcc855d541adad5987182665cf45769ede74cc949f47b769eb8534d4f316b2e",
+    "change": "pure prepend",
+    "prepended_bytes": 1030,
+    "prepended_sha256": "44a8159729f1117ea3c2deb86c94aa729a1d5a444705851b21eaa2e723ff671d",
+    "prepended_text": "# Recovery State\n\n**CURRENT \u2014 2026-10-11 18:16 Asia/Dhaka: APBM_000 Q2 attempt-002 DONE; waiting for QA Lead disposition. Gate Q PENDING.**\n\nSeat: independent QA Executor (Claudy). Candidate `8eb5789d9021ad06c15db36db74419a2b5c68fc5` = HEAD on `qa/frontend-apbm-000`; plan v0.3 `6b3f5df3\u2026`; release `QAM/HANDOFFS/DIRECTOR_Q2_RELEASE_002_2026-10-11_174045_BDT.txt`.\nResult: gate PASS 17/17; build 0 (first normal offline build); tsc 0; Jest 290/290; QA Jest 31/31; browser 34/34; secondary 33/33 + 27/27; proposed 23 PASS, AC24 NOT RUN; F01\u2013F04 retest PASS.\nPackage: `~/Downloads/APBM000_Q2_attempt-002_QA-Lead-Package_2026-10-11_181525_BDT.zip` (sha 34e8768b\u2026). Read `agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/session_2026-10-11.md` and `QAM/HANDOFFS/Q2_attempt-002_REVIEW_START_HERE.md`.\nPending: QA Lead disposition \u2192 Q5 authorization \u2192 Gate Q. No Git mutation, product edits or Q5 by QA. All attempt-002 QA records are uncommitted in QAM by design.\n\n--- Previous recovery records preserved below. ---\n\n\n",
+    "recent_commits_touching": [
+      "9c50884 2026-10-08 09:26:03 +0600 8oct2026 - apbm-000 qa done. engineering close out due",
+      "22ce03b 2026-10-04 22:55:39 +0600 4oct2026 - APBM-000: implement Stark Agent Workspace frontend and prepare QAM handoff",
+      "71b75c6 2026-10-03 20:11:07 +0600 3oct2026 - APBM begins"
+    ],
+    "history_note": "An earlier in-progress block (written 17:58) was replaced in place by the 18:16 block before export; its exact text is reproduced from the Executor write command in RECOVERY_1758_BLOCK_RECONSTRUCTED.txt (not read back from disk)."
+  },
+  "session_2026-10-11.md": {
+    "tracked": false,
+    "ignored": false,
+    "sha256": "4ce2ae025240574f09def856f67f3de022a9a454f8d3339443b8100daa1552d6",
+    "bytes": 349,
+    "content": "pointer only; see root-session_2026-10-11.md.txt"
+  },
+  "tracked_root_session_files": [
+    "astra_RECOVERY.md",
+    "astra_session_2026-10-08.md",
+    "session_2026-10-03.md",
+    "session_2026-10-04.md",
+    "session_2026-10-08.md"
+  ],
+  "secret_scan": "text authored by the Executor; no credentials, env values or URLs with tokens"
+}

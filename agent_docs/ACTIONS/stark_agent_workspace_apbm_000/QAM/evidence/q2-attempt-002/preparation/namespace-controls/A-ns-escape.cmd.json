@@ -1,0 +1,15 @@
+{
+  "stage": "A-ns-escape",
+  "command": [
+    "node",
+    "/home/moose/nextjs/10XLAB/stark-ai-workbench-nextjs-frontend-v2/agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/AUTOMATION/netns_escape_controls.cjs"
+  ],
+  "extra_env_keys": [],
+  "started": "2026-10-11T18:00:42+06:00",
+  "duration_s": 4.054,
+  "exit": 0,
+  "cwd": "repo root",
+  "namespace": "unshare -rn; lo up; no external route",
+  "env": "env -i PATH HOME LANG TMPDIR NEXT_TELEMETRY_DISABLED=1 CI=1 + extra",
+  "tmpdir": "/tmp/claude-1000/qa-a2-tmp/A-ns-escape"
+}

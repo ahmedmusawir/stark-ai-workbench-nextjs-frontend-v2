@@ -1,0 +1,87 @@
+{
+  "baseline_failures": [
+    "G10b next-env.d.ts is one of the two binding-pinned variants"
+  ],
+  "restored_matches_baseline": true,
+  "controls": {
+    "NC1-tampered-binding-hash": {
+      "failed": [
+        "G10b next-env.d.ts is one of the two binding-pinned variants",
+        "G5 candidate blobs = binding hashes"
+      ],
+      "added_vs_baseline": [
+        "G10b next-env.d.ts is one of the two binding-pinned variants",
+        "G5 candidate blobs = binding hashes"
+      ],
+      "expected_check": "G5",
+      "detected": true
+    },
+    "NC2-unauthorized-source-addition": {
+      "failed": [
+        "G10b next-env.d.ts is one of the two binding-pinned variants",
+        "G9 working tree/index: no product drift, staged, untracked or ignored source inputs"
+      ],
+      "added_vs_baseline": [
+        "G9 working tree/index: no product drift, staged, untracked or ignored source inputs"
+      ],
+      "expected_check": "G9",
+      "detected": true
+    },
+    "NC3-changed-source": {
+      "failed": [
+        "G10b next-env.d.ts is one of the two binding-pinned variants",
+        "G9 working tree/index: no product drift, staged, untracked or ignored source inputs"
+      ],
+      "added_vs_baseline": [
+        "G9 working tree/index: no product drift, staged, untracked or ignored source inputs"
+      ],
+      "expected_check": "G9",
+      "detected": true
+    },
+    "NC4-non-ancestor-head": {
+      "failed": [
+        "G1 branch",
+        "G10 pinned contract/roster/lock/font/OFL/provenance bytes",
+        "G10b next-env.d.ts is one of the two binding-pinned variants",
+        "G2 HEAD is candidate or QAM-only descendant",
+        "G9 working tree/index: no product drift, staged, untracked or ignored source inputs"
+      ],
+      "added_vs_baseline": [
+        "G1 branch",
+        "G10 pinned contract/roster/lock/font/OFL/provenance bytes",
+        "G2 HEAD is candidate or QAM-only descendant",
+        "G9 working tree/index: no product drift, staged, untracked or ignored source inputs"
+      ],
+      "expected_check": "G2",
+      "detected": true
+    },
+    "NC5-unapproved-instrument-hash": {
+      "failed": [
+        "G10b next-env.d.ts is one of the two binding-pinned variants",
+        "G14 QAM/non-product inventory: every difference classified",
+        "G15 instrument freeze: every changed/new AUTOMATION file frozen and every frozen hash on disk"
+      ],
+      "added_vs_baseline": [
+        "G10b next-env.d.ts is one of the two binding-pinned variants",
+        "G14 QAM/non-product inventory: every difference classified",
+        "G15 instrument freeze: every changed/new AUTOMATION file frozen and every frozen hash on disk"
+      ],
+      "expected_check": "G15",
+      "detected": true
+    },
+    "NC6-unfrozen-executable": {
+      "failed": [
+        "G10b next-env.d.ts is one of the two binding-pinned variants",
+        "G14 QAM/non-product inventory: every difference classified",
+        "G15 instrument freeze: every changed/new AUTOMATION file frozen and every frozen hash on disk"
+      ],
+      "added_vs_baseline": [
+        "G14 QAM/non-product inventory: every difference classified",
+        "G15 instrument freeze: every changed/new AUTOMATION file frozen and every frozen hash on disk"
+      ],
+      "expected_check": "G15",
+      "detected": true
+    }
+  },
+  "all_detected": true
+}

@@ -1,0 +1,68 @@
+PASS agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/AUTOMATION/jest/qa_adapter.test.ts
+PASS agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/AUTOMATION/jest/qa_f01_realstore.test.tsx
+  ● Console
+
+    console.log
+      QA_F01_RESULT {"mode":"normal","pushes":[["/auth"]],"unhandled":[],"renderWrites":0}
+
+      at agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/AUTOMATION/jest/qa_f01_realstore.test.tsx:84:13
+
+    console.log
+      QA_F01_RESULT {"mode":"getter-throws","pushes":[["/auth"]],"unhandled":[],"renderWrites":0}
+
+      at agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/AUTOMATION/jest/qa_f01_realstore.test.tsx:84:13
+
+    console.log
+      QA_F01_RESULT {"mode":"write-throws","pushes":[["/auth"]],"unhandled":[],"renderWrites":0}
+
+      at agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/AUTOMATION/jest/qa_f01_realstore.test.tsx:84:13
+
+PASS agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/AUTOMATION/jest/qa_entry_props.test.tsx
+  ● Console
+
+    console.warn
+      [zustand persist middleware] Unable to update item 'adk-session-map-mock', the given storage is currently unavailable.
+
+    [0m [90m 193 |[39m       setHistoryLoading[33m:[39m (loading) [33m=>[39m [36mset[39m({ isHistoryLoading[33m:[39m loading })[33m,[39m
+     [90m 194 |[39m       setError[33m:[39m (error) [33m=>[39m [36mset[39m({ error })[33m,[39m
+    [31m[1m>[22m[39m[90m 195 |[39m       reset[33m:[39m () [33m=>[39m [36mset[39m([33mINITIAL_STATE[39m)[33m,[39m
+     [90m     |[39m                    [31m[1m^[22m[39m
+     [90m 196 |[39m     })[33m,[39m
+     [90m 197 |[39m     {
+     [90m 198 |[39m       name[33m:[39m [33mPERSIST_KEY[39m[33m,[39m [90m// FIX-003 (F09): mode-namespaced[39m[0m
+
+      at node_modules/zustand/middleware.js:489:17
+      at Object.reset (src/store/chatStore.ts:195:20)
+      at agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/AUTOMATION/jest/qa_entry_props.test.tsx:58:30
+      at Object.<anonymous> (agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/AUTOMATION/jest/qa_entry_props.test.tsx:49:10)
+
+    console.warn
+      [zustand persist middleware] Unable to update item 'adk-session-map-mock', the given storage is currently unavailable.
+
+    [0m [90m 193 |[39m       setHistoryLoading[33m:[39m (loading) [33m=>[39m [36mset[39m({ isHistoryLoading[33m:[39m loading })[33m,[39m
+     [90m 194 |[39m       setError[33m:[39m (error) [33m=>[39m [36mset[39m({ error })[33m,[39m
+    [31m[1m>[22m[39m[90m 195 |[39m       reset[33m:[39m () [33m=>[39m [36mset[39m([33mINITIAL_STATE[39m)[33m,[39m
+     [90m     |[39m                    [31m[1m^[22m[39m
+     [90m 196 |[39m     })[33m,[39m
+     [90m 197 |[39m     {
+     [90m 198 |[39m       name[33m:[39m [33mPERSIST_KEY[39m[33m,[39m [90m// FIX-003 (F09): mode-namespaced[39m[0m
+
+      at node_modules/zustand/middleware.js:489:17
+      at Object.reset (src/store/chatStore.ts:195:20)
+      at finishSignOut (src/components/workspace/WorkspaceEntry.tsx:17:31)
+
+    console.log
+      CLASS_C_SEAM_RESULT {"pushed":["/auth"],"rendered":true,"unhandledRejections":[]}
+
+      at Object.<anonymous> (agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/AUTOMATION/jest/qa_entry_props.test.tsx:62:13)
+
+PASS agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/AUTOMATION/jest/qa_navigation_manifest.test.ts
+PASS agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/AUTOMATION/jest/qa_entry_render.test.tsx
+PASS agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/AUTOMATION/jest/qa_entry_ssr.test.tsx
+
+Test Suites: 6 passed, 6 total
+Tests:       31 passed, 31 total
+Snapshots:   0 total
+Time:        4.912 s
+Ran all test suites.
+Test results written to: agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002/acceptance/D/qa-jest.json

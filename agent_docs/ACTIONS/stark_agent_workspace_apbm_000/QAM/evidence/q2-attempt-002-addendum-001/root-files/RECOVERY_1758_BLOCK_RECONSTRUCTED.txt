@@ -1,0 +1,9 @@
+# Recovery State
+
+**CURRENT — 2026-10-11 17:58 Asia/Dhaka: APBM_000 Q2 attempt-002 IN PROGRESS (Claudy, sole writer; Cody paused).**
+
+Candidate `8eb5789d9021ad06c15db36db74419a2b5c68fc5`; plan v0.3 (`6b3f5df3…`); Director release `QAM/HANDOFFS/DIRECTOR_Q2_RELEASE_002_2026-10-11_174045_BDT.txt`. D4 ALLOW, D7 OMIT, Gate Q pending.
+Read `agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/session_2026-10-11.md` then `QAM/evidence/q2-attempt-002/`. No Git mutation, no product edits, no Q5.
+
+--- Previous recovery records preserved below. ---
+

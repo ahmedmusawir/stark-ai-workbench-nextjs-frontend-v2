@@ -1,0 +1,14 @@
+{
+  "test": [
+    "default dark, saved light and legacy system are preserved"
+  ],
+  "status": "passed",
+  "origin": "http://127.0.0.1:43182",
+  "counters": {
+    "contexts": 0,
+    "pages": 1,
+    "requests": 15
+  },
+  "events": [],
+  "unexpected": 0
+}

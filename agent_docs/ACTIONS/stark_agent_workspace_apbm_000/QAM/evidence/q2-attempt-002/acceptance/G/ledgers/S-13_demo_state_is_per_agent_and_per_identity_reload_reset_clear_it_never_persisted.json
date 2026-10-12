@@ -1,0 +1,14 @@
+{
+  "test": [
+    "S-13 demo state is per agent and per identity; reload/reset clear it; never persisted"
+  ],
+  "status": "passed",
+  "origin": "http://127.0.0.1:43181",
+  "counters": {
+    "contexts": 0,
+    "pages": 1,
+    "requests": 8
+  },
+  "events": [],
+  "unexpected": 0
+}

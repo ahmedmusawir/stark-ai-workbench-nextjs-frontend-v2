@@ -1,4 +1,4 @@
-import { test, expect, open, P, ROWS, ledger, count, pendingOf, resolveLast, record, stressPreset, setTheme, SHOTS } from './_qa';
+import { test, expect, open, P, ROWS, ledger, count, pendingOf, resolveLast, record, stressPreset, setTheme, SHOTS, CONTRAST_FN } from './_qa';
 import type { Page } from '@playwright/test';
 import path from 'node:path';
 
@@ -19,6 +19,16 @@ test('S-17 drawer (375 dark): focus contained, background inert, Escape/backdrop
   await page.setViewportSize({ width: 800, height: 800 }); await menu.click(); await expect(page.getByRole('dialog', { name: 'Navigation' })).toBeVisible();
   await page.setViewportSize({ width: 1200, height: 800 }); await expect(page.getByRole('dialog', { name: 'Navigation' })).toBeHidden();
   await expect.poll(() => page.evaluate(() => { const a = document.activeElement as HTMLElement | null; return a?.closest('.ws-desktop') ? (a.getAttribute('aria-current') || a.textContent) : null; })).toBe('page');
+  const f02: Record<string, unknown> = {}; await page.waitForTimeout(300); // lifecycle settle: focus must remain on the current item after modal teardown
+  f02.current = await page.evaluate(() => { const a = document.activeElement as HTMLElement; return { inDesktop: !!a.closest('.ws-desktop'), ariaCurrent: a.getAttribute('aria-current'), text: a.textContent?.trim(), visible: a.getClientRects().length > 0, portals: document.querySelectorAll('[data-workspace-portal] [role=dialog]').length, inert: (document.querySelector('.ws-root') as any).inert }; });
+  expect(f02.current).toMatchObject({ inDesktop: true, ariaCurrent: 'page', visible: true, portals: 0, inert: false });
+  // Visible fallback probe (QA DOM probe, not product code): with no current marker, focus lands on the first visible desktop link.
+  await page.setViewportSize({ width: 800, height: 800 }); await menu.click(); await expect(page.getByRole('dialog', { name: 'Navigation' })).toBeVisible();
+  await page.evaluate(() => document.querySelectorAll('.ws-desktop [aria-current]').forEach(e => e.removeAttribute('aria-current')));
+  await page.setViewportSize({ width: 1200, height: 800 }); await expect(page.getByRole('dialog', { name: 'Navigation' })).toBeHidden();
+  await expect.poll(() => page.evaluate(() => { const a = document.activeElement as HTMLElement | null; const first = [...document.querySelectorAll<HTMLElement>('.ws-desktop a')].find(e => e.getClientRects().length > 0); return !!a && a === first; })).toBe(true);
+  await page.waitForTimeout(300); f02.fallback = await page.evaluate(() => ({ text: (document.activeElement as HTMLElement).textContent?.trim(), inDesktop: !!(document.activeElement as HTMLElement).closest('.ws-desktop') }));
+  record('f02-breakpoint-focus', f02);
 });
 
 test('S-17 context dialog (1280 light) and nested demo dialog (768 dark): containment, nested Escape, restore', async ({ page }) => {
@@ -41,35 +51,97 @@ test('S-17 controls: accessible names and ≥44×44 targets; hidden desktop/mobi
       const r = (e as HTMLElement).getBoundingClientRect(); return r.width > 0 && r.height > 0 && getComputedStyle(e).visibility !== 'hidden'; }).map(e => {
       const r = e.getBoundingClientRect(), el = e as HTMLElement; const name = (el.getAttribute('aria-label') || el.textContent || (el.id && (document.querySelector(`label[for="${el.id}"]`)?.textContent)) || '').trim();
       const inProse = !!el.closest('.ws-turn') && el.tagName === 'A';
-      return { tag: el.tagName, name: name.slice(0, 40), w: Math.round(r.width), h: Math.round(r.height), inProse, skip: el.classList.contains('ws-skip') };
+      return { tag: el.tagName, name: name.slice(0, 40), w: r.width, h: r.height, inProse, skip: el.classList.contains('ws-skip') };
     }).filter(x => !x.name || (!x.inProse && !x.skip && (x.w < 44 || x.h < 44))));
+    if (w === 375) { report[`F03-crumbs-${v}`] = await page.evaluate(() => [...document.querySelectorAll<HTMLElement>('.ws-crumbs a')].filter(e => e.getClientRects().length > 0).map(e => { const r = e.getBoundingClientRect(); return { name: e.textContent?.trim(), w: r.width, h: r.height }; }));
+      report[`F03-overflow-${v}`] = await page.evaluate(() => document.documentElement.scrollWidth - innerWidth);
+      for (const c of report[`F03-crumbs-${v}`] as Array<{ w: number; h: number }>) { expect(c.w).toBeGreaterThanOrEqual(44); expect(c.h).toBeGreaterThanOrEqual(44); }
+      expect(report[`F03-overflow-${v}`] as number).toBeLessThanOrEqual(1); }
     const hiddenCopy = w < 1024 ? '.ws-desktop' : '.ws-mobile-top'; const hits: number[] = [];
     await page.locator('body').click({ position: { x: 1, y: 1 } }); for (let i = 0; i < 40; i++) { await page.keyboard.press('Tab'); if (await focusInside(page, hiddenCopy)) hits.push(i); }
     expect(hits).toEqual([]);
   }
   record('s17-names-targets', report);
-  const violations = Object.entries(report).flatMap(([k, v]) => (v as Array<Record<string, unknown>>).map(x => ({ view: k, ...x })));
+  const violations = Object.entries(report).filter(([k]) => !k.startsWith('F03-')).flatMap(([k, v]) => (v as Array<Record<string, unknown>>).map(x => ({ view: k, ...x })));
   expect.soft(violations, 'controls without names or below 44×44 (finding if non-empty)').toEqual([]);
   // CONTROL: tab-loop detector reports escape when no trap exists
   await page.setViewportSize({ width: 1280, height: 900 }); await open(page); await page.getByLabel('Find an agent').focus(); expect((await tabLoop(page, '.ws-filter', 5)).length).toBeGreaterThan(0);
 });
 
-test('S-18 disclosure aria/visibility, resize focus rescue, skip link, single aria-current, status regions, visible focus', async ({ page }) => {
+// Focus-indicator probe: actual focused element, indicator owner (element or :focus-within ancestor), outline geometry/colour,
+// adjacent background (first opaque ancestor behind the outline) and WCAG contrast. Threshold 3:1 = DESIGN/EVIDENCE.md focus boundary.
+const FOCUS_PROBE = `(() => { const contrast = ${CONTRAST_FN};
+  const rgba = s => { const m = s.match(/[\\d.]+/g); return m ? m.map(Number) : [0, 0, 0, 0]; };
+  const opaqueBg = el => { for (let e = el; e; e = e.parentElement) { const c = rgba(getComputedStyle(e).backgroundColor); if (c.length < 4 || c[3] > 0.5) return { color: getComputedStyle(e).backgroundColor, from: e.className && typeof e.className === 'string' ? e.className.split(' ')[0] : e.tagName }; } return { color: 'rgb(255, 255, 255)', from: 'canvas' }; };
+  const a = document.activeElement; if (!a || a === document.body) return null;
+  let owner = a; for (let i = 0, e = a; i < 4 && e; i++, e = e.parentElement) { const cs = getComputedStyle(e); if ((cs.outlineStyle !== 'none' && parseFloat(cs.outlineWidth) > 0) || cs.boxShadow !== 'none') { owner = e; break; } }
+  const cs = getComputedStyle(owner), r = owner.getBoundingClientRect(), ow = parseFloat(cs.outlineWidth) || 0, off = parseFloat(cs.outlineOffset) || 0;
+  const visible = (cs.outlineStyle !== 'none' && ow > 0) || cs.boxShadow !== 'none';
+  const bg = opaqueBg(owner.parentElement || owner); const ind = cs.outlineStyle !== 'none' && ow > 0 ? cs.outlineColor : (cs.boxShadow.match(/rgba?\\([^)]*\\)/) || ['rgba(0,0,0,0)'])[0];
+  return { tag: a.tagName, name: (a.getAttribute('aria-label') || a.textContent || '').trim().slice(0, 40), owner: owner === a ? 'self' : 'focus-within:' + (owner.className || owner.tagName).toString().split(' ')[0],
+    outlineStyle: cs.outlineStyle, outlineWidth: ow, outlineOffset: off, outlineColor: cs.outlineColor, boxShadow: cs.boxShadow, indicatorColor: ind,
+    indicatorBox: { w: r.width + 2 * (ow + off), h: r.height + 2 * (ow + off) }, adjacentBg: bg.color, adjacentFrom: bg.from, visible,
+    contrast: visible ? Math.round(contrast(rgba(ind), rgba(bg.color)) * 100) / 100 : 0 }; })()`;
+async function traverse(page: Page, stops: number) { const seen: Array<Record<string, unknown> | null> = [];
+  await page.evaluate(() => { (document.activeElement as HTMLElement | null)?.blur(); window.scrollTo(0, 0); });
+  for (let i = 0; i < stops; i++) { await page.keyboard.press('Tab'); seen.push(await page.evaluate(FOCUS_PROBE) as Record<string, unknown> | null); } return seen; }
+
+test('S-18 disclosure by breakpoint, resize focus rescue, keyboard skip link, single aria-current, readable pending status, real theme, measured focus contrast', async ({ page }) => {
+  test.setTimeout(120000); const out: Record<string, unknown> = {};
   await page.setViewportSize({ width: 375, height: 900 }); await open(page, { query: 'agent=kestrel', preset: P.rows });
-  const trig = page.getByRole('button', { name: 'Demo context', exact: true }); await expect(trig).toHaveAttribute('aria-expanded', 'false');
-  const id = await trig.getAttribute('aria-controls'); expect(await page.locator(`[id="${id}"]`).isHidden()).toBe(true);
-  await trig.click(); await expect(trig).toHaveAttribute('aria-expanded', 'true'); expect(await page.locator(`[id="${id}"]`).isVisible()).toBe(true); await trig.click();
-  await page.setViewportSize({ width: 1280, height: 900 }); await expect(trig).toHaveAttribute('aria-expanded', 'true');
+  await expect(page.getByText('Planning the launch').first()).toBeVisible();
+  const trig = page.locator('.ws-root .ws-disclosure-trigger'); await expect(trig).toHaveCount(1);
+  const id = await trig.getAttribute('aria-controls'); const content = page.locator(`[id="${id}"]`);
+  const state = async () => ({ trigVisible: await trig.isVisible(), expanded: await trig.getAttribute('aria-expanded'), contentVisible: await content.isVisible(),
+    focusableVisibleInContent: await content.evaluate(el => [...el.querySelectorAll('button,a[href],input,textarea,[tabindex="0"]')].filter(e => (e as HTMLElement).getClientRects().length > 0).length) });
+  // Mobile: a visible trigger whose aria-expanded matches content visibility; collapsed content leaves the tab order.
+  out.m375_collapsed = await state(); expect(out.m375_collapsed).toEqual({ trigVisible: true, expanded: 'false', contentVisible: false, focusableVisibleInContent: 0 });
+  const tabHitsCollapsed: number[] = []; await page.evaluate(() => (document.activeElement as HTMLElement | null)?.blur());
+  for (let i = 0; i < 40; i++) { await page.keyboard.press('Tab'); if (await content.evaluate(el => el.contains(document.activeElement))) tabHitsCollapsed.push(i); }
+  expect(tabHitsCollapsed).toEqual([]);
+  await trig.click(); out.m375_expanded = await state(); expect(out.m375_expanded).toMatchObject({ trigVisible: true, expanded: 'true', contentVisible: true });
+  await trig.click(); await expect(trig).toHaveAttribute('aria-expanded', 'false');
+  // Desktop: the trigger is hidden by the breakpoint while the content is visible; aria-expanded reports the visible content.
+  await page.setViewportSize({ width: 1280, height: 900 });
+  await expect.poll(state).toMatchObject({ trigVisible: false, expanded: 'true', contentVisible: true }); out.d1280 = await state();
+  // Focus on content hidden by resize moves to a valid destination (the now-visible trigger).
   await page.getByRole('button', { name: 'Edit demo instructions' }).focus(); await page.setViewportSize({ width: 375, height: 900 });
-  await expect(trig).toBeFocused();
-  await page.setViewportSize({ width: 1280, height: 900 }); await open(page, { query: 'agent=kestrel', preset: P.rows }); await page.getByLabel('Sibling input').focus(); await page.keyboard.press('Tab');
-  await expect(page.getByRole('link', { name: 'Skip to content' })).toBeFocused(); await page.keyboard.press('Enter'); await expect(page.locator('#ws-main')).toBeFocused();
-  expect(await page.locator('.ws-desktop [aria-current="page"]').count()).toBe(1); expect(await page.locator('[role=status]').count()).toBeGreaterThan(0);
-  const focusStyle: Record<string, unknown> = {};
-  for (const t of ['dark', 'light'] as const) { await page.evaluate(th => document.documentElement.className = th, t); await page.getByRole('button', { name: 'Actions for Planning the launch' }).focus(); await page.keyboard.press('Shift+Tab'); await page.keyboard.press('Tab');
-    focusStyle[t] = await page.evaluate(() => { const cs = getComputedStyle(document.activeElement!); return { outlineStyle: cs.outlineStyle, outlineWidth: cs.outlineWidth, outlineColor: cs.outlineColor, boxShadow: cs.boxShadow }; });
-    const f = focusStyle[t] as Record<string, string>; expect(f.outlineStyle !== 'none' || f.boxShadow !== 'none').toBe(true); }
-  record('s18-focus-style', focusStyle);
+  await expect(trig).toBeFocused(); out.rescue = await page.evaluate(() => document.activeElement?.className);
+  // Skip link from a clean page by keyboard only; main receives focus.
+  await page.setViewportSize({ width: 1280, height: 900 }); await open(page, { query: 'agent=kestrel', preset: P.rows }); await expect(page.getByText('Planning the launch').first()).toBeVisible();
+  expect(await page.locator('#qa-sibling').count()).toBe(0);
+  await page.evaluate(() => (document.activeElement as HTMLElement | null)?.blur()); await page.keyboard.press('Tab');
+  await expect(page.getByRole('link', { name: 'Skip to content' })).toBeFocused(); out.skipFocus = await page.evaluate(FOCUS_PROBE);
+  await page.keyboard.press('Enter'); await expect(page.locator('#ws-main')).toBeFocused();
+  out.ariaCurrent = await page.locator('.ws-desktop [aria-current="page"]').count(); expect(out.ariaCurrent).toBe(1);
+  // Readable status in an explicitly driven pending state (send deferred by the fixture).
+  await page.getByLabel('Start a new conversation').fill('status probe'); await page.getByLabel('Start a new conversation').press('Enter');
+  const status = page.getByRole('status').filter({ hasText: 'Waiting for a reply' }); await expect(status).toBeVisible();
+  out.pendingStatus = await status.evaluate(e => ({ text: (e.textContent || '').trim(), hidden: e.closest('[aria-hidden="true"]') !== null, live: e.getAttribute('role') }));
+  expect((out.pendingStatus as { hidden: boolean }).hidden).toBe(false);
+  await resolveLast(page, 'send', { status: 'sent', sessionId: 'S18', reply: 'status probe reply' }); await expect(page.getByText('status probe reply')).toBeVisible();
+  // Both themes through the product theme control (next-themes), verified as applied, then dynamic keyboard focus measured.
+  const focus: Record<string, unknown> = {};
+  for (const t of ['light', 'dark'] as const) {
+    await open(page, { query: 'agent=kestrel', preset: P.rows }); await expect(page.getByText('Planning the launch').first()).toBeVisible();
+    const cur = await page.evaluate(() => document.documentElement.classList.contains('dark') ? 'dark' : 'light');
+    if (cur !== t) await page.locator('.ws-desktop').getByRole('button', { name: t === 'light' ? 'Switch to light mode' : 'Switch to dark mode' }).click();
+    await expect.poll(() => page.evaluate(() => document.documentElement.className)).toContain(t);
+    const applied = await page.evaluate(() => ({ html: document.documentElement.className, stored: localStorage.getItem('theme'), rootBg: getComputedStyle(document.querySelector('.ws-root')!).backgroundColor }));
+    const stops = await traverse(page, 16); const measured = stops.filter(Boolean) as Array<{ visible: boolean; contrast: number; name: string }>;
+    focus[t] = { applied, stops };
+    expect(measured.length).toBeGreaterThan(8);
+    expect(measured.filter(s => !s.visible || s.contrast < 3), `focus indicators below 3:1 or invisible (${t})`).toEqual([]);
+  }
+  out.focus = focus;
+  // CONTROLS (disposable page styles, not product): removed focus indicator and low-contrast indicator must both be detected.
+  await page.addStyleTag({ content: '.ws-root *:focus-visible, .ws-root *:focus-within { outline: none !important; box-shadow: none !important; }' });
+  const removed = (await traverse(page, 6)).filter(Boolean) as Array<{ visible: boolean }>; expect(removed.some(s => !s.visible)).toBe(true);
+  await open(page, { query: 'agent=kestrel', preset: P.rows }); await expect(page.getByText('Planning the launch').first()).toBeVisible();
+  await page.addStyleTag({ content: '.ws-root *:focus-visible { outline-color: hsl(var(--sidebar)) !important; }' });
+  const low = (await traverse(page, 6)).filter(Boolean) as Array<{ contrast: number }>; expect(low.some(s => s.contrast < 3)).toBe(true);
+  out.controls = { removedDetected: removed.filter(s => !s.visible).length, lowContrastDetected: low.filter(s => s.contrast < 3).length };
+  record('s18-disclosure-status-focus', out);
 });
 
 test('S-19 copy payloads, blocked clipboard fallback, speech lifecycle, unavailable explanation, no autoplay', async ({ browser }) => {

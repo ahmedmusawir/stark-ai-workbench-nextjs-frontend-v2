@@ -44,6 +44,7 @@ test('CLASS C seam (real store, storage getter throws): sign-out must still navi
   const spy = jest.spyOn(window, 'localStorage', 'get').mockImplementation(() => { throw new ReferenceError('storage unavailable'); });
   const result: { renderThrew?: string; resetThrew?: string; pushed: string[]; rendered: boolean } = { pushed: [], rendered: false };
   let isolatedOnSignOut: (() => void) | undefined;
+  let disposeRoot: (() => void) | undefined; // attempt-002: deterministic root disposal even on failure
   try {
     jest.isolateModules(() => {
       const React = require('react'); const { createRoot } = require('react-dom/client');
@@ -51,14 +52,15 @@ test('CLASS C seam (real store, storage getter throws): sign-out must still navi
       const { useChatStore: store } = require('@/store/chatStore');
       const before = seen.length;
       nav.push.mockImplementation((u: string) => result.pushed.push(u)); auth.logout.mockResolvedValue(undefined);
-      try { React.act(() => { createRoot(document.createElement('div')).render(React.createElement(E)); }); } catch (e) { result.renderThrew = String(e); }
+      const root = createRoot(document.createElement('div')); disposeRoot = () => React.act(() => root.unmount());
+      try { React.act(() => { root.render(React.createElement(E)); }); } catch (e) { result.renderThrew = String(e); }
       result.rendered = seen.length > before; isolatedOnSignOut = seen[seen.length - 1].onSignOut as () => void;
       try { store.getState().reset(); } catch (e) { result.resetThrew = String(e); } // direct real-store probe, no-storage case
     });
     const rejections: string[] = []; const h = (e: unknown) => rejections.push(String(e)); process.on('unhandledRejection', h);
     isolatedOnSignOut!(); await new Promise(r => setTimeout(r, 50)); process.off('unhandledRejection', h);
     console.log('CLASS_C_SEAM_RESULT ' + JSON.stringify({ ...result, unhandledRejections: rejections }));
-  } finally { spy.mockRestore(); }
+  } finally { try { disposeRoot?.(); } finally { spy.mockRestore(); } }
   expect(result.rendered).toBe(true); expect(result.renderThrew).toBeUndefined();
   expect(result.pushed).toEqual(['/auth']);
 });

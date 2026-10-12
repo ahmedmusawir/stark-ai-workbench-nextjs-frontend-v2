@@ -1,0 +1,12 @@
+{
+  "archive": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/HANDOFFS/Q5_attempt-002.zip",
+  "archive_sha256": "45e91d29f449eadc8813ae84dff17882a453f0eb84f2337975369f5c24ca20f1",
+  "archive_bytes": 168003,
+  "members": 32,
+  "file_index_sha256": "38172a325b5d621446543d2cd5b2d81f685a74d9762e9ff139e1b8d60c1eadf7",
+  "crc_testzip": "OK",
+  "membership_and_hashes_match_index": true,
+  "downloads_copy": "/home/moose/Downloads/APBM000_Q5_attempt-002_2026-10-11_192614_BDT.zip",
+  "downloads_copy_sha256": "45e91d29f449eadc8813ae84dff17882a453f0eb84f2337975369f5c24ca20f1",
+  "secret_pattern_scan": "generic credential patterns; 0 hits (exporter source exempt); .env.local never read"
+}

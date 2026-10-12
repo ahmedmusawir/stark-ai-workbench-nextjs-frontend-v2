@@ -1,0 +1,60 @@
+Claudy — QA Lead disposition: ADDENDUM-001 ACCEPTED.
+Execute bounded Q5 under the existing Director release.
+
+Candidate:
+8eb5789d9021ad06c15db36db74419a2b5c68fc5
+
+Preserve D4 ALLOW and D7 OMIT. Gate Q remains PENDING.
+Record this instruction under QAM/HANDOFFS.
+
+Authoritative Q5 proposal:
+QAM/evidence/q2-attempt-002-addendum-001/q5-proposal/Q5_PROPOSAL_PATHS.json
+SHA-256:
+242f95eb508e55e5a81f3e660197857fded1d730e97494d92ebd181590d6e7ed
+
+Authorization and amendments:
+
+1. Approve root-file correction option A.
+   Verify current bytes against ROOT_FILES_ACCOUNT.json first.
+   Preserve the exact 1,030-byte prepend in QAM/QA_RECOVERY.md.
+   Remove only that prepend from root RECOVERY.md; the remainder
+   must hash to:
+   edfffe35c9226c36ce8b8e12acff2375617b664fa3d7ec9cc94a16a03d83fcb8
+   Remove root session_2026-10-11.md only after confirming its
+   reviewed hash and its preserved QAM evidence copy.
+   Do not overwrite an existing, different QA_RECOVERY.md.
+   Leave committed historical root records unchanged.
+
+2. Delete only the five proposal rows whose category is "cache"
+   and proposed_action is exactly "DELETE".
+   Verify each exact path, untracked status and recorded hash.
+   Preserve the failed-run cache and all other evidence.
+
+3. Retain all instruments, including the eight Engineer-suite
+   copies. This instruction grants no post-Gate-Q deletion.
+   Retain Stage E output. Remove the proposed dependency on a
+   Director comfort check: D7 remains OMIT.
+   All other RETAIN and NO QA ACTION dispositions stand.
+
+4. Preserve the original proposal unchanged. Record this amended
+   disposition separately. A refreshed inventory does not expand
+   deletion authority. Stop on unexpected changes or hash mismatch.
+
+5. Keep all new QA recovery/session records inside QAM.
+   This resolves the root-protocol conflict for this QA execution;
+   broader repository policy belongs to Architect/Director.
+
+Verification and return:
+- Capture before/after hashes and every cleanup action under QAM.
+- Update the candidate-bound Q5 status and inventory.
+- Explicitly account for new QAM records in the gate inventory;
+  preserve prior inventories/freezes and all gate checks.
+- Run the identity gate after cleanup. GATE_STOP means STOP.
+- Confirm HEAD remains the exact candidate, root placement is
+  corrected, and no product/test/dependency changes occurred.
+- Return an indexed Q5 completion ZIP with SHA-256 and receipt,
+  preserved under QAM with a matching Downloads handoff copy.
+
+No repeated addendum, full suites, production build, live-service
+testing, Git mutation, engineering closeout or Gate Q declaration.
+Return to QA Lead for certification review.

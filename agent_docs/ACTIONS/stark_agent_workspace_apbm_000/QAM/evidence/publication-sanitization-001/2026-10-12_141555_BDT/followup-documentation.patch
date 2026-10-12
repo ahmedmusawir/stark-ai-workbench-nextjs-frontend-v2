@@ -1,0 +1,394 @@
+diff --git a/agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/QAM_STATE.json b/agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/QAM_STATE.json
+--- a/agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/QAM_STATE.json
++++ b/agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/QAM_STATE.json
+@@ -1,7 +1,7 @@
+ {
+   "module_id": "stark_agent_workspace_apbm_000",
+   "packet_version": "1.0",
+-  "stage": "READY_FOR_ARCHITECT_REVIEW_DIRECTOR_DISPOSITION",
++  "stage": "READY_FOR_ARCHITECT_REVIEW_SANITIZED_CLOSEOUT",
+   "evidence_baseline_sha": "20ef380bdd6eed5e111d953d6404992add7a88a6",
+   "product_candidate_sha": "8eb5789d9021ad06c15db36db74419a2b5c68fc5",
+   "qa_head_sha": "8eb5789d9021ad06c15db36db74419a2b5c68fc5",
+@@ -21,7 +21,7 @@
+   ],
+   "attempt": 2,
+   "last_completed_checkpoint": "Gate Q and accepted Q5 for exact candidate",
+-  "next_action": "Architect reviews bounded engineering closeout; Tony decides retention/publication of held digest-bearing originals and archives, then reviews selective Git scope. No further independent acceptance execution or cleanup.",
++  "next_action": "Architect reviews updated sanitized closeout and selective inventory; Tony retains Git integration. Retention decision approved and implemented, no repeat decision request. Cody owns APBM_000 until explicit handoff; APBM_001 not launched.",
+   "gate_q": "PASS",
+   "note": "Routing aid only; no field grants permission without its owner record.",
+   "nonblocking": [
+@@ -229,14 +229,262 @@
+   "process_verdict": "NONCOMPLIANT",
+   "engineering_closeout": "IN PROGRESS",
+   "active_writer": "Cody",
+-  "claudy_status": "PAUSED",
++  "claudy_status": "PAUSED in APBM_000 checkout",
+   "ownership_transfer_record": "HANDOFFS/ENGINEERING_CLOSEOUT_001_OWNERSHIP_TRANSFER.md",
+   "git_integration": "PENDING TONY",
+   "apbm_001": "NOT LAUNCHED",
+   "D4": "ALLOW",
+   "D7": "OMIT",
+-  "publication_hold_paths_record": "evidence/engineering-closeout-001/2026-10-12_130632_BDT/publication-hold-paths.json",
+-  "closeout_review_readiness": "READY FOR ARCHITECT REVIEW / DIRECTOR DISPOSITION",
+-  "engineering_closeout_report": "HANDOFFS/ENGINEERING_CLOSEOUT_001_RETURN.md",
+-  "carried_forward_issues": "HANDOFFS/APBM_001_CARRIED_FORWARD_ISSUES_2026-10-12.md"
++  "closeout_review_readiness": "READY FOR ARCHITECT REVIEW \u2014 AUTHORIZED RETENTION FOLLOW-UP COMPLETE",
++  "engineering_closeout_report": "HANDOFFS/ENGINEERING_CLOSEOUT_001_SANITIZATION_RETURN_2026-10-12.md",
++  "carried_forward_issues": "HANDOFFS/APBM_001_CARRIED_FORWARD_ISSUES_2026-10-12.md",
++  "history_before_retention_sanitization_followup_2026_10_12": {
++    "module_id": "stark_agent_workspace_apbm_000",
++    "packet_version": "1.0",
++    "stage": "READY_FOR_ARCHITECT_REVIEW_DIRECTOR_DISPOSITION",
++    "evidence_baseline_sha": "20ef380bdd6eed5e111d953d6404992add7a88a6",
++    "product_candidate_sha": "8eb5789d9021ad06c15db36db74419a2b5c68fc5",
++    "qa_head_sha": "8eb5789d9021ad06c15db36db74419a2b5c68fc5",
++    "qa_head_note": "Actual checkout HEAD equals certified candidate; outstanding independent QA and engineering-closeout documentation is uncommitted and separately inventoried.",
++    "qa_branch": "qa/frontend-apbm-000",
++    "plan_id": "QA-APBM000-PLAN v0.3 (Lead-approved 2026-10-11)",
++    "plan_sha256": "6b3f5df3e89c6a873684248b4ce790173726218c6379161c100564f785199c04",
++    "superseded_plan_sha256": "8ddb743f1be09d624bf79c8a602ad05fbd3cffbffbc2d8c6cfbaee16f8b80337",
++    "acceptance_sha256": "57f8d9f4dec8ca826326067254b0916ef65ccd51b635a8ac6ead73e8ab469fcc",
++    "rulings_sha256": "99d4c40f7094106f4386d4d8ff5535228feb653dcbe0fd948a14a0ff1ec3b36f",
++    "qa_lead_approval_record": "HANDOFFS/LEAD_RETEST_002_APPROVAL_2026-10-11.md + HANDOFFS/LEAD_RETEST_002_BINDING_2026-10-11.json (06aed917\u2026)",
++    "director_q2_release_record": "HANDOFFS/DIRECTOR_Q2_RELEASE_002_2026-10-11_174045_BDT.txt (adb0a642\u2026; D4 ALLOW, D7 OMIT)",
++    "director_pending": [],
++    "q2_blockers": [],
++    "open_findings": [
++      "FINDINGS/DIRECTOR-OBS-001.md (+ addenda 001-003; UNTRIAGED-live)"
++    ],
++    "attempt": 2,
++    "last_completed_checkpoint": "Gate Q and accepted Q5 for exact candidate",
++    "next_action": "Architect reviews bounded engineering closeout; Tony decides retention/publication of held digest-bearing originals and archives, then reviews selective Git scope. No further independent acceptance execution or cleanup.",
++    "gate_q": "PASS",
++    "note": "Routing aid only; no field grants permission without its owner record.",
++    "nonblocking": [
++      "Module-root QA_HANDOFF.md pointer present: Architect/Cody placement correction",
++      "N1 acknowledgement"
++    ],
++    "q2_prep": "evidence/q2-prep-002/identity-post-restore.json raw_verdict PRODUCT_EQUIVALENT (0 blocking); q2-prep-001 preserved",
++    "resolved_2026_10_05": [
++      "manifest restored by Tony (sha 638e95a1 = candidate)",
++      "dev server already stopped (no Executor kill)",
++      "agents.manifest_hermes.json backed up to ~/APBM000_backups/agents.manifest_hermes_2026-10-05_184317.json and removed",
++      "next-env.d.ts restored to pinned 7b550dda"
++    ],
++    "diagnostics": "evidence/q2-prep-003: Jest at f21564c 286 pass / 1 fail (only class C remains); identity raw PRODUCT_DRIFT_OR_IDENTITY_FAILURE (config only)",
++    "standing_director_constraint": "Executor never changes/restores/renames config/agents.manifest*.json",
++    "architect_amendment": "HANDOFFS/ARCHITECT_REMOTE_ROSTER_AMENDMENT_2026-10-05.md sha256 57924e3f046bc521b3a91fe78cd17087e8b2f3dbd6aa05b11439a26cf459c7d9 (index-verified 9/9)",
++    "product_candidate_sha_note": "Lead-approved 2026-10-07 (HANDOFFS/LEAD_REMOTE_ROSTER_APPROVAL_2026-10-07.md). 22ce03b is the historical product reference; baseline 20ef380 unchanged.",
++    "rebind_evidence": "evidence/remote-roster-rebind-001 (Lead-reviewed) and remote-roster-rebind-002 (Executor attempt 002, 2026-10-07 18:30; not in Lead review set)",
++    "last_preparation_record": "RESPONSES report 2026-10-07 (prep for revised release)",
++    "acceptance_testing_started_this_run": false,
++    "effective_plan": "QA-APBM000-PLAN v0.3 (6b3f5df3\u2026) + LEAD_RETEST_002_APPROVAL (72e1970d\u2026) + binding (06aed917\u2026)",
++    "binding_hashes_record": "HANDOFFS/LEAD_REMOTE_ROSTER_BINDING_HASHES_2026-10-07.json (0ccefad2...; all 9 pins verified locally 2026-10-07)",
++    "inherited_failures": "none active for 8eb5789d (no waiver used)",
++    "q2_summary": "attempt-002: gate post-build PASS 17/17; tsc 0; build 0 (first successful normal offline build); Jest 290/290; QA Jest 31/31; browser 34/34; secondary 33/33 + 27/27",
++    "proposed_ac_grades": "attempt-002: 23 PASS; AC000-24 NOT RUN",
++    "q2_package": "HANDOFFS/Q2_attempt-002.zip",
++    "concurrency_note": "2026-10-08 09:07 a second Executor session wrote a stale RETURN_NOTE (pre-approval state). Preserved; superseded by session_2026-10-07.md 09:09 entry. One writer at a time.",
++    "history_routing_attempt_001": {
++      "stage": "Q2_ATTEMPT_001_EXECUTED_AWAITING_LEAD_ADJUDICATION",
++      "product_candidate_sha": "f21564cacb563ecddbf78b1685086c9489bf1c26",
++      "qa_head_sha": "24ccf30 (Q2 attempt 001 committed and pushed; 253 QAM paths)",
++      "plan_id": "QA-APBM000-PLAN v0.2 (Lead-approved)",
++      "plan_sha256": "8ddb743f1be09d624bf79c8a602ad05fbd3cffbffbc2d8c6cfbaee16f8b80337",
++      "attempt": 1,
++      "last_completed_checkpoint": "Q2 (attempt 001)",
++      "next_action": "QA Lead adjudicates Q2 attempt 001 (findings, build route, instrument gaps). No Q5 before Lead disposition.",
++      "q2_summary": "Q2-0 PASS; tsc 0; Jest 286/1 (exact C); QA Jest 27/28; build BLOCKED; static PASS; browser run2 24/29; engineer copy 33/33; post-run PRODUCT_EQUIVALENT",
++      "proposed_ac_grades": "18 PASS (3 qualified); AC000-13 FAIL; AC000-17 FAIL; AC000-20 BLOCKED; AC000-22 BLOCKED; AC000-24 NOT RUN",
++      "q2_package": "HANDOFFS/Q2_attempt-001.zip",
++      "effective_plan": "QA-APBM000-PLAN v0.2 (8ddb743f...) + Lead binding addendum LEAD_REMOTE_ROSTER_APPROVAL_2026-10-07.md (c0380dfc...) + Architect amendment (57924e3f...)",
++      "binding_hashes_record": "HANDOFFS/LEAD_REMOTE_ROSTER_BINDING_HASHES_2026-10-07.json (0ccefad2...; all 9 pins verified locally 2026-10-07)",
++      "director_q2_release_record": "HANDOFFS/DIRECTOR_Q2_RELEASE_REVISED_2026-10-07_190418.md (verbatim; D4 ALLOW, D7 OMIT)",
++      "open_findings": [
++        "FINDINGS/Q2-F01_signout_storage_unavailable.md",
++        "FINDINGS/Q2-F02_drawer_breakpoint_focus_target.md",
++        "FINDINGS/Q2-F03_breadcrumb_target_size.md",
++        "FINDINGS/Q2-F04_manifest_test_bundle_coverage.md",
++        "FINDINGS/DIRECTOR-OBS-001.md (+ addenda 001, 002; UNTRIAGED-live)"
++      ]
++    },
++    "attempt_002_evidence": "evidence/q2-attempt-002/ (EXECUTION_REPORT.md, AC_MATRIX.md, INSTRUMENT_RETRY_LEDGER.md, INDEX.md)",
++    "history_routing_attempt_002_pre_disposition": {
++      "stage": "Q2_ATTEMPT_002_EXECUTED_AWAITING_LEAD_DISPOSITION",
++      "next_action": "QA Lead dispositions attempt-002 findings (F01\u2013F04 retest PASS, closure recommended), next-env/E-before-B disposition, then Q5 authorization and Gate Q. No Q5 before Lead disposition.",
++      "open_findings": [
++        "FINDINGS/Q2-F01..F04 (+ _RETEST-002 addenda recommending closure)",
++        "FINDINGS/DIRECTOR-OBS-001.md (+ addenda 001-003; UNTRIAGED-live)"
++      ]
++    },
++    "lead_disposition_attempt_002": "HANDOFFS/LEAD_Q2_ATTEMPT_002_DISPOSITION_ADDENDUM_INSTRUCTION_2026-10-11_182616_BDT.txt (1617184f\u2026): F01\u2013F04 RESOLVED within tested fixture scope; build/regression/font diagnostic accepted; OS-Inter qualification retained; next-env transition accepted for this candidate; proceeding after GATE_STOP recorded as process deviation PD-002-01 (no future overrides)",
++    "resolved_findings": [
++      "Q2-F01",
++      "Q2-F02",
++      "Q2-F03",
++      "Q2-F04 (Lead disposition appended 2026-10-11)"
++    ],
++    "addendum_001": "evidence/q2-attempt-002-addendum-001/ (forbidden-import control PASS; root-file placement proposal; Q5 proposal NOT EXECUTED)",
++    "history_routing_pre_q5": {
++      "stage": "Q2_ATTEMPT_002_LEAD_DISPOSITIONED_ADDENDUM_001_RETURNED",
++      "next_action": "QA Lead reviews addendum 001, rules on root-file placement (proposal A) and authorizes Q5 per Q5_PROPOSAL; then Gate Q. No Q5 before authorization."
++    },
++    "q5": "evidence/q5-attempt-002/ (Q5_STATUS.md, Q5_ACTIONS.json, Q5_AMENDED_DISPOSITION.md, POST_Q5_INVENTORY.json); authorization HANDOFFS/LEAD_Q5_AUTHORIZATION_2026-10-11_192313_BDT.txt (307e9d86\u2026)",
++    "q5_package": "HANDOFFS/Q5_attempt-002.zip",
++    "qa_recovery_pointer": "QA_RECOVERY.md (byte-exact preserved root prepend); root RECOVERY.md restored to HEAD bytes edfffe35\u2026",
++    "history_routing_pre_reconciliation": {
++      "stage": "Q5_ATTEMPT_002_COMPLETE_AWAITING_GATE_Q",
++      "next_action": "QA Lead certification review and Gate Q decision. Architect owns engineering/phase closeout; Tony owns Git."
++    },
++    "q5_reconciliation": "evidence/q5-attempt-002/reconciliation-2026-10-12/ (ruling HANDOFFS/LEAD_Q5_RECONCILIATION_RULING_2026-10-12_115503_BDT.txt)",
++    "process_deviations": [
++      "PD-002-01 proceeded after GATE_STOP without ruling (no future override)",
++      "PD-Q5-01 .env.local digest computed by Q5 proposal generator (disclosed 2026-10-12; for Lead/Director decision)"
++    ],
++    "current_review_package": "HANDOFFS/Q5_attempt-002_REVIEW-002.zip (earlier Q5_attempt-002.zip preserved unchanged)",
++    "session_closed": null,
++    "recovery_entry": "QA_RECOVERY.md latest append \u2192 QAM_STATE.json \u2192 astra_session_2026-10-12.md",
++    "current_review_package_sha256": "86b060bcb43449bb96f7768620281eba1a03edd60ef28315227ef9eb3538bb65",
++    "history_routing_pre_engineering_closeout_2026_10_12": {
++      "module_id": "stark_agent_workspace_apbm_000",
++      "packet_version": "1.0",
++      "stage": "Q5_ATTEMPT_002_RECONCILED_AWAITING_GATE_Q",
++      "evidence_baseline_sha": "20ef380bdd6eed5e111d953d6404992add7a88a6",
++      "product_candidate_sha": "8eb5789d9021ad06c15db36db74419a2b5c68fc5",
++      "qa_head_sha": "8eb5789d9021ad06c15db36db74419a2b5c68fc5 (execution HEAD = candidate; attempt-002 QA records uncommitted by design per Lead approval)",
++      "qa_head_note": "a4abd2a is a committed documentation successor of proposed f21564c: 37 QAM paths, 1 historical RESPONSES document, zero product/config/test/dependency delta. Fresh raw identity evidence under remote-roster-rebind-002.",
++      "qa_branch": "qa/frontend-apbm-000",
++      "plan_id": "QA-APBM000-PLAN v0.3 (Lead-approved 2026-10-11)",
++      "plan_sha256": "6b3f5df3e89c6a873684248b4ce790173726218c6379161c100564f785199c04",
++      "superseded_plan_sha256": "8ddb743f1be09d624bf79c8a602ad05fbd3cffbffbc2d8c6cfbaee16f8b80337",
++      "acceptance_sha256": "57f8d9f4dec8ca826326067254b0916ef65ccd51b635a8ac6ead73e8ab469fcc",
++      "rulings_sha256": "99d4c40f7094106f4386d4d8ff5535228feb653dcbe0fd948a14a0ff1ec3b36f",
++      "qa_lead_approval_record": "HANDOFFS/LEAD_RETEST_002_APPROVAL_2026-10-11.md + HANDOFFS/LEAD_RETEST_002_BINDING_2026-10-11.json (06aed917\u2026)",
++      "director_q2_release_record": "HANDOFFS/DIRECTOR_Q2_RELEASE_002_2026-10-11_174045_BDT.txt (adb0a642\u2026; D4 ALLOW, D7 OMIT)",
++      "director_pending": [],
++      "q2_blockers": [],
++      "open_findings": [
++        "FINDINGS/DIRECTOR-OBS-001.md (+ addenda 001-003; UNTRIAGED-live)"
++      ],
++      "attempt": 2,
++      "last_completed_checkpoint": "Q5 (attempt 002)",
++      "next_action": "QA Lead certification review of the Q5 reconciliation package; Gate Q decision with separate process verdict. Tony owns Git; Architect owns closeout.",
++      "gate_q": "PENDING",
++      "note": "Routing aid only; no field grants permission without its owner record.",
++      "nonblocking": [
++        "Module-root QA_HANDOFF.md pointer present: Architect/Cody placement correction",
++        "N1 acknowledgement"
++      ],
++      "q2_prep": "evidence/q2-prep-002/identity-post-restore.json raw_verdict PRODUCT_EQUIVALENT (0 blocking); q2-prep-001 preserved",
++      "resolved_2026_10_05": [
++        "manifest restored by Tony (sha 638e95a1 = candidate)",
++        "dev server already stopped (no Executor kill)",
++        "agents.manifest_hermes.json backed up to ~/APBM000_backups/agents.manifest_hermes_2026-10-05_184317.json and removed",
++        "next-env.d.ts restored to pinned 7b550dda"
++      ],
++      "diagnostics": "evidence/q2-prep-003: Jest at f21564c 286 pass / 1 fail (only class C remains); identity raw PRODUCT_DRIFT_OR_IDENTITY_FAILURE (config only)",
++      "standing_director_constraint": "Executor never changes/restores/renames config/agents.manifest*.json",
++      "architect_amendment": "HANDOFFS/ARCHITECT_REMOTE_ROSTER_AMENDMENT_2026-10-05.md sha256 57924e3f046bc521b3a91fe78cd17087e8b2f3dbd6aa05b11439a26cf459c7d9 (index-verified 9/9)",
++      "product_candidate_sha_note": "Lead-approved 2026-10-07 (HANDOFFS/LEAD_REMOTE_ROSTER_APPROVAL_2026-10-07.md). 22ce03b is the historical product reference; baseline 20ef380 unchanged.",
++      "rebind_evidence": "evidence/remote-roster-rebind-001 (Lead-reviewed) and remote-roster-rebind-002 (Executor attempt 002, 2026-10-07 18:30; not in Lead review set)",
++      "last_preparation_record": "RESPONSES report 2026-10-07 (prep for revised release)",
++      "acceptance_testing_started_this_run": true,
++      "effective_plan": "QA-APBM000-PLAN v0.3 (6b3f5df3\u2026) + LEAD_RETEST_002_APPROVAL (72e1970d\u2026) + binding (06aed917\u2026)",
++      "binding_hashes_record": "HANDOFFS/LEAD_REMOTE_ROSTER_BINDING_HASHES_2026-10-07.json (0ccefad2...; all 9 pins verified locally 2026-10-07)",
++      "inherited_failures": "none active for 8eb5789d (no waiver used)",
++      "q2_summary": "attempt-002: gate post-build PASS 17/17; tsc 0; build 0 (first successful normal offline build); Jest 290/290; QA Jest 31/31; browser 34/34; secondary 33/33 + 27/27",
++      "proposed_ac_grades": "attempt-002: 23 PASS; AC000-24 NOT RUN",
++      "q2_package": "HANDOFFS/Q2_attempt-002.zip",
++      "concurrency_note": "2026-10-08 09:07 a second Executor session wrote a stale RETURN_NOTE (pre-approval state). Preserved; superseded by session_2026-10-07.md 09:09 entry. One writer at a time.",
++      "history_routing_attempt_001": {
++        "stage": "Q2_ATTEMPT_001_EXECUTED_AWAITING_LEAD_ADJUDICATION",
++        "product_candidate_sha": "f21564cacb563ecddbf78b1685086c9489bf1c26",
++        "qa_head_sha": "24ccf30 (Q2 attempt 001 committed and pushed; 253 QAM paths)",
++        "plan_id": "QA-APBM000-PLAN v0.2 (Lead-approved)",
++        "plan_sha256": "8ddb743f1be09d624bf79c8a602ad05fbd3cffbffbc2d8c6cfbaee16f8b80337",
++        "attempt": 1,
++        "last_completed_checkpoint": "Q2 (attempt 001)",
++        "next_action": "QA Lead adjudicates Q2 attempt 001 (findings, build route, instrument gaps). No Q5 before Lead disposition.",
++        "q2_summary": "Q2-0 PASS; tsc 0; Jest 286/1 (exact C); QA Jest 27/28; build BLOCKED; static PASS; browser run2 24/29; engineer copy 33/33; post-run PRODUCT_EQUIVALENT",
++        "proposed_ac_grades": "18 PASS (3 qualified); AC000-13 FAIL; AC000-17 FAIL; AC000-20 BLOCKED; AC000-22 BLOCKED; AC000-24 NOT RUN",
++        "q2_package": "HANDOFFS/Q2_attempt-001.zip",
++        "effective_plan": "QA-APBM000-PLAN v0.2 (8ddb743f...) + Lead binding addendum LEAD_REMOTE_ROSTER_APPROVAL_2026-10-07.md (c0380dfc...) + Architect amendment (57924e3f...)",
++        "binding_hashes_record": "HANDOFFS/LEAD_REMOTE_ROSTER_BINDING_HASHES_2026-10-07.json (0ccefad2...; all 9 pins verified locally 2026-10-07)",
++        "director_q2_release_record": "HANDOFFS/DIRECTOR_Q2_RELEASE_REVISED_2026-10-07_190418.md (verbatim; D4 ALLOW, D7 OMIT)",
++        "open_findings": [
++          "FINDINGS/Q2-F01_signout_storage_unavailable.md",
++          "FINDINGS/Q2-F02_drawer_breakpoint_focus_target.md",
++          "FINDINGS/Q2-F03_breadcrumb_target_size.md",
++          "FINDINGS/Q2-F04_manifest_test_bundle_coverage.md",
++          "FINDINGS/DIRECTOR-OBS-001.md (+ addenda 001, 002; UNTRIAGED-live)"
++        ]
++      },
++      "attempt_002_evidence": "evidence/q2-attempt-002/ (EXECUTION_REPORT.md, AC_MATRIX.md, INSTRUMENT_RETRY_LEDGER.md, INDEX.md)",
++      "history_routing_attempt_002_pre_disposition": {
++        "stage": "Q2_ATTEMPT_002_EXECUTED_AWAITING_LEAD_DISPOSITION",
++        "next_action": "QA Lead dispositions attempt-002 findings (F01\u2013F04 retest PASS, closure recommended), next-env/E-before-B disposition, then Q5 authorization and Gate Q. No Q5 before Lead disposition.",
++        "open_findings": [
++          "FINDINGS/Q2-F01..F04 (+ _RETEST-002 addenda recommending closure)",
++          "FINDINGS/DIRECTOR-OBS-001.md (+ addenda 001-003; UNTRIAGED-live)"
++        ]
++      },
++      "lead_disposition_attempt_002": "HANDOFFS/LEAD_Q2_ATTEMPT_002_DISPOSITION_ADDENDUM_INSTRUCTION_2026-10-11_182616_BDT.txt (1617184f\u2026): F01\u2013F04 RESOLVED within tested fixture scope; build/regression/font diagnostic accepted; OS-Inter qualification retained; next-env transition accepted for this candidate; proceeding after GATE_STOP recorded as process deviation PD-002-01 (no future overrides)",
++      "resolved_findings": [
++        "Q2-F01",
++        "Q2-F02",
++        "Q2-F03",
++        "Q2-F04 (Lead disposition appended 2026-10-11)"
++      ],
++      "addendum_001": "evidence/q2-attempt-002-addendum-001/ (forbidden-import control PASS; root-file placement proposal; Q5 proposal NOT EXECUTED)",
++      "history_routing_pre_q5": {
++        "stage": "Q2_ATTEMPT_002_LEAD_DISPOSITIONED_ADDENDUM_001_RETURNED",
++        "next_action": "QA Lead reviews addendum 001, rules on root-file placement (proposal A) and authorizes Q5 per Q5_PROPOSAL; then Gate Q. No Q5 before authorization."
++      },
++      "q5": "evidence/q5-attempt-002/ (Q5_STATUS.md, Q5_ACTIONS.json, Q5_AMENDED_DISPOSITION.md, POST_Q5_INVENTORY.json); authorization HANDOFFS/LEAD_Q5_AUTHORIZATION_2026-10-11_192313_BDT.txt (307e9d86\u2026)",
++      "q5_package": "HANDOFFS/Q5_attempt-002.zip",
++      "qa_recovery_pointer": "QA_RECOVERY.md (byte-exact preserved root prepend); root RECOVERY.md restored to HEAD bytes edfffe35\u2026",
++      "history_routing_pre_reconciliation": {
++        "stage": "Q5_ATTEMPT_002_COMPLETE_AWAITING_GATE_Q",
++        "next_action": "QA Lead certification review and Gate Q decision. Architect owns engineering/phase closeout; Tony owns Git."
++      },
++      "q5_reconciliation": "evidence/q5-attempt-002/reconciliation-2026-10-12/ (ruling HANDOFFS/LEAD_Q5_RECONCILIATION_RULING_2026-10-12_115503_BDT.txt)",
++      "process_deviations": [
++        "PD-002-01 proceeded after GATE_STOP without ruling (no future override)",
++        "PD-Q5-01 .env.local digest computed by Q5 proposal generator (disclosed 2026-10-12; for Lead/Director decision)"
++      ],
++      "current_review_package": "HANDOFFS/Q5_attempt-002_REVIEW-002.zip (earlier Q5_attempt-002.zip preserved unchanged)",
++      "session_closed": "2026-10-12 12:05 BDT \u2014 session ended cleanly after returning the REVIEW-002 package",
++      "recovery_entry": "QA_RECOVERY.md (appended pointer) \u2192 QAM_STATE.json \u2192 session_2026-10-12.md",
++      "current_review_package_sha256": "86b060bcb43449bb96f7768620281eba1a03edd60ef28315227ef9eb3538bb65"
++    },
++    "certified_candidate_sha": "8eb5789d9021ad06c15db36db74419a2b5c68fc5",
++    "certificate_record": "HANDOFFS/APBM000_GATE_Q_CERTIFICATE_2026-10-12.txt",
++    "certificate_sha256": "6cfe664f5c10f2aa2ee810328db6e465869af9607af82b6a2ae5d921cac43a49",
++    "certified_scope": "Fixture-qualified workspace UI and source/build regression under independent plan v0.3 passed; F01\u2013F04 are resolved within tested fixture scope. No live ADK/Supabase/GCS/GHL integration, durable-session/persistence, authenticated production-route, server logout, token-revocation, deployment or Gate D certification. DIRECTOR-OBS-001 remains UNTRIAGED-live; O-1 remains an observation. Earlier fallback rows are qualified by OS-installed Inter; use the accepted targeted fallback diagnostic. Q5's 51-minute inventory gap, filtered status excerpt and path-classified Executor-document entries remain disclosed; no contemporaneous inventory is reconstructed.",
++    "q5_status": "ACCEPTED / COMPLETE",
++    "process_verdict": "NONCOMPLIANT",
++    "engineering_closeout": "IN PROGRESS",
++    "active_writer": "Cody",
++    "claudy_status": "PAUSED",
++    "ownership_transfer_record": "HANDOFFS/ENGINEERING_CLOSEOUT_001_OWNERSHIP_TRANSFER.md",
++    "git_integration": "PENDING TONY",
++    "apbm_001": "NOT LAUNCHED",
++    "D4": "ALLOW",
++    "D7": "OMIT",
++    "publication_hold_paths_record": "evidence/engineering-closeout-001/2026-10-12_130632_BDT/publication-hold-paths.json",
++    "closeout_review_readiness": "READY FOR ARCHITECT REVIEW / DIRECTOR DISPOSITION",
++    "engineering_closeout_report": "HANDOFFS/ENGINEERING_CLOSEOUT_001_RETURN.md",
++    "carried_forward_issues": "HANDOFFS/APBM_001_CARRIED_FORWARD_ISSUES_2026-10-12.md"
++  },
++  "retention_disposition": "APPROVED AND IMPLEMENTED \u2014 originals privately retained outside Git; separately identified sanitized copies proposed for Git",
++  "retention_disposition_record": "evidence/publication-sanitization-001/2026-10-12_141555_BDT/private-original-transfer-receipt.json",
++  "sanitization_manifest": "evidence/publication-sanitization-001/2026-10-12_141555_BDT/sanitization-manifest.json",
++  "proposed_commit_inventory": "evidence/publication-sanitization-001/2026-10-12_141555_BDT/proposed-commit-inventory.json",
++  "closeout_owner": "Cody until explicit handoff",
++  "intended_apbm_001_engineer": "Claudy",
++  "apbm_001_qa_executor": "TO BE ASSIGNED SEPARATELY"
+ }
+diff --git a/agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/QA_RECOVERY.md b/agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/QA_RECOVERY.md
+--- a/agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/QA_RECOVERY.md
++++ b/agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/QA_RECOVERY.md
+@@ -30,3 +30,10 @@
+ PD-002-01 (proceeded after GATE_STOP without ruling) and PD-Q5-01 (earlier private-file digest generation) remain process violations; no future override or retrospective permission. Preserve the two digest-bearing originals and derivative archives unchanged. Tony's retention/publication decision is required before committing/publishing those payloads; they are excluded from the new closeout ZIP. No redaction or credential rotation is ordered by the available evidence. Instruments, Engineer-suite copies, historical failures, failed-run/Engineer caches and Stage E output remain retained; Gate Q grants no deletion authority.
+ 
+ No suite/build/live probe or product/test/dependency/config/acceptance/roster change is part of this closeout. Stop at **READY FOR ARCHITECT REVIEW / DIRECTOR DISPOSITION**; final engineering closure, Git integration and APBM_001 launch await their owners.
++
++
++## Current approved retention/sanitization follow-up — 2026-10-12T14:21:47.770881+06:00
++
++Tony's disposition is **APPROVED AND IMPLEMENTED**: original bytes/provenance retained privately outside Git; two separately identified sanitized records and three sanitized archive derivatives verified for the refreshed Git proposal. See [current follow-up return](HANDOFFS/ENGINEERING_CLOSEOUT_001_SANITIZATION_RETURN_2026-10-12.md) and [manifest](evidence/publication-sanitization-001/2026-10-12_141555_BDT/sanitization-manifest.json). Earlier “Tony retention decision pending” wording is historical and superseded; do not request that decision again. No private-file read/hash, proposal generator, suite/build/live execution or Git mutation occurred. Originals are excluded from publication; all other retained assets/caches/Stage E output remain unchanged.
++
++Cody remains **APBM_000 closeout owner until explicit handoff**. Intended APBM_001 Engineer is **Claudy**; its QA Executor will be assigned **separately**. APBM_001 **NOT LAUNCHED**. Gate Q PASS (exact bounded scope), Q5 ACCEPTED / COMPLETE, process NONCOMPLIANT; PD-002-01 and PD-Q5-01 and all original qualifications remain. Engineering closure and Git integration remain pending their owners.
+diff --git a/agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/QAM_CHECKPOINTS.md b/agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/QAM_CHECKPOINTS.md
+--- a/agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/QAM_CHECKPOINTS.md
++++ b/agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/QAM_CHECKPOINTS.md
+@@ -62,3 +62,10 @@
+ PD-002-01 (proceeded after GATE_STOP without ruling) and PD-Q5-01 (earlier private-file digest generation) remain process violations; no future override or retrospective permission. Preserve the two digest-bearing originals and derivative archives unchanged. Tony's retention/publication decision is required before committing/publishing those payloads; they are excluded from the new closeout ZIP. No redaction or credential rotation is ordered by the available evidence. Instruments, Engineer-suite copies, historical failures, failed-run/Engineer caches and Stage E output remain retained; Gate Q grants no deletion authority.
+ 
+ No suite/build/live probe or product/test/dependency/config/acceptance/roster change is part of this closeout. Stop at **READY FOR ARCHITECT REVIEW / DIRECTOR DISPOSITION**; final engineering closure, Git integration and APBM_001 launch await their owners.
++
++
++## Current approved retention/sanitization follow-up — 2026-10-12T14:21:47.770881+06:00
++
++Tony's disposition is **APPROVED AND IMPLEMENTED**: original bytes/provenance retained privately outside Git; two separately identified sanitized records and three sanitized archive derivatives verified for the refreshed Git proposal. See [current follow-up return](HANDOFFS/ENGINEERING_CLOSEOUT_001_SANITIZATION_RETURN_2026-10-12.md) and [manifest](evidence/publication-sanitization-001/2026-10-12_141555_BDT/sanitization-manifest.json). Earlier “Tony retention decision pending” wording is historical and superseded; do not request that decision again. No private-file read/hash, proposal generator, suite/build/live execution or Git mutation occurred. Originals are excluded from publication; all other retained assets/caches/Stage E output remain unchanged.
++
++Cody remains **APBM_000 closeout owner until explicit handoff**. Intended APBM_001 Engineer is **Claudy**; its QA Executor will be assigned **separately**. APBM_001 **NOT LAUNCHED**. Gate Q PASS (exact bounded scope), Q5 ACCEPTED / COMPLETE, process NONCOMPLIANT; PD-002-01 and PD-Q5-01 and all original qualifications remain. Engineering closure and Git integration remain pending their owners.
+diff --git a/agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/HANDOFFS/QA_HANDOFF.md b/agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/HANDOFFS/QA_HANDOFF.md
+--- a/agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/HANDOFFS/QA_HANDOFF.md
++++ b/agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/HANDOFFS/QA_HANDOFF.md
+@@ -107,3 +107,10 @@
+ PD-002-01 (proceeded after GATE_STOP without ruling) and PD-Q5-01 (earlier private-file digest generation) remain process violations; no future override or retrospective permission. Preserve the two digest-bearing originals and derivative archives unchanged. Tony's retention/publication decision is required before committing/publishing those payloads; they are excluded from the new closeout ZIP. No redaction or credential rotation is ordered by the available evidence. Instruments, Engineer-suite copies, historical failures, failed-run/Engineer caches and Stage E output remain retained; Gate Q grants no deletion authority.
+ 
+ No suite/build/live probe or product/test/dependency/config/acceptance/roster change is part of this closeout. Stop at **READY FOR ARCHITECT REVIEW / DIRECTOR DISPOSITION**; final engineering closure, Git integration and APBM_001 launch await their owners.
++
++
++## Current approved retention/sanitization follow-up — 2026-10-12T14:21:47.770881+06:00
++
++Tony's disposition is **APPROVED AND IMPLEMENTED**: original bytes/provenance retained privately outside Git; two separately identified sanitized records and three sanitized archive derivatives verified for the refreshed Git proposal. See [current follow-up return](ENGINEERING_CLOSEOUT_001_SANITIZATION_RETURN_2026-10-12.md) and [manifest](../evidence/publication-sanitization-001/2026-10-12_141555_BDT/sanitization-manifest.json). Earlier “Tony retention decision pending” wording is historical and superseded; do not request that decision again. No private-file read/hash, proposal generator, suite/build/live execution or Git mutation occurred. Originals are excluded from publication; all other retained assets/caches/Stage E output remain unchanged.
++
++Cody remains **APBM_000 closeout owner until explicit handoff**. Intended APBM_001 Engineer is **Claudy**; its QA Executor will be assigned **separately**. APBM_001 **NOT LAUNCHED**. Gate Q PASS (exact bounded scope), Q5 ACCEPTED / COMPLETE, process NONCOMPLIANT; PD-002-01 and PD-Q5-01 and all original qualifications remain. Engineering closure and Git integration remain pending their owners.
+diff --git a/agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/HANDOFFS/ENGINEERING_CLOSEOUT_001_RETURN.md b/agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/HANDOFFS/ENGINEERING_CLOSEOUT_001_RETURN.md
+--- a/agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/HANDOFFS/ENGINEERING_CLOSEOUT_001_RETURN.md
++++ b/agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/HANDOFFS/ENGINEERING_CLOSEOUT_001_RETURN.md
+@@ -1,3 +1,9 @@
++# Current disposition — retention/sanitization completed
++
++Tony already approved private original retention and separately identified sanitized copies for Git; **that decision is implemented and is not pending**. Read [the current follow-up return](ENGINEERING_CLOSEOUT_001_SANITIZATION_RETURN_2026-10-12.md) and the refreshed inventory it links. Cody owns APBM_000 closeout until handoff. Intended APBM_001 Engineer: Claudy; QA Executor separate/unassigned; APBM_001 NOT LAUNCHED. Engineering closure/Git integration remain pending. The entire original CLOSEOUT-001 text below is preserved as history, including its superseded pending-retention wording and original source-location list.
++
++--- Preserved original review record below. ---
++
+ # APBM_000 bounded engineering closeout review
+ 
+ 2026-10-12T13:16:15.034351+06:00 · Cody, Engineer. **READY FOR ARCHITECT REVIEW / DIRECTOR DISPOSITION.** Engineering closeout remains **IN PROGRESS**; Git integration **PENDING TONY**; APBM_001 **NOT LAUNCHED**. This is documentation preparation, not final engineering closure.
+diff --git a/agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/HANDOFFS/ENGINEERING_CLOSEOUT_001_REVIEW_START_HERE.md b/agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/HANDOFFS/ENGINEERING_CLOSEOUT_001_REVIEW_START_HERE.md
+--- a/agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/HANDOFFS/ENGINEERING_CLOSEOUT_001_REVIEW_START_HERE.md
++++ b/agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/HANDOFFS/ENGINEERING_CLOSEOUT_001_REVIEW_START_HERE.md
+@@ -1,3 +1,11 @@
++# Current disposition — retention/sanitization completed
++
++Tony already approved private original retention and separately identified sanitized copies for Git; **that decision is implemented and is not pending**. Read [the current follow-up return](ENGINEERING_CLOSEOUT_001_SANITIZATION_RETURN_2026-10-12.md) and the refreshed inventory it links. Cody owns APBM_000 closeout until handoff. Intended APBM_001 Engineer: Claudy; QA Executor separate/unassigned; APBM_001 NOT LAUNCHED. Engineering closure/Git integration remain pending. The entire original CLOSEOUT-001 text below is preserved as history, including its superseded pending-retention wording and original source-location list.
++
++Current review files: [sanitization return](ENGINEERING_CLOSEOUT_001_SANITIZATION_RETURN_2026-10-12.md), [refreshed selective inventory](../evidence/publication-sanitization-001/2026-10-12_141555_BDT/proposed-commit-inventory.json), [proposed Git paths](../evidence/publication-sanitization-001/2026-10-12_141555_BDT/proposed-git-paths.txt), and [updated package index](../evidence/publication-sanitization-001/2026-10-12_141555_BDT/FILE_INDEX.json). The direct sanitized archive payloads are included; the three named derivative ZIPs are proposed for Git, with their verified identities in the manifest. Originals are private and excluded. Updated Downloads package: `/home/moose/Downloads/APBM000_ENGINEERING_CLOSEOUT_001_REVIEW-002_SANITIZED_2026-10-12_141555_BDT.zip`.
++
++--- Preserved original review record below. ---
++
+ # Architect closeout review / Director disposition
+ 
+ **READY FOR ARCHITECT REVIEW / DIRECTOR DISPOSITION.** Gate Q PASS for `8eb5789d9021ad06c15db36db74419a2b5c68fc5` and bounded fixture/source/build scope; Q5 ACCEPTED / COMPLETE; process NONCOMPLIANT. Engineering closeout IN PROGRESS, Git integration pending Tony, APBM_001 NOT LAUNCHED. Cody active writer; Claudy paused. D4 ALLOW / D7 OMIT.
+diff --git a/agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/HANDOFFS/PUBLICATION_HOLD_PATHS_2026-10-12.md b/agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/HANDOFFS/PUBLICATION_HOLD_PATHS_2026-10-12.md
+--- a/agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/HANDOFFS/PUBLICATION_HOLD_PATHS_2026-10-12.md
++++ b/agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/HANDOFFS/PUBLICATION_HOLD_PATHS_2026-10-12.md
+@@ -1,3 +1,9 @@
++# Current disposition — retention/sanitization completed
++
++Tony already approved private original retention and separately identified sanitized copies for Git; **that decision is implemented and is not pending**. Read [the current follow-up return](ENGINEERING_CLOSEOUT_001_SANITIZATION_RETURN_2026-10-12.md) and the refreshed inventory it links. Cody owns APBM_000 closeout until handoff. Intended APBM_001 Engineer: Claudy; QA Executor separate/unassigned; APBM_001 NOT LAUNCHED. Engineering closure/Git integration remain pending. The entire original CLOSEOUT-001 text below is preserved as history, including its superseded pending-retention wording and original source-location list.
++
++--- Preserved original review record below. ---
++
+ # Publication hold — Tony's retention/distribution decision
+ 
+ PD-Q5-01 is a process violation. Preserve the originals below unchanged. Do not stage/publish the affected records or distribute their packages before Tony's disposition. No private-file digest is reproduced here. `.env.local` was not read or hashed for this closeout; comparison used existing evidence only. No payload was redacted or redistributed in the new ZIP. This list is not a removal or sanitized-derivative instruction.
+diff --git a/agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/HANDOFFS/APBM_001_CARRIED_FORWARD_ISSUES_2026-10-12.md b/agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/HANDOFFS/APBM_001_CARRIED_FORWARD_ISSUES_2026-10-12.md
+--- a/agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/HANDOFFS/APBM_001_CARRIED_FORWARD_ISSUES_2026-10-12.md
++++ b/agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/HANDOFFS/APBM_001_CARRIED_FORWARD_ISSUES_2026-10-12.md
+@@ -1,3 +1,9 @@
++# Current disposition — retention/sanitization completed
++
++Tony already approved private original retention and separately identified sanitized copies for Git; **that decision is implemented and is not pending**. Read [the current follow-up return](ENGINEERING_CLOSEOUT_001_SANITIZATION_RETURN_2026-10-12.md) and the refreshed inventory it links. Cody owns APBM_000 closeout until handoff. Intended APBM_001 Engineer: Claudy; QA Executor separate/unassigned; APBM_001 NOT LAUNCHED. Engineering closure/Git integration remain pending. The entire original CLOSEOUT-001 text below is preserved as history, including its superseded pending-retention wording and original source-location list.
++
++--- Preserved original review record below. ---
++
+ # Carried-forward issues — APBM_001 NOT LAUNCHED
+ 
+ 2026-10-12T13:16:15.034351+06:00 · Cody, Engineer. This is an issue handoff, not a new module, acceptance contract, implementation instruction or live-access permission. Baseline for any future authorized recon must be the actual integrated HEAD, not automatically the certified candidate `8eb5789d9021ad06c15db36db74419a2b5c68fc5`.
+diff --git a/agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/astra_session_2026-10-12.md b/agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/astra_session_2026-10-12.md
+--- a/agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/astra_session_2026-10-12.md
++++ b/agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/astra_session_2026-10-12.md
+@@ -5,3 +5,5 @@
+ Current routing: QA_RECOVERY.md latest append → QAM_STATE.json → HANDOFFS/ENGINEERING_CLOSEOUT_001_OWNERSHIP_TRANSFER.md. Pre-existing root/session histories and the exact recovery prepend are retained. Publication-hold originals/archives preserved and excluded from new package. Task stops at review/disposition readiness; engineering closure, Git integration and APBM_001 remain pending their owners.
+ 
+ 2026-10-12T13:16:15.034351+06:00 — Documentation preparation COMPLETE; review export/preservation validation pending. Bounded task stops at READY FOR ARCHITECT REVIEW / DIRECTOR DISPOSITION. Engineering closeout remains IN PROGRESS; Git pending Tony; APBM_001 NOT LAUNCHED. No tests/build/Git/private-file access or cleanup.
++
++2026-10-12T14:21:47.770881+06:00 — Authorized retention/sanitization follow-up: two record/three archive derivatives verified; eight original copies transferred byte-exact to private owner-only retention outside Git. Tony's decision approved/implemented, no repeat request. Current report ENGINEERING_CLOSEOUT_001_SANITIZATION_RETURN_2026-10-12.md. Cody closeout owner; intended APBM_001 Engineer Claudy, QA separate, not launched. No Git mutation, private-file access, generator/test/build/live execution. Updated package preparation in progress.

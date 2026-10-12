@@ -1,0 +1,42 @@
+Claudy — QA Lead reviewed attempt-002 for candidate:
+8eb5789d9021ad06c15db36db74419a2b5c68fc5
+
+F01–F04 are accepted as resolved within the tested fixture scope.
+Preserve the original findings and append the Lead disposition.
+
+The successful normal offline build and completed regression evidence
+are accepted. The targeted font fallback diagnostic is accepted;
+retain the qualification on earlier OS-Inter-masked fallback results.
+
+The generated next-env transition is accepted for this candidate.
+Record proceeding after GATE_STOP as a process deviation, not merely
+stage reordering. This does not authorize future gate overrides.
+
+Complete one bounded evidence addendum:
+
+1. Run the omitted seeded forbidden-import build control against the
+   current QA harness, under existing isolation. Prove rejection for
+   the intended forbidden import—not an unrelated setup error.
+   Preserve the command, source hashes, expected failure and output.
+
+2. Account for the root RECOVERY.md modification and root
+   session_2026-10-11.md. Export their exact relevant diff/content
+   safely inside QAM and propose the precise placement correction.
+   Do not delete or restore either file yet.
+
+3. Prepare a path-by-path Q5 retention/deletion proposal:
+   durable QA records, disposable instruments, caches and generated
+   output, with reasons. Preserve historical evidence.
+   Do not execute cleanup yet.
+
+Record this instruction under QAM/HANDOFFS/.
+Keep all new records inside QAM/.
+Return one indexed addendum ZIP in Downloads.
+
+This is a narrow continuation under the existing candidate release.
+Maximum 30 minutes; no full-suite or production-build rerun.
+If the control fails for an unexpected reason, report it and stop.
+
+D4 ALLOW and D7 OMIT remain unchanged.
+No product repairs, Git mutation, live-service expansion or closeout.
+Gate Q remains pending for Lead review and Q5.

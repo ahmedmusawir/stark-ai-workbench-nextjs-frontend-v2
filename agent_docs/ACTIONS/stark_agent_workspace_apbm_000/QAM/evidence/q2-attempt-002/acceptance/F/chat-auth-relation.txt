@@ -1,0 +1,5 @@
+.next/server/app/(cyberize)/chat/page/server-reference-manifest.json protectPage=2 auth=0
+.next/server/app/(cyberize)/chat/page.js protectPage=0 auth=0
+.next/server/chunks/ssr/_01o.c54._.js
+.next/server/chunks/ssr/_01rj4ua._.js
+.next/server/chunks/ssr/_0kppal-._.js

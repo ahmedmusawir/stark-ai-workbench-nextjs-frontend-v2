@@ -1,0 +1,12 @@
+{
+  "archive": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/HANDOFFS/Q2_attempt-002_ADDENDUM-001.zip",
+  "archive_sha256": "c5797efc9876a6128d4ab33896bd8e9983e6f4a4fec15cff2d7bcf015d6c8181",
+  "archive_bytes": 161936,
+  "members": 48,
+  "file_index_sha256": "93dbdb3f344e5fac7c3fedc5c4eefa8a8b44e900d4d3b190910619b7c8661d73",
+  "crc_testzip": "OK",
+  "membership_and_hashes_match_index": true,
+  "downloads_copy": "/home/moose/Downloads/APBM000_Q2_attempt-002_ADDENDUM-001_2026-10-11_183315_BDT.zip",
+  "downloads_copy_sha256": "c5797efc9876a6128d4ab33896bd8e9983e6f4a4fec15cff2d7bcf015d6c8181",
+  "secret_pattern_scan": "generic credential patterns; 0 hits (exporter source exempt); .env.local never read"
+}

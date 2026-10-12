@@ -1,4 +1,4 @@
-import { test, expect, open, P, ROWS, ledger, overflow, record, stressPreset, setTheme, blocked, SHOTS } from './_qa';
+import { test, expect, open, P, ROWS, ledger, overflow, record, stressPreset, setTheme, blocked, SHOTS, FONT_PATH, consumeControl } from './_qa';
 import path from 'node:path';
 import fs from 'node:fs';
 
@@ -18,9 +18,10 @@ test('S-12 demo context: permanent disclosure; edit/add/preview/remove make no n
   await ctx.getByRole('button', { name: 'Add sample document' }).click(); await page.getByRole('dialog', { name: 'Add sample document' }).getByRole('button', { name: 'Research checklist.md' }).click();
   await ctx.getByRole('button', { name: 'Preview Research checklist.md' }).click(); await expect(page.getByRole('dialog', { name: 'Sample preview' })).toContainText('Fictional sample'); await page.keyboard.press('Escape');
   await ctx.getByRole('button', { name: 'Remove Workspace overview.md' }).click(); await expect(ctx.getByText('Workspace overview.md')).toHaveCount(0);
-  expect(await page.locator('input[type=file]').count()).toBe(0); expect(reqs.slice(before).filter(p => !/^\/fonts\/Inter-\d+\.ttf$/.test(p))).toEqual([]); expect((await ledger(page)).length).toBe(l0);
+  expect(await page.locator('input[type=file]').count()).toBe(0); expect(reqs.slice(before).filter(p => !FONT_PATH.test(p))).toEqual([]); expect((await ledger(page)).length).toBe(l0);
   // CONTROL: an external browser request is aborted and logged by the exact-origin policy
   const b0 = blocked.length; await page.evaluate(() => fetch('https://example.invalid/x').catch(() => 'aborted')); expect(blocked.length).toBe(b0 + 1);
+  expect(consumeControl('request-blocked', /^https:\/\/example\.invalid\/x$/, 'S-12 control')).toBe(1); consumeControl('request-offorigin-observed', /^https:\/\/example\.invalid\/x$/, 'S-12 control');
   record('s12-requests', { during_demo_actions: reqs.slice(before), blocked_controls: blocked.slice(b0) });
 });
 
@@ -65,7 +66,8 @@ test('S-15 scope: sibling styles unchanged by workspace CSS; dialogs themed on f
   const props = ['color', 'backgroundColor', 'fontFamily', 'fontSize', 'fontWeight', 'lineHeight', 'margin', 'padding', 'borderTopWidth', 'borderRadius', 'textDecorationLine', 'outlineStyle', 'boxShadow'];
   const sample = () => page.evaluate(ps => [...document.querySelectorAll('#qa-sibling, #qa-sibling *')].map(e => { const cs = getComputedStyle(e) as any; return ps.map((k: string) => cs[k]).join('|'); }), props);
   const diffs: Record<string, unknown> = {};
-  for (const t of ['dark', 'light'] as const) { await setTheme(page, t); await open(page); const withWs = await sample(); await open(page, { path: '/nows' }); const without = await sample();
+  for (const t of ['dark', 'light'] as const) { await setTheme(page, t); await open(page, { path: '/iso' }); const withWs = await sample(); await open(page, { path: '/iso-nows' }); const without = await sample();
+    expect(withWs.length).toBeGreaterThan(4); // the isolation variant really carries the sibling subtree
     diffs[t] = withWs.map((v, i) => v === without[i] ? null : { i, withWs: v, without: without[i] }).filter(Boolean); expect(diffs[t]).toEqual([]); }
   await open(page, { query: 'agent=kestrel&session=A', preset: P.rows }); await expect(page.getByText('only session A')).toBeVisible();
   await page.evaluate(() => { (window as any).__firstFrame = null; new MutationObserver((_, o) => { const d = document.querySelector('[role=dialog]') as HTMLElement | null;
@@ -85,17 +87,17 @@ test('S-16 render matrix 3 views × 2 themes × 375/768/1280 + 1023/1024/1025 + 
   test.setTimeout(240000); const metrics: Record<string, unknown> = {};
   const shoot = async (view: string, theme: 'dark' | 'light', w: number, dpr = 1) => {
     const c = await browser.newContext({ viewport: { width: w, height: 900 }, deviceScaleFactor: dpr }); const p = await c.newPage();
-    await p.route('**/*', r => new URL(r.request().url()).origin === 'http://127.0.0.1:43181' ? r.continue() : r.abort());
     await setTheme(p, theme); await open(p, VIEWS[view]); await p.waitForTimeout(150);
     if (view === 'conversation') await expect(p.locator('.ws-thread table')).toBeVisible(); if (view === 'workspace') await expect(p.getByText('Planning the launch').first()).toBeVisible();
+    await p.evaluate(() => document.fonts.ready);
     const m = await p.evaluate(() => { const comp = document.querySelector('.ws-compose-wrap'), turns = document.querySelectorAll('.ws-turn'), last = turns[turns.length - 1];
       const scroll = document.querySelector('.ws-thread-scroll') as HTMLElement | null; if (scroll) scroll.scrollTop = scroll.scrollHeight;
-      return { overflow: document.documentElement.scrollWidth - innerWidth, desktopNav: getComputedStyle(document.querySelector('.ws-desktop')!).display, mobileTop: getComputedStyle(document.querySelector('.ws-mobile-top')!).display,
+      return { sibling: !!document.getElementById('qa-sibling'), interLoaded: document.fonts.check('16px Inter'), bodyFont: getComputedStyle(document.body).fontFamily, overflow: document.documentElement.scrollWidth - innerWidth, desktopNav: getComputedStyle(document.querySelector('.ws-desktop')!).display, mobileTop: getComputedStyle(document.querySelector('.ws-mobile-top')!).display,
         lastBottomVsComposerTop: last && comp ? Math.round(last.getBoundingClientRect().bottom - comp.getBoundingClientRect().top) : null }; });
     await p.screenshot({ path: path.join(SHOTS, `render-${view}-${theme}-${w}${dpr > 1 ? '-dpr2' : ''}.png`) }); metrics[`${view}-${theme}-${w}${dpr > 1 ? '-dpr2' : ''}`] = m; await c.close(); return m;
   };
   for (const view of Object.keys(VIEWS)) for (const theme of ['dark', 'light'] as const) for (const w of [375, 768, 1280]) {
-    const m = await shoot(view, theme, w); expect(m.overflow).toBeLessThanOrEqual(1); if (m.lastBottomVsComposerTop !== null) expect(m.lastBottomVsComposerTop).toBeLessThanOrEqual(0); }
+    const m = await shoot(view, theme, w); expect(m.sibling).toBe(false); expect(m.overflow).toBeLessThanOrEqual(1); if (m.lastBottomVsComposerTop !== null) expect(m.lastBottomVsComposerTop).toBeLessThanOrEqual(0); }
   for (const view of ['directory', 'conversation']) for (const w of [1023, 1024, 1025]) { const m = await shoot(view, 'dark', w); expect(m.overflow).toBeLessThanOrEqual(1);
     expect(m.desktopNav === 'none').toBe(w < 1024); expect(m.mobileTop === 'none').toBe(w >= 1024); }
   await shoot('conversation', 'dark', 375, 2);

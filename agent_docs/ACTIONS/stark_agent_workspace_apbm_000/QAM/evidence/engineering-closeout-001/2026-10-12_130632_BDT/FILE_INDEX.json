@@ -1,0 +1,451 @@
+{
+  "format": "APBM000_ENGINEERING_CLOSEOUT_001_REVIEW",
+  "created_at": "2026-10-12T13:21:58.127496+06:00",
+  "candidate": "8eb5789d9021ad06c15db36db74419a2b5c68fc5",
+  "branch": "qa/frontend-apbm-000",
+  "review_state": "READY FOR ARCHITECT REVIEW / DIRECTOR DISPOSITION",
+  "gate_q": "PASS (bounded scope only)",
+  "q5": "ACCEPTED / COMPLETE",
+  "process_verdict": "NONCOMPLIANT",
+  "engineering_closeout": "IN PROGRESS",
+  "git_integration": "PENDING TONY",
+  "apbm_001": "NOT LAUNCHED",
+  "files": [
+    {
+      "path": "CLAUDE.md",
+      "source_path": "CLAUDE.md",
+      "purpose": "Current authorized entry/status/checkpoint/handoff documentation; prior status/history preserved",
+      "bytes": 23388,
+      "sha256": "7940a48eaf8823d788b0612730901d8a6d12dbf42b5c5a88ae9c32439d580b74",
+      "source_identity": "Current bounded closeout documentation/evidence snapshot; candidate product unchanged at 8eb5789d9021ad06c15db36db74419a2b5c68fc5"
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/CLOSEOUT_RULES.md",
+      "source_path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/CLOSEOUT_RULES.md",
+      "purpose": "Unchanged effective module governance/phase/closeout context; preserved assembly-era statements are reconciled by the current QAM closeout report",
+      "bytes": 1326,
+      "sha256": "db9159a866971656978d04a17197391e821577524bb8468d8095c596df8bf2e5",
+      "source_identity": "Current bounded closeout documentation/evidence snapshot; candidate product unchanged at 8eb5789d9021ad06c15db36db74419a2b5c68fc5"
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/ENGINEERING_ENTRY.md",
+      "source_path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/ENGINEERING_ENTRY.md",
+      "purpose": "Current authorized entry/status/checkpoint/handoff documentation; prior status/history preserved",
+      "bytes": 3965,
+      "sha256": "4b36dbc01c950031e31d06c43fd7980f137a1ec58b0e75afeb459990b2f66cda",
+      "source_identity": "Current bounded closeout documentation/evidence snapshot; candidate product unchanged at 8eb5789d9021ad06c15db36db74419a2b5c68fc5"
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/GOVERNANCE.md",
+      "source_path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/GOVERNANCE.md",
+      "purpose": "Unchanged effective module governance/phase/closeout context; preserved assembly-era statements are reconciled by the current QAM closeout report",
+      "bytes": 2917,
+      "sha256": "8a14a89821ced98adc2e4605ff26b7b1346f8932704bf0dacdc9c961ab98b704",
+      "source_identity": "Current bounded closeout documentation/evidence snapshot; candidate product unchanged at 8eb5789d9021ad06c15db36db74419a2b5c68fc5"
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/PHASE_MAP.md",
+      "source_path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/PHASE_MAP.md",
+      "purpose": "Unchanged effective module governance/phase/closeout context; preserved assembly-era statements are reconciled by the current QAM closeout report",
+      "bytes": 1785,
+      "sha256": "2350a409b94b76cfeb78679d80e6356b4e67ba1a4cf2a735b6e10608afbddc68",
+      "source_identity": "Current bounded closeout documentation/evidence snapshot; candidate product unchanged at 8eb5789d9021ad06c15db36db74419a2b5c68fc5"
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/HANDOFFS/APBM000_GATE_Q_CERTIFICATE_2026-10-12.txt",
+      "source_path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/HANDOFFS/APBM000_GATE_Q_CERTIFICATE_2026-10-12.txt",
+      "purpose": "Certificate/Architect authority, explicit ownership, bounded closeout report, carried-forward issue or publication-hold path-only record",
+      "bytes": 7402,
+      "sha256": "6cfe664f5c10f2aa2ee810328db6e465869af9607af82b6a2ae5d921cac43a49",
+      "source_identity": "Current bounded closeout documentation/evidence snapshot; candidate product unchanged at 8eb5789d9021ad06c15db36db74419a2b5c68fc5"
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/HANDOFFS/APBM_001_CARRIED_FORWARD_ISSUES_2026-10-12.md",
+      "source_path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/HANDOFFS/APBM_001_CARRIED_FORWARD_ISSUES_2026-10-12.md",
+      "purpose": "Certificate/Architect authority, explicit ownership, bounded closeout report, carried-forward issue or publication-hold path-only record",
+      "bytes": 4008,
+      "sha256": "3a684a40f7819ea3a6adf0cb4bf7b7569c72977d961f5930509bdca0f36c899c",
+      "source_identity": "Current bounded closeout documentation/evidence snapshot; candidate product unchanged at 8eb5789d9021ad06c15db36db74419a2b5c68fc5"
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/HANDOFFS/ARCHITECT_ENGINEERING_CLOSEOUT_001_2026-10-12.md",
+      "source_path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/HANDOFFS/ARCHITECT_ENGINEERING_CLOSEOUT_001_2026-10-12.md",
+      "purpose": "Certificate/Architect authority, explicit ownership, bounded closeout report, carried-forward issue or publication-hold path-only record",
+      "bytes": 5180,
+      "sha256": "90539d069ebc090ae60de50f30b332e7ef1ec8c87f2fd61abdde91fd4bd00bd3",
+      "source_identity": "Current bounded closeout documentation/evidence snapshot; candidate product unchanged at 8eb5789d9021ad06c15db36db74419a2b5c68fc5"
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/HANDOFFS/ENGINEERING_CLOSEOUT_001_OWNERSHIP_TRANSFER.md",
+      "source_path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/HANDOFFS/ENGINEERING_CLOSEOUT_001_OWNERSHIP_TRANSFER.md",
+      "purpose": "Certificate/Architect authority, explicit ownership, bounded closeout report, carried-forward issue or publication-hold path-only record",
+      "bytes": 2092,
+      "sha256": "31ba48876e16c5c96724be281b07cb71ad298829933a86e6c8df3de0034713a2",
+      "source_identity": "Current bounded closeout documentation/evidence snapshot; candidate product unchanged at 8eb5789d9021ad06c15db36db74419a2b5c68fc5"
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/HANDOFFS/ENGINEERING_CLOSEOUT_001_RETURN.md",
+      "source_path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/HANDOFFS/ENGINEERING_CLOSEOUT_001_RETURN.md",
+      "purpose": "Certificate/Architect authority, explicit ownership, bounded closeout report, carried-forward issue or publication-hold path-only record",
+      "bytes": 11194,
+      "sha256": "e6897e6df0d2ae94c3741fd9cb2d64c821efeabe8a44848f0463d61781eacfa3",
+      "source_identity": "Current bounded closeout documentation/evidence snapshot; candidate product unchanged at 8eb5789d9021ad06c15db36db74419a2b5c68fc5"
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/HANDOFFS/ENGINEERING_CLOSEOUT_001_REVIEW_START_HERE.md",
+      "source_path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/HANDOFFS/ENGINEERING_CLOSEOUT_001_REVIEW_START_HERE.md",
+      "purpose": "Certificate/Architect authority, explicit ownership, bounded closeout report, carried-forward issue or publication-hold path-only record",
+      "bytes": 2626,
+      "sha256": "06330cba40b9bb43528fe7e3cdc85ac87c5b45714296f56564ae258b92b2edda",
+      "source_identity": "Current bounded closeout documentation/evidence snapshot; candidate product unchanged at 8eb5789d9021ad06c15db36db74419a2b5c68fc5"
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/HANDOFFS/PUBLICATION_HOLD_PATHS_2026-10-12.md",
+      "source_path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/HANDOFFS/PUBLICATION_HOLD_PATHS_2026-10-12.md",
+      "purpose": "Certificate/Architect authority, explicit ownership, bounded closeout report, carried-forward issue or publication-hold path-only record",
+      "bytes": 2577,
+      "sha256": "f97d704a605c9e8f02b706ae2d11dd35a9986176f4f37ff4ebefef6d963ac02f",
+      "source_identity": "Current bounded closeout documentation/evidence snapshot; candidate product unchanged at 8eb5789d9021ad06c15db36db74419a2b5c68fc5"
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/HANDOFFS/QA_HANDOFF.md",
+      "source_path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/HANDOFFS/QA_HANDOFF.md",
+      "purpose": "Current authorized entry/status/checkpoint/handoff documentation; prior status/history preserved",
+      "bytes": 19182,
+      "sha256": "5228548045d3ee0531671fde7682f2f1c3a78fbd5e0bdd960ee3bd1041d4e84d",
+      "source_identity": "Current bounded closeout documentation/evidence snapshot; candidate product unchanged at 8eb5789d9021ad06c15db36db74419a2b5c68fc5"
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/QAM_CHECKPOINTS.md",
+      "source_path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/QAM_CHECKPOINTS.md",
+      "purpose": "Current authorized entry/status/checkpoint/handoff documentation; prior status/history preserved",
+      "bytes": 6254,
+      "sha256": "fde834a257b5f37902ffed9633ab12b492d020931fefccfced9158a08c3ba712",
+      "source_identity": "Current bounded closeout documentation/evidence snapshot; candidate product unchanged at 8eb5789d9021ad06c15db36db74419a2b5c68fc5"
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/QAM_ENTRY.md",
+      "source_path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/QAM_ENTRY.md",
+      "purpose": "Current authorized entry/status/checkpoint/handoff documentation; prior status/history preserved",
+      "bytes": 2642,
+      "sha256": "b489ccd983095636bf2512dbb9094fb5fc198307f25547910d9c7f59c07381e5",
+      "source_identity": "Current bounded closeout documentation/evidence snapshot; candidate product unchanged at 8eb5789d9021ad06c15db36db74419a2b5c68fc5"
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/QAM_MANIFEST.md",
+      "source_path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/QAM_MANIFEST.md",
+      "purpose": "Current authorized entry/status/checkpoint/handoff documentation; prior status/history preserved",
+      "bytes": 7150,
+      "sha256": "431d0ad4bc63201277c609f60435808b05b967e4743b3efcfb80bb34915ed1b8",
+      "source_identity": "Current bounded closeout documentation/evidence snapshot; candidate product unchanged at 8eb5789d9021ad06c15db36db74419a2b5c68fc5"
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/QAM_STATE.json",
+      "source_path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/QAM_STATE.json",
+      "purpose": "Current authorized entry/status/checkpoint/handoff documentation; prior status/history preserved",
+      "bytes": 19859,
+      "sha256": "a0b8cc611a4e55773a247326573bc4935899399644fa752392b7f2e0b7cfa1cd",
+      "source_identity": "Current bounded closeout documentation/evidence snapshot; candidate product unchanged at 8eb5789d9021ad06c15db36db74419a2b5c68fc5"
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/QA_CERTIFICATION.md",
+      "source_path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/QA_CERTIFICATION.md",
+      "purpose": "Current authorized entry/status/checkpoint/handoff documentation; prior status/history preserved",
+      "bytes": 3084,
+      "sha256": "ba803afbf4197770cab0b97ed07c6b762879699cf7be2b8d7e6773d5cacbfa3e",
+      "source_identity": "Current bounded closeout documentation/evidence snapshot; candidate product unchanged at 8eb5789d9021ad06c15db36db74419a2b5c68fc5"
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/QA_CLEANUP_REPORT.md",
+      "source_path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/QA_CLEANUP_REPORT.md",
+      "purpose": "Current authorized entry/status/checkpoint/handoff documentation; prior status/history preserved",
+      "bytes": 3649,
+      "sha256": "b94285db16e256e1255348356c9f8f3f8d7b39fc7a53f87899744e493d347bf7",
+      "source_identity": "Current bounded closeout documentation/evidence snapshot; candidate product unchanged at 8eb5789d9021ad06c15db36db74419a2b5c68fc5"
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/QA_RECOVERY.md",
+      "source_path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/QA_RECOVERY.md",
+      "purpose": "Current authorized entry/status/checkpoint/handoff documentation; prior status/history preserved",
+      "bytes": 4116,
+      "sha256": "98b3b38689e8b00e5bbe82ce978266f2c0d3924e1b57a8c368d12cb5c740bb56",
+      "source_identity": "Current bounded closeout documentation/evidence snapshot; candidate product unchanged at 8eb5789d9021ad06c15db36db74419a2b5c68fc5"
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/astra_session_2026-10-12.md",
+      "source_path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/astra_session_2026-10-12.md",
+      "purpose": "Certificate/Architect authority, explicit ownership, bounded closeout report, carried-forward issue or publication-hold path-only record",
+      "bytes": 1364,
+      "sha256": "f3dea10807d45ff44630c6e06017f234eb45c3fc63af8bc9a9380959afce7e58",
+      "source_identity": "Current bounded closeout documentation/evidence snapshot; candidate product unchanged at 8eb5789d9021ad06c15db36db74419a2b5c68fc5"
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/engineering-closeout-001/2026-10-12_130632_BDT/SESSION.md",
+      "source_path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/engineering-closeout-001/2026-10-12_130632_BDT/SESSION.md",
+      "purpose": "Fresh read-only identity/preservation/status/diff evidence or path-specific review proposal; no private-file digest or held payload",
+      "bytes": 1499,
+      "sha256": "13245d651ea146ea9834225c1b42ef26539149de2ffa80d2440a8fb336778400",
+      "source_identity": "Current bounded closeout documentation/evidence snapshot; candidate product unchanged at 8eb5789d9021ad06c15db36db74419a2b5c68fc5"
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/engineering-closeout-001/2026-10-12_130632_BDT/authorized-documentation-paths.json",
+      "source_path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/engineering-closeout-001/2026-10-12_130632_BDT/authorized-documentation-paths.json",
+      "purpose": "Fresh read-only identity/preservation/status/diff evidence or path-specific review proposal; no private-file digest or held payload",
+      "bytes": 956,
+      "sha256": "423e100689cfb56e6212d058b66e8e2d3459df26313908feb50cf80c195c40fa",
+      "source_identity": "Current bounded closeout documentation/evidence snapshot; candidate product unchanged at 8eb5789d9021ad06c15db36db74419a2b5c68fc5"
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/engineering-closeout-001/2026-10-12_130632_BDT/certificate-installation.json",
+      "source_path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/engineering-closeout-001/2026-10-12_130632_BDT/certificate-installation.json",
+      "purpose": "Fresh read-only identity/preservation/status/diff evidence or path-specific review proposal; no private-file digest or held payload",
+      "bytes": 402,
+      "sha256": "2acfdcbbddf920f4110bb0dcdcdc0c6c49cecab6ed23b67130818e6151eedb4a",
+      "source_identity": "Current bounded closeout documentation/evidence snapshot; candidate product unchanged at 8eb5789d9021ad06c15db36db74419a2b5c68fc5"
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/engineering-closeout-001/2026-10-12_130632_BDT/cody-documentation.patch",
+      "source_path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/engineering-closeout-001/2026-10-12_130632_BDT/cody-documentation.patch",
+      "purpose": "Fresh read-only identity/preservation/status/diff evidence or path-specific review proposal; no private-file digest or held payload",
+      "bytes": 80312,
+      "sha256": "a8dd888d7b23cc46c2f45972fcfb0a90b8a5d8efd18bc4b4ed2f61e4482c6c16",
+      "source_identity": "Current bounded closeout documentation/evidence snapshot; candidate product unchanged at 8eb5789d9021ad06c15db36db74419a2b5c68fc5"
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/engineering-closeout-001/2026-10-12_130632_BDT/current-git-status.txt",
+      "source_path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/engineering-closeout-001/2026-10-12_130632_BDT/current-git-status.txt",
+      "purpose": "Fresh read-only identity/preservation/status/diff evidence or path-specific review proposal; no private-file digest or held payload",
+      "bytes": 83854,
+      "sha256": "b84a7fc509a07fa0928f8845e1ae819cb87cba7230507f9e5cca6c1342e9e670",
+      "source_identity": "Current bounded closeout documentation/evidence snapshot; candidate product unchanged at 8eb5789d9021ad06c15db36db74419a2b5c68fc5"
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/engineering-closeout-001/2026-10-12_130632_BDT/documentation-before/CLAUDE.md",
+      "source_path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/engineering-closeout-001/2026-10-12_130632_BDT/documentation-before/CLAUDE.md",
+      "purpose": "Actual entry documentation snapshot for exact new-diff/prefix/history validation; not a reconstructed historical Q5 record",
+      "bytes": 22587,
+      "sha256": "5ccdec34eb2ef3cbb44fec3a62a0aed2ecd2322edfb19dcaf9a0ee981df2ee0b",
+      "source_identity": "Current bounded closeout documentation/evidence snapshot; candidate product unchanged at 8eb5789d9021ad06c15db36db74419a2b5c68fc5"
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/engineering-closeout-001/2026-10-12_130632_BDT/documentation-before/agent_docs/ACTIONS/stark_agent_workspace_apbm_000/ENGINEERING_ENTRY.md",
+      "source_path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/engineering-closeout-001/2026-10-12_130632_BDT/documentation-before/agent_docs/ACTIONS/stark_agent_workspace_apbm_000/ENGINEERING_ENTRY.md",
+      "purpose": "Actual entry documentation snapshot for exact new-diff/prefix/history validation; not a reconstructed historical Q5 record",
+      "bytes": 3949,
+      "sha256": "c7e625a14dbc316074827e7f8f34d5251d116fd4ac5a1293e1e46e63133b1773",
+      "source_identity": "Current bounded closeout documentation/evidence snapshot; candidate product unchanged at 8eb5789d9021ad06c15db36db74419a2b5c68fc5"
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/engineering-closeout-001/2026-10-12_130632_BDT/documentation-before/agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/HANDOFFS/QA_HANDOFF.md",
+      "source_path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/engineering-closeout-001/2026-10-12_130632_BDT/documentation-before/agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/HANDOFFS/QA_HANDOFF.md",
+      "purpose": "Actual entry documentation snapshot for exact new-diff/prefix/history validation; not a reconstructed historical Q5 record",
+      "bytes": 16861,
+      "sha256": "e096fc24a246e3be55617e113ad0aecc5444b05b71f72f4fdd4622cf3dddb4c5",
+      "source_identity": "Current bounded closeout documentation/evidence snapshot; candidate product unchanged at 8eb5789d9021ad06c15db36db74419a2b5c68fc5"
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/engineering-closeout-001/2026-10-12_130632_BDT/documentation-before/agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/QAM_CHECKPOINTS.md",
+      "source_path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/engineering-closeout-001/2026-10-12_130632_BDT/documentation-before/agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/QAM_CHECKPOINTS.md",
+      "purpose": "Actual entry documentation snapshot for exact new-diff/prefix/history validation; not a reconstructed historical Q5 record",
+      "bytes": 3924,
+      "sha256": "83915b9da9c8c817fab31a43bf54bc11cedf8663984ff8aa1787314e21feab2e",
+      "source_identity": "Current bounded closeout documentation/evidence snapshot; candidate product unchanged at 8eb5789d9021ad06c15db36db74419a2b5c68fc5"
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/engineering-closeout-001/2026-10-12_130632_BDT/documentation-before/agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/QAM_ENTRY.md",
+      "source_path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/engineering-closeout-001/2026-10-12_130632_BDT/documentation-before/agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/QAM_ENTRY.md",
+      "purpose": "Actual entry documentation snapshot for exact new-diff/prefix/history validation; not a reconstructed historical Q5 record",
+      "bytes": 2385,
+      "sha256": "98ac3e8081fcc8a21896faca30dc64ee9e6d3cdbe7d406d5902911203d2d113e",
+      "source_identity": "Current bounded closeout documentation/evidence snapshot; candidate product unchanged at 8eb5789d9021ad06c15db36db74419a2b5c68fc5"
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/engineering-closeout-001/2026-10-12_130632_BDT/documentation-before/agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/QAM_MANIFEST.md",
+      "source_path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/engineering-closeout-001/2026-10-12_130632_BDT/documentation-before/agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/QAM_MANIFEST.md",
+      "purpose": "Actual entry documentation snapshot for exact new-diff/prefix/history validation; not a reconstructed historical Q5 record",
+      "bytes": 4820,
+      "sha256": "f1a25d5653a6df6cb45d5bef065db4bcdaa17b4217be5af3c46b10ed4c1ebef0",
+      "source_identity": "Current bounded closeout documentation/evidence snapshot; candidate product unchanged at 8eb5789d9021ad06c15db36db74419a2b5c68fc5"
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/engineering-closeout-001/2026-10-12_130632_BDT/documentation-before/agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/QAM_STATE.json",
+      "source_path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/engineering-closeout-001/2026-10-12_130632_BDT/documentation-before/agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/QAM_STATE.json",
+      "purpose": "Actual entry documentation snapshot for exact new-diff/prefix/history validation; not a reconstructed historical Q5 record",
+      "bytes": 9027,
+      "sha256": "0f33f5a09cb7a8cf4d2852801e4ecd72df83ea34e9a51fe8206e16b349452f10",
+      "source_identity": "Current bounded closeout documentation/evidence snapshot; candidate product unchanged at 8eb5789d9021ad06c15db36db74419a2b5c68fc5"
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/engineering-closeout-001/2026-10-12_130632_BDT/documentation-before/agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/QA_CERTIFICATION.md",
+      "source_path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/engineering-closeout-001/2026-10-12_130632_BDT/documentation-before/agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/QA_CERTIFICATION.md",
+      "purpose": "Actual entry documentation snapshot for exact new-diff/prefix/history validation; not a reconstructed historical Q5 record",
+      "bytes": 754,
+      "sha256": "597e8be0e4cdbd1cab1ae8ee8151e027e005e80264b42f97e7a4ae136b5f9f51",
+      "source_identity": "Current bounded closeout documentation/evidence snapshot; candidate product unchanged at 8eb5789d9021ad06c15db36db74419a2b5c68fc5"
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/engineering-closeout-001/2026-10-12_130632_BDT/documentation-before/agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/QA_CLEANUP_REPORT.md",
+      "source_path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/engineering-closeout-001/2026-10-12_130632_BDT/documentation-before/agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/QA_CLEANUP_REPORT.md",
+      "purpose": "Actual entry documentation snapshot for exact new-diff/prefix/history validation; not a reconstructed historical Q5 record",
+      "bytes": 1319,
+      "sha256": "40da62a6711069b5ebd2a55932b5cfa51ce019db8629c9030e136317e2cf22ef",
+      "source_identity": "Current bounded closeout documentation/evidence snapshot; candidate product unchanged at 8eb5789d9021ad06c15db36db74419a2b5c68fc5"
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/engineering-closeout-001/2026-10-12_130632_BDT/documentation-before/agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/QA_RECOVERY.md",
+      "source_path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/engineering-closeout-001/2026-10-12_130632_BDT/documentation-before/agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/QA_RECOVERY.md",
+      "purpose": "Actual entry documentation snapshot for exact new-diff/prefix/history validation; not a reconstructed historical Q5 record",
+      "bytes": 1786,
+      "sha256": "44b355d64cb3074f9c48dbee072f09d6fada94eeabd5425a647190e438b4e59f",
+      "source_identity": "Current bounded closeout documentation/evidence snapshot; candidate product unchanged at 8eb5789d9021ad06c15db36db74419a2b5c68fc5"
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/engineering-closeout-001/2026-10-12_130632_BDT/documentation-before/agent_docs/ACTIONS/stark_agent_workspace_apbm_000/START_HERE.md",
+      "source_path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/engineering-closeout-001/2026-10-12_130632_BDT/documentation-before/agent_docs/ACTIONS/stark_agent_workspace_apbm_000/START_HERE.md",
+      "purpose": "Actual entry documentation snapshot for exact new-diff/prefix/history validation; not a reconstructed historical Q5 record",
+      "bytes": 3584,
+      "sha256": "d41265f707e201cf7614c963169ce3eb9b6b1d080eef76fe8f18da1f700075de",
+      "source_identity": "Current bounded closeout documentation/evidence snapshot; candidate product unchanged at 8eb5789d9021ad06c15db36db74419a2b5c68fc5"
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/engineering-closeout-001/2026-10-12_130632_BDT/documentation-whitespace.log",
+      "source_path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/engineering-closeout-001/2026-10-12_130632_BDT/documentation-whitespace.log",
+      "purpose": "Fresh read-only identity/preservation/status/diff evidence or path-specific review proposal; no private-file digest or held payload",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "source_identity": "Current bounded closeout documentation/evidence snapshot; candidate product unchanged at 8eb5789d9021ad06c15db36db74419a2b5c68fc5"
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/engineering-closeout-001/2026-10-12_130632_BDT/entry-git-status.txt",
+      "source_path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/engineering-closeout-001/2026-10-12_130632_BDT/entry-git-status.txt",
+      "purpose": "Fresh read-only identity/preservation/status/diff evidence or path-specific review proposal; no private-file digest or held payload",
+      "bytes": 77955,
+      "sha256": "3daed62e0365fe79f5a5fce5f7a77ccbbbab22e76d7814c7ee16cfe618b71632",
+      "source_identity": "Current bounded closeout documentation/evidence snapshot; candidate product unchanged at 8eb5789d9021ad06c15db36db74419a2b5c68fc5"
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/engineering-closeout-001/2026-10-12_130632_BDT/entry-identity-status.json",
+      "source_path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/engineering-closeout-001/2026-10-12_130632_BDT/entry-identity-status.json",
+      "purpose": "Fresh read-only identity/preservation/status/diff evidence or path-specific review proposal; no private-file digest or held payload",
+      "bytes": 106028,
+      "sha256": "d475294b9e60c3e60a6286e9a74613e259fc26856da64bf9abbac0f5cb0c0f0d",
+      "source_identity": "Current bounded closeout documentation/evidence snapshot; candidate product unchanged at 8eb5789d9021ad06c15db36db74419a2b5c68fc5"
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/engineering-closeout-001/2026-10-12_130632_BDT/existing-archive-hold-scan.json",
+      "source_path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/engineering-closeout-001/2026-10-12_130632_BDT/existing-archive-hold-scan.json",
+      "purpose": "Fresh read-only identity/preservation/status/diff evidence or path-specific review proposal; no private-file digest or held payload",
+      "bytes": 3431,
+      "sha256": "7330a74e7de55fc97e2c80407fb8ea27c0503c26a36e4e66b85460417db7c61f",
+      "source_identity": "Current bounded closeout documentation/evidence snapshot; candidate product unchanged at 8eb5789d9021ad06c15db36db74419a2b5c68fc5"
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/engineering-closeout-001/2026-10-12_130632_BDT/final-preservation-status.json",
+      "source_path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/engineering-closeout-001/2026-10-12_130632_BDT/final-preservation-status.json",
+      "purpose": "Fresh read-only identity/preservation/status/diff evidence or path-specific review proposal; no private-file digest or held payload",
+      "bytes": 3151,
+      "sha256": "59c627be7af48540ae4c7a6b82bc8f82f467466a65723a45d58b1403926b3418",
+      "source_identity": "Current bounded closeout documentation/evidence snapshot; candidate product unchanged at 8eb5789d9021ad06c15db36db74419a2b5c68fc5"
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/engineering-closeout-001/2026-10-12_130632_BDT/preexisting-qam-public-file-hashes.json",
+      "source_path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/engineering-closeout-001/2026-10-12_130632_BDT/preexisting-qam-public-file-hashes.json",
+      "purpose": "Fresh read-only identity/preservation/status/diff evidence or path-specific review proposal; no private-file digest or held payload",
+      "bytes": 308967,
+      "sha256": "8f9db307badc278da38c0be7ecb19c02e57749c3780142eb64057cd1bca42ac1",
+      "source_identity": "Current bounded closeout documentation/evidence snapshot; candidate product unchanged at 8eb5789d9021ad06c15db36db74419a2b5c68fc5"
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/engineering-closeout-001/2026-10-12_130632_BDT/proposed-commit-inventory.json",
+      "source_path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/engineering-closeout-001/2026-10-12_130632_BDT/proposed-commit-inventory.json",
+      "purpose": "Fresh read-only identity/preservation/status/diff evidence or path-specific review proposal; no private-file digest or held payload",
+      "bytes": 1831181,
+      "sha256": "163b8de9b6c1778610b5683d167ea69efde62ca085f6c764ef679daba0e14299",
+      "source_identity": "Current bounded closeout documentation/evidence snapshot; candidate product unchanged at 8eb5789d9021ad06c15db36db74419a2b5c68fc5"
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/engineering-closeout-001/2026-10-12_130632_BDT/proposed-commit-inventory.md",
+      "source_path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/engineering-closeout-001/2026-10-12_130632_BDT/proposed-commit-inventory.md",
+      "purpose": "Fresh read-only identity/preservation/status/diff evidence or path-specific review proposal; no private-file digest or held payload",
+      "bytes": 1969,
+      "sha256": "1c9fcdf500e638f543e0ee168c358d276a5c92297bb9beac2c27f490822986f0",
+      "source_identity": "Current bounded closeout documentation/evidence snapshot; candidate product unchanged at 8eb5789d9021ad06c15db36db74419a2b5c68fc5"
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/engineering-closeout-001/2026-10-12_130632_BDT/proposed-git-paths.txt",
+      "source_path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/engineering-closeout-001/2026-10-12_130632_BDT/proposed-git-paths.txt",
+      "purpose": "Fresh read-only identity/preservation/status/diff evidence or path-specific review proposal; no private-file digest or held payload",
+      "bytes": 81065,
+      "sha256": "fb9c1c5de8eff6c1053beabf49d83d364d16073c8955caa402c28e9c5f6fb5d4",
+      "source_identity": "Current bounded closeout documentation/evidence snapshot; candidate product unchanged at 8eb5789d9021ad06c15db36db74419a2b5c68fc5"
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/engineering-closeout-001/2026-10-12_130632_BDT/protected-product-input-hashes.json",
+      "source_path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/engineering-closeout-001/2026-10-12_130632_BDT/protected-product-input-hashes.json",
+      "purpose": "Fresh read-only identity/preservation/status/diff evidence or path-specific review proposal; no private-file digest or held payload",
+      "bytes": 45034,
+      "sha256": "bd8c0250fba542c0d45eb8e9bf42e1efdf3cfb0bb2d8ebe090217037e69daf15",
+      "source_identity": "Current bounded closeout documentation/evidence snapshot; candidate product unchanged at 8eb5789d9021ad06c15db36db74419a2b5c68fc5"
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/engineering-closeout-001/2026-10-12_130632_BDT/publication-hold-paths.json",
+      "source_path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/engineering-closeout-001/2026-10-12_130632_BDT/publication-hold-paths.json",
+      "purpose": "Fresh read-only identity/preservation/status/diff evidence or path-specific review proposal; no private-file digest or held payload",
+      "bytes": 5004,
+      "sha256": "0f140bb4191d6bdd6b82061bad8040bbb1509ce7bbd678db29008a9d9a05ed6b",
+      "source_identity": "Current bounded closeout documentation/evidence snapshot; candidate product unchanged at 8eb5789d9021ad06c15db36db74419a2b5c68fc5"
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/engineering-closeout-001/2026-10-12_130632_BDT/stage-e-retained-presence.json",
+      "source_path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/engineering-closeout-001/2026-10-12_130632_BDT/stage-e-retained-presence.json",
+      "purpose": "Fresh read-only identity/preservation/status/diff evidence or path-specific review proposal; no private-file digest or held payload",
+      "bytes": 247243,
+      "sha256": "e3a14d3ecddfc9dbdd6f7f04097b70b7da4dfb97a28d58923e2ecb760da7134c",
+      "source_identity": "Current bounded closeout documentation/evidence snapshot; candidate product unchanged at 8eb5789d9021ad06c15db36db74419a2b5c68fc5"
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/engineering-closeout-001/2026-10-12_130632_BDT/validate_package.py",
+      "source_path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/engineering-closeout-001/2026-10-12_130632_BDT/validate_package.py",
+      "purpose": "Fresh read-only identity/preservation/status/diff evidence or path-specific review proposal; no private-file digest or held payload",
+      "bytes": 869,
+      "sha256": "41ab8078f52c403a3f8ce0b192d1b688ba5ce39a4ef57c66763f36f43725ebf5",
+      "source_identity": "Current bounded closeout documentation/evidence snapshot; candidate product unchanged at 8eb5789d9021ad06c15db36db74419a2b5c68fc5"
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/engineering-closeout-001/2026-10-12_130632_BDT/verification-scope.json",
+      "source_path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/engineering-closeout-001/2026-10-12_130632_BDT/verification-scope.json",
+      "purpose": "Fresh read-only identity/preservation/status/diff evidence or path-specific review proposal; no private-file digest or held payload",
+      "bytes": 2154,
+      "sha256": "bfb3102eb90f698a96da9c1f88cda8a52fc3d79b8148dd0213211ff34c5284aa",
+      "source_identity": "Current bounded closeout documentation/evidence snapshot; candidate product unchanged at 8eb5789d9021ad06c15db36db74419a2b5c68fc5"
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/RULINGS_ADDENDUM.md",
+      "source_path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/RULINGS_ADDENDUM.md",
+      "purpose": "Unchanged effective module governance/phase/closeout context; preserved assembly-era statements are reconciled by the current QAM closeout report",
+      "bytes": 2496,
+      "sha256": "99d4c40f7094106f4386d4d8ff5535228feb653dcbe0fd948a14a0ff1ec3b36f",
+      "source_identity": "Current bounded closeout documentation/evidence snapshot; candidate product unchanged at 8eb5789d9021ad06c15db36db74419a2b5c68fc5"
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/START_HERE.md",
+      "source_path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/START_HERE.md",
+      "purpose": "Current authorized entry/status/checkpoint/handoff documentation; prior status/history preserved",
+      "bytes": 3854,
+      "sha256": "2c6fac301247e22bd6fdf3430f0a92f14e3da337794cc49948481bae5df799fb",
+      "source_identity": "Current bounded closeout documentation/evidence snapshot; candidate product unchanged at 8eb5789d9021ad06c15db36db74419a2b5c68fc5"
+    }
+  ],
+  "index_self_hash": "Self-excluded; index and archive identities appear in the external export receipt.",
+  "excluded_publication_hold_paths": [
+    "/home/moose/Downloads/APBM000_Q2_attempt-002_ADDENDUM-001_2026-10-11_183315_BDT.zip",
+    "/home/moose/Downloads/APBM000_Q5_attempt-002_2026-10-11_192614_BDT.zip",
+    "/home/moose/Downloads/APBM000_Q5_attempt-002_REVIEW-002_2026-10-12_120138_BDT.zip",
+    "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/HANDOFFS/Q2_attempt-002_ADDENDUM-001.zip",
+    "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/HANDOFFS/Q5_attempt-002.zip",
+    "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/HANDOFFS/Q5_attempt-002_REVIEW-002.zip",
+    "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002-addendum-001/q5-proposal/Q5_PROPOSAL_PATHS.json",
+    "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q5-attempt-002/POST_Q5_INVENTORY.json"
+  ],
+  "private_file_digest_omitted": true
+}

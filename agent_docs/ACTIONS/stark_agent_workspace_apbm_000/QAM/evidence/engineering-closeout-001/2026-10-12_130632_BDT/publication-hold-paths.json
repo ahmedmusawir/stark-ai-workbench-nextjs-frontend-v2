@@ -1,0 +1,107 @@
+{
+  "status": "PUBLICATION HOLD \u2014 Director retention/distribution decision required",
+  "private_file_digest_omitted": true,
+  "method": "Compare existing private-file digest tokens in memory from the two named evidence records; inspect existing QAM records and repository/Downloads APBM000 archives only. Never read/hash .env.local; never execute proposal generator. No originals altered or redacted.",
+  "paths": [
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/HANDOFFS/Q2_attempt-002_ADDENDUM-001.zip",
+      "kind": "archive",
+      "reason": "contains publication-hold payload(s)",
+      "affected_members": [
+        {
+          "member_path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002-addendum-001/q5-proposal/Q5_PROPOSAL_PATHS.json",
+          "reason": "contains earlier private-file digest in existing evidence"
+        }
+      ],
+      "location": "repository"
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/HANDOFFS/Q5_attempt-002.zip",
+      "kind": "archive",
+      "reason": "contains publication-hold payload(s)",
+      "affected_members": [
+        {
+          "member_path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002-addendum-001/q5-proposal/Q5_PROPOSAL_PATHS.json",
+          "reason": "contains earlier private-file digest in existing evidence"
+        },
+        {
+          "member_path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q5-attempt-002/POST_Q5_INVENTORY.json",
+          "reason": "contains earlier private-file digest in existing evidence"
+        }
+      ],
+      "location": "repository"
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/HANDOFFS/Q5_attempt-002_REVIEW-002.zip",
+      "kind": "archive",
+      "reason": "contains publication-hold payload(s)",
+      "affected_members": [
+        {
+          "member_path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002-addendum-001/q5-proposal/Q5_PROPOSAL_PATHS.json",
+          "reason": "contains earlier private-file digest in existing evidence"
+        },
+        {
+          "member_path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q5-attempt-002/POST_Q5_INVENTORY.json",
+          "reason": "contains earlier private-file digest in existing evidence"
+        }
+      ],
+      "location": "repository"
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002-addendum-001/q5-proposal/Q5_PROPOSAL_PATHS.json",
+      "kind": "record",
+      "reason": "contains earlier private-file digest from existing evidence",
+      "location": "repository"
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q5-attempt-002/POST_Q5_INVENTORY.json",
+      "kind": "record",
+      "reason": "contains earlier private-file digest from existing evidence",
+      "location": "repository"
+    },
+    {
+      "path": "/home/moose/Downloads/APBM000_Q2_attempt-002_ADDENDUM-001_2026-10-11_183315_BDT.zip",
+      "kind": "archive",
+      "reason": "contains publication-hold payload(s)",
+      "affected_members": [
+        {
+          "member_path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002-addendum-001/q5-proposal/Q5_PROPOSAL_PATHS.json",
+          "reason": "contains earlier private-file digest in existing evidence"
+        }
+      ],
+      "location": "Downloads"
+    },
+    {
+      "path": "/home/moose/Downloads/APBM000_Q5_attempt-002_2026-10-11_192614_BDT.zip",
+      "kind": "archive",
+      "reason": "contains publication-hold payload(s)",
+      "affected_members": [
+        {
+          "member_path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002-addendum-001/q5-proposal/Q5_PROPOSAL_PATHS.json",
+          "reason": "contains earlier private-file digest in existing evidence"
+        },
+        {
+          "member_path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q5-attempt-002/POST_Q5_INVENTORY.json",
+          "reason": "contains earlier private-file digest in existing evidence"
+        }
+      ],
+      "location": "Downloads"
+    },
+    {
+      "path": "/home/moose/Downloads/APBM000_Q5_attempt-002_REVIEW-002_2026-10-12_120138_BDT.zip",
+      "kind": "archive",
+      "reason": "contains publication-hold payload(s)",
+      "affected_members": [
+        {
+          "member_path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002-addendum-001/q5-proposal/Q5_PROPOSAL_PATHS.json",
+          "reason": "contains earlier private-file digest in existing evidence"
+        },
+        {
+          "member_path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q5-attempt-002/POST_Q5_INVENTORY.json",
+          "reason": "contains earlier private-file digest in existing evidence"
+        }
+      ],
+      "location": "Downloads"
+    }
+  ]
+}

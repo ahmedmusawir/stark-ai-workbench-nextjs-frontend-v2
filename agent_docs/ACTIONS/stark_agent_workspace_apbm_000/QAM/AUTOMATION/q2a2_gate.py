@@ -1,0 +1,172 @@
+#!/usr/bin/env python3
+"""APBM_000 Q2 attempt-002 candidate/identity gate (plan v0.3 §2). Fail-closed; read-only Git; stdlib only.
+
+Usage: python3 -I q2a2_gate.py --repo R --binding B --candidate SHA --parent SHA --approved A.json --freeze F.json --out O.json
+        [--expect-branch qa/frontend-apbm-000] [--node-modules DIR] [--previous-candidate SHA]
+Verdict GATE_PASS only when every check passes; any failed check -> GATE_STOP with the failing evidence. Old q2_identity*.py and
+q2_gate.py are preserved and NOT used: their candidate constants, inventories and broad exclusions do not apply to this candidate.
+"""
+import argparse, hashlib, json, os, re, subprocess, sys, datetime
+
+QAM = 'agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/'
+MODULE = 'agent_docs/ACTIONS/stark_agent_workspace_apbm_000/'
+PRODUCT_DIRS = ['src/', 'tests/', 'config/', 'public/', 'supabase/']
+PRODUCT_FILES = ['package.json', 'package-lock.json', 'next.config.js', 'tsconfig.json', 'tailwind.config.ts', 'postcss.config.js',
+                 'jest.config.js', 'playwright.workspace.config.ts', 'components.json', '.env.example', 'next-env.d.ts', '.gitignore']
+EXEC_EXT = ('.py', '.cjs', '.js', '.mjs', '.ts', '.tsx', '.sh', '.jsx')
+PINS = {'ACCEPTANCE_SPEC': (MODULE + 'ACCEPTANCE_SPEC.md', '57f8d9f4dec8ca826326067254b0916ef65ccd51b635a8ac6ead73e8ab469fcc'),
+        'RULINGS_ADDENDUM': (MODULE + 'RULINGS_ADDENDUM.md', '99d4c40f7094106f4386d4d8ff5535228feb653dcbe0fd948a14a0ff1ec3b36f'),
+        'roster': ('config/agents.manifest.json', '6c27f420127db7125a43ddba6347470b19d3be39769b44bb2b85bd6d9526b6d9'),
+        'lock': ('package-lock.json', 'f81ea7545863bf12dcb33912a8d43d042abe06aa7b95ff8831af647cdaaeae49')}
+KNOWN_ROOT_IGNORED = {'.env.local': 'private env (D4: presence only, never read by QA)', '.next/': 'generated build/dev output',
+                      'node_modules/': 'installed dependencies (verified against lock)', 'tsconfig.tsbuildinfo': 'tsc incremental cache'}
+
+def is_product(p): return any(p.startswith(d) for d in PRODUCT_DIRS) or p in PRODUCT_FILES
+sha = lambda b: hashlib.sha256(b).hexdigest()
+
+class Gate:
+    def __init__(s, a):
+        s.a, s.repo, s.checks, s.anomalies = a, os.path.abspath(a.repo), [], []
+    def git(s, *args, binary=False):
+        r = subprocess.run(['git', '-C', s.repo, *args], capture_output=True)
+        if r.returncode: raise RuntimeError(f"git {' '.join(args)} -> {r.returncode}: {r.stderr.decode()[:300]}")
+        return r.stdout if binary else r.stdout.decode()
+    def check(s, cid, ok, detail):
+        s.checks.append({'id': cid, 'result': 'PASS' if ok else 'FAIL', 'detail': detail}); return ok
+    def wt(s, p):
+        f = os.path.join(s.repo, p); return sha(open(f, 'rb').read()) if os.path.isfile(f) else None
+
+    def run(s):
+        a = s.a; B = json.load(open(a.binding)); A = json.load(open(a.approved)); F = json.load(open(a.freeze))
+        C, P, prev = a.candidate, a.parent, a.previous_candidate
+        s.meta = {'binding_sha256': sha(open(a.binding, 'rb').read()), 'approved_sha256': sha(open(a.approved, 'rb').read()),
+                  'freeze_sha256': sha(open(a.freeze, 'rb').read()), 'candidate': C, 'parent': P}
+        s.check('B0 binding identity', B.get('candidate_sha') == C and B.get('parent_sha') == P, {'binding_candidate': B.get('candidate_sha'), 'binding_parent': B.get('parent_sha')})
+        head = s.git('rev-parse', 'HEAD').strip(); branch = s.git('rev-parse', '--abbrev-ref', 'HEAD').strip()
+        s.meta.update(head=head, branch=branch)
+        s.check('G1 branch', branch == a.expect_branch, {'branch': branch, 'expected': a.expect_branch})
+        anc = subprocess.run(['git', '-C', s.repo, 'merge-base', '--is-ancestor', C, head]).returncode == 0
+        desc = [] if head == C or not anc else s.git('diff', '--name-only', C, head).split()
+        bad_desc = [p for p in desc if not p.startswith(QAM)]
+        s.check('G2 HEAD is candidate or QAM-only descendant', anc and not bad_desc, {'head': head, 'candidate_is_ancestor': anc, 'descendant_paths': desc, 'non_qam': bad_desc})
+        parents = s.git('rev-list', '--parents', '-n', '1', C).split()[1:]
+        s.check('G3 candidate parent', parents == [P], {'parents': parents})
+        ns = [l.split('\t') for l in s.git('diff', '--name-status', '--no-renames', P, C).splitlines()]
+        paths = sorted(x[-1] for x in ns); acc = sorted(B['accepted_commit_paths'])
+        prod = sorted(p for p in paths if is_product(p)); qam = [p for p in paths if p.startswith(QAM)]
+        s.check('G4 candidate-parent delta = 269 reviewed paths (19/1/249)', paths == acc and prod == sorted(B['repair_product_test_paths']) and 'CHANGELOG.md' in paths and len(qam) == 249 and len(paths) == 269,
+                {'count': len(paths), 'product_test': len(prod), 'qam': len(qam), 'statuses': sorted({x[0] for x in ns}), 'missing': sorted(set(acc) - set(paths)), 'extra': sorted(set(paths) - set(acc))})
+        rp = B['reviewed_payload_files']; mism, absent = [], []
+        for p in paths:
+            if p not in rp: absent.append(p); continue
+            if sha(s.git('show', f'{C}:{p}', binary=True)) != rp[p]['sha256']: mism.append(p)
+        s.check('G5 candidate blobs = binding hashes', not mism and not absent, {'checked': len(paths), 'mismatch': mism, 'not_in_binding': absent})
+        # Binding serialization (reproduced exactly): per-path `git diff --binary` concatenated in binding order; complete `git diff --binary`.
+        pp = b''.join(s.git('diff', '--binary', P, C, '--', p, binary=True) for p in B['repair_product_test_paths'])
+        cp = s.git('diff', '--binary', P, C, binary=True)
+        sem = s.semantic_patch(a.supplied_patch, P, C, B['repair_product_test_paths']) if a.supplied_patch else None
+        s.check('G6 product + complete patch hashes reproduced from real Git (semantic blob check recorded)', sha(pp) == B['product_patch_sha256'] and sha(cp) == B['complete_patch_sha256'] and (sem is None or sem['equal']),
+                {'git_product_patch_sha256': sha(pp), 'binding': B['product_patch_sha256'], 'git_complete_patch_sha256': sha(cp), 'binding_complete': B['complete_patch_sha256'], 'semantic': sem})
+        hist = s.git('rev-list', '--reverse', f'{prev}..{P}').split(); hist_paths = s.git('diff', '--name-only', prev, P).split()
+        s.check('G7 previous candidate -> parent: no product drift', not [p for p in hist_paths if is_product(p)],
+                {'commits': hist, 'paths': len(hist_paths), 'product_paths': [p for p in hist_paths if is_product(p)], 'non_qam_paths': [p for p in hist_paths if not p.startswith(QAM)]})
+        prot = sorted(p for p in s.git('diff', '--name-only', prev, C).split() if is_product(p))
+        s.check('G8 protected product delta since previous candidate = exactly the 19 authorized repairs', prot == sorted(B['repair_product_test_paths']) and 'src/store/chatStore.ts' not in prot and 'src/store/useAuthStore.ts' not in prot, {'product_delta': prot})
+        wt_prod = s.git('diff', '--name-status', C, '--', *PRODUCT_DIRS, *PRODUCT_FILES).strip()
+        staged = s.git('diff', '--cached', '--name-status').strip()
+        untr = s.git('ls-files', '--others', '--exclude-standard', '--', *PRODUCT_DIRS, *PRODUCT_FILES).split()
+        ign = s.git('ls-files', '--others', '--ignored', '--exclude-standard', '--directory', '--', *PRODUCT_DIRS).split()
+        root_ign = [x for x in s.git('ls-files', '--others', '--ignored', '--exclude-standard', '--directory').split() if '/' not in x.rstrip('/')]
+        unknown_ign = [x for x in root_ign if x not in KNOWN_ROOT_IGNORED and x not in PRODUCT_FILES]
+        s.check('G9 working tree/index: no product drift, staged, untracked or ignored source inputs', not wt_prod and not staged and not untr and not ign and not unknown_ign,
+                {'worktree_vs_candidate': wt_prod, 'staged': staged, 'untracked_product': untr, 'ignored_source': ign, 'root_ignored': {x: KNOWN_ROOT_IGNORED.get(x, 'tracked-name ignored copy' if x in PRODUCT_FILES else 'UNKNOWN') for x in root_ign}})
+        pins = {k: {'path': p, 'expected': h, 'worktree': s.wt(p), 'candidate': sha(s.git('show', f'{C}:{p}', binary=True))} for k, (p, h) in PINS.items()}
+        for f in [p for p in B['repair_product_test_paths'] if p.startswith('src/app/fonts/')]:
+            pins[f] = {'path': f, 'expected': rp[f]['sha256'], 'worktree': s.wt(f), 'candidate': sha(s.git('show', f'{C}:{f}', binary=True))}
+        pins_ok = all(v['expected'] == v['worktree'] == v['candidate'] for v in pins.values())
+        s.check('G10 pinned contract/roster/lock/font/OFL/provenance bytes', pins_ok, {'pins': pins})
+        ne = s.wt('next-env.d.ts')  # gitignored, Next-generated; environment item (plan §2.8), reported separately so it cannot hide in G10
+        s.check('G10b next-env.d.ts is one of the two binding-pinned variants', ne in B['next_env_allowed_sha256'],
+                {'next_env': ne, 'allowed_next_env': B['next_env_allowed_sha256'], 'content': open(os.path.join(s.repo, 'next-env.d.ts')).read() if ne else None})
+        m = json.load(open(os.path.join(s.repo, 'config/agents.manifest.json')))
+        agents = m.get('agents', []); bundles = [[b.get('id'), b.get('urlEnv')] for b in m.get('bundles', [])]
+        s.check('G11 roster semantics: six agents all v1; v1/v2-local urlEnv mappings', len(agents) == 6 and all(x.get('bundle') == 'v1' for x in agents) and bundles == [['v1', 'ADK_BUNDLE_URL_V1'], ['v2-local', 'ADK_BUNDLE_URL_V2_LOCAL']],
+                {'agents': [[x.get('id'), x.get('bundle')] for x in agents], 'bundles': bundles})
+        design = [p for p in s.git('diff', '--name-only', prev, '--', MODULE + 'DESIGN/', MODULE + 'DATA_CONTRACT.md', MODULE + 'APP_BRIEF.md', MODULE + 'UI_SPEC.md').split()]
+        s.check('G12 contracts/design unchanged since previous candidate (incl. working tree)', not design, {'changed': design})
+        s.check_deps(a.node_modules or os.path.join(s.repo, 'node_modules'))
+        s.check_qam(A, F, C)
+        s.verdict = 'GATE_PASS' if all(c['result'] == 'PASS' for c in s.checks) else 'GATE_STOP'
+
+    def semantic_patch(s, patch_path, P, C, paths):
+        txt = open(patch_path, 'rb').read().decode('utf8', 'replace'); got = {}
+        for m in re.finditer(r'^diff --git a/(\S+) b/\S+\n(?:(?:new|deleted) file mode \d+\n)?index ([0-9a-f]+)\.\.([0-9a-f]+)', txt, re.M): got[m.group(1)] = (m.group(2), m.group(3))
+        exp = {}
+        for p in paths:
+            old = s.git('ls-tree', P, '--', p).split(); new = s.git('ls-tree', C, '--', p).split()
+            exp[p] = (old[2] if old else '0' * 40, new[2] if new else '0' * 40)
+        pref = lambda g, e: bool(g) and all(len(x) >= 7 and y.startswith(x) for x, y in zip(g, e))  # abbreviated ids are prefixes
+        diff = {p: {'patch': got.get(p), 'git': exp[p]} for p in paths if not pref(got.get(p), exp[p])}
+        return {'supplied_patch_sha256': sha(open(patch_path, 'rb').read()), 'paths_compared': len(paths), 'blob_id_differences': diff, 'equal': not diff and len(got) == len(paths)}
+
+    def check_deps(s, nm):
+        lock = json.load(open(os.path.join(s.repo, 'package-lock.json'))); mismatch, missing, optional_missing = [], [], []
+        for k, v in lock.get('packages', {}).items():
+            if not k.startswith('node_modules/'): continue
+            pj = os.path.join(nm, k[len('node_modules/'):], 'package.json')
+            if not os.path.isfile(pj):
+                (optional_missing if v.get('optional') or v.get('os') or v.get('cpu') else missing).append(k); continue
+            ver = json.load(open(pj)).get('version')
+            if ver != v.get('version'): mismatch.append([k, v.get('version'), ver])
+        top = {d for d in os.listdir(nm) if not d.startswith('.')}
+        expected_top = {k.split('/')[1] for k in lock['packages'] if k.startswith('node_modules/') and k.count('node_modules/') == 1}
+        ver = lambda n: json.load(open(os.path.join(nm, n, 'package.json'))).get('version')
+        tools = {'node': subprocess.run(['node', '--version'], capture_output=True, text=True).stdout.strip(),
+                 'npm': subprocess.run(['npm', '--version'], capture_output=True, text=True).stdout.strip(),
+                 'next': ver('next'), 'jest': ver('jest'), 'typescript': ver('typescript'), '@playwright/test': ver('@playwright/test'),
+                 'chrome': subprocess.run(['/opt/google/chrome/chrome', '--version'], capture_output=True, text=True).stdout.strip()}
+        s.tools = tools
+        s.check('G13 installed packages = committed lock (no mismatch, no missing required)', not mismatch and not missing,
+                {'lock_entries': sum(1 for k in lock['packages'] if k.startswith('node_modules/')), 'mismatch': mismatch, 'missing_required': missing,
+                 'optional_platform_missing': len(optional_missing), 'extraneous_top_level': sorted(top - expected_top), 'tools': tools})
+
+    def check_qam(s, A, F, C):
+        st = [l for l in s.git('status', '--porcelain=v1', '-uall', '--no-renames').splitlines()]
+        approved_pre = A['preexisting_untracked']; installed = A['installed_delivery']; doc_paths = A['executor_docs']; base_copies = A['instrument_baseline_copies']
+        freeze = F['instruments']; rows, anomalies = [], []
+        for l in st:
+            code, p = l[:2], l[3:]
+            if p.startswith('"'): p = json.loads(p)
+            h = s.wt(p); cls = None
+            if is_product(p): cls = 'PRODUCT (see G9)'
+            elif p in approved_pre and approved_pre[p] == h: cls = 'pre-existing untracked record (Cody commit/package step), hash-matched'
+            elif p in installed and installed[p] == h: cls = 'installed Lead delivery, hash-matched'
+            elif p in freeze and freeze[p] == h: cls = 'frozen attempt-002 instrument'
+            elif p in doc_paths and not p.endswith(EXEC_EXT): cls = 'Executor session/recovery document (non-executable)'
+            elif p.startswith(QAM + 'evidence/q2-attempt-002/'):
+                if p in base_copies and base_copies[p] == h: cls = 'inert pre-correction instrument copy (evidence), hash-matched'
+                elif not p.endswith(EXEC_EXT): cls = 'attempt-002 evidence (non-executable data)'
+            if cls is None or code.strip() == 'D': anomalies.append({'status': code, 'path': p, 'sha256': h}); cls = cls or 'UNAPPROVED'
+            rows.append({'status': code, 'path': p, 'class': cls})
+        auto = s.git('ls-files', '--others', '--exclude-standard', '--', QAM + 'AUTOMATION').split() + [x[3:] for x in st if x[3:].startswith(QAM + 'AUTOMATION/') and x[:2].strip() == 'M']
+        unfrozen = sorted({p for p in auto if freeze.get(p) != s.wt(p)})
+        stale = sorted(p for p, h in freeze.items() if s.wt(p) != h)
+        s.inventory = rows
+        s.check('G14 QAM/non-product inventory: every difference classified', not anomalies, {'entries': len(rows), 'by_class': {c: sum(1 for r in rows if r['class'] == c) for c in sorted({r['class'] for r in rows})}, 'anomalies': anomalies})
+        s.check('G15 instrument freeze: every changed/new AUTOMATION file frozen and every frozen hash on disk', not unfrozen and not stale, {'frozen': len(freeze), 'unfrozen_changed': unfrozen, 'stale_or_tampered': stale})
+
+def main():
+    ap = argparse.ArgumentParser()
+    for k in ['repo', 'binding', 'candidate', 'parent', 'approved', 'freeze', 'out']: ap.add_argument('--' + k, required=True)
+    ap.add_argument('--expect-branch', default='qa/frontend-apbm-000'); ap.add_argument('--node-modules'); ap.add_argument('--supplied-patch')
+    ap.add_argument('--previous-candidate', default='f21564cacb563ecddbf78b1685086c9489bf1c26')
+    a = ap.parse_args(); g = Gate(a); started = datetime.datetime.now().astimezone().isoformat(timespec='seconds')
+    try: g.run(); err = None
+    except Exception as e: g.verdict, err = 'GATE_STOP', f'{type(e).__name__}: {e}'
+    out = {'gate': 'q2a2_gate.py', 'started': started, 'verdict': g.verdict, 'error': err, 'meta': getattr(g, 'meta', {}), 'tools': getattr(g, 'tools', {}),
+           'failed': [c['id'] for c in g.checks if c['result'] == 'FAIL'], 'checks': g.checks, 'inventory': getattr(g, 'inventory', [])}
+    os.makedirs(os.path.dirname(os.path.abspath(a.out)), exist_ok=True); json.dump(out, open(a.out, 'w'), indent=2)
+    print(json.dumps({'verdict': g.verdict, 'failed': out['failed'], 'error': err, 'checks': len(g.checks)}))
+    sys.exit(0 if g.verdict == 'GATE_PASS' else 2)
+
+if __name__ == '__main__': main()

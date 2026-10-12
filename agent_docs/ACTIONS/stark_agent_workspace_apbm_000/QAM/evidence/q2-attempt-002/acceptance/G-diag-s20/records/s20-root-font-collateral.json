@@ -1,0 +1,984 @@
+{
+  "committed": {
+    "latin": "c940764593d0fe5d596be327ca7558855e018039fb78509aa21921fd3644c3e4",
+    "latin-ext": "a28eb6d3ccb534ae0c94ca999371df024aab60b08c3c8a5720ee9e32fa0faaa2",
+    "cyrillic": "aebf2ab4a4ce6810d73c1ac7be7cafb4e5ec4cee2d6db5fb3e09691747ec4bd6",
+    "cyrillic-ext": "fccca918fea40089dacadc7045861314d1a6bc91f1f323cc1eeb22ebcdb321b5",
+    "greek": "46dd4cdca58c26ae87cc6927657bf83b2e8abfc39ffd0ab176e301a8d28d22bf",
+    "greek-ext": "a2e2c783ca6f9c20486e81e72a279203e86730bbf8f01ff6a5ee9dbd09e1c271",
+    "vietnamese": "8db00ff46c67b22cda8bed865acf7077651cac8d2841d5b40980556b48961931"
+  },
+  "systemInterHiddenByFontconfig": true,
+  "results": {
+    "loaded-dark-375": {
+      "html": "dark",
+      "bodyClass": "inter-font bg-white dark:bg-zinc-700 text-zinc-900 dark:text-zinc-100",
+      "bodyFont": "Inter, \"Inter Fallback\"",
+      "interAvailable": true,
+      "loadedFaces": [
+        "U+460-52F, U+1C80-1C",
+        "U+301, U+400-45F, U+",
+        "U+1F00-1FFF",
+        "U+370-377, U+37A-37F",
+        "U+102-103, U+110-111",
+        "U+100-2BA, U+2BD-2C5",
+        "U+0-FF, U+131, U+152"
+      ],
+      "bg": "rgb(63, 63, 70)",
+      "overflow": 0,
+      "probes": {
+        "h1": {
+          "font": "Inter, \"Inter Fallback\"",
+          "w": 343,
+          "h": 40,
+          "tw": 299.703125,
+          "th": 44
+        },
+        "latin": {
+          "font": "Inter, \"Inter Fallback\"",
+          "w": 343,
+          "h": 24,
+          "tw": 218.109375,
+          "th": 20
+        },
+        "latin-ext": {
+          "font": "Inter, \"Inter Fallback\"",
+          "w": 343,
+          "h": 24,
+          "tw": 183.28125,
+          "th": 20
+        },
+        "cyrillic": {
+          "font": "Inter, \"Inter Fallback\"",
+          "w": 343,
+          "h": 24,
+          "tw": 112.96875,
+          "th": 20
+        },
+        "cyrillic-ext": {
+          "font": "Inter, \"Inter Fallback\"",
+          "w": 343,
+          "h": 24,
+          "tw": 159.28125,
+          "th": 20
+        },
+        "greek": {
+          "font": "Inter, \"Inter Fallback\"",
+          "w": 343,
+          "h": 24,
+          "tw": 128.5,
+          "th": 20
+        },
+        "greek-ext": {
+          "font": "Inter, \"Inter Fallback\"",
+          "w": 343,
+          "h": 24,
+          "tw": 144.15625,
+          "th": 20
+        },
+        "vietnamese": {
+          "font": "Inter, \"Inter Fallback\"",
+          "w": 343,
+          "h": 24,
+          "tw": 165.21875,
+          "th": 20
+        },
+        "label": {
+          "font": "Inter, \"Inter Fallback\"",
+          "w": 278.875,
+          "h": 20,
+          "tw": 278.875,
+          "th": 24
+        },
+        "input": {
+          "font": "Inter, \"Inter Fallback\"",
+          "w": 234,
+          "h": 24,
+          "tw": 0,
+          "th": 0
+        },
+        "button": {
+          "font": "Inter, \"Inter Fallback\"",
+          "w": 106.15625,
+          "h": 24,
+          "tw": 106.15625,
+          "th": 20
+        },
+        "table": {
+          "font": "Inter, \"Inter Fallback\"",
+          "w": 170.59375,
+          "h": 52,
+          "tw": 170.59375,
+          "th": 52
+        }
+      },
+      "preloadLinks": 0,
+      "served": {
+        "latin": "c940764593d0fe5d596be327ca7558855e018039fb78509aa21921fd3644c3e4",
+        "latin-ext": "a28eb6d3ccb534ae0c94ca999371df024aab60b08c3c8a5720ee9e32fa0faaa2",
+        "cyrillic": "aebf2ab4a4ce6810d73c1ac7be7cafb4e5ec4cee2d6db5fb3e09691747ec4bd6",
+        "cyrillic-ext": "fccca918fea40089dacadc7045861314d1a6bc91f1f323cc1eeb22ebcdb321b5",
+        "greek": "46dd4cdca58c26ae87cc6927657bf83b2e8abfc39ffd0ab176e301a8d28d22bf",
+        "vietnamese": "8db00ff46c67b22cda8bed865acf7077651cac8d2841d5b40980556b48961931",
+        "greek-ext": "a2e2c783ca6f9c20486e81e72a279203e86730bbf8f01ff6a5ee9dbd09e1c271"
+      },
+      "fontReqs": [
+        "/fonts/inter/inter-latin.woff2",
+        "/fonts/inter/inter-latin-ext.woff2",
+        "/fonts/inter/inter-cyrillic.woff2",
+        "/fonts/inter/inter-cyrillic-ext.woff2",
+        "/fonts/inter/inter-greek.woff2",
+        "/fonts/inter/inter-greek-ext.woff2",
+        "/fonts/inter/inter-vietnamese.woff2"
+      ]
+    },
+    "loaded-dark-1280": {
+      "html": "dark",
+      "bodyClass": "inter-font bg-white dark:bg-zinc-700 text-zinc-900 dark:text-zinc-100",
+      "bodyFont": "Inter, \"Inter Fallback\"",
+      "interAvailable": true,
+      "loadedFaces": [
+        "U+460-52F, U+1C80-1C",
+        "U+301, U+400-45F, U+",
+        "U+1F00-1FFF",
+        "U+370-377, U+37A-37F",
+        "U+102-103, U+110-111",
+        "U+100-2BA, U+2BD-2C5",
+        "U+0-FF, U+131, U+152"
+      ],
+      "bg": "rgb(63, 63, 70)",
+      "overflow": 0,
+      "probes": {
+        "h1": {
+          "font": "Inter, \"Inter Fallback\"",
+          "w": 608,
+          "h": 40,
+          "tw": 299.703125,
+          "th": 44
+        },
+        "latin": {
+          "font": "Inter, \"Inter Fallback\"",
+          "w": 608,
+          "h": 24,
+          "tw": 218.109375,
+          "th": 20
+        },
+        "latin-ext": {
+          "font": "Inter, \"Inter Fallback\"",
+          "w": 608,
+          "h": 24,
+          "tw": 183.28125,
+          "th": 20
+        },
+        "cyrillic": {
+          "font": "Inter, \"Inter Fallback\"",
+          "w": 608,
+          "h": 24,
+          "tw": 112.96875,
+          "th": 20
+        },
+        "cyrillic-ext": {
+          "font": "Inter, \"Inter Fallback\"",
+          "w": 608,
+          "h": 24,
+          "tw": 159.28125,
+          "th": 20
+        },
+        "greek": {
+          "font": "Inter, \"Inter Fallback\"",
+          "w": 608,
+          "h": 24,
+          "tw": 128.5,
+          "th": 20
+        },
+        "greek-ext": {
+          "font": "Inter, \"Inter Fallback\"",
+          "w": 608,
+          "h": 24,
+          "tw": 144.15625,
+          "th": 20
+        },
+        "vietnamese": {
+          "font": "Inter, \"Inter Fallback\"",
+          "w": 608,
+          "h": 24,
+          "tw": 165.21875,
+          "th": 20
+        },
+        "label": {
+          "font": "Inter, \"Inter Fallback\"",
+          "w": 278.875,
+          "h": 20,
+          "tw": 278.875,
+          "th": 24
+        },
+        "input": {
+          "font": "Inter, \"Inter Fallback\"",
+          "w": 234,
+          "h": 24,
+          "tw": 0,
+          "th": 0
+        },
+        "button": {
+          "font": "Inter, \"Inter Fallback\"",
+          "w": 106.15625,
+          "h": 24,
+          "tw": 106.15625,
+          "th": 20
+        },
+        "table": {
+          "font": "Inter, \"Inter Fallback\"",
+          "w": 170.59375,
+          "h": 52,
+          "tw": 170.59375,
+          "th": 52
+        }
+      },
+      "preloadLinks": 0,
+      "served": {
+        "latin": "c940764593d0fe5d596be327ca7558855e018039fb78509aa21921fd3644c3e4",
+        "cyrillic": "aebf2ab4a4ce6810d73c1ac7be7cafb4e5ec4cee2d6db5fb3e09691747ec4bd6",
+        "greek": "46dd4cdca58c26ae87cc6927657bf83b2e8abfc39ffd0ab176e301a8d28d22bf",
+        "greek-ext": "a2e2c783ca6f9c20486e81e72a279203e86730bbf8f01ff6a5ee9dbd09e1c271",
+        "cyrillic-ext": "fccca918fea40089dacadc7045861314d1a6bc91f1f323cc1eeb22ebcdb321b5",
+        "vietnamese": "8db00ff46c67b22cda8bed865acf7077651cac8d2841d5b40980556b48961931",
+        "latin-ext": "a28eb6d3ccb534ae0c94ca999371df024aab60b08c3c8a5720ee9e32fa0faaa2"
+      },
+      "fontReqs": [
+        "/fonts/inter/inter-latin.woff2",
+        "/fonts/inter/inter-latin-ext.woff2",
+        "/fonts/inter/inter-cyrillic.woff2",
+        "/fonts/inter/inter-cyrillic-ext.woff2",
+        "/fonts/inter/inter-greek.woff2",
+        "/fonts/inter/inter-greek-ext.woff2",
+        "/fonts/inter/inter-vietnamese.woff2"
+      ]
+    },
+    "loaded-light-375": {
+      "html": "light",
+      "bodyClass": "inter-font bg-white dark:bg-zinc-700 text-zinc-900 dark:text-zinc-100",
+      "bodyFont": "Inter, \"Inter Fallback\"",
+      "interAvailable": true,
+      "loadedFaces": [
+        "U+460-52F, U+1C80-1C",
+        "U+301, U+400-45F, U+",
+        "U+1F00-1FFF",
+        "U+370-377, U+37A-37F",
+        "U+102-103, U+110-111",
+        "U+100-2BA, U+2BD-2C5",
+        "U+0-FF, U+131, U+152"
+      ],
+      "bg": "rgb(255, 255, 255)",
+      "overflow": 0,
+      "probes": {
+        "h1": {
+          "font": "Inter, \"Inter Fallback\"",
+          "w": 343,
+          "h": 40,
+          "tw": 299.703125,
+          "th": 44
+        },
+        "latin": {
+          "font": "Inter, \"Inter Fallback\"",
+          "w": 343,
+          "h": 24,
+          "tw": 218.109375,
+          "th": 20
+        },
+        "latin-ext": {
+          "font": "Inter, \"Inter Fallback\"",
+          "w": 343,
+          "h": 24,
+          "tw": 183.28125,
+          "th": 20
+        },
+        "cyrillic": {
+          "font": "Inter, \"Inter Fallback\"",
+          "w": 343,
+          "h": 24,
+          "tw": 112.96875,
+          "th": 20
+        },
+        "cyrillic-ext": {
+          "font": "Inter, \"Inter Fallback\"",
+          "w": 343,
+          "h": 24,
+          "tw": 159.28125,
+          "th": 20
+        },
+        "greek": {
+          "font": "Inter, \"Inter Fallback\"",
+          "w": 343,
+          "h": 24,
+          "tw": 128.5,
+          "th": 20
+        },
+        "greek-ext": {
+          "font": "Inter, \"Inter Fallback\"",
+          "w": 343,
+          "h": 24,
+          "tw": 144.15625,
+          "th": 20
+        },
+        "vietnamese": {
+          "font": "Inter, \"Inter Fallback\"",
+          "w": 343,
+          "h": 24,
+          "tw": 165.21875,
+          "th": 20
+        },
+        "label": {
+          "font": "Inter, \"Inter Fallback\"",
+          "w": 278.875,
+          "h": 20,
+          "tw": 278.875,
+          "th": 24
+        },
+        "input": {
+          "font": "Inter, \"Inter Fallback\"",
+          "w": 234,
+          "h": 24,
+          "tw": 0,
+          "th": 0
+        },
+        "button": {
+          "font": "Inter, \"Inter Fallback\"",
+          "w": 106.15625,
+          "h": 24,
+          "tw": 106.15625,
+          "th": 20
+        },
+        "table": {
+          "font": "Inter, \"Inter Fallback\"",
+          "w": 170.59375,
+          "h": 52,
+          "tw": 170.59375,
+          "th": 52
+        }
+      },
+      "preloadLinks": 0,
+      "served": {
+        "cyrillic": "aebf2ab4a4ce6810d73c1ac7be7cafb4e5ec4cee2d6db5fb3e09691747ec4bd6",
+        "latin": "c940764593d0fe5d596be327ca7558855e018039fb78509aa21921fd3644c3e4",
+        "greek": "46dd4cdca58c26ae87cc6927657bf83b2e8abfc39ffd0ab176e301a8d28d22bf",
+        "cyrillic-ext": "fccca918fea40089dacadc7045861314d1a6bc91f1f323cc1eeb22ebcdb321b5",
+        "vietnamese": "8db00ff46c67b22cda8bed865acf7077651cac8d2841d5b40980556b48961931",
+        "greek-ext": "a2e2c783ca6f9c20486e81e72a279203e86730bbf8f01ff6a5ee9dbd09e1c271",
+        "latin-ext": "a28eb6d3ccb534ae0c94ca999371df024aab60b08c3c8a5720ee9e32fa0faaa2"
+      },
+      "fontReqs": [
+        "/fonts/inter/inter-latin.woff2",
+        "/fonts/inter/inter-latin-ext.woff2",
+        "/fonts/inter/inter-cyrillic.woff2",
+        "/fonts/inter/inter-cyrillic-ext.woff2",
+        "/fonts/inter/inter-greek.woff2",
+        "/fonts/inter/inter-greek-ext.woff2",
+        "/fonts/inter/inter-vietnamese.woff2"
+      ]
+    },
+    "loaded-light-1280": {
+      "html": "light",
+      "bodyClass": "inter-font bg-white dark:bg-zinc-700 text-zinc-900 dark:text-zinc-100",
+      "bodyFont": "Inter, \"Inter Fallback\"",
+      "interAvailable": true,
+      "loadedFaces": [
+        "U+460-52F, U+1C80-1C",
+        "U+301, U+400-45F, U+",
+        "U+1F00-1FFF",
+        "U+370-377, U+37A-37F",
+        "U+102-103, U+110-111",
+        "U+100-2BA, U+2BD-2C5",
+        "U+0-FF, U+131, U+152"
+      ],
+      "bg": "rgb(255, 255, 255)",
+      "overflow": 0,
+      "probes": {
+        "h1": {
+          "font": "Inter, \"Inter Fallback\"",
+          "w": 608,
+          "h": 40,
+          "tw": 299.703125,
+          "th": 44
+        },
+        "latin": {
+          "font": "Inter, \"Inter Fallback\"",
+          "w": 608,
+          "h": 24,
+          "tw": 218.109375,
+          "th": 20
+        },
+        "latin-ext": {
+          "font": "Inter, \"Inter Fallback\"",
+          "w": 608,
+          "h": 24,
+          "tw": 183.28125,
+          "th": 20
+        },
+        "cyrillic": {
+          "font": "Inter, \"Inter Fallback\"",
+          "w": 608,
+          "h": 24,
+          "tw": 112.96875,
+          "th": 20
+        },
+        "cyrillic-ext": {
+          "font": "Inter, \"Inter Fallback\"",
+          "w": 608,
+          "h": 24,
+          "tw": 159.28125,
+          "th": 20
+        },
+        "greek": {
+          "font": "Inter, \"Inter Fallback\"",
+          "w": 608,
+          "h": 24,
+          "tw": 128.5,
+          "th": 20
+        },
+        "greek-ext": {
+          "font": "Inter, \"Inter Fallback\"",
+          "w": 608,
+          "h": 24,
+          "tw": 144.15625,
+          "th": 20
+        },
+        "vietnamese": {
+          "font": "Inter, \"Inter Fallback\"",
+          "w": 608,
+          "h": 24,
+          "tw": 165.21875,
+          "th": 20
+        },
+        "label": {
+          "font": "Inter, \"Inter Fallback\"",
+          "w": 278.875,
+          "h": 20,
+          "tw": 278.875,
+          "th": 24
+        },
+        "input": {
+          "font": "Inter, \"Inter Fallback\"",
+          "w": 234,
+          "h": 24,
+          "tw": 0,
+          "th": 0
+        },
+        "button": {
+          "font": "Inter, \"Inter Fallback\"",
+          "w": 106.15625,
+          "h": 24,
+          "tw": 106.15625,
+          "th": 20
+        },
+        "table": {
+          "font": "Inter, \"Inter Fallback\"",
+          "w": 170.59375,
+          "h": 52,
+          "tw": 170.59375,
+          "th": 52
+        }
+      },
+      "preloadLinks": 0,
+      "served": {
+        "latin": "c940764593d0fe5d596be327ca7558855e018039fb78509aa21921fd3644c3e4",
+        "latin-ext": "a28eb6d3ccb534ae0c94ca999371df024aab60b08c3c8a5720ee9e32fa0faaa2",
+        "cyrillic": "aebf2ab4a4ce6810d73c1ac7be7cafb4e5ec4cee2d6db5fb3e09691747ec4bd6",
+        "greek": "46dd4cdca58c26ae87cc6927657bf83b2e8abfc39ffd0ab176e301a8d28d22bf",
+        "cyrillic-ext": "fccca918fea40089dacadc7045861314d1a6bc91f1f323cc1eeb22ebcdb321b5",
+        "vietnamese": "8db00ff46c67b22cda8bed865acf7077651cac8d2841d5b40980556b48961931",
+        "greek-ext": "a2e2c783ca6f9c20486e81e72a279203e86730bbf8f01ff6a5ee9dbd09e1c271"
+      },
+      "fontReqs": [
+        "/fonts/inter/inter-latin.woff2",
+        "/fonts/inter/inter-latin-ext.woff2",
+        "/fonts/inter/inter-cyrillic.woff2",
+        "/fonts/inter/inter-cyrillic-ext.woff2",
+        "/fonts/inter/inter-greek.woff2",
+        "/fonts/inter/inter-greek-ext.woff2",
+        "/fonts/inter/inter-vietnamese.woff2"
+      ]
+    },
+    "blocked-dark-375": {
+      "html": "dark",
+      "bodyClass": "inter-font bg-white dark:bg-zinc-700 text-zinc-900 dark:text-zinc-100",
+      "bodyFont": "Inter, \"Inter Fallback\"",
+      "interAvailable": false,
+      "loadedFaces": [],
+      "bg": "rgb(63, 63, 70)",
+      "overflow": 0,
+      "probes": {
+        "h1": {
+          "font": "Inter, \"Inter Fallback\"",
+          "w": 343,
+          "h": 40,
+          "tw": 282.84375,
+          "th": 44
+        },
+        "latin": {
+          "font": "Inter, \"Inter Fallback\"",
+          "w": 343,
+          "h": 24,
+          "tw": 223.75,
+          "th": 19
+        },
+        "latin-ext": {
+          "font": "Inter, \"Inter Fallback\"",
+          "w": 343,
+          "h": 24,
+          "tw": 183.765625,
+          "th": 19
+        },
+        "cyrillic": {
+          "font": "Inter, \"Inter Fallback\"",
+          "w": 343,
+          "h": 24,
+          "tw": 112.28125,
+          "th": 19
+        },
+        "cyrillic-ext": {
+          "font": "Inter, \"Inter Fallback\"",
+          "w": 343,
+          "h": 24,
+          "tw": 158.515625,
+          "th": 19
+        },
+        "greek": {
+          "font": "Inter, \"Inter Fallback\"",
+          "w": 343,
+          "h": 24,
+          "tw": 127.75,
+          "th": 19
+        },
+        "greek-ext": {
+          "font": "Inter, \"Inter Fallback\"",
+          "w": 343,
+          "h": 24,
+          "tw": 144.515625,
+          "th": 19
+        },
+        "vietnamese": {
+          "font": "Inter, \"Inter Fallback\"",
+          "w": 343,
+          "h": 24,
+          "tw": 165.984375,
+          "th": 19
+        },
+        "label": {
+          "font": "Inter, \"Inter Fallback\"",
+          "w": 245.59375,
+          "h": 19,
+          "tw": 245.59375,
+          "th": 24
+        },
+        "input": {
+          "font": "Inter, \"Inter Fallback\"",
+          "w": 198,
+          "h": 24,
+          "tw": 0,
+          "th": 0
+        },
+        "button": {
+          "font": "Inter, \"Inter Fallback\"",
+          "w": 108.546875,
+          "h": 24,
+          "tw": 108.546875,
+          "th": 19
+        },
+        "table": {
+          "font": "Inter, \"Inter Fallback\"",
+          "w": 169.609375,
+          "h": 52,
+          "tw": 169.609375,
+          "th": 52
+        }
+      },
+      "preloadLinks": 0,
+      "served": {},
+      "fontReqs": [
+        "/fonts/inter/inter-latin.woff2",
+        "/fonts/inter/inter-latin-ext.woff2",
+        "/fonts/inter/inter-cyrillic.woff2",
+        "/fonts/inter/inter-cyrillic-ext.woff2",
+        "/fonts/inter/inter-greek.woff2",
+        "/fonts/inter/inter-greek-ext.woff2",
+        "/fonts/inter/inter-vietnamese.woff2"
+      ]
+    },
+    "blocked-dark-1280": {
+      "html": "dark",
+      "bodyClass": "inter-font bg-white dark:bg-zinc-700 text-zinc-900 dark:text-zinc-100",
+      "bodyFont": "Inter, \"Inter Fallback\"",
+      "interAvailable": false,
+      "loadedFaces": [],
+      "bg": "rgb(63, 63, 70)",
+      "overflow": 0,
+      "probes": {
+        "h1": {
+          "font": "Inter, \"Inter Fallback\"",
+          "w": 608,
+          "h": 40,
+          "tw": 282.84375,
+          "th": 44
+        },
+        "latin": {
+          "font": "Inter, \"Inter Fallback\"",
+          "w": 608,
+          "h": 24,
+          "tw": 223.75,
+          "th": 19
+        },
+        "latin-ext": {
+          "font": "Inter, \"Inter Fallback\"",
+          "w": 608,
+          "h": 24,
+          "tw": 183.765625,
+          "th": 19
+        },
+        "cyrillic": {
+          "font": "Inter, \"Inter Fallback\"",
+          "w": 608,
+          "h": 24,
+          "tw": 112.28125,
+          "th": 19
+        },
+        "cyrillic-ext": {
+          "font": "Inter, \"Inter Fallback\"",
+          "w": 608,
+          "h": 24,
+          "tw": 158.515625,
+          "th": 19
+        },
+        "greek": {
+          "font": "Inter, \"Inter Fallback\"",
+          "w": 608,
+          "h": 24,
+          "tw": 127.75,
+          "th": 19
+        },
+        "greek-ext": {
+          "font": "Inter, \"Inter Fallback\"",
+          "w": 608,
+          "h": 24,
+          "tw": 144.515625,
+          "th": 19
+        },
+        "vietnamese": {
+          "font": "Inter, \"Inter Fallback\"",
+          "w": 608,
+          "h": 24,
+          "tw": 165.984375,
+          "th": 19
+        },
+        "label": {
+          "font": "Inter, \"Inter Fallback\"",
+          "w": 245.59375,
+          "h": 19,
+          "tw": 245.59375,
+          "th": 24
+        },
+        "input": {
+          "font": "Inter, \"Inter Fallback\"",
+          "w": 198,
+          "h": 24,
+          "tw": 0,
+          "th": 0
+        },
+        "button": {
+          "font": "Inter, \"Inter Fallback\"",
+          "w": 108.546875,
+          "h": 24,
+          "tw": 108.546875,
+          "th": 19
+        },
+        "table": {
+          "font": "Inter, \"Inter Fallback\"",
+          "w": 169.609375,
+          "h": 52,
+          "tw": 169.609375,
+          "th": 52
+        }
+      },
+      "preloadLinks": 0,
+      "served": {},
+      "fontReqs": [
+        "/fonts/inter/inter-latin.woff2",
+        "/fonts/inter/inter-latin-ext.woff2",
+        "/fonts/inter/inter-cyrillic.woff2",
+        "/fonts/inter/inter-cyrillic-ext.woff2",
+        "/fonts/inter/inter-greek.woff2",
+        "/fonts/inter/inter-greek-ext.woff2",
+        "/fonts/inter/inter-vietnamese.woff2"
+      ]
+    },
+    "blocked-light-375": {
+      "html": "light",
+      "bodyClass": "inter-font bg-white dark:bg-zinc-700 text-zinc-900 dark:text-zinc-100",
+      "bodyFont": "Inter, \"Inter Fallback\"",
+      "interAvailable": false,
+      "loadedFaces": [],
+      "bg": "rgb(255, 255, 255)",
+      "overflow": 0,
+      "probes": {
+        "h1": {
+          "font": "Inter, \"Inter Fallback\"",
+          "w": 343,
+          "h": 40,
+          "tw": 282.84375,
+          "th": 44
+        },
+        "latin": {
+          "font": "Inter, \"Inter Fallback\"",
+          "w": 343,
+          "h": 24,
+          "tw": 223.75,
+          "th": 19
+        },
+        "latin-ext": {
+          "font": "Inter, \"Inter Fallback\"",
+          "w": 343,
+          "h": 24,
+          "tw": 183.765625,
+          "th": 19
+        },
+        "cyrillic": {
+          "font": "Inter, \"Inter Fallback\"",
+          "w": 343,
+          "h": 24,
+          "tw": 112.28125,
+          "th": 19
+        },
+        "cyrillic-ext": {
+          "font": "Inter, \"Inter Fallback\"",
+          "w": 343,
+          "h": 24,
+          "tw": 158.515625,
+          "th": 19
+        },
+        "greek": {
+          "font": "Inter, \"Inter Fallback\"",
+          "w": 343,
+          "h": 24,
+          "tw": 127.75,
+          "th": 19
+        },
+        "greek-ext": {
+          "font": "Inter, \"Inter Fallback\"",
+          "w": 343,
+          "h": 24,
+          "tw": 144.515625,
+          "th": 19
+        },
+        "vietnamese": {
+          "font": "Inter, \"Inter Fallback\"",
+          "w": 343,
+          "h": 24,
+          "tw": 165.984375,
+          "th": 19
+        },
+        "label": {
+          "font": "Inter, \"Inter Fallback\"",
+          "w": 245.59375,
+          "h": 19,
+          "tw": 245.59375,
+          "th": 24
+        },
+        "input": {
+          "font": "Inter, \"Inter Fallback\"",
+          "w": 198,
+          "h": 24,
+          "tw": 0,
+          "th": 0
+        },
+        "button": {
+          "font": "Inter, \"Inter Fallback\"",
+          "w": 108.546875,
+          "h": 24,
+          "tw": 108.546875,
+          "th": 19
+        },
+        "table": {
+          "font": "Inter, \"Inter Fallback\"",
+          "w": 169.609375,
+          "h": 52,
+          "tw": 169.609375,
+          "th": 52
+        }
+      },
+      "preloadLinks": 0,
+      "served": {},
+      "fontReqs": [
+        "/fonts/inter/inter-latin.woff2",
+        "/fonts/inter/inter-latin-ext.woff2",
+        "/fonts/inter/inter-cyrillic.woff2",
+        "/fonts/inter/inter-cyrillic-ext.woff2",
+        "/fonts/inter/inter-greek.woff2",
+        "/fonts/inter/inter-greek-ext.woff2",
+        "/fonts/inter/inter-vietnamese.woff2"
+      ]
+    },
+    "blocked-light-1280": {
+      "html": "light",
+      "bodyClass": "inter-font bg-white dark:bg-zinc-700 text-zinc-900 dark:text-zinc-100",
+      "bodyFont": "Inter, \"Inter Fallback\"",
+      "interAvailable": false,
+      "loadedFaces": [],
+      "bg": "rgb(255, 255, 255)",
+      "overflow": 0,
+      "probes": {
+        "h1": {
+          "font": "Inter, \"Inter Fallback\"",
+          "w": 608,
+          "h": 40,
+          "tw": 282.84375,
+          "th": 44
+        },
+        "latin": {
+          "font": "Inter, \"Inter Fallback\"",
+          "w": 608,
+          "h": 24,
+          "tw": 223.75,
+          "th": 19
+        },
+        "latin-ext": {
+          "font": "Inter, \"Inter Fallback\"",
+          "w": 608,
+          "h": 24,
+          "tw": 183.765625,
+          "th": 19
+        },
+        "cyrillic": {
+          "font": "Inter, \"Inter Fallback\"",
+          "w": 608,
+          "h": 24,
+          "tw": 112.28125,
+          "th": 19
+        },
+        "cyrillic-ext": {
+          "font": "Inter, \"Inter Fallback\"",
+          "w": 608,
+          "h": 24,
+          "tw": 158.515625,
+          "th": 19
+        },
+        "greek": {
+          "font": "Inter, \"Inter Fallback\"",
+          "w": 608,
+          "h": 24,
+          "tw": 127.75,
+          "th": 19
+        },
+        "greek-ext": {
+          "font": "Inter, \"Inter Fallback\"",
+          "w": 608,
+          "h": 24,
+          "tw": 144.515625,
+          "th": 19
+        },
+        "vietnamese": {
+          "font": "Inter, \"Inter Fallback\"",
+          "w": 608,
+          "h": 24,
+          "tw": 165.984375,
+          "th": 19
+        },
+        "label": {
+          "font": "Inter, \"Inter Fallback\"",
+          "w": 245.59375,
+          "h": 19,
+          "tw": 245.59375,
+          "th": 24
+        },
+        "input": {
+          "font": "Inter, \"Inter Fallback\"",
+          "w": 198,
+          "h": 24,
+          "tw": 0,
+          "th": 0
+        },
+        "button": {
+          "font": "Inter, \"Inter Fallback\"",
+          "w": 108.546875,
+          "h": 24,
+          "tw": 108.546875,
+          "th": 19
+        },
+        "table": {
+          "font": "Inter, \"Inter Fallback\"",
+          "w": 169.609375,
+          "h": 52,
+          "tw": 169.609375,
+          "th": 52
+        }
+      },
+      "preloadLinks": 0,
+      "served": {},
+      "fontReqs": [
+        "/fonts/inter/inter-latin.woff2",
+        "/fonts/inter/inter-latin-ext.woff2",
+        "/fonts/inter/inter-cyrillic.woff2",
+        "/fonts/inter/inter-cyrillic-ext.woff2",
+        "/fonts/inter/inter-greek.woff2",
+        "/fonts/inter/inter-greek-ext.woff2",
+        "/fonts/inter/inter-vietnamese.woff2"
+      ]
+    }
+  },
+  "textAdvanceDeltaBlockedMinusLoaded": {
+    "dark-375": {
+      "h1": -16.86,
+      "latin": 5.64,
+      "latin-ext": 0.48,
+      "cyrillic": -0.69,
+      "cyrillic-ext": -0.77,
+      "greek": -0.75,
+      "greek-ext": 0.36,
+      "vietnamese": 0.77,
+      "label": -33.28,
+      "input": 0,
+      "button": 2.39,
+      "table": -0.98
+    },
+    "dark-1280": {
+      "h1": -16.86,
+      "latin": 5.64,
+      "latin-ext": 0.48,
+      "cyrillic": -0.69,
+      "cyrillic-ext": -0.77,
+      "greek": -0.75,
+      "greek-ext": 0.36,
+      "vietnamese": 0.77,
+      "label": -33.28,
+      "input": 0,
+      "button": 2.39,
+      "table": -0.98
+    },
+    "light-375": {
+      "h1": -16.86,
+      "latin": 5.64,
+      "latin-ext": 0.48,
+      "cyrillic": -0.69,
+      "cyrillic-ext": -0.77,
+      "greek": -0.75,
+      "greek-ext": 0.36,
+      "vietnamese": 0.77,
+      "label": -33.28,
+      "input": 0,
+      "button": 2.39,
+      "table": -0.98
+    },
+    "light-1280": {
+      "h1": -16.86,
+      "latin": 5.64,
+      "latin-ext": 0.48,
+      "cyrillic": -0.69,
+      "cyrillic-ext": -0.77,
+      "greek": -0.75,
+      "greek-ext": 0.36,
+      "vietnamese": 0.77,
+      "label": -33.28,
+      "input": 0,
+      "button": 2.39,
+      "table": -0.98
+    }
+  }
+}

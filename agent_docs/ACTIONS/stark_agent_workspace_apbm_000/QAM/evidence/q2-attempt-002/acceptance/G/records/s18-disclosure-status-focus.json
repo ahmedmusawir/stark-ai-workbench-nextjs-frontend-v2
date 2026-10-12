@@ -1,0 +1,642 @@
+{
+  "m375_collapsed": {
+    "trigVisible": true,
+    "expanded": "false",
+    "contentVisible": false,
+    "focusableVisibleInContent": 0
+  },
+  "m375_expanded": {
+    "trigVisible": true,
+    "expanded": "true",
+    "contentVisible": true,
+    "focusableVisibleInContent": 7
+  },
+  "d1280": {
+    "trigVisible": false,
+    "expanded": "true",
+    "contentVisible": true,
+    "focusableVisibleInContent": 7
+  },
+  "rescue": "ws-disclosure-trigger",
+  "skipFocus": {
+    "tag": "A",
+    "name": "Skip to content",
+    "owner": "self",
+    "outlineStyle": "solid",
+    "outlineWidth": 2,
+    "outlineOffset": 2,
+    "outlineColor": "rgb(244, 244, 245)",
+    "boxShadow": "none",
+    "indicatorColor": "rgb(244, 244, 245)",
+    "indicatorBox": {
+      "w": 145.671875,
+      "h": 56
+    },
+    "adjacentBg": "rgb(63, 63, 70)",
+    "adjacentFrom": "ws-root",
+    "visible": true,
+    "contrast": 9.5
+  },
+  "ariaCurrent": 1,
+  "pendingStatus": {
+    "text": "Waiting for a replyAwaiting reply. This is not a streaming response.status probe",
+    "hidden": false,
+    "live": "status"
+  },
+  "focus": {
+    "light": {
+      "applied": {
+        "html": "light",
+        "stored": "light",
+        "rootBg": "rgb(255, 255, 255)"
+      },
+      "stops": [
+        {
+          "tag": "A",
+          "name": "Agents",
+          "owner": "self",
+          "outlineStyle": "solid",
+          "outlineWidth": 2,
+          "outlineOffset": 2,
+          "outlineColor": "rgb(24, 24, 27)",
+          "boxShadow": "none",
+          "indicatorColor": "rgb(24, 24, 27)",
+          "indicatorBox": {
+            "w": 54.515625,
+            "h": 52
+          },
+          "adjacentBg": "rgb(255, 255, 255)",
+          "adjacentFrom": "ws-root",
+          "visible": true,
+          "contrast": 17.72
+        },
+        {
+          "tag": "A",
+          "name": "Kestrel Ops",
+          "owner": "self",
+          "outlineStyle": "solid",
+          "outlineWidth": 2,
+          "outlineOffset": 2,
+          "outlineColor": "rgb(24, 24, 27)",
+          "boxShadow": "none",
+          "indicatorColor": "rgb(24, 24, 27)",
+          "indicatorBox": {
+            "w": 84.1875,
+            "h": 52
+          },
+          "adjacentBg": "rgb(255, 255, 255)",
+          "adjacentFrom": "ws-root",
+          "visible": true,
+          "contrast": 17.72
+        },
+        {
+          "tag": "TEXTAREA",
+          "name": "",
+          "owner": "focus-within:ws-composer",
+          "outlineStyle": "solid",
+          "outlineWidth": 2,
+          "outlineOffset": 2,
+          "outlineColor": "rgb(24, 24, 27)",
+          "boxShadow": "none",
+          "indicatorColor": "rgb(24, 24, 27)",
+          "indicatorBox": {
+            "w": 952,
+            "h": 234
+          },
+          "adjacentBg": "rgb(255, 255, 255)",
+          "adjacentFrom": "ws-root",
+          "visible": true,
+          "contrast": 17.72
+        },
+        {
+          "tag": "BUTTON",
+          "name": "Edit demo instructions",
+          "owner": "self",
+          "outlineStyle": "solid",
+          "outlineWidth": 2,
+          "outlineOffset": 2,
+          "outlineColor": "rgb(24, 24, 27)",
+          "boxShadow": "none",
+          "indicatorColor": "rgb(24, 24, 27)",
+          "indicatorBox": {
+            "w": 52,
+            "h": 52
+          },
+          "adjacentBg": "rgb(250, 250, 250)",
+          "adjacentFrom": "ws-context",
+          "visible": true,
+          "contrast": 16.97
+        },
+        {
+          "tag": "BUTTON",
+          "name": "Add sample document",
+          "owner": "self",
+          "outlineStyle": "solid",
+          "outlineWidth": 2,
+          "outlineOffset": 2,
+          "outlineColor": "rgb(24, 24, 27)",
+          "boxShadow": "none",
+          "indicatorColor": "rgb(24, 24, 27)",
+          "indicatorBox": {
+            "w": 52,
+            "h": 52
+          },
+          "adjacentBg": "rgb(250, 250, 250)",
+          "adjacentFrom": "ws-context",
+          "visible": true,
+          "contrast": 16.97
+        },
+        {
+          "tag": "BUTTON",
+          "name": "Preview Workspace overview.md",
+          "owner": "self",
+          "outlineStyle": "solid",
+          "outlineWidth": 2,
+          "outlineOffset": 2,
+          "outlineColor": "rgb(24, 24, 27)",
+          "boxShadow": "none",
+          "indicatorColor": "rgb(24, 24, 27)",
+          "indicatorBox": {
+            "w": 218,
+            "h": 52
+          },
+          "adjacentBg": "rgb(250, 250, 250)",
+          "adjacentFrom": "ws-context",
+          "visible": true,
+          "contrast": 16.97
+        },
+        {
+          "tag": "BUTTON",
+          "name": "Remove Workspace overview.md",
+          "owner": "self",
+          "outlineStyle": "solid",
+          "outlineWidth": 2,
+          "outlineOffset": 2,
+          "outlineColor": "rgb(24, 24, 27)",
+          "boxShadow": "none",
+          "indicatorColor": "rgb(24, 24, 27)",
+          "indicatorBox": {
+            "w": 52,
+            "h": 52
+          },
+          "adjacentBg": "rgb(250, 250, 250)",
+          "adjacentFrom": "ws-context",
+          "visible": true,
+          "contrast": 16.97
+        },
+        {
+          "tag": "BUTTON",
+          "name": "Preview Response preferences.md",
+          "owner": "self",
+          "outlineStyle": "solid",
+          "outlineWidth": 2,
+          "outlineOffset": 2,
+          "outlineColor": "rgb(24, 24, 27)",
+          "boxShadow": "none",
+          "indicatorColor": "rgb(24, 24, 27)",
+          "indicatorBox": {
+            "w": 218,
+            "h": 52
+          },
+          "adjacentBg": "rgb(250, 250, 250)",
+          "adjacentFrom": "ws-context",
+          "visible": true,
+          "contrast": 16.97
+        },
+        {
+          "tag": "BUTTON",
+          "name": "Remove Response preferences.md",
+          "owner": "self",
+          "outlineStyle": "solid",
+          "outlineWidth": 2,
+          "outlineOffset": 2,
+          "outlineColor": "rgb(24, 24, 27)",
+          "boxShadow": "none",
+          "indicatorColor": "rgb(24, 24, 27)",
+          "indicatorBox": {
+            "w": 52,
+            "h": 52
+          },
+          "adjacentBg": "rgb(250, 250, 250)",
+          "adjacentFrom": "ws-context",
+          "visible": true,
+          "contrast": 16.97
+        },
+        {
+          "tag": "BUTTON",
+          "name": "Reset demo context",
+          "owner": "self",
+          "outlineStyle": "solid",
+          "outlineWidth": 2,
+          "outlineOffset": 2,
+          "outlineColor": "rgb(24, 24, 27)",
+          "boxShadow": "none",
+          "indicatorColor": "rgb(24, 24, 27)",
+          "indicatorBox": {
+            "w": 145,
+            "h": 52
+          },
+          "adjacentBg": "rgb(250, 250, 250)",
+          "adjacentFrom": "ws-context",
+          "visible": true,
+          "contrast": 16.97
+        },
+        {
+          "tag": "A",
+          "name": "Planning the launch10/4/2026",
+          "owner": "self",
+          "outlineStyle": "solid",
+          "outlineWidth": 2,
+          "outlineOffset": 2,
+          "outlineColor": "rgb(24, 24, 27)",
+          "boxShadow": "none",
+          "indicatorColor": "rgb(24, 24, 27)",
+          "indicatorBox": {
+            "w": 564,
+            "h": 67
+          },
+          "adjacentBg": "rgb(255, 255, 255)",
+          "adjacentFrom": "ws-root",
+          "visible": true,
+          "contrast": 17.72
+        },
+        {
+          "tag": "BUTTON",
+          "name": "Actions for Planning the launch",
+          "owner": "self",
+          "outlineStyle": "solid",
+          "outlineWidth": 2,
+          "outlineOffset": 2,
+          "outlineColor": "rgb(24, 24, 27)",
+          "boxShadow": "none",
+          "indicatorColor": "rgb(24, 24, 27)",
+          "indicatorBox": {
+            "w": 52,
+            "h": 52
+          },
+          "adjacentBg": "rgb(255, 255, 255)",
+          "adjacentFrom": "ws-root",
+          "visible": true,
+          "contrast": 17.72
+        },
+        {
+          "tag": "A",
+          "name": "Comparing options10/3/2026",
+          "owner": "self",
+          "outlineStyle": "solid",
+          "outlineWidth": 2,
+          "outlineOffset": 2,
+          "outlineColor": "rgb(24, 24, 27)",
+          "boxShadow": "none",
+          "indicatorColor": "rgb(24, 24, 27)",
+          "indicatorBox": {
+            "w": 564,
+            "h": 67
+          },
+          "adjacentBg": "rgb(255, 255, 255)",
+          "adjacentFrom": "ws-root",
+          "visible": true,
+          "contrast": 17.72
+        },
+        {
+          "tag": "BUTTON",
+          "name": "Actions for Comparing options",
+          "owner": "self",
+          "outlineStyle": "solid",
+          "outlineWidth": 2,
+          "outlineOffset": 2,
+          "outlineColor": "rgb(24, 24, 27)",
+          "boxShadow": "none",
+          "indicatorColor": "rgb(24, 24, 27)",
+          "indicatorBox": {
+            "w": 52,
+            "h": 52
+          },
+          "adjacentBg": "rgb(255, 255, 255)",
+          "adjacentFrom": "ws-root",
+          "visible": true,
+          "contrast": 17.72
+        },
+        null,
+        {
+          "tag": "A",
+          "name": "Skip to content",
+          "owner": "self",
+          "outlineStyle": "solid",
+          "outlineWidth": 2,
+          "outlineOffset": 2,
+          "outlineColor": "rgb(24, 24, 27)",
+          "boxShadow": "none",
+          "indicatorColor": "rgb(24, 24, 27)",
+          "indicatorBox": {
+            "w": 145.671875,
+            "h": 56
+          },
+          "adjacentBg": "rgb(255, 255, 255)",
+          "adjacentFrom": "ws-root",
+          "visible": true,
+          "contrast": 17.72
+        }
+      ]
+    },
+    "dark": {
+      "applied": {
+        "html": "dark",
+        "stored": "dark",
+        "rootBg": "rgb(63, 63, 70)"
+      },
+      "stops": [
+        {
+          "tag": "A",
+          "name": "Agents",
+          "owner": "self",
+          "outlineStyle": "solid",
+          "outlineWidth": 2,
+          "outlineOffset": 2,
+          "outlineColor": "rgb(244, 244, 245)",
+          "boxShadow": "none",
+          "indicatorColor": "rgb(244, 244, 245)",
+          "indicatorBox": {
+            "w": 54.515625,
+            "h": 52
+          },
+          "adjacentBg": "rgb(63, 63, 70)",
+          "adjacentFrom": "ws-root",
+          "visible": true,
+          "contrast": 9.5
+        },
+        {
+          "tag": "A",
+          "name": "Kestrel Ops",
+          "owner": "self",
+          "outlineStyle": "solid",
+          "outlineWidth": 2,
+          "outlineOffset": 2,
+          "outlineColor": "rgb(244, 244, 245)",
+          "boxShadow": "none",
+          "indicatorColor": "rgb(244, 244, 245)",
+          "indicatorBox": {
+            "w": 84.1875,
+            "h": 52
+          },
+          "adjacentBg": "rgb(63, 63, 70)",
+          "adjacentFrom": "ws-root",
+          "visible": true,
+          "contrast": 9.5
+        },
+        {
+          "tag": "TEXTAREA",
+          "name": "",
+          "owner": "focus-within:ws-composer",
+          "outlineStyle": "solid",
+          "outlineWidth": 2,
+          "outlineOffset": 2,
+          "outlineColor": "rgb(244, 244, 245)",
+          "boxShadow": "none",
+          "indicatorColor": "rgb(244, 244, 245)",
+          "indicatorBox": {
+            "w": 952,
+            "h": 234
+          },
+          "adjacentBg": "rgb(63, 63, 70)",
+          "adjacentFrom": "ws-root",
+          "visible": true,
+          "contrast": 9.5
+        },
+        {
+          "tag": "BUTTON",
+          "name": "Edit demo instructions",
+          "owner": "self",
+          "outlineStyle": "solid",
+          "outlineWidth": 2,
+          "outlineOffset": 2,
+          "outlineColor": "rgb(244, 244, 245)",
+          "boxShadow": "none",
+          "indicatorColor": "rgb(244, 244, 245)",
+          "indicatorBox": {
+            "w": 52,
+            "h": 52
+          },
+          "adjacentBg": "rgb(39, 39, 42)",
+          "adjacentFrom": "ws-context",
+          "visible": true,
+          "contrast": 13.55
+        },
+        {
+          "tag": "BUTTON",
+          "name": "Add sample document",
+          "owner": "self",
+          "outlineStyle": "solid",
+          "outlineWidth": 2,
+          "outlineOffset": 2,
+          "outlineColor": "rgb(244, 244, 245)",
+          "boxShadow": "none",
+          "indicatorColor": "rgb(244, 244, 245)",
+          "indicatorBox": {
+            "w": 52,
+            "h": 52
+          },
+          "adjacentBg": "rgb(39, 39, 42)",
+          "adjacentFrom": "ws-context",
+          "visible": true,
+          "contrast": 13.55
+        },
+        {
+          "tag": "BUTTON",
+          "name": "Preview Workspace overview.md",
+          "owner": "self",
+          "outlineStyle": "solid",
+          "outlineWidth": 2,
+          "outlineOffset": 2,
+          "outlineColor": "rgb(244, 244, 245)",
+          "boxShadow": "none",
+          "indicatorColor": "rgb(244, 244, 245)",
+          "indicatorBox": {
+            "w": 218,
+            "h": 52
+          },
+          "adjacentBg": "rgb(39, 39, 42)",
+          "adjacentFrom": "ws-context",
+          "visible": true,
+          "contrast": 13.55
+        },
+        {
+          "tag": "BUTTON",
+          "name": "Remove Workspace overview.md",
+          "owner": "self",
+          "outlineStyle": "solid",
+          "outlineWidth": 2,
+          "outlineOffset": 2,
+          "outlineColor": "rgb(244, 244, 245)",
+          "boxShadow": "none",
+          "indicatorColor": "rgb(244, 244, 245)",
+          "indicatorBox": {
+            "w": 52,
+            "h": 52
+          },
+          "adjacentBg": "rgb(39, 39, 42)",
+          "adjacentFrom": "ws-context",
+          "visible": true,
+          "contrast": 13.55
+        },
+        {
+          "tag": "BUTTON",
+          "name": "Preview Response preferences.md",
+          "owner": "self",
+          "outlineStyle": "solid",
+          "outlineWidth": 2,
+          "outlineOffset": 2,
+          "outlineColor": "rgb(244, 244, 245)",
+          "boxShadow": "none",
+          "indicatorColor": "rgb(244, 244, 245)",
+          "indicatorBox": {
+            "w": 218,
+            "h": 52
+          },
+          "adjacentBg": "rgb(39, 39, 42)",
+          "adjacentFrom": "ws-context",
+          "visible": true,
+          "contrast": 13.55
+        },
+        {
+          "tag": "BUTTON",
+          "name": "Remove Response preferences.md",
+          "owner": "self",
+          "outlineStyle": "solid",
+          "outlineWidth": 2,
+          "outlineOffset": 2,
+          "outlineColor": "rgb(244, 244, 245)",
+          "boxShadow": "none",
+          "indicatorColor": "rgb(244, 244, 245)",
+          "indicatorBox": {
+            "w": 52,
+            "h": 52
+          },
+          "adjacentBg": "rgb(39, 39, 42)",
+          "adjacentFrom": "ws-context",
+          "visible": true,
+          "contrast": 13.55
+        },
+        {
+          "tag": "BUTTON",
+          "name": "Reset demo context",
+          "owner": "self",
+          "outlineStyle": "solid",
+          "outlineWidth": 2,
+          "outlineOffset": 2,
+          "outlineColor": "rgb(244, 244, 245)",
+          "boxShadow": "none",
+          "indicatorColor": "rgb(244, 244, 245)",
+          "indicatorBox": {
+            "w": 145,
+            "h": 52
+          },
+          "adjacentBg": "rgb(39, 39, 42)",
+          "adjacentFrom": "ws-context",
+          "visible": true,
+          "contrast": 13.55
+        },
+        {
+          "tag": "A",
+          "name": "Planning the launch10/4/2026",
+          "owner": "self",
+          "outlineStyle": "solid",
+          "outlineWidth": 2,
+          "outlineOffset": 2,
+          "outlineColor": "rgb(244, 244, 245)",
+          "boxShadow": "none",
+          "indicatorColor": "rgb(244, 244, 245)",
+          "indicatorBox": {
+            "w": 564,
+            "h": 67
+          },
+          "adjacentBg": "rgb(63, 63, 70)",
+          "adjacentFrom": "ws-root",
+          "visible": true,
+          "contrast": 9.5
+        },
+        {
+          "tag": "BUTTON",
+          "name": "Actions for Planning the launch",
+          "owner": "self",
+          "outlineStyle": "solid",
+          "outlineWidth": 2,
+          "outlineOffset": 2,
+          "outlineColor": "rgb(244, 244, 245)",
+          "boxShadow": "none",
+          "indicatorColor": "rgb(244, 244, 245)",
+          "indicatorBox": {
+            "w": 52,
+            "h": 52
+          },
+          "adjacentBg": "rgb(63, 63, 70)",
+          "adjacentFrom": "ws-root",
+          "visible": true,
+          "contrast": 9.5
+        },
+        {
+          "tag": "A",
+          "name": "Comparing options10/3/2026",
+          "owner": "self",
+          "outlineStyle": "solid",
+          "outlineWidth": 2,
+          "outlineOffset": 2,
+          "outlineColor": "rgb(244, 244, 245)",
+          "boxShadow": "none",
+          "indicatorColor": "rgb(244, 244, 245)",
+          "indicatorBox": {
+            "w": 564,
+            "h": 67
+          },
+          "adjacentBg": "rgb(63, 63, 70)",
+          "adjacentFrom": "ws-root",
+          "visible": true,
+          "contrast": 9.5
+        },
+        {
+          "tag": "BUTTON",
+          "name": "Actions for Comparing options",
+          "owner": "self",
+          "outlineStyle": "solid",
+          "outlineWidth": 2,
+          "outlineOffset": 2,
+          "outlineColor": "rgb(244, 244, 245)",
+          "boxShadow": "none",
+          "indicatorColor": "rgb(244, 244, 245)",
+          "indicatorBox": {
+            "w": 52,
+            "h": 52
+          },
+          "adjacentBg": "rgb(63, 63, 70)",
+          "adjacentFrom": "ws-root",
+          "visible": true,
+          "contrast": 9.5
+        },
+        null,
+        {
+          "tag": "A",
+          "name": "Skip to content",
+          "owner": "self",
+          "outlineStyle": "solid",
+          "outlineWidth": 2,
+          "outlineOffset": 2,
+          "outlineColor": "rgb(244, 244, 245)",
+          "boxShadow": "none",
+          "indicatorColor": "rgb(244, 244, 245)",
+          "indicatorBox": {
+            "w": 145.671875,
+            "h": 56
+          },
+          "adjacentBg": "rgb(63, 63, 70)",
+          "adjacentFrom": "ws-root",
+          "visible": true,
+          "contrast": 9.5
+        }
+      ]
+    }
+  },
+  "controls": {
+    "removedDetected": 6,
+    "lowContrastDetected": 6
+  }
+}

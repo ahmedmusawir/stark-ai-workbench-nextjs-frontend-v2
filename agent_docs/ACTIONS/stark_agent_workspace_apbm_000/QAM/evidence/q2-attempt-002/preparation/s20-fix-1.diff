@@ -1,0 +1,28 @@
+--- /home/moose/nextjs/10XLAB/stark-ai-workbench-nextjs-frontend-v2/agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002/preparation/s20_root_font_collateral.r1.spec.ts.txt	2026-10-11 18:06:32.981142463 +0600
++++ /home/moose/nextjs/10XLAB/stark-ai-workbench-nextjs-frontend-v2/agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/AUTOMATION/specs/s20_root_font_collateral.spec.ts	2026-10-11 18:06:33.056993682 +0600
+@@ -23,7 +23,9 @@
+       html: document.documentElement.className, bodyClass: document.body.className, bodyFont: getComputedStyle(document.body).fontFamily,
+       interAvailable: document.fonts.check('16px Inter'), loadedFaces: [...document.fonts].filter(f => f.family.replace(/"/g, '') === 'Inter' && f.status === 'loaded').map(f => f.unicodeRange.slice(0, 20)),
+       bg: getComputedStyle(document.body).backgroundColor, overflow: document.documentElement.scrollWidth - innerWidth,
+-      probes: Object.fromEntries([...document.querySelectorAll<HTMLElement>('[data-font-probe]')].map(e => [e.dataset.fontProbe!, { font: getComputedStyle(e).fontFamily, w: e.getBoundingClientRect().width, h: e.getBoundingClientRect().height }])),
++      // tw/th = rendered text advance via a DOM Range (block boxes alone cannot show glyph differences).
++      probes: Object.fromEntries([...document.querySelectorAll<HTMLElement>('[data-font-probe]')].map(e => { const r = document.createRange(); r.selectNodeContents(e); const t = r.getBoundingClientRect();
++        return [e.dataset.fontProbe!, { font: getComputedStyle(e).fontFamily, w: e.getBoundingClientRect().width, h: e.getBoundingClientRect().height, tw: t.width, th: t.height }]; })),
+       preloadLinks: document.querySelectorAll('link[rel=preload][as=font]').length,
+     }));
+     const key = `${blocked ? 'blocked' : 'loaded'}-${theme}-${width}`;
+@@ -40,9 +42,10 @@
+     }
+     await ctx.close();
+   }
+-  // Fallback metric difference (recorded, not graded): width of the Latin probe, loaded vs blocked, per theme/width.
+-  const diff: Record<string, number> = {};
++  // Fallback layout difference (recorded, not graded): rendered text advance of each probe, blocked minus loaded, per theme/width.
++  const diff: Record<string, Record<string, number>> = {};
+   for (const theme of ['dark', 'light']) for (const width of [375, 1280]) {
+-    const a = (results[`loaded-${theme}-${width}`] as any).probes.latin.w, b = (results[`blocked-${theme}-${width}`] as any).probes.latin.w; diff[`${theme}-${width}`] = Math.round((b - a) * 100) / 100; }
+-  record('s20-root-font-collateral', { committed, results, latinProbeWidthDeltaBlockedMinusLoaded: diff });
++    const L = (results[`loaded-${theme}-${width}`] as any).probes, B = (results[`blocked-${theme}-${width}`] as any).probes;
++    diff[`${theme}-${width}`] = Object.fromEntries(Object.keys(L).map(k => [k, Math.round((B[k].tw - L[k].tw) * 100) / 100])); }
++  record(process.env.QA_S20_RECORD || 's20-root-font-collateral', { committed, systemInterHiddenByFontconfig: !!process.env.FONTCONFIG_FILE, results, textAdvanceDeltaBlockedMinusLoaded: diff });
+ });

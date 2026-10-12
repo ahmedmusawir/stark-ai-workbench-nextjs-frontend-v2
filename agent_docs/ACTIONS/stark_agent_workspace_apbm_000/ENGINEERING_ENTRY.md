@@ -20,6 +20,6 @@ Compare scoped screens with DESIGN previews, test functionality and mocked servi
 
 ## Finish in the same assignment
 
-Fill QA_HANDOFF, QAM_MANIFEST facts, BASELINE_CHECK, changed-file/source inventory, self-check matrix and safe evidence. Leave independent plan/approval/certification pending. Export one indexed engineering return per QA_HANDOFF. Update repository reporting/session/recovery/changelog per applicable logging instructions. Give Tony exact selective staging guidance and the future QA entry path. Do not commit, open QA branch, start QA or fill Gate Q yourself.
+Fill QAM/HANDOFFS/QA_HANDOFF.md, QAM_MANIFEST facts, BASELINE_CHECK, changed-file/source inventory, self-check matrix and safe evidence. Leave independent plan/approval/certification pending. Export one indexed engineering return per QA_HANDOFF. Update repository reporting/session/recovery/changelog per applicable logging instructions. Give Tony exact selective staging guidance and the future QA entry path. Do not commit, open QA branch, start QA or fill Gate Q yourself.
 
 Stop for wrong repo/branch, material product drift, contradiction affecting acceptance, necessary protected edits, missing access that prevents required proof, accidental external traffic or sensitive capture, candidate contamination/concurrent writes. Give one report containing finding, affected ACs, evidence, owner and smallest decision. Routine implementation choices inside the contract do not require another prompt.

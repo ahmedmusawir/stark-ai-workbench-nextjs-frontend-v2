@@ -1,0 +1,14 @@
+{
+  "test": [
+    "S-19 copy payloads, blocked clipboard fallback, speech lifecycle, unavailable explanation, no autoplay"
+  ],
+  "status": "passed",
+  "origin": "http://127.0.0.1:43181",
+  "counters": {
+    "contexts": 2,
+    "pages": 2,
+    "requests": 8
+  },
+  "events": [],
+  "unexpected": 0
+}

@@ -1,0 +1,21 @@
+{
+  "test": [
+    "C-03 WebSocket transport is intercepted and closed"
+  ],
+  "status": "passed",
+  "origin": "http://127.0.0.1:43181",
+  "counters": {
+    "contexts": 0,
+    "pages": 1,
+    "requests": 4
+  },
+  "events": [
+    {
+      "kind": "websocket-blocked",
+      "detail": "wss://qa-control.example.invalid/socket",
+      "at": 1791720081665,
+      "consumedBy": "C-03 websocket"
+    }
+  ],
+  "unexpected": 0
+}

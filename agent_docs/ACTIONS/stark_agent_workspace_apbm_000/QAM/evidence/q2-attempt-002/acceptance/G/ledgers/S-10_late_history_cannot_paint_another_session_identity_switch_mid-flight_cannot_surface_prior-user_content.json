@@ -1,0 +1,14 @@
+{
+  "test": [
+    "S-10 late history cannot paint another session; identity switch mid-flight cannot surface prior-user content"
+  ],
+  "status": "passed",
+  "origin": "http://127.0.0.1:43181",
+  "counters": {
+    "contexts": 0,
+    "pages": 1,
+    "requests": 12
+  },
+  "events": [],
+  "unexpected": 0
+}

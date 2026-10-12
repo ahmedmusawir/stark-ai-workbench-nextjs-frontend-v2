@@ -1,0 +1,6 @@
+
+Running 1 test using 1 worker
+
+  ✓  1 agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/AUTOMATION/specs/s20_root_font_collateral.spec.ts:13:5 › S-20 root font collateral: committed subsets load and match bytes; blocked fonts fall back without overflow; both themes at 375/1280 (3.4s)
+
+  1 passed (7.0s)

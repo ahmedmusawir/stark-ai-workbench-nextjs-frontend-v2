@@ -1,0 +1,11 @@
+[
+  "agent=kestrel&new=0",
+  "agent=kestrel&new=1&session=s",
+  "session=s",
+  "agent=unknown",
+  "agent=kestrel&user=u2",
+  "agent=kestrel&agent=kestrel",
+  "agent=KESTREL",
+  "agent=kestrel&backend=x",
+  "agent=kestrel&session=%20"
+]

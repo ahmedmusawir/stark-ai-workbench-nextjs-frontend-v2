@@ -1,0 +1,14 @@
+{
+  "test": [
+    "S-09 unknown outcome (rejected-throw): send paused, attempted text visible, only history inspection, never \"not sent\""
+  ],
+  "status": "passed",
+  "origin": "http://127.0.0.1:43181",
+  "counters": {
+    "contexts": 0,
+    "pages": 1,
+    "requests": 4
+  },
+  "events": [],
+  "unexpected": 0
+}

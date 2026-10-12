@@ -1,0 +1,12 @@
+{
+  "dotnext_present": true,
+  "top_level": [
+    "dev"
+  ],
+  "file_count": 422,
+  "build_id": null,
+  "next_env_sha256": "0f70629890b72a0a82e91972cc032c04b658b26c265373cb711cf576bfbf8fcc",
+  "tsconfig_sha256": "03bb7219e7d5584c420f3ead31c20e998d5b9380a4c051c6a3d67e1237944ce0",
+  "env_local_present": true,
+  "note": "Pre-existing .next is generated output (not owned by this attempt). Recorded before any build; not counted as this build."
+}

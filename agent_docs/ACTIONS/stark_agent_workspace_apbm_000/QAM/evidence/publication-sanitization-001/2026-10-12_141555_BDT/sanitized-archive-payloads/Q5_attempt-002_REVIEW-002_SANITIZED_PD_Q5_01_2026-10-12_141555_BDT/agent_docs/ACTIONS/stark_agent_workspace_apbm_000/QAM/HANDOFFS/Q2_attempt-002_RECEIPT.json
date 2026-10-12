@@ -1,0 +1,15 @@
+{
+  "archive": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/HANDOFFS/Q2_attempt-002.zip",
+  "archive_sha256": "34e8768bd1546dd16bb3058a71e5ceb3e2fa769f071415ecd63a9da064d71e10",
+  "archive_bytes": 6740271,
+  "members": 482,
+  "file_index_sha256": "2a45467126a739576b5c4f1daf351ed537ec86b1a276f53f242966a867f61936",
+  "crc_testzip": "OK",
+  "membership_equals_index_plus_index": true,
+  "member_hashes_match_index": true,
+  "downloads_copy": "/home/moose/Downloads/APBM000_Q2_attempt-002_QA-Lead-Package_2026-10-11_181525_BDT.zip",
+  "downloads_copy_sha256": "34e8768bd1546dd16bb3058a71e5ceb3e2fa769f071415ecd63a9da064d71e10",
+  "secret_pattern_scan": "generic credential patterns; 0 hits (scanner source exempt: it contains the patterns); .env.local never read",
+  "excluded": "archives, Playwright .last-run caches, traces/HAR/video, profiles, .next build output, node_modules, dependency/private env",
+  "created": "2026-10-11T18:15:25+06:00"
+}

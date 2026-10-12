@@ -1,0 +1,19 @@
+{
+  "stage": "C-jest-maintained",
+  "command": [
+    "node",
+    "node_modules/jest/bin/jest.js",
+    "--runInBand",
+    "--ci",
+    "--json",
+    "--outputFile=/home/moose/nextjs/10XLAB/stark-ai-workbench-nextjs-frontend-v2/agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002/acceptance/C/maintained.json"
+  ],
+  "extra_env_keys": [],
+  "started": "2026-10-11T18:02:40+06:00",
+  "duration_s": 11.621,
+  "exit": 0,
+  "cwd": "repo root",
+  "namespace": "unshare -rn; lo up; no external route",
+  "env": "env -i PATH HOME LANG TMPDIR NEXT_TELEMETRY_DISABLED=1 CI=1 + extra",
+  "tmpdir": "/tmp/claude-1000/qa-a2-tmp/C-jest-maintained"
+}

@@ -1,0 +1,25 @@
+{
+  "test": [
+    "C-01 off-origin request is aborted and logged by the browser interceptor in default, manual, newPage and popup contexts"
+  ],
+  "status": "failed",
+  "origin": "http://127.0.0.1:43181",
+  "counters": {
+    "contexts": 0,
+    "pages": 1,
+    "requests": 5
+  },
+  "events": [
+    {
+      "kind": "request-offorigin-observed",
+      "detail": "https://qa-control.example.invalid/probe",
+      "at": 1791720051018
+    },
+    {
+      "kind": "request-blocked",
+      "detail": "https://qa-control.example.invalid/probe",
+      "at": 1791720051018
+    }
+  ],
+  "unexpected": 2
+}

@@ -1,0 +1,28 @@
+{
+  "record": "Director Q2 attempt-002 release \u2014 verbatim binding",
+  "release_file": "HANDOFFS/DIRECTOR_Q2_RELEASE_002_2026-10-11_174045_BDT.txt",
+  "release_sha256": "adb0a64257d2e0566552889e94133333166fa9235111934abc94daa204d56674",
+  "received": "2026-10-11 session start; first Executor tool timestamp 17:40:45 BDT (+06:00)",
+  "sender": "Tony (Director), sent directly in the Claudy Claude Code session",
+  "verbatim_note": "Text recorded exactly as received, including the U+2019 apostrophe in 'module\u2019s'. Substantively matches DIRECTOR_RELEASE_002_DRAFT.txt; the sent text, not the draft, is the authority.",
+  "candidate_sha": "8eb5789d9021ad06c15db36db74419a2b5c68fc5",
+  "branch": "qa/frontend-apbm-000",
+  "plan": "QAM_TEST_PLAN.md v0.3",
+  "plan_sha256": "6b3f5df3e89c6a873684248b4ce790173726218c6379161c100564f785199c04",
+  "approval_sha256": "72e1970dec2fa43d0e8ab72ad57e79a2410f6bda70cea347136d103109a28561",
+  "binding_sha256": "06aed917a0b22d804ad7d0c0cb5f2421821b28f75fc95ff40ba43bc66d551939",
+  "delivery_index_sha256": "de25fa28715f3f07bba3935ffc12108677128c8018db733b5d32cba539ee9fc7",
+  "delivery_zip_sha256": "2772d6d20e3d2a6cd678e845fd739a28adc84801d1fb043db872599201481cda",
+  "draft_sha256": "f0b51935de16ce5073ed6c86bed1511e89e328c95f5c5ca3e6eec055389b46a8",
+  "D4": "ALLOW",
+  "D7": "OMIT",
+  "gate_q": "PENDING",
+  "not_authorized": [
+    "product repairs",
+    "live-service expansion",
+    "Git mutation",
+    "Q5",
+    "merge",
+    "closeout"
+  ]
+}

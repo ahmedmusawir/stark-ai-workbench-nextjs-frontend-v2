@@ -1,0 +1,96 @@
+{
+  "record": "APBM000 retest-002 Lead delivery installation",
+  "started": "2026-10-11T17:41:55+06:00",
+  "package": "APBM000_RETEST_002_LEAD_PACKAGE_2026-10-11.zip",
+  "package_sha256": "2772d6d20e3d2a6cd678e845fd739a28adc84801d1fb043db872599201481cda",
+  "external_digest_supplied_by_director": "2772d6d20e3d2a6cd678e845fd739a28adc84801d1fb043db872599201481cda",
+  "external_digest_note": "Director supplied the ZIP SHA-256; the internal RETEST_002_FILE_INDEX.json is bound transitively through the verified ZIP digest (no separate index digest was supplied).",
+  "installer": "Claudy (independent QA Executor)",
+  "members": [
+    {
+      "path": "QAM/HANDOFFS/CLAUDY_RETEST_002_PROMPT.txt",
+      "bytes": 3595,
+      "sha256": "fbed994bce48fe7e14544660b51af2945cedcc812b2374c5f67a01064d7b1560",
+      "index_verified": true,
+      "action": "INSTALLED (new)",
+      "post_install_sha256": "fbed994bce48fe7e14544660b51af2945cedcc812b2374c5f67a01064d7b1560",
+      "post_install_matches": true
+    },
+    {
+      "path": "QAM/HANDOFFS/DIRECTOR_RELEASE_002_DRAFT.txt",
+      "bytes": 681,
+      "sha256": "f0b51935de16ce5073ed6c86bed1511e89e328c95f5c5ca3e6eec055389b46a8",
+      "index_verified": true,
+      "action": "INSTALLED (new)",
+      "post_install_sha256": "f0b51935de16ce5073ed6c86bed1511e89e328c95f5c5ca3e6eec055389b46a8",
+      "post_install_matches": true
+    },
+    {
+      "path": "QAM/HANDOFFS/LEAD_INTAKE_VERIFICATION_2026-10-11.json",
+      "bytes": 1767,
+      "sha256": "c188b6378a0c823cc82fbf7ab349e3c0779dcded5bbd27b3219ee7df04f3d499",
+      "index_verified": true,
+      "action": "INSTALLED (new)",
+      "post_install_sha256": "c188b6378a0c823cc82fbf7ab349e3c0779dcded5bbd27b3219ee7df04f3d499",
+      "post_install_matches": true
+    },
+    {
+      "path": "QAM/HANDOFFS/LEAD_RETEST_002_APPROVAL_2026-10-11.md",
+      "bytes": 4547,
+      "sha256": "72e1970dec2fa43d0e8ab72ad57e79a2410f6bda70cea347136d103109a28561",
+      "index_verified": true,
+      "action": "INSTALLED (new)",
+      "post_install_sha256": "72e1970dec2fa43d0e8ab72ad57e79a2410f6bda70cea347136d103109a28561",
+      "post_install_matches": true
+    },
+    {
+      "path": "QAM/HANDOFFS/LEAD_RETEST_002_BINDING_2026-10-11.json",
+      "bytes": 103827,
+      "sha256": "06aed917a0b22d804ad7d0c0cb5f2421821b28f75fc95ff40ba43bc66d551939",
+      "index_verified": true,
+      "action": "INSTALLED (new)",
+      "post_install_sha256": "06aed917a0b22d804ad7d0c0cb5f2421821b28f75fc95ff40ba43bc66d551939",
+      "post_install_matches": true
+    },
+    {
+      "path": "QAM/HANDOFFS/QAM_TEST_PLAN_v0.2_PRESERVED_2026-10-11.md",
+      "bytes": 37865,
+      "sha256": "8ddb743f1be09d624bf79c8a602ad05fbd3cffbffbc2d8c6cfbaee16f8b80337",
+      "index_verified": true,
+      "action": "INSTALLED (new)",
+      "post_install_sha256": "8ddb743f1be09d624bf79c8a602ad05fbd3cffbffbc2d8c6cfbaee16f8b80337",
+      "post_install_matches": true
+    },
+    {
+      "path": "QAM/HANDOFFS/RETEST_002_FILE_INDEX.json",
+      "bytes": 1803,
+      "sha256": "de25fa28715f3f07bba3935ffc12108677128c8018db733b5d32cba539ee9fc7",
+      "index_verified": false,
+      "action": "INSTALLED (new)",
+      "post_install_sha256": "de25fa28715f3f07bba3935ffc12108677128c8018db733b5d32cba539ee9fc7",
+      "post_install_matches": true
+    },
+    {
+      "path": "QAM/HANDOFFS/RETEST_002_START_HERE.md",
+      "bytes": 1217,
+      "sha256": "d2e0cd9f30aeff5b992acf007b141744901b610b73a9c7312cd43663691e517c",
+      "index_verified": true,
+      "action": "INSTALLED (new)",
+      "post_install_sha256": "d2e0cd9f30aeff5b992acf007b141744901b610b73a9c7312cd43663691e517c",
+      "post_install_matches": true
+    },
+    {
+      "path": "QAM/QAM_TEST_PLAN.md",
+      "bytes": 34842,
+      "sha256": "6b3f5df3e89c6a873684248b4ce790173726218c6379161c100564f785199c04",
+      "index_verified": true,
+      "action": "REPLACED planned v0.2 8ddb743f1be09d624bf79c8a602ad05fbd3cffbffbc2d8c6cfbaee16f8b80337 -> v0.3; byte-exact v0.2 preserved at HANDOFFS/QAM_TEST_PLAN_v0.2_PRESERVED_2026-10-11.md",
+      "post_install_sha256": "6b3f5df3e89c6a873684248b4ce790173726218c6379161c100564f785199c04",
+      "post_install_matches": true
+    }
+  ],
+  "index_sha256": "de25fa28715f3f07bba3935ffc12108677128c8018db733b5d32cba539ee9fc7",
+  "completed": "2026-10-11T17:41:55+06:00",
+  "all_post_install_match": true,
+  "conflicts": []
+}

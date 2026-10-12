@@ -1,0 +1,14 @@
+[
+  {
+    "kind": "pageerror",
+    "detail": "Error: QA_CONTROL_PAGEERROR default",
+    "at": 1791720052168,
+    "consumedBy": "C-02 synthetic"
+  },
+  {
+    "kind": "pageerror",
+    "detail": "Error: QA_CONTROL_PAGEERROR manual",
+    "at": 1791720052603,
+    "consumedBy": "C-02 synthetic"
+  }
+]

@@ -1,0 +1,76 @@
+2026-10-11T19:25:16+06:00
+8eb5789d9021ad06c15db36db74419a2b5c68fc5
+ M agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/AUTOMATION/jest/qa_entry_props.test.tsx
+ M agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/AUTOMATION/playwright.qa.config.ts
+ M agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/AUTOMATION/qa-harness.cjs
+ M agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/AUTOMATION/specs/_qa.ts
+ M agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/AUTOMATION/specs/s12_16_demo_theme_render.spec.ts
+ M agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/AUTOMATION/specs/s17_19_a11y_copy_obs.spec.ts
+ M agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/FINDINGS/Q2-F01_signout_storage_unavailable.md
+ M agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/FINDINGS/Q2-F02_drawer_breakpoint_focus_target.md
+ M agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/FINDINGS/Q2-F03_breadcrumb_target_size.md
+ M agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/FINDINGS/Q2-F04_manifest_test_bundle_coverage.md
+ M agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/QAM_CHECKPOINTS.md
+ M agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/QAM_MANIFEST.md
+ M agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/QAM_STATE.json
+ M agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/QAM_TEST_PLAN.md
+?? agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/AUTOMATION/a2_gate_controls.sh
+?? agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/AUTOMATION/a2_output_audit.py
+?? agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/AUTOMATION/a2_prepare_records.py
+?? agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/AUTOMATION/a2_q5_execute.py
+?? agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/AUTOMATION/a2_q5_proposal.py
+?? agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/AUTOMATION/a2_run.sh
+?? agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/AUTOMATION/fontconfig-hide-system-inter.conf
+?? agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/AUTOMATION/jest/qa_f01_realstore.test.tsx
+?? agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/AUTOMATION/negative/seeded_allowed_twin_entry.tsx
+?? agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/AUTOMATION/q2a2_addendum_export.py
+?? agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/AUTOMATION/q2a2_export.py
+?? agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/AUTOMATION/q2a2_gate.py
+?? agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/AUTOMATION/q5_export.py
+?? agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/AUTOMATION/repair-harness/browser_harness.cjs
+?? agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/AUTOMATION/repair-harness/font-before.css
+?? agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/AUTOMATION/repair-harness/font-cache-matches.json
+?? agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/AUTOMATION/secondary-a2/_policy_wrap.ts
+?? agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/AUTOMATION/secondary-a2/playwright.repair-copy.config.ts
+?? agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/AUTOMATION/secondary-a2/playwright.workspace-copy.config.ts
+?? agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/AUTOMATION/secondary-a2/repair.spec.ts
+?? agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/AUTOMATION/secondary-a2/workspace.spec.ts
+?? agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/AUTOMATION/specs/s00_policy_controls.spec.ts
+?? agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/AUTOMATION/specs/s20_root_font_collateral.spec.ts
+?? agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/FINDINGS/DIRECTOR-OBS-001_EXECUTOR-ADDENDUM-003.md
+?? agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/FINDINGS/Q2-F01_RETEST-002.md
+?? agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/FINDINGS/Q2-F02_RETEST-002.md
+?? agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/FINDINGS/Q2-F03_RETEST-002.md
+?? agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/FINDINGS/Q2-F04_RETEST-002.md
+?? agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/HANDOFFS/APBM000_ADDMEMBER_TEST_REPAIR_001_REVIEW_2026-10-11_134025_BDT.zip
+?? agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/HANDOFFS/APBM000_DEPENDENCY_DIAGNOSTIC_REVIEW_2026-10-08_131602_BDT.zip
+?? agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/HANDOFFS/APBM000_ENGINEERING_REPAIR_001_REVIEW_2026-10-08_112512_BDT.zip
+?? agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/HANDOFFS/APBM000_QA_LEAD_INTAKE_8eb5789d9021_2026-10-11_161409_BDT.zip
+?? agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/HANDOFFS/CLAUDY_RETEST_002_PROMPT.txt
+?? agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/HANDOFFS/DIRECTOR_Q2_RELEASE_002_2026-10-11_174045_BDT.txt
+?? agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/HANDOFFS/DIRECTOR_Q2_RELEASE_002_BINDING_2026-10-11.json
+?? agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/HANDOFFS/DIRECTOR_RELEASE_002_DRAFT.txt
+?? agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/HANDOFFS/LEAD_INTAKE_VERIFICATION_2026-10-11.json
+?? agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/HANDOFFS/LEAD_Q2_ATTEMPT_002_DISPOSITION_ADDENDUM_INSTRUCTION_2026-10-11_182616_BDT.txt
+?? agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/HANDOFFS/LEAD_Q2_ATTEMPT_002_DISPOSITION_ADDENDUM_INSTRUCTION_2026-10-11_182616_BDT_BINDING.json
+?? agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/HANDOFFS/LEAD_Q5_AUTHORIZATION_2026-10-11_192313_BDT.txt
+?? agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/HANDOFFS/LEAD_Q5_AUTHORIZATION_2026-10-11_192313_BDT_BINDING.json
+?? agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/HANDOFFS/LEAD_RETEST_002_APPROVAL_2026-10-11.md
+?? agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/HANDOFFS/LEAD_RETEST_002_BINDING_2026-10-11.json
+?? agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/HANDOFFS/Q2_attempt-002.zip
+?? agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/HANDOFFS/Q2_attempt-002_ADDENDUM-001.zip
+?? agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/HANDOFFS/Q2_attempt-002_ADDENDUM-001_RECEIPT.json
+?? agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/HANDOFFS/Q2_attempt-002_ADDENDUM-001_REVIEW_START_HERE.md
+?? agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/HANDOFFS/Q2_attempt-002_RECEIPT.json
+?? agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/HANDOFFS/Q2_attempt-002_REVIEW_START_HERE.md
+?? agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/HANDOFFS/QAM_TEST_PLAN_v0.2_PRESERVED_2026-10-11.md
+?? agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/HANDOFFS/REPAIRED_CANDIDATE_001_POST_COMMIT_RECEIPT.md
+?? agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/HANDOFFS/RETEST_002_FILE_INDEX.json
+?? agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/HANDOFFS/RETEST_002_START_HERE.md
+?? agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/HANDOFFS/REVIEW_START_HERE.md
+?? agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/QA_RECOVERY.md
+?? agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/session_2026-10-11.md
+edfffe35c9226c36ce8b8e12acff2375617b664fa3d7ec9cc94a16a03d83fcb8  RECOVERY.md
+44a8159729f1117ea3c2deb86c94aa729a1d5a444705851b21eaa2e723ff671d  agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/QA_RECOVERY.md
+ls: cannot access 'session_2026-10-11.md': No such file or directory
+ea86bbc6fafd19c033568f0d9dde3225a9d5aadfff6ae4a268ad0727681e2bbb  agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002/preparation/policy-controls.run1/artifacts/.last-run.json

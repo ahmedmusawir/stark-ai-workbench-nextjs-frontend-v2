@@ -1,0 +1,14 @@
+{
+  "test": [
+    "S-07 New Chat: fresh local draft, clears old draft, no create/run before send; returned ID binds once; late result never hijacks"
+  ],
+  "status": "passed",
+  "origin": "http://127.0.0.1:43181",
+  "counters": {
+    "contexts": 0,
+    "pages": 1,
+    "requests": 4
+  },
+  "events": [],
+  "unexpected": 0
+}

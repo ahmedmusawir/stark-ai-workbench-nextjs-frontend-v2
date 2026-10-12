@@ -1,0 +1,37 @@
+{
+  "control": "AC000-20 harness forbidden-import build control (omitted in attempt-002; requested by Lead disposition 2026-10-11)",
+  "isolation": "AUTOMATION/a2_run.sh: unshare -rn (loopback only), env -i, run-owned TMPDIR, Node network guard preloaded; harness strips env to PATH/HOME/LANG/TMPDIR/QA_PORT/QA_ENTRY/NODE_OPTIONS",
+  "harness": "AUTOMATION/qa-harness.cjs (byte-identical to attempt-002 freeze r7 entry, 3c161d8a\u2026); plugin QaNoProductionServices throws on FORBIDDEN request before resolution",
+  "negative": {
+    "command": [
+      "timeout",
+      "120",
+      "node",
+      "/home/moose/nextjs/10XLAB/stark-ai-workbench-nextjs-frontend-v2/agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/AUTOMATION/qa-harness.cjs"
+    ],
+    "started": "2026-10-11T18:26:47+06:00",
+    "exit": 1,
+    "expected": "exit 1, QA_HARNESS_FAIL naming exactly @/services/chatService from the seed import line, no QA_FIXTURE_READY",
+    "intended_rejection": true,
+    "ready_printed": false,
+    "output": "QA_HARNESS_FAIL ERROR in ./agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/AUTOMATION/negative/seeded_forbidden_entry.tsx 2:0-53\nModule not found: Error: Forbidden production dependency in QA fixture harness: @/services/chatService"
+  },
+  "positive_twin": {
+    "command": [
+      "timeout",
+      "-s",
+      "TERM",
+      "40",
+      "node",
+      "/home/moose/nextjs/10XLAB/stark-ai-workbench-nextjs-frontend-v2/agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/AUTOMATION/qa-harness.cjs"
+    ],
+    "started": "2026-10-11T18:26:56+06:00",
+    "exit": 124,
+    "expected": "QA_FIXTURE_READY (same harness, CSS/font/webpack pipeline, only the import target differs), then terminated by the planned timeout (124)",
+    "ready_printed": true,
+    "forbidden_message": false,
+    "output": "QA_FIXTURE_READY loopback-only; synthetic services; no production auth"
+  },
+  "twin_diff": "seeded-entry-vs-twin.diff (comment + import specifier + logged symbol only)",
+  "verdict": "PASS"
+}

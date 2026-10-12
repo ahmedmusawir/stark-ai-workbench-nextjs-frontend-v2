@@ -10,3 +10,12 @@ Status: **OPEN, proposed Medium, for Lead classification.** Candidate f21564c. E
 - **Not affected:** server render (no setter during SSR; 5/5 queries pass, `qa_entry_ssr.test.tsx`). The normal-storage sign-out order is verified (logout → reset → /auth).
 - **Smallest suggested scope (Architect decides):** `src/components/workspace/WorkspaceEntry.tsx` sign-out ordering/guard (phase-000 new code), and/or the protected `src/store/chatStore.ts` storage guard (APBM_001).
 - **Uncertainty:** how often real browsers expose a throwing storage getter on this site; the jsdom simulation matches the maintained F5 test's condition.
+
+
+---
+
+## QA Lead disposition — 2026-10-11 (appended by Executor; text above unchanged)
+
+**Q2-F01: RESOLVED within the tested fixture scope** for candidate `8eb5789d9021ad06c15db36db74419a2b5c68fc5` (QA Lead review of Q2 attempt-002). Retest evidence: `Q2-F01_RETEST-002.md`. Source: `HANDOFFS/LEAD_Q2_ATTEMPT_002_DISPOSITION_ADDENDUM_INSTRUCTION_2026-10-11_182616_BDT.txt` (SHA-256 `1617184f…32e6`). Gate Q remains pending.
+
+Scope note: fixture/mocked-logout scope only; no real server logout or token-revocation claim.

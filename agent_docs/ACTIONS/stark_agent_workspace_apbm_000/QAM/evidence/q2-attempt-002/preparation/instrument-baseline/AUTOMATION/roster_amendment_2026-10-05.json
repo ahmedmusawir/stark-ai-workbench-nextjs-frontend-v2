@@ -1,0 +1,10 @@
+{
+  "source": "QAM/HANDOFFS/ARCHITECT_REMOTE_ROSTER_AMENDMENT_2026-10-05.md (sha256 57924e3f046bc521b3a91fe78cd17087e8b2f3dbd6aa05b11439a26cf459c7d9), table 'Exact permitted file delta'",
+  "records_keyed_to": "22ce03ba3871ea53e5253f2e3f060a1bab3226a3",
+  "new_candidate": "f21564cacb563ecddbf78b1685086c9489bf1c26",
+  "transitions": {
+    "config/agents.manifest.json": {"from": "638e95a166e9e196175bd630ce76560db1ef98dbe72d40f31d9a109782027ae8", "to": "6c27f420127db7125a43ddba6347470b19d3be39769b44bb2b85bd6d9526b6d9"},
+    "config/agents.manifest-hermes.json": {"from": null, "to": "638e95a166e9e196175bd630ce76560db1ef98dbe72d40f31d9a109782027ae8"},
+    "config/agents.manifest copy.json": {"from": "6c27f420127db7125a43ddba6347470b19d3be39769b44bb2b85bd6d9526b6d9", "to": null}
+  }
+}

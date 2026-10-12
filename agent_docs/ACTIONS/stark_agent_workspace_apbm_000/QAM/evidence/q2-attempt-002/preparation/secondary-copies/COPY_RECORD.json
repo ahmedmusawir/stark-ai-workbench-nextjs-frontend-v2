@@ -1,0 +1,37 @@
+[
+  {
+    "source": "tests/workspace/workspace.spec.ts",
+    "source_sha256": "c28cf2b353acd8478e1a83257bff4476526497875e39292eece8bf2935de900a",
+    "copy": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/AUTOMATION/secondary-a2/workspace.spec.ts",
+    "copy_sha256": "3fe9c2f1ec2435fea8f2a4e54998c160b4c9f3d2b80e1ab491276fba871c1b2c",
+    "diff": "--- tests/workspace/workspace.spec.ts\n+++ agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/AUTOMATION/secondary-a2/workspace.spec.ts\n@@ -1,7 +1,8 @@\n-import { test, expect, type Page } from '@playwright/test';\n+import { type Page } from '@playwright/test';\n+import { test, expect } from './_policy_wrap'; // QA outer mandatory policy/error wrapper (attempt-002)\n import path from 'node:path';\n-const base='http://127.0.0.1:43170';\n-const evidence=path.resolve('agent_docs/ACTIONS/stark_agent_workspace_apbm_000/evidence/engineering-attempt-001');\n+const base='http://127.0.0.1:43182';\n+const evidence=path.resolve('agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002/acceptance/H/workspace-copy-out');\n const ledger=(page:Page)=>page.evaluate(()=>(window as unknown as {workspaceFixture:{ledger:Array<{action:string;message?:string;title?:string;session?:string}>}}).workspaceFixture.ledger);\n test.beforeEach(async({page})=>{\n  await page.route('**/*',async route=>{const url=new URL(route.request().url());if(url.origin!==base){await route.abort();throw Error('Unexpected outbound browser request (address omitted)')}await route.continue()});\n"
+  },
+  {
+    "source": "tests/workspace/repair.spec.ts",
+    "source_sha256": "d1aaeed571c99f571312524c17293415e4bec5b9e9b70544f0fb047b466e9afc",
+    "copy": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/AUTOMATION/secondary-a2/repair.spec.ts",
+    "copy_sha256": "78aef6ee6cd9077ea345e877aa52b6a81ecb43284f8e9d8140c8aabe8ba3851b",
+    "diff": "--- tests/workspace/repair.spec.ts\n+++ agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/AUTOMATION/secondary-a2/repair.spec.ts\n@@ -1,8 +1,8 @@\n-import { test, expect } from '@playwright/test';\n+import { test, expect } from './_policy_wrap'; // QA outer mandatory policy/error wrapper (attempt-002)\n import fs from 'node:fs';\n import path from 'node:path';\n-const evidence = path.resolve('agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/engineering-repair-001');\n-const origin = 'http://127.0.0.1:43176';\n+const evidence = path.resolve('agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002/acceptance/H/repair-copy-out');\n+const origin = 'http://127.0.0.1:43183';\n test.beforeEach(async ({ page }) => {\n   await page.route('**/*', async route => {\n     if (new URL(route.request().url()).origin !== origin) {\n"
+  },
+  {
+    "source": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/engineering-repair-001/browser_harness.cjs",
+    "source_sha256": "a9fb0cb41f0a1f01196855334b4cf993e6560ed972a3cd720171547db7a937ce",
+    "copy": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/AUTOMATION/repair-harness/browser_harness.cjs",
+    "copy_sha256": "d525e458aedcf7e64ae35da134962022702a224af1809759bc4edaddfc5e9c46",
+    "diff": "--- agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/engineering-repair-001/browser_harness.cjs\n+++ agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/AUTOMATION/repair-harness/browser_harness.cjs\n@@ -49,6 +49,6 @@\n     if (asset) { res.setHeader('Content-Type', 'font/woff2'); return fs.createReadStream(path.join(fontDir, asset.file)).pipe(res); }\n     res.writeHead(404); res.end('Not found');\n   });\n-  server.listen(43176, '127.0.0.1', () => console.log('ENGINEERING_REPAIR_FIXTURE_READY; local-only, synthetic services, product fonts'));\n+  server.listen(43183, '127.0.0.1', () => console.log('ENGINEERING_REPAIR_FIXTURE_READY; local-only, synthetic services, product fonts'));\n   for (const signal of ['SIGTERM', 'SIGINT']) process.on(signal, () => server.close(() => { fs.rmSync(out, { recursive: true, force: true }); process.exit(0); }));\n })().catch(error => { console.error(error.message); fs.rmSync(out, { recursive: true, force: true }); process.exit(1); });\n"
+  },
+  {
+    "source": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/engineering-repair-001/font-before.css",
+    "source_sha256": "9556df344d8f4970f51834d9b946019dead7b0289047491d396bcc3e731acd9e",
+    "copy": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/AUTOMATION/repair-harness/font-before.css",
+    "copy_sha256": "9556df344d8f4970f51834d9b946019dead7b0289047491d396bcc3e731acd9e",
+    "diff": ""
+  },
+  {
+    "source": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/engineering-repair-001/font-cache-matches.json",
+    "source_sha256": "68883dd8ee0e6d35c7226ce87ac48a582e7877ba7f4317bda4101ddc37072ed5",
+    "copy": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/AUTOMATION/repair-harness/font-cache-matches.json",
+    "copy_sha256": "68883dd8ee0e6d35c7226ce87ac48a582e7877ba7f4317bda4101ddc37072ed5",
+    "diff": ""
+  }
+]

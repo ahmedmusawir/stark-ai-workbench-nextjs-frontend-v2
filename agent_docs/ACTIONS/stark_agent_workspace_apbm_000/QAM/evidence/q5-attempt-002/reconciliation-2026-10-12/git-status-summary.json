@@ -1,0 +1,12 @@
+{
+  "captured": "# git status --porcelain=v1 -uall at 2026-10-12T12:01:19+06:00; branch qa/frontend-apbm-000; HEAD 8eb5789d9021ad06c15db36db74419a2b5c68fc5",
+  "entries": 556,
+  "by_status_and_area": {
+    " M|QAM": 14,
+    "??|QAM": 542
+  },
+  "outside_QAM": [],
+  "staged": 0,
+  "clean_working_tree": false,
+  "note": "Working tree is NOT clean: authorized QA records remain uncommitted inside QAM. Nothing outside QAM; nothing staged. The package and receipt written after this capture add 2 further untracked QAM entries."
+}

@@ -1,5 +1,7 @@
 # QAM entry — self-sufficient QA dispatch
 
+Read `QA_RECOVERY.md` and `QAM_STATE.json` first for current routing and writer ownership. Future QA session/recovery records stay inside QAM, and the canonical factual handoff is `HANDOFFS/QA_HANDOFF.md`; historical root pointers are retained as history.
+
 Read ../GOVERNANCE.md, ../ACCEPTANCE_SPEC.md, ../RULINGS_ADDENDUM.md, HANDOFFS/QA_HANDOFF.md, ../KNOWN_LIMITS.md, then QAM_STATE.json, QAM_MANIFEST.md, QAM_PREFLIGHT.md, QAM_RISK_REQUIREMENTS.md, QAM_TEST_PLAN.md, QAM_CHECKPOINTS.md and QAM_PROMPTS.md. Resolve referenced actual evidence rather than relying on memory. Record which files were loaded and which seat you occupy.
 
 Intended QA branch: qa/frontend-apbm-000, created by Tony from his committed engineering candidate. Wrong branch or uncommitted product changes: report exact condition and stop candidate qualification; never switch/commit yourself. Harmless QA documentation changes are separately classified; they cannot conceal source/config/test/dependency drift.

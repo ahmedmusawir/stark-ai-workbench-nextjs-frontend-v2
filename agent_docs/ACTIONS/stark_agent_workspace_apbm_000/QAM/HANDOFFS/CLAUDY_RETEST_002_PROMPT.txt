@@ -1,0 +1,27 @@
+Claudy — you are the independent QA Executor for APBM_000.
+
+Tony's candidate-specific release must accompany this prompt; do not treat the draft release file as signed authority. Preparation/install is authorized now. Acceptance execution begins after that release and the approved preflight. D4 ALLOW and D7 OMIT are already decided; do not ask again.
+
+Use the attached APBM000_RETEST_002_LEAD_PACKAGE_2026-10-11.zip. Locate the real checkout; expected branch qa/frontend-apbm-000. Product candidate is exactly:
+8eb5789d9021ad06c15db36db74419a2b5c68fc5
+Parent:
+9c50884d4c4513b6969311d5be7c05828104ed3d
+
+Install only its QAM/ tree into:
+agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/
+Avoid QAM/QAM. Verify the package index against the separately supplied SHA256 and every member hash before installation. The sole planned replacement is QAM_TEST_PLAN.md from the exact old v0.2 hash to v0.3; its byte-exact preserved copy is included. Identical destinations are no-ops. Preserve/report any conflicting unrecognized version; do not overwrite it. Record installation under evidence/q2-attempt-002/preparation/. Tony should not have to move individual records.
+
+Read applicable repo instructions, QAM_ENTRY, GOVERNANCE, ACCEPTANCE_SPEC, RULINGS_ADDENDUM and the new:
+QAM_TEST_PLAN.md
+HANDOFFS/LEAD_RETEST_002_APPROVAL_2026-10-11.md
+HANDOFFS/LEAD_RETEST_002_BINDING_2026-10-11.json
+HANDOFFS/LEAD_INTAKE_VERIFICATION_2026-10-11.json
+Also read the committed repaired-candidate receipt, accepted engineering returns, original findings/Lead disposition and the delivered file index. Follow v0.3 where old operational records differ. Keep old evidence intact.
+
+Record Tony's actual release verbatim under HANDOFFS with time and SHA, and bind it to the plan/index hashes. Confirm sole-writer availability; do not edit alongside Cody. Update QAM state/manifest/checkpoints additively to actual candidate, v0.3 and attempt-002; preserve old history. No fresh commit solely for these QA records is required by the Lead approval. No Git mutation.
+
+Implement only the v0.3 QA-instrument corrections: new candidate gate with exact reviewed scope/hash authority; mandatory policy/error capture for every page/context; per-test ledgers and controls; sibling-only isolation page; product WOFF2/font CSS wiring; correct S-18 keyboard/status/theme/focus/contrast proof; deterministic real-store lifecycle. Freeze exact sources/diffs/hashes and prove detectors before acceptance. No product or maintained-test edits, no weakened assertions, no rerunning attempt-001.
+
+After release and gates pass, execute v0.3 continuously: typecheck, full maintained Jest, independent QA Jest, normal no-egress Next build without font mock, static/output separation checks, full independent browser scenarios and 18+6 clean renders, secondary 33-test workspace and 27-test repair copies with protected output paths, then identity/protected equality and teardown. Apply plan coverage, retry/time limits and stop rules exactly. Old failures have no active waiver. The usual production build remains required even if all fixtures pass.
+
+Keep D4 ALLOW/D7 OMIT; no live login/services or disappearing-conversation live diagnosis. Do not self-certify or perform Q5. Return a complete 24-row AC matrix, F01–F04 retest evidence, literal failures/blocks, instrument/retry ledger, plan/candidate/release hashes, output identity and teardown. Write Q2_attempt-002_REVIEW_START_HERE.md and one indexed safe ZIP under QAM/HANDOFFS plus its Downloads copy. Give Tony a short outcome and ZIP path. Gate Q remains pending for QA Lead.

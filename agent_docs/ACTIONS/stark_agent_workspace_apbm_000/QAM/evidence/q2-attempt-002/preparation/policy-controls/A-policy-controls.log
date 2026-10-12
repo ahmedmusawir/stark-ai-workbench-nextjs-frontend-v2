@@ -1,0 +1,9 @@
+
+Running 4 tests using 1 worker
+
+  ✓  1 agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/AUTOMATION/specs/s00_policy_controls.spec.ts:10:5 › C-01 off-origin request is aborted and logged by the browser interceptor in default, manual, newPage and popup contexts (1.6s)
+  ✓  2 agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/AUTOMATION/specs/s00_policy_controls.spec.ts:26:5 › C-02 page errors are captured from every page and only the labelled synthetic is consumed (1.0s)
+  ✓  3 agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/AUTOMATION/specs/s00_policy_controls.spec.ts:37:5 › C-03 WebSocket transport is intercepted and closed (444ms)
+  ✘  4 agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/AUTOMATION/specs/s00_policy_controls.spec.ts:47:5 › C-04 an unconsumed policy event fails the test (expected failure) (464ms)
+
+  4 passed (7.2s)

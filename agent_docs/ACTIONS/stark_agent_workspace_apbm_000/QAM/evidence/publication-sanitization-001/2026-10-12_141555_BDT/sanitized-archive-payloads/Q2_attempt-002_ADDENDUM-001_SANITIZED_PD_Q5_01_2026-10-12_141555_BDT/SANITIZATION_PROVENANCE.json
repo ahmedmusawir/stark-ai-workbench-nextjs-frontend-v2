@@ -1,0 +1,207 @@
+{
+  "identity": "SANITIZED_ARCHIVE_DERIVATIVE_PD_Q5_01",
+  "authorization_record": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/publication-sanitization-001/2026-10-12_141555_BDT/ARCHITECT_FOLLOWUP_AUTHORIZATION.md",
+  "original_archive_repository_path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/HANDOFFS/Q2_attempt-002_ADDENDUM-001.zip",
+  "private_original_archive": "/home/moose/APBM000_private_retention/2026-10-12_141555_BDT/repository/agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/HANDOFFS/Q2_attempt-002_ADDENDUM-001.zip",
+  "original_archive_sha256": "c5797efc9876a6128d4ab33896bd8e9983e6f4a4fec15cff2d7bcf015d6c8181",
+  "original_file_index_sha256": "93dbdb3f344e5fac7c3fedc5c4eefa8a8b44e900d4d3b190910619b7c8661d73",
+  "sanitized_archive_repository_path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/HANDOFFS/Q2_attempt-002_ADDENDUM-001_SANITIZED_PD_Q5_01_2026-10-12_141555_BDT.zip",
+  "changed_members": [
+    {
+      "member_path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002-addendum-001/q5-proposal/Q5_PROPOSAL_PATHS.json",
+      "original_member_sha256": "242f95eb508e55e5a81f3e660197857fded1d730e97494d92ebd181590d6e7ed",
+      "sanitized_member_sha256": "bafe8fd818093162b6e7843cf009d0f1c63162d5e945975bd27f6091f215c1dd",
+      "omitted_fields": [
+        "/rows/576/sha256"
+      ]
+    }
+  ],
+  "unchanged_original_payload_members": [
+    {
+      "member_path": "REVIEW_START_HERE.md",
+      "sha256": "17ab3b3cde7a96366035c199dcf7d6723c7d76362fcf6de229d31b7797554fc6"
+    },
+    {
+      "member_path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/AUTOMATION/a2_prepare_records.py",
+      "sha256": "78f5f416b675df73752596712f1d093e5d1689ca77b22b74c69add5ae46409f5"
+    },
+    {
+      "member_path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/AUTOMATION/a2_q5_proposal.py",
+      "sha256": "fc8db6548edb9bb91c524e79f24d725ce5951765a4eb2493cba30c825bfd51a1"
+    },
+    {
+      "member_path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/AUTOMATION/a2_run.sh",
+      "sha256": "9ff449e721479aaa7b84b6b606e631244b74e1d8ee851f9ce69494e2fc0abfd5"
+    },
+    {
+      "member_path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/AUTOMATION/negative/seeded_allowed_twin_entry.tsx",
+      "sha256": "23b264ffad4767ec75ad50a8c6876cc56ad6dd7d740a8ea7f53208ded2b0b291"
+    },
+    {
+      "member_path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/AUTOMATION/negative/seeded_forbidden_entry.tsx",
+      "sha256": "72125b799ec5a4421f8d2a53b0518313409e97181a798de3b9ae10ad8dd4048b"
+    },
+    {
+      "member_path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/AUTOMATION/q2a2_addendum_export.py",
+      "sha256": "6cb3ed05954944aaa333920f5c3432773500a3ae367678c97d12ade8d68415b1"
+    },
+    {
+      "member_path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/AUTOMATION/q2a2_gate.py",
+      "sha256": "3477c58122319de77b97f447e3d97e253ecf6b1040598eb741e7888e3cc9bb8d"
+    },
+    {
+      "member_path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/AUTOMATION/qa-harness.cjs",
+      "sha256": "3c161d8a5e0d1285fa36c1f3204b3505882ffabac1ed28d9e801dcfcbb052538"
+    },
+    {
+      "member_path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/AUTOMATION/qa-ts-loader.cjs",
+      "sha256": "719fc21a25fd3ea105e9a9f0648b6f2683cde738781ce0ba83df157f12f9a405"
+    },
+    {
+      "member_path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/FINDINGS/Q2-F01_signout_storage_unavailable.md",
+      "sha256": "666914ce81bbf17cec4df9dd3a2ad54a47531091d4886c25fab51f72e8c81a00"
+    },
+    {
+      "member_path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/FINDINGS/Q2-F02_drawer_breakpoint_focus_target.md",
+      "sha256": "20bd82183081e5fc9527948ddf67fd67f4707d80aa30a3a8f8f15088b0d17d7b"
+    },
+    {
+      "member_path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/FINDINGS/Q2-F03_breadcrumb_target_size.md",
+      "sha256": "93645dd0334319f9f34999b105a7988c6eebf5ada3e9571382d9d93e8a263539"
+    },
+    {
+      "member_path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/FINDINGS/Q2-F04_manifest_test_bundle_coverage.md",
+      "sha256": "4a395807e8d4d2f7b60f3548df88e0005f4cb0a4d570d89411d64c4ec7d63b81"
+    },
+    {
+      "member_path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/HANDOFFS/LEAD_Q2_ATTEMPT_002_DISPOSITION_ADDENDUM_INSTRUCTION_2026-10-11_182616_BDT.txt",
+      "sha256": "1617184f1dc57666e270c699a8b2b2d12bfac4390e86db60f35d0a586c6b32e6"
+    },
+    {
+      "member_path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/HANDOFFS/LEAD_Q2_ATTEMPT_002_DISPOSITION_ADDENDUM_INSTRUCTION_2026-10-11_182616_BDT_BINDING.json",
+      "sha256": "f743a5d36d228ff42e8ae584e13972600237b2f52bcf1e44f10186beb5729b63"
+    },
+    {
+      "member_path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/HANDOFFS/Q2_attempt-002_ADDENDUM-001_REVIEW_START_HERE.md",
+      "sha256": "17ab3b3cde7a96366035c199dcf7d6723c7d76362fcf6de229d31b7797554fc6"
+    },
+    {
+      "member_path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/QAM_STATE.json",
+      "sha256": "e27c00fa98fbbf0d292e438781f5dac40b16dd0623e30cd3528af75db42b3591"
+    },
+    {
+      "member_path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002-addendum-001/ADDENDUM_INDEX.md",
+      "sha256": "d17a75ab6730dd2544c267e40d9c3122c59b05b4f11b817eab3f59b4116fe049"
+    },
+    {
+      "member_path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002-addendum-001/APPROVED_INVENTORY.addendum.json",
+      "sha256": "4d0fcbcd852653137c571a1deae1545bd2bfdb7e1712a6ce8ca4f8dbc7aba89a"
+    },
+    {
+      "member_path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002-addendum-001/INSTRUMENT_FREEZE.r8.json",
+      "sha256": "990683d09856ba17e0457bf6e54dde51f27014c015f91eccff7fd3ea412aaf4a"
+    },
+    {
+      "member_path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002-addendum-001/INSTRUMENT_FREEZE.r9.json",
+      "sha256": "acf993324ffac595bef809bab96feba173b412977eca8bd8005368b99118c3eb"
+    },
+    {
+      "member_path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002-addendum-001/INSTRUMENT_FREEZE_RECEIPT.r8.json",
+      "sha256": "8c6edeadbeac5db759cd0ce36894210346bd8beef4038315520d21458c41e1d5"
+    },
+    {
+      "member_path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002-addendum-001/INSTRUMENT_FREEZE_RECEIPT.r9.json",
+      "sha256": "c52899ef5d46be9284d542c09f9f2844d76ef9c7baef403a319d1a299bf4c471"
+    },
+    {
+      "member_path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002-addendum-001/PROCESS_DEVIATION_AND_QUALIFICATIONS.md",
+      "sha256": "580bf6a8ce7f9e9039cbe7dce4e5bc88059a26b81d737d2bf34f273dfffaceee"
+    },
+    {
+      "member_path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002-addendum-001/findings-pre-append.sha256",
+      "sha256": "2f1144217452fccac4e5047a606e495b2e1d40e354f7712b012ccf4722f450bd"
+    },
+    {
+      "member_path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002-addendum-001/forbidden-import-control/CONTROL_RESULT.json",
+      "sha256": "4fad3d0231af19a2bacf7d61983e33ea0e9800aa1fde779a45c8799ca32e9813"
+    },
+    {
+      "member_path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002-addendum-001/forbidden-import-control/NEG-seeded-forbidden.cmd.json",
+      "sha256": "13bfd6380d34c6628a089d59063a714b5bd48faa38e9669aa1baeb3d27f52a78"
+    },
+    {
+      "member_path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002-addendum-001/forbidden-import-control/NEG-seeded-forbidden.log",
+      "sha256": "fbfa37c932e4cb212906d0eda17744084b0d8f6de5e18ebb4bcb0fbe5afff79d"
+    },
+    {
+      "member_path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002-addendum-001/forbidden-import-control/POS-allowed-twin.cmd.json",
+      "sha256": "2fc27e594212fb90591e79697e86a884f0535aefeceac934517af2ce2fc1410b"
+    },
+    {
+      "member_path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002-addendum-001/forbidden-import-control/POS-allowed-twin.log",
+      "sha256": "142595100a12ddc85987f8f497055a770e9fcf0e49088d8697e4aa47c00102d7"
+    },
+    {
+      "member_path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002-addendum-001/forbidden-import-control/source-hashes.sha256",
+      "sha256": "e8dac80597e91198c7c49e8e6d6b40b3188f66081228b04f94b13ed045332cab"
+    },
+    {
+      "member_path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002-addendum-001/gate-post-addendum.json",
+      "sha256": "ed2370054ba076858067f9eb0a7e0b2dc8a17d6e6d64e888774efd6c4e77ef60"
+    },
+    {
+      "member_path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002-addendum-001/gate-post-addendum.run1-STOP-unlisted-own-inputs.json",
+      "sha256": "397ba05f4de0f71da7e733aa850e3a3741a81c393d1b03792fcdace5758dbe84"
+    },
+    {
+      "member_path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002-addendum-001/gate-post-addendum.run2-r8.json",
+      "sha256": "8bc1dfad536b3973264a89cede50af38813180a7ba1e15dc0109310c5fc02f5e"
+    },
+    {
+      "member_path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002-addendum-001/q5-proposal/Q5_PROPOSAL.md",
+      "sha256": "763ef6abe7729f9710c4da6237c0fce5f674c4a040e51ebc60301d44f8c483af"
+    },
+    {
+      "member_path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002-addendum-001/root-files/PLACEMENT_CORRECTION_PROPOSAL.md",
+      "sha256": "f5976ff9a88611f72ff255e206d236417ef6dc38c1ea100f4d7784cf4248044d"
+    },
+    {
+      "member_path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002-addendum-001/root-files/RECOVERY.md.HEAD.txt",
+      "sha256": "edfffe35c9226c36ce8b8e12acff2375617b664fa3d7ec9cc94a16a03d83fcb8"
+    },
+    {
+      "member_path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002-addendum-001/root-files/RECOVERY.md.diff.txt",
+      "sha256": "f17e8fcb212de8be1132a6eb09c7fca1b31ee495f6a0002cbdb094175ff85665"
+    },
+    {
+      "member_path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002-addendum-001/root-files/RECOVERY_1758_BLOCK_RECONSTRUCTED.txt",
+      "sha256": "cd32433776ddc0b28c74a91202e14f27b8527a9aaad4284b717cf97427678dd4"
+    },
+    {
+      "member_path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002-addendum-001/root-files/ROOT_FILES_ACCOUNT.json",
+      "sha256": "5d6683363976d6c8609161f1005a50f7b726ebfc8547304089d5ca9cac2b9572"
+    },
+    {
+      "member_path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002-addendum-001/root-files/root-session_2026-10-11.md.txt",
+      "sha256": "4ce2ae025240574f09def856f67f3de022a9a454f8d3339443b8100daa1552d6"
+    },
+    {
+      "member_path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002-addendum-001/seeded-entry-vs-twin.diff",
+      "sha256": "ad903ea8c57960255dadda397323278bcf68d8849a14ad5c31199f152cefb62d"
+    },
+    {
+      "member_path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002/EXECUTION_REPORT.md",
+      "sha256": "6b1b45f61c3b6aeb372d10d7d278678ad467571128118844525e9b7b62235571"
+    },
+    {
+      "member_path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002/INSTRUMENT_RETRY_LEDGER.md",
+      "sha256": "e948c5a85ae9f60028d2cf095142337f7bc180d67e45d8ed8ba49366a1101f70"
+    },
+    {
+      "member_path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/session_2026-10-11.md",
+      "sha256": "67c1d6d986a22398da52772bf8279d1150d023f1e5db36a2cbfb5860a8c360ff"
+    }
+  ],
+  "qualification": "Original member path names and historical internal references remain for provenance; private-digest fields are omitted only in explicitly marked derivative JSON. New FILE_INDEX pins actual derivative bytes. ORIGINAL_FILE_INDEX is retained for original identity and never presented as the derivative index. Certification/QA verdicts apply the exact certified product and original reviewed evidence; no new execution is inferred.",
+  "private_file_read_or_hash": false
+}
