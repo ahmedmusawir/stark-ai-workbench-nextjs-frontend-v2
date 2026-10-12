@@ -1,0 +1,12 @@
+{
+  "scope": "Recorded offline artifacts; no application or backend QA",
+  "renders": 70,
+  "additionalPngs": 12,
+  "totalPngs": 82,
+  "interactionChecks": 63,
+  "contrastChecks": 66,
+  "allPassed": true,
+  "brokenStaticArtifactLinks": 0,
+  "duplicateStaticIds": 0,
+  "scopedValuesMatch": true
+}

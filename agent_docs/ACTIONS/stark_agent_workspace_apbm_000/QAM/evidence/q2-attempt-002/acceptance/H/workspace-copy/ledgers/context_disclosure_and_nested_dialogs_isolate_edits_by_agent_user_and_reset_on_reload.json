@@ -1,0 +1,14 @@
+{
+  "test": [
+    "context disclosure and nested dialogs isolate edits by agent/user and reset on reload"
+  ],
+  "status": "passed",
+  "origin": "http://127.0.0.1:43182",
+  "counters": {
+    "contexts": 0,
+    "pages": 1,
+    "requests": 12
+  },
+  "events": [],
+  "unexpected": 0
+}

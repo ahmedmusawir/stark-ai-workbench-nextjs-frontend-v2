@@ -1,0 +1,26 @@
+{
+  "src/app/(admin)/admin-portal/add-member/AddMemberForm.tsx": {
+    "sha256": "b89690cdb0f50937d6b51a6a902448cc851ffc29bb3552efe8072560b5f19e0a",
+    "matches_HEAD": true
+  },
+  "src/__tests__/jest.setup.ts": {
+    "sha256": "be8ec4fc7a099b68e7acdb37a2a3aae6f8e8d818114239159661aab9e30bcd2d",
+    "matches_HEAD": true
+  },
+  "jest.config.js": {
+    "sha256": "d82d1aab7d3f91ce1069a35d2a7631da3599b70e3f1f22b0af352c152bb221c3",
+    "matches_HEAD": true
+  },
+  "package.json": {
+    "sha256": "cff291506080f2f3c4e4e1753cb866843194a0bef7845af10086c24432202ccc",
+    "matches_HEAD": true
+  },
+  "package-lock.json": {
+    "sha256": "f81ea7545863bf12dcb33912a8d43d042abe06aa7b95ff8831af647cdaaeae49",
+    "matches_HEAD": true
+  },
+  "config/agents.manifest.json": {
+    "sha256": "6c27f420127db7125a43ddba6347470b19d3be39769b44bb2b85bd6d9526b6d9",
+    "matches_HEAD": true
+  }
+}

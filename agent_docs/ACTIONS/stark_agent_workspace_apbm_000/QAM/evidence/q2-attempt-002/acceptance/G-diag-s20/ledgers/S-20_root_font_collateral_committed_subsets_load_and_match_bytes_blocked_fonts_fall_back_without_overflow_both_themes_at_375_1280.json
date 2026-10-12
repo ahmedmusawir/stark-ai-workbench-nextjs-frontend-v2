@@ -1,0 +1,14 @@
+{
+  "test": [
+    "S-20 root font collateral: committed subsets load and match bytes; blocked fonts fall back without overflow; both themes at 375/1280"
+  ],
+  "status": "passed",
+  "origin": "http://127.0.0.1:43181",
+  "counters": {
+    "contexts": 8,
+    "pages": 8,
+    "requests": 72
+  },
+  "events": [],
+  "unexpected": 0
+}

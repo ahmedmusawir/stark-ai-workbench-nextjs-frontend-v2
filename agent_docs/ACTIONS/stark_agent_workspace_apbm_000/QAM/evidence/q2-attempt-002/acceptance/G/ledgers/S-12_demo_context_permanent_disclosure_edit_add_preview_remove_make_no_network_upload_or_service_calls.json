@@ -1,0 +1,27 @@
+{
+  "test": [
+    "S-12 demo context: permanent disclosure; edit/add/preview/remove make no network, upload or service calls"
+  ],
+  "status": "passed",
+  "origin": "http://127.0.0.1:43181",
+  "counters": {
+    "contexts": 0,
+    "pages": 1,
+    "requests": 5
+  },
+  "events": [
+    {
+      "kind": "request-offorigin-observed",
+      "detail": "https://example.invalid/x",
+      "at": 1791720261328,
+      "consumedBy": "S-12 control"
+    },
+    {
+      "kind": "request-blocked",
+      "detail": "https://example.invalid/x",
+      "at": 1791720261328,
+      "consumedBy": "S-12 control"
+    }
+  ],
+  "unexpected": 0
+}

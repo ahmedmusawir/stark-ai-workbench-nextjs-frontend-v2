@@ -1,0 +1,22 @@
+{
+  "command": [
+    "unshare",
+    "-rn",
+    "python3",
+    "/home/moose/nextjs/10XLAB/stark-ai-workbench-nextjs-frontend-v2/agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/engineering-repair-001/run_browser.py",
+    "--inside"
+  ],
+  "inner_command": [
+    "node",
+    "node_modules/@playwright/test/cli.js",
+    "test",
+    "--config",
+    "tests/workspace/repair.config.ts"
+  ],
+  "cwd": "/home/moose/nextjs/10XLAB/stark-ai-workbench-nextjs-frontend-v2",
+  "started_at": "2026-10-08T04:57:31.110516+00:00",
+  "seconds": 19.49,
+  "exit_code": 0,
+  "network": "new user/network namespace; only loopback interface enabled; browser and fixture in same namespace; browser exact local-origin route guard; no production auth/services or QA font hook",
+  "log": "browser.log"
+}

@@ -16,6 +16,7 @@ export default async function CyberizeLayout({
 
   return (
     <AppShellPage
+      workbenchRoute
       sidebar={<CyberizeSidebar />}
       mobileTitle="CYBERIZE"
       mobileTopBarRight={<ThemeToggle />}

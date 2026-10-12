@@ -1,0 +1,26 @@
+[
+  {
+    "action": "list",
+    "agent": "kestrel",
+    "seq": 1
+  },
+  {
+    "action": "history",
+    "agent": "kestrel",
+    "session": "A",
+    "seq": 2
+  },
+  {
+    "action": "send",
+    "agent": "kestrel",
+    "session": "A",
+    "message": "attempt resolved-uncertain",
+    "seq": 3
+  },
+  {
+    "action": "history",
+    "agent": "kestrel",
+    "session": "A",
+    "seq": 4
+  }
+]

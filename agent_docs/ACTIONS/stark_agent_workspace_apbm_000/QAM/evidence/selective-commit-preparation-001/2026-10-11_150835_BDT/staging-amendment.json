@@ -1,0 +1,13 @@
+{
+  "authorized_change": "Append only the new QA Lead intake path to the reviewed explicit staging proposal",
+  "original_count": 268,
+  "revised_count": 269,
+  "original_sha256": "bbb231bc17396a36f1f876d285b8ec921c2a77af7e151bea67702d9cc2c832c4",
+  "revised_sha256": "e77023d03a74310bb6c12d0e256b7ab955b2e825ff17c8aafba449e352e64d15",
+  "added_paths": [
+    "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/HANDOFFS/QA_LEAD_REPAIRED_CANDIDATE_INTAKE_001.md"
+  ],
+  "removed_paths": [],
+  "intake_sha256": "0bf1f7f660b10fdb41532406f5575722331d395fcfc45958fe6a2b9577a24537",
+  "reviewed_candidate_identity_and_inventory_preserved": "Original snapshots intentionally retain 268-path staging hash; this authorized append is recorded separately"
+}

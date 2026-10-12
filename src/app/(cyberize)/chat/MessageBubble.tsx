@@ -13,9 +13,12 @@ import { Check, Copy } from "lucide-react";
 
 import type { AgentName, Message } from "@/types";
 
+import { CopyControl } from "@/components/workspace/CopyControl";
+
 import MessageActions from "./MessageActions";
 
 interface MessageBubbleProps {
+  workbench?: boolean;
   message: Message;
   agentName: AgentName;
   isLast?: boolean;
@@ -31,6 +34,7 @@ export const MessageBubble = ({
   onEdit,
   onRegenerate,
   onFeedback,
+  workbench = false,
 }: MessageBubbleProps) => {
   if (message.role === "user") {
     return (
@@ -39,6 +43,7 @@ export const MessageBubble = ({
           {message.content}
         </div>
         <MessageActions
+          workbench={workbench}
           role="user"
           content={message.content}
           onEdit={onEdit}
@@ -52,8 +57,9 @@ export const MessageBubble = ({
       <p className="text-xs font-medium uppercase tracking-wider text-zinc-500 dark:text-zinc-400">
         {agentName}
       </p>
-      <AssistantMarkdown content={message.content} />
+      <AssistantMarkdown content={message.content} workbench={workbench} />
       <MessageActions
+        workbench={workbench}
         role="assistant"
         content={message.content}
         isLast={isLast}
@@ -66,7 +72,7 @@ export const MessageBubble = ({
 
 /* ───────────────────────────── Assistant Markdown ───────────────────────────── */
 
-const AssistantMarkdown = ({ content }: { content: string }) => {
+const AssistantMarkdown = ({ content, workbench }: { content: string; workbench: boolean }) => {
   const { resolvedTheme } = useTheme();
   const codeTheme = resolvedTheme === "dark" ? oneDark : oneLight;
 
@@ -77,8 +83,8 @@ const AssistantMarkdown = ({ content }: { content: string }) => {
         const codeText = String(children).replace(/\n$/, "");
         return (
           <div className="relative my-2 group">
-            <CopyCodeButton text={codeText} />
-            <SyntaxHighlighter
+            {workbench ? <div className="ws-code-head"><span>{match[1]}</span><CopyControl text={codeText} label="Copy code"/></div> : <CopyCodeButton text={codeText} />}
+            <div className={workbench ? "ws-code-scroll" : undefined} tabIndex={workbench ? 0 : undefined} role={workbench ? "region" : undefined} aria-label={workbench ? "Code block" : undefined}><SyntaxHighlighter
               // react-syntax-highlighter's style prop has loose typing; the
               // imported theme objects don't satisfy its strict shape.
               // eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -93,7 +99,7 @@ const AssistantMarkdown = ({ content }: { content: string }) => {
               }}
             >
               {codeText}
-            </SyntaxHighlighter>
+            </SyntaxHighlighter></div>
           </div>
         );
       }
@@ -107,7 +113,7 @@ const AssistantMarkdown = ({ content }: { content: string }) => {
       );
     },
     table: ({ children }) => (
-      <div className="overflow-x-auto my-3">
+      <div className="overflow-x-auto my-3" tabIndex={workbench ? 0 : undefined} role={workbench ? "region" : undefined} aria-label={workbench ? "Message table" : undefined}>
         <table className="w-full border-collapse text-sm">{children}</table>
       </div>
     ),

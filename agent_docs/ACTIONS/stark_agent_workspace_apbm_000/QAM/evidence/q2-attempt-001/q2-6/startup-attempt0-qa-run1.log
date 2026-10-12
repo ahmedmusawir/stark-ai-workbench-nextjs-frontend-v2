@@ -1,0 +1,22 @@
+(node:2448327) [DEP0205] DeprecationWarning: `module.register()` is deprecated. Use `module.registerHooks()` instead.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+[WebServer] node:internal/modules/cjs/loader:1573
+[WebServer]   throw err;
+[WebServer]   ^
+[WebServer] 
+[WebServer] Error: Cannot find module '~/NEXTJS/stark-ai-workbench-nextjs-frontend-v2/agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/AUTOMATION/agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/AUTOMATION/qa-harness.cjs'
+[WebServer] [90m    at Module._resolveFilename (node:internal/modules/cjs/loader:1569:15)[39m
+[WebServer] [90m    at wrapResolveFilename (node:internal/modules/cjs/loader:1123:27)[39m
+[WebServer] [90m    at defaultResolveImplForCJSLoading (node:internal/modules/cjs/loader:1147:10)[39m
+[WebServer] [90m    at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1174:12)[39m
+[WebServer] [90m    at Module._load (node:internal/modules/cjs/loader:1346:5)[39m
+[WebServer] [90m    at wrapModuleLoad (node:internal/modules/cjs/loader:261:19)[39m
+[WebServer] [90m    at Module.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:154:5)[39m
+[WebServer] [90m    at node:internal/main/run_main_module:33:47[39m {
+[WebServer]   code: [32m'MODULE_NOT_FOUND'[39m,
+[WebServer]   requireStack: []
+[WebServer] }
+[WebServer] 
+[WebServer] Node.js v26.7.0
+Error: Process from config.webServer was not able to start. Exit code: 1
+

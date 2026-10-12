@@ -1,0 +1,88 @@
+{
+  "family": "Inter",
+  "source_revision": "Google Fonts /s/inter/v20; unchanged Q2 asset bytes",
+  "source_css_url": "https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap",
+  "source_css_sha256": "9b6ad588c451f646d506bc6badb76ecc384691fba35615f0f7d2e175150d6580",
+  "source_css_bytes": 2535,
+  "asset_identity": "All seven SHA-256 values match Q2 attempt-001 mediator-log.json; cached copies also independently matched before retrieval.",
+  "retrieval": "Existing approved QAM/AUTOMATION/font_mediator.cjs; HTTPS GET exact CSS and Inter-only gstatic URLs; TLS verified, no redirects; no production QA hook.",
+  "retrieved_at": "2026-10-08T04:51:58.985286+00:00",
+  "style": "normal",
+  "weight": "100 900",
+  "display": "swap",
+  "assets": [
+    {
+      "subset": "cyrillic-ext",
+      "file": "inter-cyrillic-ext.woff2",
+      "source_url": "https://fonts.gstatic.com/s/inter/v20/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa2JL7W0Q5n-wU.woff2",
+      "sha256": "fccca918fea40089dacadc7045861314d1a6bc91f1f323cc1eeb22ebcdb321b5",
+      "bytes": 25844,
+      "unicode_range": "U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F"
+    },
+    {
+      "subset": "cyrillic",
+      "file": "inter-cyrillic.woff2",
+      "source_url": "https://fonts.gstatic.com/s/inter/v20/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa0ZL7W0Q5n-wU.woff2",
+      "sha256": "aebf2ab4a4ce6810d73c1ac7be7cafb4e5ec4cee2d6db5fb3e09691747ec4bd6",
+      "bytes": 18744,
+      "unicode_range": "U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116"
+    },
+    {
+      "subset": "greek-ext",
+      "file": "inter-greek-ext.woff2",
+      "source_url": "https://fonts.gstatic.com/s/inter/v20/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa2ZL7W0Q5n-wU.woff2",
+      "sha256": "a2e2c783ca6f9c20486e81e72a279203e86730bbf8f01ff6a5ee9dbd09e1c271",
+      "bytes": 11272,
+      "unicode_range": "U+1F00-1FFF"
+    },
+    {
+      "subset": "greek",
+      "file": "inter-greek.woff2",
+      "source_url": "https://fonts.gstatic.com/s/inter/v20/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa1pL7W0Q5n-wU.woff2",
+      "sha256": "46dd4cdca58c26ae87cc6927657bf83b2e8abfc39ffd0ab176e301a8d28d22bf",
+      "bytes": 19044,
+      "unicode_range": "U+0370-0377, U+037A-037F, U+0384-038A, U+038C, U+038E-03A1, U+03A3-03FF"
+    },
+    {
+      "subset": "vietnamese",
+      "file": "inter-vietnamese.woff2",
+      "source_url": "https://fonts.gstatic.com/s/inter/v20/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa2pL7W0Q5n-wU.woff2",
+      "sha256": "8db00ff46c67b22cda8bed865acf7077651cac8d2841d5b40980556b48961931",
+      "bytes": 10280,
+      "unicode_range": "U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB"
+    },
+    {
+      "subset": "latin-ext",
+      "file": "inter-latin-ext.woff2",
+      "source_url": "https://fonts.gstatic.com/s/inter/v20/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa25L7W0Q5n-wU.woff2",
+      "sha256": "a28eb6d3ccb534ae0c94ca999371df024aab60b08c3c8a5720ee9e32fa0faaa2",
+      "bytes": 85272,
+      "unicode_range": "U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF"
+    },
+    {
+      "subset": "latin",
+      "file": "inter-latin.woff2",
+      "source_url": "https://fonts.gstatic.com/s/inter/v20/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa1ZL7W0Q5nw.woff2",
+      "sha256": "c940764593d0fe5d596be327ca7558855e018039fb78509aa21921fd3644c3e4",
+      "bytes": 48432,
+      "unicode_range": "U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD"
+    }
+  ],
+  "license": {
+    "file": "OFL.txt",
+    "source": "Designer return DESIGN/assets/OFL.txt",
+    "sha256": "5b9321a4298cfeb6b34354164a1c3afc3db114569984c502b9b35d988fd58c57",
+    "copyright": "Copyright 2020 The Inter Project Authors (https://github.com/rsms/inter)",
+    "license": "SIL Open Font License, Version 1.1; bundled unchanged with copyright notice"
+  },
+  "fallback": {
+    "family": "Inter Fallback",
+    "local": "Arial",
+    "ascent_override": "90.44%",
+    "descent_override": "22.52%",
+    "line_gap_override": "0.0%",
+    "size_adjust": "107.12%",
+    "source": "Existing generated .next/dev Inter CSS observed before repair"
+  },
+  "declaration_changes": "Only font src URLs use relative product asset paths; original seven ranges/order/style/weights/display retained. Root generated class replaced by inter-font; fallback metrics unchanged. Next automatic latin preload is no longer emitted by next/font; CSS font loading uses swap. No other root behavior changed."
+}

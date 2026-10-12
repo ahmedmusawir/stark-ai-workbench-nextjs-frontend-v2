@@ -1,0 +1,14 @@
+{
+  "test": [
+    "recents partial/recovered states and safe literal metadata actions with failure retention"
+  ],
+  "status": "passed",
+  "origin": "http://127.0.0.1:43182",
+  "counters": {
+    "contexts": 0,
+    "pages": 1,
+    "requests": 18
+  },
+  "events": [],
+  "unexpected": 0
+}

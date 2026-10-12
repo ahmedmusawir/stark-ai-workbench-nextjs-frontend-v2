@@ -1,0 +1,9 @@
+{
+  "live_agent_requests": 0,
+  "node_guard_unexpected_blocks": 0,
+  "browser_policy": "Every fixture page request must have origin http://127.0.0.1:43170; unexpected origin aborts and fails test. Node guard denies non-loopback; harness graph forbids production auth/service adapter imports.",
+  "build_policy": "Only loopback and fonts.googleapis.com/fonts.gstatic.com permitted; no live service routes invoked.",
+  "production_auth_runtime": "NOT RUN; original page auth preserved by source/build inspection",
+  "sanitization": "Exact environment values removed from command captures locally; test-only bearer literal replaced in report/log copies. No .env, auth state, private history, trace or HAR exported.",
+  "files_with_test_literal_or_ansi_sanitization": 4
+}

@@ -1,0 +1,25 @@
+{
+  "test": [
+    "C-04 an unconsumed policy event fails the test (expected failure)"
+  ],
+  "status": "passed",
+  "origin": "http://127.0.0.1:43181",
+  "counters": {
+    "contexts": 0,
+    "pages": 1,
+    "requests": 5
+  },
+  "events": [
+    {
+      "kind": "request-offorigin-observed",
+      "detail": "https://qa-control.example.invalid/probe",
+      "at": 1791720204864
+    },
+    {
+      "kind": "request-blocked",
+      "detail": "https://qa-control.example.invalid/probe",
+      "at": 1791720204864
+    }
+  ],
+  "unexpected": 2
+}

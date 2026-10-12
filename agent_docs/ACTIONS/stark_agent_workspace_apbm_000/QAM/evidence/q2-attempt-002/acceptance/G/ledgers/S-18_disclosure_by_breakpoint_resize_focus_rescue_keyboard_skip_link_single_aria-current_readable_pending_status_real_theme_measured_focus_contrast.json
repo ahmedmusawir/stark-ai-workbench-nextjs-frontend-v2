@@ -1,0 +1,14 @@
+{
+  "test": [
+    "S-18 disclosure by breakpoint, resize focus rescue, keyboard skip link, single aria-current, readable pending status, real theme, measured focus contrast"
+  ],
+  "status": "passed",
+  "origin": "http://127.0.0.1:43181",
+  "counters": {
+    "contexts": 0,
+    "pages": 1,
+    "requests": 20
+  },
+  "events": [],
+  "unexpected": 0
+}

@@ -1,0 +1,20 @@
+{
+  "command": [
+    "unshare",
+    "-rn",
+    "npm",
+    "ci",
+    "--offline",
+    "--no-audit",
+    "--no-fund"
+  ],
+  "cwd": "/home/moose/nextjs/10XLAB/stark-ai-workbench-nextjs-frontend-v2",
+  "started_at": "2026-10-08T06:43:54.015430+00:00",
+  "seconds": 5.525,
+  "exit_code": 0,
+  "log": "npm-ci.log",
+  "network": "unshare -rn; no external network; npm offline; no audit/fund calls",
+  "node": "v24.15.0",
+  "npm": "11.12.1",
+  "lock_sha256_after": "f81ea7545863bf12dcb33912a8d43d042abe06aa7b95ff8831af647cdaaeae49"
+}

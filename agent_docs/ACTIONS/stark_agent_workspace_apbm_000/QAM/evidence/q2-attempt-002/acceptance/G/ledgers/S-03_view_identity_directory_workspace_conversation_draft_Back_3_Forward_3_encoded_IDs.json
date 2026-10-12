@@ -1,0 +1,14 @@
+{
+  "test": [
+    "S-03 view identity: directory→workspace→conversation→draft, Back×3/Forward×3; encoded IDs"
+  ],
+  "status": "passed",
+  "origin": "http://127.0.0.1:43181",
+  "counters": {
+    "contexts": 0,
+    "pages": 1,
+    "requests": 20
+  },
+  "events": [],
+  "unexpected": 0
+}

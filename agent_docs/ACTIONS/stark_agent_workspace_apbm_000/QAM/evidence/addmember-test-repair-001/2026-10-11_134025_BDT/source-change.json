@@ -1,0 +1,19 @@
+{
+  "test_path": "src/__tests__/admin/AddMemberForm.test.tsx",
+  "before_sha256": "3b0b12f283c31dc28de3025b6e1ea20b0d6994693a1087d2f0e4aacdbf132761",
+  "after_sha256": "7464084c92123346d6b123347f3951952ee6585e85119b5391e257718f3629c3",
+  "exact_diff_sha256": "891ea17411a49f152d73a53ff3bf4d472045359ff85c42c6a9b2f6173cdd300d",
+  "unchanged_test_names_order": [
+    "renders all required form fields",
+    "shows loading state when form is submitted",
+    "validates that passwords match before submission",
+    "validates required fields on empty submit",
+    "calls addMember with correct data on valid submission",
+    "redirects to admin-portal dashboard on successful creation",
+    "does not redirect when addMember returns an error"
+  ],
+  "tests_removed_or_filtered": false,
+  "source_confirmed_defect": "Original loading test finishes with a 100ms success submission pending; clearing mocks/unmounting does not settle that action.",
+  "historical_callback_attribution": "Not conclusively traced",
+  "edit_boundary": "Only maintained test source"
+}

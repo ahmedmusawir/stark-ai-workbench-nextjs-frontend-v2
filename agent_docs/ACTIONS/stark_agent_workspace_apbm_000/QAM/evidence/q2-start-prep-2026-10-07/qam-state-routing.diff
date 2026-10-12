@@ -1,0 +1,44 @@
+4c4
+<   "stage": "REMOTE_ROSTER_REVIEW_002_AWAITING_UPDATED_LEAD_APPROVAL",
+---
+>   "stage": "LEAD_APPROVED_REVISED_CANDIDATE_AWAITING_COMMIT_AND_REVISED_RELEASE",
+6c6
+<   "product_candidate_sha": "22ce03ba3871ea53e5253f2e3f060a1bab3226a3",
+---
+>   "product_candidate_sha": "f21564cacb563ecddbf78b1685086c9489bf1c26",
+15,17c15,19
+<   "qa_lead_approval_record": "Q1B_REVIEW.md: original v0.2 binding to 22ce03ba3871ea53e5253f2e3f060a1bab3226a3, committed; revised remote-roster binding NOT SUPPLIED",
+<   "director_q2_release_record": "HANDOFFS/DIRECTOR_Q2_RELEASE_2026-10-05_193516.md (verbatim; D4 ALLOW, D7 OMIT; release conditional on commit verification)",
+<   "director_pending": [],
+---
+>   "qa_lead_approval_record": "Q1B_REVIEW.md (original v0.2, historical) + HANDOFFS/LEAD_REMOTE_ROSTER_APPROVAL_2026-10-07.md (revised candidate f21564c), installed byte-exact 2026-10-07; commit pending",
+>   "director_q2_release_record": "HISTORICAL: HANDOFFS/DIRECTOR_Q2_RELEASE_2026-10-05_193516.md (D4 ALLOW, D7 OMIT remain recorded). Revised-candidate release: PENDING",
+>   "director_pending": [
+>     "Single revised-candidate release confirmation (Architect amendment / Lead L5)"
+>   ],
+19,21c21,23
+<     "Updated QA Lead candidate/plan binding and per-anomaly dispositions",
+<     "Named Lead prep file LEAD_REMOTE_ROSTER_PREP_2026-10-05.md unavailable; provide actual instructions",
+<     "Single revised Director release confirmation after effective updated Lead approval"
+---
+>     "Tony commit of the selective QAM list (approval + pending records)",
+>     "Single revised-candidate release confirmation",
+>     "Q2-0 verification under v2 tool + separate authority/tool hash gate"
+28c30
+<   "next_action": "Return NEW review package to QA Lead; wait for effective updated approval; then obtain exactly one revised release confirmation.",
+---
+>   "next_action": "Tony commits selective list and gives the one revised release; Executor records it, runs Q2-0 then the Q2 body",
+45,49c47,53
+<   "proposed_product_candidate_sha": "f21564cacb563ecddbf78b1685086c9489bf1c26",
+<   "product_candidate_sha_note": "22ce03b remains the bound candidate until the Lead issues the rebind addendum",
+<   "rebind_evidence": "evidence/remote-roster-rebind-002: fresh exact config exports/current HEAD identity; no acceptance execution",
+<   "last_preparation_record": "HANDOFFS/ROSTER_REBIND_REVIEW_2026-10-07_183026.md",
+<   "acceptance_testing_started_this_run": false
+---
+>   "product_candidate_sha_note": "Lead-approved 2026-10-07 (HANDOFFS/LEAD_REMOTE_ROSTER_APPROVAL_2026-10-07.md). 22ce03b is the historical product reference; baseline 20ef380 unchanged.",
+>   "rebind_evidence": "evidence/remote-roster-rebind-001 (Lead-reviewed) and remote-roster-rebind-002 (Executor attempt 002, 2026-10-07 18:30; not in Lead review set)",
+>   "last_preparation_record": "RESPONSES report 2026-10-07 (prep for revised release)",
+>   "acceptance_testing_started_this_run": false,
+>   "effective_plan": "QA-APBM000-PLAN v0.2 (8ddb743f...) + Lead binding addendum LEAD_REMOTE_ROSTER_APPROVAL_2026-10-07.md (c0380dfc...) + Architect amendment (57924e3f...)",
+>   "binding_hashes_record": "HANDOFFS/LEAD_REMOTE_ROSTER_BINDING_HASHES_2026-10-07.json (0ccefad2...; all 9 pins verified locally 2026-10-07)",
+>   "inherited_failures": "A/B waivers retired; only exact C (chatStore.persist SSR guard) conditionally deferred"

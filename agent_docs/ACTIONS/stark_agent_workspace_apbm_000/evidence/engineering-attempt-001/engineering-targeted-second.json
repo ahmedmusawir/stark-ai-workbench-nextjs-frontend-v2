@@ -1,0 +1,14 @@
+{
+  "check": "targeted",
+  "label": "engineering-targeted-second",
+  "command": [
+    "node",
+    "node_modules/jest/bin/jest.js",
+    "--runInBand",
+    "--testPathPatterns=workspace|MessageActions|MessageBubble|speech"
+  ],
+  "exit_code": 0,
+  "elapsed_seconds": 4.591,
+  "timestamp": "2026-10-04T21:48:47.532529+06:00",
+  "environment": "fresh minimal process environment; Node fail-closed network guard; fonts allowed for build only"
+}

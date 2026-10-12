@@ -1,0 +1,14 @@
+{
+  "test": [
+    "S-17 context dialog (1280 light) and nested demo dialog (768 dark): containment, nested Escape, restore"
+  ],
+  "status": "passed",
+  "origin": "http://127.0.0.1:43181",
+  "counters": {
+    "contexts": 0,
+    "pages": 1,
+    "requests": 4
+  },
+  "events": [],
+  "unexpected": 0
+}

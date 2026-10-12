@@ -1,0 +1,14 @@
+{
+  "test": [
+    "S-01 empty / loading / unavailable roster are distinct and fabricate nothing"
+  ],
+  "status": "passed",
+  "origin": "http://127.0.0.1:43181",
+  "counters": {
+    "contexts": 0,
+    "pages": 1,
+    "requests": 12
+  },
+  "events": [],
+  "unexpected": 0
+}

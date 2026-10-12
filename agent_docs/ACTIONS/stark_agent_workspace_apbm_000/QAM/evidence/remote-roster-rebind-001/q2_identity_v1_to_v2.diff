@@ -1,0 +1,132 @@
+--- agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/AUTOMATION/q2_identity.py	2026-10-05 18:30:39.018193237 +0600
++++ agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/AUTOMATION/q2_identity_v2.py	2026-10-05 21:56:16.152938996 +0600
+@@ -1,5 +1,10 @@
+ #!/usr/bin/env python3
+-"""Q2 identity instrument (disposable, read-only) per QAM_TEST_PLAN v0.2 §11.1.
++"""Q2 identity instrument v2 (disposable, read-only) per QAM_TEST_PLAN v0.2 §11.1 + ARCHITECT_REMOTE_ROSTER_AMENDMENT_2026-10-05.
++
++v2 additions over v1 (v1 bytes preserved unchanged): --amendment accepts ONLY the exact listed config
++transitions (from->to SHA256, incl. add/delete) against the 22ce03b-keyed Engineer records; anything else stays
++blocking. --accept-next-env-dev-variant accepts next-env.d.ts only if it is byte-exact the pinned build variant
++with the single Next dev route-types import substitution; any other content stays blocking.
+ 
+ Pins an explicit product candidate separately from the execution HEAD, proves ancestry,
+ lists every intervening commit/path, and compares candidate blobs, HEAD blobs AND
+@@ -77,7 +82,10 @@
+     return json.loads((REPO / rel).read_text())
+ 
+ 
+-def check(candidate, head, worktree, approved_path, out):
++DEV_IMPORT, BUILD_IMPORT = b"./.next/dev/types/routes.d.ts", b"./.next/types/routes.d.ts"
++
++
++def check(candidate, head, worktree, approved_path, out, amendment_path=None, accept_dev_next_env=False):
+     g = Git(worktree)
+     wt = g.worktree
+     head_sha = g.run("rev-parse", head).strip()
+@@ -140,6 +148,22 @@
+         elif classify(p) == "DOCS_OUTSIDE_QAM":
+             anomaly("DOCS_OUTSIDE_QAM_CHANGED", p, {"worktree": sha_file(wt / p)})
+ 
++    # Amendment: exact allowed config transitions (path -> {"from": sha|None, "to": sha|None})
++    amend = json.loads(pathlib.Path(amendment_path).read_text())["transitions"] if amendment_path else {}
++    for p, t in amend.items():
++        c = sha.get(ct.get(p)) if p in ct else None
++        if c != t["to"] or sha_file(wt / p) != t["to"]:
++            anomaly("AMENDMENT_CANDIDATE_MISMATCH", p, {"expected_to": t["to"], "candidate": c, "worktree": sha_file(wt / p)}, "PRODUCT_CONFIG_TEST_DEP")
++    def amended(path, recorded, base=None):
++        t = amend.get(path)
++        if not t:
++            return False
++        c = sha.get(ct.get(path)) if path in ct else None
++        ok = recorded == t["from"] and c == t["to"] and sha_file(wt / path) == t["to"] and (base is None or base == t["from"])
++        if ok:
++            anomaly("AMENDED_TRANSITION_VERIFIED", path, {"from": t["from"], "to": t["to"]}, "AMENDMENT")
++        return ok
++
+     # Engineer records: 28 changed, 191 protected, 218 pinned scope, next-env.d.ts
+     inv = load_json(f"{ENG}/changed-source-inventory.json")
+     for x in inv:
+@@ -149,11 +173,20 @@
+     bt = g.tree(BASE); bsha = g.blobs_sha256([bt[x["path"]] for x in prot if x["path"] in bt])
+     for x in prot:
+         vals = {bsha.get(bt.get(x["path"])), sha.get(ct.get(x["path"])), sha_file(wt / x["path"]), x["candidate_sha256"]}
+-        if len(vals) != 1:
++        if len(vals) != 1 and not amended(x["path"], x["candidate_sha256"], bsha.get(bt.get(x["path"]))):
+             anomaly("PROTECTED_MISMATCH", x["path"], sorted(map(str, vals)))
+     pinned = load_json(f"{ENG}/candidate-scope.json")["inputs"]
+     for x in pinned:
+-        if sha_file(wt / x["path"]) != x["sha256"]:
++        if x["path"] in amend:
++            if not amended(x["path"], x["sha256"]):
++                anomaly("PINNED_INPUT_WORKTREE_MISMATCH", x["path"], {"recorded": x["sha256"], "worktree": sha_file(wt / x["path"])})
++        elif x["path"] == NEXT_ENV and sha_file(wt / x["path"]) != x["sha256"]:
++            b = (wt / NEXT_ENV).read_bytes() if (wt / NEXT_ENV).is_file() else b""
++            dev = DEV_IMPORT in b and hashlib.sha256(b.replace(DEV_IMPORT, BUILD_IMPORT)).hexdigest() == x["sha256"]
++            anomaly("NEXT_ENV_DEV_VARIANT" if dev else "PINNED_INPUT_WORKTREE_MISMATCH", NEXT_ENV,
++                    {"recorded": x["sha256"], "worktree": sha_file(wt / NEXT_ENV), "exact_dev_variant": dev},
++                    "GENERATED_BOUNDED" if (dev and accept_dev_next_env) else "PRODUCT_CONFIG_TEST_DEP")
++        elif sha_file(wt / x["path"]) != x["sha256"]:
+             anomaly("PINNED_INPUT_WORKTREE_MISMATCH", x["path"], {"recorded": x["sha256"], "worktree": sha_file(wt / x["path"])})
+         elif x["path"] == NEXT_ENV:
+             pass  # gitignored generated header: worktree bytes verified above; no blob exists by design
+@@ -165,16 +198,19 @@
+     if (wt / root_ptr).exists():
+         anomaly("ROOT_HANDOFF_POINTER_PRESENT", root_ptr, "Report to Architect/Cody; Executor does not edit outside QAM", "PLACEMENT")
+ 
+-    blocking = [a for a in anomalies if a["class"] in ("IDENTITY", "PRODUCT_CONFIG_TEST_DEP", "DESIGN_OR_CONTRACT")
++    blocking = [a for a in anomalies if a["class"] not in ("AMENDMENT", "GENERATED_BOUNDED") and (a["class"] in ("IDENTITY", "PRODUCT_CONFIG_TEST_DEP", "DESIGN_OR_CONTRACT")
+                 or a["kind"] in ("CHANGED_INVENTORY_MISMATCH", "PROTECTED_MISMATCH", "PINNED_INPUT_WORKTREE_MISMATCH",
+-                                 "PINNED_INPUT_BLOB_MISMATCH", "CONTRACT_HASH_MISMATCH", "STAGED_CHANGE")]
++                                 "PINNED_INPUT_BLOB_MISMATCH", "CONTRACT_HASH_MISMATCH", "STAGED_CHANGE"))]
+     res = {
+         "recorded_at": datetime.datetime.now().astimezone().isoformat(),
+-        "instrument": f"{QAM}AUTOMATION/q2_identity.py", "instrument_sha256": sha_file(pathlib.Path(__file__)),
++        "instrument": f"{QAM}AUTOMATION/q2_identity_v2.py", "instrument_sha256": sha_file(pathlib.Path(__file__)),
+         "product_candidate": cand_sha, "execution_head": head_sha, "branch": branch, "worktree": str(wt),
+         "candidate_is_ancestor": is_anc, "intervening_commits": commits,
+         "paths_compared_blob_and_worktree": compared, "inventory_checked": len(inv), "protected_checked": len(prot),
+         "pinned_checked": len(pinned), "approved_qam_manifest": str(approved_path) if approved_path else None,
++        "amendment": str(amendment_path) if amendment_path else None,
++        "amendment_sha256": sha_file(pathlib.Path(amendment_path)) if amendment_path else None,
++        "accept_next_env_dev_variant": accept_dev_next_env,
+         "raw_anomalies": anomalies,
+         "raw_verdict": "PRODUCT_EQUIVALENT" if not blocking else "PRODUCT_DRIFT_OR_IDENTITY_FAILURE",
+         "blocking_anomaly_count": len(blocking),
+@@ -214,6 +250,23 @@
+     r = check("22ce03ba3871ea53e5253f2e3f060a1bab3226a3", "HEAD", REPO, rec, scratch / "st3.json")
+     results["mutated_copied_record"] = any(a["path"] == f"{QAM}QAM_TEST_PLAN.md" and a["kind"].startswith("QAM_")
+                                            for a in r["raw_anomalies"])
++    # 4. Amendment with a wrong target hash must stay blocking (candidate f21564c)
++    bad = scratch / "amendment-wrong.json"
++    good = json.loads((pathlib.Path(__file__).parent / "roster_amendment_2026-10-05.json").read_text())
++    good["transitions"]["config/agents.manifest.json"]["to"] = "f" * 64
++    bad.write_text(json.dumps(good))
++    r = check("f21564cacb563ecddbf78b1685086c9489bf1c26", "HEAD", REPO, None, scratch / "st4.json", bad, True)
++    results["amendment_wrong_hash_blocks"] = any(a["path"] == "config/agents.manifest.json" and a["class"] == "PRODUCT_CONFIG_TEST_DEP"
++                                                 for a in r["raw_anomalies"]) and r["raw_verdict"] != "PRODUCT_EQUIVALENT"
++    # 5. Without amendment, the roster transition must block (candidate 22ce03b vs HEAD carrying it)
++    r = check("22ce03ba3871ea53e5253f2e3f060a1bab3226a3", "HEAD", REPO, None, scratch / "st5.json", None, True)
++    results["roster_change_blocks_without_amendment"] = r["raw_verdict"] != "PRODUCT_EQUIVALENT" and any(
++        a["path"] == "config/agents.manifest.json" for a in r["raw_anomalies"] if a["class"] == "PRODUCT_CONFIG_TEST_DEP")
++    # 6. next-env.d.ts with arbitrary (non dev-variant) content blocks even with acceptance flag (disposable worktree)
++    (wt / "src/__qa_selftest_unauthorized.ts").unlink()
++    (wt / NEXT_ENV).write_bytes((REPO / NEXT_ENV).read_bytes().replace(b"routes.d.ts", b"other.d.ts"))
++    r = check("22ce03ba3871ea53e5253f2e3f060a1bab3226a3", "22ce03ba3871ea53e5253f2e3f060a1bab3226a3", wt, None, scratch / "st6.json", None, True)
++    results["arbitrary_next_env_blocks"] = any(a["path"] == NEXT_ENV and a["class"] == "PRODUCT_CONFIG_TEST_DEP" for a in r["raw_anomalies"])
+     results["all_controls_red_as_expected"] = all(results.values())
+     print(json.dumps(results, indent=2))
+     return results
+@@ -223,10 +276,11 @@
+     ap = argparse.ArgumentParser()
+     ap.add_argument("--candidate"); ap.add_argument("--head", default="HEAD"); ap.add_argument("--worktree", default=str(REPO))
+     ap.add_argument("--approved"); ap.add_argument("--out"); ap.add_argument("--selftest")
++    ap.add_argument("--amendment"); ap.add_argument("--accept-next-env-dev-variant", action="store_true")
+     a = ap.parse_args()
+     if a.selftest:
+         sys.exit(0 if selftest(a.selftest)["all_controls_red_as_expected"] else 1)
+-    r = check(a.candidate, a.head, a.worktree, a.approved, a.out)
++    r = check(a.candidate, a.head, a.worktree, a.approved, a.out, a.amendment, a.accept_next_env_dev_variant)
+     print(json.dumps({k: r[k] for k in ("product_candidate", "execution_head", "branch", "candidate_is_ancestor",
+                                         "paths_compared_blob_and_worktree", "raw_verdict", "blocking_anomaly_count",
+                                         "nonblocking_anomalies_need_adjudication")}, indent=1))

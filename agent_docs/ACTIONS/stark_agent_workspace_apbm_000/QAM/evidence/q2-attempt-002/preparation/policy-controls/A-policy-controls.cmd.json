@@ -1,0 +1,22 @@
+{
+  "stage": "A-policy-controls",
+  "command": [
+    "node",
+    "node_modules/@playwright/test/cli.js",
+    "test",
+    "--config",
+    "/home/moose/nextjs/10XLAB/stark-ai-workbench-nextjs-frontend-v2/agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/AUTOMATION/playwright.qa.config.ts",
+    "s00_policy_controls"
+  ],
+  "extra_env_keys": [
+    "QA_OUT",
+    "NODE_OPTIONS"
+  ],
+  "started": "2026-10-11T18:01:14+06:00",
+  "duration_s": 7.702,
+  "exit": 0,
+  "cwd": "repo root",
+  "namespace": "unshare -rn; lo up; no external route",
+  "env": "env -i PATH HOME LANG TMPDIR NEXT_TELEMETRY_DISABLED=1 CI=1 + extra",
+  "tmpdir": "/tmp/claude-1000/qa-a2-tmp/A-policy-controls"
+}

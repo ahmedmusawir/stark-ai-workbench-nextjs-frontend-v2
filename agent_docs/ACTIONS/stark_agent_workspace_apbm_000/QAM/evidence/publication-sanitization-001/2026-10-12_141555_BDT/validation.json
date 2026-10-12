@@ -1,0 +1,43 @@
+{
+  "recorded_at": "2026-10-12T14:24:47.972761+06:00",
+  "head": "8eb5789d9021ad06c15db36db74419a2b5c68fc5",
+  "branch": "qa/frontend-apbm-000",
+  "index_empty": true,
+  "eight_private_originals_byte_verified": true,
+  "original_privacy": "0700 directory / 0600 files",
+  "original_source_relocations": 8,
+  "two_sanitized_records_verified": true,
+  "three_sanitized_archives_indexes_crcs_verified": true,
+  "digest_absent_from_all_current_public_qam_files_and_archive_members": true,
+  "private_file_read_or_hash": false,
+  "original_semantics_unchanged_except_declared_digest_omission_and_derivative_metadata": true,
+  "unrelated_preexisting_qam_files_preserved": 1206,
+  "protected_product_inputs_equal_candidate": 223,
+  "retained_stage_e_paths_stats_unchanged": 1121,
+  "historical_document_bytes_preserved": true,
+  "root_recovery_equal_head": true,
+  "certificate_unchanged": true,
+  "documentation_whitespace_exit": 0,
+  "git_mutations": 0,
+  "generator_tests_build_live_runs": 0,
+  "selective_inventory_categories": {
+    "LOCAL_RETAINED_OUTPUT_OR_CACHE": 1128,
+    "PRIVATE_ORIGINAL_RETAINED_OUTSIDE_GIT": 21,
+    "LOCAL_RETAINED_ARCHIVE": 18,
+    "PROPOSED_GIT": 622,
+    "ALREADY_VERSIONED_RETAIN": 616,
+    "DIRECTOR_DECISION_HISTORICAL_PLACEMENT": 4,
+    "PROPOSED_GIT_SANITIZED_ARCHIVE": 3,
+    "LOCAL_SAFE_REVIEW_EXPANSION": 156
+  },
+  "proposed_git_paths": 625,
+  "named_archive_exceptions": [
+    "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/HANDOFFS/Q2_attempt-002_ADDENDUM-001_SANITIZED_PD_Q5_01_2026-10-12_141555_BDT.zip",
+    "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/HANDOFFS/Q5_attempt-002_REVIEW-002_SANITIZED_PD_Q5_01_2026-10-12_141555_BDT.zip",
+    "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/HANDOFFS/Q5_attempt-002_SANITIZED_PD_Q5_01_2026-10-12_141555_BDT.zip"
+  ],
+  "apbm_000_owner": "Cody until handoff",
+  "intended_apbm_001_engineer": "Claudy",
+  "apbm_001_qa_executor": "separate/unassigned",
+  "apbm_001": "NOT LAUNCHED"
+}

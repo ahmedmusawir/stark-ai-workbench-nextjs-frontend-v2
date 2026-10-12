@@ -1,0 +1,37 @@
+{
+  "reviewed_parent": "9c50884d4c4513b6969311d5be7c05828104ed3d",
+  "reviewed_staging_count": 268,
+  "reviewed_staging_sha256": "bbb231bc17396a36f1f876d285b8ec921c2a77af7e151bea67702d9cc2c832c4",
+  "reviewed_archive_sha256": "e85c8313b032349fcfefe7a74ed1c14e1768512c7cbbea392f87f96b3ac34f4d",
+  "cumulative_product_test_file_count": 19,
+  "cumulative_product_test_patch_sha256": "5a07022fca3eb577884b3c418bb3b6789ce6069144771420c3048f6cd545ae59",
+  "listed_file_drift": [],
+  "unlisted_preserved_work": [
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/HANDOFFS/APBM000_ADDMEMBER_TEST_REPAIR_001_REVIEW_2026-10-11_134025_BDT.zip",
+      "status": "??"
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/HANDOFFS/APBM000_DEPENDENCY_DIAGNOSTIC_REVIEW_2026-10-08_131602_BDT.zip",
+      "status": "??"
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/HANDOFFS/APBM000_ENGINEERING_REPAIR_001_REVIEW_2026-10-08_112512_BDT.zip",
+      "status": "??"
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/addmember-test-repair-001/2026-10-11_134025_BDT/EXPORT_RECEIPT.json",
+      "status": "??"
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/dependency-reconciliation-001/2026-10-08_124256_BDT/browser-artifacts/.last-run.json",
+      "status": "??"
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/engineering-repair-001/browser-artifacts/.last-run.json",
+      "status": "??"
+    }
+  ],
+  "git_index_diff": "",
+  "tests_executed": false
+}

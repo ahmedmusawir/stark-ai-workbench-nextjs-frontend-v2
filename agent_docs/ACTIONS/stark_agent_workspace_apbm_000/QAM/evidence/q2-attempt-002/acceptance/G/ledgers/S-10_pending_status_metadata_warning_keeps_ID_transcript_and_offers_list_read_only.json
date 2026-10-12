@@ -1,0 +1,14 @@
+{
+  "test": [
+    "S-10 pending status; metadata warning keeps ID/transcript and offers list read only"
+  ],
+  "status": "passed",
+  "origin": "http://127.0.0.1:43181",
+  "counters": {
+    "contexts": 0,
+    "pages": 1,
+    "requests": 4
+  },
+  "events": [],
+  "unexpected": 0
+}

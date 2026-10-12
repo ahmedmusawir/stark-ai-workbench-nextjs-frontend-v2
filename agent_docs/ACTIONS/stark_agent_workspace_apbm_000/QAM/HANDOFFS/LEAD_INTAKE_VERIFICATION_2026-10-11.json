@@ -1,0 +1,46 @@
+{
+  "review_date": "2026-10-11 Asia/Dhaka",
+  "reviewer": "JARVIS, independent QA Lead",
+  "candidate_sha": "8eb5789d9021ad06c15db36db74419a2b5c68fc5",
+  "parent_sha": "9c50884d4c4513b6969311d5be7c05828104ed3d",
+  "source_archive_sha256": "6f45f01075895fe56456a2a61a3ce5ff1dba5f30afbd26dc9a38688c2bfb832e",
+  "indexed_members_verified": 575,
+  "unindexed_member": "FILE_INDEX.json (self-exclusion)",
+  "reviewed_commit_paths_verified": 269,
+  "scope_partition": {
+    "product_test": 19,
+    "changelog": 1,
+    "QAM": 249
+  },
+  "product_patch_sha256": "5a07022fca3eb577884b3c418bb3b6789ce6069144771420c3048f6cd545ae59",
+  "complete_patch_sha256": "ea9f58cac6f47d4296ad0e912bd96ae28016884acb7bec3b6756b0160166f6e5",
+  "patch_reverse_then_forward_replay": "19/19 final bytes identical, all git apply checks exit 0; unchanged OFL trailing whitespace warning retained",
+  "font_subsets_verified": 7,
+  "license_sha256": "5b9321a4298cfeb6b34354164a1c3afc3db114569984c502b9b35d988fd58c57",
+  "raw_engineer_results_reviewed": {
+    "addmember": {
+      "pass": 7,
+      "fail": 0
+    },
+    "latest_full": {
+      "pass": 290,
+      "fail": 0,
+      "suites": 40
+    },
+    "reconciliation_full": {
+      "pass": 289,
+      "fail": 1
+    },
+    "reconciliation_focused": {
+      "pass": 64,
+      "fail": 0
+    },
+    "latest_typecheck_exit": 0
+  },
+  "limitations": [
+    "No application tests or production build executed by Lead in this review",
+    "Export is not a full Git repository; actual commit ancestry/tree and installed runtime must be independently verified in Claudy preflight",
+    "Engineer success is not independent QA acceptance"
+  ],
+  "decision": "APPROVE v0.3 for attempt-002 subject to Director release and fail-closed preflight; Gate Q pending"
+}

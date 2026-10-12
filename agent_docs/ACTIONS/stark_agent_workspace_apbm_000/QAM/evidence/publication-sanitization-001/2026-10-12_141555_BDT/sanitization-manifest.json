@@ -1,0 +1,127 @@
+{
+  "status": "SANITIZED DERIVATIVES VERIFIED; private-original transfer follows",
+  "authorization_record": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/publication-sanitization-001/2026-10-12_141555_BDT/ARCHITECT_FOLLOWUP_AUTHORIZATION.md",
+  "candidate": "8eb5789d9021ad06c15db36db74419a2b5c68fc5",
+  "records": [
+    {
+      "original_repository_path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002-addendum-001/q5-proposal/Q5_PROPOSAL_PATHS.json",
+      "private_original": "/home/moose/APBM000_private_retention/2026-10-12_141555_BDT/repository/agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002-addendum-001/q5-proposal/Q5_PROPOSAL_PATHS.json",
+      "original_record_sha256": "242f95eb508e55e5a81f3e660197857fded1d730e97494d92ebd181590d6e7ed",
+      "sanitized_record_path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/publication-sanitization-001/2026-10-12_141555_BDT/sanitized-records/Q5_PROPOSAL_PATHS_SANITIZED_PD_Q5_01.json",
+      "sanitized_record_sha256": "bafe8fd818093162b6e7843cf009d0f1c63162d5e945975bd27f6091f215c1dd",
+      "sanitized_bytes": 312090,
+      "omitted_fields": [
+        "/rows/576/sha256"
+      ],
+      "semantic_change_validation": "PASS \u2014 only private-row digest and explicit derivative metadata",
+      "original_source_unchanged": true
+    },
+    {
+      "original_repository_path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q5-attempt-002/POST_Q5_INVENTORY.json",
+      "private_original": "/home/moose/APBM000_private_retention/2026-10-12_141555_BDT/repository/agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q5-attempt-002/POST_Q5_INVENTORY.json",
+      "original_record_sha256": "1ec752dc4e8354992178b3e8461e9ca49252b3eb65d5c802b96596d2beca17f0",
+      "sanitized_record_path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/publication-sanitization-001/2026-10-12_141555_BDT/sanitized-records/POST_Q5_INVENTORY_SANITIZED_PD_Q5_01.json",
+      "sanitized_record_sha256": "e2a105f7b1f2296873c33b6319be024a51a767a8f20db1ae2460da8c32a6c43a",
+      "sanitized_bytes": 316172,
+      "omitted_fields": [
+        "/rows/586/sha256"
+      ],
+      "semantic_change_validation": "PASS \u2014 only private-row digest and explicit derivative metadata",
+      "original_source_unchanged": true
+    }
+  ],
+  "archives": [
+    {
+      "original_repository_path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/HANDOFFS/Q2_attempt-002_ADDENDUM-001.zip",
+      "private_original": "/home/moose/APBM000_private_retention/2026-10-12_141555_BDT/repository/agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/HANDOFFS/Q2_attempt-002_ADDENDUM-001.zip",
+      "original_archive_sha256": "c5797efc9876a6128d4ab33896bd8e9983e6f4a4fec15cff2d7bcf015d6c8181",
+      "sanitized_archive_path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/HANDOFFS/Q2_attempt-002_ADDENDUM-001_SANITIZED_PD_Q5_01_2026-10-12_141555_BDT.zip",
+      "sanitized_archive_sha256": "072c82f1fb09d206f4d8db2b502e0b17e6456a9e6fd2ee333278e4480f06d3e4",
+      "sanitized_file_index_sha256": "6c9a9461ff0bb4d22309713a6d7b59abc6a15933879e1d97f18d73166132534d",
+      "sanitized_bytes": 170570,
+      "expanded_safe_payload_path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/publication-sanitization-001/2026-10-12_141555_BDT/sanitized-archive-payloads/Q2_attempt-002_ADDENDUM-001_SANITIZED_PD_Q5_01_2026-10-12_141555_BDT",
+      "members": 50,
+      "changed_record_members": [
+        {
+          "member_path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002-addendum-001/q5-proposal/Q5_PROPOSAL_PATHS.json",
+          "original_member_sha256": "242f95eb508e55e5a81f3e660197857fded1d730e97494d92ebd181590d6e7ed",
+          "sanitized_member_sha256": "bafe8fd818093162b6e7843cf009d0f1c63162d5e945975bd27f6091f215c1dd",
+          "omitted_fields": [
+            "/rows/576/sha256"
+          ]
+        }
+      ],
+      "unchanged_original_payload_count": 46,
+      "crc_and_all_indexed_hashes": "PASS",
+      "original_archive_unchanged": true
+    },
+    {
+      "original_repository_path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/HANDOFFS/Q5_attempt-002.zip",
+      "private_original": "/home/moose/APBM000_private_retention/2026-10-12_141555_BDT/repository/agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/HANDOFFS/Q5_attempt-002.zip",
+      "original_archive_sha256": "45e91d29f449eadc8813ae84dff17882a453f0eb84f2337975369f5c24ca20f1",
+      "sanitized_archive_path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/HANDOFFS/Q5_attempt-002_SANITIZED_PD_Q5_01_2026-10-12_141555_BDT.zip",
+      "sanitized_archive_sha256": "921fce20bccec6cc365441e3e950ccdaf33bf222c005acf976e1cfad44bb224b",
+      "sanitized_file_index_sha256": "e36acfbf1cb9098f52b4606952552f028570448f69c73fa9d865be0cfefea354",
+      "sanitized_bytes": 174878,
+      "expanded_safe_payload_path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/publication-sanitization-001/2026-10-12_141555_BDT/sanitized-archive-payloads/Q5_attempt-002_SANITIZED_PD_Q5_01_2026-10-12_141555_BDT",
+      "members": 34,
+      "changed_record_members": [
+        {
+          "member_path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002-addendum-001/q5-proposal/Q5_PROPOSAL_PATHS.json",
+          "original_member_sha256": "242f95eb508e55e5a81f3e660197857fded1d730e97494d92ebd181590d6e7ed",
+          "sanitized_member_sha256": "bafe8fd818093162b6e7843cf009d0f1c63162d5e945975bd27f6091f215c1dd",
+          "omitted_fields": [
+            "/rows/576/sha256"
+          ]
+        },
+        {
+          "member_path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q5-attempt-002/POST_Q5_INVENTORY.json",
+          "original_member_sha256": "1ec752dc4e8354992178b3e8461e9ca49252b3eb65d5c802b96596d2beca17f0",
+          "sanitized_member_sha256": "e2a105f7b1f2296873c33b6319be024a51a767a8f20db1ae2460da8c32a6c43a",
+          "omitted_fields": [
+            "/rows/586/sha256"
+          ]
+        }
+      ],
+      "unchanged_original_payload_count": 29,
+      "crc_and_all_indexed_hashes": "PASS",
+      "original_archive_unchanged": true
+    },
+    {
+      "original_repository_path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/HANDOFFS/Q5_attempt-002_REVIEW-002.zip",
+      "private_original": "/home/moose/APBM000_private_retention/2026-10-12_141555_BDT/repository/agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/HANDOFFS/Q5_attempt-002_REVIEW-002.zip",
+      "original_archive_sha256": "86b060bcb43449bb96f7768620281eba1a03edd60ef28315227ef9eb3538bb65",
+      "sanitized_archive_path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/HANDOFFS/Q5_attempt-002_REVIEW-002_SANITIZED_PD_Q5_01_2026-10-12_141555_BDT.zip",
+      "sanitized_archive_sha256": "c1407c4ce20b04dac087aeac90e177a81384f6e4156046b33a65a2b823aa2037",
+      "sanitized_file_index_sha256": "1a74115a34f3af170565799f32d3d02d50861309a0c954a984508c272ae2e3b3",
+      "sanitized_bytes": 392045,
+      "expanded_safe_payload_path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/publication-sanitization-001/2026-10-12_141555_BDT/sanitized-archive-payloads/Q5_attempt-002_REVIEW-002_SANITIZED_PD_Q5_01_2026-10-12_141555_BDT",
+      "members": 72,
+      "changed_record_members": [
+        {
+          "member_path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002-addendum-001/q5-proposal/Q5_PROPOSAL_PATHS.json",
+          "original_member_sha256": "242f95eb508e55e5a81f3e660197857fded1d730e97494d92ebd181590d6e7ed",
+          "sanitized_member_sha256": "bafe8fd818093162b6e7843cf009d0f1c63162d5e945975bd27f6091f215c1dd",
+          "omitted_fields": [
+            "/rows/576/sha256"
+          ]
+        },
+        {
+          "member_path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q5-attempt-002/POST_Q5_INVENTORY.json",
+          "original_member_sha256": "1ec752dc4e8354992178b3e8461e9ca49252b3eb65d5c802b96596d2beca17f0",
+          "sanitized_member_sha256": "e2a105f7b1f2296873c33b6319be024a51a767a8f20db1ae2460da8c32a6c43a",
+          "omitted_fields": [
+            "/rows/586/sha256"
+          ]
+        }
+      ],
+      "unchanged_original_payload_count": 67,
+      "crc_and_all_indexed_hashes": "PASS",
+      "original_archive_unchanged": true
+    }
+  ],
+  "private_file_read_or_hash": false,
+  "private_digest_not_reproduced": true,
+  "historical_results_and_process_findings_preserved": true,
+  "no_generator_tests_build_or_git_mutation": true
+}

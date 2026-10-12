@@ -1,0 +1,14 @@
+{
+  "test": [
+    "late history cannot paint another session; clipboard fallback and no raw HTML"
+  ],
+  "status": "passed",
+  "origin": "http://127.0.0.1:43182",
+  "counters": {
+    "contexts": 0,
+    "pages": 1,
+    "requests": 6
+  },
+  "events": [],
+  "unexpected": 0
+}

@@ -1,0 +1,86 @@
+/* Proposed production token boundary; use instead of the global preview selectors.
+   Mount data-workspace-theme on the workbench shell and every external portal host.
+   Keep the established html .dark class controlled by next-themes. */
+/* Stark Agent Workspace — proposed v0.1. Values: TOKEN_MAPPING.md. */
+[data-workspace-theme] {
+  --background: 0.000 0.000% 100.000%; /* #ffffff */
+  --foreground: 240.000 5.882% 10.000%; /* #18181b */
+  --card: 0.000 0.000% 98.039%; /* #fafafa */
+  --card-foreground: 240.000 5.882% 10.000%; /* #18181b */
+  --popover: 0.000 0.000% 100.000%; /* #ffffff */
+  --popover-foreground: 240.000 5.882% 10.000%; /* #18181b */
+  --primary: 240.000 5.882% 10.000%; /* #18181b */
+  --primary-foreground: 0.000 0.000% 100.000%; /* #ffffff */
+  --secondary: 240.000 4.762% 95.882%; /* #f4f4f5 */
+  --secondary-foreground: 240.000 5.882% 10.000%; /* #18181b */
+  --muted: 240.000 4.762% 95.882%; /* #f4f4f5 */
+  --muted-foreground: 240.000 4.390% 40.196%; /* #62626b */
+  --accent: 240.000 5.882% 90.000%; /* #e4e4e7 */
+  --accent-foreground: 240.000 5.882% 10.000%; /* #18181b */
+  --border: 240.000 5.882% 90.000%; /* #e4e4e7 */
+  --input: 240.000 3.830% 46.078%; /* #71717a */
+  --ring: 240.000 5.882% 10.000%; /* #18181b */
+  --sidebar: 0.000 0.000% 98.039%; /* #fafafa */
+  --composer: 0.000 0.000% 98.039%; /* #fafafa */
+  --bubble: 240.000 4.762% 95.882%; /* #f4f4f5 */
+  --link: 221.212 83.193% 53.333%; /* #2563eb */
+  --destructive: 0.000 73.709% 41.765%; /* #b91c1c */
+  --destructive-foreground: 0.000 0.000% 100.000%; /* #ffffff */
+  --success: 142.785 64.228% 24.118%; /* #166534 */
+  --success-foreground: 0.000 0.000% 100.000%; /* #ffffff */
+  --warning: 22.727 82.500% 31.373%; /* #92400e */
+  --warning-foreground: 0.000 0.000% 100.000%; /* #ffffff */
+  --info: 221.212 83.193% 53.333%; /* #2563eb */
+  --info-foreground: 0.000 0.000% 100.000%; /* #ffffff */
+  --overlay: 0.000 0.000% 0.000%; /* #000000 */
+}
+.dark [data-workspace-theme] {
+  --background: 240.000 5.263% 26.078%; /* #3f3f46 */
+  --foreground: 240.000 4.762% 95.882%; /* #f4f4f5 */
+  --card: 240.000 3.704% 15.882%; /* #27272a */
+  --card-foreground: 240.000 4.762% 95.882%; /* #f4f4f5 */
+  --popover: 240.000 3.704% 15.882%; /* #27272a */
+  --popover-foreground: 240.000 4.762% 95.882%; /* #f4f4f5 */
+  --primary: 240.000 4.762% 95.882%; /* #f4f4f5 */
+  --primary-foreground: 240.000 5.882% 10.000%; /* #18181b */
+  --secondary: 240.000 5.202% 33.922%; /* #52525b */
+  --secondary-foreground: 240.000 4.762% 95.882%; /* #f4f4f5 */
+  --muted: 240.000 5.202% 33.922%; /* #52525b */
+  --muted-foreground: 240.000 6.542% 79.020%; /* #c6c6cd */
+  --accent: 240.000 5.263% 26.078%; /* #3f3f46 */
+  --accent-foreground: 240.000 4.762% 95.882%; /* #f4f4f5 */
+  --border: 240.000 5.202% 33.922%; /* #52525b */
+  --input: 240.000 5.028% 64.902%; /* #a1a1aa */
+  --ring: 240.000 4.762% 95.882%; /* #f4f4f5 */
+  --sidebar: 240.000 3.704% 15.882%; /* #27272a */
+  --composer: 240.000 3.704% 15.882%; /* #27272a */
+  --bubble: 240.000 5.202% 33.922%; /* #52525b */
+  --link: 211.698 96.364% 78.431%; /* #93c5fd */
+  --destructive: 0.000 93.548% 81.765%; /* #fca5a5 */
+  --destructive-foreground: 240.000 5.882% 10.000%; /* #18181b */
+  --success: 141.714 76.642% 73.137%; /* #86efac */
+  --success-foreground: 240.000 5.882% 10.000%; /* #18181b */
+  --warning: 45.943 96.685% 64.510%; /* #fcd34d */
+  --warning-foreground: 240.000 5.882% 10.000%; /* #18181b */
+  --info: 211.698 96.364% 78.431%; /* #93c5fd */
+  --info-foreground: 240.000 5.882% 10.000%; /* #18181b */
+  --overlay: 0.000 0.000% 0.000%; /* #000000 */
+}
+[data-workspace-theme] { --radius: .75rem; --radius-composer: 1rem; --font-body: Inter, system-ui, sans-serif; --text-xs: .75rem; --text-sm: .875rem; --text-base: 1rem; --text-lg: 1.125rem; --text-xl: 1.375rem; --text-display: 2rem; --space-1: .25rem; --space-2: .5rem; --space-3: .75rem; --space-4: 1rem; --space-5: 1.25rem; --space-6: 1.5rem; --space-8: 2rem; --space-10: 2.5rem; --space-12: 3rem; --sidebar-width: 16rem; --content-width: 64rem; --context-width: 19rem; --target: 2.75rem; --line-body: 1.6; --line-tight: 1.2; --overlay-opacity: .65; }
+
+/* Additional conversation renderer values. Source-aligned oneLight/oneDark;
+   the approved core palette in TOKENS.css is unchanged. */
+[data-workspace-theme] {
+ --code-background: 230 1% 98%;
+ --code-foreground: 230 8% 24%;
+ --code-keyword: 301 63% 40%;
+ --code-string: 119 34% 32%;
+ --code-radius: .5rem;
+ --thread-width: 48rem;
+}
+.dark [data-workspace-theme] {
+ --code-background: 220 13% 18%;
+ --code-foreground: 220 14% 71%;
+ --code-keyword: 286 60% 67%;
+ --code-string: 95 38% 62%;
+}

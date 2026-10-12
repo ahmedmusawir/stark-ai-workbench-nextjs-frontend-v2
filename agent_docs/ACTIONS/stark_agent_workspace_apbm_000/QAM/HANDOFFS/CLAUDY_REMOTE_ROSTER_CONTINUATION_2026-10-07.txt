@@ -1,0 +1,53 @@
+Claudy — QA Lead has approved the revised APBM_000 candidate and effective plan.
+
+Repository: /home/moose/NEXTJS/stark-ai-workbench-nextjs-frontend-v2
+Branch: qa/frontend-apbm-000
+Module: agent_docs/ACTIONS/stark_agent_workspace_apbm_000/
+
+Read QAM/HANDOFFS/LEAD_REMOTE_ROSTER_APPROVAL_2026-10-07.md and verify
+the supplied package index and binding hashes. Effective plan is unchanged
+v0.2 PLUS that approval and the Architect's 5 October amendment.
+Product candidate: f21564cacb563ecddbf78b1685086c9489bf1c26.
+
+Keep Tony's cloud roster unchanged. The missing earlier Lead prep file is
+superseded and is no longer a blocker. Preserve original evidence.
+
+Prepare QAM-only routing updates and the non-self-referential records
+manifest described in the approval. Return exact selective staging paths
+and copyable Git commands for Tony; no blanket QAM staging. Exclude
+RESPONSES, product/config paths, bytecode and recursive archives.
+Tony controls commits/pushes. You make no Git mutations.
+
+D4 font permission and D7 omission remain recorded; do not ask again.
+The Architect amendment still requires ONE revised-candidate release.
+After presenting the prepared commit list, ask Tony to commit it and say:
+
+"Extend my Q2 release to candidate f21564cacb563ecddbf78b1685086c9489bf1c26
+under the QA Lead's revised approval incorporating the 5 October
+remote-roster amendment. Keep my font-build permission and skip the
+optional visual check. Begin after candidate verification."
+
+This is a requested confirmation, not a release already granted by this
+prompt. Record Tony's actual reply. Do not add another approval round for
+unchanged instructions or a second commit solely for the release record.
+
+Then reverify actual HEAD, ancestry, all product bytes and the separate
+authority/tool hashes. Use the approved v2 identity tool, exact amendment,
+--head HEAD and bounded next-env flag. PRODUCT_EQUIVALENT alone does not
+override unexplained QAM hash anomalies. Resolve them under the addendum;
+do not refresh expected authority/product hashes to make drift disappear.
+Keep the dev server stopped; coordinate any Cody pointer correction with
+one writer at a time. Preserve raw control results, including copied-record
+detection and rejection by the combined approval/identity gate.
+
+After release and verification, execute the full independent Q2 plan
+autonomously within its isolation, time and retry bounds. Retire A/B
+waivers; only the exact C failure remains conditionally deferred. Prove
+its non-impact as specified. Keep DIRECTOR-OBS-001's mocked A+B/reopen
+checks. Required automated visual checks remain mandatory.
+
+No live service calls, config reversal, product repair, maintained-test
+changes, credential capture or Git mutations. If font confinement cannot
+be established, mark build proof BLOCKED and continue released independent
+safe checks. Return one indexed QAM evidence package and owned-runtime
+teardown. No Q5 before Lead disposition. Gate Q remains NOT ISSUED.

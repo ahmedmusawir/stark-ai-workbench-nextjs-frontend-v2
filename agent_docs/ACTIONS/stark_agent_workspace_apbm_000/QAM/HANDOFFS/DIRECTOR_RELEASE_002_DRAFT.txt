@@ -1,0 +1,7 @@
+Director release — APBM_000 Q2 attempt-002
+
+I release candidate 8eb5789d9021ad06c15db36db74419a2b5c68fc5 on qa/frontend-apbm-000 for Claudy's independent retest under QA Lead plan v0.3 and LEAD_RETEST_002_APPROVAL_2026-10-11.md.
+
+Cody is paused; Claudy has the sole writer slot. Preserve D4 ALLOW and D7 OMIT. Install and verify the Lead package, complete the bounded QA-instrument corrections and preflight, then execute attempt-002 within the approved limits. All QA records stay inside the module's QAM/.
+
+No live-service expansion, product repairs, Git mutation, Q5, merge or closeout is authorized. Gate Q remains pending. Return the indexed attempt-002 package to QA Lead.

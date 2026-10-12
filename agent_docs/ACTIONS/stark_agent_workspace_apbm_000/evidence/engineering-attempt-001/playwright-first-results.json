@@ -1,0 +1,1738 @@
+{
+  "config": {
+    "configFile": "/home/moose/NEXTJS/stark-ai-workbench-nextjs-frontend-v2/playwright.workspace.config.ts",
+    "rootDir": "/home/moose/NEXTJS/stark-ai-workbench-nextjs-frontend-v2/tests/workspace",
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "/home/moose/NEXTJS/stark-ai-workbench-nextjs-frontend-v2/agent_docs/ACTIONS/stark_agent_workspace_apbm_000/evidence/engineering-attempt-001/browser-artifacts",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "",
+        "name": "",
+        "testDir": "/home/moose/NEXTJS/stark-ai-workbench-nextjs-frontend-v2/tests/workspace",
+        "testIgnore": [],
+        "testMatch": [
+          "workspace.spec.ts"
+        ],
+        "timeout": 30000
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "list",
+        null
+      ],
+      [
+        "json",
+        {
+          "outputFile": "./agent_docs/ACTIONS/stark_agent_workspace_apbm_000/evidence/engineering-attempt-001/playwright-results.json"
+        }
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "missing",
+    "updateSourceMethod": "patch",
+    "version": "1.59.1",
+    "workers": 1,
+    "webServer": {
+      "command": "node tests/workspace/harness.cjs",
+      "url": "http://127.0.0.1:43170",
+      "reuseExistingServer": false,
+      "timeout": 90000,
+      "env": {
+        "NODE_OPTIONS": "--require=./tests/workspace/network-guard.cjs"
+      }
+    }
+  },
+  "suites": [
+    {
+      "title": "workspace.spec.ts",
+      "file": "workspace.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "render directory dark 375",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 1496,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m\"12px\"\u001b[39m\nReceived: \u001b[31m\".75rem\"\u001b[39m",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m\"12px\"\u001b[39m\nReceived: \u001b[31m\".75rem\"\u001b[39m\n    at /home/moose/NEXTJS/stark-ai-workbench-nextjs-frontend-v2/tests/workspace/workspace.spec.ts:13:268",
+                    "location": {
+                      "file": "/home/moose/NEXTJS/stark-ai-workbench-nextjs-frontend-v2/tests/workspace/workspace.spec.ts",
+                      "column": 268,
+                      "line": 13
+                    },
+                    "snippet": "  11 |  await page.setViewportSize({width,height:900});await page.addInitScript(value=>localStorage.setItem('theme',value),theme);await page.goto(`/?view=${view}`);await expect(page.locator('.ws-root')).toBeVisible();await page.evaluate(()=>document.fonts.ready);await expect(page.locator('html')).toHaveClass(theme);\n  12 |  await expect.poll(()=>page.evaluate(()=>document.documentElement.scrollWidth-innerWidth)).toBeLessThanOrEqual(1);\n> 13 |  const colors=await page.locator('.ws-root').evaluate(el=>({bg:getComputedStyle(el).backgroundColor,radius:getComputedStyle(el).getPropertyValue('--radius')}));expect(colors.bg).toBe(theme==='dark'?'rgb(63, 63, 70)':'rgb(255, 255, 255)');expect(colors.radius.trim()).toBe('12px');\n     |                                                                                                                                                                                                                                                                            ^\n  14 |  await expect(page.locator('#unscoped-sibling')).toHaveCSS('background-color','rgba(0, 0, 0, 0)');expect(await page.locator('#unscoped-sibling').evaluate(el=>getComputedStyle(el).getPropertyValue('--background'))).toBe('');\n  15 |  if(view==='conversation'){\n  16 |   await expect(page.getByText('Here is a', {exact:false})).toBeVisible();"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/home/moose/NEXTJS/stark-ai-workbench-nextjs-frontend-v2/tests/workspace/workspace.spec.ts",
+                        "column": 268,
+                        "line": 13
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m\"12px\"\u001b[39m\nReceived: \u001b[31m\".75rem\"\u001b[39m\n\n  11 |  await page.setViewportSize({width,height:900});await page.addInitScript(value=>localStorage.setItem('theme',value),theme);await page.goto(`/?view=${view}`);await expect(page.locator('.ws-root')).toBeVisible();await page.evaluate(()=>document.fonts.ready);await expect(page.locator('html')).toHaveClass(theme);\n  12 |  await expect.poll(()=>page.evaluate(()=>document.documentElement.scrollWidth-innerWidth)).toBeLessThanOrEqual(1);\n> 13 |  const colors=await page.locator('.ws-root').evaluate(el=>({bg:getComputedStyle(el).backgroundColor,radius:getComputedStyle(el).getPropertyValue('--radius')}));expect(colors.bg).toBe(theme==='dark'?'rgb(63, 63, 70)':'rgb(255, 255, 255)');expect(colors.radius.trim()).toBe('12px');\n     |                                                                                                                                                                                                                                                                            ^\n  14 |  await expect(page.locator('#unscoped-sibling')).toHaveCSS('background-color','rgba(0, 0, 0, 0)');expect(await page.locator('#unscoped-sibling').evaluate(el=>getComputedStyle(el).getPropertyValue('--background'))).toBe('');\n  15 |  if(view==='conversation'){\n  16 |   await expect(page.getByText('Here is a', {exact:false})).toBeVisible();\n    at /home/moose/NEXTJS/stark-ai-workbench-nextjs-frontend-v2/tests/workspace/workspace.spec.ts:13:268"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-04T15:46:07.140Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/home/moose/NEXTJS/stark-ai-workbench-nextjs-frontend-v2/agent_docs/ACTIONS/stark_agent_workspace_apbm_000/evidence/engineering-attempt-001/browser-artifacts/workspace-render-directory-dark-375/test-failed-1.png"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/home/moose/NEXTJS/stark-ai-workbench-nextjs-frontend-v2/agent_docs/ACTIONS/stark_agent_workspace_apbm_000/evidence/engineering-attempt-001/browser-artifacts/workspace-render-directory-dark-375/error-context.md"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/home/moose/NEXTJS/stark-ai-workbench-nextjs-frontend-v2/tests/workspace/workspace.spec.ts",
+                    "column": 268,
+                    "line": 13
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "b163ed09f68681248ada-a58b7549b21265fcdd1d",
+          "file": "workspace.spec.ts",
+          "line": 10,
+          "column": 134
+        },
+        {
+          "title": "render directory dark 768",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 1309,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m\"12px\"\u001b[39m\nReceived: \u001b[31m\".75rem\"\u001b[39m",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m\"12px\"\u001b[39m\nReceived: \u001b[31m\".75rem\"\u001b[39m\n    at /home/moose/NEXTJS/stark-ai-workbench-nextjs-frontend-v2/tests/workspace/workspace.spec.ts:13:268",
+                    "location": {
+                      "file": "/home/moose/NEXTJS/stark-ai-workbench-nextjs-frontend-v2/tests/workspace/workspace.spec.ts",
+                      "column": 268,
+                      "line": 13
+                    },
+                    "snippet": "  11 |  await page.setViewportSize({width,height:900});await page.addInitScript(value=>localStorage.setItem('theme',value),theme);await page.goto(`/?view=${view}`);await expect(page.locator('.ws-root')).toBeVisible();await page.evaluate(()=>document.fonts.ready);await expect(page.locator('html')).toHaveClass(theme);\n  12 |  await expect.poll(()=>page.evaluate(()=>document.documentElement.scrollWidth-innerWidth)).toBeLessThanOrEqual(1);\n> 13 |  const colors=await page.locator('.ws-root').evaluate(el=>({bg:getComputedStyle(el).backgroundColor,radius:getComputedStyle(el).getPropertyValue('--radius')}));expect(colors.bg).toBe(theme==='dark'?'rgb(63, 63, 70)':'rgb(255, 255, 255)');expect(colors.radius.trim()).toBe('12px');\n     |                                                                                                                                                                                                                                                                            ^\n  14 |  await expect(page.locator('#unscoped-sibling')).toHaveCSS('background-color','rgba(0, 0, 0, 0)');expect(await page.locator('#unscoped-sibling').evaluate(el=>getComputedStyle(el).getPropertyValue('--background'))).toBe('');\n  15 |  if(view==='conversation'){\n  16 |   await expect(page.getByText('Here is a', {exact:false})).toBeVisible();"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/home/moose/NEXTJS/stark-ai-workbench-nextjs-frontend-v2/tests/workspace/workspace.spec.ts",
+                        "column": 268,
+                        "line": 13
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m\"12px\"\u001b[39m\nReceived: \u001b[31m\".75rem\"\u001b[39m\n\n  11 |  await page.setViewportSize({width,height:900});await page.addInitScript(value=>localStorage.setItem('theme',value),theme);await page.goto(`/?view=${view}`);await expect(page.locator('.ws-root')).toBeVisible();await page.evaluate(()=>document.fonts.ready);await expect(page.locator('html')).toHaveClass(theme);\n  12 |  await expect.poll(()=>page.evaluate(()=>document.documentElement.scrollWidth-innerWidth)).toBeLessThanOrEqual(1);\n> 13 |  const colors=await page.locator('.ws-root').evaluate(el=>({bg:getComputedStyle(el).backgroundColor,radius:getComputedStyle(el).getPropertyValue('--radius')}));expect(colors.bg).toBe(theme==='dark'?'rgb(63, 63, 70)':'rgb(255, 255, 255)');expect(colors.radius.trim()).toBe('12px');\n     |                                                                                                                                                                                                                                                                            ^\n  14 |  await expect(page.locator('#unscoped-sibling')).toHaveCSS('background-color','rgba(0, 0, 0, 0)');expect(await page.locator('#unscoped-sibling').evaluate(el=>getComputedStyle(el).getPropertyValue('--background'))).toBe('');\n  15 |  if(view==='conversation'){\n  16 |   await expect(page.getByText('Here is a', {exact:false})).toBeVisible();\n    at /home/moose/NEXTJS/stark-ai-workbench-nextjs-frontend-v2/tests/workspace/workspace.spec.ts:13:268"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-04T15:46:10.338Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/home/moose/NEXTJS/stark-ai-workbench-nextjs-frontend-v2/agent_docs/ACTIONS/stark_agent_workspace_apbm_000/evidence/engineering-attempt-001/browser-artifacts/workspace-render-directory-dark-768/test-failed-1.png"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/home/moose/NEXTJS/stark-ai-workbench-nextjs-frontend-v2/agent_docs/ACTIONS/stark_agent_workspace_apbm_000/evidence/engineering-attempt-001/browser-artifacts/workspace-render-directory-dark-768/error-context.md"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/home/moose/NEXTJS/stark-ai-workbench-nextjs-frontend-v2/tests/workspace/workspace.spec.ts",
+                    "column": 268,
+                    "line": 13
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "b163ed09f68681248ada-8bf2242f7c5e6fdd219d",
+          "file": "workspace.spec.ts",
+          "line": 10,
+          "column": 134
+        },
+        {
+          "title": "render directory dark 1280",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 1320,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m\"12px\"\u001b[39m\nReceived: \u001b[31m\".75rem\"\u001b[39m",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m\"12px\"\u001b[39m\nReceived: \u001b[31m\".75rem\"\u001b[39m\n    at /home/moose/NEXTJS/stark-ai-workbench-nextjs-frontend-v2/tests/workspace/workspace.spec.ts:13:268",
+                    "location": {
+                      "file": "/home/moose/NEXTJS/stark-ai-workbench-nextjs-frontend-v2/tests/workspace/workspace.spec.ts",
+                      "column": 268,
+                      "line": 13
+                    },
+                    "snippet": "  11 |  await page.setViewportSize({width,height:900});await page.addInitScript(value=>localStorage.setItem('theme',value),theme);await page.goto(`/?view=${view}`);await expect(page.locator('.ws-root')).toBeVisible();await page.evaluate(()=>document.fonts.ready);await expect(page.locator('html')).toHaveClass(theme);\n  12 |  await expect.poll(()=>page.evaluate(()=>document.documentElement.scrollWidth-innerWidth)).toBeLessThanOrEqual(1);\n> 13 |  const colors=await page.locator('.ws-root').evaluate(el=>({bg:getComputedStyle(el).backgroundColor,radius:getComputedStyle(el).getPropertyValue('--radius')}));expect(colors.bg).toBe(theme==='dark'?'rgb(63, 63, 70)':'rgb(255, 255, 255)');expect(colors.radius.trim()).toBe('12px');\n     |                                                                                                                                                                                                                                                                            ^\n  14 |  await expect(page.locator('#unscoped-sibling')).toHaveCSS('background-color','rgba(0, 0, 0, 0)');expect(await page.locator('#unscoped-sibling').evaluate(el=>getComputedStyle(el).getPropertyValue('--background'))).toBe('');\n  15 |  if(view==='conversation'){\n  16 |   await expect(page.getByText('Here is a', {exact:false})).toBeVisible();"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/home/moose/NEXTJS/stark-ai-workbench-nextjs-frontend-v2/tests/workspace/workspace.spec.ts",
+                        "column": 268,
+                        "line": 13
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m\"12px\"\u001b[39m\nReceived: \u001b[31m\".75rem\"\u001b[39m\n\n  11 |  await page.setViewportSize({width,height:900});await page.addInitScript(value=>localStorage.setItem('theme',value),theme);await page.goto(`/?view=${view}`);await expect(page.locator('.ws-root')).toBeVisible();await page.evaluate(()=>document.fonts.ready);await expect(page.locator('html')).toHaveClass(theme);\n  12 |  await expect.poll(()=>page.evaluate(()=>document.documentElement.scrollWidth-innerWidth)).toBeLessThanOrEqual(1);\n> 13 |  const colors=await page.locator('.ws-root').evaluate(el=>({bg:getComputedStyle(el).backgroundColor,radius:getComputedStyle(el).getPropertyValue('--radius')}));expect(colors.bg).toBe(theme==='dark'?'rgb(63, 63, 70)':'rgb(255, 255, 255)');expect(colors.radius.trim()).toBe('12px');\n     |                                                                                                                                                                                                                                                                            ^\n  14 |  await expect(page.locator('#unscoped-sibling')).toHaveCSS('background-color','rgba(0, 0, 0, 0)');expect(await page.locator('#unscoped-sibling').evaluate(el=>getComputedStyle(el).getPropertyValue('--background'))).toBe('');\n  15 |  if(view==='conversation'){\n  16 |   await expect(page.getByText('Here is a', {exact:false})).toBeVisible();\n    at /home/moose/NEXTJS/stark-ai-workbench-nextjs-frontend-v2/tests/workspace/workspace.spec.ts:13:268"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-04T15:46:13.185Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/home/moose/NEXTJS/stark-ai-workbench-nextjs-frontend-v2/agent_docs/ACTIONS/stark_agent_workspace_apbm_000/evidence/engineering-attempt-001/browser-artifacts/workspace-render-directory-dark-1280/test-failed-1.png"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/home/moose/NEXTJS/stark-ai-workbench-nextjs-frontend-v2/agent_docs/ACTIONS/stark_agent_workspace_apbm_000/evidence/engineering-attempt-001/browser-artifacts/workspace-render-directory-dark-1280/error-context.md"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/home/moose/NEXTJS/stark-ai-workbench-nextjs-frontend-v2/tests/workspace/workspace.spec.ts",
+                    "column": 268,
+                    "line": 13
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "b163ed09f68681248ada-94010c076dff06248b3f",
+          "file": "workspace.spec.ts",
+          "line": 10,
+          "column": 134
+        },
+        {
+          "title": "render directory light 375",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 3,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 1261,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m\"12px\"\u001b[39m\nReceived: \u001b[31m\".75rem\"\u001b[39m",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m\"12px\"\u001b[39m\nReceived: \u001b[31m\".75rem\"\u001b[39m\n    at /home/moose/NEXTJS/stark-ai-workbench-nextjs-frontend-v2/tests/workspace/workspace.spec.ts:13:268",
+                    "location": {
+                      "file": "/home/moose/NEXTJS/stark-ai-workbench-nextjs-frontend-v2/tests/workspace/workspace.spec.ts",
+                      "column": 268,
+                      "line": 13
+                    },
+                    "snippet": "  11 |  await page.setViewportSize({width,height:900});await page.addInitScript(value=>localStorage.setItem('theme',value),theme);await page.goto(`/?view=${view}`);await expect(page.locator('.ws-root')).toBeVisible();await page.evaluate(()=>document.fonts.ready);await expect(page.locator('html')).toHaveClass(theme);\n  12 |  await expect.poll(()=>page.evaluate(()=>document.documentElement.scrollWidth-innerWidth)).toBeLessThanOrEqual(1);\n> 13 |  const colors=await page.locator('.ws-root').evaluate(el=>({bg:getComputedStyle(el).backgroundColor,radius:getComputedStyle(el).getPropertyValue('--radius')}));expect(colors.bg).toBe(theme==='dark'?'rgb(63, 63, 70)':'rgb(255, 255, 255)');expect(colors.radius.trim()).toBe('12px');\n     |                                                                                                                                                                                                                                                                            ^\n  14 |  await expect(page.locator('#unscoped-sibling')).toHaveCSS('background-color','rgba(0, 0, 0, 0)');expect(await page.locator('#unscoped-sibling').evaluate(el=>getComputedStyle(el).getPropertyValue('--background'))).toBe('');\n  15 |  if(view==='conversation'){\n  16 |   await expect(page.getByText('Here is a', {exact:false})).toBeVisible();"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/home/moose/NEXTJS/stark-ai-workbench-nextjs-frontend-v2/tests/workspace/workspace.spec.ts",
+                        "column": 268,
+                        "line": 13
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m\"12px\"\u001b[39m\nReceived: \u001b[31m\".75rem\"\u001b[39m\n\n  11 |  await page.setViewportSize({width,height:900});await page.addInitScript(value=>localStorage.setItem('theme',value),theme);await page.goto(`/?view=${view}`);await expect(page.locator('.ws-root')).toBeVisible();await page.evaluate(()=>document.fonts.ready);await expect(page.locator('html')).toHaveClass(theme);\n  12 |  await expect.poll(()=>page.evaluate(()=>document.documentElement.scrollWidth-innerWidth)).toBeLessThanOrEqual(1);\n> 13 |  const colors=await page.locator('.ws-root').evaluate(el=>({bg:getComputedStyle(el).backgroundColor,radius:getComputedStyle(el).getPropertyValue('--radius')}));expect(colors.bg).toBe(theme==='dark'?'rgb(63, 63, 70)':'rgb(255, 255, 255)');expect(colors.radius.trim()).toBe('12px');\n     |                                                                                                                                                                                                                                                                            ^\n  14 |  await expect(page.locator('#unscoped-sibling')).toHaveCSS('background-color','rgba(0, 0, 0, 0)');expect(await page.locator('#unscoped-sibling').evaluate(el=>getComputedStyle(el).getPropertyValue('--background'))).toBe('');\n  15 |  if(view==='conversation'){\n  16 |   await expect(page.getByText('Here is a', {exact:false})).toBeVisible();\n    at /home/moose/NEXTJS/stark-ai-workbench-nextjs-frontend-v2/tests/workspace/workspace.spec.ts:13:268"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-04T15:46:15.906Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/home/moose/NEXTJS/stark-ai-workbench-nextjs-frontend-v2/agent_docs/ACTIONS/stark_agent_workspace_apbm_000/evidence/engineering-attempt-001/browser-artifacts/workspace-render-directory-light-375/test-failed-1.png"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/home/moose/NEXTJS/stark-ai-workbench-nextjs-frontend-v2/agent_docs/ACTIONS/stark_agent_workspace_apbm_000/evidence/engineering-attempt-001/browser-artifacts/workspace-render-directory-light-375/error-context.md"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/home/moose/NEXTJS/stark-ai-workbench-nextjs-frontend-v2/tests/workspace/workspace.spec.ts",
+                    "column": 268,
+                    "line": 13
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "b163ed09f68681248ada-cf55d0448c06caf5c76a",
+          "file": "workspace.spec.ts",
+          "line": 10,
+          "column": 134
+        },
+        {
+          "title": "render directory light 768",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 4,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 1354,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m\"12px\"\u001b[39m\nReceived: \u001b[31m\".75rem\"\u001b[39m",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m\"12px\"\u001b[39m\nReceived: \u001b[31m\".75rem\"\u001b[39m\n    at /home/moose/NEXTJS/stark-ai-workbench-nextjs-frontend-v2/tests/workspace/workspace.spec.ts:13:268",
+                    "location": {
+                      "file": "/home/moose/NEXTJS/stark-ai-workbench-nextjs-frontend-v2/tests/workspace/workspace.spec.ts",
+                      "column": 268,
+                      "line": 13
+                    },
+                    "snippet": "  11 |  await page.setViewportSize({width,height:900});await page.addInitScript(value=>localStorage.setItem('theme',value),theme);await page.goto(`/?view=${view}`);await expect(page.locator('.ws-root')).toBeVisible();await page.evaluate(()=>document.fonts.ready);await expect(page.locator('html')).toHaveClass(theme);\n  12 |  await expect.poll(()=>page.evaluate(()=>document.documentElement.scrollWidth-innerWidth)).toBeLessThanOrEqual(1);\n> 13 |  const colors=await page.locator('.ws-root').evaluate(el=>({bg:getComputedStyle(el).backgroundColor,radius:getComputedStyle(el).getPropertyValue('--radius')}));expect(colors.bg).toBe(theme==='dark'?'rgb(63, 63, 70)':'rgb(255, 255, 255)');expect(colors.radius.trim()).toBe('12px');\n     |                                                                                                                                                                                                                                                                            ^\n  14 |  await expect(page.locator('#unscoped-sibling')).toHaveCSS('background-color','rgba(0, 0, 0, 0)');expect(await page.locator('#unscoped-sibling').evaluate(el=>getComputedStyle(el).getPropertyValue('--background'))).toBe('');\n  15 |  if(view==='conversation'){\n  16 |   await expect(page.getByText('Here is a', {exact:false})).toBeVisible();"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/home/moose/NEXTJS/stark-ai-workbench-nextjs-frontend-v2/tests/workspace/workspace.spec.ts",
+                        "column": 268,
+                        "line": 13
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m\"12px\"\u001b[39m\nReceived: \u001b[31m\".75rem\"\u001b[39m\n\n  11 |  await page.setViewportSize({width,height:900});await page.addInitScript(value=>localStorage.setItem('theme',value),theme);await page.goto(`/?view=${view}`);await expect(page.locator('.ws-root')).toBeVisible();await page.evaluate(()=>document.fonts.ready);await expect(page.locator('html')).toHaveClass(theme);\n  12 |  await expect.poll(()=>page.evaluate(()=>document.documentElement.scrollWidth-innerWidth)).toBeLessThanOrEqual(1);\n> 13 |  const colors=await page.locator('.ws-root').evaluate(el=>({bg:getComputedStyle(el).backgroundColor,radius:getComputedStyle(el).getPropertyValue('--radius')}));expect(colors.bg).toBe(theme==='dark'?'rgb(63, 63, 70)':'rgb(255, 255, 255)');expect(colors.radius.trim()).toBe('12px');\n     |                                                                                                                                                                                                                                                                            ^\n  14 |  await expect(page.locator('#unscoped-sibling')).toHaveCSS('background-color','rgba(0, 0, 0, 0)');expect(await page.locator('#unscoped-sibling').evaluate(el=>getComputedStyle(el).getPropertyValue('--background'))).toBe('');\n  15 |  if(view==='conversation'){\n  16 |   await expect(page.getByText('Here is a', {exact:false})).toBeVisible();\n    at /home/moose/NEXTJS/stark-ai-workbench-nextjs-frontend-v2/tests/workspace/workspace.spec.ts:13:268"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-04T15:46:18.575Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/home/moose/NEXTJS/stark-ai-workbench-nextjs-frontend-v2/agent_docs/ACTIONS/stark_agent_workspace_apbm_000/evidence/engineering-attempt-001/browser-artifacts/workspace-render-directory-light-768/test-failed-1.png"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/home/moose/NEXTJS/stark-ai-workbench-nextjs-frontend-v2/agent_docs/ACTIONS/stark_agent_workspace_apbm_000/evidence/engineering-attempt-001/browser-artifacts/workspace-render-directory-light-768/error-context.md"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/home/moose/NEXTJS/stark-ai-workbench-nextjs-frontend-v2/tests/workspace/workspace.spec.ts",
+                    "column": 268,
+                    "line": 13
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "b163ed09f68681248ada-6bbcde93bdf33ae2f942",
+          "file": "workspace.spec.ts",
+          "line": 10,
+          "column": 134
+        },
+        {
+          "title": "render directory light 1280",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 5,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 1610,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m\"12px\"\u001b[39m\nReceived: \u001b[31m\".75rem\"\u001b[39m",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m\"12px\"\u001b[39m\nReceived: \u001b[31m\".75rem\"\u001b[39m\n    at /home/moose/NEXTJS/stark-ai-workbench-nextjs-frontend-v2/tests/workspace/workspace.spec.ts:13:268",
+                    "location": {
+                      "file": "/home/moose/NEXTJS/stark-ai-workbench-nextjs-frontend-v2/tests/workspace/workspace.spec.ts",
+                      "column": 268,
+                      "line": 13
+                    },
+                    "snippet": "  11 |  await page.setViewportSize({width,height:900});await page.addInitScript(value=>localStorage.setItem('theme',value),theme);await page.goto(`/?view=${view}`);await expect(page.locator('.ws-root')).toBeVisible();await page.evaluate(()=>document.fonts.ready);await expect(page.locator('html')).toHaveClass(theme);\n  12 |  await expect.poll(()=>page.evaluate(()=>document.documentElement.scrollWidth-innerWidth)).toBeLessThanOrEqual(1);\n> 13 |  const colors=await page.locator('.ws-root').evaluate(el=>({bg:getComputedStyle(el).backgroundColor,radius:getComputedStyle(el).getPropertyValue('--radius')}));expect(colors.bg).toBe(theme==='dark'?'rgb(63, 63, 70)':'rgb(255, 255, 255)');expect(colors.radius.trim()).toBe('12px');\n     |                                                                                                                                                                                                                                                                            ^\n  14 |  await expect(page.locator('#unscoped-sibling')).toHaveCSS('background-color','rgba(0, 0, 0, 0)');expect(await page.locator('#unscoped-sibling').evaluate(el=>getComputedStyle(el).getPropertyValue('--background'))).toBe('');\n  15 |  if(view==='conversation'){\n  16 |   await expect(page.getByText('Here is a', {exact:false})).toBeVisible();"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/home/moose/NEXTJS/stark-ai-workbench-nextjs-frontend-v2/tests/workspace/workspace.spec.ts",
+                        "column": 268,
+                        "line": 13
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m\"12px\"\u001b[39m\nReceived: \u001b[31m\".75rem\"\u001b[39m\n\n  11 |  await page.setViewportSize({width,height:900});await page.addInitScript(value=>localStorage.setItem('theme',value),theme);await page.goto(`/?view=${view}`);await expect(page.locator('.ws-root')).toBeVisible();await page.evaluate(()=>document.fonts.ready);await expect(page.locator('html')).toHaveClass(theme);\n  12 |  await expect.poll(()=>page.evaluate(()=>document.documentElement.scrollWidth-innerWidth)).toBeLessThanOrEqual(1);\n> 13 |  const colors=await page.locator('.ws-root').evaluate(el=>({bg:getComputedStyle(el).backgroundColor,radius:getComputedStyle(el).getPropertyValue('--radius')}));expect(colors.bg).toBe(theme==='dark'?'rgb(63, 63, 70)':'rgb(255, 255, 255)');expect(colors.radius.trim()).toBe('12px');\n     |                                                                                                                                                                                                                                                                            ^\n  14 |  await expect(page.locator('#unscoped-sibling')).toHaveCSS('background-color','rgba(0, 0, 0, 0)');expect(await page.locator('#unscoped-sibling').evaluate(el=>getComputedStyle(el).getPropertyValue('--background'))).toBe('');\n  15 |  if(view==='conversation'){\n  16 |   await expect(page.getByText('Here is a', {exact:false})).toBeVisible();\n    at /home/moose/NEXTJS/stark-ai-workbench-nextjs-frontend-v2/tests/workspace/workspace.spec.ts:13:268"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-04T15:46:21.434Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/home/moose/NEXTJS/stark-ai-workbench-nextjs-frontend-v2/agent_docs/ACTIONS/stark_agent_workspace_apbm_000/evidence/engineering-attempt-001/browser-artifacts/workspace-render-directory-light-1280/test-failed-1.png"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/home/moose/NEXTJS/stark-ai-workbench-nextjs-frontend-v2/agent_docs/ACTIONS/stark_agent_workspace_apbm_000/evidence/engineering-attempt-001/browser-artifacts/workspace-render-directory-light-1280/error-context.md"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/home/moose/NEXTJS/stark-ai-workbench-nextjs-frontend-v2/tests/workspace/workspace.spec.ts",
+                    "column": 268,
+                    "line": 13
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "b163ed09f68681248ada-2901b119f9e71bf61b55",
+          "file": "workspace.spec.ts",
+          "line": 10,
+          "column": 134
+        },
+        {
+          "title": "render workspace dark 375",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 6,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 1848,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m\"12px\"\u001b[39m\nReceived: \u001b[31m\".75rem\"\u001b[39m",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m\"12px\"\u001b[39m\nReceived: \u001b[31m\".75rem\"\u001b[39m\n    at /home/moose/NEXTJS/stark-ai-workbench-nextjs-frontend-v2/tests/workspace/workspace.spec.ts:13:268",
+                    "location": {
+                      "file": "/home/moose/NEXTJS/stark-ai-workbench-nextjs-frontend-v2/tests/workspace/workspace.spec.ts",
+                      "column": 268,
+                      "line": 13
+                    },
+                    "snippet": "  11 |  await page.setViewportSize({width,height:900});await page.addInitScript(value=>localStorage.setItem('theme',value),theme);await page.goto(`/?view=${view}`);await expect(page.locator('.ws-root')).toBeVisible();await page.evaluate(()=>document.fonts.ready);await expect(page.locator('html')).toHaveClass(theme);\n  12 |  await expect.poll(()=>page.evaluate(()=>document.documentElement.scrollWidth-innerWidth)).toBeLessThanOrEqual(1);\n> 13 |  const colors=await page.locator('.ws-root').evaluate(el=>({bg:getComputedStyle(el).backgroundColor,radius:getComputedStyle(el).getPropertyValue('--radius')}));expect(colors.bg).toBe(theme==='dark'?'rgb(63, 63, 70)':'rgb(255, 255, 255)');expect(colors.radius.trim()).toBe('12px');\n     |                                                                                                                                                                                                                                                                            ^\n  14 |  await expect(page.locator('#unscoped-sibling')).toHaveCSS('background-color','rgba(0, 0, 0, 0)');expect(await page.locator('#unscoped-sibling').evaluate(el=>getComputedStyle(el).getPropertyValue('--background'))).toBe('');\n  15 |  if(view==='conversation'){\n  16 |   await expect(page.getByText('Here is a', {exact:false})).toBeVisible();"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/home/moose/NEXTJS/stark-ai-workbench-nextjs-frontend-v2/tests/workspace/workspace.spec.ts",
+                        "column": 268,
+                        "line": 13
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m\"12px\"\u001b[39m\nReceived: \u001b[31m\".75rem\"\u001b[39m\n\n  11 |  await page.setViewportSize({width,height:900});await page.addInitScript(value=>localStorage.setItem('theme',value),theme);await page.goto(`/?view=${view}`);await expect(page.locator('.ws-root')).toBeVisible();await page.evaluate(()=>document.fonts.ready);await expect(page.locator('html')).toHaveClass(theme);\n  12 |  await expect.poll(()=>page.evaluate(()=>document.documentElement.scrollWidth-innerWidth)).toBeLessThanOrEqual(1);\n> 13 |  const colors=await page.locator('.ws-root').evaluate(el=>({bg:getComputedStyle(el).backgroundColor,radius:getComputedStyle(el).getPropertyValue('--radius')}));expect(colors.bg).toBe(theme==='dark'?'rgb(63, 63, 70)':'rgb(255, 255, 255)');expect(colors.radius.trim()).toBe('12px');\n     |                                                                                                                                                                                                                                                                            ^\n  14 |  await expect(page.locator('#unscoped-sibling')).toHaveCSS('background-color','rgba(0, 0, 0, 0)');expect(await page.locator('#unscoped-sibling').evaluate(el=>getComputedStyle(el).getPropertyValue('--background'))).toBe('');\n  15 |  if(view==='conversation'){\n  16 |   await expect(page.getByText('Here is a', {exact:false})).toBeVisible();\n    at /home/moose/NEXTJS/stark-ai-workbench-nextjs-frontend-v2/tests/workspace/workspace.spec.ts:13:268"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-04T15:46:24.599Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/home/moose/NEXTJS/stark-ai-workbench-nextjs-frontend-v2/agent_docs/ACTIONS/stark_agent_workspace_apbm_000/evidence/engineering-attempt-001/browser-artifacts/workspace-render-workspace-dark-375/test-failed-1.png"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/home/moose/NEXTJS/stark-ai-workbench-nextjs-frontend-v2/agent_docs/ACTIONS/stark_agent_workspace_apbm_000/evidence/engineering-attempt-001/browser-artifacts/workspace-render-workspace-dark-375/error-context.md"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/home/moose/NEXTJS/stark-ai-workbench-nextjs-frontend-v2/tests/workspace/workspace.spec.ts",
+                    "column": 268,
+                    "line": 13
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "b163ed09f68681248ada-6d49c07b2a5c6c5a2fd7",
+          "file": "workspace.spec.ts",
+          "line": 10,
+          "column": 134
+        },
+        {
+          "title": "render workspace dark 768",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 7,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 1684,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m\"12px\"\u001b[39m\nReceived: \u001b[31m\".75rem\"\u001b[39m",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m\"12px\"\u001b[39m\nReceived: \u001b[31m\".75rem\"\u001b[39m\n    at /home/moose/NEXTJS/stark-ai-workbench-nextjs-frontend-v2/tests/workspace/workspace.spec.ts:13:268",
+                    "location": {
+                      "file": "/home/moose/NEXTJS/stark-ai-workbench-nextjs-frontend-v2/tests/workspace/workspace.spec.ts",
+                      "column": 268,
+                      "line": 13
+                    },
+                    "snippet": "  11 |  await page.setViewportSize({width,height:900});await page.addInitScript(value=>localStorage.setItem('theme',value),theme);await page.goto(`/?view=${view}`);await expect(page.locator('.ws-root')).toBeVisible();await page.evaluate(()=>document.fonts.ready);await expect(page.locator('html')).toHaveClass(theme);\n  12 |  await expect.poll(()=>page.evaluate(()=>document.documentElement.scrollWidth-innerWidth)).toBeLessThanOrEqual(1);\n> 13 |  const colors=await page.locator('.ws-root').evaluate(el=>({bg:getComputedStyle(el).backgroundColor,radius:getComputedStyle(el).getPropertyValue('--radius')}));expect(colors.bg).toBe(theme==='dark'?'rgb(63, 63, 70)':'rgb(255, 255, 255)');expect(colors.radius.trim()).toBe('12px');\n     |                                                                                                                                                                                                                                                                            ^\n  14 |  await expect(page.locator('#unscoped-sibling')).toHaveCSS('background-color','rgba(0, 0, 0, 0)');expect(await page.locator('#unscoped-sibling').evaluate(el=>getComputedStyle(el).getPropertyValue('--background'))).toBe('');\n  15 |  if(view==='conversation'){\n  16 |   await expect(page.getByText('Here is a', {exact:false})).toBeVisible();"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/home/moose/NEXTJS/stark-ai-workbench-nextjs-frontend-v2/tests/workspace/workspace.spec.ts",
+                        "column": 268,
+                        "line": 13
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m\"12px\"\u001b[39m\nReceived: \u001b[31m\".75rem\"\u001b[39m\n\n  11 |  await page.setViewportSize({width,height:900});await page.addInitScript(value=>localStorage.setItem('theme',value),theme);await page.goto(`/?view=${view}`);await expect(page.locator('.ws-root')).toBeVisible();await page.evaluate(()=>document.fonts.ready);await expect(page.locator('html')).toHaveClass(theme);\n  12 |  await expect.poll(()=>page.evaluate(()=>document.documentElement.scrollWidth-innerWidth)).toBeLessThanOrEqual(1);\n> 13 |  const colors=await page.locator('.ws-root').evaluate(el=>({bg:getComputedStyle(el).backgroundColor,radius:getComputedStyle(el).getPropertyValue('--radius')}));expect(colors.bg).toBe(theme==='dark'?'rgb(63, 63, 70)':'rgb(255, 255, 255)');expect(colors.radius.trim()).toBe('12px');\n     |                                                                                                                                                                                                                                                                            ^\n  14 |  await expect(page.locator('#unscoped-sibling')).toHaveCSS('background-color','rgba(0, 0, 0, 0)');expect(await page.locator('#unscoped-sibling').evaluate(el=>getComputedStyle(el).getPropertyValue('--background'))).toBe('');\n  15 |  if(view==='conversation'){\n  16 |   await expect(page.getByText('Here is a', {exact:false})).toBeVisible();\n    at /home/moose/NEXTJS/stark-ai-workbench-nextjs-frontend-v2/tests/workspace/workspace.spec.ts:13:268"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-04T15:46:28.087Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/home/moose/NEXTJS/stark-ai-workbench-nextjs-frontend-v2/agent_docs/ACTIONS/stark_agent_workspace_apbm_000/evidence/engineering-attempt-001/browser-artifacts/workspace-render-workspace-dark-768/test-failed-1.png"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/home/moose/NEXTJS/stark-ai-workbench-nextjs-frontend-v2/agent_docs/ACTIONS/stark_agent_workspace_apbm_000/evidence/engineering-attempt-001/browser-artifacts/workspace-render-workspace-dark-768/error-context.md"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/home/moose/NEXTJS/stark-ai-workbench-nextjs-frontend-v2/tests/workspace/workspace.spec.ts",
+                    "column": 268,
+                    "line": 13
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "b163ed09f68681248ada-3582ee21f3304f920bc5",
+          "file": "workspace.spec.ts",
+          "line": 10,
+          "column": 134
+        },
+        {
+          "title": "render workspace dark 1280",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 8,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 1402,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m\"12px\"\u001b[39m\nReceived: \u001b[31m\".75rem\"\u001b[39m",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m\"12px\"\u001b[39m\nReceived: \u001b[31m\".75rem\"\u001b[39m\n    at /home/moose/NEXTJS/stark-ai-workbench-nextjs-frontend-v2/tests/workspace/workspace.spec.ts:13:268",
+                    "location": {
+                      "file": "/home/moose/NEXTJS/stark-ai-workbench-nextjs-frontend-v2/tests/workspace/workspace.spec.ts",
+                      "column": 268,
+                      "line": 13
+                    },
+                    "snippet": "  11 |  await page.setViewportSize({width,height:900});await page.addInitScript(value=>localStorage.setItem('theme',value),theme);await page.goto(`/?view=${view}`);await expect(page.locator('.ws-root')).toBeVisible();await page.evaluate(()=>document.fonts.ready);await expect(page.locator('html')).toHaveClass(theme);\n  12 |  await expect.poll(()=>page.evaluate(()=>document.documentElement.scrollWidth-innerWidth)).toBeLessThanOrEqual(1);\n> 13 |  const colors=await page.locator('.ws-root').evaluate(el=>({bg:getComputedStyle(el).backgroundColor,radius:getComputedStyle(el).getPropertyValue('--radius')}));expect(colors.bg).toBe(theme==='dark'?'rgb(63, 63, 70)':'rgb(255, 255, 255)');expect(colors.radius.trim()).toBe('12px');\n     |                                                                                                                                                                                                                                                                            ^\n  14 |  await expect(page.locator('#unscoped-sibling')).toHaveCSS('background-color','rgba(0, 0, 0, 0)');expect(await page.locator('#unscoped-sibling').evaluate(el=>getComputedStyle(el).getPropertyValue('--background'))).toBe('');\n  15 |  if(view==='conversation'){\n  16 |   await expect(page.getByText('Here is a', {exact:false})).toBeVisible();"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/home/moose/NEXTJS/stark-ai-workbench-nextjs-frontend-v2/tests/workspace/workspace.spec.ts",
+                        "column": 268,
+                        "line": 13
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m\"12px\"\u001b[39m\nReceived: \u001b[31m\".75rem\"\u001b[39m\n\n  11 |  await page.setViewportSize({width,height:900});await page.addInitScript(value=>localStorage.setItem('theme',value),theme);await page.goto(`/?view=${view}`);await expect(page.locator('.ws-root')).toBeVisible();await page.evaluate(()=>document.fonts.ready);await expect(page.locator('html')).toHaveClass(theme);\n  12 |  await expect.poll(()=>page.evaluate(()=>document.documentElement.scrollWidth-innerWidth)).toBeLessThanOrEqual(1);\n> 13 |  const colors=await page.locator('.ws-root').evaluate(el=>({bg:getComputedStyle(el).backgroundColor,radius:getComputedStyle(el).getPropertyValue('--radius')}));expect(colors.bg).toBe(theme==='dark'?'rgb(63, 63, 70)':'rgb(255, 255, 255)');expect(colors.radius.trim()).toBe('12px');\n     |                                                                                                                                                                                                                                                                            ^\n  14 |  await expect(page.locator('#unscoped-sibling')).toHaveCSS('background-color','rgba(0, 0, 0, 0)');expect(await page.locator('#unscoped-sibling').evaluate(el=>getComputedStyle(el).getPropertyValue('--background'))).toBe('');\n  15 |  if(view==='conversation'){\n  16 |   await expect(page.getByText('Here is a', {exact:false})).toBeVisible();\n    at /home/moose/NEXTJS/stark-ai-workbench-nextjs-frontend-v2/tests/workspace/workspace.spec.ts:13:268"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-04T15:46:31.419Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/home/moose/NEXTJS/stark-ai-workbench-nextjs-frontend-v2/agent_docs/ACTIONS/stark_agent_workspace_apbm_000/evidence/engineering-attempt-001/browser-artifacts/workspace-render-workspace-dark-1280/test-failed-1.png"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/home/moose/NEXTJS/stark-ai-workbench-nextjs-frontend-v2/agent_docs/ACTIONS/stark_agent_workspace_apbm_000/evidence/engineering-attempt-001/browser-artifacts/workspace-render-workspace-dark-1280/error-context.md"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/home/moose/NEXTJS/stark-ai-workbench-nextjs-frontend-v2/tests/workspace/workspace.spec.ts",
+                    "column": 268,
+                    "line": 13
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "b163ed09f68681248ada-87f90737ea9890806928",
+          "file": "workspace.spec.ts",
+          "line": 10,
+          "column": 134
+        },
+        {
+          "title": "render workspace light 375",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 9,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 1411,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m\"12px\"\u001b[39m\nReceived: \u001b[31m\".75rem\"\u001b[39m",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m\"12px\"\u001b[39m\nReceived: \u001b[31m\".75rem\"\u001b[39m\n    at /home/moose/NEXTJS/stark-ai-workbench-nextjs-frontend-v2/tests/workspace/workspace.spec.ts:13:268",
+                    "location": {
+                      "file": "/home/moose/NEXTJS/stark-ai-workbench-nextjs-frontend-v2/tests/workspace/workspace.spec.ts",
+                      "column": 268,
+                      "line": 13
+                    },
+                    "snippet": "  11 |  await page.setViewportSize({width,height:900});await page.addInitScript(value=>localStorage.setItem('theme',value),theme);await page.goto(`/?view=${view}`);await expect(page.locator('.ws-root')).toBeVisible();await page.evaluate(()=>document.fonts.ready);await expect(page.locator('html')).toHaveClass(theme);\n  12 |  await expect.poll(()=>page.evaluate(()=>document.documentElement.scrollWidth-innerWidth)).toBeLessThanOrEqual(1);\n> 13 |  const colors=await page.locator('.ws-root').evaluate(el=>({bg:getComputedStyle(el).backgroundColor,radius:getComputedStyle(el).getPropertyValue('--radius')}));expect(colors.bg).toBe(theme==='dark'?'rgb(63, 63, 70)':'rgb(255, 255, 255)');expect(colors.radius.trim()).toBe('12px');\n     |                                                                                                                                                                                                                                                                            ^\n  14 |  await expect(page.locator('#unscoped-sibling')).toHaveCSS('background-color','rgba(0, 0, 0, 0)');expect(await page.locator('#unscoped-sibling').evaluate(el=>getComputedStyle(el).getPropertyValue('--background'))).toBe('');\n  15 |  if(view==='conversation'){\n  16 |   await expect(page.getByText('Here is a', {exact:false})).toBeVisible();"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/home/moose/NEXTJS/stark-ai-workbench-nextjs-frontend-v2/tests/workspace/workspace.spec.ts",
+                        "column": 268,
+                        "line": 13
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m\"12px\"\u001b[39m\nReceived: \u001b[31m\".75rem\"\u001b[39m\n\n  11 |  await page.setViewportSize({width,height:900});await page.addInitScript(value=>localStorage.setItem('theme',value),theme);await page.goto(`/?view=${view}`);await expect(page.locator('.ws-root')).toBeVisible();await page.evaluate(()=>document.fonts.ready);await expect(page.locator('html')).toHaveClass(theme);\n  12 |  await expect.poll(()=>page.evaluate(()=>document.documentElement.scrollWidth-innerWidth)).toBeLessThanOrEqual(1);\n> 13 |  const colors=await page.locator('.ws-root').evaluate(el=>({bg:getComputedStyle(el).backgroundColor,radius:getComputedStyle(el).getPropertyValue('--radius')}));expect(colors.bg).toBe(theme==='dark'?'rgb(63, 63, 70)':'rgb(255, 255, 255)');expect(colors.radius.trim()).toBe('12px');\n     |                                                                                                                                                                                                                                                                            ^\n  14 |  await expect(page.locator('#unscoped-sibling')).toHaveCSS('background-color','rgba(0, 0, 0, 0)');expect(await page.locator('#unscoped-sibling').evaluate(el=>getComputedStyle(el).getPropertyValue('--background'))).toBe('');\n  15 |  if(view==='conversation'){\n  16 |   await expect(page.getByText('Here is a', {exact:false})).toBeVisible();\n    at /home/moose/NEXTJS/stark-ai-workbench-nextjs-frontend-v2/tests/workspace/workspace.spec.ts:13:268"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-04T15:46:34.297Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/home/moose/NEXTJS/stark-ai-workbench-nextjs-frontend-v2/agent_docs/ACTIONS/stark_agent_workspace_apbm_000/evidence/engineering-attempt-001/browser-artifacts/workspace-render-workspace-light-375/test-failed-1.png"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/home/moose/NEXTJS/stark-ai-workbench-nextjs-frontend-v2/agent_docs/ACTIONS/stark_agent_workspace_apbm_000/evidence/engineering-attempt-001/browser-artifacts/workspace-render-workspace-light-375/error-context.md"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/home/moose/NEXTJS/stark-ai-workbench-nextjs-frontend-v2/tests/workspace/workspace.spec.ts",
+                    "column": 268,
+                    "line": 13
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "b163ed09f68681248ada-689be901732e5f2226d7",
+          "file": "workspace.spec.ts",
+          "line": 10,
+          "column": 134
+        },
+        {
+          "title": "render workspace light 768",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 10,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 1594,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m\"12px\"\u001b[39m\nReceived: \u001b[31m\".75rem\"\u001b[39m",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m\"12px\"\u001b[39m\nReceived: \u001b[31m\".75rem\"\u001b[39m\n    at /home/moose/NEXTJS/stark-ai-workbench-nextjs-frontend-v2/tests/workspace/workspace.spec.ts:13:268",
+                    "location": {
+                      "file": "/home/moose/NEXTJS/stark-ai-workbench-nextjs-frontend-v2/tests/workspace/workspace.spec.ts",
+                      "column": 268,
+                      "line": 13
+                    },
+                    "snippet": "  11 |  await page.setViewportSize({width,height:900});await page.addInitScript(value=>localStorage.setItem('theme',value),theme);await page.goto(`/?view=${view}`);await expect(page.locator('.ws-root')).toBeVisible();await page.evaluate(()=>document.fonts.ready);await expect(page.locator('html')).toHaveClass(theme);\n  12 |  await expect.poll(()=>page.evaluate(()=>document.documentElement.scrollWidth-innerWidth)).toBeLessThanOrEqual(1);\n> 13 |  const colors=await page.locator('.ws-root').evaluate(el=>({bg:getComputedStyle(el).backgroundColor,radius:getComputedStyle(el).getPropertyValue('--radius')}));expect(colors.bg).toBe(theme==='dark'?'rgb(63, 63, 70)':'rgb(255, 255, 255)');expect(colors.radius.trim()).toBe('12px');\n     |                                                                                                                                                                                                                                                                            ^\n  14 |  await expect(page.locator('#unscoped-sibling')).toHaveCSS('background-color','rgba(0, 0, 0, 0)');expect(await page.locator('#unscoped-sibling').evaluate(el=>getComputedStyle(el).getPropertyValue('--background'))).toBe('');\n  15 |  if(view==='conversation'){\n  16 |   await expect(page.getByText('Here is a', {exact:false})).toBeVisible();"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/home/moose/NEXTJS/stark-ai-workbench-nextjs-frontend-v2/tests/workspace/workspace.spec.ts",
+                        "column": 268,
+                        "line": 13
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m\"12px\"\u001b[39m\nReceived: \u001b[31m\".75rem\"\u001b[39m\n\n  11 |  await page.setViewportSize({width,height:900});await page.addInitScript(value=>localStorage.setItem('theme',value),theme);await page.goto(`/?view=${view}`);await expect(page.locator('.ws-root')).toBeVisible();await page.evaluate(()=>document.fonts.ready);await expect(page.locator('html')).toHaveClass(theme);\n  12 |  await expect.poll(()=>page.evaluate(()=>document.documentElement.scrollWidth-innerWidth)).toBeLessThanOrEqual(1);\n> 13 |  const colors=await page.locator('.ws-root').evaluate(el=>({bg:getComputedStyle(el).backgroundColor,radius:getComputedStyle(el).getPropertyValue('--radius')}));expect(colors.bg).toBe(theme==='dark'?'rgb(63, 63, 70)':'rgb(255, 255, 255)');expect(colors.radius.trim()).toBe('12px');\n     |                                                                                                                                                                                                                                                                            ^\n  14 |  await expect(page.locator('#unscoped-sibling')).toHaveCSS('background-color','rgba(0, 0, 0, 0)');expect(await page.locator('#unscoped-sibling').evaluate(el=>getComputedStyle(el).getPropertyValue('--background'))).toBe('');\n  15 |  if(view==='conversation'){\n  16 |   await expect(page.getByText('Here is a', {exact:false})).toBeVisible();\n    at /home/moose/NEXTJS/stark-ai-workbench-nextjs-frontend-v2/tests/workspace/workspace.spec.ts:13:268"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-04T15:46:37.368Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/home/moose/NEXTJS/stark-ai-workbench-nextjs-frontend-v2/agent_docs/ACTIONS/stark_agent_workspace_apbm_000/evidence/engineering-attempt-001/browser-artifacts/workspace-render-workspace-light-768/test-failed-1.png"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/home/moose/NEXTJS/stark-ai-workbench-nextjs-frontend-v2/agent_docs/ACTIONS/stark_agent_workspace_apbm_000/evidence/engineering-attempt-001/browser-artifacts/workspace-render-workspace-light-768/error-context.md"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/home/moose/NEXTJS/stark-ai-workbench-nextjs-frontend-v2/tests/workspace/workspace.spec.ts",
+                    "column": 268,
+                    "line": 13
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "b163ed09f68681248ada-3734626b8f2111efa185",
+          "file": "workspace.spec.ts",
+          "line": 10,
+          "column": 134
+        },
+        {
+          "title": "render workspace light 1280",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 11,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 1558,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m\"12px\"\u001b[39m\nReceived: \u001b[31m\".75rem\"\u001b[39m",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m\"12px\"\u001b[39m\nReceived: \u001b[31m\".75rem\"\u001b[39m\n    at /home/moose/NEXTJS/stark-ai-workbench-nextjs-frontend-v2/tests/workspace/workspace.spec.ts:13:268",
+                    "location": {
+                      "file": "/home/moose/NEXTJS/stark-ai-workbench-nextjs-frontend-v2/tests/workspace/workspace.spec.ts",
+                      "column": 268,
+                      "line": 13
+                    },
+                    "snippet": "  11 |  await page.setViewportSize({width,height:900});await page.addInitScript(value=>localStorage.setItem('theme',value),theme);await page.goto(`/?view=${view}`);await expect(page.locator('.ws-root')).toBeVisible();await page.evaluate(()=>document.fonts.ready);await expect(page.locator('html')).toHaveClass(theme);\n  12 |  await expect.poll(()=>page.evaluate(()=>document.documentElement.scrollWidth-innerWidth)).toBeLessThanOrEqual(1);\n> 13 |  const colors=await page.locator('.ws-root').evaluate(el=>({bg:getComputedStyle(el).backgroundColor,radius:getComputedStyle(el).getPropertyValue('--radius')}));expect(colors.bg).toBe(theme==='dark'?'rgb(63, 63, 70)':'rgb(255, 255, 255)');expect(colors.radius.trim()).toBe('12px');\n     |                                                                                                                                                                                                                                                                            ^\n  14 |  await expect(page.locator('#unscoped-sibling')).toHaveCSS('background-color','rgba(0, 0, 0, 0)');expect(await page.locator('#unscoped-sibling').evaluate(el=>getComputedStyle(el).getPropertyValue('--background'))).toBe('');\n  15 |  if(view==='conversation'){\n  16 |   await expect(page.getByText('Here is a', {exact:false})).toBeVisible();"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/home/moose/NEXTJS/stark-ai-workbench-nextjs-frontend-v2/tests/workspace/workspace.spec.ts",
+                        "column": 268,
+                        "line": 13
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m\"12px\"\u001b[39m\nReceived: \u001b[31m\".75rem\"\u001b[39m\n\n  11 |  await page.setViewportSize({width,height:900});await page.addInitScript(value=>localStorage.setItem('theme',value),theme);await page.goto(`/?view=${view}`);await expect(page.locator('.ws-root')).toBeVisible();await page.evaluate(()=>document.fonts.ready);await expect(page.locator('html')).toHaveClass(theme);\n  12 |  await expect.poll(()=>page.evaluate(()=>document.documentElement.scrollWidth-innerWidth)).toBeLessThanOrEqual(1);\n> 13 |  const colors=await page.locator('.ws-root').evaluate(el=>({bg:getComputedStyle(el).backgroundColor,radius:getComputedStyle(el).getPropertyValue('--radius')}));expect(colors.bg).toBe(theme==='dark'?'rgb(63, 63, 70)':'rgb(255, 255, 255)');expect(colors.radius.trim()).toBe('12px');\n     |                                                                                                                                                                                                                                                                            ^\n  14 |  await expect(page.locator('#unscoped-sibling')).toHaveCSS('background-color','rgba(0, 0, 0, 0)');expect(await page.locator('#unscoped-sibling').evaluate(el=>getComputedStyle(el).getPropertyValue('--background'))).toBe('');\n  15 |  if(view==='conversation'){\n  16 |   await expect(page.getByText('Here is a', {exact:false})).toBeVisible();\n    at /home/moose/NEXTJS/stark-ai-workbench-nextjs-frontend-v2/tests/workspace/workspace.spec.ts:13:268"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-04T15:46:40.538Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/home/moose/NEXTJS/stark-ai-workbench-nextjs-frontend-v2/agent_docs/ACTIONS/stark_agent_workspace_apbm_000/evidence/engineering-attempt-001/browser-artifacts/workspace-render-workspace-light-1280/test-failed-1.png"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/home/moose/NEXTJS/stark-ai-workbench-nextjs-frontend-v2/agent_docs/ACTIONS/stark_agent_workspace_apbm_000/evidence/engineering-attempt-001/browser-artifacts/workspace-render-workspace-light-1280/error-context.md"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/home/moose/NEXTJS/stark-ai-workbench-nextjs-frontend-v2/tests/workspace/workspace.spec.ts",
+                    "column": 268,
+                    "line": 13
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "b163ed09f68681248ada-a196f78f3008e29cbbff",
+          "file": "workspace.spec.ts",
+          "line": 10,
+          "column": 134
+        },
+        {
+          "title": "render conversation dark 375",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 12,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 1979,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m\"12px\"\u001b[39m\nReceived: \u001b[31m\".75rem\"\u001b[39m",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m\"12px\"\u001b[39m\nReceived: \u001b[31m\".75rem\"\u001b[39m\n    at /home/moose/NEXTJS/stark-ai-workbench-nextjs-frontend-v2/tests/workspace/workspace.spec.ts:13:268",
+                    "location": {
+                      "file": "/home/moose/NEXTJS/stark-ai-workbench-nextjs-frontend-v2/tests/workspace/workspace.spec.ts",
+                      "column": 268,
+                      "line": 13
+                    },
+                    "snippet": "  11 |  await page.setViewportSize({width,height:900});await page.addInitScript(value=>localStorage.setItem('theme',value),theme);await page.goto(`/?view=${view}`);await expect(page.locator('.ws-root')).toBeVisible();await page.evaluate(()=>document.fonts.ready);await expect(page.locator('html')).toHaveClass(theme);\n  12 |  await expect.poll(()=>page.evaluate(()=>document.documentElement.scrollWidth-innerWidth)).toBeLessThanOrEqual(1);\n> 13 |  const colors=await page.locator('.ws-root').evaluate(el=>({bg:getComputedStyle(el).backgroundColor,radius:getComputedStyle(el).getPropertyValue('--radius')}));expect(colors.bg).toBe(theme==='dark'?'rgb(63, 63, 70)':'rgb(255, 255, 255)');expect(colors.radius.trim()).toBe('12px');\n     |                                                                                                                                                                                                                                                                            ^\n  14 |  await expect(page.locator('#unscoped-sibling')).toHaveCSS('background-color','rgba(0, 0, 0, 0)');expect(await page.locator('#unscoped-sibling').evaluate(el=>getComputedStyle(el).getPropertyValue('--background'))).toBe('');\n  15 |  if(view==='conversation'){\n  16 |   await expect(page.getByText('Here is a', {exact:false})).toBeVisible();"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/home/moose/NEXTJS/stark-ai-workbench-nextjs-frontend-v2/tests/workspace/workspace.spec.ts",
+                        "column": 268,
+                        "line": 13
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m\"12px\"\u001b[39m\nReceived: \u001b[31m\".75rem\"\u001b[39m\n\n  11 |  await page.setViewportSize({width,height:900});await page.addInitScript(value=>localStorage.setItem('theme',value),theme);await page.goto(`/?view=${view}`);await expect(page.locator('.ws-root')).toBeVisible();await page.evaluate(()=>document.fonts.ready);await expect(page.locator('html')).toHaveClass(theme);\n  12 |  await expect.poll(()=>page.evaluate(()=>document.documentElement.scrollWidth-innerWidth)).toBeLessThanOrEqual(1);\n> 13 |  const colors=await page.locator('.ws-root').evaluate(el=>({bg:getComputedStyle(el).backgroundColor,radius:getComputedStyle(el).getPropertyValue('--radius')}));expect(colors.bg).toBe(theme==='dark'?'rgb(63, 63, 70)':'rgb(255, 255, 255)');expect(colors.radius.trim()).toBe('12px');\n     |                                                                                                                                                                                                                                                                            ^\n  14 |  await expect(page.locator('#unscoped-sibling')).toHaveCSS('background-color','rgba(0, 0, 0, 0)');expect(await page.locator('#unscoped-sibling').evaluate(el=>getComputedStyle(el).getPropertyValue('--background'))).toBe('');\n  15 |  if(view==='conversation'){\n  16 |   await expect(page.getByText('Here is a', {exact:false})).toBeVisible();\n    at /home/moose/NEXTJS/stark-ai-workbench-nextjs-frontend-v2/tests/workspace/workspace.spec.ts:13:268"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-04T15:46:43.617Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/home/moose/NEXTJS/stark-ai-workbench-nextjs-frontend-v2/agent_docs/ACTIONS/stark_agent_workspace_apbm_000/evidence/engineering-attempt-001/browser-artifacts/workspace-render-conversation-dark-375/test-failed-1.png"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/home/moose/NEXTJS/stark-ai-workbench-nextjs-frontend-v2/agent_docs/ACTIONS/stark_agent_workspace_apbm_000/evidence/engineering-attempt-001/browser-artifacts/workspace-render-conversation-dark-375/error-context.md"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/home/moose/NEXTJS/stark-ai-workbench-nextjs-frontend-v2/tests/workspace/workspace.spec.ts",
+                    "column": 268,
+                    "line": 13
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "b163ed09f68681248ada-856fe32356d6cee4f6dc",
+          "file": "workspace.spec.ts",
+          "line": 10,
+          "column": 134
+        },
+        {
+          "title": "render conversation dark 768",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 13,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 1648,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m\"12px\"\u001b[39m\nReceived: \u001b[31m\".75rem\"\u001b[39m",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m\"12px\"\u001b[39m\nReceived: \u001b[31m\".75rem\"\u001b[39m\n    at /home/moose/NEXTJS/stark-ai-workbench-nextjs-frontend-v2/tests/workspace/workspace.spec.ts:13:268",
+                    "location": {
+                      "file": "/home/moose/NEXTJS/stark-ai-workbench-nextjs-frontend-v2/tests/workspace/workspace.spec.ts",
+                      "column": 268,
+                      "line": 13
+                    },
+                    "snippet": "  11 |  await page.setViewportSize({width,height:900});await page.addInitScript(value=>localStorage.setItem('theme',value),theme);await page.goto(`/?view=${view}`);await expect(page.locator('.ws-root')).toBeVisible();await page.evaluate(()=>document.fonts.ready);await expect(page.locator('html')).toHaveClass(theme);\n  12 |  await expect.poll(()=>page.evaluate(()=>document.documentElement.scrollWidth-innerWidth)).toBeLessThanOrEqual(1);\n> 13 |  const colors=await page.locator('.ws-root').evaluate(el=>({bg:getComputedStyle(el).backgroundColor,radius:getComputedStyle(el).getPropertyValue('--radius')}));expect(colors.bg).toBe(theme==='dark'?'rgb(63, 63, 70)':'rgb(255, 255, 255)');expect(colors.radius.trim()).toBe('12px');\n     |                                                                                                                                                                                                                                                                            ^\n  14 |  await expect(page.locator('#unscoped-sibling')).toHaveCSS('background-color','rgba(0, 0, 0, 0)');expect(await page.locator('#unscoped-sibling').evaluate(el=>getComputedStyle(el).getPropertyValue('--background'))).toBe('');\n  15 |  if(view==='conversation'){\n  16 |   await expect(page.getByText('Here is a', {exact:false})).toBeVisible();"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/home/moose/NEXTJS/stark-ai-workbench-nextjs-frontend-v2/tests/workspace/workspace.spec.ts",
+                        "column": 268,
+                        "line": 13
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m\"12px\"\u001b[39m\nReceived: \u001b[31m\".75rem\"\u001b[39m\n\n  11 |  await page.setViewportSize({width,height:900});await page.addInitScript(value=>localStorage.setItem('theme',value),theme);await page.goto(`/?view=${view}`);await expect(page.locator('.ws-root')).toBeVisible();await page.evaluate(()=>document.fonts.ready);await expect(page.locator('html')).toHaveClass(theme);\n  12 |  await expect.poll(()=>page.evaluate(()=>document.documentElement.scrollWidth-innerWidth)).toBeLessThanOrEqual(1);\n> 13 |  const colors=await page.locator('.ws-root').evaluate(el=>({bg:getComputedStyle(el).backgroundColor,radius:getComputedStyle(el).getPropertyValue('--radius')}));expect(colors.bg).toBe(theme==='dark'?'rgb(63, 63, 70)':'rgb(255, 255, 255)');expect(colors.radius.trim()).toBe('12px');\n     |                                                                                                                                                                                                                                                                            ^\n  14 |  await expect(page.locator('#unscoped-sibling')).toHaveCSS('background-color','rgba(0, 0, 0, 0)');expect(await page.locator('#unscoped-sibling').evaluate(el=>getComputedStyle(el).getPropertyValue('--background'))).toBe('');\n  15 |  if(view==='conversation'){\n  16 |   await expect(page.getByText('Here is a', {exact:false})).toBeVisible();\n    at /home/moose/NEXTJS/stark-ai-workbench-nextjs-frontend-v2/tests/workspace/workspace.spec.ts:13:268"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-04T15:46:47.222Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/home/moose/NEXTJS/stark-ai-workbench-nextjs-frontend-v2/agent_docs/ACTIONS/stark_agent_workspace_apbm_000/evidence/engineering-attempt-001/browser-artifacts/workspace-render-conversation-dark-768/test-failed-1.png"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/home/moose/NEXTJS/stark-ai-workbench-nextjs-frontend-v2/agent_docs/ACTIONS/stark_agent_workspace_apbm_000/evidence/engineering-attempt-001/browser-artifacts/workspace-render-conversation-dark-768/error-context.md"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/home/moose/NEXTJS/stark-ai-workbench-nextjs-frontend-v2/tests/workspace/workspace.spec.ts",
+                    "column": 268,
+                    "line": 13
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "b163ed09f68681248ada-9be9b060cc22250a53ee",
+          "file": "workspace.spec.ts",
+          "line": 10,
+          "column": 134
+        },
+        {
+          "title": "render conversation dark 1280",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 14,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 1710,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m\"12px\"\u001b[39m\nReceived: \u001b[31m\".75rem\"\u001b[39m",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m\"12px\"\u001b[39m\nReceived: \u001b[31m\".75rem\"\u001b[39m\n    at /home/moose/NEXTJS/stark-ai-workbench-nextjs-frontend-v2/tests/workspace/workspace.spec.ts:13:268",
+                    "location": {
+                      "file": "/home/moose/NEXTJS/stark-ai-workbench-nextjs-frontend-v2/tests/workspace/workspace.spec.ts",
+                      "column": 268,
+                      "line": 13
+                    },
+                    "snippet": "  11 |  await page.setViewportSize({width,height:900});await page.addInitScript(value=>localStorage.setItem('theme',value),theme);await page.goto(`/?view=${view}`);await expect(page.locator('.ws-root')).toBeVisible();await page.evaluate(()=>document.fonts.ready);await expect(page.locator('html')).toHaveClass(theme);\n  12 |  await expect.poll(()=>page.evaluate(()=>document.documentElement.scrollWidth-innerWidth)).toBeLessThanOrEqual(1);\n> 13 |  const colors=await page.locator('.ws-root').evaluate(el=>({bg:getComputedStyle(el).backgroundColor,radius:getComputedStyle(el).getPropertyValue('--radius')}));expect(colors.bg).toBe(theme==='dark'?'rgb(63, 63, 70)':'rgb(255, 255, 255)');expect(colors.radius.trim()).toBe('12px');\n     |                                                                                                                                                                                                                                                                            ^\n  14 |  await expect(page.locator('#unscoped-sibling')).toHaveCSS('background-color','rgba(0, 0, 0, 0)');expect(await page.locator('#unscoped-sibling').evaluate(el=>getComputedStyle(el).getPropertyValue('--background'))).toBe('');\n  15 |  if(view==='conversation'){\n  16 |   await expect(page.getByText('Here is a', {exact:false})).toBeVisible();"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/home/moose/NEXTJS/stark-ai-workbench-nextjs-frontend-v2/tests/workspace/workspace.spec.ts",
+                        "column": 268,
+                        "line": 13
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m\"12px\"\u001b[39m\nReceived: \u001b[31m\".75rem\"\u001b[39m\n\n  11 |  await page.setViewportSize({width,height:900});await page.addInitScript(value=>localStorage.setItem('theme',value),theme);await page.goto(`/?view=${view}`);await expect(page.locator('.ws-root')).toBeVisible();await page.evaluate(()=>document.fonts.ready);await expect(page.locator('html')).toHaveClass(theme);\n  12 |  await expect.poll(()=>page.evaluate(()=>document.documentElement.scrollWidth-innerWidth)).toBeLessThanOrEqual(1);\n> 13 |  const colors=await page.locator('.ws-root').evaluate(el=>({bg:getComputedStyle(el).backgroundColor,radius:getComputedStyle(el).getPropertyValue('--radius')}));expect(colors.bg).toBe(theme==='dark'?'rgb(63, 63, 70)':'rgb(255, 255, 255)');expect(colors.radius.trim()).toBe('12px');\n     |                                                                                                                                                                                                                                                                            ^\n  14 |  await expect(page.locator('#unscoped-sibling')).toHaveCSS('background-color','rgba(0, 0, 0, 0)');expect(await page.locator('#unscoped-sibling').evaluate(el=>getComputedStyle(el).getPropertyValue('--background'))).toBe('');\n  15 |  if(view==='conversation'){\n  16 |   await expect(page.getByText('Here is a', {exact:false})).toBeVisible();\n    at /home/moose/NEXTJS/stark-ai-workbench-nextjs-frontend-v2/tests/workspace/workspace.spec.ts:13:268"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-04T15:46:50.427Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/home/moose/NEXTJS/stark-ai-workbench-nextjs-frontend-v2/agent_docs/ACTIONS/stark_agent_workspace_apbm_000/evidence/engineering-attempt-001/browser-artifacts/workspace-render-conversation-dark-1280/test-failed-1.png"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/home/moose/NEXTJS/stark-ai-workbench-nextjs-frontend-v2/agent_docs/ACTIONS/stark_agent_workspace_apbm_000/evidence/engineering-attempt-001/browser-artifacts/workspace-render-conversation-dark-1280/error-context.md"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/home/moose/NEXTJS/stark-ai-workbench-nextjs-frontend-v2/tests/workspace/workspace.spec.ts",
+                    "column": 268,
+                    "line": 13
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "b163ed09f68681248ada-35a157b6804ea2efc2de",
+          "file": "workspace.spec.ts",
+          "line": 10,
+          "column": 134
+        },
+        {
+          "title": "render conversation light 375",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 15,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 1695,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m\"12px\"\u001b[39m\nReceived: \u001b[31m\".75rem\"\u001b[39m",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m\"12px\"\u001b[39m\nReceived: \u001b[31m\".75rem\"\u001b[39m\n    at /home/moose/NEXTJS/stark-ai-workbench-nextjs-frontend-v2/tests/workspace/workspace.spec.ts:13:268",
+                    "location": {
+                      "file": "/home/moose/NEXTJS/stark-ai-workbench-nextjs-frontend-v2/tests/workspace/workspace.spec.ts",
+                      "column": 268,
+                      "line": 13
+                    },
+                    "snippet": "  11 |  await page.setViewportSize({width,height:900});await page.addInitScript(value=>localStorage.setItem('theme',value),theme);await page.goto(`/?view=${view}`);await expect(page.locator('.ws-root')).toBeVisible();await page.evaluate(()=>document.fonts.ready);await expect(page.locator('html')).toHaveClass(theme);\n  12 |  await expect.poll(()=>page.evaluate(()=>document.documentElement.scrollWidth-innerWidth)).toBeLessThanOrEqual(1);\n> 13 |  const colors=await page.locator('.ws-root').evaluate(el=>({bg:getComputedStyle(el).backgroundColor,radius:getComputedStyle(el).getPropertyValue('--radius')}));expect(colors.bg).toBe(theme==='dark'?'rgb(63, 63, 70)':'rgb(255, 255, 255)');expect(colors.radius.trim()).toBe('12px');\n     |                                                                                                                                                                                                                                                                            ^\n  14 |  await expect(page.locator('#unscoped-sibling')).toHaveCSS('background-color','rgba(0, 0, 0, 0)');expect(await page.locator('#unscoped-sibling').evaluate(el=>getComputedStyle(el).getPropertyValue('--background'))).toBe('');\n  15 |  if(view==='conversation'){\n  16 |   await expect(page.getByText('Here is a', {exact:false})).toBeVisible();"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/home/moose/NEXTJS/stark-ai-workbench-nextjs-frontend-v2/tests/workspace/workspace.spec.ts",
+                        "column": 268,
+                        "line": 13
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m\"12px\"\u001b[39m\nReceived: \u001b[31m\".75rem\"\u001b[39m\n\n  11 |  await page.setViewportSize({width,height:900});await page.addInitScript(value=>localStorage.setItem('theme',value),theme);await page.goto(`/?view=${view}`);await expect(page.locator('.ws-root')).toBeVisible();await page.evaluate(()=>document.fonts.ready);await expect(page.locator('html')).toHaveClass(theme);\n  12 |  await expect.poll(()=>page.evaluate(()=>document.documentElement.scrollWidth-innerWidth)).toBeLessThanOrEqual(1);\n> 13 |  const colors=await page.locator('.ws-root').evaluate(el=>({bg:getComputedStyle(el).backgroundColor,radius:getComputedStyle(el).getPropertyValue('--radius')}));expect(colors.bg).toBe(theme==='dark'?'rgb(63, 63, 70)':'rgb(255, 255, 255)');expect(colors.radius.trim()).toBe('12px');\n     |                                                                                                                                                                                                                                                                            ^\n  14 |  await expect(page.locator('#unscoped-sibling')).toHaveCSS('background-color','rgba(0, 0, 0, 0)');expect(await page.locator('#unscoped-sibling').evaluate(el=>getComputedStyle(el).getPropertyValue('--background'))).toBe('');\n  15 |  if(view==='conversation'){\n  16 |   await expect(page.getByText('Here is a', {exact:false})).toBeVisible();\n    at /home/moose/NEXTJS/stark-ai-workbench-nextjs-frontend-v2/tests/workspace/workspace.spec.ts:13:268"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-04T15:46:53.693Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/home/moose/NEXTJS/stark-ai-workbench-nextjs-frontend-v2/agent_docs/ACTIONS/stark_agent_workspace_apbm_000/evidence/engineering-attempt-001/browser-artifacts/workspace-render-conversation-light-375/test-failed-1.png"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/home/moose/NEXTJS/stark-ai-workbench-nextjs-frontend-v2/agent_docs/ACTIONS/stark_agent_workspace_apbm_000/evidence/engineering-attempt-001/browser-artifacts/workspace-render-conversation-light-375/error-context.md"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/home/moose/NEXTJS/stark-ai-workbench-nextjs-frontend-v2/tests/workspace/workspace.spec.ts",
+                    "column": 268,
+                    "line": 13
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "b163ed09f68681248ada-a9eb06a1c988495ebe3a",
+          "file": "workspace.spec.ts",
+          "line": 10,
+          "column": 134
+        },
+        {
+          "title": "render conversation light 768",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 16,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 1791,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m\"12px\"\u001b[39m\nReceived: \u001b[31m\".75rem\"\u001b[39m",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m\"12px\"\u001b[39m\nReceived: \u001b[31m\".75rem\"\u001b[39m\n    at /home/moose/NEXTJS/stark-ai-workbench-nextjs-frontend-v2/tests/workspace/workspace.spec.ts:13:268",
+                    "location": {
+                      "file": "/home/moose/NEXTJS/stark-ai-workbench-nextjs-frontend-v2/tests/workspace/workspace.spec.ts",
+                      "column": 268,
+                      "line": 13
+                    },
+                    "snippet": "  11 |  await page.setViewportSize({width,height:900});await page.addInitScript(value=>localStorage.setItem('theme',value),theme);await page.goto(`/?view=${view}`);await expect(page.locator('.ws-root')).toBeVisible();await page.evaluate(()=>document.fonts.ready);await expect(page.locator('html')).toHaveClass(theme);\n  12 |  await expect.poll(()=>page.evaluate(()=>document.documentElement.scrollWidth-innerWidth)).toBeLessThanOrEqual(1);\n> 13 |  const colors=await page.locator('.ws-root').evaluate(el=>({bg:getComputedStyle(el).backgroundColor,radius:getComputedStyle(el).getPropertyValue('--radius')}));expect(colors.bg).toBe(theme==='dark'?'rgb(63, 63, 70)':'rgb(255, 255, 255)');expect(colors.radius.trim()).toBe('12px');\n     |                                                                                                                                                                                                                                                                            ^\n  14 |  await expect(page.locator('#unscoped-sibling')).toHaveCSS('background-color','rgba(0, 0, 0, 0)');expect(await page.locator('#unscoped-sibling').evaluate(el=>getComputedStyle(el).getPropertyValue('--background'))).toBe('');\n  15 |  if(view==='conversation'){\n  16 |   await expect(page.getByText('Here is a', {exact:false})).toBeVisible();"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/home/moose/NEXTJS/stark-ai-workbench-nextjs-frontend-v2/tests/workspace/workspace.spec.ts",
+                        "column": 268,
+                        "line": 13
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m\"12px\"\u001b[39m\nReceived: \u001b[31m\".75rem\"\u001b[39m\n\n  11 |  await page.setViewportSize({width,height:900});await page.addInitScript(value=>localStorage.setItem('theme',value),theme);await page.goto(`/?view=${view}`);await expect(page.locator('.ws-root')).toBeVisible();await page.evaluate(()=>document.fonts.ready);await expect(page.locator('html')).toHaveClass(theme);\n  12 |  await expect.poll(()=>page.evaluate(()=>document.documentElement.scrollWidth-innerWidth)).toBeLessThanOrEqual(1);\n> 13 |  const colors=await page.locator('.ws-root').evaluate(el=>({bg:getComputedStyle(el).backgroundColor,radius:getComputedStyle(el).getPropertyValue('--radius')}));expect(colors.bg).toBe(theme==='dark'?'rgb(63, 63, 70)':'rgb(255, 255, 255)');expect(colors.radius.trim()).toBe('12px');\n     |                                                                                                                                                                                                                                                                            ^\n  14 |  await expect(page.locator('#unscoped-sibling')).toHaveCSS('background-color','rgba(0, 0, 0, 0)');expect(await page.locator('#unscoped-sibling').evaluate(el=>getComputedStyle(el).getPropertyValue('--background'))).toBe('');\n  15 |  if(view==='conversation'){\n  16 |   await expect(page.getByText('Here is a', {exact:false})).toBeVisible();\n    at /home/moose/NEXTJS/stark-ai-workbench-nextjs-frontend-v2/tests/workspace/workspace.spec.ts:13:268"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-04T15:46:56.874Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/home/moose/NEXTJS/stark-ai-workbench-nextjs-frontend-v2/agent_docs/ACTIONS/stark_agent_workspace_apbm_000/evidence/engineering-attempt-001/browser-artifacts/workspace-render-conversation-light-768/test-failed-1.png"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/home/moose/NEXTJS/stark-ai-workbench-nextjs-frontend-v2/agent_docs/ACTIONS/stark_agent_workspace_apbm_000/evidence/engineering-attempt-001/browser-artifacts/workspace-render-conversation-light-768/error-context.md"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/home/moose/NEXTJS/stark-ai-workbench-nextjs-frontend-v2/tests/workspace/workspace.spec.ts",
+                    "column": 268,
+                    "line": 13
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "b163ed09f68681248ada-4816a08ac7cd95aca3ac",
+          "file": "workspace.spec.ts",
+          "line": 10,
+          "column": 134
+        },
+        {
+          "title": "render conversation light 1280",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 17,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 1728,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m\"12px\"\u001b[39m\nReceived: \u001b[31m\".75rem\"\u001b[39m",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m\"12px\"\u001b[39m\nReceived: \u001b[31m\".75rem\"\u001b[39m\n    at /home/moose/NEXTJS/stark-ai-workbench-nextjs-frontend-v2/tests/workspace/workspace.spec.ts:13:268",
+                    "location": {
+                      "file": "/home/moose/NEXTJS/stark-ai-workbench-nextjs-frontend-v2/tests/workspace/workspace.spec.ts",
+                      "column": 268,
+                      "line": 13
+                    },
+                    "snippet": "  11 |  await page.setViewportSize({width,height:900});await page.addInitScript(value=>localStorage.setItem('theme',value),theme);await page.goto(`/?view=${view}`);await expect(page.locator('.ws-root')).toBeVisible();await page.evaluate(()=>document.fonts.ready);await expect(page.locator('html')).toHaveClass(theme);\n  12 |  await expect.poll(()=>page.evaluate(()=>document.documentElement.scrollWidth-innerWidth)).toBeLessThanOrEqual(1);\n> 13 |  const colors=await page.locator('.ws-root').evaluate(el=>({bg:getComputedStyle(el).backgroundColor,radius:getComputedStyle(el).getPropertyValue('--radius')}));expect(colors.bg).toBe(theme==='dark'?'rgb(63, 63, 70)':'rgb(255, 255, 255)');expect(colors.radius.trim()).toBe('12px');\n     |                                                                                                                                                                                                                                                                            ^\n  14 |  await expect(page.locator('#unscoped-sibling')).toHaveCSS('background-color','rgba(0, 0, 0, 0)');expect(await page.locator('#unscoped-sibling').evaluate(el=>getComputedStyle(el).getPropertyValue('--background'))).toBe('');\n  15 |  if(view==='conversation'){\n  16 |   await expect(page.getByText('Here is a', {exact:false})).toBeVisible();"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/home/moose/NEXTJS/stark-ai-workbench-nextjs-frontend-v2/tests/workspace/workspace.spec.ts",
+                        "column": 268,
+                        "line": 13
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m\"12px\"\u001b[39m\nReceived: \u001b[31m\".75rem\"\u001b[39m\n\n  11 |  await page.setViewportSize({width,height:900});await page.addInitScript(value=>localStorage.setItem('theme',value),theme);await page.goto(`/?view=${view}`);await expect(page.locator('.ws-root')).toBeVisible();await page.evaluate(()=>document.fonts.ready);await expect(page.locator('html')).toHaveClass(theme);\n  12 |  await expect.poll(()=>page.evaluate(()=>document.documentElement.scrollWidth-innerWidth)).toBeLessThanOrEqual(1);\n> 13 |  const colors=await page.locator('.ws-root').evaluate(el=>({bg:getComputedStyle(el).backgroundColor,radius:getComputedStyle(el).getPropertyValue('--radius')}));expect(colors.bg).toBe(theme==='dark'?'rgb(63, 63, 70)':'rgb(255, 255, 255)');expect(colors.radius.trim()).toBe('12px');\n     |                                                                                                                                                                                                                                                                            ^\n  14 |  await expect(page.locator('#unscoped-sibling')).toHaveCSS('background-color','rgba(0, 0, 0, 0)');expect(await page.locator('#unscoped-sibling').evaluate(el=>getComputedStyle(el).getPropertyValue('--background'))).toBe('');\n  15 |  if(view==='conversation'){\n  16 |   await expect(page.getByText('Here is a', {exact:false})).toBeVisible();\n    at /home/moose/NEXTJS/stark-ai-workbench-nextjs-frontend-v2/tests/workspace/workspace.spec.ts:13:268"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-04T15:47:00.275Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/home/moose/NEXTJS/stark-ai-workbench-nextjs-frontend-v2/agent_docs/ACTIONS/stark_agent_workspace_apbm_000/evidence/engineering-attempt-001/browser-artifacts/workspace-render-conversation-light-1280/test-failed-1.png"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/home/moose/NEXTJS/stark-ai-workbench-nextjs-frontend-v2/agent_docs/ACTIONS/stark_agent_workspace_apbm_000/evidence/engineering-attempt-001/browser-artifacts/workspace-render-conversation-light-1280/error-context.md"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/home/moose/NEXTJS/stark-ai-workbench-nextjs-frontend-v2/tests/workspace/workspace.spec.ts",
+                    "column": 268,
+                    "line": 13
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "b163ed09f68681248ada-390cebec452a52fdc0f6",
+          "file": "workspace.spec.ts",
+          "line": 10,
+          "column": 134
+        },
+        {
+          "title": "directory filter, neutral alternate roster and safe navigation/back",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 18,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 1372,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByText('Moss Review')\nExpected: visible\nError: strict mode violation: getByText('Moss Review') resolved to 2 elements:\n    1) <span>Moss Review</span> aka getByRole('link', { name: 'Moss Review', exact: true })\n    2) <h2>Moss Review</h2> aka getByRole('link', { name: 'Moss Review Review notes and' })\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByText('Moss Review')\u001b[22m\n",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByText('Moss Review')\nExpected: visible\nError: strict mode violation: getByText('Moss Review') resolved to 2 elements:\n    1) <span>Moss Review</span> aka getByRole('link', { name: 'Moss Review', exact: true })\n    2) <h2>Moss Review</h2> aka getByRole('link', { name: 'Moss Review Review notes and' })\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByText('Moss Review')\u001b[22m\n\n    at /home/moose/NEXTJS/stark-ai-workbench-nextjs-frontend-v2/tests/workspace/workspace.spec.ts:24:198",
+                    "location": {
+                      "file": "/home/moose/NEXTJS/stark-ai-workbench-nextjs-frontend-v2/tests/workspace/workspace.spec.ts",
+                      "column": 198,
+                      "line": 24
+                    },
+                    "snippet": "  22 | });\n  23 | test('directory filter, neutral alternate roster and safe navigation/back',async({page})=>{\n> 24 |  await page.goto('/?roster=alternate');await page.getByLabel('Find an agent').fill('REVIEW');await expect(page.locator('.ws-agent-card')).toHaveCount(1);await expect(page.getByText('Moss Review')).toBeVisible();await page.getByLabel('Find an agent').fill('unmatched');await expect(page.getByRole('heading',{name:'No matching agents'})).toBeVisible();await page.getByLabel('Find an agent').fill('Orbit');await page.locator('.ws-agent-card').click();await expect(page.getByRole('heading',{name:'Orbit Notes'})).toBeVisible();expect(page.url()).toContain('orbit%2F%CE%B2');await page.goBack();await expect(page.getByRole('heading',{name:'Your agents'})).toBeVisible();\n     |                                                                                                                                                                                                      ^\n  25 | });\n  26 | test('default dark, saved light and legacy system are preserved',async({page})=>{\n  27 |  await page.goto('/');await expect(page.locator('html')).toHaveClass('dark');await page.getByRole('button',{name:'Switch to light mode'}).filter({visible:true}).click();await page.reload();await expect(page.locator('html')).toHaveClass('light');await page.evaluate(()=>localStorage.setItem('theme','system'));await page.emulateMedia({colorScheme:'light'});await page.reload();await expect(page.locator('html')).toHaveClass('light');expect(await page.evaluate(()=>localStorage.getItem('theme'))).toBe('system');"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/home/moose/NEXTJS/stark-ai-workbench-nextjs-frontend-v2/tests/workspace/workspace.spec.ts",
+                        "column": 198,
+                        "line": 24
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByText('Moss Review')\nExpected: visible\nError: strict mode violation: getByText('Moss Review') resolved to 2 elements:\n    1) <span>Moss Review</span> aka getByRole('link', { name: 'Moss Review', exact: true })\n    2) <h2>Moss Review</h2> aka getByRole('link', { name: 'Moss Review Review notes and' })\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByText('Moss Review')\u001b[22m\n\n\n  22 | });\n  23 | test('directory filter, neutral alternate roster and safe navigation/back',async({page})=>{\n> 24 |  await page.goto('/?roster=alternate');await page.getByLabel('Find an agent').fill('REVIEW');await expect(page.locator('.ws-agent-card')).toHaveCount(1);await expect(page.getByText('Moss Review')).toBeVisible();await page.getByLabel('Find an agent').fill('unmatched');await expect(page.getByRole('heading',{name:'No matching agents'})).toBeVisible();await page.getByLabel('Find an agent').fill('Orbit');await page.locator('.ws-agent-card').click();await expect(page.getByRole('heading',{name:'Orbit Notes'})).toBeVisible();expect(page.url()).toContain('orbit%2F%CE%B2');await page.goBack();await expect(page.getByRole('heading',{name:'Your agents'})).toBeVisible();\n     |                                                                                                                                                                                                      ^\n  25 | });\n  26 | test('default dark, saved light and legacy system are preserved',async({page})=>{\n  27 |  await page.goto('/');await expect(page.locator('html')).toHaveClass('dark');await page.getByRole('button',{name:'Switch to light mode'}).filter({visible:true}).click();await page.reload();await expect(page.locator('html')).toHaveClass('light');await page.evaluate(()=>localStorage.setItem('theme','system'));await page.emulateMedia({colorScheme:'light'});await page.reload();await expect(page.locator('html')).toHaveClass('light');expect(await page.evaluate(()=>localStorage.getItem('theme'))).toBe('system');\n    at /home/moose/NEXTJS/stark-ai-workbench-nextjs-frontend-v2/tests/workspace/workspace.spec.ts:24:198"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-04T15:47:03.514Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/home/moose/NEXTJS/stark-ai-workbench-nextjs-frontend-v2/agent_docs/ACTIONS/stark_agent_workspace_apbm_000/evidence/engineering-attempt-001/browser-artifacts/workspace-directory-filter-a59cf-er-and-safe-navigation-back/test-failed-1.png"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/home/moose/NEXTJS/stark-ai-workbench-nextjs-frontend-v2/agent_docs/ACTIONS/stark_agent_workspace_apbm_000/evidence/engineering-attempt-001/browser-artifacts/workspace-directory-filter-a59cf-er-and-safe-navigation-back/error-context.md"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/home/moose/NEXTJS/stark-ai-workbench-nextjs-frontend-v2/tests/workspace/workspace.spec.ts",
+                    "column": 198,
+                    "line": 24
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "b163ed09f68681248ada-22dde09e79375b2443c0",
+          "file": "workspace.spec.ts",
+          "line": 23,
+          "column": 5
+        },
+        {
+          "title": "default dark, saved light and legacy system are preserved",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 19,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 2189,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-04T15:47:06.508Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "b163ed09f68681248ada-daaba67f4e839b9f496c",
+          "file": "workspace.spec.ts",
+          "line": 26,
+          "column": 5
+        },
+        {
+          "title": "invalid query cannot invoke services; empty/loading/unavailable roster distinct",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 19,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 2572,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-04T15:47:09.218Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "b163ed09f68681248ada-19733b6b743e8fc4abeb",
+          "file": "workspace.spec.ts",
+          "line": 29,
+          "column": 5
+        },
+        {
+          "title": "fresh drafts, whitespace/IME and double-submit guard; durable returned ID binds once",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 19,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1824,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-04T15:47:11.832Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "b163ed09f68681248ada-c27e460ddcc06da0b251",
+          "file": "workspace.spec.ts",
+          "line": 33,
+          "column": 5
+        },
+        {
+          "title": "navigation drawer traps focus, restores opener, closes at breakpoint and portal cleans up",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 19,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1396,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-04T15:47:13.676Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "b163ed09f68681248ada-a8ff5c765b07da7d9b2b",
+          "file": "workspace.spec.ts",
+          "line": 36,
+          "column": 5
+        },
+        {
+          "title": "context disclosure and nested dialogs isolate edits by agent/user and reset on reload",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 19,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 2451,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-04T15:47:15.096Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "b163ed09f68681248ada-a2717237d317f96382df",
+          "file": "workspace.spec.ts",
+          "line": 39,
+          "column": 5
+        },
+        {
+          "title": "context focus gets safe destination when narrow resize hides content",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 19,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1130,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-04T15:47:17.574Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "b163ed09f68681248ada-ed8163033a9fa5891be2",
+          "file": "workspace.spec.ts",
+          "line": 43,
+          "column": 5
+        },
+        {
+          "title": "missing/unavailable/access/uncertain/pending/failed/metadata states constrain callbacks",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 19,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 4788,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-04T15:47:18.730Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "b163ed09f68681248ada-b0a39de91a449e941d83",
+          "file": "workspace.spec.ts",
+          "line": 46,
+          "column": 5
+        },
+        {
+          "title": "recents partial/recovered states and safe literal metadata actions with failure retention",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 19,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 2685,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-04T15:47:23.538Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "b163ed09f68681248ada-ceab0da48d29fb7bc5e9",
+          "file": "workspace.spec.ts",
+          "line": 57,
+          "column": 5
+        },
+        {
+          "title": "late history cannot paint another session; clipboard fallback and no raw HTML",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 19,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1978,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-04T15:47:26.246Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "b163ed09f68681248ada-616e95cf8aad4b2404f5",
+          "file": "workspace.spec.ts",
+          "line": 62,
+          "column": 5
+        },
+        {
+          "title": "portal light/dark tokens present on first visible frame and modal Escape restores trigger",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 19,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 2167,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-04T15:47:28.242Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "b163ed09f68681248ada-e615e085ea4b30f73cc4",
+          "file": "workspace.spec.ts",
+          "line": 66,
+          "column": 5
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-10-04T15:45:59.060Z",
+    "duration": 91540.862,
+    "expected": 10,
+    "skipped": 0,
+    "unexpected": 19,
+    "flaky": 0
+  }
+}

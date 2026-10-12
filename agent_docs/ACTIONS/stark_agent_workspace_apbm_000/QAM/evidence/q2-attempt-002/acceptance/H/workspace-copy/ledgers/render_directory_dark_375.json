@@ -1,0 +1,14 @@
+{
+  "test": [
+    "render directory dark 375"
+  ],
+  "status": "passed",
+  "origin": "http://127.0.0.1:43182",
+  "counters": {
+    "contexts": 0,
+    "pages": 1,
+    "requests": 6
+  },
+  "events": [],
+  "unexpected": 0
+}

@@ -1,0 +1,1 @@
+{"verdict": "GATE_STOP", "failed": ["G9 working tree/index: no product drift, staged, untracked or ignored source inputs", "G10b next-env.d.ts is one of the two binding-pinned variants"], "error": null, "checks": 17}

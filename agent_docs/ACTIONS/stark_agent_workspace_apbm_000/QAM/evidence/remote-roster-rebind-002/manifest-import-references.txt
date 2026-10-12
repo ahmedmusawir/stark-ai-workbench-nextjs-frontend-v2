@@ -1,0 +1,6 @@
+a4abd2a9e4d9675a41653fdb66f3456feb11457a:src/__tests__/config/manifest.test.ts:115:    const configured = require('../../../config/agents.manifest.json');
+a4abd2a9e4d9675a41653fdb66f3456feb11457a:src/components/chat/AgentSwitcher.tsx:10:// agent is a JSON edit in config/agents.manifest.json, not a code change.
+a4abd2a9e4d9675a41653fdb66f3456feb11457a:src/config/manifest.ts:4: * `config/agents.manifest.json` is the single source of truth for which
+a4abd2a9e4d9675a41653fdb66f3456feb11457a:src/config/manifest.ts:14:import manifestJson from '../../config/agents.manifest.json';
+a4abd2a9e4d9675a41653fdb66f3456feb11457a:src/config/manifest.ts:88:      `Invalid agents.manifest.json — fix before continuing:\n- ${problems.join('\n- ')}`,
+a4abd2a9e4d9675a41653fdb66f3456feb11457a:src/types/index.ts:20: * `config/agents.manifest.json` and validated at load by

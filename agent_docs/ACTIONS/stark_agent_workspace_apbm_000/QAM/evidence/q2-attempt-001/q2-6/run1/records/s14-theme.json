@@ -1,0 +1,36 @@
+{
+  "res": {
+    "unset-os-light": [
+      "dark",
+      null
+    ],
+    "unset-os-dark": [
+      "dark",
+      null
+    ],
+    "saved_light": [
+      "light",
+      "light"
+    ],
+    "saved_system": [
+      "light",
+      "system"
+    ]
+  },
+  "tok": {
+    "dark": {
+      "bg": "rgb(63, 63, 70)",
+      "fg": "rgb(244, 244, 245)",
+      "font": "Inter, sans-serif",
+      "radius": ".75rem"
+    },
+    "dark-nows": "rgba(0, 0, 0, 0)",
+    "light": {
+      "bg": "rgb(255, 255, 255)",
+      "fg": "rgb(24, 24, 27)",
+      "font": "Inter, sans-serif",
+      "radius": ".75rem"
+    },
+    "light-nows": "rgba(0, 0, 0, 0)"
+  }
+}

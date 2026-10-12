@@ -132,9 +132,11 @@
  */
 
 import { useEffect, useState, type ReactNode } from "react";
+import { usePathname } from "next/navigation";
 import { Menu, X } from "lucide-react";
 
 interface AppShellPageProps {
+  workbenchRoute?: boolean;
   /** Sidebar content — rendered persistently on desktop, in a slide-over drawer on mobile */
   sidebar: ReactNode;
   /** Main column content — manages its own flex layout (e.g., `<div className="flex flex-col h-full">`) */
@@ -150,30 +152,35 @@ export default function AppShellPage({
   children,
   mobileTitle,
   mobileTopBarRight,
+  workbenchRoute = false,
 }: AppShellPageProps) {
+  const pathname = usePathname();
   const [sidebarOpen, setSidebarOpen] = useState(false);
+  const usesWorkbench = workbenchRoute && pathname === "/chat";
 
   // Close drawer on Escape
   useEffect(() => {
-    if (!sidebarOpen) return;
+    if (!sidebarOpen || usesWorkbench) return;
     const onKey = (e: KeyboardEvent) => {
       if (e.key === "Escape") setSidebarOpen(false);
     };
     document.addEventListener("keydown", onKey);
     return () => document.removeEventListener("keydown", onKey);
-  }, [sidebarOpen]);
+  }, [sidebarOpen, usesWorkbench]);
 
   // Lock body scroll while drawer is open
   useEffect(() => {
     if (typeof document === "undefined") return;
-    if (sidebarOpen) {
+    if (sidebarOpen && !usesWorkbench) {
       const previous = document.body.style.overflow;
       document.body.style.overflow = "hidden";
       return () => {
         document.body.style.overflow = previous;
       };
     }
-  }, [sidebarOpen]);
+  }, [sidebarOpen, usesWorkbench]);
+
+  if (usesWorkbench) return <>{children}</>;
 
   return (
     <div className="flex flex-col h-screen bg-white dark:bg-zinc-700 text-zinc-900 dark:text-zinc-100">

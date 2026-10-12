@@ -1,0 +1,17 @@
+{
+  "recorded_at": "2026-10-11T07:47:17.346848+00:00",
+  "archive_absolute_path": "/home/moose/nextjs/10XLAB/stark-ai-workbench-nextjs-frontend-v2/agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/HANDOFFS/APBM000_ADDMEMBER_TEST_REPAIR_001_REVIEW_2026-10-11_134025_BDT.zip",
+  "archive_bytes": 381376,
+  "archive_sha256": "e85c8313b032349fcfefe7a74ed1c14e1768512c7cbbea392f87f96b3ac34f4d",
+  "member_count": 51,
+  "crc_verified": true,
+  "member_hashes_verified": true,
+  "downloads_path": "/home/moose/Downloads/APBM000_ADDMEMBER_TEST_REPAIR_001_REVIEW_2026-10-11_134025_BDT.zip",
+  "downloads_copy": "complete",
+  "scope": "Delivery artifact excluded from staging/core inventory",
+  "gate_q": "PENDING",
+  "downloads_copy_verified_at": "2026-10-11T07:47:39.395485+00:00",
+  "downloads_sha256": "e85c8313b032349fcfefe7a74ed1c14e1768512c7cbbea392f87f96b3ac34f4d",
+  "copies_match": true,
+  "downloads_crc_and_member_hashes_verified": true
+}

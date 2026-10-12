@@ -1,0 +1,14 @@
+{
+  "archive": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/HANDOFFS/Q5_attempt-002_REVIEW-002.zip",
+  "status": "current review package",
+  "archive_sha256": "86b060bcb43449bb96f7768620281eba1a03edd60ef28315227ef9eb3538bb65",
+  "archive_bytes": 380408,
+  "members": 70,
+  "file_index_sha256": "7f00f13b2fee8c8d1e9f2c9558023a73aa9bdfe91cc83fae10a13c3caca16f7f",
+  "crc_testzip": "OK",
+  "membership_and_hashes_match_index": true,
+  "downloads_copy": "/home/moose/Downloads/APBM000_Q5_attempt-002_REVIEW-002_2026-10-12_120138_BDT.zip",
+  "downloads_copy_sha256": "86b060bcb43449bb96f7768620281eba1a03edd60ef28315227ef9eb3538bb65",
+  "secret_pattern_scan": "generic credential patterns; 0 hits (exporter sources q5_export.py and q5_reconcile_export.py exempt by exact path: they contain the patterns)",
+  "note": ".env.local was not read by this export; the included Q5 proposal and post-Q5 inventory carry the earlier .env.local digest (PD-Q5-01)"
+}

@@ -1,0 +1,176 @@
+[
+  {
+    "number": 1,
+    "action": "get-a-before",
+    "method": "GET",
+    "path": "/apps/greeting_agent/users/stark-apbm-probe-20261004-7c7e479f/sessions/session-a",
+    "started": "2026-10-04T11:58:16.079556+06:00",
+    "timeout_seconds": 25,
+    "status": null,
+    "automatic_retries": 0,
+    "session_id": "session-a",
+    "error": "<urlopen error [Errno -3] Temporary failure in name resolution>",
+    "error_type": "URLError",
+    "elapsed_seconds": 0.004,
+    "finished": "2026-10-04T11:58:16.113127+06:00",
+    "http_request_sent": false,
+    "service_budget_charge": 0,
+    "execution_context": "sandbox",
+    "budget_note": "DNS resolution failed before an HTTP request could be sent; retained as access attempt, excluded from six service GET requests."
+  },
+  {
+    "number": 2,
+    "action": "get-a-before",
+    "method": "GET",
+    "path": "/apps/greeting_agent/users/stark-apbm-probe-20261004-7c7e479f/sessions/session-a",
+    "started": "2026-10-04T11:58:28.630673+06:00",
+    "timeout_seconds": 25,
+    "status": null,
+    "automatic_retries": 0,
+    "session_id": "session-a",
+    "error": "The read operation timed out",
+    "error_type": "TimeoutError",
+    "elapsed_seconds": 25.201,
+    "finished": "2026-10-04T11:58:53.864635+06:00",
+    "service_budget_charge": 1,
+    "execution_context": "approved escalation"
+  },
+  {
+    "number": 3,
+    "action": "get-b-before",
+    "method": "GET",
+    "path": "/apps/greeting_agent/users/stark-apbm-probe-20261004-7c7e479f/sessions/session-b",
+    "started": "2026-10-04T12:00:01.623352+06:00",
+    "timeout_seconds": 25,
+    "status": 200,
+    "automatic_retries": 0,
+    "session_id": "session-b",
+    "result_file": "get-b-before.json",
+    "elapsed_seconds": 2.594,
+    "finished": "2026-10-04T12:00:04.250685+06:00",
+    "service_budget_charge": 1,
+    "execution_context": "approved escalation"
+  },
+  {
+    "number": 4,
+    "action": "get-a-before",
+    "method": "GET",
+    "path": "/apps/greeting_agent/users/stark-apbm-probe-20261004-7c7e479f/sessions/session-a",
+    "started": "2026-10-04T12:00:35.133841+06:00",
+    "timeout_seconds": 25,
+    "status": 200,
+    "automatic_retries": 0,
+    "session_id": "session-a",
+    "service_budget_charge": 1,
+    "execution_context": "approved escalation",
+    "result_file": "get-a-before.json",
+    "elapsed_seconds": 0.571,
+    "finished": "2026-10-04T12:00:35.735027+06:00"
+  },
+  {
+    "number": 5,
+    "action": "list",
+    "method": "GET",
+    "path": "/apps/greeting_agent/users/stark-apbm-probe-20261004-7c7e479f/sessions",
+    "started": "2026-10-04T12:00:47.404129+06:00",
+    "timeout_seconds": 25,
+    "status": 200,
+    "automatic_retries": 0,
+    "session_id": null,
+    "service_budget_charge": 1,
+    "execution_context": "approved escalation",
+    "result_file": "list.json",
+    "elapsed_seconds": 0.566,
+    "finished": "2026-10-04T12:00:48.000640+06:00"
+  },
+  {
+    "number": 6,
+    "action": "resume-a",
+    "method": "POST",
+    "path": "/run",
+    "started": "2026-10-04T12:00:56.458452+06:00",
+    "timeout_seconds": 60,
+    "status": 200,
+    "automatic_retries": 0,
+    "session_id": "session-a",
+    "service_budget_charge": 1,
+    "execution_context": "approved escalation",
+    "request": {
+      "appName": "greeting_agent",
+      "userId": "stark-apbm-probe-20261004-7c7e479f",
+      "sessionId": "session-a",
+      "newMessage": {
+        "role": "user",
+        "parts": [
+          {
+            "text": "What test marker did I give you earlier in this conversation? Reply only with the marker. No tools or context lookup are needed."
+          }
+        ]
+      }
+    },
+    "result_file": "resume-a.json",
+    "elapsed_seconds": 1.773,
+    "finished": "2026-10-04T12:00:58.264858+06:00"
+  },
+  {
+    "number": 7,
+    "action": "resume-b",
+    "method": "POST",
+    "path": "/run",
+    "started": "2026-10-04T12:01:12.362161+06:00",
+    "timeout_seconds": 60,
+    "status": 200,
+    "automatic_retries": 0,
+    "session_id": "session-b",
+    "service_budget_charge": 1,
+    "execution_context": "approved escalation",
+    "request": {
+      "appName": "greeting_agent",
+      "userId": "stark-apbm-probe-20261004-7c7e479f",
+      "sessionId": "session-b",
+      "newMessage": {
+        "role": "user",
+        "parts": [
+          {
+            "text": "What test marker did I give you earlier in this conversation? Reply only with the marker. No tools or context lookup are needed."
+          }
+        ]
+      }
+    },
+    "result_file": "resume-b.json",
+    "elapsed_seconds": 1.475,
+    "finished": "2026-10-04T12:01:13.869089+06:00"
+  },
+  {
+    "number": 8,
+    "action": "get-a-after",
+    "method": "GET",
+    "path": "/apps/greeting_agent/users/stark-apbm-probe-20261004-7c7e479f/sessions/session-a",
+    "started": "2026-10-04T12:01:24.837392+06:00",
+    "timeout_seconds": 25,
+    "status": 200,
+    "automatic_retries": 0,
+    "session_id": "session-a",
+    "service_budget_charge": 1,
+    "execution_context": "approved escalation",
+    "result_file": "get-a-after.json",
+    "elapsed_seconds": 0.524,
+    "finished": "2026-10-04T12:01:25.400388+06:00"
+  },
+  {
+    "number": 9,
+    "action": "get-b-after",
+    "method": "GET",
+    "path": "/apps/greeting_agent/users/stark-apbm-probe-20261004-7c7e479f/sessions/session-b",
+    "started": "2026-10-04T12:01:33.974118+06:00",
+    "timeout_seconds": 25,
+    "status": 200,
+    "automatic_retries": 0,
+    "session_id": "session-b",
+    "service_budget_charge": 1,
+    "execution_context": "approved escalation",
+    "result_file": "get-b-after.json",
+    "elapsed_seconds": 0.575,
+    "finished": "2026-10-04T12:01:34.587506+06:00"
+  }
+]

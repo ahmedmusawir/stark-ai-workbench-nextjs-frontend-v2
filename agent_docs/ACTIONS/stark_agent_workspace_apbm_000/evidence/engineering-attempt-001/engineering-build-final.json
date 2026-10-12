@@ -1,0 +1,13 @@
+{
+  "check": "build",
+  "label": "engineering-build-final",
+  "command": [
+    "node",
+    "node_modules/next/dist/bin/next",
+    "build"
+  ],
+  "exit_code": 0,
+  "elapsed_seconds": 49.417,
+  "timestamp": "2026-10-04T21:55:00.316205+06:00",
+  "environment": "fresh minimal process environment; Node fail-closed network guard; fonts allowed for build only"
+}

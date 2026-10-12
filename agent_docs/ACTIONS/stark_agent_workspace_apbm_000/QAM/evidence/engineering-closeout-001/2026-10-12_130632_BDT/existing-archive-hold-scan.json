@@ -1,0 +1,85 @@
+{
+  "archives": [
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/HANDOFFS/APBM000_ADDMEMBER_TEST_REPAIR_001_REVIEW_2026-10-11_134025_BDT.zip",
+      "contains_held_digest_payload": false
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/HANDOFFS/APBM000_DEPENDENCY_DIAGNOSTIC_REVIEW_2026-10-08_131602_BDT.zip",
+      "contains_held_digest_payload": false
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/HANDOFFS/APBM000_ENGINEERING_REPAIR_001_REVIEW_2026-10-08_112512_BDT.zip",
+      "contains_held_digest_payload": false
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/HANDOFFS/APBM000_QA_LEAD_INTAKE_8eb5789d9021_2026-10-11_161409_BDT.zip",
+      "contains_held_digest_payload": false
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/HANDOFFS/ENGINEERING_attempt-001.zip",
+      "contains_held_digest_payload": false
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/HANDOFFS/ENGINEERING_attempt-002.zip",
+      "contains_held_digest_payload": false
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/HANDOFFS/Q1_attempt-001.zip",
+      "contains_held_digest_payload": false
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/HANDOFFS/Q2_attempt-001.zip",
+      "contains_held_digest_payload": false
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/HANDOFFS/Q2_attempt-002.zip",
+      "contains_held_digest_payload": false
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/HANDOFFS/Q2_attempt-002_ADDENDUM-001.zip",
+      "contains_held_digest_payload": true
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/HANDOFFS/Q5_attempt-002.zip",
+      "contains_held_digest_payload": true
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/HANDOFFS/Q5_attempt-002_REVIEW-002.zip",
+      "contains_held_digest_payload": true
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/HANDOFFS/ROSTER_REBIND_REVIEW_2026-10-05_215715.zip",
+      "contains_held_digest_payload": false
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/HANDOFFS/ROSTER_REBIND_REVIEW_2026-10-07_183026.zip",
+      "contains_held_digest_payload": false
+    },
+    {
+      "path": "/home/moose/Downloads/APBM000_Q2_attempt-002_ADDENDUM-001_2026-10-11_183315_BDT.zip",
+      "contains_held_digest_payload": true
+    },
+    {
+      "path": "/home/moose/Downloads/APBM000_Q2_attempt-002_QA-Lead-Package_2026-10-11_181525_BDT.zip",
+      "contains_held_digest_payload": false
+    },
+    {
+      "path": "/home/moose/Downloads/APBM000_Q5_attempt-002_2026-10-11_192614_BDT.zip",
+      "contains_held_digest_payload": true
+    },
+    {
+      "path": "/home/moose/Downloads/APBM000_Q5_attempt-002_REVIEW-002_2026-10-12_120138_BDT.zip",
+      "contains_held_digest_payload": true
+    },
+    {
+      "path": "/home/moose/Downloads/APBM000_QA_LEAD_INTAKE_8eb5789d9021_2026-10-11_161409_BDT.zip",
+      "contains_held_digest_payload": false
+    },
+    {
+      "path": "/home/moose/Downloads/APBM000_RETEST_002_LEAD_PACKAGE_2026-10-11.zip",
+      "contains_held_digest_payload": false
+    }
+  ],
+  "private_digest_not_recorded": true
+}

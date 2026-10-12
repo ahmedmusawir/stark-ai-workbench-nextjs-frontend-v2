@@ -1,0 +1,67 @@
+[
+  {
+    "command": [
+      "npm",
+      "test",
+      "--",
+      "--runInBand",
+      "--watch=false"
+    ],
+    "exit_status": 1,
+    "duration_seconds": 31.75,
+    "log": "jest.log"
+  },
+  {
+    "command": [
+      "./node_modules/.bin/tsc",
+      "--noEmit",
+      "--incremental",
+      "false"
+    ],
+    "exit_status": 0,
+    "duration_seconds": 11.64,
+    "log": "types.log"
+  },
+  {
+    "command": [
+      "npm",
+      "run",
+      "build"
+    ],
+    "exit_status": 1,
+    "duration_seconds": 19.94,
+    "log": "build.log"
+  },
+  {
+    "command": [
+      "npm",
+      "run",
+      "lint"
+    ],
+    "exit_status": 1,
+    "duration_seconds": 0.82,
+    "log": "lint.log"
+  },
+  {
+    "command": [
+      "npm",
+      "audit",
+      "--json",
+      "--fetch-retries=0",
+      "--fetch-timeout=20000",
+      "--cache",
+      "/tmp/stark-apbm-recon-x1_h2yih/npm-cache"
+    ],
+    "exit_status": 1,
+    "duration_seconds": 1.52,
+    "log": "audit.log"
+  },
+  {
+    "check": "Anonymous frontend boot prerequisite: Python socket.socket() before reserving a local port",
+    "exit_status": 1,
+    "result": "BLOCKED: PermissionError [Errno 1] Operation not permitted at socket creation",
+    "dev_server_started": false,
+    "http_requests": 0,
+    "cleanup": "No server process was started"
+  }
+]

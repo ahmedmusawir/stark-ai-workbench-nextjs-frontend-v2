@@ -1,0 +1,14 @@
+{
+  "test": [
+    "missing/unavailable/access/uncertain/pending/failed/metadata states constrain callbacks"
+  ],
+  "status": "passed",
+  "origin": "http://127.0.0.1:43182",
+  "counters": {
+    "contexts": 0,
+    "pages": 1,
+    "requests": 40
+  },
+  "events": [],
+  "unexpected": 0
+}

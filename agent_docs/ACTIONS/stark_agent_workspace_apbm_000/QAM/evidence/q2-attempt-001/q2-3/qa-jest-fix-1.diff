@@ -1,0 +1,39 @@
+45c45,46
+<   const result: { renderThrew?: string; signOutThrew?: string; pushed: string[]; resetApplied?: boolean } = { pushed: [] };
+---
+>   const result: { renderThrew?: string; resetThrew?: string; pushed: string[]; rendered: boolean } = { pushed: [], rendered: false };
+>   let isolatedOnSignOut: (() => void) | undefined;
+47,59c48,56
+<     await new Promise<void>((done) => {
+<       jest.isolateModules(() => {
+<         const React = require('react'); const { render: r } = require('@testing-library/react');
+<         const { WorkspaceEntry: E } = require('@/components/workspace/WorkspaceEntry');
+<         const { useChatStore: store } = require('@/store/chatStore');
+<         nav.push.mockImplementation((u: string) => result.pushed.push(u)); auth.logout.mockResolvedValue(undefined);
+<         try { r(React.createElement(E)); } catch (e) { result.renderThrew = String(e); }
+<         const onSignOut = last().onSignOut as () => void;
+<         process.removeAllListeners('unhandledRejection');
+<         process.once('unhandledRejection', (e) => { result.signOutThrew = String(e); });
+<         try { onSignOut(); } catch (e) { result.signOutThrew = String(e); }
+<         setTimeout(() => { try { result.resetApplied = Object.keys(store.getState().agentSessions).length === 0; } catch { /* */ } done(); }, 20);
+<       });
+---
+>     jest.isolateModules(() => {
+>       const React = require('react'); const { createRoot } = require('react-dom/client');
+>       const { WorkspaceEntry: E } = require('@/components/workspace/WorkspaceEntry');
+>       const { useChatStore: store } = require('@/store/chatStore');
+>       const before = seen.length;
+>       nav.push.mockImplementation((u: string) => result.pushed.push(u)); auth.logout.mockResolvedValue(undefined);
+>       try { React.act(() => { createRoot(document.createElement('div')).render(React.createElement(E)); }); } catch (e) { result.renderThrew = String(e); }
+>       result.rendered = seen.length > before; isolatedOnSignOut = seen[seen.length - 1].onSignOut as () => void;
+>       try { store.getState().reset(); } catch (e) { result.resetThrew = String(e); } // direct real-store probe, no-storage case
+60a58,60
+>     const rejections: string[] = []; const h = (e: unknown) => rejections.push(String(e)); process.on('unhandledRejection', h);
+>     isolatedOnSignOut!(); await new Promise(r => setTimeout(r, 50)); process.off('unhandledRejection', h);
+>     console.log('CLASS_C_SEAM_RESULT ' + JSON.stringify({ ...result, unhandledRejections: rejections }));
+62,64c62
+<   // Recorded for the evidence matrix, then asserted as the requirement (safe logout/reset clearing).
+<   console.log('CLASS_C_SEAM_RESULT ' + JSON.stringify(result));
+<   expect(result.renderThrew).toBeUndefined();
+---
+>   expect(result.rendered).toBe(true); expect(result.renderThrew).toBeUndefined();

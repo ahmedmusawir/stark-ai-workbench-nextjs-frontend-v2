@@ -1,0 +1,30 @@
+{
+  "baseline": {
+    "numTotalTests": 287,
+    "numPassedTests": 286,
+    "numFailedTests": 1,
+    "numTotalTestSuites": 39,
+    "numPassedTestSuites": 38,
+    "numFailedTestSuites": 1
+  },
+  "final": {
+    "numTotalTests": 290,
+    "numPassedTests": 290,
+    "numFailedTests": 0,
+    "numTotalTestSuites": 40,
+    "numPassedTestSuites": 40,
+    "numFailedTestSuites": 0
+  },
+  "new_tests": [
+    "WorkspaceEntry sign-out with the real auth and chat stores getter throws: successful mocked logout clears user/chat/draft/demo before navigating without a rejection",
+    "WorkspaceEntry sign-out with the real auth and chat stores normal: successful mocked logout clears user/chat/draft/demo before navigating without a rejection",
+    "WorkspaceEntry sign-out with the real auth and chat stores write throws: successful mocked logout clears user/chat/draft/demo before navigating without a rejection"
+  ],
+  "new_failures": [],
+  "baseline_failures_final_status": {
+    "AddMemberForm does not redirect when addMember returns an error": "passed"
+  },
+  "removed_tests": [],
+  "no_failure_waiver": true,
+  "baseline_only_failure_note": "AddMemberForm error-path redirect failed once in the fresh baseline and passed in the final full run. Its source/tests are unchanged. Loading-state test leaves a 100ms async success unresolved; timing contamination is a source-based hypothesis, not a confirmed diagnosis or product repair."
+}

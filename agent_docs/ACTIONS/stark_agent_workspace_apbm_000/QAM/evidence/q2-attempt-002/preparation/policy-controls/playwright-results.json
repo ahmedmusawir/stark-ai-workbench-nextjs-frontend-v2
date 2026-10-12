@@ -1,0 +1,277 @@
+{
+  "config": {
+    "configFile": "/home/moose/nextjs/10XLAB/stark-ai-workbench-nextjs-frontend-v2/agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/AUTOMATION/playwright.qa.config.ts",
+    "rootDir": "/home/moose/nextjs/10XLAB/stark-ai-workbench-nextjs-frontend-v2/agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/AUTOMATION/specs",
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "/home/moose/nextjs/10XLAB/stark-ai-workbench-nextjs-frontend-v2/agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002/preparation/policy-controls/artifacts",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "",
+        "name": "",
+        "testDir": "/home/moose/nextjs/10XLAB/stark-ai-workbench-nextjs-frontend-v2/agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/AUTOMATION/specs",
+        "testIgnore": [
+          "diag_run2.spec.ts"
+        ],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 60000
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "list",
+        null
+      ],
+      [
+        "json",
+        {
+          "outputFile": "/home/moose/nextjs/10XLAB/stark-ai-workbench-nextjs-frontend-v2/agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002/preparation/policy-controls/playwright-results.json"
+        }
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "missing",
+    "updateSourceMethod": "patch",
+    "version": "1.59.1",
+    "workers": 1,
+    "webServer": {
+      "command": "node /home/moose/nextjs/10XLAB/stark-ai-workbench-nextjs-frontend-v2/agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/AUTOMATION/qa-harness.cjs",
+      "cwd": "/home/moose/nextjs/10XLAB/stark-ai-workbench-nextjs-frontend-v2",
+      "url": "http://127.0.0.1:43181/",
+      "reuseExistingServer": false,
+      "timeout": 120000,
+      "env": {
+        "QA_PORT": "43181",
+        "NODE_OPTIONS": "--require=/home/moose/nextjs/10XLAB/stark-ai-workbench-nextjs-frontend-v2/tests/workspace/network-guard.cjs"
+      }
+    }
+  },
+  "suites": [
+    {
+      "title": "s00_policy_controls.spec.ts",
+      "file": "s00_policy_controls.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "C-01 off-origin request is aborted and logged by the browser interceptor in default, manual, newPage and popup contexts",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1608,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-11T12:01:18.446Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "2d8baf4fc312347df16e-fd254c8e34c9bfcef030",
+          "file": "s00_policy_controls.spec.ts",
+          "line": 10,
+          "column": 5
+        },
+        {
+          "title": "C-02 page errors are captured from every page and only the labelled synthetic is consumed",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1016,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-11T12:01:20.194Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "2d8baf4fc312347df16e-80cdcb5cf8c66e82cf3a",
+          "file": "s00_policy_controls.spec.ts",
+          "line": 26,
+          "column": 5
+        },
+        {
+          "title": "C-03 WebSocket transport is intercepted and closed",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 444,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-11T12:01:21.226Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "2d8baf4fc312347df16e-51c7e054d06e3287593e",
+          "file": "s00_policy_controls.spec.ts",
+          "line": 37,
+          "column": 5
+        },
+        {
+          "title": "C-04 an unconsumed policy event fails the test (expected failure)",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [
+                {
+                  "type": "fail",
+                  "description": "detector control: the policy fixture must fail this test",
+                  "location": {
+                    "file": "/home/moose/nextjs/10XLAB/stark-ai-workbench-nextjs-frontend-v2/agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/AUTOMATION/specs/s00_policy_controls.spec.ts",
+                    "line": 48,
+                    "column": 8
+                  }
+                }
+              ],
+              "expectedStatus": "failed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 464,
+                  "error": {
+                    "message": "Error: QA_POLICY_UNEXPECTED_EVENTS [{\"kind\":\"request-offorigin-observed\",\"detail\":\"https://qa-control.example.invalid/probe\",\"at\":1791720082118},{\"kind\":\"request-blocked\",\"detail\":\"https://qa-control.example.invalid/probe\",\"at\":1791720082118}]",
+                    "stack": "Error: QA_POLICY_UNEXPECTED_EVENTS [{\"kind\":\"request-offorigin-observed\",\"detail\":\"https://qa-control.example.invalid/probe\",\"at\":1791720082118},{\"kind\":\"request-blocked\",\"detail\":\"https://qa-control.example.invalid/probe\",\"at\":1791720082118}]\n    at Object.exports.test._test.test.extend._qaPolicy.auto (/home/moose/nextjs/10XLAB/stark-ai-workbench-nextjs-frontend-v2/agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/AUTOMATION/specs/_qa.ts:63:34)",
+                    "location": {
+                      "file": "/home/moose/nextjs/10XLAB/stark-ai-workbench-nextjs-frontend-v2/agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/AUTOMATION/specs/_qa.ts",
+                      "column": 34,
+                      "line": 63
+                    },
+                    "snippet": "   at _qa.ts:63\n\n\u001b[0m \u001b[90m 61 |\u001b[39m     fs\u001b[33m.\u001b[39mwriteFileSync(path\u001b[33m.\u001b[39mjoin(\u001b[33mOUT\u001b[39m\u001b[33m,\u001b[39m \u001b[32m'ledgers'\u001b[39m\u001b[33m,\u001b[39m \u001b[32m`${slug}.json`\u001b[39m)\u001b[33m,\u001b[39m \u001b[33mJSON\u001b[39m\u001b[33m.\u001b[39mstringify({ test\u001b[33m:\u001b[39m testInfo\u001b[33m.\u001b[39mtitlePath\u001b[33m.\u001b[39mslice(\u001b[35m1\u001b[39m)\u001b[33m,\u001b[39m status\u001b[33m:\u001b[39m testInfo\u001b[33m.\u001b[39mstatus\u001b[33m,\u001b[39m origin\u001b[33m:\u001b[39m \u001b[33mORIGIN\u001b[39m\u001b[33m,\u001b[39m\n \u001b[90m 62 |\u001b[39m       counters\u001b[33m:\u001b[39m policyCounters()\u001b[33m,\u001b[39m events\u001b[33m:\u001b[39m policy\u001b[33m.\u001b[39mevents\u001b[33m,\u001b[39m unexpected\u001b[33m:\u001b[39m unexpected\u001b[33m.\u001b[39mlength }\u001b[33m,\u001b[39m \u001b[36mnull\u001b[39m\u001b[33m,\u001b[39m \u001b[35m2\u001b[39m) \u001b[33m+\u001b[39m \u001b[32m'\\n'\u001b[39m)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 63 |\u001b[39m     \u001b[36mif\u001b[39m (unexpected\u001b[33m.\u001b[39mlength) \u001b[36mthrow\u001b[39m \u001b[36mnew\u001b[39m \u001b[33mError\u001b[39m(\u001b[32m`QA_POLICY_UNEXPECTED_EVENTS ${JSON.stringify(unexpected)}`\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                  \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 64 |\u001b[39m   }\u001b[33m,\u001b[39m { auto\u001b[33m:\u001b[39m \u001b[36mtrue\u001b[39m }]\u001b[33m,\u001b[39m\n \u001b[90m 65 |\u001b[39m   \u001b[90m// Compat for attempt-001 specs: page errors observed in this test (all pages/contexts). Depends on _qaPolicy so it is reset first.\u001b[39m\n \u001b[90m 66 |\u001b[39m   errors\u001b[33m:\u001b[39m \u001b[36masync\u001b[39m ({ _qaPolicy }\u001b[33m,\u001b[39m use) \u001b[33m=>\u001b[39m { \u001b[36mvoid\u001b[39m _qaPolicy\u001b[33m;\u001b[39m \u001b[36mawait\u001b[39m use(pageErrors)\u001b[33m;\u001b[39m }\u001b[33m,\u001b[39m\u001b[0m"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/home/moose/nextjs/10XLAB/stark-ai-workbench-nextjs-frontend-v2/agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/AUTOMATION/specs/_qa.ts",
+                        "column": 34,
+                        "line": 63
+                      },
+                      "message": "Error: QA_POLICY_UNEXPECTED_EVENTS [{\"kind\":\"request-offorigin-observed\",\"detail\":\"https://qa-control.example.invalid/probe\",\"at\":1791720082118},{\"kind\":\"request-blocked\",\"detail\":\"https://qa-control.example.invalid/probe\",\"at\":1791720082118}]\n\n   at _qa.ts:63\n\n  61 |     fs.writeFileSync(path.join(OUT, 'ledgers', `${slug}.json`), JSON.stringify({ test: testInfo.titlePath.slice(1), status: testInfo.status, origin: ORIGIN,\n  62 |       counters: policyCounters(), events: policy.events, unexpected: unexpected.length }, null, 2) + '\\n');\n> 63 |     if (unexpected.length) throw new Error(`QA_POLICY_UNEXPECTED_EVENTS ${JSON.stringify(unexpected)}`);\n     |                                  ^\n  64 |   }, { auto: true }],\n  65 |   // Compat for attempt-001 specs: page errors observed in this test (all pages/contexts). Depends on _qaPolicy so it is reset first.\n  66 |   errors: async ({ _qaPolicy }, use) => { void _qaPolicy; await use(pageErrors); },\n    at Object.exports.test._test.test.extend._qaPolicy.auto (/home/moose/nextjs/10XLAB/stark-ai-workbench-nextjs-frontend-v2/agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/AUTOMATION/specs/_qa.ts:63:34)"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-11T12:01:21.679Z",
+                  "annotations": [
+                    {
+                      "type": "fail",
+                      "description": "detector control: the policy fixture must fail this test",
+                      "location": {
+                        "file": "/home/moose/nextjs/10XLAB/stark-ai-workbench-nextjs-frontend-v2/agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/AUTOMATION/specs/s00_policy_controls.spec.ts",
+                        "line": 48,
+                        "column": 8
+                      }
+                    }
+                  ],
+                  "attachments": [
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/home/moose/nextjs/10XLAB/stark-ai-workbench-nextjs-frontend-v2/agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002/preparation/policy-controls/artifacts/s00_policy_controls-C-04-a-697b7--the-test-expected-failure-/error-context.md"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/home/moose/nextjs/10XLAB/stark-ai-workbench-nextjs-frontend-v2/agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/AUTOMATION/specs/_qa.ts",
+                    "column": 34,
+                    "line": 63
+                  }
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "2d8baf4fc312347df16e-c5ba667b003d3a9ab670",
+          "file": "s00_policy_controls.spec.ts",
+          "line": 47,
+          "column": 5
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-10-11T12:01:15.114Z",
+    "duration": 7190.901,
+    "expected": 4,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  }
+}

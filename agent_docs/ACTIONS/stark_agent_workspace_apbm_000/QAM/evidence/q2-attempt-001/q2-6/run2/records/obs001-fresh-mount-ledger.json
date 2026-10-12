@@ -1,0 +1,18 @@
+[
+  {
+    "action": "list",
+    "agent": "kestrel",
+    "seq": 1
+  },
+  {
+    "action": "list",
+    "agent": "kestrel",
+    "seq": 2
+  },
+  {
+    "action": "history",
+    "agent": "kestrel",
+    "session": "A",
+    "seq": 3
+  }
+]

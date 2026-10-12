@@ -1,0 +1,15 @@
+{
+  "check": "tsc",
+  "label": "engineering-tsc-final",
+  "command": [
+    "node",
+    "node_modules/typescript/bin/tsc",
+    "--noEmit",
+    "--incremental",
+    "false"
+  ],
+  "exit_code": 0,
+  "elapsed_seconds": 14.865,
+  "timestamp": "2026-10-04T21:53:44.724239+06:00",
+  "environment": "fresh minimal process environment; Node fail-closed network guard; fonts allowed for build only"
+}

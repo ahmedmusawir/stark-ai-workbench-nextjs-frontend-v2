@@ -1,0 +1,39 @@
+{
+  "cleanup_caches": [
+    "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002/acceptance/G-diag-s20/artifacts/.last-run.json",
+    "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002/acceptance/G/artifacts/.last-run.json",
+    "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002/acceptance/H/repair-copy/browser-artifacts/.last-run.json",
+    "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002/acceptance/H/workspace-copy/artifacts/.last-run.json",
+    "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002/preparation/policy-controls/artifacts/.last-run.json"
+  ],
+  "preserved_caches": [
+    "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002/preparation/policy-controls.run1/artifacts/.last-run.json",
+    "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/dependency-reconciliation-001/2026-10-08_124256_BDT/browser-artifacts/.last-run.json",
+    "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/engineering-repair-001/browser-artifacts/.last-run.json"
+  ],
+  "append_only": {
+    "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/session_2026-10-11.md": "session log appended 2026-10-11 19:26 after Q5 export",
+    "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/QAM_CHECKPOINTS.md": "2026-10-12 reconciliation status appended",
+    "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/QAM_MANIFEST.md": "append-only manifest",
+    "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q5-attempt-002/Q5_STATUS.md": "2026-10-12 reconciliation section appended",
+    "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002/EXECUTION_REPORT.md": "Lead-disposition notes appended (addendum-001)",
+    "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002/INSTRUMENT_RETRY_LEDGER.md": "PD-002-01 note appended (addendum-001)"
+  },
+  "rewritten": {
+    "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/QAM_STATE.json": "routing JSON updated 2026-10-12; prior routing kept under history_* keys"
+  },
+  "new_records_prefixes": [
+    "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/HANDOFFS/LEAD_Q5_CLEANUP_INSTRUCTION_2026-10-12_",
+    "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/HANDOFFS/LEAD_Q5_RECONCILIATION_RULING_2026-10-12_",
+    "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q5-attempt-002/PREFLIGHT_STOP_2026-10-12.md",
+    "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q5-attempt-002/reconciliation-2026-10-12/",
+    "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/session_2026-10-12.md",
+    "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/HANDOFFS/Q5_attempt-002.zip",
+    "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/HANDOFFS/Q5_attempt-002_RECEIPT.json",
+    "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q5-attempt-002/APPROVED_INVENTORY.q5-postexport.json",
+    "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q5-attempt-002/gate-post-export.json",
+    "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/AUTOMATION/a2_q5_reconcile.py",
+    "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/AUTOMATION/q5_reconcile_export.py",
+    "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/HANDOFFS/Q5_attempt-002_REVIEW-002_START_HERE.md"
+  ]
+}

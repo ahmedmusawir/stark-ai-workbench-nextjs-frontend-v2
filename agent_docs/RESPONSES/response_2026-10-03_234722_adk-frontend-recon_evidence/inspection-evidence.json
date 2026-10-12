@@ -1,0 +1,241 @@
+{
+  "any": {
+    "matched_lines": 57,
+    "file_count": 14
+  },
+  "dangerouslySetInnerHTML": {
+    "matched_lines": 0,
+    "file_count": 0
+  },
+  "metadata_role": {
+    "matched_lines": 0,
+    "file_count": 0
+  },
+  "metadata_all": {
+    "matched_lines": 20,
+    "file_count": 6
+  },
+  "numbered_colors": {
+    "matched_lines": 265,
+    "file_count": 49
+  },
+  "forbidden_page_apis": {
+    "matched_lines": 0,
+    "file_count": 0
+  },
+  "external_demo": {
+    "matched_lines": 0,
+    "file_count": 0
+  },
+  "a2a_hermes": {
+    "matched_lines": 0,
+    "file_count": 0
+  },
+  "scan_definition": "All .ts/.tsx/.scss/.css files under src; counts are matching lines, including tests unless separately stated; source-derived, not browser observation.",
+  "numbered_color_app_components_summary": {
+    "matching_lines": 257,
+    "files": 47
+  },
+  "non_test_any_locations": [
+    {
+      "file": "src/store/useAuthStore.ts",
+      "line": 6,
+      "text": "user: any | null;"
+    },
+    {
+      "file": "src/components/ui/command.tsx",
+      "line": 35,
+      "text": "{children as any}"
+    },
+    {
+      "file": "src/utils/supabase/server.ts",
+      "line": 6,
+      "text": "const cookieStore = (await cookies()) as any"
+    },
+    {
+      "file": "src/app/(cyberize)/chat/MessageBubble.tsx",
+      "line": 85,
+      "text": "style={codeTheme as any}"
+    }
+  ],
+  "route_files": [
+    "src/app/(admin)/admin-portal/add-member/page.tsx",
+    "src/app/(admin)/admin-portal/edit/[id]/page.tsx",
+    "src/app/(admin)/admin-portal/page.tsx",
+    "src/app/(admin)/profile/page.tsx",
+    "src/app/(auth)/auth/page.tsx",
+    "src/app/(cyberize)/chat/page.tsx",
+    "src/app/(cyberize)/mission-control/page.tsx",
+    "src/app/(members)/members-portal/page.tsx",
+    "src/app/(members)/members-portal/profile/page.tsx",
+    "src/app/(public)/demo/page.tsx",
+    "src/app/(public)/page.tsx",
+    "src/app/(superadmin)/superadmin-portal/add-user/page.tsx",
+    "src/app/(superadmin)/superadmin-portal/edit/[id]/page.tsx",
+    "src/app/(superadmin)/superadmin-portal/page.tsx",
+    "src/app/api/agent/history/route.ts",
+    "src/app/api/agent/instructions/route.ts",
+    "src/app/api/agent/run/route.ts",
+    "src/app/api/auth/confirm/route.ts",
+    "src/app/api/auth/login/route.ts",
+    "src/app/api/auth/logout/route.ts",
+    "src/app/api/auth/signup/route.ts",
+    "src/app/api/auth/superadmin-add-user/route.ts",
+    "src/app/error/page.tsx",
+    "src/app/template/page.tsx"
+  ],
+  "source_tree": [
+    "src/__tests__",
+    "src/__tests__/admin",
+    "src/__tests__/api",
+    "src/__tests__/auth",
+    "src/__tests__/chat",
+    "src/__tests__/config",
+    "src/__tests__/member",
+    "src/__tests__/mission-control",
+    "src/__tests__/services",
+    "src/__tests__/superadmin",
+    "src/__tests__/utils",
+    "src/app",
+    "src/app/(admin)",
+    "src/app/(auth)",
+    "src/app/(cyberize)",
+    "src/app/(members)",
+    "src/app/(public)",
+    "src/app/(superadmin)",
+    "src/app/api",
+    "src/app/error",
+    "src/app/providers",
+    "src/app/template",
+    "src/components",
+    "src/components/auth",
+    "src/components/chat",
+    "src/components/common",
+    "src/components/dashboard",
+    "src/components/global",
+    "src/components/layout",
+    "src/components/ui",
+    "src/config",
+    "src/lib",
+    "src/mocks",
+    "src/mocks/data",
+    "src/services",
+    "src/store",
+    "src/styles",
+    "src/types",
+    "src/utils",
+    "src/utils/common",
+    "src/utils/supabase"
+  ],
+  "readme_link_checks": [
+    {
+      "target": "./factory/SOFTWARE_FACTORY_PLAYBOOK.md",
+      "exists": false
+    },
+    {
+      "target": "./factory/FRONTEND_FIRST_PLAYBOOK.md",
+      "exists": false
+    },
+    {
+      "target": "./factory/FRONTEND_BUILD_PHASE_PLAYBOOK.md",
+      "exists": false
+    },
+    {
+      "target": "./factory/AUTH_MANUAL.md",
+      "exists": false
+    },
+    {
+      "target": "./factory/DATABASE_MANUAL.md",
+      "exists": false
+    },
+    {
+      "target": "./factory/APP_ARCHITECTURE_MANUAL.md",
+      "exists": false
+    },
+    {
+      "target": "./factory/UI-UX-BUILDING-MANUAL.md",
+      "exists": false
+    },
+    {
+      "target": "./factory/API_AND_SERVICES_MANUAL.md",
+      "exists": false
+    },
+    {
+      "target": "./factory/STATE_MANAGEMENT_MANUAL.md",
+      "exists": false
+    },
+    {
+      "target": "./factory/ECOMMERCE_AND_PAYMENTS_MANUAL.md",
+      "exists": false
+    },
+    {
+      "target": "./cyberbugs/CYBERBUGS_DATA_CONTRACT.md",
+      "exists": false
+    },
+    {
+      "target": "./cyberbugs/STARTER_PROJECT_OVERVIEW.md",
+      "exists": false
+    },
+    {
+      "target": "./cyberbugs/sessions/SESSION_30DEC2025.md",
+      "exists": false
+    },
+    {
+      "target": "./cyberbugs/sessions/SESSION_01JAN2026.md",
+      "exists": false
+    },
+    {
+      "target": "./cyberbugs/sessions/SESSION_02JAN2026.md",
+      "exists": false
+    },
+    {
+      "target": "./cyberbugs/sessions/SESSION_02JAN2026.md",
+      "exists": false
+    }
+  ],
+  "historical_source_path_checks": [
+    {
+      "path": "config/agents.manifest.json",
+      "exists": true
+    },
+    {
+      "path": "src/app/(cyberize)/chat/ChatPageContent.tsx",
+      "exists": true
+    },
+    {
+      "path": "src/app/api/agent/_lib/adk.ts",
+      "exists": true
+    },
+    {
+      "path": "src/app/api/agent/run/route.ts",
+      "exists": true
+    },
+    {
+      "path": "src/config/manifest.ts",
+      "exists": true
+    },
+    {
+      "path": "src/utils/speech.ts",
+      "exists": true
+    },
+    {
+      "path": "supabase/chat_sessions_setup.sql",
+      "exists": true
+    }
+  ],
+  "docs_ts_files": [
+    "agent_docs/CURRENT_APP/app-factory-frontend-first-module/skills/stark-frontend-first/templates/mock-data.template.ts",
+    "agent_docs/CURRENT_APP/app-factory-frontend-first-module/skills/stark-frontend-first/templates/service.template.ts",
+    "agent_docs/CURRENT_APP/app-factory-frontend-first-module/skills/stark-frontend-first/templates/types.template.ts"
+  ],
+  "missing_references": [
+    "ARCHITECT_PLAYBOOK.md",
+    "FFM_PLAYBOOK.md",
+    "RECON_QUESTIONNAIRE.md",
+    "agent_docs/CURRENT_APP/app-factory-frontend-first-module/_project/FILE_TREE.md",
+    "session_2026-07-26.md",
+    "reference/",
+    "agent_docs/APP_FACTORY/"
+  ],
+  "search_scope": "Selected checkout only; rg filename searches and direct path existence checks. No sibling repositories or browser profiles inspected."
+}

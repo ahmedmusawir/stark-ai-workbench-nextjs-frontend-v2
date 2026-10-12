@@ -1,0 +1,14 @@
+{
+  "test": [
+    "DIRECTOR-OBS-001 §11.3 browser A+B: two successful new chats both stay in recents; reopening A shows only A; no hidden archive/delete/recreate"
+  ],
+  "status": "passed",
+  "origin": "http://127.0.0.1:43181",
+  "counters": {
+    "contexts": 0,
+    "pages": 1,
+    "requests": 8
+  },
+  "events": [],
+  "unexpected": 0
+}

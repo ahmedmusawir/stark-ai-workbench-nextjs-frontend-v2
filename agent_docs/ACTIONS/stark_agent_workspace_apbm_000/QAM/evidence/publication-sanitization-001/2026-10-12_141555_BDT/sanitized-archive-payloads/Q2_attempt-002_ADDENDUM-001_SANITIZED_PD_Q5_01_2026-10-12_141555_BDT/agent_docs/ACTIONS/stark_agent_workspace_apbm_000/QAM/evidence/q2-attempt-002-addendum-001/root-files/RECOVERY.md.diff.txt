@@ -1,0 +1,22 @@
+diff --git a/RECOVERY.md b/RECOVERY.md
+index 047ee69..7fe22ad 100644
+--- a/RECOVERY.md
++++ b/RECOVERY.md
+@@ -1,5 +1,17 @@
+ # Recovery State
+ 
++**CURRENT — 2026-10-11 18:16 Asia/Dhaka: APBM_000 Q2 attempt-002 DONE; waiting for QA Lead disposition. Gate Q PENDING.**
++
++Seat: independent QA Executor (Claudy). Candidate `8eb5789d9021ad06c15db36db74419a2b5c68fc5` = HEAD on `qa/frontend-apbm-000`; plan v0.3 `6b3f5df3…`; release `QAM/HANDOFFS/DIRECTOR_Q2_RELEASE_002_2026-10-11_174045_BDT.txt`.
++Result: gate PASS 17/17; build 0 (first normal offline build); tsc 0; Jest 290/290; QA Jest 31/31; browser 34/34; secondary 33/33 + 27/27; proposed 23 PASS, AC24 NOT RUN; F01–F04 retest PASS.
++Package: `~/Downloads/APBM000_Q2_attempt-002_QA-Lead-Package_2026-10-11_181525_BDT.zip` (sha 34e8768b…). Read `agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/session_2026-10-11.md` and `QAM/HANDOFFS/Q2_attempt-002_REVIEW_START_HERE.md`.
++Pending: QA Lead disposition → Q5 authorization → Gate Q. No Git mutation, product edits or Q5 by QA. All attempt-002 QA records are uncommitted in QAM by design.
++
++--- Previous recovery records preserved below. ---
++
++
++# Recovery State
++
+ **CURRENT — 2026-10-08 09:10 Asia/Dhaka: APBM_000 Q2 attempt 001 DONE; waiting for QA Lead adjudication / Architect close-out.**
+ 
+ Seat on reboot: independent QA Executor (Claudy). Enter via `agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/CLAUDE.md` → `QAM_ENTRY.md`; read `QAM/QAM_STATE.json`, `QAM/HANDOFFS/Q2_attempt-001_REVIEW_START_HERE.md`, `QAM/AC_EVIDENCE_MATRIX.md`.

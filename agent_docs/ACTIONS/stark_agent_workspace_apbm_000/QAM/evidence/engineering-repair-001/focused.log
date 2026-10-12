@@ -1,0 +1,47 @@
+
+> adk-agent-harness-nextjs-frontend-v1@0.1.0 test
+> jest --runInBand --runTestsByPath src/__tests__/workspace/signout.test.tsx src/__tests__/workspace/navigation.test.ts src/__tests__/workspace/components.test.tsx src/__tests__/workspace/productionAdapter.test.ts src/__tests__/chat/chatStore.persist.test.ts src/__tests__/chat/chatStore.modeSplit.test.ts src/__tests__/chat/chatStore.sessions.test.ts src/__tests__/config/manifest.test.ts --json --outputFile=/home/moose/nextjs/10XLAB/stark-ai-workbench-nextjs-frontend-v2/agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/engineering-repair-001/focused.json
+
+PASS src/__tests__/workspace/signout.test.tsx
+PASS src/__tests__/workspace/components.test.tsx
+PASS src/__tests__/chat/chatStore.persist.test.ts
+  ● Console
+
+    console.warn
+      [zustand persist middleware] Unable to update item 'adk-session-map-mock', the given storage is currently unavailable.
+
+    [0m [90m 150 |[39m       setAgentSessions[33m:[39m (sessions) [33m=>[39m [36mset[39m({ agentSessions[33m:[39m sessions })[33m,[39m
+     [90m 151 |[39m       setSession[33m:[39m (agent[33m,[39m sessionId) [33m=>[39m
+    [31m[1m>[22m[39m[90m 152 |[39m         [36mset[39m((state) [33m=>[39m ({
+     [90m     |[39m         [31m[1m^[22m[39m
+     [90m 153 |[39m           agentSessions[33m:[39m { [33m...[39mstate[33m.[39magentSessions[33m,[39m [agent][33m:[39m sessionId }[33m,[39m
+     [90m 154 |[39m         }))[33m,[39m
+     [90m 155 |[39m       setSessionList[33m:[39m (agent[33m,[39m sessions) [33m=>[39m[0m
+
+      at node_modules/zustand/middleware.js:489:17
+      at Object.setSession (src/store/chatStore.ts:152:9)
+      at src/__tests__/chat/chatStore.persist.test.ts:151:35
+      at Object.<anonymous> (node_modules/expect/build/index.js:1824:9)
+      at Object.throwingMatcher [as toThrow] (node_modules/expect/build/index.js:2235:93)
+      at src/__tests__/chat/chatStore.persist.test.ts:155:16
+      at Object.<anonymous> (src/__tests__/chat/chatStore.persist.test.ts:147:12)
+
+PASS src/__tests__/chat/chatStore.modeSplit.test.ts
+  ● Console
+
+    console.info
+      [chatStore] FIX-003: adopted legacy adk-session-map into adk-session-map-live
+
+      at Object.<anonymous> (src/store/chatStore.ts:52:15)
+
+PASS src/__tests__/config/manifest.test.ts
+PASS src/__tests__/workspace/productionAdapter.test.ts
+PASS src/__tests__/chat/chatStore.sessions.test.ts
+PASS src/__tests__/workspace/navigation.test.ts
+
+Test Suites: 8 passed, 8 total
+Tests:       64 passed, 64 total
+Snapshots:   0 total
+Time:        1.375 s, estimated 2 s
+Ran all test suites within paths "src/__tests__/workspace/signout.test.tsx", "src/__tests__/workspace/navigation.test.ts", "src/__tests__/workspace/components.test.tsx", "src/__tests__/workspace/productionAdapter.test.ts", "src/__tests__/chat/chatStore.persist.test.ts", "src/__tests__/chat/chatStore.modeSplit.test.ts", "src/__tests__/chat/chatStore.sessions.test.ts", "src/__tests__/config/manifest.test.ts".
+Test results written to: agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/engineering-repair-001/focused.json

@@ -1,0 +1,1 @@
+Use attempt-001, attempt-002, etc. Never overwrite failed evidence. Name candidate, plan and environment in each attempt index. Keep secrets/auth state/private chats out. No execution evidence exists at assembly.

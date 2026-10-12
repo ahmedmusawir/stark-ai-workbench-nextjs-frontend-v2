@@ -1,0 +1,152 @@
+{
+  "directory-dark-375": {
+    "overflow": 0,
+    "desktopNav": "none",
+    "mobileTop": "flex",
+    "lastBottomVsComposerTop": null
+  },
+  "directory-dark-768": {
+    "overflow": 0,
+    "desktopNav": "none",
+    "mobileTop": "flex",
+    "lastBottomVsComposerTop": null
+  },
+  "directory-dark-1280": {
+    "overflow": 0,
+    "desktopNav": "flex",
+    "mobileTop": "none",
+    "lastBottomVsComposerTop": null
+  },
+  "directory-light-375": {
+    "overflow": 0,
+    "desktopNav": "none",
+    "mobileTop": "flex",
+    "lastBottomVsComposerTop": null
+  },
+  "directory-light-768": {
+    "overflow": 0,
+    "desktopNav": "none",
+    "mobileTop": "flex",
+    "lastBottomVsComposerTop": null
+  },
+  "directory-light-1280": {
+    "overflow": 0,
+    "desktopNav": "flex",
+    "mobileTop": "none",
+    "lastBottomVsComposerTop": null
+  },
+  "workspace-dark-375": {
+    "overflow": 0,
+    "desktopNav": "none",
+    "mobileTop": "flex",
+    "lastBottomVsComposerTop": null
+  },
+  "workspace-dark-768": {
+    "overflow": 0,
+    "desktopNav": "none",
+    "mobileTop": "flex",
+    "lastBottomVsComposerTop": null
+  },
+  "workspace-dark-1280": {
+    "overflow": 0,
+    "desktopNav": "flex",
+    "mobileTop": "none",
+    "lastBottomVsComposerTop": null
+  },
+  "workspace-light-375": {
+    "overflow": 0,
+    "desktopNav": "none",
+    "mobileTop": "flex",
+    "lastBottomVsComposerTop": null
+  },
+  "workspace-light-768": {
+    "overflow": 0,
+    "desktopNav": "none",
+    "mobileTop": "flex",
+    "lastBottomVsComposerTop": null
+  },
+  "workspace-light-1280": {
+    "overflow": 0,
+    "desktopNav": "flex",
+    "mobileTop": "none",
+    "lastBottomVsComposerTop": null
+  },
+  "conversation-dark-375": {
+    "overflow": 0,
+    "desktopNav": "none",
+    "mobileTop": "flex",
+    "lastBottomVsComposerTop": -40
+  },
+  "conversation-dark-768": {
+    "overflow": 0,
+    "desktopNav": "none",
+    "mobileTop": "flex",
+    "lastBottomVsComposerTop": -48
+  },
+  "conversation-dark-1280": {
+    "overflow": 0,
+    "desktopNav": "flex",
+    "mobileTop": "none",
+    "lastBottomVsComposerTop": -48
+  },
+  "conversation-light-375": {
+    "overflow": 0,
+    "desktopNav": "none",
+    "mobileTop": "flex",
+    "lastBottomVsComposerTop": -40
+  },
+  "conversation-light-768": {
+    "overflow": 0,
+    "desktopNav": "none",
+    "mobileTop": "flex",
+    "lastBottomVsComposerTop": -48
+  },
+  "conversation-light-1280": {
+    "overflow": 0,
+    "desktopNav": "flex",
+    "mobileTop": "none",
+    "lastBottomVsComposerTop": -48
+  },
+  "directory-dark-1023": {
+    "overflow": 0,
+    "desktopNav": "none",
+    "mobileTop": "flex",
+    "lastBottomVsComposerTop": null
+  },
+  "directory-dark-1024": {
+    "overflow": 0,
+    "desktopNav": "flex",
+    "mobileTop": "none",
+    "lastBottomVsComposerTop": null
+  },
+  "directory-dark-1025": {
+    "overflow": 0,
+    "desktopNav": "flex",
+    "mobileTop": "none",
+    "lastBottomVsComposerTop": null
+  },
+  "conversation-dark-1023": {
+    "overflow": 0,
+    "desktopNav": "none",
+    "mobileTop": "flex",
+    "lastBottomVsComposerTop": -48
+  },
+  "conversation-dark-1024": {
+    "overflow": 0,
+    "desktopNav": "flex",
+    "mobileTop": "none",
+    "lastBottomVsComposerTop": -48
+  },
+  "conversation-dark-1025": {
+    "overflow": 0,
+    "desktopNav": "flex",
+    "mobileTop": "none",
+    "lastBottomVsComposerTop": -48
+  },
+  "conversation-dark-375-dpr2": {
+    "overflow": 0,
+    "desktopNav": "none",
+    "mobileTop": "flex",
+    "lastBottomVsComposerTop": -40
+  }
+}

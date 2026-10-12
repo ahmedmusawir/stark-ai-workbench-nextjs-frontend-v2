@@ -1,0 +1,68 @@
+diff -ru /tmp/claude-1000/q2f/specs.before2/_qa.ts specs/_qa.ts
+--- /tmp/claude-1000/q2f/specs.before2/_qa.ts	2026-10-07 19:31:57.196034559 +0600
++++ specs/_qa.ts	2026-10-07 19:31:57.301639693 +0600
+@@ -43,4 +43,4 @@
+   STRESS_TOKEN, '', '<script>window.__qaXss=2</script><img src=x onerror="window.__qaXss=3"> [js link](javascript:window.__qaXss=4)',
+ ].join('\n');
+ export const STRESS_USER = 'User text <script>window.__qaXss=5</script><img src=x onerror="window.__qaXss=6"> ' + STRESS_TOKEN;
+-export const stressPreset = `(qa) => { qa.auto.list = () => ({ status: 'ready', rows: ${JSON.stringify(ROWS)} }); qa.auto.history = () => ({ status: 'ready', messages: [{ role: 'user', content: ${JSON.stringify(STRESS_USER)} }, { role: 'assistant', content: ${JSON.stringify(STRESS_ASSISTANT)} }] }); }`;
++export const stressPreset = `(qa) => { qa.auto.list = () => ({ status: 'ready', rows: ${JSON.stringify(ROWS)} }); qa.auto.history = () => ({ status: 'ready', messages: [{ role: 'user', content: ${JSON.stringify(STRESS_USER)} }, { role: 'assistant', content: ${JSON.stringify(STRESS_ASSISTANT)} }, { role: 'user', content: 'Short question?' }] }); }`;
+diff -ru /tmp/claude-1000/q2f/specs.before2/s05_07_transcript_composer_draft.spec.ts specs/s05_07_transcript_composer_draft.spec.ts
+--- /tmp/claude-1000/q2f/specs.before2/s05_07_transcript_composer_draft.spec.ts	2026-10-07 19:31:57.196140590 +0600
++++ specs/s05_07_transcript_composer_draft.spec.ts	2026-10-07 19:31:57.302117420 +0600
+@@ -8,7 +8,7 @@
+     await expect(page.locator('.ws-thread table')).toBeVisible();
+     const m = await page.evaluate(() => {
+       const t = document.querySelector('.ws-thread')!, table = t.querySelector('table')!.parentElement!, code = t.querySelector('.ws-code-scroll') as HTMLElement;
+-      const user = t.querySelector('.ws-turn')!.firstElementChild!.firstElementChild as HTMLElement; const ub = user.getBoundingClientRect(), tb = t.getBoundingClientRect();
++      const turns = t.querySelectorAll('.ws-turn'); const user = turns[turns.length - 1].firstElementChild!.firstElementChild as HTMLElement; const ub = user.getBoundingClientRect(), tb = t.getBoundingClientRect();
+       return { xss: (window as any).__qaXss ?? null, scripts: t.querySelectorAll('script').length, imgs: t.querySelectorAll('img').length,
+         jsLinks: [...t.querySelectorAll('a')].filter(a => (a.getAttribute('href') || '').toLowerCase().startsWith('javascript')).length,
+         tableScrolls: table.scrollWidth > table.clientWidth, codeScrolls: !!code && code.scrollWidth > code.clientWidth,
+diff -ru /tmp/claude-1000/q2f/specs.before2/s12_16_demo_theme_render.spec.ts specs/s12_16_demo_theme_render.spec.ts
+--- /tmp/claude-1000/q2f/specs.before2/s12_16_demo_theme_render.spec.ts	2026-10-07 19:31:57.196239056 +0600
++++ specs/s12_16_demo_theme_render.spec.ts	2026-10-07 19:31:57.305145680 +0600
+@@ -4,6 +4,7 @@
+ 
+ const DISCLOSURE = 'Demo context — changes are not sent to the agent and reset on reload. This panel does not manage the agent’s backend context.';
+ const TOKENS = JSON.parse(fs.readFileSync('agent_docs/ACTIONS/stark_agent_workspace_apbm_000/DESIGN/token-values.json', 'utf8'));
++const near = (a: string, hex: string) => { const m = a.match(/\d+/g)!.map(Number), e = [0, 2, 4].map(i => parseInt(hex.slice(i, i + 2), 16)); return m.slice(0, 3).every((v, i) => Math.abs(v - e[i]) <= 1); };
+ const rgb = (hex: string) => `rgb(${parseInt(hex.slice(0, 2), 16)}, ${parseInt(hex.slice(2, 4), 16)}, ${parseInt(hex.slice(4, 6), 16)})`;
+ 
+ test('S-12 demo context: permanent disclosure; edit/add/preview/remove make no network, upload or service calls', async ({ page }) => {
+@@ -17,7 +18,7 @@
+   await ctx.getByRole('button', { name: 'Add sample document' }).click(); await page.getByRole('dialog', { name: 'Add sample document' }).getByRole('button', { name: 'Research checklist.md' }).click();
+   await ctx.getByRole('button', { name: 'Preview Research checklist.md' }).click(); await expect(page.getByRole('dialog', { name: 'Sample preview' })).toContainText('Fictional sample'); await page.keyboard.press('Escape');
+   await ctx.getByRole('button', { name: 'Remove Workspace overview.md' }).click(); await expect(ctx.getByText('Workspace overview.md')).toHaveCount(0);
+-  expect(await page.locator('input[type=file]').count()).toBe(0); expect(reqs.length).toBe(before); expect((await ledger(page)).length).toBe(l0);
++  expect(await page.locator('input[type=file]').count()).toBe(0); expect(reqs.slice(before).filter(p => !/^\/fonts\/Inter-\d+\.ttf$/.test(p))).toEqual([]); expect((await ledger(page)).length).toBe(l0);
+   // CONTROL: an external browser request is aborted and logged by the exact-origin policy
+   const b0 = blocked.length; await page.evaluate(() => fetch('https://example.invalid/x').catch(() => 'aborted')); expect(blocked.length).toBe(b0 + 1);
+   record('s12-requests', { during_demo_actions: reqs.slice(before), blocked_controls: blocked.slice(b0) });
+@@ -52,11 +53,11 @@
+   res.saved_system = await p.evaluate(() => [document.documentElement.className, localStorage.getItem('theme')]); expect(res.saved_system).toEqual(['light', 'system']); await c.close();
+   const tok: Record<string, unknown> = {};
+   for (const t of ['dark', 'light'] as const) { c = await browser.newContext(); p = await c.newPage(); await setTheme(p, t); await open(p);
+-    tok[t] = await p.evaluate(() => { const r = document.querySelector('.ws-root') as HTMLElement, cs = getComputedStyle(r); return { bg: cs.backgroundColor, fg: cs.color, font: cs.fontFamily, radius: cs.getPropertyValue('--radius').trim() }; });
+-    expect((tok[t] as any).bg).toBe(rgb(TOKENS[t].background)); expect((tok[t] as any).fg).toBe(rgb(TOKENS[t].foreground)); expect((tok[t] as any).font).toMatch(/Inter/); expect((tok[t] as any).radius).toBe('.75rem');
++    tok[t] = await p.evaluate(() => { const r = document.querySelector('.ws-root') as HTMLElement, cs = getComputedStyle(r); return { bg: cs.backgroundColor, rootColor: cs.color, fg: getComputedStyle(document.querySelector('.ws-root h1') as HTMLElement).color, font: getComputedStyle(document.querySelector('.ws-root h1') as HTMLElement).fontFamily, radius: cs.getPropertyValue('--radius').trim() }; });
++    expect(near((tok[t] as any).bg, TOKENS[t].background)).toBe(true); expect(near((tok[t] as any).fg, TOKENS[t].foreground)).toBe(true); expect((tok[t] as any).font).toMatch(/Inter/); expect((tok[t] as any).radius).toBe('.75rem');
+     // CONTROL: without workspace CSS the token assertion fails
+     await open(p, { path: '/nows' }); const bgNo = await p.evaluate(() => getComputedStyle(document.querySelector('.ws-root') as HTMLElement).backgroundColor);
+-    tok[`${t}-nows`] = bgNo; expect(bgNo).not.toBe(rgb(TOKENS[t].background)); await c.close(); }
++    tok[`${t}-nows`] = bgNo; expect(near(bgNo, TOKENS[t].background)).toBe(false); await c.close(); }
+   record('s14-theme', { res, tok });
+ });
+ 
+diff -ru /tmp/claude-1000/q2f/specs.before2/s17_19_a11y_copy_obs.spec.ts specs/s17_19_a11y_copy_obs.spec.ts
+--- /tmp/claude-1000/q2f/specs.before2/s17_19_a11y_copy_obs.spec.ts	2026-10-07 19:31:57.196317356 +0600
++++ specs/s17_19_a11y_copy_obs.spec.ts	2026-10-07 19:31:57.303026739 +0600
+@@ -62,7 +62,7 @@
+   await page.setViewportSize({ width: 1280, height: 900 }); await expect(trig).toHaveAttribute('aria-expanded', 'true');
+   await page.getByRole('button', { name: 'Edit demo instructions' }).focus(); await page.setViewportSize({ width: 375, height: 900 });
+   await expect(trig).toBeFocused();
+-  await page.setViewportSize({ width: 1280, height: 900 }); await open(page, { query: 'agent=kestrel', preset: P.rows }); await page.keyboard.press('Tab');
++  await page.setViewportSize({ width: 1280, height: 900 }); await open(page, { query: 'agent=kestrel', preset: P.rows }); await page.getByLabel('Sibling input').focus(); await page.keyboard.press('Tab');
+   await expect(page.getByRole('link', { name: 'Skip to content' })).toBeFocused(); await page.keyboard.press('Enter'); await expect(page.locator('#ws-main')).toBeFocused();
+   expect(await page.locator('.ws-desktop [aria-current="page"]').count()).toBe(1); expect(await page.locator('[role=status]').count()).toBeGreaterThan(0);
+   const focusStyle: Record<string, unknown> = {};

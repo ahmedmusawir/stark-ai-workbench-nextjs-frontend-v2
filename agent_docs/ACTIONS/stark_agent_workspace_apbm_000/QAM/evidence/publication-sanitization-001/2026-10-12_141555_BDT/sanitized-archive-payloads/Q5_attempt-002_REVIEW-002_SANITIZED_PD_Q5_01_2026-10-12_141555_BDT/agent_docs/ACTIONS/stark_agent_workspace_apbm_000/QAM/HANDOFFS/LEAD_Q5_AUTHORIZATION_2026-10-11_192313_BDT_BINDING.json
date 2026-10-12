@@ -1,0 +1,26 @@
+{
+  "record": "QA Lead Q5 authorization (addendum-001 accepted), relayed by the Director in the Claudy session",
+  "file": "HANDOFFS/LEAD_Q5_AUTHORIZATION_2026-10-11_192313_BDT.txt",
+  "sha256": "307e9d8641f0dea161b9798614e805c1064319fc8c6bb6469eba7a4ab96f0663",
+  "received": "2026-10-11 19:23:13 BDT (first Executor tool timestamp)",
+  "candidate_sha": "8eb5789d9021ad06c15db36db74419a2b5c68fc5",
+  "authoritative_proposal": "evidence/q2-attempt-002-addendum-001/q5-proposal/Q5_PROPOSAL_PATHS.json",
+  "proposal_sha256": "242f95eb508e55e5a81f3e660197857fded1d730e97494d92ebd181590d6e7ed",
+  "D4": "ALLOW",
+  "D7": "OMIT",
+  "gate_q": "PENDING",
+  "authorized": [
+    "root correction option A",
+    "delete exactly the 5 cache/DELETE rows"
+  ],
+  "not_authorized": [
+    "any other deletion incl. post-Gate-Q deletion",
+    "repeated addendum",
+    "full suites",
+    "production build",
+    "live-service testing",
+    "Git mutation",
+    "engineering closeout",
+    "Gate Q declaration"
+  ]
+}

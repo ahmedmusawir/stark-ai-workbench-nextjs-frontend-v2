@@ -1,0 +1,27 @@
+--- /home/moose/nextjs/10XLAB/stark-ai-workbench-nextjs-frontend-v2/agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002/preparation/q2a2_gate.r1.py.txt	2026-10-11 17:59:30.042588097 +0600
++++ /home/moose/nextjs/10XLAB/stark-ai-workbench-nextjs-frontend-v2/agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/AUTOMATION/q2a2_gate.py	2026-10-11 17:59:30.133178690 +0600
+@@ -61,10 +61,11 @@
+             if p not in rp: absent.append(p); continue
+             if sha(s.git('show', f'{C}:{p}', binary=True)) != rp[p]['sha256']: mism.append(p)
+         s.check('G5 candidate blobs = binding hashes', not mism and not absent, {'checked': len(paths), 'mismatch': mism, 'not_in_binding': absent})
+-        pp = s.git('diff', '--binary', '--full-index', P, C, '--', *B['repair_product_test_paths'], binary=True)
+-        cp = s.git('diff', '--binary', '--full-index', P, C, binary=True)
++        # Binding serialization (reproduced exactly): per-path `git diff --binary` concatenated in binding order; complete `git diff --binary`.
++        pp = b''.join(s.git('diff', '--binary', P, C, '--', p, binary=True) for p in B['repair_product_test_paths'])
++        cp = s.git('diff', '--binary', P, C, binary=True)
+         sem = s.semantic_patch(a.supplied_patch, P, C, B['repair_product_test_paths']) if a.supplied_patch else None
+-        s.check('G6 product patch hash / semantic blob equality', sha(pp) == B['product_patch_sha256'] or (sem and sem['equal']),
++        s.check('G6 product + complete patch hashes reproduced from real Git (semantic blob check recorded)', sha(pp) == B['product_patch_sha256'] and sha(cp) == B['complete_patch_sha256'] and (sem is None or sem['equal']),
+                 {'git_product_patch_sha256': sha(pp), 'binding': B['product_patch_sha256'], 'git_complete_patch_sha256': sha(cp), 'binding_complete': B['complete_patch_sha256'], 'semantic': sem})
+         hist = s.git('rev-list', '--reverse', f'{prev}..{P}').split(); hist_paths = s.git('diff', '--name-only', prev, P).split()
+         s.check('G7 previous candidate -> parent: no product drift', not [p for p in hist_paths if is_product(p)],
+@@ -104,7 +105,8 @@
+         for p in paths:
+             old = s.git('ls-tree', P, '--', p).split(); new = s.git('ls-tree', C, '--', p).split()
+             exp[p] = (old[2] if old else '0' * 40, new[2] if new else '0' * 40)
+-        diff = {p: {'patch': got.get(p), 'git': exp[p]} for p in paths if got.get(p) != exp[p]}
++        pref = lambda g, e: bool(g) and all(len(x) >= 7 and y.startswith(x) for x, y in zip(g, e))  # abbreviated ids are prefixes
++        diff = {p: {'patch': got.get(p), 'git': exp[p]} for p in paths if not pref(got.get(p), exp[p])}
+         return {'supplied_patch_sha256': sha(open(patch_path, 'rb').read()), 'paths_compared': len(paths), 'blob_id_differences': diff, 'equal': not diff and len(got) == len(paths)}
+ 
+     def check_deps(s, nm):

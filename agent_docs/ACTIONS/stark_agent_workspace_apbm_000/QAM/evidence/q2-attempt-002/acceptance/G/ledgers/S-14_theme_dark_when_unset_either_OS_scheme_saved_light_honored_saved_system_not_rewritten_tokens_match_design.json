@@ -1,0 +1,14 @@
+{
+  "test": [
+    "S-14 theme: dark when unset (either OS scheme); saved light honored; saved system not rewritten; tokens match design"
+  ],
+  "status": "passed",
+  "origin": "http://127.0.0.1:43181",
+  "counters": {
+    "contexts": 6,
+    "pages": 6,
+    "requests": 32
+  },
+  "events": [],
+  "unexpected": 0
+}

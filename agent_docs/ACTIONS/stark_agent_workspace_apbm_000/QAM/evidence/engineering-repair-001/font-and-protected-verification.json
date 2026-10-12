@@ -1,0 +1,26 @@
+{
+  "recorded_at": "2026-10-08T05:10:22.708000+00:00",
+  "command": "python3 agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/engineering-repair-001/verify_inputs.py",
+  "exit_code": 0,
+  "font_source_css_sha256": "9b6ad588c451f646d506bc6badb76ecc384691fba35615f0f7d2e175150d6580",
+  "font_faces": 7,
+  "source_css_unchanged_except_relative_asset_urls": true,
+  "license_equality": true,
+  "protected_equality": {
+    "package-lock.json": true,
+    "config/agents.manifest.json": true,
+    "src/store/chatStore.ts": true,
+    "src/store/useAuthStore.ts": true,
+    "package.json": true,
+    "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/FINDINGS": true,
+    "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/AUTOMATION": true,
+    "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-001": true,
+    "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/ACCEPTANCE_SPEC.md": true,
+    "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/RULINGS_ADDENDUM.md": true,
+    "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/DESIGN": true
+  },
+  "other_API_service_schema_config_equality": true,
+  "D4": "ALLOW (original release unchanged)",
+  "D7": "OMIT (original release unchanged)",
+  "production_build": "NOT RUN; next Lead-approved independent attempt owns build/output identity/separation scan"
+}

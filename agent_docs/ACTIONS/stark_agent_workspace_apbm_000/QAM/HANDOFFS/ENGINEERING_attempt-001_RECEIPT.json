@@ -1,0 +1,17 @@
+{
+  "stage": "ENGINEERING",
+  "attempt": 1,
+  "recorded_at": "2026-10-04T22:02:03.305404+06:00",
+  "repo_archive": "/home/moose/NEXTJS/stark-ai-workbench-nextjs-frontend-v2/agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/HANDOFFS/ENGINEERING_attempt-001.zip",
+  "shareable_copy": "/home/moose/Downloads/ENGINEERING_attempt-001.zip",
+  "downloads_copy_status": "VERIFIED IDENTICAL",
+  "sha256": "a580b0c9958b2cde817bc088b8e0087d3b2fd22893bfd2c68acd5c636f5a24d1",
+  "bytes": 3872876,
+  "members": 186,
+  "crc_validation": "PASS: ZipFile.testzip() returned None",
+  "membership_validation": "PASS: every indexed member size and SHA256 matched; index own size matched, own hash omitted",
+  "sensitive_scan": "PASS: known dotenv values/private-key patterns absent in selected text; screenshots synthetic fixture provenance",
+  "design_dependency": "Separate supplied DESIGN; not nested",
+  "source_candidate_scope_sha256": "338dbdf4ee6a93590ce3114b34b49e66ec8c90df1020205ff6ec38e5d63c87cf",
+  "copy_verified_at": "2026-10-04T22:02:26.816269+06:00"
+}

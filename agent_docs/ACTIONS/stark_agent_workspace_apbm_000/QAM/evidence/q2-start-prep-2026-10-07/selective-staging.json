@@ -1,0 +1,199 @@
+{
+  "note": "Exact selective staging list (excludes its own hash; its path is in staging-paths.txt). RESPONSES/config/src/caches excluded. No blanket staging.",
+  "records_manifest": {
+    "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/AUTOMATION/q2_qam_records_2026-10-07.json",
+    "sha256": "e92f0861f5a447304c7e46983077fd6cac5a04657f8961bea38bff1b0edcec57",
+    "entries": 72
+  },
+  "count": 38,
+  "paths": [
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/AUTOMATION/q2_qam_records_2026-10-07.json",
+      "status": "A",
+      "sha256": "e92f0861f5a447304c7e46983077fd6cac5a04657f8961bea38bff1b0edcec57"
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/HANDOFFS/CLAUDY_REMOTE_ROSTER_CONTINUATION_2026-10-07.txt",
+      "status": "A",
+      "sha256": "63eb83d5768428177046b1c422194900418ee001762424b657a64d90a88e6b53"
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/HANDOFFS/LEAD_REMOTE_ROSTER_APPROVAL_2026-10-07.md",
+      "status": "A",
+      "sha256": "c0380dfcb951755b82af06881013635d60cad61829697978107e33b6f7fcef53"
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/HANDOFFS/LEAD_REMOTE_ROSTER_BINDING_HASHES_2026-10-07.json",
+      "status": "A",
+      "sha256": "0ccefad21aa22eda91f400923722f276f31a79b326d93d9e05d1d1d52bc9d80c"
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/HANDOFFS/LEAD_REMOTE_ROSTER_PACKAGE_INDEX_2026-10-07.json",
+      "status": "A",
+      "sha256": "a5aa9b47a8e48cf874cfd27ffc16f3158f261f802117386dec58b68655b3ef4b"
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/HANDOFFS/LEAD_RETURN_START_HERE_2026-10-07.md",
+      "status": "A",
+      "sha256": "8d7aec51969323dce68b2e4dba975b2b54165461fd911d7ad93b912c36c50d51"
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/HANDOFFS/LEAD_REVIEWED_QAM_PATHS_2026-10-07.json",
+      "status": "A",
+      "sha256": "ee6cd6f97255bdd0038fd5e48b17fdbf77fb0337f812cb69cfa4c8c325d2984c"
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/HANDOFFS/Q2_HOLD_LEAD_FILES_MISSING_2026-10-07_184448.md",
+      "status": "A",
+      "sha256": "9ef808d8b83021d43f3c4a0db364bed397e556f522f96b015fda00211764b1eb"
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/HANDOFFS/ROSTER_REBIND_REVIEW_2026-10-07_183026.md",
+      "status": "A",
+      "sha256": "1309d30ee4cc36c5fd743c972f5d7b64ac5eda88b42a2425c76e962de5e934de"
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/HANDOFFS/ROSTER_REBIND_REVIEW_2026-10-07_183026.zip",
+      "status": "A",
+      "sha256": "c8ef0ee4129f531318f04970d7d28bb6d7b20d9f65a894d56151a083fa605a4b"
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/HANDOFFS/ROSTER_REBIND_REVIEW_2026-10-07_183026_RECEIPT.json",
+      "status": "A",
+      "sha256": "19490dc87b6fcd8d11e01e025f715a22205944d0d3136bffcc95a900c06c0755"
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/QAM_STATE.json",
+      "status": "M",
+      "sha256": "d80a7c9566fa0c1cb3c597ca5e3fbb6270770c4550d70c4e64e988cbb58e3787"
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/lead-remote-roster-review-2026-10-07/VERIFICATION.json",
+      "status": "A",
+      "sha256": "368e8b7338df2665d54e3daaf6755ff39ff82575b2d5ae1d0b7c3ae535320140"
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-start-prep-2026-10-07/install-verification.json",
+      "status": "A",
+      "sha256": "ad501c28b60d4f7e68488183f2733e0d9c2a019b76a312fb55425e45d1c26839"
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-start-prep-2026-10-07/qam-state-routing.diff",
+      "status": "A",
+      "sha256": "c6d7ad275fbe45319f7a2261f3bd02f8425aa68bebd7c6a9c088e1b18cbd9414"
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-start-prep-2026-10-07/qam-state-routing.json",
+      "status": "A",
+      "sha256": "dfbffe41c79090d9d858f86410c84a2303516a50d2a519f1f1c1dd04d8192b48"
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-start-prep-2026-10-07/staging-paths.txt",
+      "status": "A",
+      "sha256": "86547d08b2487c7103354475c91d709ed440a5736e1bfaa56745f6aa5654944c"
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/remote-roster-rebind-002/COMMANDS.md",
+      "status": "A",
+      "sha256": "319aed298cbb7e23a66f8baccaa0d065cafdcdecb54969ecc221aad4a5275fc7"
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/remote-roster-rebind-002/REVIEW_START_HERE.md",
+      "status": "A",
+      "sha256": "7bdfa592dc347335eee6c370492ab842a95682af039fa4233ac92b9ddd3e6f0c"
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/remote-roster-rebind-002/architect-index-verification.json",
+      "status": "A",
+      "sha256": "9be9eba3c321e2af9c7ac8ff633317c40c4a5783f0e1ea8eb5c8dc549d0d8081"
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/remote-roster-rebind-002/authority-and-tool-pins.json",
+      "status": "A",
+      "sha256": "511b6e0db75f4d77762abf4fb1c7717577a082f09390de07f33f2923727e25b6"
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/remote-roster-rebind-002/commit-succession.json",
+      "status": "A",
+      "sha256": "3da34c8c8863d431b7e4c467cc118f7ab8581cf9405acd14feb019ab5690e603"
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/remote-roster-rebind-002/config-evidence/blobs/new-config__agents.manifest-hermes.json",
+      "status": "A",
+      "sha256": "638e95a166e9e196175bd630ce76560db1ef98dbe72d40f31d9a109782027ae8"
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/remote-roster-rebind-002/config-evidence/blobs/new-config__agents.manifest.json",
+      "status": "A",
+      "sha256": "6c27f420127db7125a43ddba6347470b19d3be39769b44bb2b85bd6d9526b6d9"
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/remote-roster-rebind-002/config-evidence/blobs/old-config__agents.manifest.json",
+      "status": "A",
+      "sha256": "638e95a166e9e196175bd630ce76560db1ef98dbe72d40f31d9a109782027ae8"
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/remote-roster-rebind-002/config-evidence/blobs/old-config__agents.manifest_copy.json",
+      "status": "A",
+      "sha256": "6c27f420127db7125a43ddba6347470b19d3be39769b44bb2b85bd6d9526b6d9"
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/remote-roster-rebind-002/config-evidence/config-delta.patch",
+      "status": "A",
+      "sha256": "2851f9c095c7dbce50421e08ad751b1aee47c2f9bf4016c9d02cb0497e8ec339"
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/remote-roster-rebind-002/config-evidence/rebind-evidence.json",
+      "status": "A",
+      "sha256": "ae0ad265461938df2ce0dfc54dfdb52db1bed368cd45487bee39bec0d39194c8"
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/remote-roster-rebind-002/current-config-equality.json",
+      "status": "A",
+      "sha256": "bc17d9daaaa8610320cee199ef95e63c917927baa6518c73d8c8ea8a1cfddd0b"
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/remote-roster-rebind-002/entry-state.json",
+      "status": "A",
+      "sha256": "b05600cd8ca7ff053e4a76c59378f2b03ffd6a2108b80e1af9ebc4ac6fdc01e3"
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/remote-roster-rebind-002/identity-current-bounded-variant.json",
+      "status": "A",
+      "sha256": "24ad4d9b4364678af08cbcd3c45a9cc8ad66cb92a530924b7fa102a64b8a9d73"
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/remote-roster-rebind-002/identity-current-strict.json",
+      "status": "A",
+      "sha256": "c1e905962734ec0fc8353a3018cdad8562853963bb7254cd4b1a01f5436fce93"
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/remote-roster-rebind-002/manifest-import-references.txt",
+      "status": "A",
+      "sha256": "cf57edeeb50dc0eabea46111ac20c10517539cb9cc72d3a62125aaa74fa1595b"
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/remote-roster-rebind-002/proposed-record-inventory.json",
+      "status": "A",
+      "sha256": "1f67b2bb35c405b3294875511f76e8d9b01613efa2988b001fe928e8ff52c469"
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/remote-roster-rebind-002/scope-preservation.json",
+      "status": "A",
+      "sha256": "2e5f67d301aa36d1eef621f02b6ae1d3b9e2116bf82344ed0aed143be16cbdc7"
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/remote-roster-rebind-002/selective-staging-paths.txt",
+      "status": "A",
+      "sha256": "90029e68969ca14b121ec141bd39057e1d4ad43a54e1594a84f6f206bed6a0b8"
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/session_2026-10-07.md",
+      "status": "A",
+      "sha256": "16f299edaf9148aacdd49767514503a558f31b643badb501be48585582c05e3c"
+    }
+  ],
+  "excluded": [
+    "?? agent_docs/RESPONSES/response_2026-10-07_184448_apbm-000-q2-hold-lead-files-missing.md"
+  ]
+}

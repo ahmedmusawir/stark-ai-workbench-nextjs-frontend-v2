@@ -1,0 +1,15 @@
+{
+  "check": "jest",
+  "label": "engineering-jest-complete",
+  "command": [
+    "node",
+    "node_modules/jest/bin/jest.js",
+    "--runInBand",
+    "--json",
+    "--outputFile=/tmp/apbm000-uojcwiil/jest-engineering-jest-complete.json"
+  ],
+  "exit_code": 1,
+  "elapsed_seconds": 35.836,
+  "timestamp": "2026-10-04T21:54:48.190994+06:00",
+  "environment": "fresh minimal process environment; Node fail-closed network guard; fonts allowed for build only"
+}

@@ -1,0 +1,11 @@
+{
+  "outcome": "closed",
+  "events": [
+    {
+      "kind": "websocket-blocked",
+      "detail": "wss://qa-control.example.invalid/socket",
+      "at": 1791720053184,
+      "consumedBy": "C-03 websocket"
+    }
+  ]
+}

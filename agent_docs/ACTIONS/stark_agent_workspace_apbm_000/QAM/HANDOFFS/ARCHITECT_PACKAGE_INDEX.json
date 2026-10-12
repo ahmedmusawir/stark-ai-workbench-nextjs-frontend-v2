@@ -1,0 +1,42 @@
+{
+  "source_zip_sha256": "6305247c1fad2d873dd1f37af1119ac86aa4a3e5506197ec41255b5d95ac02d5",
+  "source_zip_crc": "PASS",
+  "files": [
+    {
+      "path": "QAM/HANDOFFS/ARCHITECT_REMOTE_ROSTER_AMENDMENT_2026-10-05.md",
+      "sha256": "57924e3f046bc521b3a91fe78cd17087e8b2f3dbd6aa05b11439a26cf459c7d9"
+    },
+    {
+      "path": "QAM/evidence/remote-roster-request-2026-10-05/HANDOFFS/DIRECTOR_Q2_RELEASE_2026-10-05_193516.md",
+      "sha256": "53c9a0dd297f87325e8b4c51cdcaebedd5b95fd67be23a9f22be89fddf9994c7"
+    },
+    {
+      "path": "QAM/evidence/remote-roster-request-2026-10-05/HANDOFFS/Q2_RULING_REQUEST_2026-10-05_193516.md",
+      "sha256": "602963ed091dc0881f69607bd897d38b83b8f78ccf39c1736a6b1557999b4a18"
+    },
+    {
+      "path": "QAM/evidence/remote-roster-request-2026-10-05/QAM_STATE.json",
+      "sha256": "aebbb36d42995e20639e0e275a0dd6412824614af9b8e5c14864621bb52a5c7b"
+    },
+    {
+      "path": "QAM/evidence/remote-roster-request-2026-10-05/evidence/q2-prep-003/INDEX.md",
+      "sha256": "c05af6cd3d1c7c2f0ed93cf015b5cc5cc18d319e3d9225eb0b2b2abadbc4f2bf"
+    },
+    {
+      "path": "QAM/evidence/remote-roster-request-2026-10-05/evidence/q2-prep-003/identity-head-f21564c.json",
+      "sha256": "3b815557bf3ac250ad632ed4f423ec380a9d83e5b64e2363c08a8c9556eedcb3"
+    },
+    {
+      "path": "QAM/evidence/remote-roster-request-2026-10-05/evidence/q2-prep-003/jest-compare-candidate-vs-head.json",
+      "sha256": "9bc723f3ca6095805a653f9e068c0a38d8ba778038c4fbf85f56a3a3f0901294"
+    },
+    {
+      "path": "QAM/evidence/remote-roster-request-2026-10-05/evidence/q2-prep-003/jest-head-f21564c.json",
+      "sha256": "bcbb403fb5c39f5cb0b4a671de779abf0c28321fa437845e2b60a977cad4c845"
+    },
+    {
+      "path": "QAM/evidence/remote-roster-request-2026-10-05/evidence/q2-prep-003/jest-head-f21564c.log",
+      "sha256": "534116a2a2c3e171fd7e0e42cabb9196adf7bf67d0afa71f0ac466d7f37a9065"
+    }
+  ]
+}

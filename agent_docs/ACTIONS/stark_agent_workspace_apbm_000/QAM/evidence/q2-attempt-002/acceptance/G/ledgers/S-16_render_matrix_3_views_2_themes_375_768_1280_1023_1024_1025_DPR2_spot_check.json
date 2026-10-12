@@ -1,0 +1,14 @@
+{
+  "test": [
+    "S-16 render matrix 3 views × 2 themes × 375/768/1280 + 1023/1024/1025 + DPR2 spot check"
+  ],
+  "status": "passed",
+  "origin": "http://127.0.0.1:43181",
+  "counters": {
+    "contexts": 26,
+    "pages": 26,
+    "requests": 104
+  },
+  "events": [],
+  "unexpected": 0
+}

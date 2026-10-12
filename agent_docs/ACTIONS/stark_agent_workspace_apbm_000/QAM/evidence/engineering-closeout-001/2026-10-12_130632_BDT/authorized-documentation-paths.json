@@ -1,0 +1,16 @@
+{
+  "paths": [
+    "CLAUDE.md",
+    "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/START_HERE.md",
+    "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/ENGINEERING_ENTRY.md",
+    "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/QAM_ENTRY.md",
+    "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/QAM_STATE.json",
+    "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/QAM_CHECKPOINTS.md",
+    "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/QAM_MANIFEST.md",
+    "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/QA_RECOVERY.md",
+    "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/HANDOFFS/QA_HANDOFF.md",
+    "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/QA_CERTIFICATION.md",
+    "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/QA_CLEANUP_REPORT.md"
+  ],
+  "purpose": "Small active-entry placement amendment plus current routing/status/checkpoint/handoff updates; historical blocks preserved."
+}

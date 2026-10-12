@@ -1,0 +1,533 @@
+{
+  "method": "sRGB relative luminance; WCAG contrast formula. Opaque proposed token pairings only. Disabled controls and decorative separators are not used as essential boundaries. Not a complete accessibility certification.",
+  "checks": [
+    {
+      "mode": "light",
+      "foreground": "foreground",
+      "background": "background",
+      "ratio": 17.717,
+      "minimum": 4.5,
+      "pass_check": true
+    },
+    {
+      "mode": "light",
+      "foreground": "foreground",
+      "background": "card",
+      "ratio": 16.974,
+      "minimum": 4.5,
+      "pass_check": true
+    },
+    {
+      "mode": "light",
+      "foreground": "foreground",
+      "background": "popover",
+      "ratio": 17.717,
+      "minimum": 4.5,
+      "pass_check": true
+    },
+    {
+      "mode": "light",
+      "foreground": "foreground",
+      "background": "accent",
+      "ratio": 13.963,
+      "minimum": 4.5,
+      "pass_check": true
+    },
+    {
+      "mode": "light",
+      "foreground": "foreground",
+      "background": "bubble",
+      "ratio": 16.118,
+      "minimum": 4.5,
+      "pass_check": true
+    },
+    {
+      "mode": "light",
+      "foreground": "muted-foreground",
+      "background": "background",
+      "ratio": 6.037,
+      "minimum": 4.5,
+      "pass_check": true
+    },
+    {
+      "mode": "light",
+      "foreground": "muted-foreground",
+      "background": "card",
+      "ratio": 5.784,
+      "minimum": 4.5,
+      "pass_check": true
+    },
+    {
+      "mode": "light",
+      "foreground": "muted-foreground",
+      "background": "accent",
+      "ratio": 4.758,
+      "minimum": 4.5,
+      "pass_check": true
+    },
+    {
+      "mode": "light",
+      "foreground": "muted-foreground",
+      "background": "bubble",
+      "ratio": 5.492,
+      "minimum": 4.5,
+      "pass_check": true
+    },
+    {
+      "mode": "light",
+      "foreground": "link",
+      "background": "background",
+      "ratio": 5.169,
+      "minimum": 4.5,
+      "pass_check": true
+    },
+    {
+      "mode": "light",
+      "foreground": "link",
+      "background": "card",
+      "ratio": 4.952,
+      "minimum": 4.5,
+      "pass_check": true
+    },
+    {
+      "mode": "light",
+      "foreground": "destructive",
+      "background": "background",
+      "ratio": 6.47,
+      "minimum": 4.5,
+      "pass_check": true
+    },
+    {
+      "mode": "light",
+      "foreground": "destructive",
+      "background": "card",
+      "ratio": 6.199,
+      "minimum": 4.5,
+      "pass_check": true
+    },
+    {
+      "mode": "light",
+      "foreground": "success",
+      "background": "background",
+      "ratio": 7.13,
+      "minimum": 4.5,
+      "pass_check": true
+    },
+    {
+      "mode": "light",
+      "foreground": "success",
+      "background": "card",
+      "ratio": 6.831,
+      "minimum": 4.5,
+      "pass_check": true
+    },
+    {
+      "mode": "light",
+      "foreground": "warning",
+      "background": "background",
+      "ratio": 7.09,
+      "minimum": 4.5,
+      "pass_check": true
+    },
+    {
+      "mode": "light",
+      "foreground": "warning",
+      "background": "card",
+      "ratio": 6.793,
+      "minimum": 4.5,
+      "pass_check": true
+    },
+    {
+      "mode": "light",
+      "foreground": "info",
+      "background": "background",
+      "ratio": 5.169,
+      "minimum": 4.5,
+      "pass_check": true
+    },
+    {
+      "mode": "light",
+      "foreground": "info",
+      "background": "card",
+      "ratio": 4.952,
+      "minimum": 4.5,
+      "pass_check": true
+    },
+    {
+      "mode": "light",
+      "foreground": "primary-foreground",
+      "background": "primary",
+      "ratio": 17.717,
+      "minimum": 4.5,
+      "pass_check": true
+    },
+    {
+      "mode": "light",
+      "foreground": "destructive-foreground",
+      "background": "destructive",
+      "ratio": 6.47,
+      "minimum": 4.5,
+      "pass_check": true
+    },
+    {
+      "mode": "light",
+      "foreground": "success-foreground",
+      "background": "success",
+      "ratio": 7.13,
+      "minimum": 4.5,
+      "pass_check": true
+    },
+    {
+      "mode": "light",
+      "foreground": "warning-foreground",
+      "background": "warning",
+      "ratio": 7.09,
+      "minimum": 4.5,
+      "pass_check": true
+    },
+    {
+      "mode": "light",
+      "foreground": "info-foreground",
+      "background": "info",
+      "ratio": 5.169,
+      "minimum": 4.5,
+      "pass_check": true
+    },
+    {
+      "mode": "light",
+      "foreground": "ring",
+      "background": "background",
+      "ratio": 17.717,
+      "minimum": 3,
+      "pass_check": true
+    },
+    {
+      "mode": "light",
+      "foreground": "ring",
+      "background": "card",
+      "ratio": 16.974,
+      "minimum": 3,
+      "pass_check": true
+    },
+    {
+      "mode": "light",
+      "foreground": "ring",
+      "background": "popover",
+      "ratio": 17.717,
+      "minimum": 3,
+      "pass_check": true
+    },
+    {
+      "mode": "light",
+      "foreground": "input",
+      "background": "background",
+      "ratio": 4.833,
+      "minimum": 3,
+      "pass_check": true
+    },
+    {
+      "mode": "light",
+      "foreground": "input",
+      "background": "card",
+      "ratio": 4.63,
+      "minimum": 3,
+      "pass_check": true
+    },
+    {
+      "mode": "light",
+      "foreground": "input",
+      "background": "popover",
+      "ratio": 4.833,
+      "minimum": 3,
+      "pass_check": true
+    },
+    {
+      "mode": "dark",
+      "foreground": "foreground",
+      "background": "background",
+      "ratio": 9.501,
+      "minimum": 4.5,
+      "pass_check": true
+    },
+    {
+      "mode": "dark",
+      "foreground": "foreground",
+      "background": "card",
+      "ratio": 13.551,
+      "minimum": 4.5,
+      "pass_check": true
+    },
+    {
+      "mode": "dark",
+      "foreground": "foreground",
+      "background": "popover",
+      "ratio": 13.551,
+      "minimum": 4.5,
+      "pass_check": true
+    },
+    {
+      "mode": "dark",
+      "foreground": "foreground",
+      "background": "accent",
+      "ratio": 9.501,
+      "minimum": 4.5,
+      "pass_check": true
+    },
+    {
+      "mode": "dark",
+      "foreground": "foreground",
+      "background": "bubble",
+      "ratio": 7.032,
+      "minimum": 4.5,
+      "pass_check": true
+    },
+    {
+      "mode": "dark",
+      "foreground": "muted-foreground",
+      "background": "background",
+      "ratio": 6.147,
+      "minimum": 4.5,
+      "pass_check": true
+    },
+    {
+      "mode": "dark",
+      "foreground": "muted-foreground",
+      "background": "card",
+      "ratio": 8.767,
+      "minimum": 4.5,
+      "pass_check": true
+    },
+    {
+      "mode": "dark",
+      "foreground": "muted-foreground",
+      "background": "accent",
+      "ratio": 6.147,
+      "minimum": 4.5,
+      "pass_check": true
+    },
+    {
+      "mode": "dark",
+      "foreground": "muted-foreground",
+      "background": "bubble",
+      "ratio": 4.55,
+      "minimum": 4.5,
+      "pass_check": true
+    },
+    {
+      "mode": "dark",
+      "foreground": "link",
+      "background": "background",
+      "ratio": 5.791,
+      "minimum": 4.5,
+      "pass_check": true
+    },
+    {
+      "mode": "dark",
+      "foreground": "link",
+      "background": "card",
+      "ratio": 8.26,
+      "minimum": 4.5,
+      "pass_check": true
+    },
+    {
+      "mode": "dark",
+      "foreground": "destructive",
+      "background": "background",
+      "ratio": 5.503,
+      "minimum": 4.5,
+      "pass_check": true
+    },
+    {
+      "mode": "dark",
+      "foreground": "destructive",
+      "background": "card",
+      "ratio": 7.848,
+      "minimum": 4.5,
+      "pass_check": true
+    },
+    {
+      "mode": "dark",
+      "foreground": "success",
+      "background": "background",
+      "ratio": 7.438,
+      "minimum": 4.5,
+      "pass_check": true
+    },
+    {
+      "mode": "dark",
+      "foreground": "success",
+      "background": "card",
+      "ratio": 10.608,
+      "minimum": 4.5,
+      "pass_check": true
+    },
+    {
+      "mode": "dark",
+      "foreground": "warning",
+      "background": "background",
+      "ratio": 7.243,
+      "minimum": 4.5,
+      "pass_check": true
+    },
+    {
+      "mode": "dark",
+      "foreground": "warning",
+      "background": "card",
+      "ratio": 10.33,
+      "minimum": 4.5,
+      "pass_check": true
+    },
+    {
+      "mode": "dark",
+      "foreground": "info",
+      "background": "background",
+      "ratio": 5.791,
+      "minimum": 4.5,
+      "pass_check": true
+    },
+    {
+      "mode": "dark",
+      "foreground": "info",
+      "background": "card",
+      "ratio": 8.26,
+      "minimum": 4.5,
+      "pass_check": true
+    },
+    {
+      "mode": "dark",
+      "foreground": "primary-foreground",
+      "background": "primary",
+      "ratio": 16.118,
+      "minimum": 4.5,
+      "pass_check": true
+    },
+    {
+      "mode": "dark",
+      "foreground": "destructive-foreground",
+      "background": "destructive",
+      "ratio": 9.335,
+      "minimum": 4.5,
+      "pass_check": true
+    },
+    {
+      "mode": "dark",
+      "foreground": "success-foreground",
+      "background": "success",
+      "ratio": 12.618,
+      "minimum": 4.5,
+      "pass_check": true
+    },
+    {
+      "mode": "dark",
+      "foreground": "warning-foreground",
+      "background": "warning",
+      "ratio": 12.287,
+      "minimum": 4.5,
+      "pass_check": true
+    },
+    {
+      "mode": "dark",
+      "foreground": "info-foreground",
+      "background": "info",
+      "ratio": 9.825,
+      "minimum": 4.5,
+      "pass_check": true
+    },
+    {
+      "mode": "dark",
+      "foreground": "ring",
+      "background": "background",
+      "ratio": 9.501,
+      "minimum": 3,
+      "pass_check": true
+    },
+    {
+      "mode": "dark",
+      "foreground": "ring",
+      "background": "card",
+      "ratio": 13.551,
+      "minimum": 3,
+      "pass_check": true
+    },
+    {
+      "mode": "dark",
+      "foreground": "ring",
+      "background": "popover",
+      "ratio": 13.551,
+      "minimum": 3,
+      "pass_check": true
+    },
+    {
+      "mode": "dark",
+      "foreground": "input",
+      "background": "background",
+      "ratio": 4.075,
+      "minimum": 3,
+      "pass_check": true
+    },
+    {
+      "mode": "dark",
+      "foreground": "input",
+      "background": "card",
+      "ratio": 5.812,
+      "minimum": 3,
+      "pass_check": true
+    },
+    {
+      "mode": "dark",
+      "foreground": "input",
+      "background": "popover",
+      "ratio": 5.812,
+      "minimum": 3,
+      "pass_check": true
+    },
+    {
+      "mode": "light",
+      "foreground": "code-foreground",
+      "background": "code-background",
+      "ratio": 10.847,
+      "minimum": 4.5,
+      "pass_check": true
+    },
+    {
+      "mode": "light",
+      "foreground": "code-keyword",
+      "background": "code-background",
+      "ratio": 5.846,
+      "minimum": 4.5,
+      "pass_check": true
+    },
+    {
+      "mode": "light",
+      "foreground": "code-string",
+      "background": "code-background",
+      "ratio": 5.882,
+      "minimum": 4.5,
+      "pass_check": true
+    },
+    {
+      "mode": "dark",
+      "foreground": "code-foreground",
+      "background": "code-background",
+      "ratio": 6.552,
+      "minimum": 4.5,
+      "pass_check": true
+    },
+    {
+      "mode": "dark",
+      "foreground": "code-keyword",
+      "background": "code-background",
+      "ratio": 4.77,
+      "minimum": 4.5,
+      "pass_check": true
+    },
+    {
+      "mode": "dark",
+      "foreground": "code-string",
+      "background": "code-background",
+      "ratio": 6.949,
+      "minimum": 4.5,
+      "pass_check": true
+    }
+  ]
+}

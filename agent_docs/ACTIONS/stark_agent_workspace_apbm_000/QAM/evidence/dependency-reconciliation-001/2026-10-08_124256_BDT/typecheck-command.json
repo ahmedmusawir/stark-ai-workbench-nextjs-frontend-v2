@@ -1,0 +1,16 @@
+{
+  "command": [
+    "unshare",
+    "-rn",
+    "npx",
+    "--no-install",
+    "tsc",
+    "--noEmit"
+  ],
+  "cwd": "/home/moose/nextjs/10XLAB/stark-ai-workbench-nextjs-frontend-v2",
+  "started_at": "2026-10-08T06:45:28.039964+00:00",
+  "seconds": 4.241,
+  "exit_code": 0,
+  "log": "typecheck.log",
+  "network": "unshare -rn; no network interfaces except down loopback; no QA font hook"
+}

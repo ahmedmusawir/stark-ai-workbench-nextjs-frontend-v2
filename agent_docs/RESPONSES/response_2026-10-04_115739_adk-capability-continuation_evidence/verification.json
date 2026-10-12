@@ -1,0 +1,42 @@
+{
+  "verdict": "SUPPORTED FOR THE TESTED CASE",
+  "checks": {
+    "session-a": {
+      "identity_verified_before_and_after": true,
+      "baseline_verified": true,
+      "original_events_retained_unchanged_and_in_order": true,
+      "exactly_two_events_appended": true,
+      "appended_user_question_exact": true,
+      "appended_model_marker_exact": true,
+      "run_event_matches_stored_model_event": true,
+      "no_other_session_marker_before_or_after": true,
+      "no_tool_calls_in_stored_events": true,
+      "distinct_event_ids_within_session": true
+    },
+    "session-b": {
+      "identity_verified_before_and_after": true,
+      "baseline_verified": true,
+      "original_events_retained_unchanged_and_in_order": true,
+      "exactly_two_events_appended": true,
+      "appended_user_question_exact": true,
+      "appended_model_marker_exact": true,
+      "run_event_matches_stored_model_event": true,
+      "no_other_session_marker_before_or_after": true,
+      "no_tool_calls_in_stored_events": true,
+      "distinct_event_ids_within_session": true
+    },
+    "both_sessions_discoverable": true,
+    "disjoint_session_event_ids": true
+  },
+  "budget": {
+    "get_service_requests_including_ambiguous_timeout": 6,
+    "get_transport_attempts_including_unsent_dns_failure": 7,
+    "post_requests": 2,
+    "successful_gets": 5,
+    "successful_posts": 2,
+    "new_sessions": 0,
+    "automatic_retries": 0,
+    "approval_escalation_invocations": 8,
+    "additional_director_interventions": 0
+  }
+}

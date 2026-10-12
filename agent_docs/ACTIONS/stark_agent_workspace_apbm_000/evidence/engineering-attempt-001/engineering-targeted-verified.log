@@ -1,0 +1,27 @@
+PASS src/__tests__/chat/MessageBubble.test.tsx (5.051 s)
+PASS src/__tests__/chat/MessageActions.test.tsx
+  ● Console
+
+    console.info
+      [MessageActions] feedback: up
+
+      at handleClick (/home/moose/NEXTJS/stark-ai-workbench-nextjs-frontend-v2/src/app/(cyberize)../../../../chat/MessageActions.tsx:202:13)
+
+    console.info
+      [MessageActions] feedback: down
+
+      at handleClick (/home/moose/NEXTJS/stark-ai-workbench-nextjs-frontend-v2/src/app/(cyberize)../../../../chat/MessageActions.tsx:202:13)
+
+(node:45) ExperimentalWarning: localStorage is not available because --localstorage-file was not provided.
+(Use `node --trace-warnings ...` to show where the warning was created)
+PASS src/__tests__/workspace/productionAdapter.test.ts
+PASS src/__tests__/chat/MessageActions.readaloud.test.tsx
+PASS src/__tests__/workspace/components.test.tsx
+PASS src/__tests__/utils/speech.test.ts
+PASS src/__tests__/workspace/navigation.test.ts
+
+Test Suites: 7 passed, 7 total
+Tests:       57 passed, 57 total
+Snapshots:   0 total
+Time:        10.987 s
+Ran all test suites matching workspace|MessageActions|MessageBubble|speech.

@@ -1,0 +1,16 @@
+{
+  "stage": "Q1",
+  "attempt": 1,
+  "recorded_at": "2026-10-04T23:17:50.983015+06:00",
+  "repo_archive": "/home/moose/NEXTJS/stark-ai-workbench-nextjs-frontend-v2/agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/HANDOFFS/Q1_attempt-001.zip",
+  "shareable_copy": "/home/moose/Downloads/Q1_attempt-001.zip",
+  "downloads_copy_status": "VERIFIED IDENTICAL",
+  "sha256": "aa7c3a5e7c2f071123fe56323b33b560c9ddf04ac022415c6f178f69b85ef0d5",
+  "bytes": 167649,
+  "members": 39,
+  "crc_validation": "PASS",
+  "membership_hashes_validation": "PASS",
+  "sensitive_scan": "PASS: no secret-pattern hits in allowlisted files; no env/auth/profile/trace/build output included",
+  "plan_sha256": "61ed590afcef110fb8135f1e85b332cc48f5ba704d6d84e813f4cd09f40179bd",
+  "design_dependency": "Referenced by hash 77d1b42698219470fc4e3a0c0427927683bdb34e5888cd9abd60a430812895c1; not nested"
+}

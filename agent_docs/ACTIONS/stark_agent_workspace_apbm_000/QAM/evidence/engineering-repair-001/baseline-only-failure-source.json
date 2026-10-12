@@ -1,0 +1,10 @@
+{
+  "src/__tests__/admin/AddMemberForm.test.tsx": {
+    "sha256": "3b0b12f283c31dc28de3025b6e1ea20b0d6994693a1087d2f0e4aacdbf132761",
+    "unchanged_from_parent": true
+  },
+  "src/app/(admin)/admin-portal/add-member/AddMemberForm.tsx": {
+    "sha256": "b89690cdb0f50937d6b51a6a902448cc851ffc29bb3552efe8072560b5f19e0a",
+    "unchanged_from_parent": true
+  }
+}

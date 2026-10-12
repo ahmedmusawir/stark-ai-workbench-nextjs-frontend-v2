@@ -1,0 +1,151 @@
+{
+  "audit": "a2_output_audit.py",
+  "at": "2026-10-11T18:02:17+06:00",
+  "build_exit": 0,
+  "build_id": "QWT8ECmIa187SCzTCHuq2",
+  "fresh": true,
+  "prebuild": {
+    "dotnext_present": true,
+    "top_level": [
+      "dev"
+    ],
+    "file_count": 422,
+    "build_id": null,
+    "next_env_sha256": "0f70629890b72a0a82e91972cc032c04b658b26c265373cb711cf576bfbf8fcc",
+    "tsconfig_sha256": "03bb7219e7d5584c420f3ead31c20e998d5b9380a4c051c6a3d67e1237944ce0",
+    "env_local_present": true,
+    "note": "Pre-existing .next is generated output (not owned by this attempt). Recorded before any build; not counted as this build."
+  },
+  "manifests": {
+    "build-manifest.json": {
+      "sha256": "18bcf4d248bee2c76073e48a52ccb88913edb122d5a69048c1c038466591b467",
+      "bytes": 579
+    },
+    "app-path-routes-manifest.json": {
+      "sha256": "95fc54f424ce8b365c92f025eeb0dc3ed17dbf887d7fe79f34a577f7ad1e5bc8",
+      "bytes": 1375
+    },
+    "routes-manifest.json": {
+      "sha256": "806801671fe6344569d48f4203419bdaafe1854cdb7af9a35e4ddc5ddad67458",
+      "bytes": 5967
+    },
+    "prerender-manifest.json": {
+      "sha256": "455f3ab7491a39ac90209421c704ac4f90104ecd8a5aa8867f35950f434b2ce9",
+      "bytes": 4872
+    },
+    "required-server-files.json": {
+      "sha256": "85b861214ec3745067d146aa111f3bdcc7e4a75e91c3e904e63049f88ff16463",
+      "bytes": 9425
+    },
+    "server/app-paths-manifest.json": {
+      "sha256": "79d51e60f7a44517b952cb9b677a33ab210ea15bf4178c059e209e38878f5a0f",
+      "bytes": 1818
+    },
+    "server/middleware-manifest.json": {
+      "sha256": "3e662212864bc4c124cfc53fa5d428813c619852b447c9fd2d9926cd39d7a4a6",
+      "bytes": 83
+    }
+  },
+  "chat_route": {
+    "/(cyberize)/chat/page": "/chat"
+  },
+  "marker_scan": {
+    "files_scanned": 464,
+    "fresh_files": 464,
+    "stale_files_in_scan_dirs": 0,
+    "marker_hits": [],
+    "forbidden_import_hits": []
+  },
+  "seeded_control": {
+    "marker_flagged": true,
+    "forbidden_flagged": true
+  },
+  "auth_relation": {
+    "source_layout_calls_protectPage": true,
+    "compiled_chat_page": [
+      ".next/server/app/(cyberize)/chat/page.js"
+    ],
+    "compiled_references_auth_redirect": [
+      ".next/server/app/(admin)/admin-portal/add-member/page/server-reference-manifest.json",
+      ".next/server/app/(admin)/admin-portal/edit/[id]/page/server-reference-manifest.json",
+      ".next/server/app/(admin)/admin-portal/page/server-reference-manifest.json",
+      ".next/server/app/(admin)/profile/page/server-reference-manifest.json",
+      ".next/server/app/(cyberize)/chat/page/server-reference-manifest.json",
+      ".next/server/app/(cyberize)/mission-control/page/server-reference-manifest.json",
+      ".next/server/app/(members)/members-portal/page/server-reference-manifest.json",
+      ".next/server/app/(members)/members-portal/profile/page/server-reference-manifest.json",
+      ".next/server/app/(superadmin)/superadmin-portal/add-user/page/server-reference-manifest.json",
+      ".next/server/app/(superadmin)/superadmin-portal/edit/[id]/page/server-reference-manifest.json",
+      ".next/server/app/(superadmin)/superadmin-portal/page/server-reference-manifest.json",
+      ".next/server/chunks/ssr/[root-of-the-server]__00g63fn._.js",
+      ".next/server/chunks/ssr/[root-of-the-server]__0c-xiu9._.js",
+      ".next/server/chunks/ssr/[root-of-the-server]__0z30i~v._.js",
+      ".next/server/chunks/ssr/[root-of-the-server]__12u0zqi._.js",
+      ".next/server/chunks/ssr/_01o.c54._.js",
+      ".next/server/chunks/ssr/_01rj4ua._.js",
+      ".next/server/chunks/ssr/_04oveyb._.js",
+      ".next/server/chunks/ssr/_056.ig1._.js",
+      ".next/server/chunks/ssr/_08four5._.js"
+    ]
+  },
+  "fonts": {
+    "committed": {
+      "inter-cyrillic-ext.woff2": "fccca918fea40089dacadc7045861314d1a6bc91f1f323cc1eeb22ebcdb321b5",
+      "inter-greek-ext.woff2": "a2e2c783ca6f9c20486e81e72a279203e86730bbf8f01ff6a5ee9dbd09e1c271",
+      "inter-latin.woff2": "c940764593d0fe5d596be327ca7558855e018039fb78509aa21921fd3644c3e4",
+      "inter-greek.woff2": "46dd4cdca58c26ae87cc6927657bf83b2e8abfc39ffd0ab176e301a8d28d22bf",
+      "inter-vietnamese.woff2": "8db00ff46c67b22cda8bed865acf7077651cac8d2841d5b40980556b48961931",
+      "inter-latin-ext.woff2": "a28eb6d3ccb534ae0c94ca999371df024aab60b08c3c8a5720ee9e32fa0faaa2",
+      "inter-cyrillic.woff2": "aebf2ab4a4ce6810d73c1ac7be7cafb4e5ec4cee2d6db5fb3e09691747ec4bd6"
+    },
+    "emitted_woff2": {
+      "static/media/inter-cyrillic.0m6w47a4e5dy9.woff2": "aebf2ab4a4ce6810d73c1ac7be7cafb4e5ec4cee2d6db5fb3e09691747ec4bd6",
+      "static/media/inter-greek-ext.11u06r12fd6v_.woff2": "a2e2c783ca6f9c20486e81e72a279203e86730bbf8f01ff6a5ee9dbd09e1c271",
+      "static/media/inter-vietnamese.067x_6k0k23tk.woff2": "8db00ff46c67b22cda8bed865acf7077651cac8d2841d5b40980556b48961931",
+      "static/media/inter-latin-ext.16ipb6fqu393i.woff2": "a28eb6d3ccb534ae0c94ca999371df024aab60b08c3c8a5720ee9e32fa0faaa2",
+      "static/media/inter-latin.0q-301v4kxxnr.woff2": "c940764593d0fe5d596be327ca7558855e018039fb78509aa21921fd3644c3e4",
+      "static/media/inter-cyrillic-ext.0bjc5tiuqdqro.woff2": "fccca918fea40089dacadc7045861314d1a6bc91f1f323cc1eeb22ebcdb321b5",
+      "static/media/inter-greek.0wxq9webf.ew4.woff2": "46dd4cdca58c26ae87cc6927657bf83b2e8abfc39ffd0ab176e301a8d28d22bf"
+    },
+    "committed_emitted_byte_equal": {
+      "inter-cyrillic-ext.woff2": true,
+      "inter-greek-ext.woff2": true,
+      "inter-latin.woff2": true,
+      "inter-greek.woff2": true,
+      "inter-vietnamese.woff2": true,
+      "inter-latin-ext.woff2": true,
+      "inter-cyrillic.woff2": true
+    },
+    "css_files": [
+      ".next/static/chunks/02ka9fjun9ug1.css",
+      ".next/static/chunks/0gdq87r4~7rnf.css"
+    ],
+    "inter_faces": 7,
+    "each_subset_resolved_by_css": {
+      "inter-cyrillic-ext.woff2": true,
+      "inter-greek-ext.woff2": true,
+      "inter-latin.woff2": true,
+      "inter-greek.woff2": true,
+      "inter-vietnamese.woff2": true,
+      "inter-latin-ext.woff2": true,
+      "inter-cyrillic.woff2": true
+    },
+    "fallback_face_present": true
+  },
+  "font_preload": {
+    "html_files": 52,
+    "files_with_font_preload": [],
+    "note": "next/font automatic Latin preload removed by the repair; recorded, not graded"
+  },
+  "verdict": {
+    "fresh_build": true,
+    "chat_route": true,
+    "auth_guard_source": true,
+    "no_markers": true,
+    "no_forbidden_imports": true,
+    "seeded_control_flagged": true,
+    "fonts_byte_equal": true,
+    "css_resolves_all_subsets": true,
+    "all": true
+  }
+}

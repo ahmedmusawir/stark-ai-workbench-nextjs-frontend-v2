@@ -1,0 +1,21 @@
+RECOVERY.md
+next-env.d.ts
+session_2026-10-11.md
+agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/session_2026-10-11.md
+agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/QAM_TEST_PLAN.md
+agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/HANDOFFS/LEAD_INTAKE_VERIFICATION_2026-10-11.json
+agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/HANDOFFS/DIRECTOR_Q2_RELEASE_002_BINDING_2026-10-11.json
+agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/HANDOFFS/RETEST_002_START_HERE.md
+agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/HANDOFFS/QAM_TEST_PLAN_v0.2_PRESERVED_2026-10-11.md
+agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/HANDOFFS/LEAD_RETEST_002_BINDING_2026-10-11.json
+agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/HANDOFFS/DIRECTOR_RELEASE_002_DRAFT.txt
+agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/HANDOFFS/RETEST_002_FILE_INDEX.json
+agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/HANDOFFS/CLAUDY_RETEST_002_PROMPT.txt
+agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/HANDOFFS/DIRECTOR_Q2_RELEASE_002_2026-10-11_174045_BDT.txt
+agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/HANDOFFS/LEAD_RETEST_002_APPROVAL_2026-10-11.md
+agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/FINDINGS/Q2-F02_RETEST-002.md
+agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/FINDINGS/Q2-F03_RETEST-002.md
+agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/FINDINGS/Q2-F01_RETEST-002.md
+agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/FINDINGS/Q2-F04_RETEST-002.md
+agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/FINDINGS/DIRECTOR-OBS-001_EXECUTOR-ADDENDUM-003.md
+[q2-attempt-002 evidence files: 342] [AUTOMATION files: 23]

@@ -1,0 +1,39 @@
+Architect — Q2 attempt 001 is reviewed. Gate Q is NOT ISSUED.
+
+Read the original Q2 ZIP and:
+QAM/HANDOFFS/LEAD_Q2_DISPOSITION_2026-10-07.md
+
+Candidate: f21564cacb563ecddbf78b1685086c9489bf1c26
+Execution HEAD: c4ed7042fa05fa638bdc6d4327ecba3448d44cef
+Keep Tony's cloud roster and bundle/urlEnv mappings unchanged.
+
+Return ONE bounded repair scope for Cody:
+1. F01: no-storage reset throws and prevents sign-out navigation.
+   Fix the new entry boundary if sufficient; prove state clearing
+   as well as navigation. Any protected store edit needs explicit scope.
+2. F02: drawer-to-desktop transition focuses All agents instead of
+   the current agent. Verify the selector/close-order mechanism.
+3. F03: mobile Agents breadcrumb is 40x44; requirement is >=44x44.
+4. F04: restore independent maintained bundle/urlEnv assertions
+   without restoring obsolete hardcoded agent IDs.
+
+Require focused regression tests, the full maintained test suite,
+typecheck and changelog, preserving all original failures/evidence.
+Do not expand into auth/backend redesign or live-session persistence.
+
+Also choose one concrete supported production-build route. The two
+QA mocked-font attempts failed; this is not proof Next cannot build.
+Prefer unchanged product source and font identity. Specify any needed
+product edits or QA-policy amendment explicitly. No open proxy or
+unrestricted build egress. D4 font permission and D7 optional-check
+omission already exist; do not ask Tony to choose them again.
+
+QA Lead owns the separate browser guard/error-capture, harness-layout
+and visible-focus instrument corrections. Claudy may prepare those
+under the disposition, but runs no more acceptance tests yet. One
+writer at a time. No direct product repairs by the QA Executor.
+
+After authorized Cody repair and Tony's commit, return the exact full
+candidate SHA, diff, self-verification and build route to QA Lead for
+one consolidated retest binding. Keep all new QA records in QAM.
+No Gate Q, Q5, merge, configuration reversal or live diagnostic.

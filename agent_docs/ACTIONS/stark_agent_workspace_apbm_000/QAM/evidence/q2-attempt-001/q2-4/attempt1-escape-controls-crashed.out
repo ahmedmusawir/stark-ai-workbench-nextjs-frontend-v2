@@ -1,0 +1,18 @@
+WORKSPACE_NETWORK_GUARD: blocked external request
+/home/moose/NEXTJS/stark-ai-workbench-nextjs-frontend-v2/tests/workspace/network-guard.cjs:3
+function deny(){process.stderr.write('WORKSPACE_NETWORK_GUARD: blocked external request\n');throw Error('WORKSPACE_NETWORK_GUARD: external request forbidden');}
+                                                                                                  ^
+
+Error: WORKSPACE_NETWORK_GUARD: external request forbidden
+    at deny (/home/moose/NEXTJS/stark-ai-workbench-nextjs-frontend-v2/tests/workspace/network-guard.cjs:3:99)
+    at check (/home/moose/NEXTJS/stark-ai-workbench-nextjs-frontend-v2/tests/workspace/network-guard.cjs:4:229)
+    at tls.connect (/home/moose/NEXTJS/stark-ai-workbench-nextjs-frontend-v2/tests/workspace/network-guard.cjs:6:56)
+    at Agent.createConnection (node:https:375:18)
+    at Agent.createSocket (node:_http_agent:463:26)
+    at Agent.addRequest (node:_http_agent:403:10)
+    at new ClientRequest (node:_http_client:577:16)
+    at request (node:https:684:10)
+    at Object.get (node:https:720:15)
+    at /home/moose/NEXTJS/stark-ai-workbench-nextjs-frontend-v2/agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/AUTOMATION/netns_escape_controls.cjs:5:60
+
+Node.js v26.7.0

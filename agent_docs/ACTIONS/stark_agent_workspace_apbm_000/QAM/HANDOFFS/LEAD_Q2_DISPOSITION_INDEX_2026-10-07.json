@@ -1,0 +1,20 @@
+{
+  "issued": "2026-10-07 Asia/Dhaka",
+  "gate_q": "NOT_ISSUED",
+  "source_zip_sha256": "27aec35a9e0b947f7e6c6f0f8502c9f6440aab4acff7d2fd308aa63d140ca63a",
+  "reviewed_input_members": 268,
+  "input_hash_and_size_mismatches": 0,
+  "files": [
+    {
+      "path": "QAM/HANDOFFS/ARCHITECT_Q2_REPAIR_REQUEST_2026-10-07.txt",
+      "bytes": 2024,
+      "sha256": "2c1ce0f718dd652f8144114397105892add3f03af791ee7cca539a9370e2b7c7"
+    },
+    {
+      "path": "QAM/HANDOFFS/LEAD_Q2_DISPOSITION_2026-10-07.md",
+      "bytes": 12019,
+      "sha256": "d5b120e87fd56b214a7cf32b64433b7c6f8b0f608c2e16937e33052eccc6b94a"
+    }
+  ],
+  "note": "Index excludes its own hash. Merge QAM contents into module QAM; preserve existing evidence. Files are prepared, not installed in VM repository."
+}

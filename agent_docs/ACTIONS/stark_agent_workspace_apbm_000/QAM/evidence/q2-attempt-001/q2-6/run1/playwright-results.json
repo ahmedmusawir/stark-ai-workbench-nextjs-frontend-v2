@@ -1,0 +1,1767 @@
+{
+  "config": {
+    "configFile": "/home/moose/NEXTJS/stark-ai-workbench-nextjs-frontend-v2/agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/AUTOMATION/playwright.qa.config.ts",
+    "rootDir": "/home/moose/NEXTJS/stark-ai-workbench-nextjs-frontend-v2/agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/AUTOMATION/specs",
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "/home/moose/NEXTJS/stark-ai-workbench-nextjs-frontend-v2/agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-001/q2-6/run1/artifacts",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "",
+        "name": "",
+        "testDir": "/home/moose/NEXTJS/stark-ai-workbench-nextjs-frontend-v2/agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/AUTOMATION/specs",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 60000
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "list",
+        null
+      ],
+      [
+        "json",
+        {
+          "outputFile": "/home/moose/NEXTJS/stark-ai-workbench-nextjs-frontend-v2/agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-001/q2-6/run1/playwright-results.json"
+        }
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "missing",
+    "updateSourceMethod": "patch",
+    "version": "1.59.1",
+    "workers": 1,
+    "webServer": {
+      "command": "node /home/moose/NEXTJS/stark-ai-workbench-nextjs-frontend-v2/agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/AUTOMATION/qa-harness.cjs",
+      "cwd": "/home/moose/NEXTJS/stark-ai-workbench-nextjs-frontend-v2",
+      "url": "http://127.0.0.1:43181/",
+      "reuseExistingServer": false,
+      "timeout": 120000,
+      "env": {
+        "QA_PORT": "43181",
+        "NODE_OPTIONS": ""
+      }
+    }
+  },
+  "suites": [
+    {
+      "title": "s01_04_directory_nav_recents.spec.ts",
+      "file": "s01_04_directory_nav_recents.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "S-01 directory filter is local, case-insensitive over name+description; distinct no-results; no service calls",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 2163,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-07T13:24:51.158Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "d5577b42770dfc1aa3a4-dca947369cbd41ce4f9c",
+          "file": "s01_04_directory_nav_recents.spec.ts",
+          "line": 4,
+          "column": 5
+        },
+        {
+          "title": "S-01 empty / loading / unavailable roster are distinct and fabricate nothing",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 6104,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByText('Loading agents…')\nExpected: visible\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByText('Loading agents…')\u001b[22m\n",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByText('Loading agents…')\nExpected: visible\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByText('Loading agents…')\u001b[22m\n\n    at /home/moose/NEXTJS/stark-ai-workbench-nextjs-frontend-v2/agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/AUTOMATION/specs/s01_04_directory_nav_recents.spec.ts:27:78",
+                    "location": {
+                      "file": "/home/moose/NEXTJS/stark-ai-workbench-nextjs-frontend-v2/agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/AUTOMATION/specs/s01_04_directory_nav_recents.spec.ts",
+                      "column": 78,
+                      "line": 27
+                    },
+                    "snippet": "  25 |   const seen: Record<string, string> = {};\n  26 |   for (const [roster, status, text] of [['QR0', 'ready', 'No agents configured'], ['QR1', 'loading', 'Loading agents…'], ['QR1', 'unavailable', 'Agent configuration unavailable']]) {\n> 27 |     await open(page, { roster, status }); await expect(page.getByText(text)).toBeVisible();\n     |                                                                              ^\n  28 |     expect(await page.locator('.ws-agent-card').count()).toBe(0); seen[`${roster}/${status}`] = text; expect(await ledger(page)).toEqual([]);\n  29 |   }\n  30 |   record('s01-roster-states', seen);"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/home/moose/NEXTJS/stark-ai-workbench-nextjs-frontend-v2/agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/AUTOMATION/specs/s01_04_directory_nav_recents.spec.ts",
+                        "column": 78,
+                        "line": 27
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByText('Loading agents…')\nExpected: visible\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByText('Loading agents…')\u001b[22m\n\n\n  25 |   const seen: Record<string, string> = {};\n  26 |   for (const [roster, status, text] of [['QR0', 'ready', 'No agents configured'], ['QR1', 'loading', 'Loading agents…'], ['QR1', 'unavailable', 'Agent configuration unavailable']]) {\n> 27 |     await open(page, { roster, status }); await expect(page.getByText(text)).toBeVisible();\n     |                                                                              ^\n  28 |     expect(await page.locator('.ws-agent-card').count()).toBe(0); seen[`${roster}/${status}`] = text; expect(await ledger(page)).toEqual([]);\n  29 |   }\n  30 |   record('s01-roster-states', seen);\n    at /home/moose/NEXTJS/stark-ai-workbench-nextjs-frontend-v2/agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/AUTOMATION/specs/s01_04_directory_nav_recents.spec.ts:27:78"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-07T13:24:55.245Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/home/moose/NEXTJS/stark-ai-workbench-nextjs-frontend-v2/agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-001/q2-6/run1/artifacts/s01_04_directory_nav_recen-47e12-tinct-and-fabricate-nothing/error-context.md"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/home/moose/NEXTJS/stark-ai-workbench-nextjs-frontend-v2/agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/AUTOMATION/specs/s01_04_directory_nav_recents.spec.ts",
+                    "column": 78,
+                    "line": 27
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "d5577b42770dfc1aa3a4-ce74c51573b97b7f469d",
+          "file": "s01_04_directory_nav_recents.spec.ts",
+          "line": 24,
+          "column": 5
+        },
+        {
+          "title": "S-02 alternate rosters use the same components; neutral fallbacks; approved roster renders exactly",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 6142,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: locator('.ws-agent-card').filter({ hasText: 'ATLAS mixed Case' }).locator('p')\nExpected: \u001b[32m\"Configured agent workspace.\"\u001b[39m\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toHaveText\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('.ws-agent-card').filter({ hasText: 'ATLAS mixed Case' }).locator('p')\u001b[22m\n",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: locator('.ws-agent-card').filter({ hasText: 'ATLAS mixed Case' }).locator('p')\nExpected: \u001b[32m\"Configured agent workspace.\"\u001b[39m\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toHaveText\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('.ws-agent-card').filter({ hasText: 'ATLAS mixed Case' }).locator('p')\u001b[22m\n\n    at /home/moose/NEXTJS/stark-ai-workbench-nextjs-frontend-v2/agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/AUTOMATION/specs/s01_04_directory_nav_recents.spec.ts:37:94",
+                    "location": {
+                      "file": "/home/moose/NEXTJS/stark-ai-workbench-nextjs-frontend-v2/agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/AUTOMATION/specs/s01_04_directory_nav_recents.spec.ts",
+                      "column": 94,
+                      "line": 37
+                    },
+                    "snippet": "  35 |   await expect(page.locator('.ws-agent-card')).toHaveCount(1); await expect(page.locator('.ws-agent-card p')).toHaveText('Configured agent workspace.');\n  36 |   await open(page, { roster: 'QR1' });\n> 37 |   await expect(page.locator('.ws-agent-card', { hasText: 'ATLAS mixed Case' }).locator('p')).toHaveText('Configured agent workspace.');\n     |                                                                                              ^\n  38 |   await open(page, { roster: 'R6' });\n  39 |   const names = await page.locator('.ws-agent-card h2').allInnerTexts();\n  40 |   expect(names).toEqual(['Greeting Agent', 'Jarvis', 'Calc Agent', 'Product Agent', 'GHL CRM Agent', 'MOOSE CRM Agent']);"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/home/moose/NEXTJS/stark-ai-workbench-nextjs-frontend-v2/agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/AUTOMATION/specs/s01_04_directory_nav_recents.spec.ts",
+                        "column": 94,
+                        "line": 37
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: locator('.ws-agent-card').filter({ hasText: 'ATLAS mixed Case' }).locator('p')\nExpected: \u001b[32m\"Configured agent workspace.\"\u001b[39m\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toHaveText\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('.ws-agent-card').filter({ hasText: 'ATLAS mixed Case' }).locator('p')\u001b[22m\n\n\n  35 |   await expect(page.locator('.ws-agent-card')).toHaveCount(1); await expect(page.locator('.ws-agent-card p')).toHaveText('Configured agent workspace.');\n  36 |   await open(page, { roster: 'QR1' });\n> 37 |   await expect(page.locator('.ws-agent-card', { hasText: 'ATLAS mixed Case' }).locator('p')).toHaveText('Configured agent workspace.');\n     |                                                                                              ^\n  38 |   await open(page, { roster: 'R6' });\n  39 |   const names = await page.locator('.ws-agent-card h2').allInnerTexts();\n  40 |   expect(names).toEqual(['Greeting Agent', 'Jarvis', 'Calc Agent', 'Product Agent', 'GHL CRM Agent', 'MOOSE CRM Agent']);\n    at /home/moose/NEXTJS/stark-ai-workbench-nextjs-frontend-v2/agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/AUTOMATION/specs/s01_04_directory_nav_recents.spec.ts:37:94"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-07T13:25:02.276Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/home/moose/NEXTJS/stark-ai-workbench-nextjs-frontend-v2/agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-001/q2-6/run1/artifacts/s01_04_directory_nav_recen-95c36-oved-roster-renders-exactly/error-context.md"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/home/moose/NEXTJS/stark-ai-workbench-nextjs-frontend-v2/agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/AUTOMATION/specs/s01_04_directory_nav_recents.spec.ts",
+                    "column": 94,
+                    "line": 37
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "d5577b42770dfc1aa3a4-dde6871dc1aec588f511",
+          "file": "s01_04_directory_nav_recents.spec.ts",
+          "line": 33,
+          "column": 5
+        },
+        {
+          "title": "S-03 view identity: directory→workspace→conversation→draft, Back×3/Forward×3; encoded IDs",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 2295,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoContainText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: getByRole('heading', { level: 1 })\nExpected substring: \u001b[32m\"Very long agent name\"\u001b[39m\nError: strict mode violation: getByRole('heading', { level: 1 }) resolved to 2 elements:\n    1) <h1>Sibling heading</h1> aka getByRole('heading', { name: 'Sibling heading' })\n    2) <h1>Very long agent name Very long agent name Very lo…</h1> aka getByRole('heading', { name: 'Very long agent name Very' })\n\nCall log:\n\u001b[2m  - Expect \"toContainText\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('heading', { level: 1 })\u001b[22m\n",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoContainText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: getByRole('heading', { level: 1 })\nExpected substring: \u001b[32m\"Very long agent name\"\u001b[39m\nError: strict mode violation: getByRole('heading', { level: 1 }) resolved to 2 elements:\n    1) <h1>Sibling heading</h1> aka getByRole('heading', { name: 'Sibling heading' })\n    2) <h1>Very long agent name Very long agent name Very lo…</h1> aka getByRole('heading', { name: 'Very long agent name Very' })\n\nCall log:\n\u001b[2m  - Expect \"toContainText\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('heading', { level: 1 })\u001b[22m\n\n    at /home/moose/NEXTJS/stark-ai-workbench-nextjs-frontend-v2/agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/AUTOMATION/specs/s01_04_directory_nav_recents.spec.ts:62:91",
+                    "location": {
+                      "file": "/home/moose/NEXTJS/stark-ai-workbench-nextjs-frontend-v2/agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/AUTOMATION/specs/s01_04_directory_nav_recents.spec.ts",
+                      "column": 91,
+                      "line": 62
+                    },
+                    "snippet": "  60 |   await expect(page.getByText('Chat with Kestrel Ops')).toBeVisible();\n  61 |   for (const [q, name] of [['agent=a%26b%3Dc', 'Very long agent name'], ['agent=x%2F..%2Fy', 'Path Agent'], ['agent=%C3%BCn%C3%AF-%C5%9D', 'Unicode Agent'], ['agent=spaced+id', 'ATLAS mixed Case']]) {\n> 62 |     await open(page, { query: q }); await expect(page.getByRole('heading', { level: 1 })).toContainText(name);\n     |                                                                                           ^\n  63 |   }\n  64 |   record('s03-history-steps', steps);\n  65 | });"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/home/moose/NEXTJS/stark-ai-workbench-nextjs-frontend-v2/agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/AUTOMATION/specs/s01_04_directory_nav_recents.spec.ts",
+                        "column": 91,
+                        "line": 62
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoContainText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: getByRole('heading', { level: 1 })\nExpected substring: \u001b[32m\"Very long agent name\"\u001b[39m\nError: strict mode violation: getByRole('heading', { level: 1 }) resolved to 2 elements:\n    1) <h1>Sibling heading</h1> aka getByRole('heading', { name: 'Sibling heading' })\n    2) <h1>Very long agent name Very long agent name Very lo…</h1> aka getByRole('heading', { name: 'Very long agent name Very' })\n\nCall log:\n\u001b[2m  - Expect \"toContainText\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('heading', { level: 1 })\u001b[22m\n\n\n  60 |   await expect(page.getByText('Chat with Kestrel Ops')).toBeVisible();\n  61 |   for (const [q, name] of [['agent=a%26b%3Dc', 'Very long agent name'], ['agent=x%2F..%2Fy', 'Path Agent'], ['agent=%C3%BCn%C3%AF-%C5%9D', 'Unicode Agent'], ['agent=spaced+id', 'ATLAS mixed Case']]) {\n> 62 |     await open(page, { query: q }); await expect(page.getByRole('heading', { level: 1 })).toContainText(name);\n     |                                                                                           ^\n  63 |   }\n  64 |   record('s03-history-steps', steps);\n  65 | });\n    at /home/moose/NEXTJS/stark-ai-workbench-nextjs-frontend-v2/agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/AUTOMATION/specs/s01_04_directory_nav_recents.spec.ts:62:91"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-07T13:25:09.964Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/home/moose/NEXTJS/stark-ai-workbench-nextjs-frontend-v2/agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-001/q2-6/run1/artifacts/s01_04_directory_nav_recen-76761-ack×3-Forward×3-encoded-IDs/error-context.md"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/home/moose/NEXTJS/stark-ai-workbench-nextjs-frontend-v2/agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/AUTOMATION/specs/s01_04_directory_nav_recents.spec.ts",
+                    "column": 91,
+                    "line": 62
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "d5577b42770dfc1aa3a4-cbf0ecb7992956f7987a",
+          "file": "s01_04_directory_nav_recents.spec.ts",
+          "line": 47,
+          "column": 5
+        },
+        {
+          "title": "S-03 invalid/contradictory selectors: safe unavailable state, zero service calls",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 3,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 5056,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-07T13:25:13.646Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "d5577b42770dfc1aa3a4-9de6a836bff4604a94f2",
+          "file": "s01_04_directory_nav_recents.spec.ts",
+          "line": 67,
+          "column": 5
+        },
+        {
+          "title": "S-04 recents: ready/empty/loading/unavailable/partial/recovered are distinct; retry and recovery make no writes",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 3,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 1292,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeGreaterThan\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected: > \u001b[32m0\u001b[39m\nReceived:   \u001b[31m0\u001b[39m",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeGreaterThan\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected: > \u001b[32m0\u001b[39m\nReceived:   \u001b[31m0\u001b[39m\n    at resolveLast (/home/moose/NEXTJS/stark-ai-workbench-nextjs-frontend-v2/agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/AUTOMATION/specs/_qa.ts:32:146)\n    at /home/moose/NEXTJS/stark-ai-workbench-nextjs-frontend-v2/agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/AUTOMATION/specs/s01_04_directory_nav_recents.spec.ts:79:49",
+                    "location": {
+                      "file": "/home/moose/NEXTJS/stark-ai-workbench-nextjs-frontend-v2/agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/AUTOMATION/specs/_qa.ts",
+                      "column": 146,
+                      "line": 32
+                    },
+                    "snippet": "   at _qa.ts:32\n\n  30 | export const count = async (page: Page, action: string) => (await ledger(page)).filter(c => c.action === action).length;\n  31 | export const pendingOf = (page: Page, action: string) => page.evaluate(a => (window as any).qa.pendingOf(a) as number[], action);\n> 32 | export const resolveLast = async (page: Page, action: string, value: unknown) => { const ids = await pendingOf(page, action); expect(ids.length).toBeGreaterThan(0); await page.evaluate(([id, v]) => (window as any).qa.resolve(id, v), [ids[ids.length - 1], value] as const); };\n     |                                                                                                                                                  ^\n  33 | export const rejectLast = async (page: Page, action: string, msg: string) => { const ids = await pendingOf(page, action); expect(ids.length).toBeGreaterThan(0); await page.evaluate(([id, m]) => (window as any).qa.reject(id, m), [ids[ids.length - 1], msg] as const); };\n  34 | export const overflow = (page: Page) => page.evaluate(() => document.documentElement.scrollWidth - window.innerWidth);\n  35 | export const setTheme = (page: Page, t: 'dark' | 'light') => page.addInitScript(th => { try { localStorage.setItem('theme', th); } catch { /* */ } }, t);"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/home/moose/NEXTJS/stark-ai-workbench-nextjs-frontend-v2/agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/AUTOMATION/specs/_qa.ts",
+                        "column": 146,
+                        "line": 32
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeGreaterThan\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected: > \u001b[32m0\u001b[39m\nReceived:   \u001b[31m0\u001b[39m\n\n   at _qa.ts:32\n\n  30 | export const count = async (page: Page, action: string) => (await ledger(page)).filter(c => c.action === action).length;\n  31 | export const pendingOf = (page: Page, action: string) => page.evaluate(a => (window as any).qa.pendingOf(a) as number[], action);\n> 32 | export const resolveLast = async (page: Page, action: string, value: unknown) => { const ids = await pendingOf(page, action); expect(ids.length).toBeGreaterThan(0); await page.evaluate(([id, v]) => (window as any).qa.resolve(id, v), [ids[ids.length - 1], value] as const); };\n     |                                                                                                                                                  ^\n  33 | export const rejectLast = async (page: Page, action: string, msg: string) => { const ids = await pendingOf(page, action); expect(ids.length).toBeGreaterThan(0); await page.evaluate(([id, m]) => (window as any).qa.reject(id, m), [ids[ids.length - 1], msg] as const); };\n  34 | export const overflow = (page: Page) => page.evaluate(() => document.documentElement.scrollWidth - window.innerWidth);\n  35 | export const setTheme = (page: Page, t: 'dark' | 'light') => page.addInitScript(th => { try { localStorage.setItem('theme', th); } catch { /* */ } }, t);\n    at resolveLast (/home/moose/NEXTJS/stark-ai-workbench-nextjs-frontend-v2/agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/AUTOMATION/specs/_qa.ts:32:146)\n    at /home/moose/NEXTJS/stark-ai-workbench-nextjs-frontend-v2/agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/AUTOMATION/specs/s01_04_directory_nav_recents.spec.ts:79:49"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-07T13:25:19.214Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/home/moose/NEXTJS/stark-ai-workbench-nextjs-frontend-v2/agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-001/q2-6/run1/artifacts/s01_04_directory_nav_recen-65b38-and-recovery-make-no-writes/error-context.md"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/home/moose/NEXTJS/stark-ai-workbench-nextjs-frontend-v2/agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/AUTOMATION/specs/_qa.ts",
+                    "column": 146,
+                    "line": 32
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "d5577b42770dfc1aa3a4-44071c9718ce84aecfea",
+          "file": "s01_04_directory_nav_recents.spec.ts",
+          "line": 74,
+          "column": 5
+        }
+      ]
+    },
+    {
+      "title": "s05_07_transcript_composer_draft.spec.ts",
+      "file": "s05_07_transcript_composer_draft.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "S-05 transcript: markdown/GFM/code render; no injected markup executes; long content scrolls in its own region",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 4,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 1453,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeLessThan\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected: < \u001b[32m16\u001b[39m\nReceived:   \u001b[31m16\u001b[39m",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeLessThan\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected: < \u001b[32m16\u001b[39m\nReceived:   \u001b[31m16\u001b[39m\n    at /home/moose/NEXTJS/stark-ai-workbench-nextjs-frontend-v2/agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/AUTOMATION/specs/s05_07_transcript_composer_draft.spec.ts:21:28",
+                    "location": {
+                      "file": "/home/moose/NEXTJS/stark-ai-workbench-nextjs-frontend-v2/agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/AUTOMATION/specs/s05_07_transcript_composer_draft.spec.ts",
+                      "column": 28,
+                      "line": 21
+                    },
+                    "snippet": "  19 |     expect(m.xss).toBeNull(); expect(m.scripts).toBe(0); expect(m.imgs).toBe(0); expect(m.jsLinks).toBe(0);\n  20 |     expect(m.tableScrolls).toBe(true); expect(m.codeScrolls).toBe(true); expect(m.overflow).toBeLessThanOrEqual(1); expect(m.bold).toBeGreaterThan(0);\n> 21 |     expect(m.userRightGap).toBeLessThan(m.userLeftGap); // user bubble aligned right\n     |                            ^\n  22 |   }\n  23 |   expect(errors).toEqual([]); record('s05-transcript-metrics', metrics);\n  24 |   // CONTROL: the injection detector fires when the same string is injected unsafely"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/home/moose/NEXTJS/stark-ai-workbench-nextjs-frontend-v2/agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/AUTOMATION/specs/s05_07_transcript_composer_draft.spec.ts",
+                        "column": 28,
+                        "line": 21
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeLessThan\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected: < \u001b[32m16\u001b[39m\nReceived:   \u001b[31m16\u001b[39m\n\n  19 |     expect(m.xss).toBeNull(); expect(m.scripts).toBe(0); expect(m.imgs).toBe(0); expect(m.jsLinks).toBe(0);\n  20 |     expect(m.tableScrolls).toBe(true); expect(m.codeScrolls).toBe(true); expect(m.overflow).toBeLessThanOrEqual(1); expect(m.bold).toBeGreaterThan(0);\n> 21 |     expect(m.userRightGap).toBeLessThan(m.userLeftGap); // user bubble aligned right\n     |                            ^\n  22 |   }\n  23 |   expect(errors).toEqual([]); record('s05-transcript-metrics', metrics);\n  24 |   // CONTROL: the injection detector fires when the same string is injected unsafely\n    at /home/moose/NEXTJS/stark-ai-workbench-nextjs-frontend-v2/agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/AUTOMATION/specs/s05_07_transcript_composer_draft.spec.ts:21:28"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-07T13:25:21.424Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/home/moose/NEXTJS/stark-ai-workbench-nextjs-frontend-v2/agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-001/q2-6/run1/artifacts/s05_07_transcript_composer-70d3d-t-scrolls-in-its-own-region/error-context.md"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/home/moose/NEXTJS/stark-ai-workbench-nextjs-frontend-v2/agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/AUTOMATION/specs/s05_07_transcript_composer_draft.spec.ts",
+                    "column": 28,
+                    "line": 21
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "52c21e1d80bfb60dda61-38c59fbb7beb7d9966c0",
+          "file": "s05_07_transcript_composer_draft.spec.ts",
+          "line": 4,
+          "column": 5
+        },
+        {
+          "title": "S-06 composer: whitespace rejected; single send on Enter; repeat blocked while pending; Shift+Enter newline; IME Enter ignored",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 5,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 1107,
+                  "error": {
+                    "message": "Error: locator.fill: Error: strict mode violation: getByLabel('Message') resolved to 2 elements:\n    1) <textarea rows=\"1\" id=\"_r_0_\" placeholder=\"Message Kestrel Ops…\"></textarea> aka getByRole('textbox', { name: 'Message' })\n    2) <button disabled type=\"submit\" aria-label=\"Send message\" class=\"ws-primary ws-icon\">…</button> aka getByRole('button', { name: 'Send message' })\n\nCall log:\n\u001b[2m  - waiting for getByLabel('Message')\u001b[22m\n",
+                    "stack": "Error: locator.fill: Error: strict mode violation: getByLabel('Message') resolved to 2 elements:\n    1) <textarea rows=\"1\" id=\"_r_0_\" placeholder=\"Message Kestrel Ops…\"></textarea> aka getByRole('textbox', { name: 'Message' })\n    2) <button disabled type=\"submit\" aria-label=\"Send message\" class=\"ws-primary ws-icon\">…</button> aka getByRole('button', { name: 'Send message' })\n\nCall log:\n\u001b[2m  - waiting for getByLabel('Message')\u001b[22m\n\n    at /home/moose/NEXTJS/stark-ai-workbench-nextjs-frontend-v2/agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/AUTOMATION/specs/s05_07_transcript_composer_draft.spec.ts:32:13",
+                    "location": {
+                      "file": "/home/moose/NEXTJS/stark-ai-workbench-nextjs-frontend-v2/agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/AUTOMATION/specs/s05_07_transcript_composer_draft.spec.ts",
+                      "column": 13,
+                      "line": 32
+                    },
+                    "snippet": "  30 |   await open(page, { query: 'agent=kestrel&new=1', preset: P.rows });\n  31 |   const box = page.getByLabel('Message'), sendBtn = page.getByRole('button', { name: 'Send message' });\n> 32 |   await box.fill('   \\n  '); await expect(sendBtn).toBeDisabled(); await box.press('Enter'); expect(await count(page, 'send')).toBe(0);\n     |             ^\n  33 |   await box.fill('line one'); await box.press('Shift+Enter'); await box.pressSequentially('line two'); expect(await box.inputValue()).toBe('line one\\nline two'); expect(await count(page, 'send')).toBe(0);\n  34 |   await box.fill('ime text'); await box.evaluate(el => el.dispatchEvent(new KeyboardEvent('keydown', { key: 'Enter', bubbles: true, isComposing: true })));\n  35 |   await box.evaluate(el => { const e = new KeyboardEvent('keydown', { key: 'Enter', bubbles: true, cancelable: true }); Object.defineProperty(e, 'keyCode', { get: () => 229 }); el.dispatchEvent(e); });"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/home/moose/NEXTJS/stark-ai-workbench-nextjs-frontend-v2/agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/AUTOMATION/specs/s05_07_transcript_composer_draft.spec.ts",
+                        "column": 13,
+                        "line": 32
+                      },
+                      "message": "Error: locator.fill: Error: strict mode violation: getByLabel('Message') resolved to 2 elements:\n    1) <textarea rows=\"1\" id=\"_r_0_\" placeholder=\"Message Kestrel Ops…\"></textarea> aka getByRole('textbox', { name: 'Message' })\n    2) <button disabled type=\"submit\" aria-label=\"Send message\" class=\"ws-primary ws-icon\">…</button> aka getByRole('button', { name: 'Send message' })\n\nCall log:\n\u001b[2m  - waiting for getByLabel('Message')\u001b[22m\n\n\n  30 |   await open(page, { query: 'agent=kestrel&new=1', preset: P.rows });\n  31 |   const box = page.getByLabel('Message'), sendBtn = page.getByRole('button', { name: 'Send message' });\n> 32 |   await box.fill('   \\n  '); await expect(sendBtn).toBeDisabled(); await box.press('Enter'); expect(await count(page, 'send')).toBe(0);\n     |             ^\n  33 |   await box.fill('line one'); await box.press('Shift+Enter'); await box.pressSequentially('line two'); expect(await box.inputValue()).toBe('line one\\nline two'); expect(await count(page, 'send')).toBe(0);\n  34 |   await box.fill('ime text'); await box.evaluate(el => el.dispatchEvent(new KeyboardEvent('keydown', { key: 'Enter', bubbles: true, isComposing: true })));\n  35 |   await box.evaluate(el => { const e = new KeyboardEvent('keydown', { key: 'Enter', bubbles: true, cancelable: true }); Object.defineProperty(e, 'keyCode', { get: () => 229 }); el.dispatchEvent(e); });\n    at /home/moose/NEXTJS/stark-ai-workbench-nextjs-frontend-v2/agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/AUTOMATION/specs/s05_07_transcript_composer_draft.spec.ts:32:13"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-07T13:25:24.291Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/home/moose/NEXTJS/stark-ai-workbench-nextjs-frontend-v2/agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-001/q2-6/run1/artifacts/s05_07_transcript_composer-7fc0b-r-newline-IME-Enter-ignored/error-context.md"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/home/moose/NEXTJS/stark-ai-workbench-nextjs-frontend-v2/agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/AUTOMATION/specs/s05_07_transcript_composer_draft.spec.ts",
+                    "column": 13,
+                    "line": 32
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "52c21e1d80bfb60dda61-c1b51c2e2a1adfeda349",
+          "file": "s05_07_transcript_composer_draft.spec.ts",
+          "line": 29,
+          "column": 5
+        },
+        {
+          "title": "S-06 composer stays reachable at 375 with a long thread",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 6,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 1439,
+                  "error": {
+                    "message": "Error: locator.boundingBox: Error: strict mode violation: getByLabel('Message') resolved to 5 elements:\n    1) <button type=\"button\" title=\"Copy message\" aria-label=\"Copy message\">…</button> aka getByRole('button', { name: 'Copy message' }).first()\n    2) <div tabindex=\"0\" role=\"region\" aria-label=\"Message table\" class=\"overflow-x-auto my-3\">…</div> aka getByRole('region', { name: 'Message table' })\n    3) <button type=\"button\" title=\"Copy message\" aria-label=\"Copy message\">…</button> aka getByRole('button', { name: 'Copy message' }).nth(1)\n    4) <textarea rows=\"1\" id=\"_r_0_\" placeholder=\"Message Kestrel Ops…\"></textarea> aka getByRole('textbox', { name: 'Message' })\n    5) <button disabled type=\"submit\" aria-label=\"Send message\" class=\"ws-primary ws-icon\">…</button> aka getByRole('button', { name: 'Send message' })\n\nCall log:\n\u001b[2m  - waiting for getByLabel('Message')\u001b[22m\n",
+                    "stack": "Error: locator.boundingBox: Error: strict mode violation: getByLabel('Message') resolved to 5 elements:\n    1) <button type=\"button\" title=\"Copy message\" aria-label=\"Copy message\">…</button> aka getByRole('button', { name: 'Copy message' }).first()\n    2) <div tabindex=\"0\" role=\"region\" aria-label=\"Message table\" class=\"overflow-x-auto my-3\">…</div> aka getByRole('region', { name: 'Message table' })\n    3) <button type=\"button\" title=\"Copy message\" aria-label=\"Copy message\">…</button> aka getByRole('button', { name: 'Copy message' }).nth(1)\n    4) <textarea rows=\"1\" id=\"_r_0_\" placeholder=\"Message Kestrel Ops…\"></textarea> aka getByRole('textbox', { name: 'Message' })\n    5) <button disabled type=\"submit\" aria-label=\"Send message\" class=\"ws-primary ws-icon\">…</button> aka getByRole('button', { name: 'Send message' })\n\nCall log:\n\u001b[2m  - waiting for getByLabel('Message')\u001b[22m\n\n    at /home/moose/NEXTJS/stark-ai-workbench-nextjs-frontend-v2/agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/AUTOMATION/specs/s05_07_transcript_composer_draft.spec.ts:48:46",
+                    "location": {
+                      "file": "/home/moose/NEXTJS/stark-ai-workbench-nextjs-frontend-v2/agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/AUTOMATION/specs/s05_07_transcript_composer_draft.spec.ts",
+                      "column": 46,
+                      "line": 48
+                    },
+                    "snippet": "  46 | test('S-06 composer stays reachable at 375 with a long thread', async ({ page }) => {\n  47 |   await page.setViewportSize({ width: 375, height: 700 }); await open(page, { query: 'agent=kestrel&session=A', preset: stressPreset });\n> 48 |   const b = await page.getByLabel('Message').boundingBox(); expect(b).not.toBeNull(); expect(b!.y + b!.height).toBeLessThanOrEqual(700); expect(b!.y).toBeGreaterThan(0);\n     |                                              ^\n  49 | });\n  50 |\n  51 | test('S-07 New Chat: fresh local draft, clears old draft, no create/run before send; returned ID binds once; late result never hijacks', async ({ page }) => {"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/home/moose/NEXTJS/stark-ai-workbench-nextjs-frontend-v2/agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/AUTOMATION/specs/s05_07_transcript_composer_draft.spec.ts",
+                        "column": 46,
+                        "line": 48
+                      },
+                      "message": "Error: locator.boundingBox: Error: strict mode violation: getByLabel('Message') resolved to 5 elements:\n    1) <button type=\"button\" title=\"Copy message\" aria-label=\"Copy message\">…</button> aka getByRole('button', { name: 'Copy message' }).first()\n    2) <div tabindex=\"0\" role=\"region\" aria-label=\"Message table\" class=\"overflow-x-auto my-3\">…</div> aka getByRole('region', { name: 'Message table' })\n    3) <button type=\"button\" title=\"Copy message\" aria-label=\"Copy message\">…</button> aka getByRole('button', { name: 'Copy message' }).nth(1)\n    4) <textarea rows=\"1\" id=\"_r_0_\" placeholder=\"Message Kestrel Ops…\"></textarea> aka getByRole('textbox', { name: 'Message' })\n    5) <button disabled type=\"submit\" aria-label=\"Send message\" class=\"ws-primary ws-icon\">…</button> aka getByRole('button', { name: 'Send message' })\n\nCall log:\n\u001b[2m  - waiting for getByLabel('Message')\u001b[22m\n\n\n  46 | test('S-06 composer stays reachable at 375 with a long thread', async ({ page }) => {\n  47 |   await page.setViewportSize({ width: 375, height: 700 }); await open(page, { query: 'agent=kestrel&session=A', preset: stressPreset });\n> 48 |   const b = await page.getByLabel('Message').boundingBox(); expect(b).not.toBeNull(); expect(b!.y + b!.height).toBeLessThanOrEqual(700); expect(b!.y).toBeGreaterThan(0);\n     |                                              ^\n  49 | });\n  50 |\n  51 | test('S-07 New Chat: fresh local draft, clears old draft, no create/run before send; returned ID binds once; late result never hijacks', async ({ page }) => {\n    at /home/moose/NEXTJS/stark-ai-workbench-nextjs-frontend-v2/agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/AUTOMATION/specs/s05_07_transcript_composer_draft.spec.ts:48:46"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-07T13:25:26.833Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/home/moose/NEXTJS/stark-ai-workbench-nextjs-frontend-v2/agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-001/q2-6/run1/artifacts/s05_07_transcript_composer-cbaa3-e-at-375-with-a-long-thread/error-context.md"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/home/moose/NEXTJS/stark-ai-workbench-nextjs-frontend-v2/agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/AUTOMATION/specs/s05_07_transcript_composer_draft.spec.ts",
+                    "column": 46,
+                    "line": 48
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "52c21e1d80bfb60dda61-277a9935467c1fcde9ed",
+          "file": "s05_07_transcript_composer_draft.spec.ts",
+          "line": 46,
+          "column": 5
+        },
+        {
+          "title": "S-07 New Chat: fresh local draft, clears old draft, no create/run before send; returned ID binds once; late result never hijacks",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 7,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 1268,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveValue\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: getByLabel('Message')\nExpected: \u001b[32m\"\"\u001b[39m\nError: strict mode violation: getByLabel('Message') resolved to 2 elements:\n    1) <textarea rows=\"1\" id=\"_r_e_\" placeholder=\"Message Kestrel Ops…\"></textarea> aka getByRole('textbox', { name: 'Message' })\n    2) <button disabled type=\"submit\" aria-label=\"Send message\" class=\"ws-primary ws-icon\">…</button> aka getByRole('button', { name: 'Send message' })\n\nCall log:\n\u001b[2m  - Expect \"toHaveValue\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByLabel('Message')\u001b[22m\n",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveValue\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: getByLabel('Message')\nExpected: \u001b[32m\"\"\u001b[39m\nError: strict mode violation: getByLabel('Message') resolved to 2 elements:\n    1) <textarea rows=\"1\" id=\"_r_e_\" placeholder=\"Message Kestrel Ops…\"></textarea> aka getByRole('textbox', { name: 'Message' })\n    2) <button disabled type=\"submit\" aria-label=\"Send message\" class=\"ws-primary ws-icon\">…</button> aka getByRole('button', { name: 'Send message' })\n\nCall log:\n\u001b[2m  - Expect \"toHaveValue\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByLabel('Message')\u001b[22m\n\n    at /home/moose/NEXTJS/stark-ai-workbench-nextjs-frontend-v2/agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/AUTOMATION/specs/s05_07_transcript_composer_draft.spec.ts:55:126",
+                    "location": {
+                      "file": "/home/moose/NEXTJS/stark-ai-workbench-nextjs-frontend-v2/agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/AUTOMATION/specs/s05_07_transcript_composer_draft.spec.ts",
+                      "column": 126,
+                      "line": 55
+                    },
+                    "snippet": "  53 |   await page.getByLabel('Start a new conversation').fill('unsent workspace draft');\n  54 |   await page.locator('.ws-desktop').getByRole('button', { name: 'New chat' }).click();\n> 55 |   await expect.poll(() => new URL(page.url()).search).toBe('?agent=kestrel&new=1'); await expect(page.getByLabel('Message')).toHaveValue('');\n     |                                                                                                                              ^\n  56 |   await page.getByLabel('Message').fill('draft one'); await page.locator('.ws-desktop').getByRole('button', { name: 'New chat' }).click();\n  57 |   await expect(page.getByLabel('Message')).toHaveValue(''); expect(await count(page, 'send')).toBe(0);\n  58 |   const listBefore = await count(page, 'list');"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/home/moose/NEXTJS/stark-ai-workbench-nextjs-frontend-v2/agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/AUTOMATION/specs/s05_07_transcript_composer_draft.spec.ts",
+                        "column": 126,
+                        "line": 55
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveValue\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: getByLabel('Message')\nExpected: \u001b[32m\"\"\u001b[39m\nError: strict mode violation: getByLabel('Message') resolved to 2 elements:\n    1) <textarea rows=\"1\" id=\"_r_e_\" placeholder=\"Message Kestrel Ops…\"></textarea> aka getByRole('textbox', { name: 'Message' })\n    2) <button disabled type=\"submit\" aria-label=\"Send message\" class=\"ws-primary ws-icon\">…</button> aka getByRole('button', { name: 'Send message' })\n\nCall log:\n\u001b[2m  - Expect \"toHaveValue\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByLabel('Message')\u001b[22m\n\n\n  53 |   await page.getByLabel('Start a new conversation').fill('unsent workspace draft');\n  54 |   await page.locator('.ws-desktop').getByRole('button', { name: 'New chat' }).click();\n> 55 |   await expect.poll(() => new URL(page.url()).search).toBe('?agent=kestrel&new=1'); await expect(page.getByLabel('Message')).toHaveValue('');\n     |                                                                                                                              ^\n  56 |   await page.getByLabel('Message').fill('draft one'); await page.locator('.ws-desktop').getByRole('button', { name: 'New chat' }).click();\n  57 |   await expect(page.getByLabel('Message')).toHaveValue(''); expect(await count(page, 'send')).toBe(0);\n  58 |   const listBefore = await count(page, 'list');\n    at /home/moose/NEXTJS/stark-ai-workbench-nextjs-frontend-v2/agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/AUTOMATION/specs/s05_07_transcript_composer_draft.spec.ts:55:126"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-07T13:25:29.652Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/home/moose/NEXTJS/stark-ai-workbench-nextjs-frontend-v2/agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-001/q2-6/run1/artifacts/s05_07_transcript_composer-1e887-e-late-result-never-hijacks/error-context.md"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/home/moose/NEXTJS/stark-ai-workbench-nextjs-frontend-v2/agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/AUTOMATION/specs/s05_07_transcript_composer_draft.spec.ts",
+                    "column": 126,
+                    "line": 55
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "52c21e1d80bfb60dda61-d47434c9f6bc00f05b75",
+          "file": "s05_07_transcript_composer_draft.spec.ts",
+          "line": 51,
+          "column": 5
+        }
+      ]
+    },
+    {
+      "title": "s08_11_states_mutations.spec.ts",
+      "file": "s08_11_states_mutations.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "S-08 missing / unavailable / access-unavailable are distinct from empty with constrained actions",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 8,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 6346,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByRole('heading', { name: 'Conversation not found' })\nExpected: visible\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('heading', { name: 'Conversation not found' })\u001b[22m\n",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByRole('heading', { name: 'Conversation not found' })\nExpected: visible\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('heading', { name: 'Conversation not found' })\u001b[22m\n\n    at /home/moose/NEXTJS/stark-ai-workbench-nextjs-frontend-v2/agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/AUTOMATION/specs/s08_11_states_mutations.spec.ts:13:79",
+                    "location": {
+                      "file": "/home/moose/NEXTJS/stark-ai-workbench-nextjs-frontend-v2/agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/AUTOMATION/specs/s08_11_states_mutations.spec.ts",
+                      "column": 79,
+                      "line": 13
+                    },
+                    "snippet": "  11 |   await expect(page.getByText('Chat with Kestrel Ops')).toBeVisible(); shots.empty = await main.screenshot();\n  12 |   await open(page, { query: 'agent=kestrel&session=A', preset: historyPreset(`() => ({ status: 'missing', messages: [] })`) });\n> 13 |   await expect(page.getByRole('heading', { name: 'Conversation not found' })).toBeVisible();\n     |                                                                               ^\n  14 |   await expect(page.getByRole('button', { name: 'New conversation' })).toBeVisible(); await expect(page.getByRole('button', { name: 'Back to workspace' })).toBeVisible();\n  15 |   await expect(page.getByRole('button', { name: /Try loading again|Recreate|Restore/ })).toHaveCount(0); shots.missing = await main.screenshot();\n  16 |   await open(page, { query: 'agent=kestrel&session=A', preset: historyPreset(`() => new Error('history down')`) });"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/home/moose/NEXTJS/stark-ai-workbench-nextjs-frontend-v2/agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/AUTOMATION/specs/s08_11_states_mutations.spec.ts",
+                        "column": 79,
+                        "line": 13
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByRole('heading', { name: 'Conversation not found' })\nExpected: visible\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('heading', { name: 'Conversation not found' })\u001b[22m\n\n\n  11 |   await expect(page.getByText('Chat with Kestrel Ops')).toBeVisible(); shots.empty = await main.screenshot();\n  12 |   await open(page, { query: 'agent=kestrel&session=A', preset: historyPreset(`() => ({ status: 'missing', messages: [] })`) });\n> 13 |   await expect(page.getByRole('heading', { name: 'Conversation not found' })).toBeVisible();\n     |                                                                               ^\n  14 |   await expect(page.getByRole('button', { name: 'New conversation' })).toBeVisible(); await expect(page.getByRole('button', { name: 'Back to workspace' })).toBeVisible();\n  15 |   await expect(page.getByRole('button', { name: /Try loading again|Recreate|Restore/ })).toHaveCount(0); shots.missing = await main.screenshot();\n  16 |   await open(page, { query: 'agent=kestrel&session=A', preset: historyPreset(`() => new Error('history down')`) });\n    at /home/moose/NEXTJS/stark-ai-workbench-nextjs-frontend-v2/agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/AUTOMATION/specs/s08_11_states_mutations.spec.ts:13:79"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-07T13:25:32.259Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/home/moose/NEXTJS/stark-ai-workbench-nextjs-frontend-v2/agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-001/q2-6/run1/artifacts/s08_11_states_mutations-S--47a18-ty-with-constrained-actions/error-context.md"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/home/moose/NEXTJS/stark-ai-workbench-nextjs-frontend-v2/agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/AUTOMATION/specs/s08_11_states_mutations.spec.ts",
+                    "column": 79,
+                    "line": 13
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "01ddb5ce864b13f110f3-7ca61a8efe5d35465ee6",
+          "file": "s08_11_states_mutations.spec.ts",
+          "line": 8,
+          "column": 5
+        },
+        {
+          "title": "S-09 unknown outcome (resolved-uncertain): send paused, attempted text visible, only history inspection, never \"not sent\"",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 9,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 1224,
+                  "error": {
+                    "message": "Error: locator.fill: Error: strict mode violation: getByLabel('Message') resolved to 4 elements:\n    1) <button type=\"button\" title=\"Copy message\" aria-label=\"Copy message\">…</button> aka getByRole('button', { name: 'Copy message' }).first()\n    2) <button type=\"button\" title=\"Copy message\" aria-label=\"Copy message\">…</button> aka getByRole('button', { name: 'Copy message' }).nth(1)\n    3) <textarea rows=\"1\" id=\"_r_0_\" placeholder=\"Message Kestrel Ops…\"></textarea> aka getByRole('textbox', { name: 'Message' })\n    4) <button disabled type=\"submit\" aria-label=\"Send message\" class=\"ws-primary ws-icon\">…</button> aka getByRole('button', { name: 'Send message' })\n\nCall log:\n\u001b[2m  - waiting for getByLabel('Message')\u001b[22m\n",
+                    "stack": "Error: locator.fill: Error: strict mode violation: getByLabel('Message') resolved to 4 elements:\n    1) <button type=\"button\" title=\"Copy message\" aria-label=\"Copy message\">…</button> aka getByRole('button', { name: 'Copy message' }).first()\n    2) <button type=\"button\" title=\"Copy message\" aria-label=\"Copy message\">…</button> aka getByRole('button', { name: 'Copy message' }).nth(1)\n    3) <textarea rows=\"1\" id=\"_r_0_\" placeholder=\"Message Kestrel Ops…\"></textarea> aka getByRole('textbox', { name: 'Message' })\n    4) <button disabled type=\"submit\" aria-label=\"Send message\" class=\"ws-primary ws-icon\">…</button> aka getByRole('button', { name: 'Send message' })\n\nCall log:\n\u001b[2m  - waiting for getByLabel('Message')\u001b[22m\n\n    at /home/moose/NEXTJS/stark-ai-workbench-nextjs-frontend-v2/agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/AUTOMATION/specs/s08_11_states_mutations.spec.ts:31:38",
+                    "location": {
+                      "file": "/home/moose/NEXTJS/stark-ai-workbench-nextjs-frontend-v2/agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/AUTOMATION/specs/s08_11_states_mutations.spec.ts",
+                      "column": 38,
+                      "line": 31
+                    },
+                    "snippet": "  29 |     await open(page, { query: 'agent=kestrel&session=A', preset: P.rows });\n  30 |     await expect(page.getByText('only session A')).toBeVisible();\n> 31 |     await page.getByLabel('Message').fill(`attempt ${mode}`); await page.getByLabel('Message').press('Enter');\n     |                                      ^\n  32 |     await expect(page.getByText('Waiting for a reply')).toBeVisible();\n  33 |     if (mode === 'resolved-uncertain') await resolveLast(page, 'send', { status: 'uncertain' });\n  34 |     else if (mode === 'rejected-throw') await rejectLast(page, 'send', 'network reset');"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/home/moose/NEXTJS/stark-ai-workbench-nextjs-frontend-v2/agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/AUTOMATION/specs/s08_11_states_mutations.spec.ts",
+                        "column": 38,
+                        "line": 31
+                      },
+                      "message": "Error: locator.fill: Error: strict mode violation: getByLabel('Message') resolved to 4 elements:\n    1) <button type=\"button\" title=\"Copy message\" aria-label=\"Copy message\">…</button> aka getByRole('button', { name: 'Copy message' }).first()\n    2) <button type=\"button\" title=\"Copy message\" aria-label=\"Copy message\">…</button> aka getByRole('button', { name: 'Copy message' }).nth(1)\n    3) <textarea rows=\"1\" id=\"_r_0_\" placeholder=\"Message Kestrel Ops…\"></textarea> aka getByRole('textbox', { name: 'Message' })\n    4) <button disabled type=\"submit\" aria-label=\"Send message\" class=\"ws-primary ws-icon\">…</button> aka getByRole('button', { name: 'Send message' })\n\nCall log:\n\u001b[2m  - waiting for getByLabel('Message')\u001b[22m\n\n\n  29 |     await open(page, { query: 'agent=kestrel&session=A', preset: P.rows });\n  30 |     await expect(page.getByText('only session A')).toBeVisible();\n> 31 |     await page.getByLabel('Message').fill(`attempt ${mode}`); await page.getByLabel('Message').press('Enter');\n     |                                      ^\n  32 |     await expect(page.getByText('Waiting for a reply')).toBeVisible();\n  33 |     if (mode === 'resolved-uncertain') await resolveLast(page, 'send', { status: 'uncertain' });\n  34 |     else if (mode === 'rejected-throw') await rejectLast(page, 'send', 'network reset');\n    at /home/moose/NEXTJS/stark-ai-workbench-nextjs-frontend-v2/agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/AUTOMATION/specs/s08_11_states_mutations.spec.ts:31:38"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-07T13:25:40.000Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/home/moose/NEXTJS/stark-ai-workbench-nextjs-frontend-v2/agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-001/q2-6/run1/artifacts/s08_11_states_mutations-S--97a81--inspection-never-not-sent-/error-context.md"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/home/moose/NEXTJS/stark-ai-workbench-nextjs-frontend-v2/agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/AUTOMATION/specs/s08_11_states_mutations.spec.ts",
+                    "column": 38,
+                    "line": 31
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "01ddb5ce864b13f110f3-33d7f956b1750f3d2993",
+          "file": "s08_11_states_mutations.spec.ts",
+          "line": 27,
+          "column": 7
+        },
+        {
+          "title": "S-09 unknown outcome (rejected-throw): send paused, attempted text visible, only history inspection, never \"not sent\"",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 10,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 1184,
+                  "error": {
+                    "message": "Error: locator.fill: Error: strict mode violation: getByLabel('Message') resolved to 4 elements:\n    1) <button type=\"button\" title=\"Copy message\" aria-label=\"Copy message\">…</button> aka getByRole('button', { name: 'Copy message' }).first()\n    2) <button type=\"button\" title=\"Copy message\" aria-label=\"Copy message\">…</button> aka getByRole('button', { name: 'Copy message' }).nth(1)\n    3) <textarea rows=\"1\" id=\"_r_0_\" placeholder=\"Message Kestrel Ops…\"></textarea> aka getByRole('textbox', { name: 'Message' })\n    4) <button disabled type=\"submit\" aria-label=\"Send message\" class=\"ws-primary ws-icon\">…</button> aka getByRole('button', { name: 'Send message' })\n\nCall log:\n\u001b[2m  - waiting for getByLabel('Message')\u001b[22m\n",
+                    "stack": "Error: locator.fill: Error: strict mode violation: getByLabel('Message') resolved to 4 elements:\n    1) <button type=\"button\" title=\"Copy message\" aria-label=\"Copy message\">…</button> aka getByRole('button', { name: 'Copy message' }).first()\n    2) <button type=\"button\" title=\"Copy message\" aria-label=\"Copy message\">…</button> aka getByRole('button', { name: 'Copy message' }).nth(1)\n    3) <textarea rows=\"1\" id=\"_r_0_\" placeholder=\"Message Kestrel Ops…\"></textarea> aka getByRole('textbox', { name: 'Message' })\n    4) <button disabled type=\"submit\" aria-label=\"Send message\" class=\"ws-primary ws-icon\">…</button> aka getByRole('button', { name: 'Send message' })\n\nCall log:\n\u001b[2m  - waiting for getByLabel('Message')\u001b[22m\n\n    at /home/moose/NEXTJS/stark-ai-workbench-nextjs-frontend-v2/agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/AUTOMATION/specs/s08_11_states_mutations.spec.ts:31:38",
+                    "location": {
+                      "file": "/home/moose/NEXTJS/stark-ai-workbench-nextjs-frontend-v2/agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/AUTOMATION/specs/s08_11_states_mutations.spec.ts",
+                      "column": 38,
+                      "line": 31
+                    },
+                    "snippet": "  29 |     await open(page, { query: 'agent=kestrel&session=A', preset: P.rows });\n  30 |     await expect(page.getByText('only session A')).toBeVisible();\n> 31 |     await page.getByLabel('Message').fill(`attempt ${mode}`); await page.getByLabel('Message').press('Enter');\n     |                                      ^\n  32 |     await expect(page.getByText('Waiting for a reply')).toBeVisible();\n  33 |     if (mode === 'resolved-uncertain') await resolveLast(page, 'send', { status: 'uncertain' });\n  34 |     else if (mode === 'rejected-throw') await rejectLast(page, 'send', 'network reset');"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/home/moose/NEXTJS/stark-ai-workbench-nextjs-frontend-v2/agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/AUTOMATION/specs/s08_11_states_mutations.spec.ts",
+                        "column": 38,
+                        "line": 31
+                      },
+                      "message": "Error: locator.fill: Error: strict mode violation: getByLabel('Message') resolved to 4 elements:\n    1) <button type=\"button\" title=\"Copy message\" aria-label=\"Copy message\">…</button> aka getByRole('button', { name: 'Copy message' }).first()\n    2) <button type=\"button\" title=\"Copy message\" aria-label=\"Copy message\">…</button> aka getByRole('button', { name: 'Copy message' }).nth(1)\n    3) <textarea rows=\"1\" id=\"_r_0_\" placeholder=\"Message Kestrel Ops…\"></textarea> aka getByRole('textbox', { name: 'Message' })\n    4) <button disabled type=\"submit\" aria-label=\"Send message\" class=\"ws-primary ws-icon\">…</button> aka getByRole('button', { name: 'Send message' })\n\nCall log:\n\u001b[2m  - waiting for getByLabel('Message')\u001b[22m\n\n\n  29 |     await open(page, { query: 'agent=kestrel&session=A', preset: P.rows });\n  30 |     await expect(page.getByText('only session A')).toBeVisible();\n> 31 |     await page.getByLabel('Message').fill(`attempt ${mode}`); await page.getByLabel('Message').press('Enter');\n     |                                      ^\n  32 |     await expect(page.getByText('Waiting for a reply')).toBeVisible();\n  33 |     if (mode === 'resolved-uncertain') await resolveLast(page, 'send', { status: 'uncertain' });\n  34 |     else if (mode === 'rejected-throw') await rejectLast(page, 'send', 'network reset');\n    at /home/moose/NEXTJS/stark-ai-workbench-nextjs-frontend-v2/agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/AUTOMATION/specs/s08_11_states_mutations.spec.ts:31:38"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-07T13:25:42.652Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/home/moose/NEXTJS/stark-ai-workbench-nextjs-frontend-v2/agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-001/q2-6/run1/artifacts/s08_11_states_mutations-S--03bee--inspection-never-not-sent-/error-context.md"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/home/moose/NEXTJS/stark-ai-workbench-nextjs-frontend-v2/agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/AUTOMATION/specs/s08_11_states_mutations.spec.ts",
+                    "column": 38,
+                    "line": 31
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "01ddb5ce864b13f110f3-4eed85d05e75d5ce9fea",
+          "file": "s08_11_states_mutations.spec.ts",
+          "line": 27,
+          "column": 7
+        },
+        {
+          "title": "S-09 unknown outcome (pending-35s-then-timeout): send paused, attempted text visible, only history inspection, never \"not sent\"",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 90000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 11,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 1200,
+                  "error": {
+                    "message": "Error: locator.fill: Error: strict mode violation: getByLabel('Message') resolved to 4 elements:\n    1) <button type=\"button\" title=\"Copy message\" aria-label=\"Copy message\">…</button> aka getByRole('button', { name: 'Copy message' }).first()\n    2) <button type=\"button\" title=\"Copy message\" aria-label=\"Copy message\">…</button> aka getByRole('button', { name: 'Copy message' }).nth(1)\n    3) <textarea rows=\"1\" id=\"_r_0_\" placeholder=\"Message Kestrel Ops…\"></textarea> aka getByRole('textbox', { name: 'Message' })\n    4) <button disabled type=\"submit\" aria-label=\"Send message\" class=\"ws-primary ws-icon\">…</button> aka getByRole('button', { name: 'Send message' })\n\nCall log:\n\u001b[2m  - waiting for getByLabel('Message')\u001b[22m\n",
+                    "stack": "Error: locator.fill: Error: strict mode violation: getByLabel('Message') resolved to 4 elements:\n    1) <button type=\"button\" title=\"Copy message\" aria-label=\"Copy message\">…</button> aka getByRole('button', { name: 'Copy message' }).first()\n    2) <button type=\"button\" title=\"Copy message\" aria-label=\"Copy message\">…</button> aka getByRole('button', { name: 'Copy message' }).nth(1)\n    3) <textarea rows=\"1\" id=\"_r_0_\" placeholder=\"Message Kestrel Ops…\"></textarea> aka getByRole('textbox', { name: 'Message' })\n    4) <button disabled type=\"submit\" aria-label=\"Send message\" class=\"ws-primary ws-icon\">…</button> aka getByRole('button', { name: 'Send message' })\n\nCall log:\n\u001b[2m  - waiting for getByLabel('Message')\u001b[22m\n\n    at /home/moose/NEXTJS/stark-ai-workbench-nextjs-frontend-v2/agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/AUTOMATION/specs/s08_11_states_mutations.spec.ts:31:38",
+                    "location": {
+                      "file": "/home/moose/NEXTJS/stark-ai-workbench-nextjs-frontend-v2/agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/AUTOMATION/specs/s08_11_states_mutations.spec.ts",
+                      "column": 38,
+                      "line": 31
+                    },
+                    "snippet": "  29 |     await open(page, { query: 'agent=kestrel&session=A', preset: P.rows });\n  30 |     await expect(page.getByText('only session A')).toBeVisible();\n> 31 |     await page.getByLabel('Message').fill(`attempt ${mode}`); await page.getByLabel('Message').press('Enter');\n     |                                      ^\n  32 |     await expect(page.getByText('Waiting for a reply')).toBeVisible();\n  33 |     if (mode === 'resolved-uncertain') await resolveLast(page, 'send', { status: 'uncertain' });\n  34 |     else if (mode === 'rejected-throw') await rejectLast(page, 'send', 'network reset');"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/home/moose/NEXTJS/stark-ai-workbench-nextjs-frontend-v2/agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/AUTOMATION/specs/s08_11_states_mutations.spec.ts",
+                        "column": 38,
+                        "line": 31
+                      },
+                      "message": "Error: locator.fill: Error: strict mode violation: getByLabel('Message') resolved to 4 elements:\n    1) <button type=\"button\" title=\"Copy message\" aria-label=\"Copy message\">…</button> aka getByRole('button', { name: 'Copy message' }).first()\n    2) <button type=\"button\" title=\"Copy message\" aria-label=\"Copy message\">…</button> aka getByRole('button', { name: 'Copy message' }).nth(1)\n    3) <textarea rows=\"1\" id=\"_r_0_\" placeholder=\"Message Kestrel Ops…\"></textarea> aka getByRole('textbox', { name: 'Message' })\n    4) <button disabled type=\"submit\" aria-label=\"Send message\" class=\"ws-primary ws-icon\">…</button> aka getByRole('button', { name: 'Send message' })\n\nCall log:\n\u001b[2m  - waiting for getByLabel('Message')\u001b[22m\n\n\n  29 |     await open(page, { query: 'agent=kestrel&session=A', preset: P.rows });\n  30 |     await expect(page.getByText('only session A')).toBeVisible();\n> 31 |     await page.getByLabel('Message').fill(`attempt ${mode}`); await page.getByLabel('Message').press('Enter');\n     |                                      ^\n  32 |     await expect(page.getByText('Waiting for a reply')).toBeVisible();\n  33 |     if (mode === 'resolved-uncertain') await resolveLast(page, 'send', { status: 'uncertain' });\n  34 |     else if (mode === 'rejected-throw') await rejectLast(page, 'send', 'network reset');\n    at /home/moose/NEXTJS/stark-ai-workbench-nextjs-frontend-v2/agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/AUTOMATION/specs/s08_11_states_mutations.spec.ts:31:38"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-07T13:25:45.176Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/home/moose/NEXTJS/stark-ai-workbench-nextjs-frontend-v2/agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-001/q2-6/run1/artifacts/s08_11_states_mutations-S--16f16--inspection-never-not-sent-/error-context.md"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/home/moose/NEXTJS/stark-ai-workbench-nextjs-frontend-v2/agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/AUTOMATION/specs/s08_11_states_mutations.spec.ts",
+                    "column": 38,
+                    "line": 31
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "01ddb5ce864b13f110f3-087be6b557fda7e161d9",
+          "file": "s08_11_states_mutations.spec.ts",
+          "line": 27,
+          "column": 7
+        },
+        {
+          "title": "S-09 confirmed not-sent keeps an editable draft and requires deliberate send",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 12,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 1189,
+                  "error": {
+                    "message": "Error: locator.fill: Error: strict mode violation: getByLabel('Message') resolved to 4 elements:\n    1) <button type=\"button\" title=\"Copy message\" aria-label=\"Copy message\">…</button> aka getByRole('button', { name: 'Copy message' }).first()\n    2) <button type=\"button\" title=\"Copy message\" aria-label=\"Copy message\">…</button> aka getByRole('button', { name: 'Copy message' }).nth(1)\n    3) <textarea rows=\"1\" id=\"_r_0_\" placeholder=\"Message Kestrel Ops…\"></textarea> aka getByRole('textbox', { name: 'Message' })\n    4) <button disabled type=\"submit\" aria-label=\"Send message\" class=\"ws-primary ws-icon\">…</button> aka getByRole('button', { name: 'Send message' })\n\nCall log:\n\u001b[2m  - waiting for getByLabel('Message')\u001b[22m\n",
+                    "stack": "Error: locator.fill: Error: strict mode violation: getByLabel('Message') resolved to 4 elements:\n    1) <button type=\"button\" title=\"Copy message\" aria-label=\"Copy message\">…</button> aka getByRole('button', { name: 'Copy message' }).first()\n    2) <button type=\"button\" title=\"Copy message\" aria-label=\"Copy message\">…</button> aka getByRole('button', { name: 'Copy message' }).nth(1)\n    3) <textarea rows=\"1\" id=\"_r_0_\" placeholder=\"Message Kestrel Ops…\"></textarea> aka getByRole('textbox', { name: 'Message' })\n    4) <button disabled type=\"submit\" aria-label=\"Send message\" class=\"ws-primary ws-icon\">…</button> aka getByRole('button', { name: 'Send message' })\n\nCall log:\n\u001b[2m  - waiting for getByLabel('Message')\u001b[22m\n\n    at /home/moose/NEXTJS/stark-ai-workbench-nextjs-frontend-v2/agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/AUTOMATION/specs/s08_11_states_mutations.spec.ts:51:36",
+                    "location": {
+                      "file": "/home/moose/NEXTJS/stark-ai-workbench-nextjs-frontend-v2/agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/AUTOMATION/specs/s08_11_states_mutations.spec.ts",
+                      "column": 36,
+                      "line": 51
+                    },
+                    "snippet": "  49 | test('S-09 confirmed not-sent keeps an editable draft and requires deliberate send', async ({ page }) => {\n  50 |   await open(page, { query: 'agent=kestrel&session=A', preset: P.rows });\n> 51 |   await page.getByLabel('Message').fill('keep me'); await page.getByLabel('Message').press('Enter'); await resolveLast(page, 'send', { status: 'not-sent' });\n     |                                    ^\n  52 |   await expect(page.getByRole('heading', { name: 'Message not sent' })).toBeVisible(); await expect(page.getByLabel('Message')).toBeEnabled(); await expect(page.getByLabel('Message')).toHaveValue('keep me');\n  53 |   await page.waitForTimeout(500); expect(await count(page, 'send')).toBe(1);\n  54 |   await page.getByLabel('Message').press('Enter'); await expect.poll(() => count(page, 'send')).toBe(2);"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/home/moose/NEXTJS/stark-ai-workbench-nextjs-frontend-v2/agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/AUTOMATION/specs/s08_11_states_mutations.spec.ts",
+                        "column": 36,
+                        "line": 51
+                      },
+                      "message": "Error: locator.fill: Error: strict mode violation: getByLabel('Message') resolved to 4 elements:\n    1) <button type=\"button\" title=\"Copy message\" aria-label=\"Copy message\">…</button> aka getByRole('button', { name: 'Copy message' }).first()\n    2) <button type=\"button\" title=\"Copy message\" aria-label=\"Copy message\">…</button> aka getByRole('button', { name: 'Copy message' }).nth(1)\n    3) <textarea rows=\"1\" id=\"_r_0_\" placeholder=\"Message Kestrel Ops…\"></textarea> aka getByRole('textbox', { name: 'Message' })\n    4) <button disabled type=\"submit\" aria-label=\"Send message\" class=\"ws-primary ws-icon\">…</button> aka getByRole('button', { name: 'Send message' })\n\nCall log:\n\u001b[2m  - waiting for getByLabel('Message')\u001b[22m\n\n\n  49 | test('S-09 confirmed not-sent keeps an editable draft and requires deliberate send', async ({ page }) => {\n  50 |   await open(page, { query: 'agent=kestrel&session=A', preset: P.rows });\n> 51 |   await page.getByLabel('Message').fill('keep me'); await page.getByLabel('Message').press('Enter'); await resolveLast(page, 'send', { status: 'not-sent' });\n     |                                    ^\n  52 |   await expect(page.getByRole('heading', { name: 'Message not sent' })).toBeVisible(); await expect(page.getByLabel('Message')).toBeEnabled(); await expect(page.getByLabel('Message')).toHaveValue('keep me');\n  53 |   await page.waitForTimeout(500); expect(await count(page, 'send')).toBe(1);\n  54 |   await page.getByLabel('Message').press('Enter'); await expect.poll(() => count(page, 'send')).toBe(2);\n    at /home/moose/NEXTJS/stark-ai-workbench-nextjs-frontend-v2/agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/AUTOMATION/specs/s08_11_states_mutations.spec.ts:51:36"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-07T13:25:47.781Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/home/moose/NEXTJS/stark-ai-workbench-nextjs-frontend-v2/agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-001/q2-6/run1/artifacts/s08_11_states_mutations-S--2b9cf-nd-requires-deliberate-send/error-context.md"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/home/moose/NEXTJS/stark-ai-workbench-nextjs-frontend-v2/agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/AUTOMATION/specs/s08_11_states_mutations.spec.ts",
+                    "column": 36,
+                    "line": 51
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "01ddb5ce864b13f110f3-4f3bb0397c8ddffead37",
+          "file": "s08_11_states_mutations.spec.ts",
+          "line": 49,
+          "column": 5
+        },
+        {
+          "title": "S-10 pending status; metadata warning keeps ID/transcript and offers list read only",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 13,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 1167,
+                  "error": {
+                    "message": "Error: locator.fill: Error: strict mode violation: getByLabel('Message') resolved to 2 elements:\n    1) <textarea rows=\"1\" id=\"_r_0_\" placeholder=\"Message Kestrel Ops…\"></textarea> aka getByRole('textbox', { name: 'Message' })\n    2) <button disabled type=\"submit\" aria-label=\"Send message\" class=\"ws-primary ws-icon\">…</button> aka getByRole('button', { name: 'Send message' })\n\nCall log:\n\u001b[2m  - waiting for getByLabel('Message')\u001b[22m\n",
+                    "stack": "Error: locator.fill: Error: strict mode violation: getByLabel('Message') resolved to 2 elements:\n    1) <textarea rows=\"1\" id=\"_r_0_\" placeholder=\"Message Kestrel Ops…\"></textarea> aka getByRole('textbox', { name: 'Message' })\n    2) <button disabled type=\"submit\" aria-label=\"Send message\" class=\"ws-primary ws-icon\">…</button> aka getByRole('button', { name: 'Send message' })\n\nCall log:\n\u001b[2m  - waiting for getByLabel('Message')\u001b[22m\n\n    at /home/moose/NEXTJS/stark-ai-workbench-nextjs-frontend-v2/agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/AUTOMATION/specs/s08_11_states_mutations.spec.ts:59:36",
+                    "location": {
+                      "file": "/home/moose/NEXTJS/stark-ai-workbench-nextjs-frontend-v2/agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/AUTOMATION/specs/s08_11_states_mutations.spec.ts",
+                      "column": 36,
+                      "line": 59
+                    },
+                    "snippet": "  57 | test('S-10 pending status; metadata warning keeps ID/transcript and offers list read only', async ({ page }) => {\n  58 |   await open(page, { query: 'agent=kestrel&new=1', preset: P.rows });\n> 59 |   await page.getByLabel('Message').fill('start'); await page.getByLabel('Message').press('Enter');\n     |                                    ^\n  60 |   await expect(page.locator('[role=status]', { hasText: 'Waiting for a reply' })).toBeVisible();\n  61 |   await resolveLast(page, 'send', { status: 'sent', sessionId: 'M1', reply: 'Confirmed reply', metadataWarning: true });\n  62 |   await expect.poll(() => new URL(page.url()).search).toBe('?agent=kestrel&session=M1');"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/home/moose/NEXTJS/stark-ai-workbench-nextjs-frontend-v2/agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/AUTOMATION/specs/s08_11_states_mutations.spec.ts",
+                        "column": 36,
+                        "line": 59
+                      },
+                      "message": "Error: locator.fill: Error: strict mode violation: getByLabel('Message') resolved to 2 elements:\n    1) <textarea rows=\"1\" id=\"_r_0_\" placeholder=\"Message Kestrel Ops…\"></textarea> aka getByRole('textbox', { name: 'Message' })\n    2) <button disabled type=\"submit\" aria-label=\"Send message\" class=\"ws-primary ws-icon\">…</button> aka getByRole('button', { name: 'Send message' })\n\nCall log:\n\u001b[2m  - waiting for getByLabel('Message')\u001b[22m\n\n\n  57 | test('S-10 pending status; metadata warning keeps ID/transcript and offers list read only', async ({ page }) => {\n  58 |   await open(page, { query: 'agent=kestrel&new=1', preset: P.rows });\n> 59 |   await page.getByLabel('Message').fill('start'); await page.getByLabel('Message').press('Enter');\n     |                                    ^\n  60 |   await expect(page.locator('[role=status]', { hasText: 'Waiting for a reply' })).toBeVisible();\n  61 |   await resolveLast(page, 'send', { status: 'sent', sessionId: 'M1', reply: 'Confirmed reply', metadataWarning: true });\n  62 |   await expect.poll(() => new URL(page.url()).search).toBe('?agent=kestrel&session=M1');\n    at /home/moose/NEXTJS/stark-ai-workbench-nextjs-frontend-v2/agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/AUTOMATION/specs/s08_11_states_mutations.spec.ts:59:36"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-07T13:25:50.333Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/home/moose/NEXTJS/stark-ai-workbench-nextjs-frontend-v2/agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-001/q2-6/run1/artifacts/s08_11_states_mutations-S--b3479-t-and-offers-list-read-only/error-context.md"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/home/moose/NEXTJS/stark-ai-workbench-nextjs-frontend-v2/agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/AUTOMATION/specs/s08_11_states_mutations.spec.ts",
+                    "column": 36,
+                    "line": 59
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "01ddb5ce864b13f110f3-afcb70f9bf3930977672",
+          "file": "s08_11_states_mutations.spec.ts",
+          "line": 57,
+          "column": 5
+        },
+        {
+          "title": "S-10 late history cannot paint another session; identity switch mid-flight cannot surface prior-user content",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 14,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 2902,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-07T13:25:52.879Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "01ddb5ce864b13f110f3-c083b9a62ad5ac776f7c",
+          "file": "s08_11_states_mutations.spec.ts",
+          "line": 68,
+          "column": 5
+        },
+        {
+          "title": "S-11 rename/archive: whitespace rejected, literal punctuation, failure retention, archive hides only, focus destinations",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 14,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 7154,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoContainText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: locator('.ws-crumbs')\nExpected substring: \u001b[32m\"<b>&amp;\\\"'</b> 🚀\"\u001b[39m\nReceived string:    \u001b[31m\"AgentsKestrel OpsPlanning the launch\"\u001b[39m\nTimeout: 5000ms\n\nCall log:\n\u001b[2m  - Expect \"toContainText\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('.ws-crumbs')\u001b[22m\n\u001b[2m    9 × locator resolved to <div class=\"ws-crumbs\">…</div>\u001b[22m\n\u001b[2m      - unexpected value \"AgentsKestrel OpsPlanning the launch\"\u001b[22m\n",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoContainText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: locator('.ws-crumbs')\nExpected substring: \u001b[32m\"<b>&amp;\\\"'</b> 🚀\"\u001b[39m\nReceived string:    \u001b[31m\"AgentsKestrel OpsPlanning the launch\"\u001b[39m\nTimeout: 5000ms\n\nCall log:\n\u001b[2m  - Expect \"toContainText\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('.ws-crumbs')\u001b[22m\n\u001b[2m    9 × locator resolved to <div class=\"ws-crumbs\">…</div>\u001b[22m\n\u001b[2m      - unexpected value \"AgentsKestrel OpsPlanning the launch\"\u001b[22m\n\n    at /home/moose/NEXTJS/stark-ai-workbench-nextjs-frontend-v2/agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/AUTOMATION/specs/s08_11_states_mutations.spec.ts:109:100",
+                    "location": {
+                      "file": "/home/moose/NEXTJS/stark-ai-workbench-nextjs-frontend-v2/agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/AUTOMATION/specs/s08_11_states_mutations.spec.ts",
+                      "column": 100,
+                      "line": 109
+                    },
+                    "snippet": "  107 |   await expect(page.getByText('Comparing options')).toHaveCount(0); await expect(page.getByRole('heading', { name: 'Recent conversations' })).toBeFocused();\n  108 |   const l = await ledger(page); expect(l.filter(c => c.action === 'archive').map(c => c.row)).toEqual(['row-b', 'row-b']); expect(l.some(c => !['list', 'rename', 'archive'].includes(c.action))).toBe(false);\n> 109 |   await page.locator('.ws-recent-row a').first().click(); await expect(page.locator('.ws-crumbs')).toContainText(LIT);\n      |                                                                                                    ^\n  110 |   // CONTROL: the HTML-element detector finds an unsafe injection\n  111 |   await page.evaluate(() => { const d = document.createElement('div'); d.className = 'ws-recents'; d.innerHTML = '<b>x</b>'; document.body.appendChild(d); });\n  112 |   expect(await page.locator('.ws-recents b').count()).toBe(1);"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/home/moose/NEXTJS/stark-ai-workbench-nextjs-frontend-v2/agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/AUTOMATION/specs/s08_11_states_mutations.spec.ts",
+                        "column": 100,
+                        "line": 109
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoContainText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: locator('.ws-crumbs')\nExpected substring: \u001b[32m\"<b>&amp;\\\"'</b> 🚀\"\u001b[39m\nReceived string:    \u001b[31m\"AgentsKestrel OpsPlanning the launch\"\u001b[39m\nTimeout: 5000ms\n\nCall log:\n\u001b[2m  - Expect \"toContainText\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('.ws-crumbs')\u001b[22m\n\u001b[2m    9 × locator resolved to <div class=\"ws-crumbs\">…</div>\u001b[22m\n\u001b[2m      - unexpected value \"AgentsKestrel OpsPlanning the launch\"\u001b[22m\n\n\n  107 |   await expect(page.getByText('Comparing options')).toHaveCount(0); await expect(page.getByRole('heading', { name: 'Recent conversations' })).toBeFocused();\n  108 |   const l = await ledger(page); expect(l.filter(c => c.action === 'archive').map(c => c.row)).toEqual(['row-b', 'row-b']); expect(l.some(c => !['list', 'rename', 'archive'].includes(c.action))).toBe(false);\n> 109 |   await page.locator('.ws-recent-row a').first().click(); await expect(page.locator('.ws-crumbs')).toContainText(LIT);\n      |                                                                                                    ^\n  110 |   // CONTROL: the HTML-element detector finds an unsafe injection\n  111 |   await page.evaluate(() => { const d = document.createElement('div'); d.className = 'ws-recents'; d.innerHTML = '<b>x</b>'; document.body.appendChild(d); });\n  112 |   expect(await page.locator('.ws-recents b').count()).toBe(1);\n    at /home/moose/NEXTJS/stark-ai-workbench-nextjs-frontend-v2/agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/AUTOMATION/specs/s08_11_states_mutations.spec.ts:109:100"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-07T13:25:56.262Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/home/moose/NEXTJS/stark-ai-workbench-nextjs-frontend-v2/agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-001/q2-6/run1/artifacts/s08_11_states_mutations-S--09d88-des-only-focus-destinations/error-context.md"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/home/moose/NEXTJS/stark-ai-workbench-nextjs-frontend-v2/agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/AUTOMATION/specs/s08_11_states_mutations.spec.ts",
+                    "column": 100,
+                    "line": 109
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "01ddb5ce864b13f110f3-a702b870d6349025287f",
+          "file": "s08_11_states_mutations.spec.ts",
+          "line": 88,
+          "column": 5
+        }
+      ]
+    },
+    {
+      "title": "s12_16_demo_theme_render.spec.ts",
+      "file": "s12_16_demo_theme_render.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "S-12 demo context: permanent disclosure; edit/add/preview/remove make no network, upload or service calls",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 15,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 1317,
+                  "error": {
+                    "message": "Error: locator.fill: Error: strict mode violation: getByRole('dialog', { name: 'Edit demo instructions' }).getByLabel('Demo instructions') resolved to 2 elements:\n    1) <button type=\"button\" class=\"ws-icon\" aria-label=\"Close Edit demo instructions\">…</button> aka getByRole('button', { name: 'Close Edit demo instructions' })\n    2) <textarea class=\"ws-field\" id=\"ws-demo-instructions\">Be clear and practical. Explain the reasoning, th…</textarea> aka getByRole('textbox', { name: 'Demo instructions' })\n\nCall log:\n\u001b[2m  - waiting for getByRole('dialog', { name: 'Edit demo instructions' }).getByLabel('Demo instructions')\u001b[22m\n",
+                    "stack": "Error: locator.fill: Error: strict mode violation: getByRole('dialog', { name: 'Edit demo instructions' }).getByLabel('Demo instructions') resolved to 2 elements:\n    1) <button type=\"button\" class=\"ws-icon\" aria-label=\"Close Edit demo instructions\">…</button> aka getByRole('button', { name: 'Close Edit demo instructions' })\n    2) <textarea class=\"ws-field\" id=\"ws-demo-instructions\">Be clear and practical. Explain the reasoning, th…</textarea> aka getByRole('textbox', { name: 'Demo instructions' })\n\nCall log:\n\u001b[2m  - waiting for getByRole('dialog', { name: 'Edit demo instructions' }).getByLabel('Demo instructions')\u001b[22m\n\n    at /home/moose/NEXTJS/stark-ai-workbench-nextjs-frontend-v2/agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/AUTOMATION/specs/s12_16_demo_theme_render.spec.ts:15:105",
+                    "location": {
+                      "file": "/home/moose/NEXTJS/stark-ai-workbench-nextjs-frontend-v2/agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/AUTOMATION/specs/s12_16_demo_theme_render.spec.ts",
+                      "column": 105,
+                      "line": 15
+                    },
+                    "snippet": "  13 |   const before = reqs.length, l0 = (await ledger(page)).length;\n  14 |   await ctx.getByRole('button', { name: 'Edit demo instructions' }).click(); const d = page.getByRole('dialog', { name: 'Edit demo instructions' });\n> 15 |   await expect(d.locator('.ws-notice')).toHaveText(DISCLOSURE); await d.getByLabel('Demo instructions').fill('QA instructions A'); await d.getByRole('button', { name: 'Apply to demo' }).click();\n     |                                                                                                         ^\n  16 |   await expect(ctx.getByText('QA instructions A')).toBeVisible();\n  17 |   await ctx.getByRole('button', { name: 'Add sample document' }).click(); await page.getByRole('dialog', { name: 'Add sample document' }).getByRole('button', { name: 'Research checklist.md' }).click();\n  18 |   await ctx.getByRole('button', { name: 'Preview Research checklist.md' }).click(); await expect(page.getByRole('dialog', { name: 'Sample preview' })).toContainText('Fictional sample'); await page.keyboard.press('Escape');"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/home/moose/NEXTJS/stark-ai-workbench-nextjs-frontend-v2/agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/AUTOMATION/specs/s12_16_demo_theme_render.spec.ts",
+                        "column": 105,
+                        "line": 15
+                      },
+                      "message": "Error: locator.fill: Error: strict mode violation: getByRole('dialog', { name: 'Edit demo instructions' }).getByLabel('Demo instructions') resolved to 2 elements:\n    1) <button type=\"button\" class=\"ws-icon\" aria-label=\"Close Edit demo instructions\">…</button> aka getByRole('button', { name: 'Close Edit demo instructions' })\n    2) <textarea class=\"ws-field\" id=\"ws-demo-instructions\">Be clear and practical. Explain the reasoning, th…</textarea> aka getByRole('textbox', { name: 'Demo instructions' })\n\nCall log:\n\u001b[2m  - waiting for getByRole('dialog', { name: 'Edit demo instructions' }).getByLabel('Demo instructions')\u001b[22m\n\n\n  13 |   const before = reqs.length, l0 = (await ledger(page)).length;\n  14 |   await ctx.getByRole('button', { name: 'Edit demo instructions' }).click(); const d = page.getByRole('dialog', { name: 'Edit demo instructions' });\n> 15 |   await expect(d.locator('.ws-notice')).toHaveText(DISCLOSURE); await d.getByLabel('Demo instructions').fill('QA instructions A'); await d.getByRole('button', { name: 'Apply to demo' }).click();\n     |                                                                                                         ^\n  16 |   await expect(ctx.getByText('QA instructions A')).toBeVisible();\n  17 |   await ctx.getByRole('button', { name: 'Add sample document' }).click(); await page.getByRole('dialog', { name: 'Add sample document' }).getByRole('button', { name: 'Research checklist.md' }).click();\n  18 |   await ctx.getByRole('button', { name: 'Preview Research checklist.md' }).click(); await expect(page.getByRole('dialog', { name: 'Sample preview' })).toContainText('Fictional sample'); await page.keyboard.press('Escape');\n    at /home/moose/NEXTJS/stark-ai-workbench-nextjs-frontend-v2/agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/AUTOMATION/specs/s12_16_demo_theme_render.spec.ts:15:105"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-07T13:26:04.479Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/home/moose/NEXTJS/stark-ai-workbench-nextjs-frontend-v2/agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-001/q2-6/run1/artifacts/s12_16_demo_theme_render-S-b235d-ork-upload-or-service-calls/error-context.md"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/home/moose/NEXTJS/stark-ai-workbench-nextjs-frontend-v2/agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/AUTOMATION/specs/s12_16_demo_theme_render.spec.ts",
+                    "column": 105,
+                    "line": 15
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "69acbef6a63235523fd5-3ccb377e441727aa4a00",
+          "file": "s12_16_demo_theme_render.spec.ts",
+          "line": 9,
+          "column": 5
+        },
+        {
+          "title": "S-13 demo state is per agent and per identity; reload/reset clear it; never persisted",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 16,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 1277,
+                  "error": {
+                    "message": "Error: locator.fill: Error: strict mode violation: getByLabel('Demo instructions') resolved to 4 elements:\n    1) <button class=\"ws-icon\" aria-label=\"Edit demo instructions\">…</button> aka locator('[id=\"_r_1_\"]').getByLabel('Edit demo instructions')\n    2) <div role=\"dialog\" tabindex=\"-1\" id=\"radix-_r_2_\" data-state=\"open\" class=\"ws-modal \" aria-labelledby=\"radix-_r_3_\">…</div> aka getByRole('dialog', { name: 'Edit demo instructions' })\n    3) <button type=\"button\" class=\"ws-icon\" aria-label=\"Close Edit demo instructions\">…</button> aka getByRole('button', { name: 'Close Edit demo instructions' })\n    4) <textarea class=\"ws-field\" id=\"ws-demo-instructions\">Be clear and practical. Explain the reasoning, th…</textarea> aka getByRole('textbox', { name: 'Demo instructions' })\n\nCall log:\n\u001b[2m  - waiting for getByLabel('Demo instructions')\u001b[22m\n",
+                    "stack": "Error: locator.fill: Error: strict mode violation: getByLabel('Demo instructions') resolved to 4 elements:\n    1) <button class=\"ws-icon\" aria-label=\"Edit demo instructions\">…</button> aka locator('[id=\"_r_1_\"]').getByLabel('Edit demo instructions')\n    2) <div role=\"dialog\" tabindex=\"-1\" id=\"radix-_r_2_\" data-state=\"open\" class=\"ws-modal \" aria-labelledby=\"radix-_r_3_\">…</div> aka getByRole('dialog', { name: 'Edit demo instructions' })\n    3) <button type=\"button\" class=\"ws-icon\" aria-label=\"Close Edit demo instructions\">…</button> aka getByRole('button', { name: 'Close Edit demo instructions' })\n    4) <textarea class=\"ws-field\" id=\"ws-demo-instructions\">Be clear and practical. Explain the reasoning, th…</textarea> aka getByRole('textbox', { name: 'Demo instructions' })\n\nCall log:\n\u001b[2m  - waiting for getByLabel('Demo instructions')\u001b[22m\n\n    at edit (/home/moose/NEXTJS/stark-ai-workbench-nextjs-frontend-v2/agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/AUTOMATION/specs/s12_16_demo_theme_render.spec.ts:28:198)\n    at /home/moose/NEXTJS/stark-ai-workbench-nextjs-frontend-v2/agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/AUTOMATION/specs/s12_16_demo_theme_render.spec.ts:29:3",
+                    "location": {
+                      "file": "/home/moose/NEXTJS/stark-ai-workbench-nextjs-frontend-v2/agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/AUTOMATION/specs/s12_16_demo_theme_render.spec.ts",
+                      "column": 198,
+                      "line": 28
+                    },
+                    "snippet": "  26 | test('S-13 demo state is per agent and per identity; reload/reset clear it; never persisted', async ({ page }) => {\n  27 |   await open(page, { query: 'agent=kestrel', preset: P.rows });\n> 28 |   const ctx = page.locator('.ws-context'); const edit = async (t: string) => { await ctx.getByRole('button', { name: 'Edit demo instructions' }).click(); await page.getByLabel('Demo instructions').fill(t); await page.getByRole('button', { name: 'Apply to demo' }).click(); };\n     |                                                                                                                                                                                                      ^\n  29 |   await edit('QA instructions A'); await page.locator('.ws-desktop').getByRole('link', { name: 'Path Agent' }).click();\n  30 |   await expect(page.getByRole('heading', { level: 1, name: 'Path Agent' })).toBeVisible(); await expect(ctx.getByText('QA instructions A')).toHaveCount(0);\n  31 |   await page.locator('.ws-desktop').getByRole('link', { name: 'Kestrel Ops' }).click(); await expect(ctx.getByText('QA instructions A')).toBeVisible();"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/home/moose/NEXTJS/stark-ai-workbench-nextjs-frontend-v2/agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/AUTOMATION/specs/s12_16_demo_theme_render.spec.ts",
+                        "column": 198,
+                        "line": 28
+                      },
+                      "message": "Error: locator.fill: Error: strict mode violation: getByLabel('Demo instructions') resolved to 4 elements:\n    1) <button class=\"ws-icon\" aria-label=\"Edit demo instructions\">…</button> aka locator('[id=\"_r_1_\"]').getByLabel('Edit demo instructions')\n    2) <div role=\"dialog\" tabindex=\"-1\" id=\"radix-_r_2_\" data-state=\"open\" class=\"ws-modal \" aria-labelledby=\"radix-_r_3_\">…</div> aka getByRole('dialog', { name: 'Edit demo instructions' })\n    3) <button type=\"button\" class=\"ws-icon\" aria-label=\"Close Edit demo instructions\">…</button> aka getByRole('button', { name: 'Close Edit demo instructions' })\n    4) <textarea class=\"ws-field\" id=\"ws-demo-instructions\">Be clear and practical. Explain the reasoning, th…</textarea> aka getByRole('textbox', { name: 'Demo instructions' })\n\nCall log:\n\u001b[2m  - waiting for getByLabel('Demo instructions')\u001b[22m\n\n\n  26 | test('S-13 demo state is per agent and per identity; reload/reset clear it; never persisted', async ({ page }) => {\n  27 |   await open(page, { query: 'agent=kestrel', preset: P.rows });\n> 28 |   const ctx = page.locator('.ws-context'); const edit = async (t: string) => { await ctx.getByRole('button', { name: 'Edit demo instructions' }).click(); await page.getByLabel('Demo instructions').fill(t); await page.getByRole('button', { name: 'Apply to demo' }).click(); };\n     |                                                                                                                                                                                                      ^\n  29 |   await edit('QA instructions A'); await page.locator('.ws-desktop').getByRole('link', { name: 'Path Agent' }).click();\n  30 |   await expect(page.getByRole('heading', { level: 1, name: 'Path Agent' })).toBeVisible(); await expect(ctx.getByText('QA instructions A')).toHaveCount(0);\n  31 |   await page.locator('.ws-desktop').getByRole('link', { name: 'Kestrel Ops' }).click(); await expect(ctx.getByText('QA instructions A')).toBeVisible();\n    at edit (/home/moose/NEXTJS/stark-ai-workbench-nextjs-frontend-v2/agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/AUTOMATION/specs/s12_16_demo_theme_render.spec.ts:28:198)\n    at /home/moose/NEXTJS/stark-ai-workbench-nextjs-frontend-v2/agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/AUTOMATION/specs/s12_16_demo_theme_render.spec.ts:29:3"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-07T13:26:07.185Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/home/moose/NEXTJS/stark-ai-workbench-nextjs-frontend-v2/agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-001/q2-6/run1/artifacts/s12_16_demo_theme_render-S-b27b3-et-clear-it-never-persisted/error-context.md"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/home/moose/NEXTJS/stark-ai-workbench-nextjs-frontend-v2/agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/AUTOMATION/specs/s12_16_demo_theme_render.spec.ts",
+                    "column": 198,
+                    "line": 28
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "69acbef6a63235523fd5-857e47aa51a4436a7bd3",
+          "file": "s12_16_demo_theme_render.spec.ts",
+          "line": 26,
+          "column": 5
+        },
+        {
+          "title": "S-14 theme: dark when unset (either OS scheme); saved light honored; saved system not rewritten; tokens match design",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 17,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 6963,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-07T13:26:09.916Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "69acbef6a63235523fd5-d07f505e134e89095295",
+          "file": "s12_16_demo_theme_render.spec.ts",
+          "line": 43,
+          "column": 5
+        },
+        {
+          "title": "S-15 scope: sibling styles unchanged by workspace CSS; dialogs themed on first visible frame; portal/listener teardown",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 17,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 3006,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-07T13:26:17.341Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "69acbef6a63235523fd5-1060c01eb28dee83cdc9",
+          "file": "s12_16_demo_theme_render.spec.ts",
+          "line": 63,
+          "column": 5
+        },
+        {
+          "title": "S-16 render matrix 3 views × 2 themes × 375/768/1280 + 1023/1024/1025 + DPR2 spot check",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 240000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 17,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 34323,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-07T13:26:20.372Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "69acbef6a63235523fd5-e71bd0e7d5fa3bf9bf07",
+          "file": "s12_16_demo_theme_render.spec.ts",
+          "line": 83,
+          "column": 5
+        }
+      ]
+    },
+    {
+      "title": "s17_19_a11y_copy_obs.spec.ts",
+      "file": "s17_19_a11y_copy_obs.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "S-17 drawer (375 dark): focus contained, background inert, Escape/backdrop/Close dismiss and restore; breakpoint crossing closes and focuses visible nav",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 17,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 6856,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m\"page\"\u001b[39m\nReceived: \u001b[31m\"All agents\"\u001b[39m\n\nCall Log:\n- Timeout 5000ms exceeded while waiting on the predicate",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m\"page\"\u001b[39m\nReceived: \u001b[31m\"All agents\"\u001b[39m\n\nCall Log:\n- Timeout 5000ms exceeded while waiting on the predicate\n    at /home/moose/NEXTJS/stark-ai-workbench-nextjs-frontend-v2/agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/AUTOMATION/specs/s17_19_a11y_copy_obs.spec.ts:21:3",
+                    "location": {
+                      "file": "/home/moose/NEXTJS/stark-ai-workbench-nextjs-frontend-v2/agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/AUTOMATION/specs/s17_19_a11y_copy_obs.spec.ts",
+                      "column": 3,
+                      "line": 21
+                    },
+                    "snippet": "  19 |   await page.setViewportSize({ width: 800, height: 800 }); await menu.click(); await expect(page.getByRole('dialog', { name: 'Navigation' })).toBeVisible();\n  20 |   await page.setViewportSize({ width: 1200, height: 800 }); await expect(page.getByRole('dialog', { name: 'Navigation' })).toBeHidden();\n> 21 |   await expect.poll(() => page.evaluate(() => { const a = document.activeElement as HTMLElement | null; return a?.closest('.ws-desktop') ? (a.getAttribute('aria-current') || a.textContent) : null; })).toBe('page');\n     |   ^\n  22 | });\n  23 |\n  24 | test('S-17 context dialog (1280 light) and nested demo dialog (768 dark): containment, nested Escape, restore', async ({ page }) => {"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/home/moose/NEXTJS/stark-ai-workbench-nextjs-frontend-v2/agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/AUTOMATION/specs/s17_19_a11y_copy_obs.spec.ts",
+                        "column": 3,
+                        "line": 21
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m\"page\"\u001b[39m\nReceived: \u001b[31m\"All agents\"\u001b[39m\n\nCall Log:\n- Timeout 5000ms exceeded while waiting on the predicate\n\n  19 |   await page.setViewportSize({ width: 800, height: 800 }); await menu.click(); await expect(page.getByRole('dialog', { name: 'Navigation' })).toBeVisible();\n  20 |   await page.setViewportSize({ width: 1200, height: 800 }); await expect(page.getByRole('dialog', { name: 'Navigation' })).toBeHidden();\n> 21 |   await expect.poll(() => page.evaluate(() => { const a = document.activeElement as HTMLElement | null; return a?.closest('.ws-desktop') ? (a.getAttribute('aria-current') || a.textContent) : null; })).toBe('page');\n     |   ^\n  22 | });\n  23 |\n  24 | test('S-17 context dialog (1280 light) and nested demo dialog (768 dark): containment, nested Escape, restore', async ({ page }) => {\n    at /home/moose/NEXTJS/stark-ai-workbench-nextjs-frontend-v2/agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/AUTOMATION/specs/s17_19_a11y_copy_obs.spec.ts:21:3"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-07T13:26:54.726Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/home/moose/NEXTJS/stark-ai-workbench-nextjs-frontend-v2/agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-001/q2-6/run1/artifacts/s17_19_a11y_copy_obs-S-17--dc879-ses-and-focuses-visible-nav/error-context.md"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/home/moose/NEXTJS/stark-ai-workbench-nextjs-frontend-v2/agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/AUTOMATION/specs/s17_19_a11y_copy_obs.spec.ts",
+                    "column": 3,
+                    "line": 21
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "8585d6c9271aa24020a3-a97272646bb182798502",
+          "file": "s17_19_a11y_copy_obs.spec.ts",
+          "line": 8,
+          "column": 5
+        },
+        {
+          "title": "S-17 context dialog (1280 light) and nested demo dialog (768 dark): containment, nested Escape, restore",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 18,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1923,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-07T13:27:02.495Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "8585d6c9271aa24020a3-f45e3f2fff95ce5bb838",
+          "file": "s17_19_a11y_copy_obs.spec.ts",
+          "line": 24,
+          "column": 5
+        },
+        {
+          "title": "S-17 controls: accessible names and ≥44×44 targets; hidden desktop/mobile copies unfocusable",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 18,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 7907,
+                  "error": {
+                    "message": "Error: controls without names or below 44×44 (finding if non-empty)\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // deep equality\u001b[22m\n\n\u001b[32m- Expected  -  1\u001b[39m\n\u001b[31m+ Received  + 29\u001b[39m\n\n\u001b[32m- Array []\u001b[39m\n\u001b[31m+ Array [\u001b[39m\n\u001b[31m+   Object {\u001b[39m\n\u001b[31m+     \"h\": 44,\u001b[39m\n\u001b[31m+     \"inProse\": false,\u001b[39m\n\u001b[31m+     \"name\": \"Agents\",\u001b[39m\n\u001b[31m+     \"skip\": false,\u001b[39m\n\u001b[31m+     \"tag\": \"A\",\u001b[39m\n\u001b[31m+     \"view\": \"directory-375\",\u001b[39m\n\u001b[31m+     \"w\": 40,\u001b[39m\n\u001b[31m+   },\u001b[39m\n\u001b[31m+   Object {\u001b[39m\n\u001b[31m+     \"h\": 44,\u001b[39m\n\u001b[31m+     \"inProse\": false,\u001b[39m\n\u001b[31m+     \"name\": \"Agents\",\u001b[39m\n\u001b[31m+     \"skip\": false,\u001b[39m\n\u001b[31m+     \"tag\": \"A\",\u001b[39m\n\u001b[31m+     \"view\": \"workspace-375\",\u001b[39m\n\u001b[31m+     \"w\": 40,\u001b[39m\n\u001b[31m+   },\u001b[39m\n\u001b[31m+   Object {\u001b[39m\n\u001b[31m+     \"h\": 44,\u001b[39m\n\u001b[31m+     \"inProse\": false,\u001b[39m\n\u001b[31m+     \"name\": \"Agents\",\u001b[39m\n\u001b[31m+     \"skip\": false,\u001b[39m\n\u001b[31m+     \"tag\": \"A\",\u001b[39m\n\u001b[31m+     \"view\": \"conversation-375\",\u001b[39m\n\u001b[31m+     \"w\": 40,\u001b[39m\n\u001b[31m+   },\u001b[39m\n\u001b[31m+ ]\u001b[39m",
+                    "stack": "Error: controls without names or below 44×44 (finding if non-empty)\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // deep equality\u001b[22m\n\n\u001b[32m- Expected  -  1\u001b[39m\n\u001b[31m+ Received  + 29\u001b[39m\n\n\u001b[32m- Array []\u001b[39m\n\u001b[31m+ Array [\u001b[39m\n\u001b[31m+   Object {\u001b[39m\n\u001b[31m+     \"h\": 44,\u001b[39m\n\u001b[31m+     \"inProse\": false,\u001b[39m\n\u001b[31m+     \"name\": \"Agents\",\u001b[39m\n\u001b[31m+     \"skip\": false,\u001b[39m\n\u001b[31m+     \"tag\": \"A\",\u001b[39m\n\u001b[31m+     \"view\": \"directory-375\",\u001b[39m\n\u001b[31m+     \"w\": 40,\u001b[39m\n\u001b[31m+   },\u001b[39m\n\u001b[31m+   Object {\u001b[39m\n\u001b[31m+     \"h\": 44,\u001b[39m\n\u001b[31m+     \"inProse\": false,\u001b[39m\n\u001b[31m+     \"name\": \"Agents\",\u001b[39m\n\u001b[31m+     \"skip\": false,\u001b[39m\n\u001b[31m+     \"tag\": \"A\",\u001b[39m\n\u001b[31m+     \"view\": \"workspace-375\",\u001b[39m\n\u001b[31m+     \"w\": 40,\u001b[39m\n\u001b[31m+   },\u001b[39m\n\u001b[31m+   Object {\u001b[39m\n\u001b[31m+     \"h\": 44,\u001b[39m\n\u001b[31m+     \"inProse\": false,\u001b[39m\n\u001b[31m+     \"name\": \"Agents\",\u001b[39m\n\u001b[31m+     \"skip\": false,\u001b[39m\n\u001b[31m+     \"tag\": \"A\",\u001b[39m\n\u001b[31m+     \"view\": \"conversation-375\",\u001b[39m\n\u001b[31m+     \"w\": 40,\u001b[39m\n\u001b[31m+   },\u001b[39m\n\u001b[31m+ ]\u001b[39m\n    at /home/moose/NEXTJS/stark-ai-workbench-nextjs-frontend-v2/agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/AUTOMATION/specs/s17_19_a11y_copy_obs.spec.ts:52:91",
+                    "location": {
+                      "file": "/home/moose/NEXTJS/stark-ai-workbench-nextjs-frontend-v2/agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/AUTOMATION/specs/s17_19_a11y_copy_obs.spec.ts",
+                      "column": 91,
+                      "line": 52
+                    },
+                    "snippet": "  50 |   record('s17-names-targets', report);\n  51 |   const violations = Object.entries(report).flatMap(([k, v]) => (v as Array<Record<string, unknown>>).map(x => ({ view: k, ...x })));\n> 52 |   expect.soft(violations, 'controls without names or below 44×44 (finding if non-empty)').toEqual([]);\n     |                                                                                           ^\n  53 |   // CONTROL: tab-loop detector reports escape when no trap exists\n  54 |   await page.setViewportSize({ width: 1280, height: 900 }); await open(page); await page.getByLabel('Find an agent').focus(); expect((await tabLoop(page, '.ws-filter', 5)).length).toBeGreaterThan(0);\n  55 | });"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/home/moose/NEXTJS/stark-ai-workbench-nextjs-frontend-v2/agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/AUTOMATION/specs/s17_19_a11y_copy_obs.spec.ts",
+                        "column": 91,
+                        "line": 52
+                      },
+                      "message": "Error: controls without names or below 44×44 (finding if non-empty)\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // deep equality\u001b[22m\n\n\u001b[32m- Expected  -  1\u001b[39m\n\u001b[31m+ Received  + 29\u001b[39m\n\n\u001b[32m- Array []\u001b[39m\n\u001b[31m+ Array [\u001b[39m\n\u001b[31m+   Object {\u001b[39m\n\u001b[31m+     \"h\": 44,\u001b[39m\n\u001b[31m+     \"inProse\": false,\u001b[39m\n\u001b[31m+     \"name\": \"Agents\",\u001b[39m\n\u001b[31m+     \"skip\": false,\u001b[39m\n\u001b[31m+     \"tag\": \"A\",\u001b[39m\n\u001b[31m+     \"view\": \"directory-375\",\u001b[39m\n\u001b[31m+     \"w\": 40,\u001b[39m\n\u001b[31m+   },\u001b[39m\n\u001b[31m+   Object {\u001b[39m\n\u001b[31m+     \"h\": 44,\u001b[39m\n\u001b[31m+     \"inProse\": false,\u001b[39m\n\u001b[31m+     \"name\": \"Agents\",\u001b[39m\n\u001b[31m+     \"skip\": false,\u001b[39m\n\u001b[31m+     \"tag\": \"A\",\u001b[39m\n\u001b[31m+     \"view\": \"workspace-375\",\u001b[39m\n\u001b[31m+     \"w\": 40,\u001b[39m\n\u001b[31m+   },\u001b[39m\n\u001b[31m+   Object {\u001b[39m\n\u001b[31m+     \"h\": 44,\u001b[39m\n\u001b[31m+     \"inProse\": false,\u001b[39m\n\u001b[31m+     \"name\": \"Agents\",\u001b[39m\n\u001b[31m+     \"skip\": false,\u001b[39m\n\u001b[31m+     \"tag\": \"A\",\u001b[39m\n\u001b[31m+     \"view\": \"conversation-375\",\u001b[39m\n\u001b[31m+     \"w\": 40,\u001b[39m\n\u001b[31m+   },\u001b[39m\n\u001b[31m+ ]\u001b[39m\n\n  50 |   record('s17-names-targets', report);\n  51 |   const violations = Object.entries(report).flatMap(([k, v]) => (v as Array<Record<string, unknown>>).map(x => ({ view: k, ...x })));\n> 52 |   expect.soft(violations, 'controls without names or below 44×44 (finding if non-empty)').toEqual([]);\n     |                                                                                           ^\n  53 |   // CONTROL: tab-loop detector reports escape when no trap exists\n  54 |   await page.setViewportSize({ width: 1280, height: 900 }); await open(page); await page.getByLabel('Find an agent').focus(); expect((await tabLoop(page, '.ws-filter', 5)).length).toBeGreaterThan(0);\n  55 | });\n    at /home/moose/NEXTJS/stark-ai-workbench-nextjs-frontend-v2/agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/AUTOMATION/specs/s17_19_a11y_copy_obs.spec.ts:52:91"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-07T13:27:04.920Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/home/moose/NEXTJS/stark-ai-workbench-nextjs-frontend-v2/agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-001/q2-6/run1/artifacts/s17_19_a11y_copy_obs-S-17--205d8-p-mobile-copies-unfocusable/error-context.md"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/home/moose/NEXTJS/stark-ai-workbench-nextjs-frontend-v2/agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/AUTOMATION/specs/s17_19_a11y_copy_obs.spec.ts",
+                    "column": 91,
+                    "line": 52
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "8585d6c9271aa24020a3-e64351bf7f1aa5998448",
+          "file": "s17_19_a11y_copy_obs.spec.ts",
+          "line": 36,
+          "column": 5
+        },
+        {
+          "title": "S-18 disclosure aria/visibility, resize focus rescue, skip link, single aria-current, status regions, visible focus",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 19,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 1264,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveAttribute\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: getByRole('button', { name: 'Demo context' })\nExpected: \u001b[32m\"true\"\u001b[39m\nError: strict mode violation: getByRole('button', { name: 'Demo context' }) resolved to 2 elements:\n    1) <button aria-expanded=\"true\" aria-controls=\"_r_1_\" class=\"ws-disclosure-trigger\">…</button> aka getByRole('button', { name: 'Demo context', exact: true })\n    2) <button class=\"ws-small\">Reset demo context</button> aka getByRole('button', { name: 'Reset demo context' })\n\nCall log:\n\u001b[2m  - Expect \"toHaveAttribute\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('button', { name: 'Demo context' })\u001b[22m\n",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveAttribute\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: getByRole('button', { name: 'Demo context' })\nExpected: \u001b[32m\"true\"\u001b[39m\nError: strict mode violation: getByRole('button', { name: 'Demo context' }) resolved to 2 elements:\n    1) <button aria-expanded=\"true\" aria-controls=\"_r_1_\" class=\"ws-disclosure-trigger\">…</button> aka getByRole('button', { name: 'Demo context', exact: true })\n    2) <button class=\"ws-small\">Reset demo context</button> aka getByRole('button', { name: 'Reset demo context' })\n\nCall log:\n\u001b[2m  - Expect \"toHaveAttribute\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('button', { name: 'Demo context' })\u001b[22m\n\n    at /home/moose/NEXTJS/stark-ai-workbench-nextjs-frontend-v2/agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/AUTOMATION/specs/s17_19_a11y_copy_obs.spec.ts:61:42",
+                    "location": {
+                      "file": "/home/moose/NEXTJS/stark-ai-workbench-nextjs-frontend-v2/agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/AUTOMATION/specs/s17_19_a11y_copy_obs.spec.ts",
+                      "column": 42,
+                      "line": 61
+                    },
+                    "snippet": "  59 |   const trig = page.getByRole('button', { name: 'Demo context' }); await expect(trig).toHaveAttribute('aria-expanded', 'false');\n  60 |   const id = await trig.getAttribute('aria-controls'); expect(await page.locator(`[id=\"${id}\"]`).isHidden()).toBe(true);\n> 61 |   await trig.click(); await expect(trig).toHaveAttribute('aria-expanded', 'true'); expect(await page.locator(`[id=\"${id}\"]`).isVisible()).toBe(true); await trig.click();\n     |                                          ^\n  62 |   await page.setViewportSize({ width: 1280, height: 900 }); await expect(trig).toHaveAttribute('aria-expanded', 'true');\n  63 |   await page.getByRole('button', { name: 'Edit demo instructions' }).focus(); await page.setViewportSize({ width: 375, height: 900 });\n  64 |   await expect(trig).toBeFocused();"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/home/moose/NEXTJS/stark-ai-workbench-nextjs-frontend-v2/agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/AUTOMATION/specs/s17_19_a11y_copy_obs.spec.ts",
+                        "column": 42,
+                        "line": 61
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveAttribute\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: getByRole('button', { name: 'Demo context' })\nExpected: \u001b[32m\"true\"\u001b[39m\nError: strict mode violation: getByRole('button', { name: 'Demo context' }) resolved to 2 elements:\n    1) <button aria-expanded=\"true\" aria-controls=\"_r_1_\" class=\"ws-disclosure-trigger\">…</button> aka getByRole('button', { name: 'Demo context', exact: true })\n    2) <button class=\"ws-small\">Reset demo context</button> aka getByRole('button', { name: 'Reset demo context' })\n\nCall log:\n\u001b[2m  - Expect \"toHaveAttribute\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('button', { name: 'Demo context' })\u001b[22m\n\n\n  59 |   const trig = page.getByRole('button', { name: 'Demo context' }); await expect(trig).toHaveAttribute('aria-expanded', 'false');\n  60 |   const id = await trig.getAttribute('aria-controls'); expect(await page.locator(`[id=\"${id}\"]`).isHidden()).toBe(true);\n> 61 |   await trig.click(); await expect(trig).toHaveAttribute('aria-expanded', 'true'); expect(await page.locator(`[id=\"${id}\"]`).isVisible()).toBe(true); await trig.click();\n     |                                          ^\n  62 |   await page.setViewportSize({ width: 1280, height: 900 }); await expect(trig).toHaveAttribute('aria-expanded', 'true');\n  63 |   await page.getByRole('button', { name: 'Edit demo instructions' }).focus(); await page.setViewportSize({ width: 375, height: 900 });\n  64 |   await expect(trig).toBeFocused();\n    at /home/moose/NEXTJS/stark-ai-workbench-nextjs-frontend-v2/agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/AUTOMATION/specs/s17_19_a11y_copy_obs.spec.ts:61:42"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-07T13:27:13.960Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/home/moose/NEXTJS/stark-ai-workbench-nextjs-frontend-v2/agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-001/q2-6/run1/artifacts/s17_19_a11y_copy_obs-S-18--0f5a2-tatus-regions-visible-focus/error-context.md"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/home/moose/NEXTJS/stark-ai-workbench-nextjs-frontend-v2/agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/AUTOMATION/specs/s17_19_a11y_copy_obs.spec.ts",
+                    "column": 42,
+                    "line": 61
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "8585d6c9271aa24020a3-a109230d9248d461eb8f",
+          "file": "s17_19_a11y_copy_obs.spec.ts",
+          "line": 57,
+          "column": 5
+        },
+        {
+          "title": "S-19 copy payloads, blocked clipboard fallback, speech lifecycle, unavailable explanation, no autoplay",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 20,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 1656,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m1\u001b[39m\nReceived: \u001b[31m0\u001b[39m",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m1\u001b[39m\nReceived: \u001b[31m0\u001b[39m\n    at /home/moose/NEXTJS/stark-ai-workbench-nextjs-frontend-v2/agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/AUTOMATION/specs/s17_19_a11y_copy_obs.spec.ts:90:142",
+                    "location": {
+                      "file": "/home/moose/NEXTJS/stark-ai-workbench-nextjs-frontend-v2/agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/AUTOMATION/specs/s17_19_a11y_copy_obs.spec.ts",
+                      "column": 142,
+                      "line": 90
+                    },
+                    "snippet": "  88 |   expect(clip).toEqual([md, `## You\\n\\nQ?\\n\\n## Kestrel Ops\\n\\n${md}`, 'const x = 1;']);\n  89 |   expect(clip[0]).not.toEqual(md + ' '); // CONTROL: recorder distinguishes a wrong payload\n> 90 |   const rb = p.getByRole('button', { name: 'Read aloud' }); await rb.click(); expect(await p.evaluate(() => (window as any).__speech.speak)).toBe(1);\n     |                                                                                                                                              ^\n  91 |   const stop = p.getByRole('button', { name: 'Stop reading' }); await expect(stop).toBeVisible(); await stop.click(); expect(await p.evaluate(() => (window as any).__speech.cancel)).toBeGreaterThan(0);\n  92 |   await expect(p.getByRole('button', { name: 'Read aloud' })).toBeVisible(); await c.close();\n  93 |   c = await browser.newContext(); p = await c.newPage();"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/home/moose/NEXTJS/stark-ai-workbench-nextjs-frontend-v2/agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/AUTOMATION/specs/s17_19_a11y_copy_obs.spec.ts",
+                        "column": 142,
+                        "line": 90
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m1\u001b[39m\nReceived: \u001b[31m0\u001b[39m\n\n  88 |   expect(clip).toEqual([md, `## You\\n\\nQ?\\n\\n## Kestrel Ops\\n\\n${md}`, 'const x = 1;']);\n  89 |   expect(clip[0]).not.toEqual(md + ' '); // CONTROL: recorder distinguishes a wrong payload\n> 90 |   const rb = p.getByRole('button', { name: 'Read aloud' }); await rb.click(); expect(await p.evaluate(() => (window as any).__speech.speak)).toBe(1);\n     |                                                                                                                                              ^\n  91 |   const stop = p.getByRole('button', { name: 'Stop reading' }); await expect(stop).toBeVisible(); await stop.click(); expect(await p.evaluate(() => (window as any).__speech.cancel)).toBeGreaterThan(0);\n  92 |   await expect(p.getByRole('button', { name: 'Read aloud' })).toBeVisible(); await c.close();\n  93 |   c = await browser.newContext(); p = await c.newPage();\n    at /home/moose/NEXTJS/stark-ai-workbench-nextjs-frontend-v2/agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/AUTOMATION/specs/s17_19_a11y_copy_obs.spec.ts:90:142"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-07T13:27:16.559Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/home/moose/NEXTJS/stark-ai-workbench-nextjs-frontend-v2/agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-001/q2-6/run1/artifacts/s17_19_a11y_copy_obs-S-19--c3d8a-ble-explanation-no-autoplay/error-context.md"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/home/moose/NEXTJS/stark-ai-workbench-nextjs-frontend-v2/agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/AUTOMATION/specs/s17_19_a11y_copy_obs.spec.ts",
+                    "column": 142,
+                    "line": 90
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "8585d6c9271aa24020a3-4c584398294399a6db6e",
+          "file": "s17_19_a11y_copy_obs.spec.ts",
+          "line": 75,
+          "column": 5
+        },
+        {
+          "title": "DIRECTOR-OBS-001 §11.3 browser A+B: two successful new chats both stay in recents; reopening A shows only A; no hidden archive/delete/recreate",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 21,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 1394,
+                  "error": {
+                    "message": "Error: locator.fill: Error: strict mode violation: getByLabel('Message') resolved to 2 elements:\n    1) <textarea rows=\"1\" id=\"_r_e_\" placeholder=\"Message Kestrel Ops…\"></textarea> aka getByRole('textbox', { name: 'Message' })\n    2) <button disabled type=\"submit\" aria-label=\"Send message\" class=\"ws-primary ws-icon\">…</button> aka getByRole('button', { name: 'Send message' })\n\nCall log:\n\u001b[2m  - waiting for getByLabel('Message')\u001b[22m\n",
+                    "stack": "Error: locator.fill: Error: strict mode violation: getByLabel('Message') resolved to 2 elements:\n    1) <textarea rows=\"1\" id=\"_r_e_\" placeholder=\"Message Kestrel Ops…\"></textarea> aka getByRole('textbox', { name: 'Message' })\n    2) <button disabled type=\"submit\" aria-label=\"Send message\" class=\"ws-primary ws-icon\">…</button> aka getByRole('button', { name: 'Send message' })\n\nCall log:\n\u001b[2m  - waiting for getByLabel('Message')\u001b[22m\n\n    at /home/moose/NEXTJS/stark-ai-workbench-nextjs-frontend-v2/agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/AUTOMATION/specs/s17_19_a11y_copy_obs.spec.ts:109:121",
+                    "location": {
+                      "file": "/home/moose/NEXTJS/stark-ai-workbench-nextjs-frontend-v2/agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/AUTOMATION/specs/s17_19_a11y_copy_obs.spec.ts",
+                      "column": 121,
+                      "line": 109
+                    },
+                    "snippet": "  107 |   await page.getByLabel('Start a new conversation').fill('first chat'); await page.getByLabel('Start a new conversation').press('Enter');\n  108 |   await expect.poll(() => new URL(page.url()).search).toBe('?agent=kestrel&session=A'); await expect(page.getByText('reply in A')).toBeVisible();\n> 109 |   await page.locator('.ws-desktop').getByRole('button', { name: 'New chat' }).click(); await page.getByLabel('Message').fill('second chat'); await page.getByLabel('Message').press('Enter');\n      |                                                                                                                         ^\n  110 |   await expect.poll(() => new URL(page.url()).search).toBe('?agent=kestrel&session=B'); await expect(page.getByText('reply in B')).toBeVisible(); await expect(page.getByText('reply in A')).toHaveCount(0);\n  111 |   await page.locator('.ws-crumbs').getByRole('link', { name: 'Kestrel Ops' }).click();\n  112 |   await expect(page.locator('.ws-recent-row strong')).toHaveText(['first chat', 'second chat']);"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/home/moose/NEXTJS/stark-ai-workbench-nextjs-frontend-v2/agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/AUTOMATION/specs/s17_19_a11y_copy_obs.spec.ts",
+                        "column": 121,
+                        "line": 109
+                      },
+                      "message": "Error: locator.fill: Error: strict mode violation: getByLabel('Message') resolved to 2 elements:\n    1) <textarea rows=\"1\" id=\"_r_e_\" placeholder=\"Message Kestrel Ops…\"></textarea> aka getByRole('textbox', { name: 'Message' })\n    2) <button disabled type=\"submit\" aria-label=\"Send message\" class=\"ws-primary ws-icon\">…</button> aka getByRole('button', { name: 'Send message' })\n\nCall log:\n\u001b[2m  - waiting for getByLabel('Message')\u001b[22m\n\n\n  107 |   await page.getByLabel('Start a new conversation').fill('first chat'); await page.getByLabel('Start a new conversation').press('Enter');\n  108 |   await expect.poll(() => new URL(page.url()).search).toBe('?agent=kestrel&session=A'); await expect(page.getByText('reply in A')).toBeVisible();\n> 109 |   await page.locator('.ws-desktop').getByRole('button', { name: 'New chat' }).click(); await page.getByLabel('Message').fill('second chat'); await page.getByLabel('Message').press('Enter');\n      |                                                                                                                         ^\n  110 |   await expect.poll(() => new URL(page.url()).search).toBe('?agent=kestrel&session=B'); await expect(page.getByText('reply in B')).toBeVisible(); await expect(page.getByText('reply in A')).toHaveCount(0);\n  111 |   await page.locator('.ws-crumbs').getByRole('link', { name: 'Kestrel Ops' }).click();\n  112 |   await expect(page.locator('.ws-recent-row strong')).toHaveText(['first chat', 'second chat']);\n    at /home/moose/NEXTJS/stark-ai-workbench-nextjs-frontend-v2/agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/AUTOMATION/specs/s17_19_a11y_copy_obs.spec.ts:109:121"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-07T13:27:19.645Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/home/moose/NEXTJS/stark-ai-workbench-nextjs-frontend-v2/agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-001/q2-6/run1/artifacts/s17_19_a11y_copy_obs-DIREC-0f2ba-den-archive-delete-recreate/error-context.md"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/home/moose/NEXTJS/stark-ai-workbench-nextjs-frontend-v2/agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/AUTOMATION/specs/s17_19_a11y_copy_obs.spec.ts",
+                    "column": 121,
+                    "line": 109
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "8585d6c9271aa24020a3-6c7146ed41a1aa06b68c",
+          "file": "s17_19_a11y_copy_obs.spec.ts",
+          "line": 101,
+          "column": 5
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-10-07T13:24:42.661Z",
+    "duration": 159005.064,
+    "expected": 7,
+    "skipped": 0,
+    "unexpected": 22,
+    "flaky": 0
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "during_demo_actions": [
+    "/x"
+  ],
+  "blocked_controls": [
+    "https://example.invalid"
+  ]
+}

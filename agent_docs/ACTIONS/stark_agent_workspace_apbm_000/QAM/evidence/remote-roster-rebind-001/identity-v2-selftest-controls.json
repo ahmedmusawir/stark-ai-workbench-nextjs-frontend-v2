@@ -1,0 +1,83 @@
+{
+  "st1": {
+    "product_candidate": "22ce03ba3871ea53e5253f2e3f060a1bab3226a3",
+    "execution_head": "20ef380bdd6eed5e111d953d6404992add7a88a6",
+    "worktree": "<repo>",
+    "amendment": null,
+    "raw_verdict": "PRODUCT_DRIFT_OR_IDENTITY_FAILURE",
+    "blocking_kinds": [
+      "CANDIDATE_NOT_ANCESTOR",
+      "COMMITTED_DIFF_FROM_CANDIDATE",
+      "NEXT_ENV_DEV_VARIANT",
+      "PINNED_INPUT_WORKTREE_MISMATCH",
+      "PROTECTED_MISMATCH",
+      "WORKTREE_DIFF_FROM_CANDIDATE"
+    ]
+  },
+  "st2": {
+    "product_candidate": "22ce03ba3871ea53e5253f2e3f060a1bab3226a3",
+    "execution_head": "22ce03ba3871ea53e5253f2e3f060a1bab3226a3",
+    "worktree": "<disposable git-archive>",
+    "amendment": null,
+    "raw_verdict": "PRODUCT_DRIFT_OR_IDENTITY_FAILURE",
+    "blocking_kinds": [
+      "CHANGED_INVENTORY_MISMATCH",
+      "NEXT_ENV_DEV_VARIANT",
+      "PINNED_INPUT_WORKTREE_MISMATCH",
+      "UNTRACKED_PRODUCT_CONFIG_TEST_DEP",
+      "WORKTREE_DIFF_FROM_CANDIDATE"
+    ]
+  },
+  "st3": {
+    "product_candidate": "22ce03ba3871ea53e5253f2e3f060a1bab3226a3",
+    "execution_head": "f21564cacb563ecddbf78b1685086c9489bf1c26",
+    "worktree": "<repo>",
+    "amendment": null,
+    "raw_verdict": "PRODUCT_DRIFT_OR_IDENTITY_FAILURE",
+    "blocking_kinds": [
+      "COMMITTED_DIFF_FROM_CANDIDATE",
+      "NEXT_ENV_DEV_VARIANT",
+      "PINNED_INPUT_WORKTREE_MISMATCH",
+      "PROTECTED_MISMATCH",
+      "WORKTREE_DIFF_FROM_CANDIDATE"
+    ]
+  },
+  "st4": {
+    "product_candidate": "f21564cacb563ecddbf78b1685086c9489bf1c26",
+    "execution_head": "f21564cacb563ecddbf78b1685086c9489bf1c26",
+    "worktree": "<repo>",
+    "amendment": "<wrong-hash copy>",
+    "raw_verdict": "PRODUCT_DRIFT_OR_IDENTITY_FAILURE",
+    "blocking_kinds": [
+      "AMENDMENT_CANDIDATE_MISMATCH",
+      "PINNED_INPUT_WORKTREE_MISMATCH",
+      "PROTECTED_MISMATCH"
+    ]
+  },
+  "st5": {
+    "product_candidate": "22ce03ba3871ea53e5253f2e3f060a1bab3226a3",
+    "execution_head": "f21564cacb563ecddbf78b1685086c9489bf1c26",
+    "worktree": "<repo>",
+    "amendment": null,
+    "raw_verdict": "PRODUCT_DRIFT_OR_IDENTITY_FAILURE",
+    "blocking_kinds": [
+      "COMMITTED_DIFF_FROM_CANDIDATE",
+      "PINNED_INPUT_WORKTREE_MISMATCH",
+      "PROTECTED_MISMATCH",
+      "WORKTREE_DIFF_FROM_CANDIDATE"
+    ]
+  },
+  "st6": {
+    "product_candidate": "22ce03ba3871ea53e5253f2e3f060a1bab3226a3",
+    "execution_head": "22ce03ba3871ea53e5253f2e3f060a1bab3226a3",
+    "worktree": "<disposable git-archive>",
+    "amendment": null,
+    "raw_verdict": "PRODUCT_DRIFT_OR_IDENTITY_FAILURE",
+    "blocking_kinds": [
+      "CHANGED_INVENTORY_MISMATCH",
+      "PINNED_INPUT_WORKTREE_MISMATCH",
+      "UNTRACKED_PRODUCT_CONFIG_TEST_DEP",
+      "WORKTREE_DIFF_FROM_CANDIDATE"
+    ]
+  }
+}

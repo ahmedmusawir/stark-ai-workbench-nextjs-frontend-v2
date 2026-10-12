@@ -1,0 +1,226 @@
+[
+  {
+    "path": "package.json",
+    "purpose": "Added test:workspace script only; dependencies unchanged",
+    "kind": "modified",
+    "entry_sha256": "e65113f7e825ff463ad85dc5de9d9d532f05eccd78d1b3e0b228b04bb2be1ec8",
+    "candidate_sha256": "cff291506080f2f3c4e4e1753cb866843194a0bef7845af10086c24432202ccc",
+    "bytes": 2281
+  },
+  {
+    "path": "playwright.workspace.config.ts",
+    "purpose": "Dedicated local fixture Playwright configuration",
+    "kind": "new",
+    "entry_sha256": null,
+    "candidate_sha256": "b1d4b8ea819c100fe475b9b65e44be481ed27f2fa6b315ce3b89fac62ea0d819",
+    "bytes": 931
+  },
+  {
+    "path": "src/__tests__/config/manifest.test.ts",
+    "purpose": "Engineer unit/regression test; synthetic/mock inputs",
+    "kind": "modified",
+    "entry_sha256": "a05e3b7d540a25ae746625ae12661118a99afe7d37df9523f9cd17603fff167e",
+    "candidate_sha256": "8da25cc2e6bdd156bd2988909bbf98d8cd49653cd4f83b7b0cd6086be85c993f",
+    "bytes": 5053
+  },
+  {
+    "path": "src/__tests__/workspace/components.test.tsx",
+    "purpose": "Engineer unit/regression test; synthetic/mock inputs",
+    "kind": "new",
+    "entry_sha256": null,
+    "candidate_sha256": "b0c6c174354df5e17434cfbbafaf8eafcde30832c0f558688746d5f6f516309b",
+    "bytes": 3076
+  },
+  {
+    "path": "src/__tests__/workspace/navigation.test.ts",
+    "purpose": "Engineer unit/regression test; synthetic/mock inputs",
+    "kind": "new",
+    "entry_sha256": null,
+    "candidate_sha256": "0e14d5a044faec34ddc2a667f77c8e811b90479deee06a0e08ac7d632c8bdeff",
+    "bytes": 1213
+  },
+  {
+    "path": "src/__tests__/workspace/productionAdapter.test.ts",
+    "purpose": "Engineer unit/regression test; synthetic/mock inputs",
+    "kind": "new",
+    "entry_sha256": null,
+    "candidate_sha256": "73dd0540d0455b83ddd79b73ba0ca72da03373e727ef5bbefb12a826abb9f669",
+    "bytes": 4319
+  },
+  {
+    "path": "src/app/(cyberize)/chat/MessageActions.tsx",
+    "purpose": "Opt-in existing Markdown/message capability integration",
+    "kind": "modified",
+    "entry_sha256": "207d4eef599100131791261cc79abc02cd411a5118aa2a41a22969aae170c540",
+    "candidate_sha256": "9155028d57b93a6a45f4e75609839136f2c5a247536c7ce18c438346dbf354e2",
+    "bytes": 6042
+  },
+  {
+    "path": "src/app/(cyberize)/chat/MessageBubble.tsx",
+    "purpose": "Opt-in existing Markdown/message capability integration",
+    "kind": "modified",
+    "entry_sha256": "7756abe22b73c568618dd9a4016bdf37a36acf0b3b3b463982d0e995bed768f3",
+    "candidate_sha256": "da22f59460be757912df0fd155d292bc70f07e6a52dc18caadbea274f222472a",
+    "bytes": 6844
+  },
+  {
+    "path": "src/app/(cyberize)/chat/_workspace-tokens.scss",
+    "purpose": "Exact approved scoped theme token copy",
+    "kind": "new",
+    "entry_sha256": null,
+    "candidate_sha256": "6ebdf711d09b6ca698f2391af3e6ee4c316bc7e4108d691f73b7e670de474a8d",
+    "bytes": 4666
+  },
+  {
+    "path": "src/app/(cyberize)/chat/page.tsx",
+    "purpose": "Authenticated /chat presentation entry",
+    "kind": "modified",
+    "entry_sha256": "ad35bd6c4b5d93f61b8a5cd14f1312b0cc543ad0d7fc8c29383baebb2be6b739",
+    "candidate_sha256": "e7305cb7055d72e888805ee0ba8869daa4c32ed071320faf3392074483a8df5c",
+    "bytes": 274
+  },
+  {
+    "path": "src/app/(cyberize)/chat/workspace.scss",
+    "purpose": "Workbench-only layout/theme/control and owned-portal styling",
+    "kind": "new",
+    "entry_sha256": null,
+    "candidate_sha256": "05bc90268c72c1c627770272c2d7a48dd6ebeda1eda40a48485f844c62048a7a",
+    "bytes": 13434
+  },
+  {
+    "path": "src/app/(cyberize)/layout.tsx",
+    "purpose": "Explicit /chat shell opt-in; retain existing auth and other route shell",
+    "kind": "modified",
+    "entry_sha256": "d86142144524bec683f26c907ff0d41473b1ace0b9c5377444a78aab986ad837",
+    "candidate_sha256": "3952b36ec896e1c4dbf7e3347a5a0e50cfdc5945ea76095cb59e4333f26c181a",
+    "bytes": 831
+  },
+  {
+    "path": "src/components/common/AppShellPage.tsx",
+    "purpose": "Explicit /chat shell opt-in; retain existing auth and other route shell",
+    "kind": "modified",
+    "entry_sha256": "d2bf4bc860b5ecace3f09a1322833bfd4e51181e9654a2cc922ea6c56eea5097",
+    "candidate_sha256": "9cf62ab838adbc65b9260da6557d2fa1d162793b8f9ff768ac61573f3a1d150d",
+    "bytes": 10542
+  },
+  {
+    "path": "src/components/workspace/CopyControl.tsx",
+    "purpose": "Workspace presentation, local state, navigation or existing-service adapter: CopyControl",
+    "kind": "new",
+    "entry_sha256": null,
+    "candidate_sha256": "c51d4eac2a3e2fec2b57f3aaaa520348eea8d715a4f0a4a5f587efc73852cfbd",
+    "bytes": 999
+  },
+  {
+    "path": "src/components/workspace/DemoContext.tsx",
+    "purpose": "Workspace presentation, local state, navigation or existing-service adapter: DemoContext",
+    "kind": "new",
+    "entry_sha256": null,
+    "candidate_sha256": "a592bf52d943bd7d007377ba6a1edbe204cd697646d06bfebf6a0a2257a1ebe6",
+    "bytes": 4642
+  },
+  {
+    "path": "src/components/workspace/Workspace.tsx",
+    "purpose": "Workspace presentation, local state, navigation or existing-service adapter: Workspace",
+    "kind": "new",
+    "entry_sha256": null,
+    "candidate_sha256": "b92dece3982fcceea2708c63afbbf8ab25e6fc8d7f92acbb3f6e8b372f9f7b08",
+    "bytes": 22187
+  },
+  {
+    "path": "src/components/workspace/WorkspaceComposer.tsx",
+    "purpose": "Workspace presentation, local state, navigation or existing-service adapter: WorkspaceComposer",
+    "kind": "new",
+    "entry_sha256": null,
+    "candidate_sha256": "cdd1ef8e73a3afbd28c90da1cc7dae94741c59b00f13cad94cb617389874848c",
+    "bytes": 1582
+  },
+  {
+    "path": "src/components/workspace/WorkspaceEntry.tsx",
+    "purpose": "Workspace presentation, local state, navigation or existing-service adapter: WorkspaceEntry",
+    "kind": "new",
+    "entry_sha256": null,
+    "candidate_sha256": "b38890e427bf5d9e4ae355bb9dbc0fb0e610b786da0a7bb521127f1a22854473",
+    "bytes": 1248
+  },
+  {
+    "path": "src/components/workspace/WorkspaceModal.tsx",
+    "purpose": "Workspace presentation, local state, navigation or existing-service adapter: WorkspaceModal",
+    "kind": "new",
+    "entry_sha256": null,
+    "candidate_sha256": "19bde310d4cedfa85e486192f2f10643ace86ed19f46e6aa96eb566baed1b397",
+    "bytes": 2581
+  },
+  {
+    "path": "src/components/workspace/navigation.ts",
+    "purpose": "Workspace presentation, local state, navigation or existing-service adapter: navigation",
+    "kind": "new",
+    "entry_sha256": null,
+    "candidate_sha256": "08fe7948577981e087f8238ffb99dd807dabd65359ab556ffa1e2ea021001fda",
+    "bytes": 1425
+  },
+  {
+    "path": "src/components/workspace/productionAdapter.ts",
+    "purpose": "Workspace presentation, local state, navigation or existing-service adapter: productionAdapter",
+    "kind": "new",
+    "entry_sha256": null,
+    "candidate_sha256": "2b54d5817b1d4a8c87c644c325610835aedd9ef332bb1d3057f13dec8ba1d305",
+    "bytes": 2440
+  },
+  {
+    "path": "src/components/workspace/types.ts",
+    "purpose": "Workspace presentation, local state, navigation or existing-service adapter: types",
+    "kind": "new",
+    "entry_sha256": null,
+    "candidate_sha256": "8b2f99f3a9d2179158157cfd83e8dad99bd3b1ac08c4699b9e1b830fa335eeb8",
+    "bytes": 1175
+  },
+  {
+    "path": "src/config/manifest.ts",
+    "purpose": "Safe configured-agent presentation projection; active identities unchanged",
+    "kind": "modified",
+    "entry_sha256": "f777700af84c884438c325521d2d6d198f17ff1bdc2062e208228d07d2a65aac",
+    "candidate_sha256": "16e96c8884bfafe676c9b528a257a447af59b0e9adbf7fe5e6a8532f2ccba569",
+    "bytes": 4875
+  },
+  {
+    "path": "tests/workspace/fixture-entry.tsx",
+    "purpose": "Isolated browser fixture/check tooling; never a production route",
+    "kind": "new",
+    "entry_sha256": null,
+    "candidate_sha256": "8c70b05bdbb761ca13a8a420ff22234839ee26829160642bffd57a76a29881eb",
+    "bytes": 5091
+  },
+  {
+    "path": "tests/workspace/harness.cjs",
+    "purpose": "Isolated browser fixture/check tooling; never a production route",
+    "kind": "new",
+    "entry_sha256": null,
+    "candidate_sha256": "c394916848ffaff7d50ac11bc62f7bbea9fb8de6f782a1c3963d63b2265f7617",
+    "bytes": 3443
+  },
+  {
+    "path": "tests/workspace/network-guard.cjs",
+    "purpose": "Isolated browser fixture/check tooling; never a production route",
+    "kind": "new",
+    "entry_sha256": null,
+    "candidate_sha256": "0ca6fe948d7e056338e09aac31a165fa88434e756a30e89a47614ecdddc3c04b",
+    "bytes": 1234
+  },
+  {
+    "path": "tests/workspace/ts-loader.cjs",
+    "purpose": "Isolated browser fixture/check tooling; never a production route",
+    "kind": "new",
+    "entry_sha256": null,
+    "candidate_sha256": "9aaa00d57c05958b7aeb14e36645278f8db5fa5c94e79c6765dd9bee81b38511",
+    "bytes": 278
+  },
+  {
+    "path": "tests/workspace/workspace.spec.ts",
+    "purpose": "Isolated browser fixture/check tooling; never a production route",
+    "kind": "new",
+    "entry_sha256": null,
+    "candidate_sha256": "c28cf2b353acd8478e1a83257bff4476526497875e39292eece8bf2935de900a",
+    "bytes": 19011
+  }
+]

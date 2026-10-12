@@ -20,6 +20,8 @@ export interface BundleEntry {
 }
 
 export interface AgentEntry {
+  description?: string;
+  icon?: string;
   name: string;
   bundle: string;
   label: string;
@@ -123,4 +125,15 @@ export function resolveBundleEnvVarIn(
  */
 export function resolveBundleEnvVar(agentName: string): string | null {
   return resolveBundleEnvVarIn(MANIFEST, agentName);
+}
+
+/** Browser-safe workbench presentation; never exports bundle URL/env resolution. */
+export function workspaceAgentsForUi() {
+  return MANIFEST.agents.map(agent => ({
+    id: agent.name,
+    name: agent.label,
+    backendId: agent.bundle,
+    description: typeof agent.description === 'string' ? agent.description : undefined,
+    icon: typeof agent.icon === 'string' ? agent.icon : undefined,
+  }));
 }

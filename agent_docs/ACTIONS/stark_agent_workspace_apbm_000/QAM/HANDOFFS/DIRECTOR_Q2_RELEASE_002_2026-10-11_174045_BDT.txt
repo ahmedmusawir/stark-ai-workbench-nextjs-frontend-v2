@@ -1,0 +1,19 @@
+Claudy — I release APBM_000 candidate
+8eb5789d9021ad06c15db36db74419a2b5c68fc5
+for independent Q2 attempt-002 under QA Lead plan v0.3.
+
+Cody is paused; you have the sole writer slot.
+Preserve D4 ALLOW and D7 OMIT.
+
+Verify the attached ZIP SHA256:
+2772d6d20e3d2a6cd678e845fd739a28adc84801d1fb043db872599201481cda
+
+Install its QAM-only delivery, then follow:
+QAM/HANDOFFS/CLAUDY_RETEST_002_PROMPT.txt
+
+Complete the approved instrument corrections and preflight,
+then execute the bounded retest and return the indexed package.
+All QA records stay inside the module’s QAM/.
+
+No product repairs, live-service expansion, Git mutation,
+Q5, merge or closeout. Gate Q remains pending.

@@ -1,0 +1,68 @@
+APBM_000 — QA LEAD CERTIFICATE AND ARCHITECT HANDOFF
+Issued: 12 October 2026, Asia/Dhaka
+Issuer: JARVIS, independent QA Lead
+
+DECISION
+Gate Q: PASS for the exact candidate and bounded APBM_000 scope below.
+Q5 bounded cleanup: ACCEPTED / COMPLETE.
+Process verdict: NONCOMPLIANT — documented deviations retained; this is not a clean-process endorsement.
+Engineering closeout: PENDING Architect.
+Merge, deployment, Gate D and APBM_001 launch: NOT authorized by this certificate.
+
+IDENTITY
+Candidate: 8eb5789d9021ad06c15db36db74419a2b5c68fc5
+Parent: 9c50884d4c4513b6969311d5be7c05828104ed3d
+Branch: qa/frontend-apbm-000
+Independent plan: v0.3
+D4 ALLOW; D7 OMIT.
+
+CERTIFIED SCOPE
+Fixture-qualified workspace UI, source/build regression and the approved repaired candidate under plan v0.3. F01–F04 are resolved within tested fixture scope. The certificate combines the previously reviewed Q2 attempt-002 and Addendum-001 evidence with the accepted Q5 completion evidence; no acceptance suite was repeated for this review.
+
+Accepted evidence includes maintained Jest 290/290, QA Jest 31/31, independent browser 33 ordinary passes plus one expected-failure detector control (34 expected outcomes), secondary browser suites 33/33 and 27/27, TypeScript success, normal offline production build, production-output checks, responsive renders, keyboard/focus controls and the targeted font-fallback diagnostic. Addendum-001 supplies the current forbidden-import negative control and allowed twin.
+
+CLEANUP REVIEW
+Reviewed package:
+APBM000_Q5_attempt-002_REVIEW-002_2026-10-12_120138_BDT.zip
+SHA-256: 86b060bcb43449bb96f7768620281eba1a03edd60ef28315227ef9eb3538bb65
+FILE_INDEX SHA-256:
+7f00f13b2fee8c8d1e9f2c9558023a73aa9bdfe91cc83fae10a13c3caca16f7f
+
+Independent archive review verified all 69 indexed members (70 archive files including the self-excluded index), their sizes and hashes, and the supplied receipt. Forty-two supplied historical/preservation rows were independently matched to included bytes. Seventeen overlapping addendum files were compared: only the authorized session and state records changed.
+
+The executor's final gate records 17/17 PASS, exact candidate HEAD, empty staging area and no product/test/dependency drift. Its reconciliation records 16/16 postconditions, 592 preserved paths, seven authorized cleanup targets, three append-only updates, one state rewrite preserving history, 26 new records and no unexplained differences. These are exported checkout observations, not a direct QA Lead inspection of the VM.
+
+Option A is accepted: the exact 1,030-byte prepend is retained in QAM/QA_RECOVERY.md; root RECOVERY.md returned to its preserved HEAD bytes; only the matching root session pointer and five authorized passed-run caches were removed. Failed-run and Engineer caches, instruments, copies, historical evidence and Stage E output remain retained. No comfort check is required.
+
+INVENTORY QUALIFICATION
+There was no complete inventory at the exact mutation instant; the latest full pre-cleanup inventory preceded it by approximately 51 minutes. The pre-status excerpt omitted untracked evidence, and executor-document gate entries were path-classified rather than universally hashed. The seven mutation targets had contemporaneous pre-action hashes. Original package indexes, instrument freezes, post-inventory, action receipts and fresh reconciliation provide sufficient corroboration for this bounded cleanup. The gaps remain disclosed; no reconstructed record is treated as contemporaneous.
+
+PROCESS VERDICT
+PD-002-01: execution proceeded after GATE_STOP without the required ruling. The generated next-env transition was accepted for this candidate only. No future override is authorized.
+
+PD-Q5-01: the proposal generator read .env.local in-process to calculate its SHA-256, contrary to the presence-only restriction. The digest entered the proposal/post-inventory and derivative packages. The reviewed generator supports digest generation; the supplied records do not show credential values exported. This does not establish absence of every possible exposure. Earlier blanket "never read" claims are inaccurate and superseded by this disclosure, including historical boilerplate in gate output.
+
+Lead disposition: record PD-Q5-01 as a process violation, not a product defect or retroactive permission. Do not rerun the generator, re-read or re-hash the private file. Preserve originals unchanged for audit. Director owns the retention/distribution decision before repository publication of affected records or packages. No credential rotation or redaction is ordered from the available evidence. Any sanitized derivative requires explicit direction, separate identity and linkage to its preserved original.
+
+These deviations do not invalidate the reviewed bounded product evidence; hence scoped Gate Q PASS and a separate NONCOMPLIANT process verdict. This grants no general exception to forbidden-zone rules.
+
+LIMITATIONS
+No certification of live ADK/Supabase/GCS/GHL integration, authenticated production-route behavior, durable live sessions/persistence, server logout or token revocation. DIRECTOR-OBS-001 remains UNTRIAGED-live; offline success does not diagnose the disappearing-conversation report.
+OS-installed Inter qualified the original blocked-font rows; use the accepted targeted diagnostic for fallback proof. O-1 remains an observation, not re-graded.
+
+CHECKOUT AND OWNERSHIP
+The tree is not clean. Captured status has 556 QAM entries: 14 modified and 542 untracked; the package and receipt add two further untracked entries. No entries outside QAM and nothing staged at capture. This certificate will add another durable record when installed.
+
+All new QA records remain inside QAM. Claudy must pause after recording this disposition and updating QA routing/status. Cody resumes only when Architect explicitly takes over the checkout. No automatic instrument deletion after Gate Q.
+
+ARCHITECT HANDOFF
+1. Record this certificate under QAM/HANDOFFS and update QA status to Gate Q PASS for this exact candidate and scope; retain historical pending records unchanged, with a current disposition pointing here.
+2. Accept the checkout handoff explicitly before directing Cody's engineering closeout. Preserve the product candidate; product changes require QA impact review.
+3. Carry PD-002-01, PD-Q5-01 and all scope limitations into closeout. Obtain Tony's disposition on retaining/publishing the digest-bearing records before their commit/push. No new QA test release is requested.
+4. Separately resolve historical root RECOVERY/session wording and the broader root-protocol conflict. Optional relocation of historical startup evidence under AUTOMATION/agent_docs requires an explicit path-level decision and byte-preservation check. These were excluded from QA cleanup.
+5. Reconcile retained QA assets and pre-existing Cody records/archives into a reviewed commit inventory. Do not assume all untracked files are disposable or stage everything blindly. Preserve maintained-test harness dependencies.
+6. Tony retains commit, merge and push ownership. Verify the intended committed state and clean working tree during closeout, and synchronize local main after any GitHub merge.
+7. APBM_000 engineering closure and APBM_001 launch require their own Architect/Director decisions.
+
+No further acceptance retest or cleanup is requested by this certificate.
+

@@ -1,0 +1,23 @@
+{
+  "scanned_files": 574,
+  "explicit_path_allowlist": true,
+  "credential_patterns": [
+    "private-key",
+    "github-token",
+    "aws-access-key",
+    "openai-style-secret",
+    "jwt-value"
+  ],
+  "credential_hits": [],
+  "excludes": [
+    "credentials/private environment",
+    "live/private chat data",
+    "dependencies",
+    "caches",
+    "build output",
+    "archives/nested ZIPs",
+    "disposable font copies",
+    "RESPONSES"
+  ],
+  "screens_and_chat_records": "Existing synthetic offline fixture evidence only; no live diagnostic or session export"
+}

@@ -1,0 +1,99 @@
+{
+  "source": "Existing recorded engineering evidence only; no test or acceptance execution during packaging",
+  "checks": [
+    {
+      "check": "Focused maintained regressions",
+      "result": "8 suites / 64 passed",
+      "exit_code": 0,
+      "command_record": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/engineering-repair-001/focused-command.json",
+      "command": [
+        "unshare",
+        "-rn",
+        "npm",
+        "test",
+        "--",
+        "--runInBand",
+        "--runTestsByPath",
+        "src/__tests__/workspace/signout.test.tsx",
+        "src/__tests__/workspace/navigation.test.ts",
+        "src/__tests__/workspace/components.test.tsx",
+        "src/__tests__/workspace/productionAdapter.test.ts",
+        "src/__tests__/chat/chatStore.persist.test.ts",
+        "src/__tests__/chat/chatStore.modeSplit.test.ts",
+        "src/__tests__/chat/chatStore.sessions.test.ts",
+        "src/__tests__/config/manifest.test.ts",
+        "--json",
+        "--outputFile=/home/moose/nextjs/10XLAB/stark-ai-workbench-nextjs-frontend-v2/agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/engineering-repair-001/focused.json"
+      ],
+      "started_at": "2026-10-08T04:54:03.151849+00:00"
+    },
+    {
+      "check": "Full maintained Jest suite",
+      "result": "40 suites / 290 passed",
+      "exit_code": 0,
+      "command_record": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/engineering-repair-001/full-command.json",
+      "command": [
+        "unshare",
+        "-rn",
+        "npm",
+        "test",
+        "--",
+        "--runInBand",
+        "--json",
+        "--outputFile=/home/moose/nextjs/10XLAB/stark-ai-workbench-nextjs-frontend-v2/agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/engineering-repair-001/full.json"
+      ],
+      "started_at": "2026-10-08T04:57:28.152595+00:00"
+    },
+    {
+      "check": "Typecheck",
+      "result": "passed",
+      "exit_code": 0,
+      "command_record": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/engineering-repair-001/typecheck-command.json",
+      "command": [
+        "unshare",
+        "-rn",
+        "npx",
+        "--no-install",
+        "tsc",
+        "--noEmit"
+      ],
+      "started_at": "2026-10-08T04:57:26.509407+00:00"
+    },
+    {
+      "check": "Engineering offline browser checks",
+      "result": "27 passed; 18 view renders plus focus/typography checks",
+      "exit_code": 0,
+      "command_record": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/engineering-repair-001/browser-command.json",
+      "command": [
+        "unshare",
+        "-rn",
+        "python3",
+        "/home/moose/nextjs/10XLAB/stark-ai-workbench-nextjs-frontend-v2/agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/engineering-repair-001/run_browser.py",
+        "--inside"
+      ],
+      "started_at": "2026-10-08T05:00:20.280154+00:00"
+    },
+    {
+      "check": "Font/protected-input verification",
+      "result": "seven font hashes, source CSS, license and protected inputs matched",
+      "exit_code": 0,
+      "command_record": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/engineering-repair-001/font-and-protected-verification.json",
+      "command": "python3 agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/engineering-repair-001/verify_inputs.py",
+      "started_at": "2026-10-08T05:10:22.708000+00:00"
+    },
+    {
+      "check": "Final whitespace check",
+      "result": "git diff --check passed",
+      "exit_code": 0,
+      "command_record": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/engineering-repair-001/final-review-command.json",
+      "command": [
+        "git",
+        "diff",
+        "--check"
+      ],
+      "started_at": "2026-10-08T05:10:22.884304+00:00"
+    }
+  ],
+  "normal_production_build": "NOT RUN; next QA Lead-approved independent attempt",
+  "gate_q": "PENDING"
+}

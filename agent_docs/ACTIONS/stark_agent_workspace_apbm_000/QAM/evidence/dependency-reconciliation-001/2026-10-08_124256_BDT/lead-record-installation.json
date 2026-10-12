@@ -1,0 +1,31 @@
+{
+  "source_zip": "/home/moose/Downloads/APBM000_Q2_LEAD_DISPOSITION_2026-10-07.zip",
+  "source_zip_sha256": "cd5fe8635281fb0722e67a31a0977158d27885005072695b9b118b5bc5ffa72c",
+  "archive_crc_verified": true,
+  "index_member_hashes_verified": true,
+  "records": [
+    {
+      "archive_path": "QAM/HANDOFFS/ARCHITECT_Q2_REPAIR_REQUEST_2026-10-07.txt",
+      "destination": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/HANDOFFS/ARCHITECT_Q2_REPAIR_REQUEST_2026-10-07.txt",
+      "bytes": 2024,
+      "sha256": "2c1ce0f718dd652f8144114397105892add3f03af791ee7cca539a9370e2b7c7",
+      "action": "install"
+    },
+    {
+      "archive_path": "QAM/HANDOFFS/LEAD_Q2_DISPOSITION_2026-10-07.md",
+      "destination": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/HANDOFFS/LEAD_Q2_DISPOSITION_2026-10-07.md",
+      "bytes": 12019,
+      "sha256": "d5b120e87fd56b214a7cf32b64433b7c6f8b0f608c2e16937e33052eccc6b94a",
+      "action": "install"
+    },
+    {
+      "archive_path": "QAM/HANDOFFS/LEAD_Q2_DISPOSITION_INDEX_2026-10-07.json",
+      "destination": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/HANDOFFS/LEAD_Q2_DISPOSITION_INDEX_2026-10-07.json",
+      "bytes": 776,
+      "sha256": "2c17b8d4d8a3c5205a892cec732c92b0fe94d112a4e3ef51e819d7eae667199c",
+      "action": "install"
+    }
+  ],
+  "conflicts": [],
+  "new_qa_execution_authorized": false
+}

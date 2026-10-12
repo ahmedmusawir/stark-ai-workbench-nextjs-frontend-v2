@@ -1,0 +1,20 @@
+
+> adk-agent-harness-nextjs-frontend-v1@0.1.0 test
+> jest --runInBand --runTestsByPath src/__tests__/admin/AddMemberForm.test.tsx --testNamePattern=^AddMemberForm does not redirect when addMember returns an error$ --json --outputFile=/home/moose/nextjs/10XLAB/stark-ai-workbench-nextjs-frontend-v2/agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/addmember-diagnostic-001/2026-10-08_131602_BDT/isolated.json
+
+PASS src/__tests__/admin/AddMemberForm.test.tsx
+  AddMemberForm
+    ✓ does not redirect when addMember returns an error (91 ms)
+    ○ skipped renders all required form fields
+    ○ skipped shows loading state when form is submitted
+    ○ skipped validates that passwords match before submission
+    ○ skipped validates required fields on empty submit
+    ○ skipped calls addMember with correct data on valid submission
+    ○ skipped redirects to admin-portal dashboard on successful creation
+
+Test Suites: 1 passed, 1 total
+Tests:       6 skipped, 1 passed, 7 total
+Snapshots:   0 total
+Time:        0.659 s, estimated 1 s
+Ran all test suites within paths "src/__tests__/admin/AddMemberForm.test.tsx".
+Test results written to: agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/addmember-diagnostic-001/2026-10-08_131602_BDT/isolated.json

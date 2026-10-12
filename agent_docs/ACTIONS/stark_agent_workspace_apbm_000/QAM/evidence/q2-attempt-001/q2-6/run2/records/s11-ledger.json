@@ -1,0 +1,29 @@
+[
+  {
+    "action": "list",
+    "agent": "kestrel",
+    "seq": 1
+  },
+  {
+    "action": "rename",
+    "row": "row-a",
+    "title": "<b>&amp;\"'</b> 🚀",
+    "seq": 2
+  },
+  {
+    "action": "rename",
+    "row": "row-a",
+    "title": "Should not stick",
+    "seq": 3
+  },
+  {
+    "action": "archive",
+    "row": "row-b",
+    "seq": 4
+  },
+  {
+    "action": "archive",
+    "row": "row-b",
+    "seq": 5
+  }
+]

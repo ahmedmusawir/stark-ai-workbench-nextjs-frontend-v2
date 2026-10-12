@@ -1,0 +1,23 @@
+{
+  "stage": "POS-allowed-twin",
+  "command": [
+    "timeout",
+    "-s",
+    "TERM",
+    "40",
+    "node",
+    "/home/moose/nextjs/10XLAB/stark-ai-workbench-nextjs-frontend-v2/agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/AUTOMATION/qa-harness.cjs"
+  ],
+  "extra_env_keys": [
+    "QA_ENTRY",
+    "QA_PORT",
+    "NODE_OPTIONS"
+  ],
+  "started": "2026-10-11T18:26:56+06:00",
+  "duration_s": 40.024,
+  "exit": 124,
+  "cwd": "repo root",
+  "namespace": "unshare -rn; lo up; no external route",
+  "env": "env -i PATH HOME LANG TMPDIR NEXT_TELEMETRY_DISABLED=1 CI=1 + extra",
+  "tmpdir": "/tmp/claude-1000/qa-a2-tmp/POS-allowed-twin"
+}

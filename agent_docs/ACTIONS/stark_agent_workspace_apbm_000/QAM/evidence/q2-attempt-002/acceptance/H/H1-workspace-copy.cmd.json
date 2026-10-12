@@ -1,0 +1,20 @@
+{
+  "stage": "H1-workspace-copy",
+  "command": [
+    "node",
+    "node_modules/@playwright/test/cli.js",
+    "test",
+    "--config",
+    "/home/moose/nextjs/10XLAB/stark-ai-workbench-nextjs-frontend-v2/agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/AUTOMATION/secondary-a2/playwright.workspace-copy.config.ts"
+  ],
+  "extra_env_keys": [
+    "NODE_OPTIONS"
+  ],
+  "started": "2026-10-11T18:07:03+06:00",
+  "duration_s": 33.364,
+  "exit": 0,
+  "cwd": "repo root",
+  "namespace": "unshare -rn; lo up; no external route",
+  "env": "env -i PATH HOME LANG TMPDIR NEXT_TELEMETRY_DISABLED=1 CI=1 + extra",
+  "tmpdir": "/tmp/claude-1000/qa-a2-tmp/H1-workspace-copy"
+}

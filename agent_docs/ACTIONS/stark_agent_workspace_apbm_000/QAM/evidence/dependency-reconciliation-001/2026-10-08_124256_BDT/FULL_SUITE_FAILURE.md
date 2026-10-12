@@ -1,0 +1,7 @@
+# Reverification failure — not waived
+
+Full maintained Jest: **289 passed / 1 failed / 290**, 39 passed / 1 failed suites, exit 1. Exact failing test: `AddMemberForm does not redirect when addMember returns an error`, `src/__tests__/admin/AddMemberForm.test.tsx:152`. Expected 0 router calls; received one `mockPush('/admin-portal')`. Full output is `full.log` and `full.json`; command/timestamp/exit are in `full-command.json`.
+
+Likely mechanism (inference, not confirmed): the loading-state test creates a 100ms promise that resolves successfully, then finishes as soon as the button disables. Unmount does not cancel the async submit; it retains the shared router mock and can call push after subsequent tests clear mocks. The error test waits only for addMember invocation rather than submission completion. This can contaminate the no-redirect assertion. Both form and test are byte-identical to HEAD, and the same named failure appeared in the earlier newer-dependency baseline. Therefore this is not proof of a new dependency regression or an F01 repair regression.
+
+Focused regressions 64/64, typecheck exit 0 and engineering offline browser 27/27 pass on the committed dependencies. Overall full-suite result remains FAIL. No rerun until green, product/test repair, assertion weakening or waiver was made. Architect/QA Lead must disposition the retained failure or authorize a separate deterministic test-lifecycle fix. Independent production build/acceptance remains pending.

@@ -1,0 +1,22 @@
+{
+  "recorded_at": "2026-10-08T07:18:25.337657+00:00",
+  "isolated_executed": 1,
+  "isolated_passed": 1,
+  "isolated_failed": 0,
+  "filtered_out_tests": 6,
+  "command_exit_code": 0,
+  "full_suite_rerun": false,
+  "existing_full_suite_result": "289 pass / 1 fail, remains FAIL",
+  "source_hashes_preserved": {
+    "src/__tests__/admin/AddMemberForm.test.tsx": true,
+    "src/app/(admin)/admin-portal/add-member/AddMemberForm.tsx": true,
+    "src/__tests__/jest.setup.ts": true,
+    "jest.config.js": true
+  },
+  "prior_reconciliation_inventory_preserved": true,
+  "lock_still_equals_head": true,
+  "product_and_test_edits": false,
+  "matching_failure_signature": true,
+  "matching_causal_mechanism": "Hypothesis only; no router-call attribution",
+  "gate_q": "PENDING"
+}

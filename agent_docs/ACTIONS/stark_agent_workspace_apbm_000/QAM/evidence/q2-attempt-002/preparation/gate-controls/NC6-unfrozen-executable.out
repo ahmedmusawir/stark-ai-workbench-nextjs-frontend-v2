@@ -1,0 +1,1 @@
+{"verdict": "GATE_STOP", "failed": ["G10b next-env.d.ts is one of the two binding-pinned variants", "G14 QAM/non-product inventory: every difference classified", "G15 instrument freeze: every changed/new AUTOMATION file frozen and every frozen hash on disk"], "error": null, "checks": 17}

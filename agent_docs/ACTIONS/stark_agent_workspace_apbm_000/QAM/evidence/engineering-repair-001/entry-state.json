@@ -1,0 +1,22 @@
+{
+  "recorded_at": "2026-10-08T04:24:12.357371+00:00",
+  "path": "/home/moose/nextjs/10XLAB/stark-ai-workbench-nextjs-frontend-v2",
+  "branch": "qa/frontend-apbm-000",
+  "parent_sha": "9c50884d4c4513b6969311d5be7c05828104ed3d",
+  "original_status": " M package-lock.json\n",
+  "entry_lock_sha256": "c62a48123a50b5289a6179ebafb1a13960f1c3636992ddcc0df0b435ebf556eb",
+  "lock_diff_numstat": "1912\t1069\tpackage-lock.json\n",
+  "reviewed_candidate": "f21564cacb563ecddbf78b1685086c9489bf1c26",
+  "execution_head": "c4ed7042fa05fa638bdc6d4327ecba3448d44cef",
+  "committed_product_diff": "",
+  "subsequent_commits": "9c50884d4c4513b6969311d5be7c05828104ed3d 8oct2026 - apbm-000 qa done. engineering close out due\n\n 10 files changed, 163 insertions(+), 2 deletions(-)\n24ccf307ba04460f0d9663e4ce1c71984d58e369 7oct2026 - apbm-000 qa done ... waiting Architect close out\n\n 253 files changed, 38677 insertions(+), 44 deletions(-)\n",
+  "writer_authority": "Tony: Claudy is paused; Cody has the writer slot",
+  "qa_disposition": "MISSING: post-attempt-001 Lead disposition; present Lead return is pre-Q2 roster approval",
+  "protected_hashes": {
+    "package-lock.json": "c62a48123a50b5289a6179ebafb1a13960f1c3636992ddcc0df0b435ebf556eb",
+    "config/agents.manifest.json": "6c27f420127db7125a43ddba6347470b19d3be39769b44bb2b85bd6d9526b6d9",
+    "src/store/chatStore.ts": "37a1060149d471122067a0601ab59ee20946fc936dbce3be9304ed8b2760ae71",
+    "src/store/useAuthStore.ts": "eb938d6271ab9465eda8c9b7cf483cfa992d2d06dbb461adddb2746ca1c387a3",
+    "package.json": "cff291506080f2f3c4e4e1753cb866843194a0bef7845af10086c24432202ccc"
+  }
+}

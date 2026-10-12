@@ -1,0 +1,15 @@
+{
+  "stage": "Q2",
+  "attempt": 1,
+  "recorded_at": "2026-10-07T19:42:36.593641+06:00",
+  "repo_archive": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/HANDOFFS/Q2_attempt-001.zip",
+  "shareable_copy": "/home/moose/Downloads/APBM000_Q2_attempt-001_QA-Lead-Package_2026-10-07_194132.zip",
+  "downloads_copy_status": "VERIFIED IDENTICAL",
+  "sha256": "27aec35a9e0b947f7e6c6f0f8502c9f6440aab4acff7d2fd308aa63d140ca63a",
+  "bytes": 7493693,
+  "members": 269,
+  "crc_validation": "PASS",
+  "membership_hashes_validation": "PASS",
+  "sensitive_scan": "PASS: no secret-pattern hits; no env/auth/profile/trace/HAR/build output; synthetic fixtures only",
+  "gate_q": "NOT_ISSUED"
+}

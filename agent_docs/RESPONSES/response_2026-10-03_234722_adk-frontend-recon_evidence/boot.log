@@ -1,0 +1,3 @@
+Anonymous frontend boot prerequisite failed before starting npm run dev.
+Python socket.socket() -> PermissionError: [Errno 1] Operation not permitted
+No server started; no HTTP request made.

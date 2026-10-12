@@ -1,0 +1,1181 @@
+diff --git a/package.json b/package.json
+--- a/package.json
++++ b/package.json
+@@ -10,7 +10,8 @@
+     "test": "jest",
+     "test:integration": "jest --testPathPatterns=__tests__/api",
+     "test:e2e": "playwright test",
+-    "test:e2e:ui": "playwright test --ui"
++    "test:e2e:ui": "playwright test --ui",
++    "test:workspace": "playwright test --config playwright.workspace.config.ts"
+   },
+   "dependencies": {
+     "@google-cloud/storage": "^7.21.0",
+diff --git a/playwright.workspace.config.ts b/playwright.workspace.config.ts
+new file mode 100644
+--- /dev/null
++++ b/playwright.workspace.config.ts
+@@ -0,0 +1,8 @@
++import { defineConfig } from '@playwright/test';
++export default defineConfig({
++  testDir:'./tests/workspace', testMatch:'workspace.spec.ts', fullyParallel:false, workers:1, retries:0, timeout:30000,
++  outputDir:'./agent_docs/ACTIONS/stark_agent_workspace_apbm_000/evidence/engineering-attempt-001/browser-artifacts',
++  reporter:[['list'],['json',{outputFile:'./agent_docs/ACTIONS/stark_agent_workspace_apbm_000/evidence/engineering-attempt-001/playwright-results.json'}]],
++  use:{baseURL:'http://127.0.0.1:43170',browserName:'chromium',launchOptions:{executablePath:'/opt/google/chrome/chrome',args:['--disable-background-networking']},viewport:{width:1280,height:1000},deviceScaleFactor:1,trace:'off',screenshot:'only-on-failure'},
++  webServer:{command:'node tests/workspace/harness.cjs',url:'http://127.0.0.1:43170',reuseExistingServer:false,timeout:90000,env:{NODE_OPTIONS:'--require=./tests/workspace/network-guard.cjs'}},
++});
+diff --git a/src/__tests__/config/manifest.test.ts b/src/__tests__/config/manifest.test.ts
+--- a/src/__tests__/config/manifest.test.ts
++++ b/src/__tests__/config/manifest.test.ts
+@@ -110,24 +110,13 @@
+ });
+ 
+ describe('the committed manifest', () => {
+-  // ROSTER-AGNOSTIC by design (BIM-004 baseline repair; landed on both
+-  // lineages, unified at the bim-004→bim-005 merge): M-G2 promises that
+-  // adding an agent is a JSON edit with ZERO code changes — so these tests
+-  // assert structural invariants, never an exact roster. The original five
+-  // must be PRESENT; extras added via the four-line test are legitimate.
+-  it('is valid, includes the original five agents, and declares v1 + v2-local', () => {
+-    for (const original of [
+-      'greeting_agent',
+-      'jarvis_agent',
+-      'calc_agent',
+-      'product_agent',
+-      'ghl_mcp_agent',
+-    ]) {
+-      expect(KNOWN_AGENTS).toContain(original);
+-    }
+-    expect(MANIFEST.bundles.map((b) => b.id)).toEqual(
+-      expect.arrayContaining(['v1', 'v2-local']),
+-    );
++  // The product roster is configuration, not the historical five-agent fixture.
++  it('validates the configured roster and preserves declared bundle identity', () => {
++    const configured = require('../../../config/agents.manifest.json');
++    expect(() => validateManifest(configured)).not.toThrow();
++    expect(KNOWN_AGENTS).toEqual(configured.agents.map((agent: { name: string }) => agent.name));
++    expect(new Set(KNOWN_AGENTS).size).toBe(KNOWN_AGENTS.length);
++    expect(MANIFEST.bundles).toEqual(configured.bundles);
+   });
+ 
+   it('every declared agent resolves to a declared bundle env var', () => {
+diff --git a/src/__tests__/workspace/components.test.tsx b/src/__tests__/workspace/components.test.tsx
+new file mode 100644
+--- /dev/null
++++ b/src/__tests__/workspace/components.test.tsx
+@@ -0,0 +1,29 @@
++/** @jest-environment jsdom */
++import '@testing-library/jest-dom';
++import { fireEvent, render, screen } from '@testing-library/react';
++import { WorkspaceComposer } from '@/components/workspace/WorkspaceComposer';
++import { CopyControl } from '@/components/workspace/CopyControl';
++import { DEMO_DISCLOSURE, initialDemo } from '@/components/workspace/DemoContext';
++
++test('composer has label, rejects whitespace, honors IME and Shift+Enter',()=>{
++ const send=jest.fn(),change=jest.fn();const {rerender}=render(<WorkspaceComposer name="A" value="  " onChange={change} onSend={send} disabled={false}/>);
++ expect(screen.getByRole('button',{name:'Send message'})).toBeDisabled();fireEvent.keyDown(screen.getByLabelText('Message'),{key:'Enter'});expect(send).not.toHaveBeenCalled();
++ rerender(<WorkspaceComposer name="A" value="Hello" onChange={change} onSend={send} disabled={false}/>);
++ fireEvent.keyDown(screen.getByLabelText('Message'),{key:'Enter',isComposing:true});fireEvent.keyDown(screen.getByLabelText('Message'),{key:'Enter',shiftKey:true});expect(send).not.toHaveBeenCalled();fireEvent.keyDown(screen.getByLabelText('Message'),{key:'Enter'});expect(send).toHaveBeenCalledTimes(1);
++ rerender(<WorkspaceComposer name="A" value="Hello" onChange={change} onSend={send} disabled/>);fireEvent.keyDown(screen.getByLabelText('Message'),{key:'Enter'});expect(send).toHaveBeenCalledTimes(1);
++});
++test('blocked clipboard exposes exact selectable Markdown without HTML injection',async()=>{
++ Object.defineProperty(navigator,'clipboard',{configurable:true,value:{writeText:jest.fn().mockRejectedValue(Error('denied'))}});
++ render(<CopyControl text={'**literal** <script>not executable</script>'}/>);fireEvent.click(screen.getByRole('button',{name:'Copy message'}));expect(await screen.findByLabelText('Text to copy manually')).toHaveValue('**literal** <script>not executable</script>');expect(document.querySelector('script')).toBeNull();
++});
++test('demo defaults return independent mutable copies and permanent disclosure is explicit',()=>{
++ const a=initialDemo(),b=initialDemo();a.samples.pop();expect(b.samples).toHaveLength(2);expect(DEMO_DISCLOSURE).toContain('not sent to the agent');expect(DEMO_DISCLOSURE).toContain('reset on reload');
++});
++
++let mockPathname='/mission-control';
++jest.mock('next/navigation',()=>({usePathname:()=>mockPathname}));
++import AppShellPage from '@/components/common/AppShellPage';
++test('workbench route releases inherited shell scroll lock; other routes retain their shell',()=>{
++ mockPathname='/mission-control';const props={sidebar:<div>Existing sidebar</div>,workbenchRoute:true,children:<div>Route content</div>};const {rerender,unmount}=render(<AppShellPage {...props}/>);fireEvent.click(screen.getByRole('button',{name:'Open navigation menu'}));expect(document.body.style.overflow).toBe('hidden');
++ mockPathname='/chat';rerender(<AppShellPage {...props}/>);expect(document.body.style.overflow).not.toBe('hidden');expect(screen.queryByText('Existing sidebar')).toBeNull();expect(screen.getByText('Route content')).toBeInTheDocument();unmount();
++});
+diff --git a/src/__tests__/workspace/navigation.test.ts b/src/__tests__/workspace/navigation.test.ts
+new file mode 100644
+--- /dev/null
++++ b/src/__tests__/workspace/navigation.test.ts
+@@ -0,0 +1,12 @@
++import { parseWorkspaceView, workspaceQuery } from '@/components/workspace/navigation';
++const agents=[{id:'alpha/β',name:'Alpha',backendId:'fixture'}];
++describe('workspace URL identity',()=>{
++ test('encodes stable IDs and restores each view',()=>{
++  expect(parseWorkspaceView('',agents)).toEqual({kind:'directory'});
++  expect(parseWorkspaceView(workspaceQuery('alpha/β'),agents)).toEqual({kind:'workspace',agentId:'alpha/β'});
++  expect(parseWorkspaceView(workspaceQuery('alpha/β',undefined,true),agents)).toEqual({kind:'draft',agentId:'alpha/β'});
++  expect(parseWorkspaceView(workspaceQuery('alpha/β','a&b/#'),agents)).toEqual({kind:'conversation',agentId:'alpha/β',sessionId:'a&b/#'});
++ });
++ test.each(['agent=unknown','session=a','new=1','agent=alpha%2F%CE%B2&new=0','agent=alpha%2F%CE%B2&session=','agent=alpha%2F%CE%B2&session=a&new=1','agent=alpha%2F%CE%B2&agent=alpha%2F%CE%B2','agent=alpha%2F%CE%B2&user=other','state=ready','backend=http://example.invalid'])('rejects unsafe/conflicting selection %s',q=>expect(parseWorkspaceView(q,agents)).toEqual({kind:'invalid'}));
++ test('empty roster never fabricates a default',()=>expect(parseWorkspaceView('agent=alpha',[])).toEqual({kind:'invalid'}));
++});
+diff --git a/src/__tests__/workspace/productionAdapter.test.ts b/src/__tests__/workspace/productionAdapter.test.ts
+new file mode 100644
+--- /dev/null
++++ b/src/__tests__/workspace/productionAdapter.test.ts
+@@ -0,0 +1,39 @@
++jest.mock('@/services/chatService',()=>({chatService:{sendMessage:jest.fn(),getHistory:jest.fn()}}));
++jest.mock('@/services/sessionIndexService',()=>({sessionIndexService:{listSessions:jest.fn(),createSession:jest.fn(),touchSession:jest.fn(),renameSession:jest.fn(),archiveSession:jest.fn()},titleFromMessage:(text:string)=>text}));
++import { chatService } from '@/services/chatService';
++import { sessionIndexService } from '@/services/sessionIndexService';
++import { createProductionWorkspaceServices } from '@/components/workspace/productionAdapter';
++import { workspaceAgentsForUi, MANIFEST } from '@/config/manifest';
++const chat=jest.mocked(chatService), index=jest.mocked(sessionIndexService);
++beforeEach(()=>jest.resetAllMocks());
++test('projection retains configured identities without URL/env names and permits neutral fields',()=>{
++ const a=workspaceAgentsForUi();expect(a.map(x=>x.id)).toEqual(MANIFEST.agents.map(x=>x.name));expect(a.map(x=>x.backendId)).toEqual(MANIFEST.agents.map(x=>x.bundle));expect(JSON.stringify(a)).not.toMatch(/urlEnv|ADK_BUNDLE|https?:/);
++});
++test('creation occurs only after explicit send returns a durable ID, then uses existing metadata binding once',async()=>{
++ const api=createProductionWorkspaceServices('fixture-user');expect(chat.sendMessage).not.toHaveBeenCalled();expect(index.createSession).not.toHaveBeenCalled();
++ chat.sendMessage.mockResolvedValue({session_id:'durable-a',response:'Reply'});index.createSession.mockResolvedValue(null);
++ expect(await api.send('configured-a',null,'Hello')).toEqual({status:'sent',sessionId:'durable-a',reply:'Reply',metadataWarning:true});
++ expect(chat.sendMessage).toHaveBeenCalledWith({agent_name:'configured-a',user_id:'fixture-user',session_id:null,message:'Hello'});expect(index.createSession).toHaveBeenCalledTimes(1);
++});
++test('existing session reuses ID and touch binding without create',async()=>{
++ const api=createProductionWorkspaceServices('fixture-user');chat.sendMessage.mockResolvedValue({session_id:'a',response:'Reply'});index.listSessions.mockResolvedValue([{id:'row-a',adk_session_id:'a'} as never]);
++ await api.send('configured-a','a','Again');expect(index.createSession).not.toHaveBeenCalled();expect(index.touchSession).toHaveBeenCalledWith('row-a');
++});
++test('legacy sentinel and absent ID are uncertain, never not-sent or successful transcript',async()=>{
++ const api=createProductionWorkspaceServices('fixture-user');chat.sendMessage.mockResolvedValue({session_id:'a',response:'Error: Could not reach Agent Service. Details: timeout'});expect(await api.send('a','a','x')).toEqual({status:'uncertain'});expect(index.createSession).not.toHaveBeenCalled();
++});
++test('history/list retain inherited empty outcome without invented missing distinction',async()=>{
++ const api=createProductionWorkspaceServices('fixture-user');chat.getHistory.mockResolvedValue([]);index.listSessions.mockResolvedValue([]);
++ expect(await api.history('a','s')).toEqual({status:'empty',messages:[]});expect(await api.list('a')).toEqual({status:'empty',rows:[]});
++});
++test('rename and archive call existing operations with literal title and no transcript delete',async()=>{
++ const api=createProductionWorkspaceServices('fixture-user'),row={id:'row',sessionId:'s',title:'Before'};await api.rename(row,'<literal> & punctuation');await api.archive(row);expect(index.renameSession).toHaveBeenCalledWith('row','<literal> & punctuation');expect(index.archiveSession).toHaveBeenCalledWith('row');
++});
++test('missing user context prevents every existing-service call',async()=>{
++ const api=createProductionWorkspaceServices('');await expect(api.list('a')).rejects.toThrow('User context unavailable');await expect(api.send('a',null,'x')).rejects.toThrow();expect(chat.sendMessage).not.toHaveBeenCalled();expect(index.listSessions).not.toHaveBeenCalled();
++});
++
++test('metadata rejection never discards a confirmed ADK ID and reply',async()=>{
++ const api=createProductionWorkspaceServices('fixture-user');chat.sendMessage.mockResolvedValue({session_id:'confirmed-id',response:'Confirmed reply'});index.createSession.mockRejectedValue(Error('metadata unavailable'));
++ expect(await api.send('a',null,'Hello')).toEqual({status:'sent',sessionId:'confirmed-id',reply:'Confirmed reply',metadataWarning:true});expect(chat.sendMessage).toHaveBeenCalledTimes(1);
++});
+diff --git a/src/app/(cyberize)/chat/MessageActions.tsx b/src/app/(cyberize)/chat/MessageActions.tsx
+--- a/src/app/(cyberize)/chat/MessageActions.tsx
++++ b/src/app/(cyberize)/chat/MessageActions.tsx
+@@ -18,6 +18,7 @@
+  */
+ 
+ import { useEffect, useRef, useState } from "react";
++import { CopyControl } from "@/components/workspace/CopyControl";
+ import {
+   Check,
+   Copy,
+@@ -37,6 +38,7 @@
+ } from "@/utils/speech";
+ 
+ interface MessageActionsProps {
++  workbench?: boolean;
+   role: "user" | "assistant";
+   content: string;
+   isLast?: boolean;
+@@ -52,6 +54,7 @@
+   onEdit,
+   onRegenerate,
+   onFeedback,
++  workbench = false,
+ }: MessageActionsProps) {
+   const isAssistant = role === "assistant";
+ 
+@@ -62,21 +65,22 @@
+         (isAssistant ? "" : "justify-end")
+       }
+     >
+-      <CopyButton content={content} />
++      {workbench ? <CopyControl text={content} label="Copy message"/> : <CopyButton content={content} />}
+       {isAssistant && <ReadAloudButton content={content} />}
+-      {isAssistant && (
++      {workbench && isAssistant && !isSpeechSupported() && <span className="ws-small">Read aloud unavailable in this browser.</span>}
++      {isAssistant && !workbench && (
+         <FeedbackButton
+           direction="up"
+           onClick={() => onFeedback?.("up")}
+         />
+       )}
+-      {isAssistant && (
++      {isAssistant && !workbench && (
+         <FeedbackButton
+           direction="down"
+           onClick={() => onFeedback?.("down")}
+         />
+       )}
+-      {isAssistant && isLast && onRegenerate && (
++      {!workbench && isAssistant && isLast && onRegenerate && (
+         <ActionButton
+           label="Regenerate response"
+           onClick={onRegenerate}
+@@ -84,7 +88,7 @@
+           <RotateCw size={15} />
+         </ActionButton>
+       )}
+-      {!isAssistant && onEdit && (
++      {!workbench && !isAssistant && onEdit && (
+         <ActionButton label="Edit message" onClick={onEdit}>
+           <Pencil size={15} />
+         </ActionButton>
+diff --git a/src/app/(cyberize)/chat/MessageBubble.tsx b/src/app/(cyberize)/chat/MessageBubble.tsx
+--- a/src/app/(cyberize)/chat/MessageBubble.tsx
++++ b/src/app/(cyberize)/chat/MessageBubble.tsx
+@@ -13,9 +13,12 @@
+ 
+ import type { AgentName, Message } from "@/types";
+ 
++import { CopyControl } from "@/components/workspace/CopyControl";
++
+ import MessageActions from "./MessageActions";
+ 
+ interface MessageBubbleProps {
++  workbench?: boolean;
+   message: Message;
+   agentName: AgentName;
+   isLast?: boolean;
+@@ -31,6 +34,7 @@
+   onEdit,
+   onRegenerate,
+   onFeedback,
++  workbench = false,
+ }: MessageBubbleProps) => {
+   if (message.role === "user") {
+     return (
+@@ -39,6 +43,7 @@
+           {message.content}
+         </div>
+         <MessageActions
++          workbench={workbench}
+           role="user"
+           content={message.content}
+           onEdit={onEdit}
+@@ -52,8 +57,9 @@
+       <p className="text-xs font-medium uppercase tracking-wider text-zinc-500 dark:text-zinc-400">
+         {agentName}
+       </p>
+-      <AssistantMarkdown content={message.content} />
++      <AssistantMarkdown content={message.content} workbench={workbench} />
+       <MessageActions
++        workbench={workbench}
+         role="assistant"
+         content={message.content}
+         isLast={isLast}
+@@ -66,7 +72,7 @@
+ 
+ /* ───────────────────────────── Assistant Markdown ───────────────────────────── */
+ 
+-const AssistantMarkdown = ({ content }: { content: string }) => {
++const AssistantMarkdown = ({ content, workbench }: { content: string; workbench: boolean }) => {
+   const { resolvedTheme } = useTheme();
+   const codeTheme = resolvedTheme === "dark" ? oneDark : oneLight;
+ 
+@@ -77,8 +83,8 @@
+         const codeText = String(children).replace(/\n$/, "");
+         return (
+           <div className="relative my-2 group">
+-            <CopyCodeButton text={codeText} />
+-            <SyntaxHighlighter
++            {workbench ? <div className="ws-code-head"><span>{match[1]}</span><CopyControl text={codeText} label="Copy code"/></div> : <CopyCodeButton text={codeText} />}
++            <div className={workbench ? "ws-code-scroll" : undefined} tabIndex={workbench ? 0 : undefined} role={workbench ? "region" : undefined} aria-label={workbench ? "Code block" : undefined}><SyntaxHighlighter
+               // react-syntax-highlighter's style prop has loose typing; the
+               // imported theme objects don't satisfy its strict shape.
+               // eslint-disable-next-line @typescript-eslint/no-explicit-any
+@@ -93,7 +99,7 @@
+               }}
+             >
+               {codeText}
+-            </SyntaxHighlighter>
++            </SyntaxHighlighter></div>
+           </div>
+         );
+       }
+@@ -107,7 +113,7 @@
+       );
+     },
+     table: ({ children }) => (
+-      <div className="overflow-x-auto my-3">
++      <div className="overflow-x-auto my-3" tabIndex={workbench ? 0 : undefined} role={workbench ? "region" : undefined} aria-label={workbench ? "Message table" : undefined}>
+         <table className="w-full border-collapse text-sm">{children}</table>
+       </div>
+     ),
+diff --git a/src/app/(cyberize)/chat/_workspace-tokens.scss b/src/app/(cyberize)/chat/_workspace-tokens.scss
+new file mode 100644
+--- /dev/null
++++ b/src/app/(cyberize)/chat/_workspace-tokens.scss
+@@ -0,0 +1,86 @@
++/* Proposed production token boundary; use instead of the global preview selectors.
++   Mount data-workspace-theme on the workbench shell and every external portal host.
++   Keep the established html .dark class controlled by next-themes. */
++/* Stark Agent Workspace — proposed v0.1. Values: TOKEN_MAPPING.md. */
++[data-workspace-theme] {
++  --background: 0.000 0.000% 100.000%; /* #ffffff */
++  --foreground: 240.000 5.882% 10.000%; /* #18181b */
++  --card: 0.000 0.000% 98.039%; /* #fafafa */
++  --card-foreground: 240.000 5.882% 10.000%; /* #18181b */
++  --popover: 0.000 0.000% 100.000%; /* #ffffff */
++  --popover-foreground: 240.000 5.882% 10.000%; /* #18181b */
++  --primary: 240.000 5.882% 10.000%; /* #18181b */
++  --primary-foreground: 0.000 0.000% 100.000%; /* #ffffff */
++  --secondary: 240.000 4.762% 95.882%; /* #f4f4f5 */
++  --secondary-foreground: 240.000 5.882% 10.000%; /* #18181b */
++  --muted: 240.000 4.762% 95.882%; /* #f4f4f5 */
++  --muted-foreground: 240.000 4.390% 40.196%; /* #62626b */
++  --accent: 240.000 5.882% 90.000%; /* #e4e4e7 */
++  --accent-foreground: 240.000 5.882% 10.000%; /* #18181b */
++  --border: 240.000 5.882% 90.000%; /* #e4e4e7 */
++  --input: 240.000 3.830% 46.078%; /* #71717a */
++  --ring: 240.000 5.882% 10.000%; /* #18181b */
++  --sidebar: 0.000 0.000% 98.039%; /* #fafafa */
++  --composer: 0.000 0.000% 98.039%; /* #fafafa */
++  --bubble: 240.000 4.762% 95.882%; /* #f4f4f5 */
++  --link: 221.212 83.193% 53.333%; /* #2563eb */
++  --destructive: 0.000 73.709% 41.765%; /* #b91c1c */
++  --destructive-foreground: 0.000 0.000% 100.000%; /* #ffffff */
++  --success: 142.785 64.228% 24.118%; /* #166534 */
++  --success-foreground: 0.000 0.000% 100.000%; /* #ffffff */
++  --warning: 22.727 82.500% 31.373%; /* #92400e */
++  --warning-foreground: 0.000 0.000% 100.000%; /* #ffffff */
++  --info: 221.212 83.193% 53.333%; /* #2563eb */
++  --info-foreground: 0.000 0.000% 100.000%; /* #ffffff */
++  --overlay: 0.000 0.000% 0.000%; /* #000000 */
++}
++.dark [data-workspace-theme] {
++  --background: 240.000 5.263% 26.078%; /* #3f3f46 */
++  --foreground: 240.000 4.762% 95.882%; /* #f4f4f5 */
++  --card: 240.000 3.704% 15.882%; /* #27272a */
++  --card-foreground: 240.000 4.762% 95.882%; /* #f4f4f5 */
++  --popover: 240.000 3.704% 15.882%; /* #27272a */
++  --popover-foreground: 240.000 4.762% 95.882%; /* #f4f4f5 */
++  --primary: 240.000 4.762% 95.882%; /* #f4f4f5 */
++  --primary-foreground: 240.000 5.882% 10.000%; /* #18181b */
++  --secondary: 240.000 5.202% 33.922%; /* #52525b */
++  --secondary-foreground: 240.000 4.762% 95.882%; /* #f4f4f5 */
++  --muted: 240.000 5.202% 33.922%; /* #52525b */
++  --muted-foreground: 240.000 6.542% 79.020%; /* #c6c6cd */
++  --accent: 240.000 5.263% 26.078%; /* #3f3f46 */
++  --accent-foreground: 240.000 4.762% 95.882%; /* #f4f4f5 */
++  --border: 240.000 5.202% 33.922%; /* #52525b */
++  --input: 240.000 5.028% 64.902%; /* #a1a1aa */
++  --ring: 240.000 4.762% 95.882%; /* #f4f4f5 */
++  --sidebar: 240.000 3.704% 15.882%; /* #27272a */
++  --composer: 240.000 3.704% 15.882%; /* #27272a */
++  --bubble: 240.000 5.202% 33.922%; /* #52525b */
++  --link: 211.698 96.364% 78.431%; /* #93c5fd */
++  --destructive: 0.000 93.548% 81.765%; /* #fca5a5 */
++  --destructive-foreground: 240.000 5.882% 10.000%; /* #18181b */
++  --success: 141.714 76.642% 73.137%; /* #86efac */
++  --success-foreground: 240.000 5.882% 10.000%; /* #18181b */
++  --warning: 45.943 96.685% 64.510%; /* #fcd34d */
++  --warning-foreground: 240.000 5.882% 10.000%; /* #18181b */
++  --info: 211.698 96.364% 78.431%; /* #93c5fd */
++  --info-foreground: 240.000 5.882% 10.000%; /* #18181b */
++  --overlay: 0.000 0.000% 0.000%; /* #000000 */
++}
++[data-workspace-theme] { --radius: .75rem; --radius-composer: 1rem; --font-body: Inter, system-ui, sans-serif; --text-xs: .75rem; --text-sm: .875rem; --text-base: 1rem; --text-lg: 1.125rem; --text-xl: 1.375rem; --text-display: 2rem; --space-1: .25rem; --space-2: .5rem; --space-3: .75rem; --space-4: 1rem; --space-5: 1.25rem; --space-6: 1.5rem; --space-8: 2rem; --space-10: 2.5rem; --space-12: 3rem; --sidebar-width: 16rem; --content-width: 64rem; --context-width: 19rem; --target: 2.75rem; --line-body: 1.6; --line-tight: 1.2; --overlay-opacity: .65; }
++
++/* Additional conversation renderer values. Source-aligned oneLight/oneDark;
++   the approved core palette in TOKENS.css is unchanged. */
++[data-workspace-theme] {
++ --code-background: 230 1% 98%;
++ --code-foreground: 230 8% 24%;
++ --code-keyword: 301 63% 40%;
++ --code-string: 119 34% 32%;
++ --code-radius: .5rem;
++ --thread-width: 48rem;
++}
++.dark [data-workspace-theme] {
++ --code-background: 220 13% 18%;
++ --code-foreground: 220 14% 71%;
++ --code-keyword: 286 60% 67%;
++ --code-string: 95 38% 62%;
++}
+diff --git a/src/app/(cyberize)/chat/page.tsx b/src/app/(cyberize)/chat/page.tsx
+--- a/src/app/(cyberize)/chat/page.tsx
++++ b/src/app/(cyberize)/chat/page.tsx
+@@ -1,5 +1,6 @@
+-import { ChatPageContent } from "./ChatPageContent";
+-
++import { Suspense } from 'react';
++import { WorkspaceEntry } from '@/components/workspace/WorkspaceEntry';
++import './workspace.scss';
+ export default function ChatPage() {
+-  return <ChatPageContent />;
++  return <Suspense fallback={<p role="status">Loading workspace…</p>}><WorkspaceEntry/></Suspense>;
+ }
+diff --git a/src/app/(cyberize)/chat/workspace.scss b/src/app/(cyberize)/chat/workspace.scss
+new file mode 100644
+--- /dev/null
++++ b/src/app/(cyberize)/chat/workspace.scss
+@@ -0,0 +1,90 @@
++@use './workspace-tokens';
++
++/* Every base rule belongs to the workbench or its owned portal host. */
++[data-workspace-theme] {
++  color: hsl(var(--foreground)); font-family: inherit; font-size:16px; line-height:1.5;
++  *, *::before, *::after { box-sizing:border-box; }
++  [hidden] { display:none !important; }
++  h1,h2,h3,p { margin:0; color:inherit; }
++  h1 { font-size:32px; font-weight:600; line-height:1.2; letter-spacing:-.04em; }
++  h2 { font-size:20px; font-weight:600; line-height:1.4; }
++  h3 { font-size:16px; font-weight:600; }
++  button,input,textarea { font:inherit; color:inherit; }
++  button { cursor:pointer; min-height:44px; min-width:44px; border-radius:10px; padding:8px 12px; background:transparent; }
++  button:disabled { cursor:not-allowed; opacity:.45; }
++  a { color:inherit; text-decoration:none; overflow-wrap:anywhere; }
++  button:focus-visible,a:focus-visible,input:focus-visible,textarea:focus-visible,[tabindex]:focus-visible { outline:2px solid hsl(var(--ring)); outline-offset:2px; }
++  input,textarea { background:hsl(var(--card)); border:1px solid hsl(var(--input)); border-radius:10px; }
++  input::placeholder,textarea::placeholder { color:hsl(var(--muted-foreground)); opacity:1; }
++  svg { flex-shrink:0; }
++  .ws-icon { display:inline-flex; align-items:center; justify-content:center; width:44px; height:44px; padding:8px; flex-shrink:0; }
++  .ws-icon:hover, .ws-theme:hover, .ws-nav-item:hover { background:hsl(var(--accent)); }
++  .ws-primary { background:hsl(var(--primary)); color:hsl(var(--primary-foreground)); display:inline-flex; align-items:center; justify-content:center; gap:8px; }
++  .ws-small, .ws-eyebrow, .ws-count { color:hsl(var(--muted-foreground)); }
++  .ws-small { font-size:12px; margin-top:12px; }
++  .ws-eyebrow { font-size:12px; font-weight:600; text-transform:uppercase; letter-spacing:.12em; }
++  .ws-field { width:100%; padding:12px; display:block; margin:8px 0 16px; }
++  textarea.ws-field { min-height:144px; }
++  .ws-badge { font-size:12px; border:1px solid hsl(var(--border)); border-radius:8px; padding:4px 8px; color:hsl(var(--muted-foreground)); }
++  .ws-skip { position:fixed; left:16px; top:-100px; z-index:200; padding:12px; background:hsl(var(--primary)); color:hsl(var(--primary-foreground)); &:focus { top:16px; } }
++  .ws-sidebar { width:256px; background:hsl(var(--sidebar)); border-right:1px solid hsl(var(--border)); padding:24px 16px; display:flex; flex-direction:column; gap:28px; position:fixed; inset:0 auto 0 0; overflow-y:auto; footer { margin-top:auto; border-top:1px solid hsl(var(--border)); padding-top:16px; } }
++  .ws-brand { display:flex; gap:12px; align-items:center; font-size:14px; letter-spacing:.13em; padding:8px; font-weight:600; >span { display:grid; place-items:center; border:1px solid hsl(var(--input)); border-radius:8px; width:32px; height:32px; } small { display:block; font-size:12px; color:hsl(var(--muted-foreground)); font-weight:400; letter-spacing:0; } }
++  .ws-new { width:100%; font-size:14px; }
++  .ws-nav-item { display:flex; gap:12px; align-items:center; min-height:48px; padding:12px; border-radius:10px; font-size:14px; min-width:0; span { overflow-wrap:anywhere; } &[aria-current] { background:hsl(var(--accent)); box-shadow:inset 2px 0 hsl(var(--foreground)); font-weight:600; } }
++  .ws-nav-agents > p { padding:0 12px; margin-bottom:12px; }
++  .ws-theme { display:flex; align-items:center; gap:12px; width:100%; font-size:14px; }
++  .ws-mobile-top { display:none; }
++  .ws-main-column { min-width:0; margin-left:256px; }
++  .ws-topbar { min-height:76px; padding:12px 40px; border-bottom:1px solid hsl(var(--border)); display:flex; align-items:center; justify-content:space-between; gap:16px; font-size:14px; flex-shrink:0; }
++  .ws-crumbs { display:flex; align-items:center; gap:12px; min-width:0; a { display:flex; align-items:center; min-height:44px; flex-shrink:0; } >span { overflow:hidden; text-overflow:ellipsis; white-space:nowrap; } }
++  .ws-content { max-width:64rem; margin:auto; padding:40px; min-width:0; }
++  .ws-intro { margin-top:16px; color:hsl(var(--muted-foreground)); }
++  .ws-content > .ws-eyebrow { margin-bottom:12px; }
++  .ws-filter-label { display:block; margin-top:32px; margin-bottom:8px; font-size:14px; }
++  .ws-filter { display:flex; gap:12px; align-items:center; border:1px solid hsl(var(--input)); border-radius:10px; padding:4px 12px; background:hsl(var(--card)); input { flex:1; min-width:0; border:0; padding:10px 0; background:transparent; } }
++  .ws-count { font-size:14px; margin:20px 0 12px; }
++  .ws-agent-grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:24px; }
++  .ws-agent-card { display:flex; flex-direction:column; align-items:flex-start; gap:16px; min-height:236px; padding:24px; border:1px solid hsl(var(--border)); border-radius:12px; background:hsl(var(--card)); p { font-size:14px; color:hsl(var(--muted-foreground)); flex:1; } >span:last-child { display:flex; gap:12px; align-items:center; font-size:14px; } &:hover { border-color:hsl(var(--input)); } }
++  .ws-agent-symbol { display:inline-flex; align-items:center; justify-content:center; width:56px; height:56px; border:1px solid hsl(var(--border)); border-radius:12px; background:hsl(var(--card)); flex-shrink:0; }
++  .ws-hero { display:flex; align-items:center; gap:16px; margin-bottom:32px; p { margin-top:8px; font-size:14px; color:hsl(var(--muted-foreground)); } }
++  .ws-composer { display:flex; align-items:flex-end; gap:8px; padding:8px; background:hsl(var(--composer)); border:1px solid hsl(var(--input)); border-radius:16px; max-width:48rem; margin:auto; textarea { flex:1; min-width:0; background:transparent; border:0; resize:none; max-height:144px; padding:10px 12px; font-size:16px; line-height:24px; &:focus-visible { outline:0; } } &:focus-within { outline:2px solid hsl(var(--ring)); outline-offset:2px; } }
++  .ws-composer-foot { display:flex; align-items:center; justify-content:space-between; gap:16px; span { display:flex; align-items:center; gap:8px; font-size:14px; color:hsl(var(--muted-foreground)); } small { font-size:12px; color:hsl(var(--muted-foreground)); } }
++  .ws-composer-hero { display:block; max-width:none; padding:20px; label { font-size:14px; font-weight:500; } textarea { display:block; width:100%; margin-top:8px; padding:8px 0; } .ws-composer-foot { margin-top:12px; } }
++  .ws-work-grid { display:grid; grid-template-columns:minmax(0,1fr) 19rem; gap:32px; align-items:start; margin-top:40px; }
++  .ws-recents { min-width:0; grid-column:1; grid-row:1; h2 { margin-bottom:12px; } }
++  .ws-context-disclosure { grid-column:2; grid-row:1; }
++  .ws-recent-row { display:flex; align-items:center; gap:8px; border-bottom:1px solid hsl(var(--border)); padding:12px 0; >a { min-height:44px; display:flex; gap:12px; flex:1; min-width:0; padding:8px 0; font-size:14px; strong { font-weight:500; } svg { margin-top:4px; color:hsl(var(--muted-foreground)); } small { display:block; font-size:12px; color:hsl(var(--muted-foreground)); margin-top:4px; } } }
++  .ws-context { border:1px solid hsl(var(--border)); background:hsl(var(--card)); border-radius:12px; overflow:hidden; font-size:14px; >header { display:flex; gap:8px; align-items:center; padding:16px 20px; border-bottom:1px solid hsl(var(--border)); h2 { flex:1; font-size:14px; } } }
++  .ws-notice { color:hsl(var(--muted-foreground)); font-size:12px; line-height:1.5; padding:16px 20px; border-bottom:1px solid hsl(var(--border)); background:hsl(var(--popover)); }
++  .ws-context-section { padding:16px 20px; border-bottom:1px solid hsl(var(--border)); >p { color:hsl(var(--muted-foreground)); overflow-wrap:anywhere; } h3 { font-size:14px; } }
++  .ws-section-head { display:flex; justify-content:space-between; align-items:center; margin-bottom:8px; }
++  .ws-document { display:flex; align-items:center; gap:8px; >button:first-child { flex:1; min-width:0; display:flex; gap:8px; align-items:center; text-align:left; padding-left:0; span { overflow-wrap:anywhere; } } }
++  .ws-disclosure-trigger { display:none; }
++  .ws-context-action { display:flex; align-items:center; gap:8px; flex-shrink:0; }
++  .ws-chat-main { flex:1; min-height:0; display:flex; flex-direction:column; }
++  .ws-thread-scroll { flex:1; min-height:0; overflow-y:auto; overflow-x:hidden; overscroll-behavior:contain; }
++  .ws-thread { max-width:48rem; padding:24px; margin:auto; min-width:0; }
++  .ws-thread-meta { display:flex; align-items:center; justify-content:space-between; gap:16px; font-size:12px; color:hsl(var(--muted-foreground)); margin-bottom:24px; }
++  .ws-turn { margin-bottom:24px; min-width:0; font-size:14px; overflow-wrap:anywhere; .text-zinc-500, .text-zinc-400 { color:hsl(var(--muted-foreground)); } [class*="text-zinc-900"], [class*="text-zinc-800"] { color:hsl(var(--foreground)); } [class*="bg-zinc-100"] { background:hsl(var(--bubble)); } a { color:hsl(var(--link)); text-decoration:underline; } th,td { border-color:hsl(var(--border)); min-width:140px; } thead { background:hsl(var(--card)); } table { min-width:360px; } .ws-code-scroll { overflow:auto; max-width:100%; border-radius:0 0 8px 8px; >div { overflow:visible!important; min-width:max-content; } } }
++  .ws-code-head { display:flex; justify-content:space-between; align-items:center; min-height:44px; padding:0 12px; font-size:12px; background:hsl(var(--code-background)); color:hsl(var(--code-foreground)); border-radius:8px 8px 0 0; border-bottom:1px solid hsl(var(--border)); }
++  .ws-copy { position:relative; >button { display:flex; align-items:center; justify-content:center; padding:8px; } }
++  .ws-copy-fallback { padding:12px; border:1px solid hsl(var(--input)); border-radius:10px; background:hsl(var(--popover)); font-size:12px; max-width:100%; textarea { width:100%; min-height:100px; padding:8px; } }
++  .ws-empty-thread { min-height:280px; display:flex; flex-direction:column; align-items:center; justify-content:center; text-align:center; gap:12px; h1 { font-size:24px; } p { font-size:14px; color:hsl(var(--muted-foreground)); } }
++  .ws-compose-wrap { padding:12px 24px max(16px,env(safe-area-inset-bottom)); flex-shrink:0; background:hsl(var(--background)); >p { max-width:48rem; margin:8px auto 0; } }
++  .ws-state { padding:24px 16px; border:1px solid hsl(var(--border)); border-radius:12px; margin:16px 0; p { color:hsl(var(--muted-foreground)); margin:8px 0 16px; font-size:14px; } h2 { font-size:18px; } button { border:1px solid hsl(var(--input)); margin:4px 8px 4px 0; } }
++  .ws-skeleton { height:60px; margin:16px 0; border-radius:8px; background:hsl(var(--muted)); }
++  .ws-overlay { position:fixed; inset:0; background:hsl(var(--overlay) / .65); z-index:80; }
++  .ws-modal { position:fixed; z-index:81; top:50%; left:50%; transform:translate(-50%,-50%); width:480px; max-width:calc(100vw - 32px); max-height:calc(100dvh - 32px); overflow:auto; background:hsl(var(--popover)); color:hsl(var(--popover-foreground)); border:1px solid hsl(var(--input)); border-radius:12px; padding:24px; >header { display:flex; align-items:center; justify-content:space-between; gap:16px; margin-bottom:16px; h2 { font-size:20px; } } }
++  .ws-drawer { inset:0 auto 0 0; transform:none; width:min(320px,calc(100vw - 32px)); height:100dvh; max-height:none; border-radius:0; border:0; background:hsl(var(--sidebar)); padding:12px 16px; }
++  .ws-drawer-nav { display:flex; flex-direction:column; gap:24px; footer { border-top:1px solid hsl(var(--border)); padding-top:16px; } }
++  .ws-sample { display:block; width:100%; text-align:left; margin-top:12px; border:1px solid hsl(var(--input)); }
++  .ws-dialog-actions { display:flex; gap:12px; flex-wrap:wrap; margin:16px 0; }
++}
++.ws-root[data-workspace-theme] { background:hsl(var(--background)); min-height:100dvh; }
++.ws-conversation[data-workspace-theme] { height:100dvh; min-height:0; display:flex; flex-direction:column; overflow:hidden; .ws-main-column { flex:1; min-height:0; display:flex; flex-direction:column; } }
++@media(max-width:1023px) {
++  [data-workspace-theme] { .ws-desktop { display:none; } .ws-main-column { margin-left:0; } .ws-mobile-top { height:64px; display:flex; align-items:center; justify-content:space-between; gap:8px; padding:0 16px; border-bottom:1px solid hsl(var(--border)); background:hsl(var(--sidebar)); flex-shrink:0; strong { font-size:14px; } .ws-theme { width:44px; span { display:none; } } } .ws-topbar { padding:12px 24px; } .ws-content { padding:32px 24px; } .ws-work-grid { display:flex; flex-direction:column; gap:24px; margin-top:24px; >* { width:100%; } } .ws-disclosure-trigger { display:flex; align-items:center; justify-content:space-between; width:100%; border:1px solid hsl(var(--input)); margin-bottom:12px; } }
++}
++@media(max-width:639px) {
++  [data-workspace-theme] { h1 { font-size:26px; } .ws-content { padding:32px 20px; } .ws-agent-grid { grid-template-columns:1fr; gap:16px; } .ws-agent-card { padding:20px; min-height:210px; } .ws-topbar { padding:12px 16px; font-size:12px; } .ws-crumbs { gap:6px; a { flex-shrink:0; max-width:90px; display:block; line-height:44px; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; } } .ws-context-action { width:44px; padding:8px; span { display:none; } } .ws-hero { align-items:flex-start; } .ws-composer-hero { padding:16px; .ws-composer-foot small { display:none; } } .ws-thread { padding:16px; } .ws-compose-wrap { padding:8px 12px max(12px,env(safe-area-inset-bottom)); } .ws-modal { padding:16px; } .ws-turn .ws-code-scroll { font-size:.8rem; } }
++}
+diff --git a/src/app/(cyberize)/layout.tsx b/src/app/(cyberize)/layout.tsx
+--- a/src/app/(cyberize)/layout.tsx
++++ b/src/app/(cyberize)/layout.tsx
+@@ -16,6 +16,7 @@
+ 
+   return (
+     <AppShellPage
++      workbenchRoute
+       sidebar={<CyberizeSidebar />}
+       mobileTitle="CYBERIZE"
+       mobileTopBarRight={<ThemeToggle />}
+diff --git a/src/components/common/AppShellPage.tsx b/src/components/common/AppShellPage.tsx
+--- a/src/components/common/AppShellPage.tsx
++++ b/src/components/common/AppShellPage.tsx
+@@ -132,9 +132,11 @@
+  */
+ 
+ import { useEffect, useState, type ReactNode } from "react";
++import { usePathname } from "next/navigation";
+ import { Menu, X } from "lucide-react";
+ 
+ interface AppShellPageProps {
++  workbenchRoute?: boolean;
+   /** Sidebar content — rendered persistently on desktop, in a slide-over drawer on mobile */
+   sidebar: ReactNode;
+   /** Main column content — manages its own flex layout (e.g., `<div className="flex flex-col h-full">`) */
+@@ -150,30 +152,35 @@
+   children,
+   mobileTitle,
+   mobileTopBarRight,
++  workbenchRoute = false,
+ }: AppShellPageProps) {
++  const pathname = usePathname();
+   const [sidebarOpen, setSidebarOpen] = useState(false);
++  const usesWorkbench = workbenchRoute && pathname === "/chat";
+ 
+   // Close drawer on Escape
+   useEffect(() => {
+-    if (!sidebarOpen) return;
++    if (!sidebarOpen || usesWorkbench) return;
+     const onKey = (e: KeyboardEvent) => {
+       if (e.key === "Escape") setSidebarOpen(false);
+     };
+     document.addEventListener("keydown", onKey);
+     return () => document.removeEventListener("keydown", onKey);
+-  }, [sidebarOpen]);
++  }, [sidebarOpen, usesWorkbench]);
+ 
+   // Lock body scroll while drawer is open
+   useEffect(() => {
+     if (typeof document === "undefined") return;
+-    if (sidebarOpen) {
++    if (sidebarOpen && !usesWorkbench) {
+       const previous = document.body.style.overflow;
+       document.body.style.overflow = "hidden";
+       return () => {
+         document.body.style.overflow = previous;
+       };
+     }
+-  }, [sidebarOpen]);
++  }, [sidebarOpen, usesWorkbench]);
++
++  if (usesWorkbench) return <>{children}</>;
+ 
+   return (
+     <div className="flex flex-col h-screen bg-white dark:bg-zinc-700 text-zinc-900 dark:text-zinc-100">
+diff --git a/src/components/workspace/CopyControl.tsx b/src/components/workspace/CopyControl.tsx
+new file mode 100644
+--- /dev/null
++++ b/src/components/workspace/CopyControl.tsx
+@@ -0,0 +1,14 @@
++'use client';
++import { useState } from 'react';
++import { Copy, Check } from 'lucide-react';
++export function CopyControl({ text, label = 'Copy message' }: { text: string; label?: string }) {
++  const [copied, setCopied] = useState(false);
++  const [fallback, setFallback] = useState(false);
++  return <div className="ws-copy">
++    <button type="button" aria-label={copied ? 'Copied' : label} title={label} onClick={async () => {
++      try { await navigator.clipboard.writeText(text); setCopied(true); setFallback(false); }
++      catch { setFallback(true); }
++    }}>{copied ? <Check size={16}/> : <Copy size={16}/>}<span className="sr-only">{label}</span></button>
++    {fallback && <div className="ws-copy-fallback"><p role="status">Clipboard unavailable. Select and copy the text below.</p><textarea aria-label="Text to copy manually" readOnly value={text} onFocus={e => e.currentTarget.select()}/><button type="button" onClick={() => setFallback(false)}>Close copy fallback</button></div>}
++  </div>;
++}
+diff --git a/src/components/workspace/DemoContext.tsx b/src/components/workspace/DemoContext.tsx
+new file mode 100644
+--- /dev/null
++++ b/src/components/workspace/DemoContext.tsx
+@@ -0,0 +1,28 @@
++'use client';
++import { useEffect, useId, useRef, useState } from 'react';
++import { FileText, Pencil, Plus, X, ChevronDown } from 'lucide-react';
++import { WorkspaceModal } from './WorkspaceModal';
++export const DEMO_DISCLOSURE = 'Demo context — changes are not sent to the agent and reset on reload. This panel does not manage the agent’s backend context.';
++export interface DemoState { instructions: string; samples: string[] }
++export const initialDemo = (): DemoState => ({ instructions: 'Be clear and practical. Explain the reasoning, then suggest a useful next step.', samples: ['Workspace overview.md', 'Response preferences.md'] });
++const samples: Record<string,string> = { 'Workspace overview.md': 'Fictional sample: a workspace for exploring ideas. This text is not agent context.', 'Response preferences.md': 'Fictional sample: prefer clear, concise answers and practical next steps.', 'Research checklist.md': 'Fictional sample: define the question, compare sources, summarize findings.' };
++export function DemoContext({ state, onChange }: { state: DemoState; onChange(state: DemoState): void }) {
++  const [dialog, setDialog] = useState<'edit' | 'add' | string | null>(null); const [edit, setEdit] = useState('');
++  return <section className="ws-context"><header><FileText size={20}/><h2>Agent context</h2><span className="ws-badge">Demo</span></header>
++    <p className="ws-notice">{DEMO_DISCLOSURE}</p>
++    <div className="ws-context-section"><div className="ws-section-head"><h3>Instructions</h3><button className="ws-icon" aria-label="Edit demo instructions" onClick={() => { setEdit(state.instructions); setDialog('edit'); }}><Pencil size={18}/></button></div><p>{state.instructions || 'No demo instructions.'}</p></div>
++    <div className="ws-context-section"><div className="ws-section-head"><h3>Sample documents</h3><button className="ws-icon" aria-label="Add sample document" onClick={() => setDialog('add')}><Plus size={20}/></button></div>
++      {state.samples.map(name => <div className="ws-document" key={name}><button aria-label={`Preview ${name}`} onClick={() => setDialog(name)}><FileText size={16}/><span>{name}</span></button><button className="ws-icon" aria-label={`Remove ${name}`} onClick={e => { const section = e.currentTarget.closest('section'); onChange({ ...state, samples: state.samples.filter(s => s !== name) }); (section?.querySelector('[aria-label="Add sample document"]') as HTMLElement)?.focus(); }}><X size={18}/></button></div>)}
++      <p className="ws-small">Sample content only. No uploads.</p><button className="ws-small" onClick={() => onChange(initialDemo())}>Reset demo context</button>
++    </div>
++    <WorkspaceModal open={dialog !== null} onOpenChange={open => { if (!open) setDialog(null); }} title={dialog === 'edit' ? 'Edit demo instructions' : dialog === 'add' ? 'Add sample document' : 'Sample preview'}>
++      <p className="ws-notice">{DEMO_DISCLOSURE}</p>
++      {dialog === 'edit' ? <><label htmlFor="ws-demo-instructions">Demo instructions</label><textarea className="ws-field" id="ws-demo-instructions" value={edit} onChange={e => setEdit(e.target.value)}/><button className="ws-primary" onClick={() => { onChange({ ...state, instructions: edit }); setDialog(null); }}>Apply to demo</button></> : dialog === 'add' ? Object.keys(samples).map(name => <button className="ws-sample" disabled={state.samples.includes(name)} key={name} onClick={() => { onChange({ ...state, samples: [...state.samples, name] }); setDialog(null); }}>{name}{state.samples.includes(name) ? ' — Added' : ''}</button>) : <p>{dialog && samples[dialog]}</p>}
++    </WorkspaceModal>
++  </section>;
++}
++export function WorkspaceContextDisclosure({ children }: { children: React.ReactNode }) {
++  const [desktop, setDesktop] = useState(false); const [expanded, setExpanded] = useState(false); const id = useId(); const trigger = useRef<HTMLButtonElement>(null); const content = useRef<HTMLDivElement>(null);
++  useEffect(() => { const media = matchMedia('(min-width:1024px)'); const update = () => { if (!media.matches && !expanded && content.current?.contains(document.activeElement)) setTimeout(() => trigger.current?.focus(), 0); setDesktop(media.matches); }; update(); media.addEventListener('change', update); return () => media.removeEventListener('change', update); }, [expanded]);
++  return <div className="ws-context-disclosure"><button ref={trigger} className="ws-disclosure-trigger" aria-expanded={desktop || expanded} aria-controls={id} onClick={() => setExpanded(v => !v)}>Demo context <ChevronDown size={18}/></button><div ref={content} id={id} hidden={!desktop && !expanded}>{children}</div></div>;
++}
+diff --git a/src/components/workspace/Workspace.tsx b/src/components/workspace/Workspace.tsx
+new file mode 100644
+--- /dev/null
++++ b/src/components/workspace/Workspace.tsx
+@@ -0,0 +1,174 @@
++'use client';
++import { useEffect, useMemo, useRef, useState } from 'react';
++import { useTheme } from 'next-themes';
++import { ArrowRight, ChevronRight, Grid2X2, Menu, MessageCircle, MoreHorizontal, Moon, Plus, Search, Sparkles, Sun, FileText, LogOut } from 'lucide-react';
++import { MessageBubble } from '@/app/(cyberize)/chat/MessageBubble';
++import type { Catalogue, Conversation, Thread, WorkspaceAgent, WorkspaceServices } from './types';
++import { parseWorkspaceView, workspaceQuery } from './navigation';
++import { WorkspacePortals, WorkspaceModal } from './WorkspaceModal';
++import { WorkspaceComposer } from './WorkspaceComposer';
++import { DemoContext, initialDemo, WorkspaceContextDisclosure, type DemoState } from './DemoContext';
++import { CopyControl } from './CopyControl';
++
++export interface WorkspaceProps {
++  agents: WorkspaceAgent[];
++  rosterStatus?: 'ready' | 'loading' | 'unavailable';
++  identityKey: string;
++  canOperate?: boolean;
++  services: WorkspaceServices;
++  query: string;
++  navigate(query: string): void;
++  onSignOut?: () => void;
++}
++/** Remounting on context change prevents prior-user drafts/demo/history from resurfacing. */
++export function Workspace(props: WorkspaceProps) {
++  return <WorkspacePortals><WorkspaceSession key={props.identityKey} {...props}/></WorkspacePortals>;
++}
++function WorkspaceSession({ agents, rosterStatus = 'ready', canOperate = true, services, query, navigate, onSignOut }: WorkspaceProps) {
++  const view = useMemo(() => parseWorkspaceView(query, agents), [query, agents]);
++  const agentId = 'agentId' in view ? view.agentId : '';
++  const agent = agents.find(a => a.id === agentId);
++  const [draftNumber, setDraftNumber] = useState(0);
++  const viewKey = agentId + ':' + (view.kind === 'conversation' ? view.sessionId : `${view.kind}-${draftNumber}`);
++  const activeKey = useRef(viewKey); activeKey.current = viewKey;
++  const alive = useRef(true); useEffect(() => { alive.current = true; return () => { alive.current = false; }; }, []);
++  const [filter, setFilter] = useState('');
++  const [catalogue, setCatalogue] = useState<{ agent: string; data: Catalogue }>({ agent: '', data: { status: 'loading', rows: [] } });
++  const [listGeneration, setListGeneration] = useState(0);
++  const [threads, setThreads] = useState<Record<string,Thread>>({});
++  const threadCache = useRef<Record<string,Thread>>({});
++  const setThread = (key: string, data: Thread) => { threadCache.current[key] = data; setThreads(old => ({ ...old, [key]: data })); };
++  const [drafts, setDrafts] = useState<Record<string,string>>({});
++  const [historyGeneration, setHistoryGeneration] = useState(0);
++  const sending = useRef(new Set<string>());
++  const [demos, setDemos] = useState<Record<string,DemoState>>({});
++  const [drawer, setDrawer] = useState(false); const drawerOpen = useRef(false); drawerOpen.current = drawer;
++  const [contextOpen, setContextOpen] = useState(false);
++  const menuButton = useRef<HTMLButtonElement>(null); const desktopNav = useRef<HTMLElement>(null); const main = useRef<HTMLElement>(null); const recentHeading = useRef<HTMLHeadingElement>(null);
++  const [actionRow, setActionRow] = useState<Conversation | null>(null); const [rename, setRename] = useState(''); const [mutation, setMutation] = useState(false); const [mutationError, setMutationError] = useState(''); const rowOpener = useRef<HTMLElement | null>(null); const archived = useRef(false);
++  const scroll = useRef<HTMLDivElement>(null); const followEnd = useRef(true);
++  const { resolvedTheme, setTheme } = useTheme(); const [mounted, setMounted] = useState(false);
++  useEffect(() => setMounted(true), []);
++  useEffect(() => { setDrawer(false); setContextOpen(false); setActionRow(null); }, [query]);
++  useEffect(() => {
++    const media = matchMedia('(min-width:1024px)');
++    const update = () => { if (media.matches && drawerOpen.current) { setDrawer(false); setTimeout(() => (desktopNav.current?.querySelector('[aria-current]') as HTMLElement || desktopNav.current?.querySelector('a'))?.focus(), 0); } };
++    media.addEventListener('change', update); return () => media.removeEventListener('change', update);
++  }, []);
++  useEffect(() => {
++    if (!agentId || !canOperate || view.kind === 'invalid') return;
++    let current = true; setCatalogue({ agent: agentId, data: { status: 'loading', rows: [] } });
++    services.list(agentId).then(data => { if (current) setCatalogue({ agent: agentId, data }); }).catch(() => { if (current) setCatalogue({ agent: agentId, data: { status: 'unavailable', rows: [] } }); });
++    return () => { current = false; };
++  }, [agentId, canOperate, services, listGeneration, view.kind]);
++  useEffect(() => {
++    if (view.kind !== 'conversation' || !canOperate) return;
++    let current = true;
++    // A response just bound to its returned ID already provides this exact transcript.
++    if (!historyGeneration && threadCache.current[viewKey]) return;
++    const previous = threadCache.current[viewKey];
++    setThread(viewKey, { status: 'loading', messages: previous?.messages ?? [] });
++    services.history(view.agentId, view.sessionId).then(data => {
++      if (!current) return;
++      // An ambiguous send must not be declared resolved merely by a degraded empty read.
++      if (previous?.status === 'uncertain' && data.status !== 'pending' && data.status !== 'not-sent') {
++        setThread(viewKey, { ...previous, messages: data.messages.length ? data.messages : previous.messages });
++      } else { setThread(viewKey, data); if (data.status === 'not-sent' && data.attemptedText) setDrafts(old => ({ ...old, [viewKey]: data.attemptedText! })); }
++    }).catch(() => { if (current) setThread(viewKey, previous?.status === 'uncertain' ? previous : { status: 'unavailable', messages: previous?.messages ?? [] }); });
++    return () => { current = false; };
++    // Reads are keyed to explicit navigation/inspection, never to state writes.
++    // eslint-disable-next-line react-hooks/exhaustive-deps
++  }, [viewKey, canOperate, services, historyGeneration]);
++  const rows = catalogue.agent === agentId ? catalogue.data : { status: 'loading' as const, rows: [] };
++  const thread: Thread = !canOperate ? { status: 'access-unavailable', messages: [] } : threads[viewKey] ?? { status: view.kind === 'conversation' ? 'loading' : 'empty', messages: [] };
++  const blocked = !['ready','empty','not-sent','metadata-warning'].includes(thread.status);
++  const draft = drafts[viewKey] ?? '';
++  useEffect(() => { if (followEnd.current && scroll.current) scroll.current.scrollTop = scroll.current.scrollHeight; }, [thread.messages.length, thread.status, viewKey]);
++  const go = (next: string) => { navigate(next); setDrawer(false); };
++  const newChat = () => { if (!agent) { go(''); setTimeout(() => document.getElementById('ws-filter')?.focus(), 0); return; } setDraftNumber(n => n + 1); go(workspaceQuery(agent.id, undefined, true)); };
++  const send = async () => {
++    if (!agent || blocked || !draft.trim() || sending.current.has(viewKey)) return;
++    const key = viewKey, id = agent.id, text = draft.trim(), session = view.kind === 'conversation' ? view.sessionId : null;
++    const previous = thread.messages; sending.current.add(key); followEnd.current = true;
++    setThread(key, { status: 'pending', messages: [...previous, { role: 'user', content: text }], attemptedText: text });
++    setDrafts(old => ({ ...old, [key]: '' }));
++    try {
++      const result = await services.send(id, session, text);
++      if (!alive.current) return;
++      if (result.status === 'sent') {
++        const next = { status: result.metadataWarning ? 'metadata-warning' as const : 'ready' as const, messages: [...previous, { role: 'user' as const, content: text }, { role: 'assistant' as const, content: result.reply }] };
++        setThread(key, next); setThread(id + ':' + result.sessionId, next);
++        if (activeKey.current === key) { setHistoryGeneration(0); go(workspaceQuery(id, result.sessionId)); }
++        setListGeneration(n => n + 1);
++      } else {
++        setThread(key, { status: result.status, messages: result.status === 'not-sent' ? previous : [...previous, { role: 'user', content: text }], attemptedText: text });
++        if (result.status === 'not-sent') setDrafts(old => ({ ...old, [key]: text }));
++      }
++    } catch { if (alive.current) setThread(key, { status: 'uncertain', messages: [...previous, { role: 'user', content: text }], attemptedText: text }); }
++    finally { sending.current.delete(key); }
++  };
++  const themeButton = <button type="button" className="ws-theme" aria-label={mounted && resolvedTheme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode'} onClick={() => setTheme(resolvedTheme === 'dark' ? 'light' : 'dark')}>{mounted && resolvedTheme === 'dark' ? <Sun size={20}/> : <Moon size={20}/>}<span>{mounted && resolvedTheme === 'dark' ? 'Light mode' : 'Dark mode'}</span></button>;
++  const navLink = (label: string, next: string, selected: boolean, icon = <MessageCircle size={20}/>) => <a href={'/chat' + (next ? '?' + next : '')} className="ws-nav-item" aria-current={selected ? 'page' : undefined} onClick={e => { if (!e.metaKey && !e.ctrlKey && !e.shiftKey && e.button === 0) { e.preventDefault(); go(next); } }}>{icon}<span>{label}</span></a>;
++  const navigation = <><div className="ws-brand"><span>S</span><div>STARK<small>Agent Workspace</small></div></div><button className="ws-primary ws-new" onClick={newChat}><Plus size={20}/>{agent ? 'New chat' : 'Choose an agent'}</button>
++    {navLink('All agents', '', view.kind === 'directory', <Grid2X2 size={20}/>)}<div className="ws-nav-agents"><p className="ws-eyebrow">Your agents</p>{agents.map(a => <div key={a.id}>{navLink(a.name, workspaceQuery(a.id), a.id === agentId)}</div>)}</div>
++    {view.kind === 'conversation' && <div><p className="ws-eyebrow">Conversations</p>{rows.rows.map(row => <div key={row.id}>{navLink(row.title || 'Untitled conversation', workspaceQuery(agentId, row.sessionId), row.sessionId === view.sessionId)}</div>)}</div>}
++    <footer>{themeButton}{onSignOut && <button className="ws-theme" onClick={onSignOut}><LogOut size={18}/>Sign out</button>}</footer></>;
++  const composer = (hero = false) => <WorkspaceComposer hero={hero} name={agent?.name ?? 'agent'} value={draft} onChange={value => setDrafts(old => ({ ...old, [viewKey]: value }))} onSend={() => void send()} disabled={blocked}/>;
++  const context = agent && <DemoContext key={agent.id} state={demos[agent.id] ?? initialDemo()} onChange={data => setDemos(old => ({ ...old, [agent.id]: data }))}/>;
++  const statusCopy: Partial<Record<Thread['status'], [string,string]>> = {
++    loading: ['Loading conversation','Sending is paused while this conversation loads.'], unavailable: ['History unavailable','History has not been deleted. Try loading again or return to the workspace.'], missing: ['Conversation not found','This conversation has not been replaced or recreated.'], 'access-unavailable': ['Conversation access unavailable','Sending is unavailable. Use the existing sign-in flow.'], pending: ['Waiting for a reply','Awaiting reply. This is not a streaming response.'], uncertain: ['Send outcome unknown','Delivery unconfirmed. Sending is paused; checking history will not resend.'], 'not-sent': ['Message not sent','The request did not leave the app. Your draft is editable; send deliberately when ready.'], 'metadata-warning': ['Conversation started; title not saved','Your conversation ID and messages are preserved.']
++  };
++  const conversation = view.kind === 'conversation' || view.kind === 'draft';
++  const filtered = agents.filter(a => `${a.name} ${a.description ?? ''}`.toLowerCase().includes(filter.toLowerCase()));
++  const handleMutation = async (archive: boolean) => {
++    if (!actionRow || mutation || (!archive && !rename.trim())) return;
++    setMutation(true); setMutationError('');
++    try {
++      if (archive) await services.archive(actionRow); else await services.rename(actionRow, rename.trim());
++      if (!alive.current) return;
++      setCatalogue(old => ({ ...old, data: { ...old.data, rows: archive ? old.data.rows.filter(row => row.id !== actionRow.id) : old.data.rows.map(row => row.id === actionRow.id ? { ...row, title: rename.trim() } : row) } }));
++      archived.current = archive; setActionRow(null);
++    } catch { setMutationError('Could not save this change. The conversation and title have been kept.'); }
++    finally { setMutation(false); }
++  };
++  return <div data-workspace-theme className={`ws-root ${conversation ? 'ws-conversation' : ''}`}>
++    <a className="ws-skip" href="#ws-main">Skip to content</a>
++    <nav ref={desktopNav} className="ws-sidebar ws-desktop" aria-label="Workspace navigation">{navigation}</nav>
++    <div className="ws-mobile-top"><button ref={menuButton} className="ws-icon" aria-label="Open navigation menu" onClick={() => setDrawer(true)}><Menu size={20}/></button><strong>STARK WORKSPACE</strong>{themeButton}</div>
++    <div className="ws-main-column"><header className="ws-topbar"><div className="ws-crumbs"><a href="/chat" onClick={e => { e.preventDefault(); go(''); }}>Agents</a>{agent && <><ChevronRight size={18}/><a href={'/chat?' + workspaceQuery(agent.id)} onClick={e => { e.preventDefault(); go(workspaceQuery(agent.id)); }}>{agent.name}</a></>}{conversation && <><ChevronRight size={18}/><span>{view.kind === 'draft' ? 'New conversation' : (view.kind === 'conversation' ? rows.rows.find(row => row.sessionId === view.sessionId)?.title : undefined) || 'Conversation'}</span></>}</div>{conversation && <button className="ws-context-action" aria-label="Open demo instructions and context" onClick={() => setContextOpen(true)}><FileText size={20}/><span>Context</span></button>}</header>
++    <main id="ws-main" ref={main} tabIndex={-1} className={conversation ? 'ws-chat-main' : 'ws-content'}>
++      {view.kind === 'invalid' ? <section className="ws-state"><h1>Workspace unavailable</h1><p>The agent or conversation selector is invalid.</p><button onClick={() => go('')}>Back to all agents</button></section> : view.kind === 'directory' ? <>
++        <p className="ws-eyebrow">Your workspace</p><h1>Your agents</h1><p className="ws-intro">Choose an agent. Pick up a conversation or start something new.</p>
++        <label className="ws-filter-label" htmlFor="ws-filter">Find an agent</label><div className="ws-filter"><Search size={20}/><input id="ws-filter" value={filter} onChange={e => setFilter(e.target.value)} placeholder="Search names or descriptions"/>{filter && <button onClick={() => setFilter('')}>Clear filter</button>}</div>
++        {rosterStatus === 'loading' ? <div role="status">Loading agents…<div className="ws-skeleton" aria-hidden="true"/></div> : rosterStatus === 'unavailable' ? <section className="ws-state"><h2>Agent configuration unavailable</h2><p>No agent has been selected. Contact your administrator.</p></section> : !agents.length ? <section className="ws-state"><h2>No agents configured</h2><p>Ask your administrator to configure an agent.</p></section> : <><p className="ws-count" role="status">{filtered.length} agents available</p>{!filtered.length ? <section className="ws-state"><h2>No matching agents</h2><button onClick={() => setFilter('')}>Clear filter</button></section> : <div className="ws-agent-grid">{filtered.map(a => <a className="ws-agent-card" key={a.id} href={'/chat?' + workspaceQuery(a.id)} onClick={e => { e.preventDefault(); go(workspaceQuery(a.id)); }}><span className="ws-agent-symbol"><Sparkles size={24}/></span><h2>{a.name}</h2><p>{a.description || 'Configured agent workspace.'}</p><span>Open workspace <ArrowRight size={18}/></span></a>)}</div>}</>}
++      </> : view.kind === 'workspace' && agent ? <>
++        <div className="ws-hero"><span className="ws-agent-symbol"><Sparkles size={28}/></span><div><h1>{agent.name}</h1><p>{agent.description || 'Configured agent workspace.'}</p></div></div>{composer(true)}{statusCopy[thread.status] && <div className="ws-state" role="status"><h2>{statusCopy[thread.status]![0]}</h2><p>{statusCopy[thread.status]![1]}</p>{thread.attemptedText && <p>{thread.attemptedText}</p>}</div>}<p className="ws-small">One agent. Separate conversations.</p>
++        <div className="ws-work-grid"><WorkspaceContextDisclosure>{context}</WorkspaceContextDisclosure><section className="ws-recents"><h2 ref={recentHeading} tabIndex={-1}>Recent conversations</h2>
++          {!canOperate ? <p role="status">User context unavailable. Sign in to load conversations.</p> : rows.status === 'loading' ? <div role="status">Loading conversations…<div className="ws-skeleton" aria-hidden="true"/></div> : rows.status === 'unavailable' ? <div className="ws-state"><h3>Conversations unavailable</h3><p>History has not been deleted.</p><button onClick={() => setListGeneration(n => n + 1)}>Try again</button></div> : <>
++          {(rows.status === 'partial' || rows.status === 'recovered') && <div role="status" className="ws-state"><h3>{rows.status === 'partial' ? 'Conversation details unavailable' : 'Recovery view'}</h3><p>{rows.status === 'partial' ? 'Title and archive status are unknown.' : 'Some listed conversations may have been archived.'}</p>{rows.status === 'partial' && <button onClick={() => setCatalogue(old => ({ ...old, data: { ...old.data, status: 'recovered' } }))}>View available conversations</button>}</div>}
++          {!rows.rows.length && <div className="ws-state"><h3>A fresh start</h3><p>Your conversations with this agent will appear here.</p><button onClick={newChat}>Start a conversation</button></div>}
++          {rows.rows.map(row => <div className="ws-recent-row" key={row.id}><a href={'/chat?' + workspaceQuery(agent.id, row.sessionId)} onClick={e => { e.preventDefault(); go(workspaceQuery(agent.id, row.sessionId)); }}><MessageCircle size={18}/><span><strong>{row.title || 'Untitled conversation'}</strong><small>{row.updatedAt ? new Date(row.updatedAt).toLocaleDateString() : 'Date unavailable'}</small></span></a>{rows.status !== 'partial' && rows.status !== 'recovered' && <button className="ws-icon" aria-label={`Actions for ${row.title || 'Untitled conversation'}`} onClick={e => { rowOpener.current = e.currentTarget; archived.current = false; setActionRow(row); setRename(row.title); setMutationError(''); }}><MoreHorizontal size={20}/></button>}</div>)}
++          </>}<p className="ws-small">Each conversation keeps its own history.</p>
++        </section></div>
++      </> : conversation && agent ? <>
++        <div className="ws-thread-scroll" ref={scroll} onScroll={e => { const el = e.currentTarget; followEnd.current = el.scrollHeight - el.scrollTop - el.clientHeight < 80; }}><div className="ws-thread">
++          <div className="ws-thread-meta"><span>{agent.name}</span>{thread.messages.length > 0 && <CopyControl label="Copy conversation as Markdown" text={thread.messages.map(m => `## ${m.role === 'user' ? 'You' : agent.name}\n\n${m.content}`).join('\n\n')}/>}</div>
++          {thread.status === 'empty' && !thread.messages.length && <div className="ws-empty-thread"><h1>Chat with {agent.name}</h1><p>Send a message to start a separate conversation.</p></div>}
++          {thread.messages.map((message, i) => <div className="ws-turn" key={i}><MessageBubble message={message} agentName={agent.name} workbench/></div>)}
++          {statusCopy[thread.status] && <section className="ws-state" role={['pending','loading'].includes(thread.status) ? 'status' : 'alert'}><h2>{statusCopy[thread.status]![0]}</h2><p>{statusCopy[thread.status]![1]}</p>{thread.attemptedText && ['uncertain','pending'].includes(thread.status) && !thread.messages.some(message => message.role === 'user' && message.content === thread.attemptedText) && <p>Attempted message: {thread.attemptedText}</p>}
++            {thread.status === 'unavailable' && <button onClick={() => setHistoryGeneration(n => n + 1)}>Try loading again</button>}
++            {thread.status === 'uncertain' && view.kind === 'conversation' && <button onClick={() => setHistoryGeneration(n => n + 1)}>Check history</button>}
++            {thread.status === 'uncertain' && view.kind !== 'conversation' && <p>No confirmed conversation ID is available for a history read. No resend is offered.</p>}
++            {thread.status === 'metadata-warning' && <button onClick={() => setListGeneration(n => n + 1)}>Check conversation list</button>}
++            {thread.status === 'missing' && <button onClick={newChat}>New conversation</button>}
++            {['unavailable','missing','access-unavailable'].includes(thread.status) && <button onClick={() => go(workspaceQuery(agent.id))}>Back to workspace</button>}
++          </section>}
++          <span className="sr-only" role="status">{thread.status === 'ready' && thread.messages.at(-1)?.role === 'assistant' ? 'Reply received' : ''}</span>
++        </div></div><div className="ws-compose-wrap">{composer()}<p className="ws-small">Enter to send · Shift + Enter for a new line</p></div>
++      </> : null}
++    </main></div>
++    <WorkspaceModal open={drawer} onOpenChange={setDrawer} title="Navigation" drawer returnFocus={() => matchMedia('(min-width:1024px)').matches ? desktopNav.current?.querySelector<HTMLElement>('[aria-current], a') ?? null : menuButton.current}><nav className="ws-drawer-nav" aria-label="Mobile workspace navigation">{navigation}</nav></WorkspaceModal>
++    <WorkspaceModal open={contextOpen} onOpenChange={setContextOpen} title="Demo context">{context}</WorkspaceModal>
++    <WorkspaceModal open={!!actionRow} onOpenChange={open => { if (!open && !mutation) setActionRow(null); }} title="Conversation actions" returnFocus={() => archived.current ? recentHeading.current : rowOpener.current}><label htmlFor="ws-rename">Conversation title</label><input id="ws-rename" className="ws-field" value={rename} onChange={e => setRename(e.target.value)}/>{mutationError && <p role="alert">{mutationError}</p>}<div className="ws-dialog-actions"><button className="ws-primary" disabled={mutation || !rename.trim()} onClick={() => void handleMutation(false)}>Save name</button><button disabled={mutation} onClick={() => void handleMutation(true)}>Archive conversation</button></div><p className="ws-small">Archive hides the conversation from the list. It does not delete its history.</p></WorkspaceModal>
++  </div>;
++}
+diff --git a/src/components/workspace/WorkspaceComposer.tsx b/src/components/workspace/WorkspaceComposer.tsx
+new file mode 100644
+--- /dev/null
++++ b/src/components/workspace/WorkspaceComposer.tsx
+@@ -0,0 +1,14 @@
++'use client';
++import { useId, useLayoutEffect, useRef } from 'react';
++import { ArrowUp, MessageCircle } from 'lucide-react';
++export function WorkspaceComposer({ value, onChange, onSend, disabled, name, hero = false }: { value: string; onChange(value: string): void; onSend(): void; disabled: boolean; name: string; hero?: boolean }) {
++  const id = useId(); const ref = useRef<HTMLTextAreaElement>(null);
++  useLayoutEffect(() => { const el = ref.current; if (el) { el.style.height = 'auto'; el.style.height = `${Math.min(144, Math.max(hero ? 96 : 44, el.scrollHeight))}px`; } }, [value, hero]);
++  return <form className={`ws-composer ${hero ? 'ws-composer-hero' : ''}`} onSubmit={e => { e.preventDefault(); if (!disabled && value.trim()) onSend(); }}>
++    <label htmlFor={id} className={hero ? '' : 'sr-only'}>{hero ? 'Start a new conversation' : 'Message'}</label>
++    <textarea id={id} ref={ref} value={value} disabled={disabled} rows={hero ? 3 : 1} placeholder={hero ? 'What would you like to work on?' : `Message ${name}…`} onChange={e => onChange(e.target.value)} onKeyDown={e => { if (e.key === 'Enter' && !e.shiftKey && !e.nativeEvent.isComposing && e.keyCode !== 229) { e.preventDefault(); if (!disabled && value.trim()) onSend(); } }}/>
++    <div className="ws-composer-foot">{hero && <><span><MessageCircle size={16}/>{name}</span><small>Enter to send · Shift + Enter for a new line</small></>}
++      <button type="submit" className="ws-primary ws-icon" aria-label="Send message" disabled={disabled || !value.trim()}><ArrowUp size={22}/></button>
++    </div>
++  </form>;
++}
+diff --git a/src/components/workspace/WorkspaceEntry.tsx b/src/components/workspace/WorkspaceEntry.tsx
+new file mode 100644
+--- /dev/null
++++ b/src/components/workspace/WorkspaceEntry.tsx
+@@ -0,0 +1,16 @@
++'use client';
++import { useMemo } from 'react';
++import { useRouter, useSearchParams } from 'next/navigation';
++import { useAuthStore } from '@/store/useAuthStore';
++import { useChatStore } from '@/store/chatStore';
++import { workspaceAgentsForUi } from '@/config/manifest';
++import { createProductionWorkspaceServices } from './productionAdapter';
++import { Workspace } from './Workspace';
++const agents = workspaceAgentsForUi();
++export function WorkspaceEntry() {
++  const user = useAuthStore(s => s.user); const logout = useAuthStore(s => s.logout); const router = useRouter(); const query = useSearchParams();
++  const userId = user && typeof user === 'object' && 'id' in user ? String(user.id ?? '') : '';
++  const services = useMemo(() => createProductionWorkspaceServices(userId), [userId]);
++  const identityKey = JSON.stringify([userId, process.env.NEXT_PUBLIC_CHAT_MODE === 'live' ? 'live' : 'mock', agents.map(a => [a.id,a.backendId])]);
++  return <Workspace identityKey={identityKey} canOperate={!!userId} agents={agents} services={services} query={query.toString()} navigate={next => router.push('/chat' + (next ? '?' + next : ''))} onSignOut={() => { void logout().finally(() => { useChatStore.getState().reset(); router.push('/auth'); }); }}/>
++}
+diff --git a/src/components/workspace/WorkspaceModal.tsx b/src/components/workspace/WorkspaceModal.tsx
+new file mode 100644
+--- /dev/null
++++ b/src/components/workspace/WorkspaceModal.tsx
+@@ -0,0 +1,29 @@
++'use client';
++import * as Dialog from '@radix-ui/react-dialog';
++import { createContext, useContext, useEffect, useRef, useState, type ReactNode } from 'react';
++import { X } from 'lucide-react';
++const inertOwners = new WeakMap<HTMLElement, { count: number; previous: boolean }>();
++const PortalContext = createContext<HTMLElement | null>(null);
++export function WorkspacePortals({ children }: { children: ReactNode }) {
++  const [host, setHost] = useState<HTMLElement | null>(null);
++  useEffect(() => { const el = document.createElement('div'); el.dataset.workspaceTheme = ''; el.dataset.workspacePortal = ''; document.body.appendChild(el); setHost(el); return () => el.remove(); }, []);
++  return <PortalContext.Provider value={host}>{children}</PortalContext.Provider>;
++}
++export function WorkspaceModal({ open, onOpenChange, title, children, drawer = false, returnFocus }: { open: boolean; onOpenChange(open: boolean): void; title: string; children: ReactNode; drawer?: boolean; returnFocus?: () => HTMLElement | null }) {
++  const host = useContext(PortalContext); const close = useRef<HTMLButtonElement>(null); const opener = useRef<HTMLElement | null>(null);
++  useEffect(() => { if (open) opener.current = document.activeElement as HTMLElement; }, [open]);
++  useEffect(() => {
++    if (!open || !host) return;
++    const root = document.querySelector<HTMLElement>('.ws-root[data-workspace-theme]');
++    if (!root) return;
++    const owner = inertOwners.get(root) ?? { count: 0, previous: root.inert };
++    owner.count++; inertOwners.set(root, owner); root.inert = true;
++    return () => { owner.count--; if (!owner.count) { root.inert = owner.previous; inertOwners.delete(root); } };
++  }, [open, host]);
++  // No body fallback portal: tokens/host exist before content can be visible.
++  return <Dialog.Root open={open && !!host} onOpenChange={onOpenChange}>
++    {host && <Dialog.Portal container={host}><Dialog.Overlay className="ws-overlay"/><Dialog.Content className={`ws-modal ${drawer ? 'ws-drawer' : ''}`} aria-describedby={undefined} onOpenAutoFocus={e => { e.preventDefault(); close.current?.focus(); }} onCloseAutoFocus={e => { e.preventDefault(); const preferred = returnFocus?.(); const target = preferred || opener.current; if (target?.isConnected && target.getClientRects().length) target.focus(); }}>
++      <header><Dialog.Title>{title}</Dialog.Title><Dialog.Close asChild><button ref={close} type="button" className="ws-icon" aria-label={`Close ${title}`}><X size={20}/></button></Dialog.Close></header>{children}
++    </Dialog.Content></Dialog.Portal>}
++  </Dialog.Root>;
++}
+diff --git a/src/components/workspace/navigation.ts b/src/components/workspace/navigation.ts
+new file mode 100644
+--- /dev/null
++++ b/src/components/workspace/navigation.ts
+@@ -0,0 +1,21 @@
++import type { WorkspaceAgent } from './types';
++export type WorkspaceView = { kind: 'directory' } | { kind: 'invalid' } | { kind: 'workspace' | 'draft'; agentId: string } | { kind: 'conversation'; agentId: string; sessionId: string };
++export function parseWorkspaceView(query: string, agents: WorkspaceAgent[]): WorkspaceView {
++  const p = new URLSearchParams(query);
++  // Unknown selectors (including preview/user/backend selectors) are never forwarded.
++  if ([...p.keys()].some(k => !['agent', 'new', 'session'].includes(k)) || ['agent','new','session'].some(k => p.getAll(k).length > 1)) return { kind: 'invalid' };
++  const agentId = p.get('agent');
++  if (!agentId) return p.size ? { kind: 'invalid' } : { kind: 'directory' };
++  if (!agents.some(a => a.id === agentId)) return { kind: 'invalid' };
++  if (p.has('new') && p.has('session')) return { kind: 'invalid' };
++  if (p.has('new')) return p.get('new') === '1' ? { kind: 'draft', agentId } : { kind: 'invalid' };
++  if (p.has('session')) return p.get('session')?.trim() ? { kind: 'conversation', agentId, sessionId: p.get('session')! } : { kind: 'invalid' };
++  return { kind: 'workspace', agentId };
++}
++export function workspaceQuery(agentId?: string, sessionId?: string, draft = false) {
++  const p = new URLSearchParams();
++  if (agentId) p.set('agent', agentId);
++  if (sessionId) p.set('session', sessionId);
++  else if (draft) p.set('new', '1');
++  return p.toString();
++}
+diff --git a/src/components/workspace/productionAdapter.ts b/src/components/workspace/productionAdapter.ts
+new file mode 100644
+--- /dev/null
++++ b/src/components/workspace/productionAdapter.ts
+@@ -0,0 +1,39 @@
++import { chatService } from '@/services/chatService';
++import { sessionIndexService, titleFromMessage } from '@/services/sessionIndexService';
++import type { WorkspaceServices } from './types';
++
++/** Boundary adapter only. Existing empty-on-error/void-on-error service limits remain. */
++export function createProductionWorkspaceServices(userId: string): WorkspaceServices {
++  const requireUser = () => { if (!userId) throw new Error('User context unavailable'); };
++  return {
++    async list(agentId) {
++      requireUser();
++      const rows = await sessionIndexService.listSessions(agentId);
++      return { status: rows.length ? 'ready' : 'empty', rows: rows.map(row => ({ id: row.id, sessionId: row.adk_session_id, title: row.title, updatedAt: row.updated_at })) };
++    },
++    async history(agentId, sessionId) {
++      requireUser();
++      const messages = await chatService.getHistory({ agent_name: agentId, user_id: userId, session_id: sessionId });
++      // [] is ambiguous in the inherited service. No missing/access classification invented.
++      return { status: messages.length ? 'ready' : 'empty', messages };
++    },
++    async send(agentId, sessionId, message) {
++      requireUser();
++      const result = await chatService.sendMessage({ agent_name: agentId, user_id: userId, session_id: sessionId, message });
++      // Known legacy sentinel is conservatively uncertain, never "not sent" or an assistant success.
++      if (!result.session_id || result.response.startsWith('Error: Could not reach Agent Service.') || result.response === 'Error: No response content.') return { status: 'uncertain' };
++      let metadataWarning = false;
++      try {
++      if (!sessionId) metadataWarning = !(await sessionIndexService.createSession(agentId, result.session_id, titleFromMessage(message)));
++      else {
++        const rows = await sessionIndexService.listSessions(agentId);
++        const row = rows.find(row => row.adk_session_id === result.session_id);
++        if (row) await sessionIndexService.touchSession(row.id);
++      }
++      } catch { metadataWarning = true; } // The confirmed ADK result survives a metadata failure.
++      return { status: 'sent', sessionId: result.session_id, reply: result.response, metadataWarning };
++    },
++    async rename(row, title) { requireUser(); await sessionIndexService.renameSession(row.id, title); },
++    async archive(row) { requireUser(); await sessionIndexService.archiveSession(row.id); },
++  };
++}
+diff --git a/src/components/workspace/types.ts b/src/components/workspace/types.ts
+new file mode 100644
+--- /dev/null
++++ b/src/components/workspace/types.ts
+@@ -0,0 +1,35 @@
++import type { Message } from '@/types';
++
++export interface WorkspaceAgent {
++  id: string;
++  name: string;
++  description?: string;
++  icon?: string;
++  backendId: string;
++}
++export interface Conversation {
++  id: string;
++  sessionId: string;
++  title: string;
++  updatedAt?: string;
++}
++export type Catalogue = {
++  status: 'ready' | 'empty' | 'loading' | 'unavailable' | 'partial' | 'recovered';
++  rows: Conversation[];
++};
++export type ThreadStatus = 'ready' | 'empty' | 'loading' | 'unavailable' | 'missing' | 'access-unavailable' | 'pending' | 'uncertain' | 'not-sent' | 'metadata-warning';
++export interface Thread {
++  status: ThreadStatus;
++  messages: Message[];
++  attemptedText?: string;
++}
++export type SendResult =
++  | { status: 'sent'; sessionId: string; reply: string; metadataWarning?: boolean }
++  | { status: 'uncertain' | 'not-sent' };
++export interface WorkspaceServices {
++  list(agentId: string): Promise<Catalogue>;
++  history(agentId: string, sessionId: string): Promise<Thread>;
++  send(agentId: string, sessionId: string | null, message: string): Promise<SendResult>;
++  rename(row: Conversation, title: string): Promise<void>;
++  archive(row: Conversation): Promise<void>;
++}
+diff --git a/src/config/manifest.ts b/src/config/manifest.ts
+--- a/src/config/manifest.ts
++++ b/src/config/manifest.ts
+@@ -20,6 +20,8 @@
+ }
+ 
+ export interface AgentEntry {
++  description?: string;
++  icon?: string;
+   name: string;
+   bundle: string;
+   label: string;
+@@ -124,3 +126,14 @@
+ export function resolveBundleEnvVar(agentName: string): string | null {
+   return resolveBundleEnvVarIn(MANIFEST, agentName);
+ }
++
++/** Browser-safe workbench presentation; never exports bundle URL/env resolution. */
++export function workspaceAgentsForUi() {
++  return MANIFEST.agents.map(agent => ({
++    id: agent.name,
++    name: agent.label,
++    backendId: agent.bundle,
++    description: typeof agent.description === 'string' ? agent.description : undefined,
++    icon: typeof agent.icon === 'string' ? agent.icon : undefined,
++  }));
++}
+diff --git a/tests/workspace/fixture-entry.tsx b/tests/workspace/fixture-entry.tsx
+new file mode 100644
+--- /dev/null
++++ b/tests/workspace/fixture-entry.tsx
+@@ -0,0 +1,34 @@
++import React, { useMemo, useState } from 'react';
++import { createRoot } from 'react-dom/client';
++import { ThemeProvider } from 'next-themes';
++import { Workspace } from '../../src/components/workspace/Workspace';
++import type { Catalogue, ThreadStatus, WorkspaceAgent, WorkspaceServices } from '../../src/components/workspace/types';
++
++const params=new URLSearchParams(location.search);
++const scenario=params.get('fixture')||'ready';
++const primary: WorkspaceAgent[] = [{id:'atlas',name:'Atlas',description:'Research and planning workspace.',backendId:'fixture-a'},{id:'echo',name:'Echo',description:'A place to develop clear explanations.',backendId:'fixture-a'},{id:'studio',name:'Studio',description:'Explore ideas and presentation.',backendId:'fixture-b'}];
++const alternate: WorkspaceAgent[] = [{id:'orbit/β',name:'Orbit Notes',backendId:'fixture-x'},{id:'moss',name:'Moss Review',description:'Review notes and compare alternatives.',backendId:'fixture-x'}];
++const agents=params.get('roster')==='alternate'?alternate:scenario==='directory-empty'?[]:primary;
++const ledger: Array<{action:string;agent?:string;session?:string;message?:string;title?:string}>=[];
++const initial=params.get('view')==='workspace'?'agent=atlas':params.get('view')==='conversation'?'agent=atlas&session=a':params.get('query')||'';
++const rows=[{id:'row-a',sessionId:'a',title:'Planning the next research session',updatedAt:'2026-10-04T10:42:00Z'},{id:'row-b',sessionId:'b',title:'Comparing approaches to a new idea',updatedAt:'2026-10-03T16:15:00Z'}];
++const long='long_identifier_'.repeat(35);
++const markdown=`Here is a **clear starting point** for this conversation.\n\n| Approach | Notes | Owner | Status | Timing | Evidence | Alternatives | Outcome |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| Plan | A bounded next step | Researcher | Reviewing | Tomorrow | Reference | Alternative | Pending |\n| Compare | ${long} | Researcher | Reviewing | Tomorrow | Reference | Alternative | Pending |\n\n\`\`\`typescript\nconst conversation = "${long}";\nconsole.log(conversation);\n\`\`\`\n\n[Reference ${long}](https://example.invalid/reference)\n\n<script>window.badMarkup=true</script>`;
++let count=0;
++const services: WorkspaceServices={
++ async list(agent){ledger.push({action:'list',agent});return {status:['empty','loading','unavailable','partial','recovered'].includes(scenario)?scenario as Catalogue['status']:'ready',rows:scenario==='empty'||scenario==='loading'||scenario==='unavailable'?[]:rows.map(r=>({...r,title:scenario==='recovered'?'':r.title}))}},
++ async history(agent,session){ledger.push({action:'history',agent,session});if(scenario==='late-history')await new Promise(r=>setTimeout(r,session==='a'?700:20));return {status:['loading','unavailable','missing','access-unavailable','pending','uncertain','not-sent','metadata-warning','empty'].includes(scenario)?scenario as ThreadStatus:'ready',messages:scenario==='empty'||scenario==='missing'||scenario==='access-unavailable'?[]:[{role:'user',content:`Question in session ${session}`},{role:'assistant',content:session==='b'?'Only session B content.':markdown}],attemptedText:scenario==='not-sent'?'My preserved draft':scenario==='uncertain'?'An attempted message':undefined}},
++ async send(agent,session,message){ledger.push({action:'send',agent,session:session||undefined,message});await new Promise(r=>setTimeout(r,150));if(scenario==='send-uncertain')return{status:'uncertain'};if(scenario==='send-not-sent')return{status:'not-sent'};return{status:'sent',sessionId:session||`created-${++count}`,reply:'Fixture reply: '+message,metadataWarning:scenario==='send-metadata'}},
++ async rename(row,title){ledger.push({action:'rename',title});if(scenario==='metadata-failure')throw Error('Fixture metadata rejection');},
++ async archive(){ledger.push({action:'archive'});if(scenario==='metadata-failure')throw Error('Fixture metadata rejection');}
++};
++const api={ledger,resetIdentity:()=>{},unmount:()=>{}};
++Object.assign(window,{workspaceFixture:api});
++function Fixture(){
++ const [query,setQuery]=useState(initial);const [identity,setIdentity]=useState('fixture-user-a');
++ api.resetIdentity=()=>setIdentity(v=>v==='fixture-user-a'?'fixture-user-b':'fixture-user-a');
++ React.useEffect(()=>{history.replaceState({query:initial},'',location.href);const fn=()=>setQuery(history.state?.query??'');addEventListener('popstate',fn);return()=>removeEventListener('popstate',fn)},[]);
++ const navigate=useMemo(()=>((query:string)=>{history.pushState({query},'','/?'+query);setQuery(query)}),[]);
++ return <ThemeProvider attribute="class" defaultTheme="dark" enableSystem disableTransitionOnChange><div id="unscoped-sibling" style={{position:'absolute',left:0,top:0,width:1,height:1,pointerEvents:'none'}}/><Workspace identityKey={identity} agents={agents} services={services} query={query} navigate={navigate} rosterStatus={scenario==='directory-loading'?'loading':scenario==='directory-unavailable'?'unavailable':'ready'}/></ThemeProvider>;
++}
++const root=createRoot(document.getElementById('fixture-root')!);api.unmount=()=>root.unmount();root.render(<Fixture/>);
+diff --git a/tests/workspace/harness.cjs b/tests/workspace/harness.cjs
+new file mode 100644
+--- /dev/null
++++ b/tests/workspace/harness.cjs
+@@ -0,0 +1,18 @@
++require('./network-guard.cjs');
++const path=require('node:path'),fs=require('node:fs'),os=require('node:os'),http=require('node:http');
++// No personal process configuration, dotenv, production auth, service module, or Next route.
++for(const key of Object.keys(process.env))if(!['PATH','HOME','LANG','TMPDIR','APBM_WORKSPACE_PORT','NODE_OPTIONS'].includes(key))delete process.env[key];
++const root=path.resolve(__dirname,'../..'),out=fs.mkdtempSync(path.join(os.tmpdir(),'stark-workspace-fixture-'));
++const webpack=require('next/dist/compiled/webpack/webpack').webpack;
++const css=require('sass').compile(path.join(root,'src/app/(cyberize)/chat/workspace.scss')).css;
++const globals=require('sass').compile(path.join(root,'src/app/globals.scss')).css;
++(async()=>{
++ const generated=await require('postcss')([require('tailwindcss')({config:path.join(root,'tailwind.config.ts')})]).process(globals,{from:undefined});
++ const fonts=[400,500,600,700].map(w=>`@font-face{font-family:Inter;src:url('/fonts/Inter-${w}.ttf');font-weight:${w};font-display:swap}`).join('');
++ fs.writeFileSync(path.join(out,'style.css'),fonts+'\n'+generated.css+'\n'+css+'\nbody{margin:0;font-family:Inter,sans-serif}');
++ await new Promise((ok,no)=>webpack({mode:'development',context:root,entry:path.join(__dirname,'fixture-entry.tsx'),output:{path:out,filename:'bundle.js'},devtool:false,resolve:{extensions:['.tsx','.ts','.js'],alias:{'@':path.join(root,'src')}},module:{rules:[{test:/\.tsx?$/,exclude:/node_modules/,use:path.join(__dirname,'ts-loader.cjs')}]},plugins:[{apply(compiler){compiler.hooks.normalModuleFactory.tap('NoProductionServices',factory=>factory.hooks.beforeResolve.tap('NoProductionServices',data=>{if(data&&/services\/|utils\/supabase|store\/useAuthStore|productionAdapter|WorkspaceEntry/.test(data.request))throw Error('Forbidden production dependency in fixture harness');}));}}]},(err,stats)=>{if(err||stats.hasErrors())return no(err||Error(stats.toString({all:false,errors:true})));ok();}));
++ const html='<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Isolated workspace fixture</title><link rel="stylesheet" href="/style.css"></head><body><div id="fixture-root"></div><script src="/bundle.js"></script></body></html>';
++ const server=http.createServer((req,res)=>{const pathname=new URL(req.url,'http://localhost').pathname;if(pathname==='/'){res.setHeader('Content-Type','text/html');return res.end(html)}if(['/bundle.js','/style.css'].includes(pathname)){res.setHeader('Content-Type',pathname.endsWith('js')?'application/javascript; charset=utf-8':'text/css; charset=utf-8');return fs.createReadStream(path.join(out,pathname.slice(1))).pipe(res)}if(/^\/fonts\/Inter-(400|500|600|700)\.ttf$/.test(pathname)){res.setHeader('Content-Type','font/ttf');return fs.createReadStream(path.join(root,'agent_docs/ACTIONS/stark_agent_workspace_apbm_000/DESIGN/assets',path.basename(pathname))).pipe(res)}res.writeHead(404);res.end('Not found')});
++ server.listen(Number(process.env.APBM_WORKSPACE_PORT||43170),'127.0.0.1',()=>console.log('WORKSPACE_FIXTURE_READY: local-only; synthetic services; no production auth'));
++ for(const signal of ['SIGTERM','SIGINT'])process.on(signal,()=>server.close(()=>{fs.rmSync(out,{recursive:true,force:true});process.exit(0)}));
++})().catch(error=>{console.error(error.message);fs.rmSync(out,{recursive:true,force:true});process.exit(1)});
+diff --git a/tests/workspace/network-guard.cjs b/tests/workspace/network-guard.cjs
+new file mode 100644
+--- /dev/null
++++ b/tests/workspace/network-guard.cjs
+@@ -0,0 +1,7 @@
++// Test-only preload. Deny all non-loopback Node traffic; never print destinations/headers.
++const net=require('node:net'),tls=require('node:tls');
++function deny(){process.stderr.write('WORKSPACE_NETWORK_GUARD: blocked external request\n');throw Error('WORKSPACE_NETWORK_GUARD: external request forbidden');}
++function check(args){const o=args[0];if(Array.isArray(o))return check(o);if(o&&typeof o==='object'){if(o.path&&!o.port)return;const h=o.hostname||o.host||o.servername||'localhost';if(!['localhost','127.0.0.1','::1'].includes(h))deny();}else if(typeof o==='number'){if(typeof args[1]==='string'&&!['localhost','127.0.0.1','::1'].includes(args[1]))deny();}else if(typeof o==='string'&&!o.startsWith('/'))deny();}
++const connect=net.Socket.prototype.connect;net.Socket.prototype.connect=function(...args){check(args);return connect.apply(this,args)};
++const secure=tls.connect;tls.connect=function(...args){check(args);return secure.apply(this,args)};
++const fetch=globalThis.fetch;globalThis.fetch=function(input,...rest){let u;try{u=new URL(typeof input==='string'?input:input.url||String(input))}catch{return deny()}if(!['localhost','127.0.0.1','[::1]'].includes(u.hostname))return deny();return fetch.call(this,input,...rest)};
+diff --git a/tests/workspace/ts-loader.cjs b/tests/workspace/ts-loader.cjs
+new file mode 100644
+--- /dev/null
++++ b/tests/workspace/ts-loader.cjs
+@@ -0,0 +1,2 @@
++const ts = require('typescript');
++module.exports = function(source) { return ts.transpileModule(source, { fileName:this.resourcePath, compilerOptions:{ jsx:ts.JsxEmit.ReactJSX, module:ts.ModuleKind.ESNext, target:ts.ScriptTarget.ES2020, esModuleInterop:true } }).outputText; };
+diff --git a/tests/workspace/workspace.spec.ts b/tests/workspace/workspace.spec.ts
+new file mode 100644
+--- /dev/null
++++ b/tests/workspace/workspace.spec.ts
+@@ -0,0 +1,88 @@
++import { test, expect, type Page } from '@playwright/test';
++import path from 'node:path';
++const base='http://127.0.0.1:43170';
++const evidence=path.resolve('agent_docs/ACTIONS/stark_agent_workspace_apbm_000/evidence/engineering-attempt-001');
++const ledger=(page:Page)=>page.evaluate(()=>(window as unknown as {workspaceFixture:{ledger:Array<{action:string;message?:string;title?:string;session?:string}>}}).workspaceFixture.ledger);
++test.beforeEach(async({page})=>{
++ await page.route('**/*',async route=>{const url=new URL(route.request().url());if(url.origin!==base){await route.abort();throw Error('Unexpected outbound browser request (address omitted)')}await route.continue()});
++ page.on('pageerror',error=>{throw error});
++});
++for(const view of ['directory','workspace','conversation'])for(const theme of ['dark','light'])for(const width of [375,768,1280])test(`render ${view} ${theme} ${width}`,async({page})=>{
++ await page.setViewportSize({width,height:900});await page.addInitScript(value=>localStorage.setItem('theme',value),theme);await page.goto(`/?view=${view}`);await expect(page.locator('.ws-root')).toBeVisible();await page.evaluate(()=>document.fonts.ready);await expect(page.locator('html')).toHaveClass(theme);
++ await expect.poll(()=>page.evaluate(()=>document.documentElement.scrollWidth-innerWidth)).toBeLessThanOrEqual(1);
++ const colors=await page.locator('.ws-root').evaluate(el=>({bg:getComputedStyle(el).backgroundColor,radius:getComputedStyle(el).getPropertyValue('--radius')}));expect(colors.bg).toBe(theme==='dark'?'rgb(63, 63, 70)':'rgb(255, 255, 255)');expect(colors.radius.trim()).toBe('.75rem');if(view==='directory')await expect(page.locator('.ws-agent-card').first()).toHaveCSS('border-radius','12px');if(view==='workspace')await expect(page.locator('.ws-composer')).toHaveCSS('border-radius','16px');
++ await expect(page.locator('#unscoped-sibling')).toHaveCSS('background-color','rgba(0, 0, 0, 0)');expect(await page.locator('#unscoped-sibling').evaluate(el=>getComputedStyle(el).getPropertyValue('--background'))).toBe('');
++ if(view==='conversation'){
++  await expect(page.getByText('Here is a', {exact:false})).toBeVisible();
++  const scroll=await page.locator('.ws-thread-scroll').boundingBox(),composer=await page.locator('.ws-compose-wrap').boundingBox();expect(scroll!.y+scroll!.height).toBeLessThanOrEqual(composer!.y+1);expect(composer!.y+composer!.height).toBeLessThanOrEqual(901);
++  expect(await page.getByRole('region',{name:'Code block'}).evaluate(el=>el.scrollWidth>el.clientWidth)).toBeTruthy();expect(await page.getByRole('region',{name:'Message table'}).evaluate(el=>el.scrollWidth>el.clientWidth)).toBeTruthy();
++  await expect(page.locator('.ws-thread script')).toHaveCount(0);
++ }
++ await page.screenshot({path:path.join(evidence,`screenshots/${view}-${theme}-${width}.png`),fullPage:view!=='conversation'});
++});
++test('directory filter, neutral alternate roster and safe navigation/back',async({page})=>{
++ await page.goto('/?roster=alternate');await page.getByLabel('Find an agent').fill('REVIEW');await expect(page.locator('.ws-agent-card')).toHaveCount(1);await expect(page.getByRole('heading',{name:'Moss Review'})).toBeVisible();await page.getByLabel('Find an agent').fill('unmatched');await expect(page.getByRole('heading',{name:'No matching agents'})).toBeVisible();await page.getByLabel('Find an agent').fill('Orbit');await page.locator('.ws-agent-card').click();await expect(page.getByRole('heading',{name:'Orbit Notes'})).toBeVisible();expect(page.url()).toContain('orbit%2F%CE%B2');await page.goBack();await expect(page.getByRole('heading',{name:'Your agents'})).toBeVisible();await page.goForward();await expect(page.getByRole('heading',{name:'Orbit Notes'})).toBeVisible();
++});
++test('default dark, saved light and legacy system are preserved',async({page})=>{
++ await page.goto('/');await expect(page.locator('html')).toHaveClass('dark');await page.getByRole('button',{name:'Switch to light mode'}).filter({visible:true}).click();await page.reload();await expect(page.locator('html')).toHaveClass('light');await page.evaluate(()=>localStorage.setItem('theme','system'));await page.emulateMedia({colorScheme:'light'});await page.reload();await expect(page.locator('html')).toHaveClass('light');expect(await page.evaluate(()=>localStorage.getItem('theme'))).toBe('system');
++});
++test('invalid query cannot invoke services; empty/loading/unavailable roster distinct',async({page})=>{
++ await page.goto('/?query='+encodeURIComponent('agent=atlas&new=1&session=a'));await expect(page.getByRole('heading',{name:'Workspace unavailable'})).toBeVisible();expect(await ledger(page)).toEqual([]);
++ for(const [fixture,title] of [['directory-empty','No agents configured'],['directory-loading','Loading agents…'],['directory-unavailable','Agent configuration unavailable']]){await page.goto('/?fixture='+fixture);await expect(page.getByText(title,{exact:true})).toBeVisible();expect((await ledger(page)).filter(x=>x.action==='send')).toHaveLength(0);}
++});
++test('fresh drafts, whitespace/IME and double-submit guard; durable returned ID binds once',async({page})=>{
++ await page.goto('/?view=workspace');await page.getByRole('button',{name:'New chat',exact:true}).click();expect((await ledger(page)).filter(x=>x.action==='send')).toHaveLength(0);await page.getByLabel('Message',{exact:true}).fill('Discard me');await page.getByRole('button',{name:'New chat',exact:true}).click();await expect(page.getByLabel('Message',{exact:true})).toHaveValue('');await page.getByLabel('Message',{exact:true}).fill('   ');await expect(page.getByRole('button',{name:'Send message'})).toBeDisabled();await page.getByLabel('Message',{exact:true}).fill('A deliberate message');await page.getByLabel('Message',{exact:true}).dispatchEvent('keydown',{key:'Enter',isComposing:true});expect((await ledger(page)).filter(x=>x.action==='send')).toHaveLength(0);await page.getByLabel('Message',{exact:true}).press('Shift+Enter');await expect(page.getByLabel('Message',{exact:true})).toHaveValue(/\n/);await page.getByLabel('Message',{exact:true}).press('Enter');await page.getByLabel('Message',{exact:true}).dispatchEvent('keydown',{key:'Enter'});await expect(page).toHaveURL(/session=created-1/);expect((await ledger(page)).filter(x=>x.action==='send')).toHaveLength(1);await expect(page.getByText('Fixture reply: A deliberate message')).toBeVisible();
++});
++test('navigation drawer traps focus, restores opener, closes at breakpoint and portal cleans up',async({page})=>{
++ await page.setViewportSize({width:768,height:900});await page.goto('/?view=workspace');await page.getByRole('button',{name:'Open navigation menu'}).click();const dialog=page.getByRole('dialog',{name:'Navigation'});await expect(dialog).toBeVisible();await expect(page.getByRole('button',{name:'Close Navigation'})).toBeFocused();await page.keyboard.press('Shift+Tab');expect(await page.evaluate(()=>!!document.activeElement?.closest('[role="dialog"]'))).toBeTruthy();await page.keyboard.press('Escape');await expect(page.getByRole('button',{name:'Open navigation menu'})).toBeFocused();await page.getByRole('button',{name:'Open navigation menu'}).click();await page.setViewportSize({width:1024,height:900});await expect(dialog).not.toBeVisible();expect(await page.evaluate(()=>!!document.activeElement?.closest('.ws-desktop'))).toBeTruthy();await page.evaluate(()=>(window as unknown as {workspaceFixture:{unmount():void}}).workspaceFixture.unmount());await expect(page.locator('[data-workspace-portal]')).toHaveCount(0);expect(await page.evaluate(()=>document.body.style.pointerEvents)).not.toBe('none');
++});
++test('context disclosure and nested dialogs isolate edits by agent/user and reset on reload',async({page})=>{
++ await page.setViewportSize({width:768,height:900});await page.goto('/?view=workspace');const disclosure=page.getByRole('button',{name:'Demo context',exact:true});await expect(disclosure).toHaveAttribute('aria-expanded','false');await expect(page.getByRole('button',{name:'Edit demo instructions'})).not.toBeVisible();await disclosure.click();await expect(disclosure).toHaveAttribute('aria-expanded','true');await page.getByRole('button',{name:'Edit demo instructions'}).click();await page.getByLabel('Demo instructions',{exact:true}).fill('Only Atlas demo');await page.getByRole('button',{name:'Apply to demo'}).click();await expect(page.getByRole('button',{name:'Edit demo instructions'})).toBeFocused();await expect(page.getByText('Only Atlas demo')).toBeVisible();await page.getByRole('button',{name:'Add sample document',exact:true}).click();await page.getByRole('button',{name:'Research checklist.md',exact:true}).click();await page.getByRole('button',{name:'Preview Research checklist.md'}).click();await expect(page.getByText(/Fictional sample: define/)).toBeVisible();await page.keyboard.press('Escape');await page.getByRole('button',{name:'Remove Research checklist.md'}).click();await expect(page.getByRole('button',{name:'Add sample document',exact:true})).toBeFocused();
++ await page.setViewportSize({width:1280,height:900});await page.getByRole('link',{name:'Echo',exact:true}).click();await expect(page.getByText('Only Atlas demo')).toHaveCount(0);await page.getByRole('link',{name:'Atlas',exact:true}).first().click();await expect(page.getByText('Only Atlas demo')).toBeVisible();await page.evaluate(()=>(window as unknown as {workspaceFixture:{resetIdentity():void}}).workspaceFixture.resetIdentity());await expect(page.getByText('Only Atlas demo')).toHaveCount(0);await page.reload();await expect(page.getByText('Only Atlas demo')).toHaveCount(0);expect((await ledger(page)).some(x=>['send','rename','archive'].includes(x.action))).toBeFalsy();await expect(page.locator('input[type=file]')).toHaveCount(0);
++});
++test('context focus gets safe destination when narrow resize hides content',async({page})=>{
++ await page.goto('/?view=workspace');await page.getByRole('button',{name:'Edit demo instructions'}).focus();await page.setViewportSize({width:768,height:900});await expect(page.getByRole('button',{name:'Demo context',exact:true})).toBeFocused();await expect(page.getByRole('button',{name:'Edit demo instructions'})).not.toBeVisible();
++});
++test('missing/unavailable/access/uncertain/pending/failed/metadata states constrain callbacks',async({page})=>{
++ for(const [fixture,title] of [['missing','Conversation not found'],['unavailable','History unavailable'],['access-unavailable','Conversation access unavailable'],['uncertain','Send outcome unknown'],['pending','Waiting for a reply'],['not-sent','Message not sent'],['metadata-warning','Conversation started; title not saved']]){
++  await page.goto('/?view=conversation&fixture='+fixture);await expect(page.getByRole('heading',{name:title,exact:true})).toBeVisible();
++  if(!['not-sent','metadata-warning'].includes(fixture))await expect(page.getByLabel('Message',{exact:true})).toBeDisabled();
++  if(fixture==='uncertain'){await page.getByRole('button',{name:'Check history'}).click();await expect(page.getByRole('heading',{name:title,exact:true})).toBeVisible();expect((await ledger(page)).filter(x=>x.action==='history').length).toBeGreaterThan(1);}
++  if(fixture==='unavailable'){await page.getByRole('button',{name:'Try loading again'}).click();await expect(page.getByRole('heading',{name:title})).toBeVisible();}
++  if(fixture==='not-sent')await expect(page.getByLabel('Message',{exact:true})).toHaveValue('My preserved draft');
++  if(fixture==='metadata-warning'){await page.getByRole('button',{name:'Check conversation list'}).click();await expect(page).toHaveURL(/view=conversation/);}
++  expect((await ledger(page)).filter(x=>x.action==='send')).toHaveLength(0);
++ }
++});
++test('recents partial/recovered states and safe literal metadata actions with failure retention',async({page})=>{
++ await page.goto('/?view=workspace&fixture=recovered');await expect(page.getByRole('heading',{name:'Recovery view'})).toBeVisible();await expect(page.getByText('Some listed conversations may have been archived.')).toBeVisible();await expect(page.getByRole('button',{name:/Actions for/})).toHaveCount(0);
++ await page.goto('/?view=workspace');await page.getByRole('button',{name:/Actions for/}).first().click();await page.getByLabel('Conversation title').fill('  ');await expect(page.getByRole('button',{name:'Save name'})).toBeDisabled();await page.getByLabel('Conversation title').fill('<literal> & punctuation');await page.getByRole('button',{name:'Save name'}).click();await expect(page.getByRole('link',{name:/<literal> & punctuation/})).toBeVisible();await expect(page.getByRole('button',{name:'Actions for <literal> & punctuation'})).toBeFocused();await page.getByRole('button',{name:'Actions for <literal> & punctuation'}).click();await page.getByRole('button',{name:'Archive conversation'}).click();await expect(page.getByRole('heading',{name:'Recent conversations'})).toBeFocused();await expect(page.getByRole('link',{name:/<literal> & punctuation/})).toHaveCount(0);
++ await page.goto('/?view=workspace&fixture=metadata-failure');await page.getByRole('button',{name:/Actions for/}).first().click();await page.getByLabel('Conversation title').fill('Rejected title');await page.getByRole('button',{name:'Save name'}).click();await expect(page.getByRole('alert')).toContainText('have been kept');await page.keyboard.press('Escape');await expect(page.getByRole('link',{name:/Planning the next/})).toBeVisible();
++});
++test('late history cannot paint another session; clipboard fallback and no raw HTML',async({page})=>{
++ await page.goto('/?view=conversation&fixture=late-history');await page.getByRole('link',{name:'Comparing approaches to a new idea'}).click();await expect(page.getByText('Only session B content.')).toBeVisible();await page.waitForTimeout(750);await expect(page.getByText('Question in session a')).toHaveCount(0);
++ await page.evaluate(()=>Object.defineProperty(navigator,'clipboard',{configurable:true,value:{writeText:()=>Promise.reject(Error('fixture denied'))}}));await page.getByRole('button',{name:'Copy conversation as Markdown'}).click();await expect(page.getByLabel('Text to copy manually')).toHaveValue(/## Atlas/);
++});
++test('portal light/dark tokens present on first visible frame and modal Escape restores trigger',async({page})=>{
++ for(const theme of ['light','dark']){await page.addInitScript(value=>localStorage.setItem('theme',value),theme);await page.goto('/?view=conversation');await page.getByRole('button',{name:'Open demo instructions and context'}).click();const dialog=page.getByRole('dialog',{name:'Demo context',exact:true});await expect(dialog).toBeVisible();await expect(dialog).toHaveCSS('background-color',theme==='dark'?'rgb(39, 39, 42)':'rgb(255, 255, 255)');await page.keyboard.press('Escape');await expect(page.getByRole('button',{name:'Open demo instructions and context'})).toBeFocused();}
++});
++
++test('modal background inert, backdrop dismissal and listener/portal cleanup',async({page})=>{
++ await page.goto('/?view=conversation');await page.getByRole('button',{name:'Open demo instructions and context'}).click();await expect.poll(()=>page.locator('.ws-root').evaluate(el=>(el as HTMLElement).inert)).toBeTruthy();await page.locator('.ws-overlay').click({position:{x:3,y:3}});await expect(page.getByRole('dialog',{name:'Demo context',exact:true})).not.toBeVisible();await expect(page.getByRole('button',{name:'Open demo instructions and context'})).toBeFocused();expect(await page.locator('.ws-root').evaluate(el=>(el as HTMLElement).inert)).toBeFalsy();
++});
++test('real copy payloads and speech lifecycle with explicit browser doubles',async({page})=>{
++ await page.addInitScript(()=>{
++  const state={copies:[] as string[],spoken:0,cancelled:0};Object.assign(window,{fixtureCapabilities:state});
++  Object.defineProperty(navigator,'clipboard',{configurable:true,value:{writeText:async(t:string)=>{state.copies.push(t)}}});
++  Object.defineProperty(window,'speechSynthesis',{configurable:true,value:{cancel(){state.cancelled++},speak(utterance:{onstart?:()=>void}){state.spoken++;utterance.onstart?.()},getVoices(){return[]}}});
++ });
++ await page.goto('/?view=conversation');await page.getByRole('button',{name:'Copy code',exact:true}).click();await page.getByRole('button',{name:'Copy conversation as Markdown'}).click();const copies=await page.evaluate(()=>(window as unknown as {fixtureCapabilities:{copies:string[]}}).fixtureCapabilities.copies);expect(copies[0]).toContain('const conversation');expect(copies[0]).not.toContain('```');expect(copies[1]).toContain('**clear starting point**');await page.getByRole('button',{name:'Read aloud',exact:true}).click();await expect(page.getByRole('button',{name:'Stop reading',exact:true})).toBeVisible();await page.getByRole('button',{name:'Stop reading',exact:true}).click();expect(await page.evaluate(()=>(window as unknown as {fixtureCapabilities:{spoken:number}}).fixtureCapabilities.spoken)).toBe(1);
++});
++test('metadata-warning successful send keeps returned ID and repeats only deliberate sends',async({page})=>{
++ await page.goto('/?view=workspace&fixture=send-metadata');await page.getByRole('button',{name:'New chat',exact:true}).click();await page.getByLabel('Message',{exact:true}).fill('First');await page.getByRole('button',{name:'Send message'}).click();await expect(page).toHaveURL(/session=created-1/);await expect(page.getByRole('heading',{name:'Conversation started; title not saved'})).toBeVisible();await page.getByRole('button',{name:'Check conversation list'}).click();expect((await ledger(page)).filter(x=>x.action==='send')).toHaveLength(1);await page.getByLabel('Message',{exact:true}).fill('Second');await page.getByRole('button',{name:'Send message'}).click();await expect(page.getByText('Fixture reply: Second')).toBeVisible();const sends=(await ledger(page)).filter(x=>x.action==='send');expect(sends[1].session).toBe('created-1');
++});
++
++test('partial recents recover explicitly without writes and send failures preserve the draft',async({page})=>{
++ await page.goto('/?view=workspace&fixture=partial');await page.getByRole('button',{name:'View available conversations'}).click();await expect(page.getByRole('heading',{name:'Recovery view'})).toBeVisible();expect((await ledger(page)).filter(x=>x.action!=='list')).toHaveLength(0);
++ for(const fixture of ['send-uncertain','send-not-sent']){await page.goto('/?view=workspace&fixture='+fixture);await page.getByRole('button',{name:'New chat',exact:true}).click();await page.getByLabel('Message',{exact:true}).fill('Keep this attempt');await page.getByRole('button',{name:'Send message'}).click();await expect(page.getByRole('heading',{name:fixture==='send-uncertain'?'Send outcome unknown':'Message not sent'})).toBeVisible();if(fixture==='send-uncertain'){await expect(page.getByText('Keep this attempt',{exact:true})).toBeVisible();await expect(page.getByLabel('Message',{exact:true})).toBeDisabled()}else await expect(page.getByLabel('Message',{exact:true})).toHaveValue('Keep this attempt');expect((await ledger(page)).filter(x=>x.action==='send')).toHaveLength(1);}
++});

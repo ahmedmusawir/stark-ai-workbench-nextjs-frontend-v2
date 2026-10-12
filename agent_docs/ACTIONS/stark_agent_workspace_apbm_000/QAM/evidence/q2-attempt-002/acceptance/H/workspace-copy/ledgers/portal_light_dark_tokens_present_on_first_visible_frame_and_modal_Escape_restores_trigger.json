@@ -1,0 +1,14 @@
+{
+  "test": [
+    "portal light/dark tokens present on first visible frame and modal Escape restores trigger"
+  ],
+  "status": "passed",
+  "origin": "http://127.0.0.1:43182",
+  "counters": {
+    "contexts": 0,
+    "pages": 1,
+    "requests": 12
+  },
+  "events": [],
+  "unexpected": 0
+}

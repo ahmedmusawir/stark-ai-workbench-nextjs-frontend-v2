@@ -1,0 +1,12 @@
+{
+  "check": "browser",
+  "label": "baseline-browser-diagnostic",
+  "command": [
+    "node",
+    "/tmp/apbm000-uojcwiil/browser.cjs"
+  ],
+  "exit_code": 0,
+  "elapsed_seconds": 11.666,
+  "timestamp": "2026-10-04T21:35:20.054091+06:00",
+  "environment": "fresh minimal process environment; Node fail-closed network guard; fonts allowed for build only"
+}

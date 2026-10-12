@@ -1,0 +1,272 @@
+{
+  "browser": "153.0.8010.0",
+  "scope": "Local previews and isolated token CSS only; not application QA",
+  "tests": [
+    {
+      "name": "Dark fallback without saved preference",
+      "pass": true
+    },
+    {
+      "name": "Saved light choice survives reload",
+      "pass": true
+    },
+    {
+      "name": "Directory uses configured primary roster",
+      "pass": true
+    },
+    {
+      "name": "Local filter searches descriptions",
+      "pass": true
+    },
+    {
+      "name": "No matching agents is explicit",
+      "pass": true
+    },
+    {
+      "name": "Directory opens agent workspace",
+      "pass": true
+    },
+    {
+      "name": "Selected workspace identity retained",
+      "pass": true
+    },
+    {
+      "name": "Workspace opens selected conversation",
+      "pass": true
+    },
+    {
+      "name": "Conversation includes markdown table and code",
+      "pass": true
+    },
+    {
+      "name": "Conversation drawer shows session navigation",
+      "pass": true
+    },
+    {
+      "name": "Drawer reverse Tab is contained",
+      "pass": true
+    },
+    {
+      "name": "Drawer forward Tab is contained",
+      "pass": true
+    },
+    {
+      "name": "Drawer Escape restores focus",
+      "pass": true
+    },
+    {
+      "name": "Conversation switching preserves distinct title",
+      "pass": true
+    },
+    {
+      "name": "Chat breadcrumb returns to agent workspace",
+      "pass": true
+    },
+    {
+      "name": "Workspace breadcrumb returns to directory",
+      "pass": true
+    },
+    {
+      "name": "Directory empty does not expose a contradictory fallback roster",
+      "pass": true
+    },
+    {
+      "name": "Directory loading does not expose a contradictory fallback roster",
+      "pass": true
+    },
+    {
+      "name": "Directory unavailable does not expose a contradictory fallback roster",
+      "pass": true
+    },
+    {
+      "name": "Alternate config renders without primary names",
+      "pass": true
+    },
+    {
+      "name": "Alternate agent identity carries into workspace",
+      "pass": true
+    },
+    {
+      "name": "Alternate identity carries into chat",
+      "pass": true
+    },
+    {
+      "name": "Invalid configured agent is not silently substituted",
+      "pass": true
+    },
+    {
+      "name": "loading prevents unsafe sending",
+      "pass": true
+    },
+    {
+      "name": "loading keeps composer within viewport",
+      "pass": true
+    },
+    {
+      "name": "unavailable prevents unsafe sending",
+      "pass": true
+    },
+    {
+      "name": "unavailable keeps composer within viewport",
+      "pass": true
+    },
+    {
+      "name": "missing prevents unsafe sending",
+      "pass": true
+    },
+    {
+      "name": "missing keeps composer within viewport",
+      "pass": true
+    },
+    {
+      "name": "pending prevents unsafe sending",
+      "pass": true
+    },
+    {
+      "name": "pending keeps composer within viewport",
+      "pass": true
+    },
+    {
+      "name": "uncertain prevents unsafe sending",
+      "pass": true
+    },
+    {
+      "name": "uncertain keeps composer within viewport",
+      "pass": true
+    },
+    {
+      "name": "unauthorized prevents unsafe sending",
+      "pass": true
+    },
+    {
+      "name": "unauthorized keeps composer within viewport",
+      "pass": true
+    },
+    {
+      "name": "Uncertain read check leaves outcome unknown",
+      "pass": true
+    },
+    {
+      "name": "History check never duplicates message",
+      "pass": true
+    },
+    {
+      "name": "Unknown outcome has no resend button",
+      "pass": true
+    },
+    {
+      "name": "Confirmed not sent keeps editable draft",
+      "pass": true
+    },
+    {
+      "name": "Unknown session has explicit missing state",
+      "pass": true
+    },
+    {
+      "name": "Explicit new conversation gets empty draft without old session",
+      "pass": true
+    },
+    {
+      "name": "Blank draft disables send",
+      "pass": true
+    },
+    {
+      "name": "New draft pending view contains no fabricated earlier history",
+      "pass": true
+    },
+    {
+      "name": "Preview send shows pending state only",
+      "pass": true
+    },
+    {
+      "name": "Mobile context action has accessible name",
+      "pass": true
+    },
+    {
+      "name": "Copy conversation exports Markdown without UI controls",
+      "pass": true
+    },
+    {
+      "name": "Permanent demo disclaimer remains in product appearance",
+      "pass": true
+    },
+    {
+      "name": "Nested dialog returns focus to context",
+      "pass": true
+    },
+    {
+      "name": "Document picker adds fixture without input type=file",
+      "pass": true
+    },
+    {
+      "name": "Context closes and restores opener",
+      "pass": true
+    },
+    {
+      "name": "Context edits reset on reload",
+      "pass": true
+    },
+    {
+      "name": "Review toolbar removed from product PNG mode",
+      "pass": true
+    },
+    {
+      "name": "Resize closes drawer onto visible desktop focus",
+      "pass": true
+    },
+    {
+      "name": "Catalogue unavailable does not masquerade as empty",
+      "pass": true
+    },
+    {
+      "name": "Recovery warns that archive status is unknown",
+      "pass": true
+    },
+    {
+      "name": "Recovery title uses explicit fallback",
+      "pass": true
+    },
+    {
+      "name": "Rename renders user text safely",
+      "pass": true
+    },
+    {
+      "name": "Archive only hides local fixture row",
+      "pass": true
+    },
+    {
+      "name": "No external HTTP during local fixture checks",
+      "pass": true
+    },
+    {
+      "name": "No script errors",
+      "pass": true
+    },
+    {
+      "name": "Unsupported speech variant disables read-aloud",
+      "pass": true
+    },
+    {
+      "name": "Scoped tokens leave unrelated inherited token unchanged",
+      "pass": true
+    },
+    {
+      "name": "Portal and shell inherit identical scoped theme",
+      "pass": true
+    }
+  ],
+  "pageErrors": [],
+  "externalRequests": [],
+  "scopingProbe": {
+    "light": {
+      "other": "1 2% 3%",
+      "work": "0.000 0.000% 100.000%",
+      "portal": "0.000 0.000% 100.000%"
+    },
+    "dark": {
+      "other": "1 2% 3%",
+      "work": "240.000 5.263% 26.078%",
+      "portal": "240.000 5.263% 26.078%"
+    }
+  }
+}

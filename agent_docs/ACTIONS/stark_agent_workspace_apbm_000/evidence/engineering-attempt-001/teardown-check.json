@@ -1,0 +1,6 @@
+{
+  "recorded_at": "2026-10-04T22:00:10.230539+06:00",
+  "fixture_port": 43170,
+  "available_after_playwright": true,
+  "probe": "Bound and immediately closed an owned loopback socket; no HTTP request, no process killed."
+}

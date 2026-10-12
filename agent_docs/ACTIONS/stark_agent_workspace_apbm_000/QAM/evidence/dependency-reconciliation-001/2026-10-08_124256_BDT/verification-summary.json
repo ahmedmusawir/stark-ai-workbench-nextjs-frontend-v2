@@ -1,0 +1,110 @@
+{
+  "checks": [
+    {
+      "check": "npm ci",
+      "exit_code": 0,
+      "command_record": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/dependency-reconciliation-001/2026-10-08_124256_BDT/npm-ci-command.json",
+      "command": [
+        "unshare",
+        "-rn",
+        "npm",
+        "ci",
+        "--offline",
+        "--no-audit",
+        "--no-fund"
+      ],
+      "started_at": "2026-10-08T06:43:54.015430+00:00",
+      "seconds": 5.525
+    },
+    {
+      "check": "focused maintained regressions",
+      "exit_code": 0,
+      "command_record": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/dependency-reconciliation-001/2026-10-08_124256_BDT/focused-command.json",
+      "command": [
+        "unshare",
+        "-rn",
+        "npm",
+        "test",
+        "--",
+        "--runInBand",
+        "--runTestsByPath",
+        "src/__tests__/workspace/signout.test.tsx",
+        "src/__tests__/workspace/navigation.test.ts",
+        "src/__tests__/workspace/components.test.tsx",
+        "src/__tests__/workspace/productionAdapter.test.ts",
+        "src/__tests__/chat/chatStore.persist.test.ts",
+        "src/__tests__/chat/chatStore.modeSplit.test.ts",
+        "src/__tests__/chat/chatStore.sessions.test.ts",
+        "src/__tests__/config/manifest.test.ts",
+        "--json",
+        "--outputFile=/home/moose/nextjs/10XLAB/stark-ai-workbench-nextjs-frontend-v2/agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/dependency-reconciliation-001/2026-10-08_124256_BDT/focused.json"
+      ],
+      "started_at": "2026-10-08T06:45:13.441010+00:00",
+      "seconds": 1.88
+    },
+    {
+      "check": "full maintained Jest",
+      "exit_code": 1,
+      "command_record": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/dependency-reconciliation-001/2026-10-08_124256_BDT/full-command.json",
+      "command": [
+        "unshare",
+        "-rn",
+        "npm",
+        "test",
+        "--",
+        "--runInBand",
+        "--json",
+        "--outputFile=/home/moose/nextjs/10XLAB/stark-ai-workbench-nextjs-frontend-v2/agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/dependency-reconciliation-001/2026-10-08_124256_BDT/full.json"
+      ],
+      "started_at": "2026-10-08T06:45:31.057211+00:00",
+      "seconds": 11.79
+    },
+    {
+      "check": "typecheck",
+      "exit_code": 0,
+      "command_record": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/dependency-reconciliation-001/2026-10-08_124256_BDT/typecheck-command.json",
+      "command": [
+        "unshare",
+        "-rn",
+        "npx",
+        "--no-install",
+        "tsc",
+        "--noEmit"
+      ],
+      "started_at": "2026-10-08T06:45:28.039964+00:00",
+      "seconds": 4.241
+    },
+    {
+      "check": "engineering offline browser",
+      "exit_code": 0,
+      "command_record": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/dependency-reconciliation-001/2026-10-08_124256_BDT/browser-command.json",
+      "command": [
+        "unshare",
+        "-rn",
+        "python3",
+        "/home/moose/nextjs/10XLAB/stark-ai-workbench-nextjs-frontend-v2/agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/dependency-reconciliation-001/2026-10-08_124256_BDT/run_browser.py",
+        "--inside"
+      ],
+      "started_at": "2026-10-08T06:45:30.187190+00:00",
+      "seconds": 19.217
+    }
+  ],
+  "focused": {
+    "passed": 64,
+    "failed": 0
+  },
+  "full": {
+    "passed": 289,
+    "failed": 1,
+    "status": "FAIL; no waiver"
+  },
+  "typecheck": "PASS",
+  "browser": {
+    "passed": 27,
+    "failed": 0
+  },
+  "reruns": 0,
+  "normal_independent_production_build": "NOT RUN",
+  "independent_qa_execution": "NOT STARTED",
+  "gate_q": "PENDING"
+}

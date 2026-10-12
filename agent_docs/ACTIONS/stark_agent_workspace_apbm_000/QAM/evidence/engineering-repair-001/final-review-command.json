@@ -1,0 +1,10 @@
+{
+  "command": [
+    "git",
+    "diff",
+    "--check"
+  ],
+  "exit_code": 0,
+  "recorded_at": "2026-10-08T05:10:22.884304+00:00",
+  "log": "final-review.log"
+}

@@ -1,0 +1,34 @@
+{
+  "recorded_at": "2026-10-08T06:46:57.348737+00:00",
+  "full_suite_counts": {
+    "numTotalTests": 290,
+    "numPassedTests": 289,
+    "numFailedTests": 1,
+    "numTotalTestSuites": 40,
+    "numPassedTestSuites": 39,
+    "numFailedTestSuites": 1
+  },
+  "failures": [
+    {
+      "file": "src/__tests__/admin/AddMemberForm.test.tsx",
+      "test": "AddMemberForm does not redirect when addMember returns an error",
+      "failureMessages": [
+        "Error: expect(jest.fn()).not.toHaveBeenCalled()\n\nExpected number of calls: 0\nReceived number of calls: 1\n\n1: \"/admin-portal\"\n    at Object.<anonymous> (/home/moose/nextjs/10XLAB/stark-ai-workbench-nextjs-frontend-v2/src/__tests__/admin/AddMemberForm.test.tsx:152:26)"
+      ]
+    }
+  ],
+  "same_named_failure_in_earlier_newer_dependency_baseline": true,
+  "unchanged_sources": {
+    "src/__tests__/admin/AddMemberForm.test.tsx": {
+      "sha256": "3b0b12f283c31dc28de3025b6e1ea20b0d6994693a1087d2f0e4aacdbf132761",
+      "unchanged_from_head": true
+    },
+    "src/app/(admin)/admin-portal/add-member/AddMemberForm.tsx": {
+      "sha256": "b89690cdb0f50937d6b51a6a902448cc851ffc29bb3552efe8072560b5f19e0a",
+      "unchanged_from_head": true
+    }
+  },
+  "likely_mechanism": "Inference: the loading-state test leaves a 100ms success promise pending; its unmounted component retains the shared mockPush and can push after a later beforeEach clears mocks. Error test only waits for mock invocation, not submission completion. No diagnostic rerun or source edits were made; timing cause is not confirmed.",
+  "waiver": "None",
+  "reruns": 0
+}

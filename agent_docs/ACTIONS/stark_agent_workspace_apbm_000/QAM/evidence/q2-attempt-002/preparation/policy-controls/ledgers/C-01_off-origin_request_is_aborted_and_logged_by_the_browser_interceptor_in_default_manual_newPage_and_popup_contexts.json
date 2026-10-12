@@ -1,0 +1,63 @@
+{
+  "test": [
+    "C-01 off-origin request is aborted and logged by the browser interceptor in default, manual, newPage and popup contexts"
+  ],
+  "status": "passed",
+  "origin": "http://127.0.0.1:43181",
+  "counters": {
+    "contexts": 2,
+    "pages": 4,
+    "requests": 20
+  },
+  "events": [
+    {
+      "kind": "request-offorigin-observed",
+      "detail": "https://qa-control.example.invalid/probe",
+      "at": 1791720079048,
+      "consumedBy": "C-01 reserved probe"
+    },
+    {
+      "kind": "request-blocked",
+      "detail": "https://qa-control.example.invalid/probe",
+      "at": 1791720079048,
+      "consumedBy": "C-01 reserved probe"
+    },
+    {
+      "kind": "request-offorigin-observed",
+      "detail": "https://qa-control.example.invalid/probe",
+      "at": 1791720079474,
+      "consumedBy": "C-01 reserved probe"
+    },
+    {
+      "kind": "request-blocked",
+      "detail": "https://qa-control.example.invalid/probe",
+      "at": 1791720079474,
+      "consumedBy": "C-01 reserved probe"
+    },
+    {
+      "kind": "request-offorigin-observed",
+      "detail": "https://qa-control.example.invalid/probe",
+      "at": 1791720079915,
+      "consumedBy": "C-01 reserved probe"
+    },
+    {
+      "kind": "request-blocked",
+      "detail": "https://qa-control.example.invalid/probe",
+      "at": 1791720079915,
+      "consumedBy": "C-01 reserved probe"
+    },
+    {
+      "kind": "request-offorigin-observed",
+      "detail": "https://qa-control.example.invalid/probe",
+      "at": 1791720080157,
+      "consumedBy": "C-01 reserved probe"
+    },
+    {
+      "kind": "request-blocked",
+      "detail": "https://qa-control.example.invalid/probe",
+      "at": 1791720080157,
+      "consumedBy": "C-01 reserved probe"
+    }
+  ],
+  "unexpected": 0
+}

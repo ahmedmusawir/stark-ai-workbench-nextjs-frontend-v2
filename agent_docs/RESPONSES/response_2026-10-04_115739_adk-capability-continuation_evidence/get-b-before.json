@@ -1,0 +1,41 @@
+{
+  "identity": {
+    "id": "session-b",
+    "appName": "greeting_agent",
+    "userId": "stark-apbm-probe-20261004-7c7e479f"
+  },
+  "event_count": 2,
+  "events": [
+    {
+      "id": "13264de3-f4a8-456c-bc76-ee8eea627b51",
+      "author": "user",
+      "timestamp": 1791092331.987793,
+      "invocationId": "e-4464bb3b-a86c-47ec-970c-029dd4a15138",
+      "role": "user",
+      "texts": [
+        "Remember this test marker for this conversation: blue-orbit-479f. Reply only with ACK followed by the marker. No tools or context lookup are needed."
+      ],
+      "tool_names": [],
+      "omitted_text_parts": 0
+    },
+    {
+      "id": "753d9bd5-42e3-4933-9da9-503a4c6c2090",
+      "author": "greeting_agent",
+      "timestamp": 1791092332.201325,
+      "invocationId": "e-4464bb3b-a86c-47ec-970c-029dd4a15138",
+      "role": "model",
+      "texts": [
+        "ACK blue-orbit-479f"
+      ],
+      "tool_names": [],
+      "omitted_text_parts": 0
+    }
+  ],
+  "checks": {
+    "identity_matches": true,
+    "original_user_marker_present": true,
+    "original_ack_present": true,
+    "other_marker_absent": true,
+    "baseline_matches": true
+  }
+}

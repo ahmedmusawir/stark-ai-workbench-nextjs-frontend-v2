@@ -1,0 +1,5 @@
+# Session Log: 2026-10-11 (root pointer)
+
+Claudy (independent QA Executor) — APBM_000 Q2 attempt-002 for candidate 8eb5789d9021ad06c15db36db74419a2b5c68fc5 under QA Lead plan v0.3.
+Per the Director release, all QA records stay inside the module QAM. Full session log:
+`agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/session_2026-10-11.md`.

@@ -1,0 +1,297 @@
+{
+  "baseline_totals": {
+    "numPassedTestSuites": 26,
+    "numFailedTestSuites": 10,
+    "numPassedTests": 225,
+    "numFailedTests": 38,
+    "numTotalTests": 263
+  },
+  "candidate_totals": {
+    "numPassedTestSuites": 30,
+    "numFailedTestSuites": 9,
+    "numPassedTests": 250,
+    "numFailedTests": 37,
+    "numTotalTests": 287
+  },
+  "new_failures": [],
+  "resolved": [
+    {
+      "file": "src/__tests__/config/manifest.test.ts",
+      "test": "the committed manifest is valid, includes the original five agents, and declares v1 + v2-local",
+      "candidate_status": "absent"
+    }
+  ],
+  "retained_count": 37,
+  "retained": [
+    {
+      "file": "src/__tests__/api/agent-history.test.ts",
+      "test": "POST /api/agent/history GETs the native session path with a timeout signal",
+      "baseline_first_line": "Error: expect(jest.fn()).toHaveBeenCalledTimes(expected)",
+      "candidate_first_line": "Error: expect(jest.fn()).toHaveBeenCalledTimes(expected)",
+      "first_line_equal": true
+    },
+    {
+      "file": "src/__tests__/api/agent-history.test.ts",
+      "test": "POST /api/agent/history normalizes session events to { history: Message[] } (roles mapped, non-text skipped)",
+      "baseline_first_line": "Error: expect(received).toBe(expected) // Object.is equality",
+      "candidate_first_line": "Error: expect(received).toBe(expected) // Object.is equality",
+      "first_line_equal": true
+    },
+    {
+      "file": "src/__tests__/api/agent-history.test.ts",
+      "test": "POST /api/agent/history passes through the Authorization header when present (R2)",
+      "baseline_first_line": "TypeError: undefined is not iterable (cannot read property Symbol(Symbol.iterator))",
+      "candidate_first_line": "TypeError: undefined is not iterable (cannot read property Symbol(Symbol.iterator))",
+      "first_line_equal": true
+    },
+    {
+      "file": "src/__tests__/api/agent-history.test.ts",
+      "test": "POST /api/agent/history returns 500 { error } and makes zero HTTP calls when ADK_BUNDLE_URL_V1 is unset",
+      "baseline_first_line": "Error: expect(received).toBe(expected) // Object.is equality",
+      "candidate_first_line": "Error: expect(received).toBe(expected) // Object.is equality",
+      "first_line_equal": true
+    },
+    {
+      "file": "src/__tests__/api/agent-history.test.ts",
+      "test": "POST /api/agent/history returns 502 { error } when the bundle is unreachable",
+      "baseline_first_line": "Error: expect(received).toBe(expected) // Object.is equality",
+      "candidate_first_line": "Error: expect(received).toBe(expected) // Object.is equality",
+      "first_line_equal": true
+    },
+    {
+      "file": "src/__tests__/api/agent-history.test.ts",
+      "test": "POST /api/agent/history returns 502 { error } when the upstream responds non-OK",
+      "baseline_first_line": "Error: expect(received).toBe(expected) // Object.is equality",
+      "candidate_first_line": "Error: expect(received).toBe(expected) // Object.is equality",
+      "first_line_equal": true
+    },
+    {
+      "file": "src/__tests__/api/agent-history.test.ts",
+      "test": "POST /api/agent/history returns { history: [] } for a valid session with empty events (the N7 shape)",
+      "baseline_first_line": "Error: expect(received).toBe(expected) // Object.is equality",
+      "candidate_first_line": "Error: expect(received).toBe(expected) // Object.is equality",
+      "first_line_equal": true
+    },
+    {
+      "file": "src/__tests__/api/agent-run.test.ts",
+      "test": "POST /api/agent/run existing session: single native /run call with the ADK payload and a timeout signal",
+      "baseline_first_line": "Error: expect(jest.fn()).toHaveBeenCalledTimes(expected)",
+      "candidate_first_line": "Error: expect(jest.fn()).toHaveBeenCalledTimes(expected)",
+      "first_line_equal": true
+    },
+    {
+      "file": "src/__tests__/api/agent-run.test.ts",
+      "test": "POST /api/agent/run null session (N5): creates session-${Date.now()} then runs; returns the generated id",
+      "baseline_first_line": "Error: expect(jest.fn()).toHaveBeenCalledTimes(expected)",
+      "candidate_first_line": "Error: expect(jest.fn()).toHaveBeenCalledTimes(expected)",
+      "first_line_equal": true
+    },
+    {
+      "file": "src/__tests__/api/agent-run.test.ts",
+      "test": "POST /api/agent/run omits the Authorization header when absent",
+      "baseline_first_line": "TypeError: undefined is not iterable (cannot read property Symbol(Symbol.iterator))",
+      "candidate_first_line": "TypeError: undefined is not iterable (cannot read property Symbol(Symbol.iterator))",
+      "first_line_equal": true
+    },
+    {
+      "file": "src/__tests__/api/agent-run.test.ts",
+      "test": "POST /api/agent/run passes through the Authorization header when present (R2)",
+      "baseline_first_line": "TypeError: undefined is not iterable (cannot read property Symbol(Symbol.iterator))",
+      "candidate_first_line": "TypeError: undefined is not iterable (cannot read property Symbol(Symbol.iterator))",
+      "first_line_equal": true
+    },
+    {
+      "file": "src/__tests__/api/agent-run.test.ts",
+      "test": "POST /api/agent/run retry failure (N6): second run failure \u2192 502 { error }",
+      "baseline_first_line": "Error: expect(received).toBe(expected) // Object.is equality",
+      "candidate_first_line": "Error: expect(received).toBe(expected) // Object.is equality",
+      "first_line_equal": true
+    },
+    {
+      "file": "src/__tests__/api/agent-run.test.ts",
+      "test": "POST /api/agent/run returns 500 { error } and makes zero HTTP calls when ADK_BUNDLE_URL_V1 is unset",
+      "baseline_first_line": "Error: expect(received).toBe(expected) // Object.is equality",
+      "candidate_first_line": "Error: expect(received).toBe(expected) // Object.is equality",
+      "first_line_equal": true
+    },
+    {
+      "file": "src/__tests__/api/agent-run.test.ts",
+      "test": "POST /api/agent/run returns 502 { error } when the bundle is unreachable",
+      "baseline_first_line": "Error: expect(received).toBe(expected) // Object.is equality",
+      "candidate_first_line": "Error: expect(received).toBe(expected) // Object.is equality",
+      "first_line_equal": true
+    },
+    {
+      "file": "src/__tests__/api/agent-run.test.ts",
+      "test": "POST /api/agent/run run succeeds with no model text \u2192 502 \"No model response in events\"",
+      "baseline_first_line": "Error: expect(received).toBe(expected) // Object.is equality",
+      "candidate_first_line": "Error: expect(received).toBe(expected) // Object.is equality",
+      "first_line_equal": true
+    },
+    {
+      "file": "src/__tests__/api/agent-run.test.ts",
+      "test": "POST /api/agent/run session-not-found (N6): create + retry exactly once, then success",
+      "baseline_first_line": "Error: expect(jest.fn()).toHaveBeenCalledTimes(expected)",
+      "candidate_first_line": "Error: expect(jest.fn()).toHaveBeenCalledTimes(expected)",
+      "first_line_equal": true
+    },
+    {
+      "file": "src/__tests__/api/instructions-route.test.ts",
+      "test": "/api/agent/instructions GET 500 naming GCS_BASE_FOLDER when unset",
+      "baseline_first_line": "Error: expect(received).toBe(expected) // Object.is equality",
+      "candidate_first_line": "Error: expect(received).toBe(expected) // Object.is equality",
+      "first_line_equal": true
+    },
+    {
+      "file": "src/__tests__/api/instructions-route.test.ts",
+      "test": "/api/agent/instructions GET 500 naming GCS_BUCKET when unset",
+      "baseline_first_line": "Error: expect(received).toBe(expected) // Object.is equality",
+      "candidate_first_line": "Error: expect(received).toBe(expected) // Object.is equality",
+      "first_line_equal": true
+    },
+    {
+      "file": "src/__tests__/api/instructions-route.test.ts",
+      "test": "/api/agent/instructions GET 502 on GCS failure",
+      "baseline_first_line": "Error: expect(received).toBe(expected) // Object.is equality",
+      "candidate_first_line": "Error: expect(received).toBe(expected) // Object.is equality",
+      "first_line_equal": true
+    },
+    {
+      "file": "src/__tests__/api/instructions-route.test.ts",
+      "test": "/api/agent/instructions GET returns the instructions text from the derived path",
+      "baseline_first_line": "Error: expect(received).toBe(expected) // Object.is equality",
+      "candidate_first_line": "Error: expect(received).toBe(expected) // Object.is equality",
+      "first_line_equal": true
+    },
+    {
+      "file": "src/__tests__/api/instructions-route.test.ts",
+      "test": "/api/agent/instructions PUT \u2014 the backup law (C-G3) 500 naming the env var when unset",
+      "baseline_first_line": "Error: expect(received).toBe(expected) // Object.is equality",
+      "candidate_first_line": "Error: expect(received).toBe(expected) // Object.is equality",
+      "first_line_equal": true
+    },
+    {
+      "file": "src/__tests__/api/instructions-route.test.ts",
+      "test": "/api/agent/instructions PUT \u2014 the backup law (C-G3) a failed backup ABORTS the save \u2014 zero writes",
+      "baseline_first_line": "Error: expect(received).toBe(expected) // Object.is equality",
+      "candidate_first_line": "Error: expect(received).toBe(expected) // Object.is equality",
+      "first_line_equal": true
+    },
+    {
+      "file": "src/__tests__/api/instructions-route.test.ts",
+      "test": "/api/agent/instructions PUT \u2014 the backup law (C-G3) backs up BEFORE writing, to a timestamped versions/ path",
+      "baseline_first_line": "Error: expect(received).toBe(expected) // Object.is equality",
+      "candidate_first_line": "Error: expect(received).toBe(expected) // Object.is equality",
+      "first_line_equal": true
+    },
+    {
+      "file": "src/__tests__/api/instructions-route.test.ts",
+      "test": "/api/agent/instructions PUT \u2014 the backup law (C-G3) clean not-found (fresh agent) skips backup and writes, backup: null",
+      "baseline_first_line": "Error: expect(received).toBe(expected) // Object.is equality",
+      "candidate_first_line": "Error: expect(received).toBe(expected) // Object.is equality",
+      "first_line_equal": true
+    },
+    {
+      "file": "src/__tests__/chat/AgentSwitcher.test.tsx",
+      "test": "AgentSwitcher calls setSelectedAgent with the agent NAME when its label is clicked",
+      "baseline_first_line": "TestingLibraryElementError: Unable to find an accessible element with the role \"button\" and name \"Jarvis\"",
+      "candidate_first_line": "TestingLibraryElementError: Unable to find an accessible element with the role \"button\" and name \"Jarvis\"",
+      "first_line_equal": true
+    },
+    {
+      "file": "src/__tests__/chat/ChatPageContent.test.tsx",
+      "test": "ChatPageContent integration send flow: user message appears \u2192 assistant response appears",
+      "baseline_first_line": "Error: Unable to find an element with the placeholder text of: /ask greeting_agent/i",
+      "candidate_first_line": "Error: Unable to find an element with the placeholder text of: /ask greeting_agent/i",
+      "first_line_equal": true
+    },
+    {
+      "file": "src/__tests__/chat/MessageList.loading.test.tsx",
+      "test": "MessageList history loading state (FIX-002b) renders fetched messages once loading clears",
+      "baseline_first_line": "TestingLibraryElementError: Unable to find an element with the text: hi. This could be because the text is broken up by multiple elements. In this case, you can provide a function for your text matcher to make your matcher more flexible.",
+      "candidate_first_line": "TestingLibraryElementError: Unable to find an element with the text: hi. This could be because the text is broken up by multiple elements. In this case, you can provide a function for your text matcher to make your matcher more flexible.",
+      "first_line_equal": true
+    },
+    {
+      "file": "src/__tests__/chat/SessionPanel.test.tsx",
+      "test": "SessionPanel (BIM-004) New Chat clears the pointer and shows a loaded-empty thread",
+      "baseline_first_line": "Error: expect(received).toBeUndefined()",
+      "candidate_first_line": "Error: expect(received).toBeUndefined()",
+      "first_line_equal": true
+    },
+    {
+      "file": "src/__tests__/chat/SessionPanel.test.tsx",
+      "test": "SessionPanel (BIM-004) archive removes the row from the visible list (P-G3)",
+      "baseline_first_line": "TestingLibraryElementError: Unable to find an accessible element with the role \"button\" and name `/archive second conversation/i`",
+      "candidate_first_line": "TestingLibraryElementError: Unable to find an accessible element with the role \"button\" and name `/archive second conversation/i`",
+      "first_line_equal": true
+    },
+    {
+      "file": "src/__tests__/chat/SessionPanel.test.tsx",
+      "test": "SessionPanel (BIM-004) archiving the ACTIVE session starts a new chat",
+      "baseline_first_line": "TestingLibraryElementError: Unable to find an accessible element with the role \"button\" and name `/archive second conversation/i`",
+      "candidate_first_line": "TestingLibraryElementError: Unable to find an accessible element with the role \"button\" and name `/archive second conversation/i`",
+      "first_line_equal": true
+    },
+    {
+      "file": "src/__tests__/chat/SessionPanel.test.tsx",
+      "test": "SessionPanel (BIM-004) clicking a session activates it (pointer set, thread cleared)",
+      "baseline_first_line": "TestingLibraryElementError: Unable to find an element with the text: Second conversation. This could be because the text is broken up by multiple elements. In this case, you can provide a function for your text matcher to make your matcher more flexible.",
+      "candidate_first_line": "TestingLibraryElementError: Unable to find an element with the text: Second conversation. This could be because the text is broken up by multiple elements. In this case, you can provide a function for your text matcher to make your matcher more flexible.",
+      "first_line_equal": true
+    },
+    {
+      "file": "src/__tests__/chat/SessionPanel.test.tsx",
+      "test": "SessionPanel (BIM-004) inline rename commits to the service and the store list",
+      "baseline_first_line": "TestingLibraryElementError: Unable to find an accessible element with the role \"button\" and name `/rename first conversation/i`",
+      "candidate_first_line": "TestingLibraryElementError: Unable to find an accessible element with the role \"button\" and name `/rename first conversation/i`",
+      "first_line_equal": true
+    },
+    {
+      "file": "src/__tests__/chat/SessionPanel.test.tsx",
+      "test": "SessionPanel (BIM-004) lists the selected agent's sessions with a New Chat button on top",
+      "baseline_first_line": "TestingLibraryElementError: Unable to find an element with the text: First conversation. This could be because the text is broken up by multiple elements. In this case, you can provide a function for your text matcher to make your matcher more flexible.",
+      "candidate_first_line": "TestingLibraryElementError: Unable to find an element with the text: First conversation. This could be because the text is broken up by multiple elements. In this case, you can provide a function for your text matcher to make your matcher more flexible.",
+      "first_line_equal": true
+    },
+    {
+      "file": "src/__tests__/chat/chatStore.modeSplit.test.ts",
+      "test": "chatStore mode-split persistence (FIX-003 F09) live never reads the mock world (no cross-contamination \u2014 H1)",
+      "baseline_first_line": "Error: expect(received).toBe(expected) // Object.is equality",
+      "candidate_first_line": "Error: expect(received).toBe(expected) // Object.is equality",
+      "first_line_equal": true
+    },
+    {
+      "file": "src/__tests__/chat/chatStore.persist.test.ts",
+      "test": "chatStore persistence (FIX-001) SSR guard: storage getter throws (server: no window) \u2192 store still creates and works in-memory (F5)",
+      "baseline_first_line": "Error: expect(received).not.toThrow()",
+      "candidate_first_line": "Error: expect(received).not.toThrow()",
+      "first_line_equal": true
+    },
+    {
+      "file": "src/__tests__/chat/chatStore.persist.test.ts",
+      "test": "chatStore persistence (FIX-001) hydration: stored value without selectedAgent keeps the default (back-compat)",
+      "baseline_first_line": "Error: expect(received).toBe(expected) // Object.is equality",
+      "candidate_first_line": "Error: expect(received).toBe(expected) // Object.is equality",
+      "first_line_equal": true
+    },
+    {
+      "file": "src/__tests__/chat/chatStore.persist.test.ts",
+      "test": "chatStore persistence (FIX-001) partialize: message content never reaches localStorage (F4)",
+      "baseline_first_line": "Error: expect(received).toEqual(expected) // deep equality",
+      "candidate_first_line": "Error: expect(received).toEqual(expected) // deep equality",
+      "first_line_equal": true
+    }
+  ],
+  "engineer_list_match": {
+    "engineer_count": 37,
+    "in_engineer_not_independent": [],
+    "in_independent_not_engineer": []
+  },
+  "removed_tests": [
+    [
+      "src/__tests__/config/manifest.test.ts",
+      "the committed manifest is valid, includes the original five agents, and declares v1 + v2-local"
+    ]
+  ]
+}

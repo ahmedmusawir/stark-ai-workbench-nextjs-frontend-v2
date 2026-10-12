@@ -1,0 +1,367 @@
+{
+  "frozen_at": "2026-10-07T18:58:30.440159+06:00",
+  "product_candidate": "f21564cacb563ecddbf78b1685086c9489bf1c26",
+  "note": "Non-self-referential: excludes this file and evidence/q2-start-prep-2026-10-07/selective-staging.json (which pins this file's hash), and all future Q2 outputs. Historical q2_approved_qam_records.json retained unchanged.",
+  "files": {
+    "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/AUTOMATION/q2_approved_qam_records.json": {
+      "sha256": "a46579e099cec599eb792c2c4886d653ec515ac034bf97437d0c38cf1b4cda30",
+      "status": "committed",
+      "source": "Lead-reviewed (LEAD_REVIEWED_QAM_PATHS_2026-10-07) hash match"
+    },
+    "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/AUTOMATION/q2_identity_v2.py": {
+      "sha256": "cf0968a2b29051eebdba10dd07bb4f36e69efcf35acf4a596acd75ce621cc5a2",
+      "status": "committed",
+      "source": "Lead-reviewed (LEAD_REVIEWED_QAM_PATHS_2026-10-07) hash match"
+    },
+    "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/AUTOMATION/rebind_evidence.py": {
+      "sha256": "428d75f7aa3670789a13ab998169664dc703ac3a2ad979661a3ea7733e87b9e4",
+      "status": "committed",
+      "source": "Lead-reviewed (LEAD_REVIEWED_QAM_PATHS_2026-10-07) hash match"
+    },
+    "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/AUTOMATION/rebind_export.py": {
+      "sha256": "8f0dd305b863dd227985b5ec54ec72c8ba78364d9d4f3d485efe7c86f97f532e",
+      "status": "committed",
+      "source": "Lead-reviewed (LEAD_REVIEWED_QAM_PATHS_2026-10-07) hash match"
+    },
+    "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/AUTOMATION/roster_amendment_2026-10-05.json": {
+      "sha256": "8da8cb0b078e61b19e2772ad75d809370ce278fbdf5487ce25bff2b6a7c1bc25",
+      "status": "committed",
+      "source": "Lead-reviewed (LEAD_REVIEWED_QAM_PATHS_2026-10-07) hash match"
+    },
+    "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/HANDOFFS/ARCHITECT_PACKAGE_INDEX.json": {
+      "sha256": "6ef5d402cfac93b967fce661645774e9c4d331b72b2bd9daf99d66bed236e1e0",
+      "status": "committed",
+      "source": "Lead-reviewed (LEAD_REVIEWED_QAM_PATHS_2026-10-07) hash match"
+    },
+    "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/HANDOFFS/ARCHITECT_REMOTE_ROSTER_AMENDMENT_2026-10-05.md": {
+      "sha256": "57924e3f046bc521b3a91fe78cd17087e8b2f3dbd6aa05b11439a26cf459c7d9",
+      "status": "committed",
+      "source": "Lead-reviewed (LEAD_REVIEWED_QAM_PATHS_2026-10-07) hash match"
+    },
+    "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/HANDOFFS/CLAUDY_REMOTE_ROSTER_CONTINUATION_2026-10-07.txt": {
+      "sha256": "63eb83d5768428177046b1c422194900418ee001762424b657a64d90a88e6b53",
+      "status": "pending-new",
+      "source": "Lead approval package 2026-10-07 (index/binding verified)"
+    },
+    "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/HANDOFFS/DIRECTOR_Q2_RELEASE_2026-10-05_193516.md": {
+      "sha256": "53c9a0dd297f87325e8b4c51cdcaebedd5b95fd67be23a9f22be89fddf9994c7",
+      "status": "committed",
+      "source": "Lead-reviewed (LEAD_REVIEWED_QAM_PATHS_2026-10-07) hash match"
+    },
+    "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/HANDOFFS/LEAD_REMOTE_ROSTER_APPROVAL_2026-10-07.md": {
+      "sha256": "c0380dfcb951755b82af06881013635d60cad61829697978107e33b6f7fcef53",
+      "status": "pending-new",
+      "source": "Lead approval package 2026-10-07 (index/binding verified)"
+    },
+    "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/HANDOFFS/LEAD_REMOTE_ROSTER_BINDING_HASHES_2026-10-07.json": {
+      "sha256": "0ccefad21aa22eda91f400923722f276f31a79b326d93d9e05d1d1d52bc9d80c",
+      "status": "pending-new",
+      "source": "Lead approval package 2026-10-07 (index/binding verified)"
+    },
+    "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/HANDOFFS/LEAD_REMOTE_ROSTER_PACKAGE_INDEX_2026-10-07.json": {
+      "sha256": "a5aa9b47a8e48cf874cfd27ffc16f3158f261f802117386dec58b68655b3ef4b",
+      "status": "pending-new",
+      "source": "Lead approval package 2026-10-07 (index/binding verified)"
+    },
+    "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/HANDOFFS/LEAD_RETURN_START_HERE_2026-10-07.md": {
+      "sha256": "8d7aec51969323dce68b2e4dba975b2b54165461fd911d7ad93b912c36c50d51",
+      "status": "pending-new",
+      "source": "Lead approval package 2026-10-07 (index/binding verified)"
+    },
+    "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/HANDOFFS/LEAD_REVIEWED_QAM_PATHS_2026-10-07.json": {
+      "sha256": "ee6cd6f97255bdd0038fd5e48b17fdbf77fb0337f812cb69cfa4c8c325d2984c",
+      "status": "pending-new",
+      "source": "Lead approval package 2026-10-07 (index/binding verified)"
+    },
+    "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/HANDOFFS/Q2_HOLD_LEAD_FILES_MISSING_2026-10-07_184448.md": {
+      "sha256": "9ef808d8b83021d43f3c4a0db364bed397e556f522f96b015fda00211764b1eb",
+      "status": "pending-new",
+      "source": "Executor hold note 2026-10-07 18:44 (superseded by Lead return)"
+    },
+    "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/HANDOFFS/Q2_RULING_REQUEST_2026-10-05_193516.md": {
+      "sha256": "602963ed091dc0881f69607bd897d38b83b8f78ccf39c1736a6b1557999b4a18",
+      "status": "committed",
+      "source": "Lead-reviewed (LEAD_REVIEWED_QAM_PATHS_2026-10-07) hash match"
+    },
+    "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/HANDOFFS/ROSTER_REBIND_REVIEW_2026-10-05_215715.md": {
+      "sha256": "2dfa59de9ea296af895b2a29ae7567ff563e302f90d0876416bad785fefb1b04",
+      "status": "committed",
+      "source": "Lead-reviewed (LEAD_REVIEWED_QAM_PATHS_2026-10-07) hash match"
+    },
+    "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/HANDOFFS/ROSTER_REBIND_REVIEW_2026-10-05_215715.zip": {
+      "sha256": "9c938d2630253f6ea1ad9727b21d34b2275400042ecff8073402ca8997dcd4b6",
+      "status": "committed",
+      "source": "Committed a4abd2a (QAM record/tooling)"
+    },
+    "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/HANDOFFS/ROSTER_REBIND_REVIEW_2026-10-05_215715_RECEIPT.json": {
+      "sha256": "015568f0f283fc5552524f3f298be3d136d52420159917b5a1e1836fd73bedc0",
+      "status": "committed",
+      "source": "Committed a4abd2a (QAM record/tooling)"
+    },
+    "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/HANDOFFS/ROSTER_REBIND_REVIEW_2026-10-07_183026.md": {
+      "sha256": "1309d30ee4cc36c5fd743c972f5d7b64ac5eda88b42a2425c76e962de5e934de",
+      "status": "pending-new",
+      "source": "Executor attempt-002 record 2026-10-07 18:30 (not in Lead review set)"
+    },
+    "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/HANDOFFS/ROSTER_REBIND_REVIEW_2026-10-07_183026.zip": {
+      "sha256": "c8ef0ee4129f531318f04970d7d28bb6d7b20d9f65a894d56151a083fa605a4b",
+      "status": "pending-new",
+      "source": "Executor attempt-002 record 2026-10-07 18:30 (not in Lead review set)"
+    },
+    "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/HANDOFFS/ROSTER_REBIND_REVIEW_2026-10-07_183026_RECEIPT.json": {
+      "sha256": "19490dc87b6fcd8d11e01e025f715a22205944d0d3136bffcc95a900c06c0755",
+      "status": "pending-new",
+      "source": "Executor attempt-002 record 2026-10-07 18:30 (not in Lead review set)"
+    },
+    "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/QAM_STATE.json": {
+      "sha256": "d80a7c9566fa0c1cb3c597ca5e3fbb6270770c4550d70c4e64e988cbb58e3787",
+      "status": "modified",
+      "source": "Lead-reviewed path; hash changed since review (reviewed e6b2470ea46e) \u2014 routing/record update, diff retained"
+    },
+    "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/lead-remote-roster-review-2026-10-07/VERIFICATION.json": {
+      "sha256": "368e8b7338df2665d54e3daaf6755ff39ff82575b2d5ae1d0b7c3ae535320140",
+      "status": "pending-new",
+      "source": "Lead approval package 2026-10-07 (index/binding verified)"
+    },
+    "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-prep-003/INDEX.md": {
+      "sha256": "c05af6cd3d1c7c2f0ed93cf015b5cc5cc18d319e3d9225eb0b2b2abadbc4f2bf",
+      "status": "committed",
+      "source": "Lead-reviewed (LEAD_REVIEWED_QAM_PATHS_2026-10-07) hash match"
+    },
+    "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-prep-003/identity-head-f21564c.json": {
+      "sha256": "3b815557bf3ac250ad632ed4f423ec380a9d83e5b64e2363c08a8c9556eedcb3",
+      "status": "committed",
+      "source": "Lead-reviewed (LEAD_REVIEWED_QAM_PATHS_2026-10-07) hash match"
+    },
+    "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-prep-003/jest-compare-candidate-vs-head.json": {
+      "sha256": "9bc723f3ca6095805a653f9e068c0a38d8ba778038c4fbf85f56a3a3f0901294",
+      "status": "committed",
+      "source": "Lead-reviewed (LEAD_REVIEWED_QAM_PATHS_2026-10-07) hash match"
+    },
+    "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-prep-003/jest-head-f21564c.json": {
+      "sha256": "bcbb403fb5c39f5cb0b4a671de779abf0c28321fa437845e2b60a977cad4c845",
+      "status": "committed",
+      "source": "Lead-reviewed (LEAD_REVIEWED_QAM_PATHS_2026-10-07) hash match"
+    },
+    "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-prep-003/jest-head-f21564c.log": {
+      "sha256": "534116a2a2c3e171fd7e0e42cabb9196adf7bf67d0afa71f0ac466d7f37a9065",
+      "status": "committed",
+      "source": "Lead-reviewed (LEAD_REVIEWED_QAM_PATHS_2026-10-07) hash match"
+    },
+    "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-start-prep-2026-10-07/install-verification.json": {
+      "sha256": "ad501c28b60d4f7e68488183f2733e0d9c2a019b76a312fb55425e45d1c26839",
+      "status": "pending-new",
+      "source": "Executor Q2 start-prep evidence 2026-10-07"
+    },
+    "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-start-prep-2026-10-07/qam-state-routing.diff": {
+      "sha256": "c6d7ad275fbe45319f7a2261f3bd02f8425aa68bebd7c6a9c088e1b18cbd9414",
+      "status": "pending-new",
+      "source": "Executor Q2 start-prep evidence 2026-10-07"
+    },
+    "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-start-prep-2026-10-07/qam-state-routing.json": {
+      "sha256": "dfbffe41c79090d9d858f86410c84a2303516a50d2a519f1f1c1dd04d8192b48",
+      "status": "pending-new",
+      "source": "Executor Q2 start-prep evidence 2026-10-07"
+    },
+    "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/remote-roster-rebind-001/INDEX.md": {
+      "sha256": "5d81e2272ec284dd4648ae12cdd75dcfd34d34e77e70efd2fb1f5fd4d9b2ebaa",
+      "status": "committed",
+      "source": "Lead-reviewed (LEAD_REVIEWED_QAM_PATHS_2026-10-07) hash match"
+    },
+    "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/remote-roster-rebind-001/blobs/new-config__agents.manifest-hermes.json": {
+      "sha256": "638e95a166e9e196175bd630ce76560db1ef98dbe72d40f31d9a109782027ae8",
+      "status": "committed",
+      "source": "Lead-reviewed (LEAD_REVIEWED_QAM_PATHS_2026-10-07) hash match"
+    },
+    "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/remote-roster-rebind-001/blobs/new-config__agents.manifest.json": {
+      "sha256": "6c27f420127db7125a43ddba6347470b19d3be39769b44bb2b85bd6d9526b6d9",
+      "status": "committed",
+      "source": "Lead-reviewed (LEAD_REVIEWED_QAM_PATHS_2026-10-07) hash match"
+    },
+    "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/remote-roster-rebind-001/blobs/old-config__agents.manifest.json": {
+      "sha256": "638e95a166e9e196175bd630ce76560db1ef98dbe72d40f31d9a109782027ae8",
+      "status": "committed",
+      "source": "Lead-reviewed (LEAD_REVIEWED_QAM_PATHS_2026-10-07) hash match"
+    },
+    "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/remote-roster-rebind-001/blobs/old-config__agents.manifest_copy.json": {
+      "sha256": "6c27f420127db7125a43ddba6347470b19d3be39769b44bb2b85bd6d9526b6d9",
+      "status": "committed",
+      "source": "Lead-reviewed (LEAD_REVIEWED_QAM_PATHS_2026-10-07) hash match"
+    },
+    "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/remote-roster-rebind-001/config-delta.patch": {
+      "sha256": "2851f9c095c7dbce50421e08ad751b1aee47c2f9bf4016c9d02cb0497e8ec339",
+      "status": "committed",
+      "source": "Lead-reviewed (LEAD_REVIEWED_QAM_PATHS_2026-10-07) hash match"
+    },
+    "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/remote-roster-rebind-001/identity-v2-f21564c-accept.json": {
+      "sha256": "7d7a81b808b3510211900504eedd12d2d5fdb0d573c6b3a68f1f822bd91dbef7",
+      "status": "committed",
+      "source": "Lead-reviewed (LEAD_REVIEWED_QAM_PATHS_2026-10-07) hash match"
+    },
+    "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/remote-roster-rebind-001/identity-v2-f21564c-strict.json": {
+      "sha256": "3ebcf397653d6d368e88bf711f3291f4e220276fcf7ec2098ee14b60f4cb808e",
+      "status": "committed",
+      "source": "Lead-reviewed (LEAD_REVIEWED_QAM_PATHS_2026-10-07) hash match"
+    },
+    "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/remote-roster-rebind-001/identity-v2-selftest-controls.json": {
+      "sha256": "be1f4871d5e030903072c97a74d72dadb1dafd64e507b237ee5e6d34ed31afe2",
+      "status": "committed",
+      "source": "Lead-reviewed (LEAD_REVIEWED_QAM_PATHS_2026-10-07) hash match"
+    },
+    "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/remote-roster-rebind-001/q2_identity_v1_to_v2.diff": {
+      "sha256": "99ce6186159cc1de909e5c315df721181086ee3d4ca53af905ed5e26fcb4fc3c",
+      "status": "committed",
+      "source": "Lead-reviewed (LEAD_REVIEWED_QAM_PATHS_2026-10-07) hash match"
+    },
+    "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/remote-roster-rebind-001/rebind-evidence.json": {
+      "sha256": "24295cba036ec115fa6b4869c0f1af432dde3231fb690e243f962e6414d3344e",
+      "status": "committed",
+      "source": "Lead-reviewed (LEAD_REVIEWED_QAM_PATHS_2026-10-07) hash match"
+    },
+    "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/remote-roster-rebind-002/COMMANDS.md": {
+      "sha256": "319aed298cbb7e23a66f8baccaa0d065cafdcdecb54969ecc221aad4a5275fc7",
+      "status": "pending-new",
+      "source": "Executor attempt-002 record 2026-10-07 18:30 (not in Lead review set)"
+    },
+    "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/remote-roster-rebind-002/REVIEW_START_HERE.md": {
+      "sha256": "7bdfa592dc347335eee6c370492ab842a95682af039fa4233ac92b9ddd3e6f0c",
+      "status": "pending-new",
+      "source": "Executor attempt-002 record 2026-10-07 18:30 (not in Lead review set)"
+    },
+    "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/remote-roster-rebind-002/architect-index-verification.json": {
+      "sha256": "9be9eba3c321e2af9c7ac8ff633317c40c4a5783f0e1ea8eb5c8dc549d0d8081",
+      "status": "pending-new",
+      "source": "Executor attempt-002 record 2026-10-07 18:30 (not in Lead review set)"
+    },
+    "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/remote-roster-rebind-002/authority-and-tool-pins.json": {
+      "sha256": "511b6e0db75f4d77762abf4fb1c7717577a082f09390de07f33f2923727e25b6",
+      "status": "pending-new",
+      "source": "Executor attempt-002 record 2026-10-07 18:30 (not in Lead review set)"
+    },
+    "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/remote-roster-rebind-002/commit-succession.json": {
+      "sha256": "3da34c8c8863d431b7e4c467cc118f7ab8581cf9405acd14feb019ab5690e603",
+      "status": "pending-new",
+      "source": "Executor attempt-002 record 2026-10-07 18:30 (not in Lead review set)"
+    },
+    "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/remote-roster-rebind-002/config-evidence/blobs/new-config__agents.manifest-hermes.json": {
+      "sha256": "638e95a166e9e196175bd630ce76560db1ef98dbe72d40f31d9a109782027ae8",
+      "status": "pending-new",
+      "source": "Executor attempt-002 record 2026-10-07 18:30 (not in Lead review set)"
+    },
+    "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/remote-roster-rebind-002/config-evidence/blobs/new-config__agents.manifest.json": {
+      "sha256": "6c27f420127db7125a43ddba6347470b19d3be39769b44bb2b85bd6d9526b6d9",
+      "status": "pending-new",
+      "source": "Executor attempt-002 record 2026-10-07 18:30 (not in Lead review set)"
+    },
+    "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/remote-roster-rebind-002/config-evidence/blobs/old-config__agents.manifest.json": {
+      "sha256": "638e95a166e9e196175bd630ce76560db1ef98dbe72d40f31d9a109782027ae8",
+      "status": "pending-new",
+      "source": "Executor attempt-002 record 2026-10-07 18:30 (not in Lead review set)"
+    },
+    "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/remote-roster-rebind-002/config-evidence/blobs/old-config__agents.manifest_copy.json": {
+      "sha256": "6c27f420127db7125a43ddba6347470b19d3be39769b44bb2b85bd6d9526b6d9",
+      "status": "pending-new",
+      "source": "Executor attempt-002 record 2026-10-07 18:30 (not in Lead review set)"
+    },
+    "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/remote-roster-rebind-002/config-evidence/config-delta.patch": {
+      "sha256": "2851f9c095c7dbce50421e08ad751b1aee47c2f9bf4016c9d02cb0497e8ec339",
+      "status": "pending-new",
+      "source": "Executor attempt-002 record 2026-10-07 18:30 (not in Lead review set)"
+    },
+    "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/remote-roster-rebind-002/config-evidence/rebind-evidence.json": {
+      "sha256": "ae0ad265461938df2ce0dfc54dfdb52db1bed368cd45487bee39bec0d39194c8",
+      "status": "pending-new",
+      "source": "Executor attempt-002 record 2026-10-07 18:30 (not in Lead review set)"
+    },
+    "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/remote-roster-rebind-002/current-config-equality.json": {
+      "sha256": "bc17d9daaaa8610320cee199ef95e63c917927baa6518c73d8c8ea8a1cfddd0b",
+      "status": "pending-new",
+      "source": "Executor attempt-002 record 2026-10-07 18:30 (not in Lead review set)"
+    },
+    "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/remote-roster-rebind-002/entry-state.json": {
+      "sha256": "b05600cd8ca7ff053e4a76c59378f2b03ffd6a2108b80e1af9ebc4ac6fdc01e3",
+      "status": "pending-new",
+      "source": "Executor attempt-002 record 2026-10-07 18:30 (not in Lead review set)"
+    },
+    "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/remote-roster-rebind-002/identity-current-bounded-variant.json": {
+      "sha256": "24ad4d9b4364678af08cbcd3c45a9cc8ad66cb92a530924b7fa102a64b8a9d73",
+      "status": "pending-new",
+      "source": "Executor attempt-002 record 2026-10-07 18:30 (not in Lead review set)"
+    },
+    "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/remote-roster-rebind-002/identity-current-strict.json": {
+      "sha256": "c1e905962734ec0fc8353a3018cdad8562853963bb7254cd4b1a01f5436fce93",
+      "status": "pending-new",
+      "source": "Executor attempt-002 record 2026-10-07 18:30 (not in Lead review set)"
+    },
+    "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/remote-roster-rebind-002/manifest-import-references.txt": {
+      "sha256": "cf57edeeb50dc0eabea46111ac20c10517539cb9cc72d3a62125aaa74fa1595b",
+      "status": "pending-new",
+      "source": "Executor attempt-002 record 2026-10-07 18:30 (not in Lead review set)"
+    },
+    "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/remote-roster-rebind-002/proposed-record-inventory.json": {
+      "sha256": "1f67b2bb35c405b3294875511f76e8d9b01613efa2988b001fe928e8ff52c469",
+      "status": "pending-new",
+      "source": "Executor attempt-002 record 2026-10-07 18:30 (not in Lead review set)"
+    },
+    "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/remote-roster-rebind-002/scope-preservation.json": {
+      "sha256": "2e5f67d301aa36d1eef621f02b6ae1d3b9e2116bf82344ed0aed143be16cbdc7",
+      "status": "pending-new",
+      "source": "Executor attempt-002 record 2026-10-07 18:30 (not in Lead review set)"
+    },
+    "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/remote-roster-rebind-002/selective-staging-paths.txt": {
+      "sha256": "90029e68969ca14b121ec141bd39057e1d4ad43a54e1594a84f6f206bed6a0b8",
+      "status": "pending-new",
+      "source": "Executor attempt-002 record 2026-10-07 18:30 (not in Lead review set)"
+    },
+    "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/remote-roster-request-2026-10-05/HANDOFFS/DIRECTOR_Q2_RELEASE_2026-10-05_193516.md": {
+      "sha256": "53c9a0dd297f87325e8b4c51cdcaebedd5b95fd67be23a9f22be89fddf9994c7",
+      "status": "committed",
+      "source": "Committed a4abd2a (QAM record/tooling)"
+    },
+    "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/remote-roster-request-2026-10-05/HANDOFFS/Q2_RULING_REQUEST_2026-10-05_193516.md": {
+      "sha256": "602963ed091dc0881f69607bd897d38b83b8f78ccf39c1736a6b1557999b4a18",
+      "status": "committed",
+      "source": "Committed a4abd2a (QAM record/tooling)"
+    },
+    "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/remote-roster-request-2026-10-05/QAM_STATE.json": {
+      "sha256": "aebbb36d42995e20639e0e275a0dd6412824614af9b8e5c14864621bb52a5c7b",
+      "status": "committed",
+      "source": "Committed a4abd2a (QAM record/tooling)"
+    },
+    "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/remote-roster-request-2026-10-05/evidence/q2-prep-003/INDEX.md": {
+      "sha256": "c05af6cd3d1c7c2f0ed93cf015b5cc5cc18d319e3d9225eb0b2b2abadbc4f2bf",
+      "status": "committed",
+      "source": "Committed a4abd2a (QAM record/tooling)"
+    },
+    "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/remote-roster-request-2026-10-05/evidence/q2-prep-003/identity-head-f21564c.json": {
+      "sha256": "3b815557bf3ac250ad632ed4f423ec380a9d83e5b64e2363c08a8c9556eedcb3",
+      "status": "committed",
+      "source": "Committed a4abd2a (QAM record/tooling)"
+    },
+    "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/remote-roster-request-2026-10-05/evidence/q2-prep-003/jest-compare-candidate-vs-head.json": {
+      "sha256": "9bc723f3ca6095805a653f9e068c0a38d8ba778038c4fbf85f56a3a3f0901294",
+      "status": "committed",
+      "source": "Committed a4abd2a (QAM record/tooling)"
+    },
+    "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/remote-roster-request-2026-10-05/evidence/q2-prep-003/jest-head-f21564c.json": {
+      "sha256": "bcbb403fb5c39f5cb0b4a671de779abf0c28321fa437845e2b60a977cad4c845",
+      "status": "committed",
+      "source": "Committed a4abd2a (QAM record/tooling)"
+    },
+    "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/remote-roster-request-2026-10-05/evidence/q2-prep-003/jest-head-f21564c.log": {
+      "sha256": "534116a2a2c3e171fd7e0e42cabb9196adf7bf67d0afa71f0ac466d7f37a9065",
+      "status": "committed",
+      "source": "Committed a4abd2a (QAM record/tooling)"
+    },
+    "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/session_2026-10-07.md": {
+      "sha256": "16f299edaf9148aacdd49767514503a558f31b643badb501be48585582c05e3c",
+      "status": "pending-new",
+      "source": "Executor attempt-002 record 2026-10-07 18:30 (not in Lead review set)"
+    },
+    "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-start-prep-2026-10-07/staging-paths.txt": {
+      "sha256": "86547d08b2487c7103354475c91d709ed440a5736e1bfaa56745f6aa5654944c",
+      "status": "pending-new",
+      "source": "Executor Q2 start-prep evidence 2026-10-07 (pathspec list)"
+    }
+  }
+}

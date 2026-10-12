@@ -1,0 +1,14 @@
+{
+  "test": [
+    "root typography 375: prior/local declarations match with fonts loaded"
+  ],
+  "status": "passed",
+  "origin": "http://127.0.0.1:43183",
+  "counters": {
+    "contexts": 0,
+    "pages": 1,
+    "requests": 18
+  },
+  "events": [],
+  "unexpected": 0
+}

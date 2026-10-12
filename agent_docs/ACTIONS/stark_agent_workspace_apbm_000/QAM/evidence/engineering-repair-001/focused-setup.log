@@ -1,0 +1,703 @@
+
+> adk-agent-harness-nextjs-frontend-v1@0.1.0 test
+> jest --runInBand --runTestsByPath src/__tests__/workspace/signout.test.tsx src/__tests__/workspace/navigation.test.ts src/__tests__/workspace/components.test.tsx src/__tests__/workspace/productionAdapter.test.ts src/__tests__/chat/chatStore.persist.test.ts src/__tests__/chat/chatStore.modeSplit.test.ts src/__tests__/chat/chatStore.sessions.test.ts src/__tests__/config/manifest.test.ts --json --outputFile=/home/moose/nextjs/10XLAB/stark-ai-workbench-nextjs-frontend-v2/agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/engineering-repair-001/focused.json
+
+FAIL src/__tests__/workspace/signout.test.tsx
+  ● Console
+
+    console.error
+      An update to WorkspaceSession inside a test was not wrapped in act(...).
+      
+      When testing, code that causes React state updates should be wrapped into act(...):
+      
+      act(() => {
+        /* fire events that update state */
+      });
+      /* assert on the output */
+      
+      This ensures that you're testing the behavior the user would see in the browser. Learn more at https://react.dev/link/wrap-tests-with-act
+
+    [0m [90m 59 |[39m     [36mif[39m ([33m![39magentId [33m||[39m [33m![39mcanOperate [33m||[39m view[33m.[39mkind [33m===[39m [32m'invalid'[39m) [36mreturn[39m[33m;[39m
+     [90m 60 |[39m     [36mlet[39m current [33m=[39m [36mtrue[39m[33m;[39m setCatalogue({ agent[33m:[39m agentId[33m,[39m data[33m:[39m { status[33m:[39m [32m'loading'[39m[33m,[39m rows[33m:[39m [] } })[33m;[39m
+    [31m[1m>[22m[39m[90m 61 |[39m     services[33m.[39mlist(agentId)[33m.[39mthen(data [33m=>[39m { [36mif[39m (current) setCatalogue({ agent[33m:[39m agentId[33m,[39m data })[33m;[39m })[33m.[39m[36mcatch[39m(() [33m=>[39m { [36mif[39m (current) setCatalogue({ agent[33m:[39m agentId[33m,[39m data[33m:[39m { status[33m:[39m [32m'unavailable'[39m[33m,[39m rows[33m:[39m [] } })[33m;[39m })[33m;[39m
+     [90m    |[39m                                                        [31m[1m^[22m[39m
+     [90m 62 |[39m     [36mreturn[39m () [33m=>[39m { current [33m=[39m [36mfalse[39m[33m;[39m }[33m;[39m
+     [90m 63 |[39m   }[33m,[39m [agentId[33m,[39m canOperate[33m,[39m services[33m,[39m listGeneration[33m,[39m view[33m.[39mkind])[33m;[39m
+     [90m 64 |[39m   useEffect(() [33m=>[39m {[0m
+
+      at node_modules/react-dom/cjs/react-dom-client.development.js:18758:19
+      at runWithFiberInDEV (node_modules/react-dom/cjs/react-dom-client.development.js:874:13)
+      at warnIfUpdatesNotWrappedWithActDEV (node_modules/react-dom/cjs/react-dom-client.development.js:18757:9)
+      at scheduleUpdateOnFiber (node_modules/react-dom/cjs/react-dom-client.development.js:16409:11)
+      at dispatchSetStateInternal (node_modules/react-dom/cjs/react-dom-client.development.js:9170:13)
+      at dispatchSetState (node_modules/react-dom/cjs/react-dom-client.development.js:9127:7)
+      at src/components/workspace/Workspace.tsx:61:56
+
+    console.error
+      An update to WorkspaceSession inside a test was not wrapped in act(...).
+      
+      When testing, code that causes React state updates should be wrapped into act(...):
+      
+      act(() => {
+        /* fire events that update state */
+      });
+      /* assert on the output */
+      
+      This ensures that you're testing the behavior the user would see in the browser. Learn more at https://react.dev/link/wrap-tests-with-act
+
+    [0m [90m 59 |[39m     [36mif[39m ([33m![39magentId [33m||[39m [33m![39mcanOperate [33m||[39m view[33m.[39mkind [33m===[39m [32m'invalid'[39m) [36mreturn[39m[33m;[39m
+     [90m 60 |[39m     [36mlet[39m current [33m=[39m [36mtrue[39m[33m;[39m setCatalogue({ agent[33m:[39m agentId[33m,[39m data[33m:[39m { status[33m:[39m [32m'loading'[39m[33m,[39m rows[33m:[39m [] } })[33m;[39m
+    [31m[1m>[22m[39m[90m 61 |[39m     services[33m.[39mlist(agentId)[33m.[39mthen(data [33m=>[39m { [36mif[39m (current) setCatalogue({ agent[33m:[39m agentId[33m,[39m data })[33m;[39m })[33m.[39m[36mcatch[39m(() [33m=>[39m { [36mif[39m (current) setCatalogue({ agent[33m:[39m agentId[33m,[39m data[33m:[39m { status[33m:[39m [32m'unavailable'[39m[33m,[39m rows[33m:[39m [] } })[33m;[39m })[33m;[39m
+     [90m    |[39m                                                        [31m[1m^[22m[39m
+     [90m 62 |[39m     [36mreturn[39m () [33m=>[39m { current [33m=[39m [36mfalse[39m[33m;[39m }[33m;[39m
+     [90m 63 |[39m   }[33m,[39m [agentId[33m,[39m canOperate[33m,[39m services[33m,[39m listGeneration[33m,[39m view[33m.[39mkind])[33m;[39m
+     [90m 64 |[39m   useEffect(() [33m=>[39m {[0m
+
+      at node_modules/react-dom/cjs/react-dom-client.development.js:18758:19
+      at runWithFiberInDEV (node_modules/react-dom/cjs/react-dom-client.development.js:874:13)
+      at warnIfUpdatesNotWrappedWithActDEV (node_modules/react-dom/cjs/react-dom-client.development.js:18757:9)
+      at scheduleUpdateOnFiber (node_modules/react-dom/cjs/react-dom-client.development.js:16409:11)
+      at dispatchSetStateInternal (node_modules/react-dom/cjs/react-dom-client.development.js:9170:13)
+      at dispatchSetState (node_modules/react-dom/cjs/react-dom-client.development.js:9127:7)
+      at src/components/workspace/Workspace.tsx:61:56
+
+    console.error
+      An update to WorkspaceSession inside a test was not wrapped in act(...).
+      
+      When testing, code that causes React state updates should be wrapped into act(...):
+      
+      act(() => {
+        /* fire events that update state */
+      });
+      /* assert on the output */
+      
+      This ensures that you're testing the behavior the user would see in the browser. Learn more at https://react.dev/link/wrap-tests-with-act
+
+    [0m [90m 59 |[39m     [36mif[39m ([33m![39magentId [33m||[39m [33m![39mcanOperate [33m||[39m view[33m.[39mkind [33m===[39m [32m'invalid'[39m) [36mreturn[39m[33m;[39m
+     [90m 60 |[39m     [36mlet[39m current [33m=[39m [36mtrue[39m[33m;[39m setCatalogue({ agent[33m:[39m agentId[33m,[39m data[33m:[39m { status[33m:[39m [32m'loading'[39m[33m,[39m rows[33m:[39m [] } })[33m;[39m
+    [31m[1m>[22m[39m[90m 61 |[39m     services[33m.[39mlist(agentId)[33m.[39mthen(data [33m=>[39m { [36mif[39m (current) setCatalogue({ agent[33m:[39m agentId[33m,[39m data })[33m;[39m })[33m.[39m[36mcatch[39m(() [33m=>[39m { [36mif[39m (current) setCatalogue({ agent[33m:[39m agentId[33m,[39m data[33m:[39m { status[33m:[39m [32m'unavailable'[39m[33m,[39m rows[33m:[39m [] } })[33m;[39m })[33m;[39m
+     [90m    |[39m                                                        [31m[1m^[22m[39m
+     [90m 62 |[39m     [36mreturn[39m () [33m=>[39m { current [33m=[39m [36mfalse[39m[33m;[39m }[33m;[39m
+     [90m 63 |[39m   }[33m,[39m [agentId[33m,[39m canOperate[33m,[39m services[33m,[39m listGeneration[33m,[39m view[33m.[39mkind])[33m;[39m
+     [90m 64 |[39m   useEffect(() [33m=>[39m {[0m
+
+      at node_modules/react-dom/cjs/react-dom-client.development.js:18758:19
+      at runWithFiberInDEV (node_modules/react-dom/cjs/react-dom-client.development.js:874:13)
+      at warnIfUpdatesNotWrappedWithActDEV (node_modules/react-dom/cjs/react-dom-client.development.js:18757:9)
+      at scheduleUpdateOnFiber (node_modules/react-dom/cjs/react-dom-client.development.js:16409:11)
+      at dispatchSetStateInternal (node_modules/react-dom/cjs/react-dom-client.development.js:9170:13)
+      at dispatchSetState (node_modules/react-dom/cjs/react-dom-client.development.js:9127:7)
+      at src/components/workspace/Workspace.tsx:61:56
+
+  ● WorkspaceEntry sign-out with the real auth and chat stores › normal: successful mocked logout clears user/chat/draft/demo before navigating without a rejection
+
+    TestingLibraryElementError: Unable to find a label with the text of: Message
+
+    Ignored nodes: comments, script, style
+    [36m<body>[39m
+      [36m<div>[39m
+        [36m<div[39m
+          [33mclass[39m=[32m"ws-root "[39m
+          [33mdata-workspace-theme[39m=[32m"true"[39m
+        [36m>[39m
+          [36m<a[39m
+            [33mclass[39m=[32m"ws-skip"[39m
+            [33mhref[39m=[32m"#ws-main"[39m
+          [36m>[39m
+            [0mSkip to content[0m
+          [36m</a>[39m
+          [36m<nav[39m
+            [33maria-label[39m=[32m"Workspace navigation"[39m
+            [33mclass[39m=[32m"ws-sidebar ws-desktop"[39m
+          [36m>[39m
+            [36m<div[39m
+              [33mclass[39m=[32m"ws-brand"[39m
+            [36m>[39m
+              [36m<span>[39m
+                [0mS[0m
+              [36m</span>[39m
+              [36m<div>[39m
+                [0mSTARK[0m
+                [36m<small>[39m
+                  [0mAgent Workspace[0m
+                [36m</small>[39m
+              [36m</div>[39m
+            [36m</div>[39m
+            [36m<button[39m
+              [33mclass[39m=[32m"ws-primary ws-new"[39m
+            [36m>[39m
+              [36m<svg[39m
+                [33maria-hidden[39m=[32m"true"[39m
+                [33mclass[39m=[32m"lucide lucide-plus"[39m
+                [33mfill[39m=[32m"none"[39m
+                [33mheight[39m=[32m"20"[39m
+                [33mstroke[39m=[32m"currentColor"[39m
+                [33mstroke-linecap[39m=[32m"round"[39m
+                [33mstroke-linejoin[39m=[32m"round"[39m
+                [33mstroke-width[39m=[32m"2"[39m
+                [33mviewBox[39m=[32m"0 0 24 24"[39m
+                [33mwidth[39m=[32m"20"[39m
+                [33mxmlns[39m=[32m"http://www.w3.org/2000/svg"[39m
+              [36m>[39m
+                [36m<path[39m
+                  [33md[39m=[32m"M5 12h14"[39m
+                [36m/>[39m
+                [36m<path[39m
+                  [33md[39m=[32m"M12 5v14"[39m
+                [36m/>[39m
+              [36m</svg>[39m
+              [0mNew chat[0m
+            [36m</button>[39m
+            [36m<a[39m
+              [33mclass[39m=[32m"ws-nav-item"[39m
+              [33mhref[39m=[32m"/chat"[39m
+            [36m>[39m
+              [36m<svg[39m
+                [33maria-hidden[39m=[32m"true"[39m
+                [33mclass[39m=[32m"lucide lucide-grid2x2 lucide-grid-2x2"[39m
+                [33mfill[39m=[32m"none"[39m
+                [33mheight[39m=[32m"20"[39m
+                [33mstroke[39m=[32m"currentColor"[39m
+                [33mstroke-linecap[39m=[32m"round"[39m
+                [33mstroke-linejoin[39m=[32m"round"[39m
+                [33mstroke-width[39m=[32m"2"[39m
+                [33mviewBox[39m=[32m"0 0 24 24"[39m
+                [33mwidth[39m=[32m"20"[39m
+                [33mxmlns[39m=[32m"http://www.w3.org/2000/svg"[39m
+              [36m>[39m
+                [36m<path[39m
+                  [33md[39m=[32m"M12 3v18"[39m
+                [36m/>[39m
+                [36m<path[39m
+                  [33md[39m=[32m"M3 12h18"[39m
+                [36m/>[39m
+                [36m<rect[39m
+                  [33mheight[39m=[32m"18"[39m
+                  [33mrx[39m=[32m"2"[39m
+                  [33mwidth[39m=[32m"18"[39m
+                  [33mx[39m=[32m"3"[39m
+                  [33my[39m=[32m"3"[39m
+                [36m/>[39m
+              [36m</svg>[39m
+              [36m<span>[39m
+                [0mAll agents[0m
+              [36m</span>[39m
+            [36m</a>[39m
+            [36m<div[39m
+              [33mclass[39m=[32m"ws-nav-agents"[39m
+            [36m>[39m
+              [36m<p[39m
+                [33mclass[39m=[32m"ws-eyebrow"[39m
+              [36m>[39m
+                [0mYour agents[0m
+              [36m</p>[39m
+              [36m<div>[39m
+                [36m<a[39m
+                  [33mclass[39m=[32m"ws-nav-item"[39m
+                  [33mhref[39m=[32m"/chat?agent=greeting_agent"[39m
+                [36m>[39m
+                  [36m<svg[39m
+                    [33maria-hidden[39m=[32m"true"[39m
+                    [33mclass[39m=[32m"lucide lucide-message-circle"[39m
+                    [33mfill[39m=[32m"none"[39m
+                    [33mheight[39m=[32m"20"[39m
+                    [33mstroke[39m=[32m"currentColor"[39m
+                    [33mstroke-linecap[39m=[32m"round"[39m
+                    [33mstroke-linejoin[39m=[32m"round"[39m
+                    [33mstroke-width[39m=[32m"2"[39m
+                    [33mviewBox[39m=[32m"0 0 24 24"[39m
+                    [33mwidth[39m=[32m"20"[39m
+                    [33mxmlns[39m=[32m"http://www.w3.org/2000/svg"[39m
+                  [36m>[39m
+                    [36m<path[39m
+                      [33md[39m=[32m"M2.992 16.342a2 2 0 0 1 .094 1.167l-1.065 3.29a1 1 0 0 0 1.236 1.168l3.413-.998a2 2 0 0 1 1.099.092 10 10 0 1 0-4.777-4.719"[39m
+                    [36m/>[39m
+                  [36m</svg>[39m
+                  [36m<span>[39m
+                    [0mGreeting Agent[0m
+                  [36m</span>[39m
+                [36m</a>[39m
+              [36m</div>[39m
+              [36m<div>[39m
+                [36m<a[39m
+                  [33maria-current[39m=[32m"page"[39m
+                  [33mclass[39m=[32m"ws-nav-item"[39m
+                  [33mhref[39m=[32m"/chat?agent=jarvis_agent"[39m
+                [36m>[39m
+                  [36m<svg[39m
+                    [33maria-hidden[39m=[32m"true"[39m
+                    [33mclass[39m=[32m"lucide lucide-message-circle"[39m
+                    [33mfill[39m=[32m"none"[39m
+                    [33mheight[39m=[32m"20"[39m
+                    [33mstroke[39m=[32m"currentColor"[39m
+                    [33mstroke-linecap[39m=[32m"round"[39m
+                    [33mstroke-linejoin[39m=[32m"round"[39m
+                    [33mstroke-width[39m=[32m"2"[39m
+                    [33mviewBox[39m=[32m"0 0 24 24"[39m
+                    [33mwidth[39m=[32m"20"[39m
+                    [33mxmlns[39m=[32m"http://www.w3.org/2000/svg"[39m
+                  [36m>[39m
+                    [36m<path[39m
+                      [33md[39m=[32m"M2.992 16.342a2 2 0 0 1 .094 1.167l-1.065 3.29a1 1 0 0 0 1.236 1.168l3.413-.998a2 2 0 0 1 1.099.092 10 10 0 1 0-4.777-4.719"[39m
+                    [36m/>[39m
+                  [36m</svg>[39m
+                  [36m<span>[39m
+                    [0mJarvis[0m
+                  [36m</span>[39m
+                [36m</a>[39m
+              [36m</div>[39m
+              [36m<div>[39m
+                [36m<a[39m
+                  [33mclass[39m=[32m"ws-nav-item"[39m
+                  [33mhref[39m=[32m"/chat?agent=calc_agent"[39m
+                [36m>[39m
+                  [36m<svg[39m
+                    [33maria-hidden[39m=[32m"true"[39m
+                    [33mclass[39m=[32m"lucide lucide-message-circle"[39m
+                    [33mfill[39m=[32m"none"[39m
+                    [33mheight[39m=[32m"20"[39m
+                    [33mstroke[39m=[32m"currentColor"[39m
+                    [33mstroke-linecap[39m=[32m"round"[39m
+                    [33mstroke-linejoin[39m=[32m"round"[39m
+                    [33mstroke-width[39m=[32m"2"[39m
+                    [33mviewBox[39m=[32m"0 0 24 24"[39m
+                    [33mwidth[39m=[32m"20"[39m
+                    [33mxmlns[39m=[32m"http://www.w3.org/2000/svg"[39m
+                  [...
+
+    [0m [90m 74 |[39m       [36mtry[39m {
+     [90m 75 |[39m         render([33m<[39m[33mWorkspaceEntry[39m [33m/[39m[33m>[39m)[33m;[39m
+    [31m[1m>[22m[39m[90m 76 |[39m         fireEvent[33m.[39mchange(screen[33m.[39mgetByLabelText([32m'Message'[39m[33m,[39m { exact[33m:[39m [36mtrue[39m })[33m,[39m { target[33m:[39m { value[33m:[39m [32m'Prior-user draft'[39m } })[33m;[39m
+     [90m    |[39m                                 [31m[1m^[22m[39m
+     [90m 77 |[39m         fireEvent[33m.[39mclick(screen[33m.[39mgetByRole([32m'button'[39m[33m,[39m { name[33m:[39m [32m'Edit demo instructions'[39m[33m,[39m exact[33m:[39m [36mtrue[39m }))[33m;[39m
+     [90m 78 |[39m         fireEvent[33m.[39mchange([36mawait[39m screen[33m.[39mfindByLabelText([32m'Demo instructions'[39m)[33m,[39m { target[33m:[39m { value[33m:[39m [32m'Prior-user demo'[39m } })[33m;[39m
+     [90m 79 |[39m         fireEvent[33m.[39mclick(screen[33m.[39mgetByRole([32m'button'[39m[33m,[39m { name[33m:[39m [32m'Apply to demo'[39m }))[33m;[39m[0m
+
+      at Object.getElementError (node_modules/@testing-library/dom/dist/config.js:37:19)
+      at getAllByLabelText (node_modules/@testing-library/dom/dist/queries/label-text.js:111:38)
+      at node_modules/@testing-library/dom/dist/query-helpers.js:52:17
+      at node_modules/@testing-library/dom/dist/query-helpers.js:95:19
+      at src/__tests__/workspace/signout.test.tsx:76:33
+
+  ● WorkspaceEntry sign-out with the real auth and chat stores › getter throws: successful mocked logout clears user/chat/draft/demo before navigating without a rejection
+
+    TestingLibraryElementError: Unable to find a label with the text of: Message
+
+    Ignored nodes: comments, script, style
+    [36m<body>[39m
+      [36m<div>[39m
+        [36m<div[39m
+          [33mclass[39m=[32m"ws-root "[39m
+          [33mdata-workspace-theme[39m=[32m"true"[39m
+        [36m>[39m
+          [36m<a[39m
+            [33mclass[39m=[32m"ws-skip"[39m
+            [33mhref[39m=[32m"#ws-main"[39m
+          [36m>[39m
+            [0mSkip to content[0m
+          [36m</a>[39m
+          [36m<nav[39m
+            [33maria-label[39m=[32m"Workspace navigation"[39m
+            [33mclass[39m=[32m"ws-sidebar ws-desktop"[39m
+          [36m>[39m
+            [36m<div[39m
+              [33mclass[39m=[32m"ws-brand"[39m
+            [36m>[39m
+              [36m<span>[39m
+                [0mS[0m
+              [36m</span>[39m
+              [36m<div>[39m
+                [0mSTARK[0m
+                [36m<small>[39m
+                  [0mAgent Workspace[0m
+                [36m</small>[39m
+              [36m</div>[39m
+            [36m</div>[39m
+            [36m<button[39m
+              [33mclass[39m=[32m"ws-primary ws-new"[39m
+            [36m>[39m
+              [36m<svg[39m
+                [33maria-hidden[39m=[32m"true"[39m
+                [33mclass[39m=[32m"lucide lucide-plus"[39m
+                [33mfill[39m=[32m"none"[39m
+                [33mheight[39m=[32m"20"[39m
+                [33mstroke[39m=[32m"currentColor"[39m
+                [33mstroke-linecap[39m=[32m"round"[39m
+                [33mstroke-linejoin[39m=[32m"round"[39m
+                [33mstroke-width[39m=[32m"2"[39m
+                [33mviewBox[39m=[32m"0 0 24 24"[39m
+                [33mwidth[39m=[32m"20"[39m
+                [33mxmlns[39m=[32m"http://www.w3.org/2000/svg"[39m
+              [36m>[39m
+                [36m<path[39m
+                  [33md[39m=[32m"M5 12h14"[39m
+                [36m/>[39m
+                [36m<path[39m
+                  [33md[39m=[32m"M12 5v14"[39m
+                [36m/>[39m
+              [36m</svg>[39m
+              [0mNew chat[0m
+            [36m</button>[39m
+            [36m<a[39m
+              [33mclass[39m=[32m"ws-nav-item"[39m
+              [33mhref[39m=[32m"/chat"[39m
+            [36m>[39m
+              [36m<svg[39m
+                [33maria-hidden[39m=[32m"true"[39m
+                [33mclass[39m=[32m"lucide lucide-grid2x2 lucide-grid-2x2"[39m
+                [33mfill[39m=[32m"none"[39m
+                [33mheight[39m=[32m"20"[39m
+                [33mstroke[39m=[32m"currentColor"[39m
+                [33mstroke-linecap[39m=[32m"round"[39m
+                [33mstroke-linejoin[39m=[32m"round"[39m
+                [33mstroke-width[39m=[32m"2"[39m
+                [33mviewBox[39m=[32m"0 0 24 24"[39m
+                [33mwidth[39m=[32m"20"[39m
+                [33mxmlns[39m=[32m"http://www.w3.org/2000/svg"[39m
+              [36m>[39m
+                [36m<path[39m
+                  [33md[39m=[32m"M12 3v18"[39m
+                [36m/>[39m
+                [36m<path[39m
+                  [33md[39m=[32m"M3 12h18"[39m
+                [36m/>[39m
+                [36m<rect[39m
+                  [33mheight[39m=[32m"18"[39m
+                  [33mrx[39m=[32m"2"[39m
+                  [33mwidth[39m=[32m"18"[39m
+                  [33mx[39m=[32m"3"[39m
+                  [33my[39m=[32m"3"[39m
+                [36m/>[39m
+              [36m</svg>[39m
+              [36m<span>[39m
+                [0mAll agents[0m
+              [36m</span>[39m
+            [36m</a>[39m
+            [36m<div[39m
+              [33mclass[39m=[32m"ws-nav-agents"[39m
+            [36m>[39m
+              [36m<p[39m
+                [33mclass[39m=[32m"ws-eyebrow"[39m
+              [36m>[39m
+                [0mYour agents[0m
+              [36m</p>[39m
+              [36m<div>[39m
+                [36m<a[39m
+                  [33mclass[39m=[32m"ws-nav-item"[39m
+                  [33mhref[39m=[32m"/chat?agent=greeting_agent"[39m
+                [36m>[39m
+                  [36m<svg[39m
+                    [33maria-hidden[39m=[32m"true"[39m
+                    [33mclass[39m=[32m"lucide lucide-message-circle"[39m
+                    [33mfill[39m=[32m"none"[39m
+                    [33mheight[39m=[32m"20"[39m
+                    [33mstroke[39m=[32m"currentColor"[39m
+                    [33mstroke-linecap[39m=[32m"round"[39m
+                    [33mstroke-linejoin[39m=[32m"round"[39m
+                    [33mstroke-width[39m=[32m"2"[39m
+                    [33mviewBox[39m=[32m"0 0 24 24"[39m
+                    [33mwidth[39m=[32m"20"[39m
+                    [33mxmlns[39m=[32m"http://www.w3.org/2000/svg"[39m
+                  [36m>[39m
+                    [36m<path[39m
+                      [33md[39m=[32m"M2.992 16.342a2 2 0 0 1 .094 1.167l-1.065 3.29a1 1 0 0 0 1.236 1.168l3.413-.998a2 2 0 0 1 1.099.092 10 10 0 1 0-4.777-4.719"[39m
+                    [36m/>[39m
+                  [36m</svg>[39m
+                  [36m<span>[39m
+                    [0mGreeting Agent[0m
+                  [36m</span>[39m
+                [36m</a>[39m
+              [36m</div>[39m
+              [36m<div>[39m
+                [36m<a[39m
+                  [33maria-current[39m=[32m"page"[39m
+                  [33mclass[39m=[32m"ws-nav-item"[39m
+                  [33mhref[39m=[32m"/chat?agent=jarvis_agent"[39m
+                [36m>[39m
+                  [36m<svg[39m
+                    [33maria-hidden[39m=[32m"true"[39m
+                    [33mclass[39m=[32m"lucide lucide-message-circle"[39m
+                    [33mfill[39m=[32m"none"[39m
+                    [33mheight[39m=[32m"20"[39m
+                    [33mstroke[39m=[32m"currentColor"[39m
+                    [33mstroke-linecap[39m=[32m"round"[39m
+                    [33mstroke-linejoin[39m=[32m"round"[39m
+                    [33mstroke-width[39m=[32m"2"[39m
+                    [33mviewBox[39m=[32m"0 0 24 24"[39m
+                    [33mwidth[39m=[32m"20"[39m
+                    [33mxmlns[39m=[32m"http://www.w3.org/2000/svg"[39m
+                  [36m>[39m
+                    [36m<path[39m
+                      [33md[39m=[32m"M2.992 16.342a2 2 0 0 1 .094 1.167l-1.065 3.29a1 1 0 0 0 1.236 1.168l3.413-.998a2 2 0 0 1 1.099.092 10 10 0 1 0-4.777-4.719"[39m
+                    [36m/>[39m
+                  [36m</svg>[39m
+                  [36m<span>[39m
+                    [0mJarvis[0m
+                  [36m</span>[39m
+                [36m</a>[39m
+              [36m</div>[39m
+              [36m<div>[39m
+                [36m<a[39m
+                  [33mclass[39m=[32m"ws-nav-item"[39m
+                  [33mhref[39m=[32m"/chat?agent=calc_agent"[39m
+                [36m>[39m
+                  [36m<svg[39m
+                    [33maria-hidden[39m=[32m"true"[39m
+                    [33mclass[39m=[32m"lucide lucide-message-circle"[39m
+                    [33mfill[39m=[32m"none"[39m
+                    [33mheight[39m=[32m"20"[39m
+                    [33mstroke[39m=[32m"currentColor"[39m
+                    [33mstroke-linecap[39m=[32m"round"[39m
+                    [33mstroke-linejoin[39m=[32m"round"[39m
+                    [33mstroke-width[39m=[32m"2"[39m
+                    [33mviewBox[39m=[32m"0 0 24 24"[39m
+                    [33mwidth[39m=[32m"20"[39m
+                    [33mxmlns[39m=[32m"http://www.w3.org/2000/svg"[39m
+                  [...
+
+    [0m [90m 74 |[39m       [36mtry[39m {
+     [90m 75 |[39m         render([33m<[39m[33mWorkspaceEntry[39m [33m/[39m[33m>[39m)[33m;[39m
+    [31m[1m>[22m[39m[90m 76 |[39m         fireEvent[33m.[39mchange(screen[33m.[39mgetByLabelText([32m'Message'[39m[33m,[39m { exact[33m:[39m [36mtrue[39m })[33m,[39m { target[33m:[39m { value[33m:[39m [32m'Prior-user draft'[39m } })[33m;[39m
+     [90m    |[39m                                 [31m[1m^[22m[39m
+     [90m 77 |[39m         fireEvent[33m.[39mclick(screen[33m.[39mgetByRole([32m'button'[39m[33m,[39m { name[33m:[39m [32m'Edit demo instructions'[39m[33m,[39m exact[33m:[39m [36mtrue[39m }))[33m;[39m
+     [90m 78 |[39m         fireEvent[33m.[39mchange([36mawait[39m screen[33m.[39mfindByLabelText([32m'Demo instructions'[39m)[33m,[39m { target[33m:[39m { value[33m:[39m [32m'Prior-user demo'[39m } })[33m;[39m
+     [90m 79 |[39m         fireEvent[33m.[39mclick(screen[33m.[39mgetByRole([32m'button'[39m[33m,[39m { name[33m:[39m [32m'Apply to demo'[39m }))[33m;[39m[0m
+
+      at Object.getElementError (node_modules/@testing-library/dom/dist/config.js:37:19)
+      at getAllByLabelText (node_modules/@testing-library/dom/dist/queries/label-text.js:111:38)
+      at node_modules/@testing-library/dom/dist/query-helpers.js:52:17
+      at node_modules/@testing-library/dom/dist/query-helpers.js:95:19
+      at src/__tests__/workspace/signout.test.tsx:76:33
+
+  ● WorkspaceEntry sign-out with the real auth and chat stores › write throws: successful mocked logout clears user/chat/draft/demo before navigating without a rejection
+
+    TestingLibraryElementError: Unable to find a label with the text of: Message
+
+    Ignored nodes: comments, script, style
+    [36m<body>[39m
+      [36m<div>[39m
+        [36m<div[39m
+          [33mclass[39m=[32m"ws-root "[39m
+          [33mdata-workspace-theme[39m=[32m"true"[39m
+        [36m>[39m
+          [36m<a[39m
+            [33mclass[39m=[32m"ws-skip"[39m
+            [33mhref[39m=[32m"#ws-main"[39m
+          [36m>[39m
+            [0mSkip to content[0m
+          [36m</a>[39m
+          [36m<nav[39m
+            [33maria-label[39m=[32m"Workspace navigation"[39m
+            [33mclass[39m=[32m"ws-sidebar ws-desktop"[39m
+          [36m>[39m
+            [36m<div[39m
+              [33mclass[39m=[32m"ws-brand"[39m
+            [36m>[39m
+              [36m<span>[39m
+                [0mS[0m
+              [36m</span>[39m
+              [36m<div>[39m
+                [0mSTARK[0m
+                [36m<small>[39m
+                  [0mAgent Workspace[0m
+                [36m</small>[39m
+              [36m</div>[39m
+            [36m</div>[39m
+            [36m<button[39m
+              [33mclass[39m=[32m"ws-primary ws-new"[39m
+            [36m>[39m
+              [36m<svg[39m
+                [33maria-hidden[39m=[32m"true"[39m
+                [33mclass[39m=[32m"lucide lucide-plus"[39m
+                [33mfill[39m=[32m"none"[39m
+                [33mheight[39m=[32m"20"[39m
+                [33mstroke[39m=[32m"currentColor"[39m
+                [33mstroke-linecap[39m=[32m"round"[39m
+                [33mstroke-linejoin[39m=[32m"round"[39m
+                [33mstroke-width[39m=[32m"2"[39m
+                [33mviewBox[39m=[32m"0 0 24 24"[39m
+                [33mwidth[39m=[32m"20"[39m
+                [33mxmlns[39m=[32m"http://www.w3.org/2000/svg"[39m
+              [36m>[39m
+                [36m<path[39m
+                  [33md[39m=[32m"M5 12h14"[39m
+                [36m/>[39m
+                [36m<path[39m
+                  [33md[39m=[32m"M12 5v14"[39m
+                [36m/>[39m
+              [36m</svg>[39m
+              [0mNew chat[0m
+            [36m</button>[39m
+            [36m<a[39m
+              [33mclass[39m=[32m"ws-nav-item"[39m
+              [33mhref[39m=[32m"/chat"[39m
+            [36m>[39m
+              [36m<svg[39m
+                [33maria-hidden[39m=[32m"true"[39m
+                [33mclass[39m=[32m"lucide lucide-grid2x2 lucide-grid-2x2"[39m
+                [33mfill[39m=[32m"none"[39m
+                [33mheight[39m=[32m"20"[39m
+                [33mstroke[39m=[32m"currentColor"[39m
+                [33mstroke-linecap[39m=[32m"round"[39m
+                [33mstroke-linejoin[39m=[32m"round"[39m
+                [33mstroke-width[39m=[32m"2"[39m
+                [33mviewBox[39m=[32m"0 0 24 24"[39m
+                [33mwidth[39m=[32m"20"[39m
+                [33mxmlns[39m=[32m"http://www.w3.org/2000/svg"[39m
+              [36m>[39m
+                [36m<path[39m
+                  [33md[39m=[32m"M12 3v18"[39m
+                [36m/>[39m
+                [36m<path[39m
+                  [33md[39m=[32m"M3 12h18"[39m
+                [36m/>[39m
+                [36m<rect[39m
+                  [33mheight[39m=[32m"18"[39m
+                  [33mrx[39m=[32m"2"[39m
+                  [33mwidth[39m=[32m"18"[39m
+                  [33mx[39m=[32m"3"[39m
+                  [33my[39m=[32m"3"[39m
+                [36m/>[39m
+              [36m</svg>[39m
+              [36m<span>[39m
+                [0mAll agents[0m
+              [36m</span>[39m
+            [36m</a>[39m
+            [36m<div[39m
+              [33mclass[39m=[32m"ws-nav-agents"[39m
+            [36m>[39m
+              [36m<p[39m
+                [33mclass[39m=[32m"ws-eyebrow"[39m
+              [36m>[39m
+                [0mYour agents[0m
+              [36m</p>[39m
+              [36m<div>[39m
+                [36m<a[39m
+                  [33mclass[39m=[32m"ws-nav-item"[39m
+                  [33mhref[39m=[32m"/chat?agent=greeting_agent"[39m
+                [36m>[39m
+                  [36m<svg[39m
+                    [33maria-hidden[39m=[32m"true"[39m
+                    [33mclass[39m=[32m"lucide lucide-message-circle"[39m
+                    [33mfill[39m=[32m"none"[39m
+                    [33mheight[39m=[32m"20"[39m
+                    [33mstroke[39m=[32m"currentColor"[39m
+                    [33mstroke-linecap[39m=[32m"round"[39m
+                    [33mstroke-linejoin[39m=[32m"round"[39m
+                    [33mstroke-width[39m=[32m"2"[39m
+                    [33mviewBox[39m=[32m"0 0 24 24"[39m
+                    [33mwidth[39m=[32m"20"[39m
+                    [33mxmlns[39m=[32m"http://www.w3.org/2000/svg"[39m
+                  [36m>[39m
+                    [36m<path[39m
+                      [33md[39m=[32m"M2.992 16.342a2 2 0 0 1 .094 1.167l-1.065 3.29a1 1 0 0 0 1.236 1.168l3.413-.998a2 2 0 0 1 1.099.092 10 10 0 1 0-4.777-4.719"[39m
+                    [36m/>[39m
+                  [36m</svg>[39m
+                  [36m<span>[39m
+                    [0mGreeting Agent[0m
+                  [36m</span>[39m
+                [36m</a>[39m
+              [36m</div>[39m
+              [36m<div>[39m
+                [36m<a[39m
+                  [33maria-current[39m=[32m"page"[39m
+                  [33mclass[39m=[32m"ws-nav-item"[39m
+                  [33mhref[39m=[32m"/chat?agent=jarvis_agent"[39m
+                [36m>[39m
+                  [36m<svg[39m
+                    [33maria-hidden[39m=[32m"true"[39m
+                    [33mclass[39m=[32m"lucide lucide-message-circle"[39m
+                    [33mfill[39m=[32m"none"[39m
+                    [33mheight[39m=[32m"20"[39m
+                    [33mstroke[39m=[32m"currentColor"[39m
+                    [33mstroke-linecap[39m=[32m"round"[39m
+                    [33mstroke-linejoin[39m=[32m"round"[39m
+                    [33mstroke-width[39m=[32m"2"[39m
+                    [33mviewBox[39m=[32m"0 0 24 24"[39m
+                    [33mwidth[39m=[32m"20"[39m
+                    [33mxmlns[39m=[32m"http://www.w3.org/2000/svg"[39m
+                  [36m>[39m
+                    [36m<path[39m
+                      [33md[39m=[32m"M2.992 16.342a2 2 0 0 1 .094 1.167l-1.065 3.29a1 1 0 0 0 1.236 1.168l3.413-.998a2 2 0 0 1 1.099.092 10 10 0 1 0-4.777-4.719"[39m
+                    [36m/>[39m
+                  [36m</svg>[39m
+                  [36m<span>[39m
+                    [0mJarvis[0m
+                  [36m</span>[39m
+                [36m</a>[39m
+              [36m</div>[39m
+              [36m<div>[39m
+                [36m<a[39m
+                  [33mclass[39m=[32m"ws-nav-item"[39m
+                  [33mhref[39m=[32m"/chat?agent=calc_agent"[39m
+                [36m>[39m
+                  [36m<svg[39m
+                    [33maria-hidden[39m=[32m"true"[39m
+                    [33mclass[39m=[32m"lucide lucide-message-circle"[39m
+                    [33mfill[39m=[32m"none"[39m
+                    [33mheight[39m=[32m"20"[39m
+                    [33mstroke[39m=[32m"currentColor"[39m
+                    [33mstroke-linecap[39m=[32m"round"[39m
+                    [33mstroke-linejoin[39m=[32m"round"[39m
+                    [33mstroke-width[39m=[32m"2"[39m
+                    [33mviewBox[39m=[32m"0 0 24 24"[39m
+                    [33mwidth[39m=[32m"20"[39m
+                    [33mxmlns[39m=[32m"http://www.w3.org/2000/svg"[39m
+                  [...
+
+    [0m [90m 74 |[39m       [36mtry[39m {
+     [90m 75 |[39m         render([33m<[39m[33mWorkspaceEntry[39m [33m/[39m[33m>[39m)[33m;[39m
+    [31m[1m>[22m[39m[90m 76 |[39m         fireEvent[33m.[39mchange(screen[33m.[39mgetByLabelText([32m'Message'[39m[33m,[39m { exact[33m:[39m [36mtrue[39m })[33m,[39m { target[33m:[39m { value[33m:[39m [32m'Prior-user draft'[39m } })[33m;[39m
+     [90m    |[39m                                 [31m[1m^[22m[39m
+     [90m 77 |[39m         fireEvent[33m.[39mclick(screen[33m.[39mgetByRole([32m'button'[39m[33m,[39m { name[33m:[39m [32m'Edit demo instructions'[39m[33m,[39m exact[33m:[39m [36mtrue[39m }))[33m;[39m
+     [90m 78 |[39m         fireEvent[33m.[39mchange([36mawait[39m screen[33m.[39mfindByLabelText([32m'Demo instructions'[39m)[33m,[39m { target[33m:[39m { value[33m:[39m [32m'Prior-user demo'[39m } })[33m;[39m
+     [90m 79 |[39m         fireEvent[33m.[39mclick(screen[33m.[39mgetByRole([32m'button'[39m[33m,[39m { name[33m:[39m [32m'Apply to demo'[39m }))[33m;[39m[0m
+
+      at Object.getElementError (node_modules/@testing-library/dom/dist/config.js:37:19)
+      at getAllByLabelText (node_modules/@testing-library/dom/dist/queries/label-text.js:111:38)
+      at node_modules/@testing-library/dom/dist/query-helpers.js:52:17
+      at node_modules/@testing-library/dom/dist/query-helpers.js:95:19
+      at src/__tests__/workspace/signout.test.tsx:76:33
+
+PASS src/__tests__/workspace/components.test.tsx
+PASS src/__tests__/chat/chatStore.persist.test.ts
+  ● Console
+
+    console.warn
+      [zustand persist middleware] Unable to update item 'adk-session-map-mock', the given storage is currently unavailable.
+
+    [0m [90m 150 |[39m       setAgentSessions[33m:[39m (sessions) [33m=>[39m [36mset[39m({ agentSessions[33m:[39m sessions })[33m,[39m
+     [90m 151 |[39m       setSession[33m:[39m (agent[33m,[39m sessionId) [33m=>[39m
+    [31m[1m>[22m[39m[90m 152 |[39m         [36mset[39m((state) [33m=>[39m ({
+     [90m     |[39m         [31m[1m^[22m[39m
+     [90m 153 |[39m           agentSessions[33m:[39m { [33m...[39mstate[33m.[39magentSessions[33m,[39m [agent][33m:[39m sessionId }[33m,[39m
+     [90m 154 |[39m         }))[33m,[39m
+     [90m 155 |[39m       setSessionList[33m:[39m (agent[33m,[39m sessions) [33m=>[39m[0m
+
+      at node_modules/zustand/middleware.js:489:17
+      at Object.setSession (src/store/chatStore.ts:152:9)
+      at src/__tests__/chat/chatStore.persist.test.ts:151:35
+      at Object.<anonymous> (node_modules/expect/build/index.js:1824:9)
+      at Object.throwingMatcher [as toThrow] (node_modules/expect/build/index.js:2235:93)
+      at src/__tests__/chat/chatStore.persist.test.ts:155:16
+      at Object.<anonymous> (src/__tests__/chat/chatStore.persist.test.ts:147:12)
+
+PASS src/__tests__/chat/chatStore.modeSplit.test.ts
+  ● Console
+
+    console.info
+      [chatStore] FIX-003: adopted legacy adk-session-map into adk-session-map-live
+
+      at Object.<anonymous> (src/store/chatStore.ts:52:15)
+
+PASS src/__tests__/workspace/productionAdapter.test.ts
+PASS src/__tests__/config/manifest.test.ts
+PASS src/__tests__/workspace/navigation.test.ts
+PASS src/__tests__/chat/chatStore.sessions.test.ts
+
+Test Suites: 1 failed, 7 passed, 8 total
+Tests:       3 failed, 61 passed, 64 total
+Snapshots:   0 total
+Time:        1.109 s
+Ran all test suites within paths "src/__tests__/workspace/signout.test.tsx", "src/__tests__/workspace/navigation.test.ts", "src/__tests__/workspace/components.test.tsx", "src/__tests__/workspace/productionAdapter.test.ts", "src/__tests__/chat/chatStore.persist.test.ts", "src/__tests__/chat/chatStore.modeSplit.test.ts", "src/__tests__/chat/chatStore.sessions.test.ts", "src/__tests__/config/manifest.test.ts".
+Test results written to: agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/engineering-repair-001/focused.json

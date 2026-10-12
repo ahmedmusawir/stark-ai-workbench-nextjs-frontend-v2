@@ -1,0 +1,165 @@
+Claudy — execute authorized bounded Q5 cleanup.
+
+ROLE AND IDENTITY
+You remain the sole checkout writer. Cody remains paused.
+
+Branch: qa/frontend-apbm-000
+Exact candidate/HEAD:
+8eb5789d9021ad06c15db36db74419a2b5c68fc5
+Independent plan: v0.3
+
+QAM means:
+agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/
+
+LEAD DISPOSITION
+Q2 attempt-002 Addendum-001 is ACCEPTED.
+Do not repeat its control or rerun the full QA body.
+F01–F04 remain resolved within tested fixture scope.
+Gate Q remains PENDING Lead review of the cleanup return.
+D4 ALLOW and D7 OMIT remain unchanged.
+No additional Director release is required for this bounded Q5.
+
+Record this complete instruction under QAM/HANDOFFS.
+All new QA records, recovery notes and session updates stay in QAM.
+
+AUTHORITATIVE PROPOSAL
+QAM/evidence/q2-attempt-002-addendum-001/q5-proposal/
+Q5_PROPOSAL_PATHS.json
+
+Expected SHA-256:
+242f95eb508e55e5a81f3e660197857fded1d730e97494d92ebd181590d6e7ed
+
+Preserve that proposal unchanged. Record this disposition as a
+separate amendment; a refreshed inventory cannot expand authority.
+
+1. PREFLIGHT AND PRESERVATION
+
+Confirm the exact branch and HEAD before mutation.
+
+Create a fresh path/hash/status inventory under QAM and compare
+the authorized targets with the reviewed proposal and
+ROOT_FILES_ACCOUNT.json.
+
+Record preservation hashes for retained QA evidence and instruments.
+Identify intended append-only record updates separately.
+
+Stop on unexpected target changes, hash mismatches, ownership
+ambiguity or identity drift. Do not override a GATE_STOP.
+
+2. ROOT PLACEMENT — OPTION A APPROVED
+
+Use the reviewed:
+QAM/evidence/q2-attempt-002-addendum-001/root-files/
+ROOT_FILES_ACCOUNT.json
+
+Root RECOVERY.md must first match:
+adcc855d541adad5987182665cf45769ede74cc949f47b769eb8534d4f316b2e
+
+Preserve its exact reviewed 1,030-byte prepend in
+QAM/QA_RECOVERY.md before removing it from the root file.
+Do not overwrite an existing different QA_RECOVERY.md.
+
+Remove only that prepend. The remaining root RECOVERY.md must
+match the preserved HEAD bytes and SHA-256:
+edfffe35c9226c36ce8b8e12acff2375617b664fa3d7ec9cc94a16a03d83fcb8
+
+Remove root session_2026-10-11.md only if it remains untracked,
+matches the preserved QAM copy byte-for-byte, and hashes to:
+4ce2ae025240574f09def856f67f3de022a9a454f8d3339443b8100daa1552d6
+
+Preserve all unrelated and committed historical root content.
+No blanket restore, reset or clean operation.
+
+3. CACHE CLEANUP — EXACT FIVE FILES ONLY
+
+Within QAM/evidence/q2-attempt-002/, authorize removal of:
+
+acceptance/G-diag-s20/artifacts/.last-run.json
+acceptance/G/artifacts/.last-run.json
+acceptance/H/repair-copy/browser-artifacts/.last-run.json
+acceptance/H/workspace-copy/artifacts/.last-run.json
+preparation/policy-controls/artifacts/.last-run.json
+
+Each must remain untracked, be 45 bytes, and hash to:
+91d1c43004802cd49950d78eb11c8fa7d05da8ffffe219a8b13b2f561bc00903
+
+Record each pre-removal hash and verify its absence afterwards.
+Preserve the failed-run cache and Engineer-owned caches.
+
+4. RETENTION RULING
+
+Retain all other QA evidence, historical failures, packages,
+instrument sources and frozen copies.
+
+Retain the eight Engineer-suite copies. No automatic deletion
+after Gate Q is authorized.
+
+Retain Stage E production output. Replace the proposal's
+"until Director comfort check, then DELETE" condition with
+"RETAIN; no cleanup action under this authorization."
+D7 is OMIT; no Director comfort check is required.
+
+All remaining RETAIN and NO QA ACTION dispositions stand.
+Do not touch private environment files, dependencies or
+non-QA-owned generated output.
+
+5. RECORDS AND PROCESS VERDICT
+
+Update Q5 status and the candidate-bound records under QAM,
+preserving prior versions and original evidence.
+
+Keep PD-002-01 explicitly recorded:
+execution proceeded after GATE_STOP without the required ruling.
+Candidate-specific acceptance does not authorize future overrides.
+
+Preserve the font-fallback qualifications.
+Preserve the live-persistence limitation.
+Keep DIRECTOR-OBS-001 classified UNTRIAGED-live.
+
+Do not mark Gate Q PASS or describe APBM_000 as closed.
+
+6. FINAL VERIFICATION
+
+Prepare a fresh, explicit gate inventory accounting for:
+- authorized removals;
+- QAM/QA_RECOVERY.md;
+- this instruction and new cleanup records;
+- intended record updates.
+
+Preserve previous inventories/freezes. Do not weaken gate checks.
+
+Run the identity gate after cleanup.
+GATE_STOP means stop and return the exact failure for ruling.
+
+Verify and report:
+- HEAD remains the exact candidate;
+- root RECOVERY.md matches the preserved HEAD bytes;
+- the matching root session pointer and five caches are absent;
+- retained evidence/instruments pass preservation checks;
+- only authorized cleanup and QAM record changes occurred;
+- no product, test or dependency changes occurred.
+
+Report actual Git status. Do not claim a clean working tree while
+authorized QA records remain uncommitted.
+
+7. RETURN PACKAGE
+
+Create an indexed Q5 completion ZIP containing:
+- this instruction and amended disposition;
+- before/after path, hash and status inventories;
+- exact action receipt and root-placement verification;
+- preservation-check results;
+- updated QA status/process/limitation records;
+- final identity-gate result and relevant command logs;
+- a concise REVIEW_START_HERE identifying any unresolved items.
+
+Preserve the package and receipt under QAM.
+Place a byte-identical handoff copy and SHA-256 receipt in Downloads.
+Report its exact filename, full SHA-256 and matching-copy verification.
+
+No full-suite rerun, production rebuild, live-service testing,
+Git mutation, merge, deployment, engineering closeout or APBM_001
+launch is authorized.
+
+Return to QA Lead. The Lead will issue or withhold Gate Q for the
+exact candidate and tested scope, with a separate process verdict.

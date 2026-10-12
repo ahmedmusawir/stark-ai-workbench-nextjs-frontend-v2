@@ -1,0 +1,11 @@
+{
+ "verdict": "Q2_0_STOP",
+ "execution_head": "c4ed7042fa05fa638bdc6d4327ecba3448d44cef",
+ "blocks": [
+  "records_manifest_matches_staging_pin",
+  "anomaly:QAM_CHANGED_UNLISTED_OR_HASH:agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/AUTOMATION/q2_approved_qam_records.json"
+ ],
+ "checks_failed": [
+  "records_manifest_matches_staging_pin"
+ ]
+}

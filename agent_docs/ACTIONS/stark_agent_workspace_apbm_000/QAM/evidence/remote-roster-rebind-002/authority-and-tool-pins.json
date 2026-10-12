@@ -1,0 +1,46 @@
+{
+  "AUTOMATION/q2_identity.py": {
+    "sha256": "703196058f1d878009d21a2dbdce6fd7dbabfc3341ab449b705af1b969c70f58",
+    "bytes": 13264
+  },
+  "AUTOMATION/q2_identity_v2.py": {
+    "sha256": "cf0968a2b29051eebdba10dd07bb4f36e69efcf35acf4a596acd75ce621cc5a2",
+    "bytes": 17854
+  },
+  "AUTOMATION/rebind_evidence.py": {
+    "sha256": "428d75f7aa3670789a13ab998169664dc703ac3a2ad979661a3ea7733e87b9e4",
+    "bytes": 7840
+  },
+  "AUTOMATION/roster_amendment_2026-10-05.json": {
+    "sha256": "8da8cb0b078e61b19e2772ad75d809370ce278fbdf5487ce25bff2b6a7c1bc25",
+    "bytes": 790
+  },
+  "QAM_TEST_PLAN.md": {
+    "sha256": "8ddb743f1be09d624bf79c8a602ad05fbd3cffbffbc2d8c6cfbaee16f8b80337",
+    "bytes": 37865
+  },
+  "Q1B_REVIEW.md": {
+    "sha256": "ce02c5cb5432c688e25801000742d0f69ec7778c7ed1fea70badffd4d451fe2f",
+    "bytes": 17793
+  },
+  "HANDOFFS/ARCHITECT_REMOTE_ROSTER_AMENDMENT_2026-10-05.md": {
+    "sha256": "57924e3f046bc521b3a91fe78cd17087e8b2f3dbd6aa05b11439a26cf459c7d9",
+    "bytes": 9457
+  },
+  "HANDOFFS/DIRECTOR_Q2_RELEASE_2026-10-05_193516.md": {
+    "sha256": "53c9a0dd297f87325e8b4c51cdcaebedd5b95fd67be23a9f22be89fddf9994c7",
+    "bytes": 2089
+  },
+  "AUTOMATION/q2_approved_qam_records.json": {
+    "sha256": "a46579e099cec599eb792c2c4886d653ec515ac034bf97437d0c38cf1b4cda30",
+    "bytes": 21934
+  },
+  "../ACCEPTANCE_SPEC.md": {
+    "sha256": "57f8d9f4dec8ca826326067254b0916ef65ccd51b635a8ac6ead73e8ab469fcc",
+    "bytes": 9052
+  },
+  "../RULINGS_ADDENDUM.md": {
+    "sha256": "99d4c40f7094106f4386d4d8ff5535228feb653dcbe0fd948a14a0ff1ec3b36f",
+    "bytes": 2496
+  }
+}

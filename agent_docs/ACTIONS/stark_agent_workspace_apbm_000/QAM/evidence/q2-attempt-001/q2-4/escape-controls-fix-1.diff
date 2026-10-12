@@ -1,0 +1,16 @@
+3c3
+< const out={},to=(p,ms=4000)=>Promise.race([p,new Promise(r=>setTimeout(()=>r('TIMEOUT(blocked)'),ms))]);
+---
+> const out={},to=(f,ms=4000)=>{let p;try{p=f()}catch(e){return Promise.resolve('BLOCKED(sync) '+String(e.message).slice(0,60))}return Promise.race([p,new Promise(r=>setTimeout(()=>r('TIMEOUT(blocked)'),ms))])};
+5,9c5,9
+<  out.https_non_font=await to(new Promise(r=>{const q=https.get('https://example.invalid/',()=>r('CONNECTED'));q.on('error',e=>r('BLOCKED '+e.code))}));
+<  out.https_font_host_direct=await to(new Promise(r=>{const q=https.get('https://fonts.googleapis.com/css2?family=Inter',()=>r('CONNECTED'));q.on('error',e=>r('BLOCKED '+e.code))}));
+<  out.direct_ip_tcp=await to(new Promise(r=>{const s=net.connect(443,'192.0.2.1');s.on('connect',()=>r('CONNECTED'));s.on('error',e=>r('BLOCKED '+e.code))}));
+<  out.udp_send=await to(new Promise(r=>{const s=dgram.createSocket('udp4');s.send(Buffer.from('x'),53,'192.0.2.1',e=>{s.close();r(e?'BLOCKED '+e.code:'SENT')})}));
+<  out.dns_lookup=await to(new Promise(r=>dns.lookup('fonts.googleapis.com',(e,a)=>r(e?'BLOCKED '+e.code:'RESOLVED '+a))));
+---
+>  out.https_non_font=await to(()=>new Promise(r=>{const q=https.get('https://example.invalid/',()=>r('CONNECTED'));q.on('error',e=>r('BLOCKED '+e.code))}));
+>  out.https_font_host_direct=await to(()=>new Promise(r=>{const q=https.get('https://fonts.googleapis.com/css2?family=Inter',()=>r('CONNECTED'));q.on('error',e=>r('BLOCKED '+e.code))}));
+>  out.direct_ip_tcp=await to(()=>new Promise(r=>{const s=net.connect(443,'192.0.2.1');s.on('connect',()=>r('CONNECTED'));s.on('error',e=>r('BLOCKED '+e.code))}));
+>  out.udp_send=await to(()=>new Promise(r=>{const s=dgram.createSocket('udp4');s.send(Buffer.from('x'),53,'192.0.2.1',e=>{s.close();r(e?'BLOCKED '+e.code:'SENT')})}));
+>  out.dns_lookup=await to(()=>new Promise(r=>dns.lookup('fonts.googleapis.com',(e,a)=>r(e?'BLOCKED '+e.code:'RESOLVED '+a))));

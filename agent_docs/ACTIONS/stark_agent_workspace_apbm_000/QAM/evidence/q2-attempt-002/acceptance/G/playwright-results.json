@@ -1,0 +1,1345 @@
+{
+  "config": {
+    "configFile": "/home/moose/nextjs/10XLAB/stark-ai-workbench-nextjs-frontend-v2/agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/AUTOMATION/playwright.qa.config.ts",
+    "rootDir": "/home/moose/nextjs/10XLAB/stark-ai-workbench-nextjs-frontend-v2/agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/AUTOMATION/specs",
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "/home/moose/nextjs/10XLAB/stark-ai-workbench-nextjs-frontend-v2/agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002/acceptance/G/artifacts",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "",
+        "name": "",
+        "testDir": "/home/moose/nextjs/10XLAB/stark-ai-workbench-nextjs-frontend-v2/agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/AUTOMATION/specs",
+        "testIgnore": [
+          "diag_run2.spec.ts"
+        ],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 60000
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "list",
+        null
+      ],
+      [
+        "json",
+        {
+          "outputFile": "/home/moose/nextjs/10XLAB/stark-ai-workbench-nextjs-frontend-v2/agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002/acceptance/G/playwright-results.json"
+        }
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "missing",
+    "updateSourceMethod": "patch",
+    "version": "1.59.1",
+    "workers": 1,
+    "webServer": {
+      "command": "node /home/moose/nextjs/10XLAB/stark-ai-workbench-nextjs-frontend-v2/agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/AUTOMATION/qa-harness.cjs",
+      "cwd": "/home/moose/nextjs/10XLAB/stark-ai-workbench-nextjs-frontend-v2",
+      "url": "http://127.0.0.1:43181/",
+      "reuseExistingServer": false,
+      "timeout": 120000,
+      "env": {
+        "QA_PORT": "43181",
+        "NODE_OPTIONS": "--require=/home/moose/nextjs/10XLAB/stark-ai-workbench-nextjs-frontend-v2/tests/workspace/network-guard.cjs"
+      }
+    }
+  },
+  "suites": [
+    {
+      "title": "s00_policy_controls.spec.ts",
+      "file": "s00_policy_controls.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "C-01 off-origin request is aborted and logged by the browser interceptor in default, manual, newPage and popup contexts",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1575,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-11T12:03:21.233Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "2d8baf4fc312347df16e-fd254c8e34c9bfcef030",
+          "file": "s00_policy_controls.spec.ts",
+          "line": 10,
+          "column": 5
+        },
+        {
+          "title": "C-02 page errors are captured from every page and only the labelled synthetic is consumed",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 977,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-11T12:03:22.975Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "2d8baf4fc312347df16e-80cdcb5cf8c66e82cf3a",
+          "file": "s00_policy_controls.spec.ts",
+          "line": 26,
+          "column": 5
+        },
+        {
+          "title": "C-03 WebSocket transport is intercepted and closed",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 429,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-11T12:03:23.962Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "2d8baf4fc312347df16e-51c7e054d06e3287593e",
+          "file": "s00_policy_controls.spec.ts",
+          "line": 37,
+          "column": 5
+        },
+        {
+          "title": "C-04 an unconsumed policy event fails the test (expected failure)",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [
+                {
+                  "type": "fail",
+                  "description": "detector control: the policy fixture must fail this test",
+                  "location": {
+                    "file": "/home/moose/nextjs/10XLAB/stark-ai-workbench-nextjs-frontend-v2/agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/AUTOMATION/specs/s00_policy_controls.spec.ts",
+                    "line": 48,
+                    "column": 8
+                  }
+                }
+              ],
+              "expectedStatus": "failed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 491,
+                  "error": {
+                    "message": "Error: QA_POLICY_UNEXPECTED_EVENTS [{\"kind\":\"request-offorigin-observed\",\"detail\":\"https://qa-control.example.invalid/probe\",\"at\":1791720204864},{\"kind\":\"request-blocked\",\"detail\":\"https://qa-control.example.invalid/probe\",\"at\":1791720204864}]",
+                    "stack": "Error: QA_POLICY_UNEXPECTED_EVENTS [{\"kind\":\"request-offorigin-observed\",\"detail\":\"https://qa-control.example.invalid/probe\",\"at\":1791720204864},{\"kind\":\"request-blocked\",\"detail\":\"https://qa-control.example.invalid/probe\",\"at\":1791720204864}]\n    at Object.exports.test._test.test.extend._qaPolicy.auto (/home/moose/nextjs/10XLAB/stark-ai-workbench-nextjs-frontend-v2/agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/AUTOMATION/specs/_qa.ts:63:34)",
+                    "location": {
+                      "file": "/home/moose/nextjs/10XLAB/stark-ai-workbench-nextjs-frontend-v2/agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/AUTOMATION/specs/_qa.ts",
+                      "column": 34,
+                      "line": 63
+                    },
+                    "snippet": "   at _qa.ts:63\n\n\u001b[0m \u001b[90m 61 |\u001b[39m     fs\u001b[33m.\u001b[39mwriteFileSync(path\u001b[33m.\u001b[39mjoin(\u001b[33mOUT\u001b[39m\u001b[33m,\u001b[39m \u001b[32m'ledgers'\u001b[39m\u001b[33m,\u001b[39m \u001b[32m`${slug}.json`\u001b[39m)\u001b[33m,\u001b[39m \u001b[33mJSON\u001b[39m\u001b[33m.\u001b[39mstringify({ test\u001b[33m:\u001b[39m testInfo\u001b[33m.\u001b[39mtitlePath\u001b[33m.\u001b[39mslice(\u001b[35m1\u001b[39m)\u001b[33m,\u001b[39m status\u001b[33m:\u001b[39m testInfo\u001b[33m.\u001b[39mstatus\u001b[33m,\u001b[39m origin\u001b[33m:\u001b[39m \u001b[33mORIGIN\u001b[39m\u001b[33m,\u001b[39m\n \u001b[90m 62 |\u001b[39m       counters\u001b[33m:\u001b[39m policyCounters()\u001b[33m,\u001b[39m events\u001b[33m:\u001b[39m policy\u001b[33m.\u001b[39mevents\u001b[33m,\u001b[39m unexpected\u001b[33m:\u001b[39m unexpected\u001b[33m.\u001b[39mlength }\u001b[33m,\u001b[39m \u001b[36mnull\u001b[39m\u001b[33m,\u001b[39m \u001b[35m2\u001b[39m) \u001b[33m+\u001b[39m \u001b[32m'\\n'\u001b[39m)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 63 |\u001b[39m     \u001b[36mif\u001b[39m (unexpected\u001b[33m.\u001b[39mlength) \u001b[36mthrow\u001b[39m \u001b[36mnew\u001b[39m \u001b[33mError\u001b[39m(\u001b[32m`QA_POLICY_UNEXPECTED_EVENTS ${JSON.stringify(unexpected)}`\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                  \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 64 |\u001b[39m   }\u001b[33m,\u001b[39m { auto\u001b[33m:\u001b[39m \u001b[36mtrue\u001b[39m }]\u001b[33m,\u001b[39m\n \u001b[90m 65 |\u001b[39m   \u001b[90m// Compat for attempt-001 specs: page errors observed in this test (all pages/contexts). Depends on _qaPolicy so it is reset first.\u001b[39m\n \u001b[90m 66 |\u001b[39m   errors\u001b[33m:\u001b[39m \u001b[36masync\u001b[39m ({ _qaPolicy }\u001b[33m,\u001b[39m use) \u001b[33m=>\u001b[39m { \u001b[36mvoid\u001b[39m _qaPolicy\u001b[33m;\u001b[39m \u001b[36mawait\u001b[39m use(pageErrors)\u001b[33m;\u001b[39m }\u001b[33m,\u001b[39m\u001b[0m"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/home/moose/nextjs/10XLAB/stark-ai-workbench-nextjs-frontend-v2/agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/AUTOMATION/specs/_qa.ts",
+                        "column": 34,
+                        "line": 63
+                      },
+                      "message": "Error: QA_POLICY_UNEXPECTED_EVENTS [{\"kind\":\"request-offorigin-observed\",\"detail\":\"https://qa-control.example.invalid/probe\",\"at\":1791720204864},{\"kind\":\"request-blocked\",\"detail\":\"https://qa-control.example.invalid/probe\",\"at\":1791720204864}]\n\n   at _qa.ts:63\n\n  61 |     fs.writeFileSync(path.join(OUT, 'ledgers', `${slug}.json`), JSON.stringify({ test: testInfo.titlePath.slice(1), status: testInfo.status, origin: ORIGIN,\n  62 |       counters: policyCounters(), events: policy.events, unexpected: unexpected.length }, null, 2) + '\\n');\n> 63 |     if (unexpected.length) throw new Error(`QA_POLICY_UNEXPECTED_EVENTS ${JSON.stringify(unexpected)}`);\n     |                                  ^\n  64 |   }, { auto: true }],\n  65 |   // Compat for attempt-001 specs: page errors observed in this test (all pages/contexts). Depends on _qaPolicy so it is reset first.\n  66 |   errors: async ({ _qaPolicy }, use) => { void _qaPolicy; await use(pageErrors); },\n    at Object.exports.test._test.test.extend._qaPolicy.auto (/home/moose/nextjs/10XLAB/stark-ai-workbench-nextjs-frontend-v2/agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/AUTOMATION/specs/_qa.ts:63:34)"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-11T12:03:24.403Z",
+                  "annotations": [
+                    {
+                      "type": "fail",
+                      "description": "detector control: the policy fixture must fail this test",
+                      "location": {
+                        "file": "/home/moose/nextjs/10XLAB/stark-ai-workbench-nextjs-frontend-v2/agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/AUTOMATION/specs/s00_policy_controls.spec.ts",
+                        "line": 48,
+                        "column": 8
+                      }
+                    }
+                  ],
+                  "attachments": [
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/home/moose/nextjs/10XLAB/stark-ai-workbench-nextjs-frontend-v2/agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002/acceptance/G/artifacts/s00_policy_controls-C-04-a-697b7--the-test-expected-failure-/error-context.md"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/home/moose/nextjs/10XLAB/stark-ai-workbench-nextjs-frontend-v2/agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/AUTOMATION/specs/_qa.ts",
+                    "column": 34,
+                    "line": 63
+                  }
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "2d8baf4fc312347df16e-c5ba667b003d3a9ab670",
+          "file": "s00_policy_controls.spec.ts",
+          "line": 47,
+          "column": 5
+        }
+      ]
+    },
+    {
+      "title": "s01_04_directory_nav_recents.spec.ts",
+      "file": "s01_04_directory_nav_recents.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "S-01 directory filter is local, case-insensitive over name+description; distinct no-results; no service calls",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 792,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-11T12:03:24.916Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "d5577b42770dfc1aa3a4-dca947369cbd41ce4f9c",
+          "file": "s01_04_directory_nav_recents.spec.ts",
+          "line": 4,
+          "column": 5
+        },
+        {
+          "title": "S-01 empty / loading / unavailable roster are distinct and fabricate nothing",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 944,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-11T12:03:25.717Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "d5577b42770dfc1aa3a4-ce74c51573b97b7f469d",
+          "file": "s01_04_directory_nav_recents.spec.ts",
+          "line": 24,
+          "column": 5
+        },
+        {
+          "title": "S-02 alternate rosters use the same components; neutral fallbacks; approved roster renders exactly",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 982,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-11T12:03:26.669Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "d5577b42770dfc1aa3a4-dde6871dc1aec588f511",
+          "file": "s01_04_directory_nav_recents.spec.ts",
+          "line": 33,
+          "column": 5
+        },
+        {
+          "title": "S-03 view identity: directory→workspace→conversation→draft, Back×3/Forward×3; encoded IDs",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1677,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-11T12:03:27.659Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "d5577b42770dfc1aa3a4-cbf0ecb7992956f7987a",
+          "file": "s01_04_directory_nav_recents.spec.ts",
+          "line": 47,
+          "column": 5
+        },
+        {
+          "title": "S-03 invalid/contradictory selectors: safe unavailable state, zero service calls",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 2406,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-11T12:03:29.345Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "d5577b42770dfc1aa3a4-9de6a836bff4604a94f2",
+          "file": "s01_04_directory_nav_recents.spec.ts",
+          "line": 67,
+          "column": 5
+        },
+        {
+          "title": "S-04 recents: ready/empty/loading/unavailable/partial/recovered are distinct; retry and recovery make no writes",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1860,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-11T12:03:31.757Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "d5577b42770dfc1aa3a4-44071c9718ce84aecfea",
+          "file": "s01_04_directory_nav_recents.spec.ts",
+          "line": 74,
+          "column": 5
+        }
+      ]
+    },
+    {
+      "title": "s05_07_transcript_composer_draft.spec.ts",
+      "file": "s05_07_transcript_composer_draft.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "S-05 transcript: markdown/GFM/code render; no injected markup executes; long content scrolls in its own region",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1218,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-11T12:03:33.633Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "52c21e1d80bfb60dda61-38c59fbb7beb7d9966c0",
+          "file": "s05_07_transcript_composer_draft.spec.ts",
+          "line": 4,
+          "column": 5
+        },
+        {
+          "title": "S-06 composer: whitespace rejected; single send on Enter; repeat blocked while pending; Shift+Enter newline; IME Enter ignored",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 675,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-11T12:03:34.866Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "52c21e1d80bfb60dda61-c1b51c2e2a1adfeda349",
+          "file": "s05_07_transcript_composer_draft.spec.ts",
+          "line": 29,
+          "column": 5
+        },
+        {
+          "title": "S-06 composer stays reachable at 375 with a long thread",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 491,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-11T12:03:35.552Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "52c21e1d80bfb60dda61-277a9935467c1fcde9ed",
+          "file": "s05_07_transcript_composer_draft.spec.ts",
+          "line": 46,
+          "column": 5
+        },
+        {
+          "title": "S-07 New Chat: fresh local draft, clears old draft, no create/run before send; returned ID binds once; late result never hijacks",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1213,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-11T12:03:36.050Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "52c21e1d80bfb60dda61-d47434c9f6bc00f05b75",
+          "file": "s05_07_transcript_composer_draft.spec.ts",
+          "line": 51,
+          "column": 5
+        }
+      ]
+    },
+    {
+      "title": "s08_11_states_mutations.spec.ts",
+      "file": "s08_11_states_mutations.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "S-08 missing / unavailable / access-unavailable are distinct from empty with constrained actions",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1586,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-11T12:03:37.274Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "01ddb5ce864b13f110f3-7ca61a8efe5d35465ee6",
+          "file": "s08_11_states_mutations.spec.ts",
+          "line": 8,
+          "column": 5
+        },
+        {
+          "title": "S-09 unknown outcome (resolved-uncertain): send paused, attempted text visible, only history inspection, never \"not sent\"",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 589,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-11T12:03:38.869Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "01ddb5ce864b13f110f3-33d7f956b1750f3d2993",
+          "file": "s08_11_states_mutations.spec.ts",
+          "line": 27,
+          "column": 7
+        },
+        {
+          "title": "S-09 unknown outcome (rejected-throw): send paused, attempted text visible, only history inspection, never \"not sent\"",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 569,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-11T12:03:39.470Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "01ddb5ce864b13f110f3-4eed85d05e75d5ce9fea",
+          "file": "s08_11_states_mutations.spec.ts",
+          "line": 27,
+          "column": 7
+        },
+        {
+          "title": "S-09 unknown outcome (pending-35s-then-timeout): send paused, attempted text visible, only history inspection, never \"not sent\"",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 90000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 35627,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-11T12:03:40.052Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "01ddb5ce864b13f110f3-087be6b557fda7e161d9",
+          "file": "s08_11_states_mutations.spec.ts",
+          "line": 27,
+          "column": 7
+        },
+        {
+          "title": "S-09 confirmed not-sent keeps an editable draft and requires deliberate send",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1083,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-11T12:04:15.687Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "01ddb5ce864b13f110f3-4f3bb0397c8ddffead37",
+          "file": "s08_11_states_mutations.spec.ts",
+          "line": 49,
+          "column": 5
+        },
+        {
+          "title": "S-10 pending status; metadata warning keeps ID/transcript and offers list read only",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 582,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-11T12:04:16.780Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "01ddb5ce864b13f110f3-afcb70f9bf3930977672",
+          "file": "s08_11_states_mutations.spec.ts",
+          "line": 57,
+          "column": 5
+        },
+        {
+          "title": "S-10 late history cannot paint another session; identity switch mid-flight cannot surface prior-user content",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1706,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-11T12:04:17.377Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "01ddb5ce864b13f110f3-c083b9a62ad5ac776f7c",
+          "file": "s08_11_states_mutations.spec.ts",
+          "line": 68,
+          "column": 5
+        },
+        {
+          "title": "S-11 rename/archive: whitespace rejected, literal punctuation, failure retention, archive hides only, focus destinations",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1406,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-11T12:04:19.091Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "01ddb5ce864b13f110f3-a702b870d6349025287f",
+          "file": "s08_11_states_mutations.spec.ts",
+          "line": 88,
+          "column": 5
+        }
+      ]
+    },
+    {
+      "title": "s12_16_demo_theme_render.spec.ts",
+      "file": "s12_16_demo_theme_render.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "S-12 demo context: permanent disclosure; edit/add/preview/remove make no network, upload or service calls",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 823,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-11T12:04:20.508Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "69acbef6a63235523fd5-3ccb377e441727aa4a00",
+          "file": "s12_16_demo_theme_render.spec.ts",
+          "line": 10,
+          "column": 5
+        },
+        {
+          "title": "S-13 demo state is per agent and per identity; reload/reset clear it; never persisted",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1279,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-11T12:04:21.337Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "69acbef6a63235523fd5-857e47aa51a4436a7bd3",
+          "file": "s12_16_demo_theme_render.spec.ts",
+          "line": 28,
+          "column": 5
+        },
+        {
+          "title": "S-14 theme: dark when unset (either OS scheme); saved light honored; saved system not rewritten; tokens match design",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 3246,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-11T12:04:22.626Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "69acbef6a63235523fd5-d07f505e134e89095295",
+          "file": "s12_16_demo_theme_render.spec.ts",
+          "line": 45,
+          "column": 5
+        },
+        {
+          "title": "S-15 scope: sibling styles unchanged by workspace CSS; dialogs themed on first visible frame; portal/listener teardown",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1421,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-11T12:04:25.885Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "69acbef6a63235523fd5-1060c01eb28dee83cdc9",
+          "file": "s12_16_demo_theme_render.spec.ts",
+          "line": 65,
+          "column": 5
+        },
+        {
+          "title": "S-16 render matrix 3 views × 2 themes × 375/768/1280 + 1023/1024/1025 + DPR2 spot check",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 240000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 17499,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-11T12:04:27.312Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "69acbef6a63235523fd5-e71bd0e7d5fa3bf9bf07",
+          "file": "s12_16_demo_theme_render.spec.ts",
+          "line": 86,
+          "column": 5
+        }
+      ]
+    },
+    {
+      "title": "s17_19_a11y_copy_obs.spec.ts",
+      "file": "s17_19_a11y_copy_obs.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "S-17 drawer (375 dark): focus contained, background inert, Escape/backdrop/Close dismiss and restore; breakpoint crossing closes and focuses visible nav",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1904,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-11T12:04:44.828Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "8585d6c9271aa24020a3-a97272646bb182798502",
+          "file": "s17_19_a11y_copy_obs.spec.ts",
+          "line": 8,
+          "column": 5
+        },
+        {
+          "title": "S-17 context dialog (1280 light) and nested demo dialog (768 dark): containment, nested Escape, restore",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 813,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-11T12:04:46.742Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "8585d6c9271aa24020a3-f45e3f2fff95ce5bb838",
+          "file": "s17_19_a11y_copy_obs.spec.ts",
+          "line": 34,
+          "column": 5
+        },
+        {
+          "title": "S-17 controls: accessible names and ≥44×44 targets; hidden desktop/mobile copies unfocusable",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 4455,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-11T12:04:47.568Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "8585d6c9271aa24020a3-e64351bf7f1aa5998448",
+          "file": "s17_19_a11y_copy_obs.spec.ts",
+          "line": 46,
+          "column": 5
+        },
+        {
+          "title": "S-18 disclosure by breakpoint, resize focus rescue, keyboard skip link, single aria-current, readable pending status, real theme, measured focus contrast",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 2269,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-11T12:04:52.033Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "8585d6c9271aa24020a3-3598e1df80fad2d84002",
+          "file": "s17_19_a11y_copy_obs.spec.ts",
+          "line": 89,
+          "column": 5
+        },
+        {
+          "title": "S-19 copy payloads, blocked clipboard fallback, speech lifecycle, unavailable explanation, no autoplay",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1319,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-11T12:04:54.314Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "8585d6c9271aa24020a3-4c584398294399a6db6e",
+          "file": "s17_19_a11y_copy_obs.spec.ts",
+          "line": 147,
+          "column": 5
+        },
+        {
+          "title": "DIRECTOR-OBS-001 §11.3 browser A+B: two successful new chats both stay in recents; reopening A shows only A; no hidden archive/delete/recreate",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1064,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-11T12:04:55.645Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "8585d6c9271aa24020a3-6c7146ed41a1aa06b68c",
+          "file": "s17_19_a11y_copy_obs.spec.ts",
+          "line": 173,
+          "column": 5
+        }
+      ]
+    },
+    {
+      "title": "s20_root_font_collateral.spec.ts",
+      "file": "s20_root_font_collateral.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "S-20 root font collateral: committed subsets load and match bytes; blocked fonts fall back without overflow; both themes at 375/1280",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 3191,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-11T12:04:56.723Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "9be8c88d0b8306d5b26a-d2e892fd5b48d65c3877",
+          "file": "s20_root_font_collateral.spec.ts",
+          "line": 13,
+          "column": 5
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-10-11T12:03:17.697Z",
+    "duration": 102314.671,
+    "expected": 34,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  }
+}

@@ -1,0 +1,43 @@
+
+Running 4 tests using 1 worker
+
+  ✘  1 agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/AUTOMATION/specs/s00_policy_controls.spec.ts:10:5 › C-01 off-origin request is aborted and logged by the browser interceptor in default, manual, newPage and popup contexts (532ms)
+  ✓  2 agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/AUTOMATION/specs/s00_policy_controls.spec.ts:26:5 › C-02 page errors are captured from every page and only the labelled synthetic is consumed (1.0s)
+  ✓  3 agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/AUTOMATION/specs/s00_policy_controls.spec.ts:37:5 › C-03 WebSocket transport is intercepted and closed (444ms)
+  ✘  4 agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/AUTOMATION/specs/s00_policy_controls.spec.ts:47:5 › C-04 an unconsumed policy event fails the test (expected failure) (466ms)
+
+
+  1) agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/AUTOMATION/specs/s00_policy_controls.spec.ts:10:5 › C-01 off-origin request is aborted and logged by the browser interceptor in default, manual, newPage and popup contexts 
+
+    Error: [2mexpect([22m[31mreceived[39m[2m).[22mtoBe[2m([22m[32mexpected[39m[2m) // Object.is equality[22m
+
+    Expected: [32m"net::ERR_BLOCKED_BY_CLIENT"[39m
+    Received: [31m"net::ERR_BLOCKED_BY_CLIENT[7m.Inspector[27m"[39m
+
+      11 |   page.on('requestfailed', r => { failures.default = r.failure()?.errorText ?? null; });
+      12 |   await open(page); expect(await probe(page)).toMatch(/^rejected:/);
+    > 13 |   expect(failures.default).toBe('net::ERR_BLOCKED_BY_CLIENT'); // interceptor abort, not a DNS/network failure
+         |                            ^
+      14 |   const manual = await browser.newContext(); const mp = await manual.newPage(); mp.on('requestfailed', r => { failures.manual = r.failure()?.errorText ?? null; });
+      15 |   await open(mp); expect(await probe(mp)).toMatch(/^rejected:/); expect(failures.manual).toBe('net::ERR_BLOCKED_BY_CLIENT');
+      16 |   const np = await browser.newPage(); await open(np); expect(await probe(np)).toMatch(/^rejected:/);
+        at /home/moose/nextjs/10XLAB/stark-ai-workbench-nextjs-frontend-v2/agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/AUTOMATION/specs/s00_policy_controls.spec.ts:13:28
+
+    Error: QA_POLICY_UNEXPECTED_EVENTS [{"kind":"request-offorigin-observed","detail":"https://qa-control.example.invalid/probe","at":1791720051018},{"kind":"request-blocked","detail":"https://qa-control.example.invalid/probe","at":1791720051018}]
+
+       at _qa.ts:63
+
+      61 |     fs.writeFileSync(path.join(OUT, 'ledgers', `${slug}.json`), JSON.stringify({ test: testInfo.titlePath.slice(1), status: testInfo.status, origin: ORIGIN,
+      62 |       counters: policyCounters(), events: policy.events, unexpected: unexpected.length }, null, 2) + '\n');
+    > 63 |     if (unexpected.length) throw new Error(`QA_POLICY_UNEXPECTED_EVENTS ${JSON.stringify(unexpected)}`);
+         |                                  ^
+      64 |   }, { auto: true }],
+      65 |   // Compat for attempt-001 specs: page errors observed in this test (all pages/contexts). Depends on _qaPolicy so it is reset first.
+      66 |   errors: async ({ _qaPolicy }, use) => { void _qaPolicy; await use(pageErrors); },
+        at Object.exports.test._test.test.extend._qaPolicy.auto (/home/moose/nextjs/10XLAB/stark-ai-workbench-nextjs-frontend-v2/agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/AUTOMATION/specs/_qa.ts:63:34)
+
+    Error Context: agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002/preparation/policy-controls/artifacts/s00_policy_controls-C-01-o-5eb20--newPage-and-popup-contexts/error-context.md
+
+  1 failed
+    agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/AUTOMATION/specs/s00_policy_controls.spec.ts:10:5 › C-01 off-origin request is aborted and logged by the browser interceptor in default, manual, newPage and popup contexts 
+  3 passed (6.8s)

@@ -1,0 +1,35 @@
+{
+  "directory-375": [
+    {
+      "tag": "A",
+      "name": "Agents",
+      "w": 40,
+      "h": 44,
+      "inProse": false,
+      "skip": false
+    }
+  ],
+  "workspace-375": [
+    {
+      "tag": "A",
+      "name": "Agents",
+      "w": 40,
+      "h": 44,
+      "inProse": false,
+      "skip": false
+    }
+  ],
+  "conversation-375": [
+    {
+      "tag": "A",
+      "name": "Agents",
+      "w": 40,
+      "h": 44,
+      "inProse": false,
+      "skip": false
+    }
+  ],
+  "directory-1280": [],
+  "workspace-1280": [],
+  "conversation-1280": []
+}

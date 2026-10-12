@@ -1,0 +1,14 @@
+{
+  "current": {
+    "inDesktop": true,
+    "ariaCurrent": "page",
+    "text": "Kestrel Ops",
+    "visible": true,
+    "portals": 0,
+    "inert": false
+  },
+  "fallback": {
+    "text": "All agents",
+    "inDesktop": true
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "started_at": "2026-10-08T07:16:40.316566+00:00",
+  "authorized_invocations": 1,
+  "command": [
+    "unshare",
+    "-rn",
+    "npm",
+    "test",
+    "--",
+    "--runInBand",
+    "--runTestsByPath",
+    "src/__tests__/admin/AddMemberForm.test.tsx",
+    "--testNamePattern=^AddMemberForm does not redirect when addMember returns an error$",
+    "--json",
+    "--outputFile=/home/moose/nextjs/10XLAB/stark-ai-workbench-nextjs-frontend-v2/agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/addmember-diagnostic-001/2026-10-08_131602_BDT/isolated.json"
+  ]
+}

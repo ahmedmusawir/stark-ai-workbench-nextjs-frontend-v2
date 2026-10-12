@@ -1,0 +1,18 @@
+{
+  "command": [
+    "unshare",
+    "-rn",
+    "npm",
+    "test",
+    "--",
+    "--runInBand",
+    "--json",
+    "--outputFile=/home/moose/nextjs/10XLAB/stark-ai-workbench-nextjs-frontend-v2/agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/engineering-repair-001/full.json"
+  ],
+  "cwd": "/home/moose/nextjs/10XLAB/stark-ai-workbench-nextjs-frontend-v2",
+  "started_at": "2026-10-08T04:57:28.152595+00:00",
+  "seconds": 9.406,
+  "exit_code": 0,
+  "log": "full.log",
+  "network": "unshare -rn; no network interfaces except down loopback; no QA font hook"
+}

@@ -1,0 +1,7 @@
+# Evidence reference set
+
+SOURCE_RECON is source evidence from 3 October at the recorded HEAD, not current acceptance. Its initial live-probe BLOCKED result was superseded by the 4 October direct-cloud continuation summarized below. THEME_SOURCE_NOTES is the verified source extraction at the same HEAD. The original phase map establishes phase split. QAM_MASTER_DRAFT_REFERENCE and FFM_OPERATING_MODEL_REFERENCE are historical/reference bodies interpreted through this module GOVERNANCE and dated rulings, not additional active missions or gate systems.
+
+Live continuation already reviewed by Architect: Greeting Agent, dedicated user stark-apbm-probe-20261004-7c7e479f, sessions session-a/session-b, separate markers amber-lantern-7c7e and blue-orbit-479f. Both listed and marker-free resume returned their own marker. Final stored events preserved original prefixes, four events each, disjoint event IDs, no cross-marker or tool events. HTTP success supports the tested native API case only. Calls did not establish actual database provider/version, frontend auth or Hermes isolation. Raw provider payloads/private state are not needed in the UI launch packet. No additional live call budget granted here.
+
+Evidence baseline source is the user's uploaded recon/theme/design packages. Architect works from exported evidence, not a mounted copy of Tony's repo. Engineer's bounded baseline check must detect material drift before edits.

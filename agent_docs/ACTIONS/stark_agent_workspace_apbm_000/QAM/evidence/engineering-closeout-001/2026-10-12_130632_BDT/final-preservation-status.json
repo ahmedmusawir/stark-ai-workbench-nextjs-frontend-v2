@@ -1,0 +1,61 @@
+{
+  "recorded_at": "2026-10-12T13:19:22.345118+06:00",
+  "candidate": "8eb5789d9021ad06c15db36db74419a2b5c68fc5",
+  "branch": "qa/frontend-apbm-000",
+  "index_empty": true,
+  "no_product_test_configuration_dependency_roster_drift": true,
+  "protected_tracked_files_equal_candidate": 223,
+  "preexisting_qam_files_preserved_outside_authorized_docs": 1170,
+  "allowed_documentation_updates": [
+    "CLAUDE.md",
+    "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/START_HERE.md",
+    "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/ENGINEERING_ENTRY.md",
+    "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/QAM_ENTRY.md",
+    "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/QAM_STATE.json",
+    "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/QAM_CHECKPOINTS.md",
+    "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/QAM_MANIFEST.md",
+    "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/QA_RECOVERY.md",
+    "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/HANDOFFS/QA_HANDOFF.md",
+    "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/QA_CERTIFICATION.md",
+    "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/QA_CLEANUP_REPORT.md"
+  ],
+  "preserved_append_prefixes": [
+    "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/QAM_CHECKPOINTS.md",
+    "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/QAM_MANIFEST.md",
+    "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/QA_RECOVERY.md",
+    "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/HANDOFFS/QA_HANDOFF.md",
+    "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/QA_CERTIFICATION.md",
+    "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/QA_CLEANUP_REPORT.md"
+  ],
+  "entire_previous_state_preserved_in_history": true,
+  "root_recovery_equals_head": true,
+  "retained_stage_e_dev_paths_and_stats_unchanged": 1121,
+  "held_download_archive_copies_preserved": [
+    {
+      "downloads_path": "/home/moose/Downloads/APBM000_Q2_attempt-002_ADDENDUM-001_2026-10-11_183315_BDT.zip",
+      "byte_identical_preserved_repository_original": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/HANDOFFS/Q2_attempt-002_ADDENDUM-001.zip"
+    },
+    {
+      "downloads_path": "/home/moose/Downloads/APBM000_Q5_attempt-002_2026-10-11_192614_BDT.zip",
+      "byte_identical_preserved_repository_original": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/HANDOFFS/Q5_attempt-002.zip"
+    },
+    {
+      "downloads_path": "/home/moose/Downloads/APBM000_Q5_attempt-002_REVIEW-002_2026-10-12_120138_BDT.zip",
+      "byte_identical_preserved_repository_original": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/HANDOFFS/Q5_attempt-002_REVIEW-002.zip"
+    }
+  ],
+  "git_status_counts_at_capture": {
+    " M": 21,
+    "??": 579
+  },
+  "working_tree_clean": false,
+  "git_integration": "PENDING TONY",
+  "engineering_closeout": "IN PROGRESS",
+  "review_readiness": "READY FOR ARCHITECT REVIEW / DIRECTOR DISPOSITION",
+  "apbm_001": "NOT LAUNCHED",
+  "tests_build_live_probes": 0,
+  "git_mutations": 0,
+  "private_file_reads_or_hashes": 0,
+  "cleanup_relocation_actions": 0,
+  "proposed_list_exclusions": "PASS"
+}

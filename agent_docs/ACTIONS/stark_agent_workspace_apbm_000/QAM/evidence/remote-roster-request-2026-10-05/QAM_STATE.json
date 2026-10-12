@@ -1,0 +1,42 @@
+{
+  "module_id": "stark_agent_workspace_apbm_000",
+  "packet_version": "1.0",
+  "stage": "Q2_RELEASED_HELD_AT_Q2_0_AWAITING_REBIND",
+  "evidence_baseline_sha": "20ef380bdd6eed5e111d953d6404992add7a88a6",
+  "product_candidate_sha": "22ce03ba3871ea53e5253f2e3f060a1bab3226a3",
+  "qa_head_sha": "f21564cacb563ecddbf78b1685086c9489bf1c26",
+  "qa_head_note": "2f488e4 = Tony's Q1 QAM documentation commit; 22ce03b is its ancestor. Full intervening-path and working-tree equality is re-proved at Q2-0 by the Q2 identity instrument (plan v0.2 \u00a711.1).",
+  "qa_branch": "qa/frontend-apbm-000",
+  "plan_id": "QA-APBM000-PLAN v0.2 (Lead-approved)",
+  "plan_sha256": "8ddb743f1be09d624bf79c8a602ad05fbd3cffbffbc2d8c6cfbaee16f8b80337",
+  "superseded_plan_sha256": "61ed590afcef110fb8135f1e85b332cc48f5ba704d6d84e813f4cd09f40179bd",
+  "acceptance_sha256": "57f8d9f4dec8ca826326067254b0916ef65ccd51b635a8ac6ead73e8ab469fcc",
+  "rulings_sha256": "99d4c40f7094106f4386d4d8ff5535228feb653dcbe0fd948a14a0ff1ec3b36f",
+  "qa_lead_approval_record": "QAM/Q1B_REVIEW.md sha256 ce02c5cb5432c688e25801000742d0f69ec7778c7ed1fea70badffd4d451fe2f (installed byte-exact 2026-10-05; NOT YET COMMITTED)",
+  "director_q2_release_record": "HANDOFFS/DIRECTOR_Q2_RELEASE_2026-10-05_193516.md (verbatim; D4 ALLOW, D7 OMIT; release conditional on commit verification)",
+  "director_pending": [],
+  "q2_blockers": [
+    "Execution HEAD f21564c carries Director product-config delta vs candidate 22ce03b (agents.manifest.json roster, -hermes added, copy deleted): fresh Lead candidate binding + Architect R000-03/AC000-21 ruling required (HANDOFFS/Q2_RULING_REQUEST_2026-10-05_193516.md)"
+  ],
+  "open_findings": [
+    "FINDINGS/DIRECTOR-OBS-001.md (UNTRIAGED) + DIRECTOR-OBS-001_EXECUTOR-ADDENDUM-001.md"
+  ],
+  "attempt": 1,
+  "last_completed_checkpoint": "Q1B (Lead plan approval)",
+  "next_action": "Architect ruling + Lead rebind (recommended: candidate f21564c). Then Executor re-verifies identity and runs Q2 under the recorded release.",
+  "gate_q": "NOT_ISSUED",
+  "note": "Routing aid only; no field grants permission without its owner record.",
+  "nonblocking": [
+    "Module-root QA_HANDOFF.md pointer present: Architect/Cody placement correction",
+    "N1 acknowledgement"
+  ],
+  "q2_prep": "evidence/q2-prep-002/identity-post-restore.json raw_verdict PRODUCT_EQUIVALENT (0 blocking); q2-prep-001 preserved",
+  "resolved_2026_10_05": [
+    "manifest restored by Tony (sha 638e95a1 = candidate)",
+    "dev server already stopped (no Executor kill)",
+    "agents.manifest_hermes.json backed up to ~/APBM000_backups/agents.manifest_hermes_2026-10-05_184317.json and removed",
+    "next-env.d.ts restored to pinned 7b550dda"
+  ],
+  "diagnostics": "evidence/q2-prep-003: Jest at f21564c 286 pass / 1 fail (only class C remains); identity raw PRODUCT_DRIFT_OR_IDENTITY_FAILURE (config only)",
+  "standing_director_constraint": "Executor never changes/restores/renames config/agents.manifest*.json"
+}

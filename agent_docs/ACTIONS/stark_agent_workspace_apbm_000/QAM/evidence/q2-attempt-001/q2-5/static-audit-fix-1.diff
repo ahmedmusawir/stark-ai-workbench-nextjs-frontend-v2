@@ -1,0 +1,12 @@
+41c41
+< const wsOnly = closure(WS.filter(f => /\.tsx?$/.test(f) && !/WorkspaceEntry|productionAdapter/.test(f)));
+---
+> const wsOnly = closure(WS.filter(f => /\.tsx?$/.test(f) && !/WorkspaceEntry|productionAdapter|chat[\\/]page\.tsx$/.test(f)));
+59c59
+<   postcss.parse(css).walkAtRules(a => { if (!/^(media|supports|keyframes|-webkit-keyframes|font-face|layer|container)$/.test(a.name)) at.push('@' + a.name); });
+---
+>   postcss.parse(css).walkAtRules(a => { if (!/^(charset|media|supports|keyframes|-webkit-keyframes|font-face|layer|container)$/.test(a.name)) at.push('@' + a.name); });
+75c75
+<   workspace_source_review_toolbar_or_fixture_controls: WS.map(rel).filter(f => /toolbar|fixture|preview selector|sample account/i.test(read(path.join(ROOT, f)))),
+---
+>   workspace_source_review_toolbar_or_fixture_controls: WS.map(rel).filter(f => /toolbar|fixture|preview selector|sample account/i.test(read(path.join(ROOT, f)).replace(/\/\*[\s\S]*?\*\//g, '').replace(/^\s*\/\/.*$/gm, ''))),

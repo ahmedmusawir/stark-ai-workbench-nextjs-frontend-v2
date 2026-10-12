@@ -1,0 +1,103 @@
+{
+  "recorded_at": "2026-10-07T18:57:54.868601+06:00",
+  "source_zip": "~/Downloads/APBM000_REMOTE_ROSTER_LEAD_APPROVAL_2026-10-07.zip",
+  "source_zip_sha256": "314dd2645de5f4ceff6adec0d0ab86110849729123602336e10a81308d7cac43",
+  "crc": "PASS",
+  "members": 7,
+  "index_checks": [
+    {
+      "path": "QAM/HANDOFFS/CLAUDY_REMOTE_ROSTER_CONTINUATION_2026-10-07.txt",
+      "expected": "63eb83d5768428177046b1c422194900418ee001762424b657a64d90a88e6b53",
+      "installed": "63eb83d5768428177046b1c422194900418ee001762424b657a64d90a88e6b53",
+      "ok": true
+    },
+    {
+      "path": "QAM/HANDOFFS/LEAD_REMOTE_ROSTER_APPROVAL_2026-10-07.md",
+      "expected": "c0380dfcb951755b82af06881013635d60cad61829697978107e33b6f7fcef53",
+      "installed": "c0380dfcb951755b82af06881013635d60cad61829697978107e33b6f7fcef53",
+      "ok": true
+    },
+    {
+      "path": "QAM/HANDOFFS/LEAD_REMOTE_ROSTER_BINDING_HASHES_2026-10-07.json",
+      "expected": "0ccefad21aa22eda91f400923722f276f31a79b326d93d9e05d1d1d52bc9d80c",
+      "installed": "0ccefad21aa22eda91f400923722f276f31a79b326d93d9e05d1d1d52bc9d80c",
+      "ok": true
+    },
+    {
+      "path": "QAM/HANDOFFS/LEAD_RETURN_START_HERE_2026-10-07.md",
+      "expected": "8d7aec51969323dce68b2e4dba975b2b54165461fd911d7ad93b912c36c50d51",
+      "installed": "8d7aec51969323dce68b2e4dba975b2b54165461fd911d7ad93b912c36c50d51",
+      "ok": true
+    },
+    {
+      "path": "QAM/HANDOFFS/LEAD_REVIEWED_QAM_PATHS_2026-10-07.json",
+      "expected": "ee6cd6f97255bdd0038fd5e48b17fdbf77fb0337f812cb69cfa4c8c325d2984c",
+      "installed": "ee6cd6f97255bdd0038fd5e48b17fdbf77fb0337f812cb69cfa4c8c325d2984c",
+      "ok": true
+    },
+    {
+      "path": "QAM/evidence/lead-remote-roster-review-2026-10-07/VERIFICATION.json",
+      "expected": "368e8b7338df2665d54e3daaf6755ff39ff82575b2d5ae1d0b7c3ae535320140",
+      "installed": "368e8b7338df2665d54e3daaf6755ff39ff82575b2d5ae1d0b7c3ae535320140",
+      "ok": true
+    }
+  ],
+  "index_self_excluded": "QAM/HANDOFFS/LEAD_REMOTE_ROSTER_PACKAGE_INDEX_2026-10-07.json (by design)",
+  "binding_checks": [
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/QAM_TEST_PLAN.md",
+      "expected": "8ddb743f1be09d624bf79c8a602ad05fbd3cffbffbc2d8c6cfbaee16f8b80337",
+      "actual": "8ddb743f1be09d624bf79c8a602ad05fbd3cffbffbc2d8c6cfbaee16f8b80337",
+      "ok": true
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/Q1B_REVIEW.md",
+      "expected": "ce02c5cb5432c688e25801000742d0f69ec7778c7ed1fea70badffd4d451fe2f",
+      "actual": "ce02c5cb5432c688e25801000742d0f69ec7778c7ed1fea70badffd4d451fe2f",
+      "ok": true
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/ACCEPTANCE_SPEC.md",
+      "expected": "57f8d9f4dec8ca826326067254b0916ef65ccd51b635a8ac6ead73e8ab469fcc",
+      "actual": "57f8d9f4dec8ca826326067254b0916ef65ccd51b635a8ac6ead73e8ab469fcc",
+      "ok": true
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/RULINGS_ADDENDUM.md",
+      "expected": "99d4c40f7094106f4386d4d8ff5535228feb653dcbe0fd948a14a0ff1ec3b36f",
+      "actual": "99d4c40f7094106f4386d4d8ff5535228feb653dcbe0fd948a14a0ff1ec3b36f",
+      "ok": true
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/HANDOFFS/ARCHITECT_REMOTE_ROSTER_AMENDMENT_2026-10-05.md",
+      "expected": "57924e3f046bc521b3a91fe78cd17087e8b2f3dbd6aa05b11439a26cf459c7d9",
+      "actual": "57924e3f046bc521b3a91fe78cd17087e8b2f3dbd6aa05b11439a26cf459c7d9",
+      "ok": true
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/AUTOMATION/q2_identity.py",
+      "expected": "703196058f1d878009d21a2dbdce6fd7dbabfc3341ab449b705af1b969c70f58",
+      "actual": "703196058f1d878009d21a2dbdce6fd7dbabfc3341ab449b705af1b969c70f58",
+      "ok": true
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/AUTOMATION/q2_identity_v2.py",
+      "expected": "cf0968a2b29051eebdba10dd07bb4f36e69efcf35acf4a596acd75ce621cc5a2",
+      "actual": "cf0968a2b29051eebdba10dd07bb4f36e69efcf35acf4a596acd75ce621cc5a2",
+      "ok": true
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/AUTOMATION/roster_amendment_2026-10-05.json",
+      "expected": "8da8cb0b078e61b19e2772ad75d809370ce278fbdf5487ce25bff2b6a7c1bc25",
+      "actual": "8da8cb0b078e61b19e2772ad75d809370ce278fbdf5487ce25bff2b6a7c1bc25",
+      "ok": true
+    },
+    {
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/HANDOFFS/LEAD_REMOTE_ROSTER_APPROVAL_2026-10-07.md",
+      "expected": "c0380dfcb951755b82af06881013635d60cad61829697978107e33b6f7fcef53",
+      "actual": "c0380dfcb951755b82af06881013635d60cad61829697978107e33b6f7fcef53",
+      "ok": true
+    }
+  ],
+  "installed_without_overwrite": true
+}

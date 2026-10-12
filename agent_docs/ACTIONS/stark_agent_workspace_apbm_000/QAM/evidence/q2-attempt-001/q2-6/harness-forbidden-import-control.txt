@@ -1,0 +1,3 @@
+Module not found: Error: Forbidden production dependency in QA fixture harness: @/services/chatService
+
+control_exit=1

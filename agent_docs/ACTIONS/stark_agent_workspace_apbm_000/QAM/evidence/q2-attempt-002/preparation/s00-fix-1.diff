@@ -1,0 +1,14 @@
+--- /home/moose/nextjs/10XLAB/stark-ai-workbench-nextjs-frontend-v2/agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002/preparation/s00_policy_controls.r1.spec.ts.txt	2026-10-11 18:01:14.473054827 +0600
++++ /home/moose/nextjs/10XLAB/stark-ai-workbench-nextjs-frontend-v2/agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/AUTOMATION/specs/s00_policy_controls.spec.ts	2026-10-11 18:01:14.473594499 +0600
+@@ -10,9 +10,9 @@
+ test('C-01 off-origin request is aborted and logged by the browser interceptor in default, manual, newPage and popup contexts', async ({ page, browser }) => {
+   page.on('requestfailed', r => { failures.default = r.failure()?.errorText ?? null; });
+   await open(page); expect(await probe(page)).toMatch(/^rejected:/);
+-  expect(failures.default).toBe('net::ERR_BLOCKED_BY_CLIENT'); // interceptor abort, not a DNS/network failure
++  expect(failures.default).toMatch(/^net::ERR_BLOCKED_BY_CLIENT(\.Inspector)?$/); // interceptor abort (CDP variant), not a DNS/network failure
+   const manual = await browser.newContext(); const mp = await manual.newPage(); mp.on('requestfailed', r => { failures.manual = r.failure()?.errorText ?? null; });
+-  await open(mp); expect(await probe(mp)).toMatch(/^rejected:/); expect(failures.manual).toBe('net::ERR_BLOCKED_BY_CLIENT');
++  await open(mp); expect(await probe(mp)).toMatch(/^rejected:/); expect(failures.manual).toMatch(/^net::ERR_BLOCKED_BY_CLIENT(\.Inspector)?$/);
+   const np = await browser.newPage(); await open(np); expect(await probe(np)).toMatch(/^rejected:/);
+   const [popup] = await Promise.all([page.waitForEvent('popup'), page.evaluate(() => { window.open('/', '_blank'); })]);
+   await popup.waitForLoadState(); expect(await probe(popup)).toMatch(/^rejected:/);

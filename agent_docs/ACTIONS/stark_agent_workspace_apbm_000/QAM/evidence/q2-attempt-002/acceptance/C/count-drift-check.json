@@ -1,0 +1,40 @@
+{
+  "maintained": {
+    "numTotalTestSuites": 40,
+    "numPassedTestSuites": 40,
+    "numTotalTests": 290,
+    "numPassedTests": 290,
+    "numFailedTests": 0,
+    "numPendingTests": 0,
+    "numTodoTests": 0,
+    "success": true
+  },
+  "engineer_latest": {
+    "numTotalTests": 290,
+    "numPassedTests": 290,
+    "numFailedTests": 0,
+    "numPendingTests": 0
+  },
+  "missing_vs_engineer": [],
+  "added_vs_engineer": [],
+  "non_passed": [],
+  "addmember_tests": 7,
+  "signout_tests": 3,
+  "manifest_tests": 15,
+  "qa_jest": {
+    "numTotalTestSuites": 6,
+    "numTotalTests": 31,
+    "numPassedTests": 31,
+    "numFailedTests": 0,
+    "numPendingTests": 0
+  },
+  "qa_missing_vs_attempt001": [],
+  "qa_added_vs_attempt001": [
+    "F01 getter-throws: real stores cleared, one /auth navigation, no rejection, no render-time setter",
+    "F01 normal: real stores cleared, one /auth navigation, no rejection, no render-time setter",
+    "F01 write-throws: real stores cleared, one /auth navigation, no rejection, no render-time setter"
+  ],
+  "attempt001_qa_failed": [
+    "CLASS C seam (real store, storage getter throws): sign-out must still navigate to /auth"
+  ]
+}

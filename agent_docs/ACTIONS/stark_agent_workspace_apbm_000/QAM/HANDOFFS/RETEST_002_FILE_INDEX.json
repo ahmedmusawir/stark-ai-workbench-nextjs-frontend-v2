@@ -1,0 +1,52 @@
+{
+  "format": "APBM000_RETEST_002_LEAD_DELIVERY",
+  "candidate_sha": "8eb5789d9021ad06c15db36db74419a2b5c68fc5",
+  "plan": "QA-APBM000-PLAN v0.3",
+  "decision": "APPROVED_CONDITIONAL_ON_DIRECTOR_RELEASE_AND_PREFLIGHT",
+  "gate_q": "PENDING",
+  "D4": "ALLOW",
+  "D7": "OMIT",
+  "files": [
+    {
+      "path": "QAM/HANDOFFS/CLAUDY_RETEST_002_PROMPT.txt",
+      "bytes": 3595,
+      "sha256": "fbed994bce48fe7e14544660b51af2945cedcc812b2374c5f67a01064d7b1560"
+    },
+    {
+      "path": "QAM/HANDOFFS/DIRECTOR_RELEASE_002_DRAFT.txt",
+      "bytes": 681,
+      "sha256": "f0b51935de16ce5073ed6c86bed1511e89e328c95f5c5ca3e6eec055389b46a8"
+    },
+    {
+      "path": "QAM/HANDOFFS/LEAD_INTAKE_VERIFICATION_2026-10-11.json",
+      "bytes": 1767,
+      "sha256": "c188b6378a0c823cc82fbf7ab349e3c0779dcded5bbd27b3219ee7df04f3d499"
+    },
+    {
+      "path": "QAM/HANDOFFS/LEAD_RETEST_002_APPROVAL_2026-10-11.md",
+      "bytes": 4547,
+      "sha256": "72e1970dec2fa43d0e8ab72ad57e79a2410f6bda70cea347136d103109a28561"
+    },
+    {
+      "path": "QAM/HANDOFFS/LEAD_RETEST_002_BINDING_2026-10-11.json",
+      "bytes": 103827,
+      "sha256": "06aed917a0b22d804ad7d0c0cb5f2421821b28f75fc95ff40ba43bc66d551939"
+    },
+    {
+      "path": "QAM/HANDOFFS/QAM_TEST_PLAN_v0.2_PRESERVED_2026-10-11.md",
+      "bytes": 37865,
+      "sha256": "8ddb743f1be09d624bf79c8a602ad05fbd3cffbffbc2d8c6cfbaee16f8b80337"
+    },
+    {
+      "path": "QAM/HANDOFFS/RETEST_002_START_HERE.md",
+      "bytes": 1217,
+      "sha256": "d2e0cd9f30aeff5b992acf007b141744901b610b73a9c7312cd43663691e517c"
+    },
+    {
+      "path": "QAM/QAM_TEST_PLAN.md",
+      "bytes": 34842,
+      "sha256": "6b3f5df3e89c6a873684248b4ce790173726218c6379161c100564f785199c04"
+    }
+  ],
+  "self_hash": "Excluded; verify external digest supplied with delivery."
+}

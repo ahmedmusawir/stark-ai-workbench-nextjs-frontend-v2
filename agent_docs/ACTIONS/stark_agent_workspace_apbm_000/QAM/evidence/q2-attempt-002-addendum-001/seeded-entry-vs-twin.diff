@@ -1,0 +1,8 @@
+1,3c1,3
+< // expected-red seed: the QA harness must refuse to bundle a production service import.
+< import { chatService } from '@/services/chatService';
+< console.log(chatService);
+---
+> // expected-green twin of seeded_forbidden_entry.tsx: same shape, allowed import; proves the harness pipeline itself builds.
+> import { workspaceAgentsForUi } from '@/config/manifest';
+> console.log(workspaceAgentsForUi);

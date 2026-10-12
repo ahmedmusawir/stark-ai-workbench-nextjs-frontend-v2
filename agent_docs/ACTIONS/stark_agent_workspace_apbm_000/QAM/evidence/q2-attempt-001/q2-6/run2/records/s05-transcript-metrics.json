@@ -1,0 +1,41 @@
+{
+  "375": {
+    "xss": null,
+    "scripts": 0,
+    "imgs": 0,
+    "jsLinks": 0,
+    "tableScrolls": true,
+    "codeScrolls": true,
+    "overflow": 0,
+    "threadWidth": 375,
+    "userRightGap": 16,
+    "userLeftGap": 223,
+    "bold": 1
+  },
+  "768": {
+    "xss": null,
+    "scripts": 0,
+    "imgs": 0,
+    "jsLinks": 0,
+    "tableScrolls": true,
+    "codeScrolls": true,
+    "overflow": 0,
+    "threadWidth": 768,
+    "userRightGap": 24,
+    "userLeftGap": 608,
+    "bold": 1
+  },
+  "1280": {
+    "xss": null,
+    "scripts": 0,
+    "imgs": 0,
+    "jsLinks": 0,
+    "tableScrolls": true,
+    "codeScrolls": true,
+    "overflow": 0,
+    "threadWidth": 768,
+    "userRightGap": 24,
+    "userLeftGap": 608,
+    "bold": 1
+  }
+}

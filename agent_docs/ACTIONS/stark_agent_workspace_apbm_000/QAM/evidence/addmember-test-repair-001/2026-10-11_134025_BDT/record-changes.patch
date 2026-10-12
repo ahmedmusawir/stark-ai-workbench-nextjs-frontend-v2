@@ -1,0 +1,211 @@
+diff --git a/CHANGELOG.md b/CHANGELOG.md
+index d1d9b1e..499ab86 100644
+--- a/CHANGELOG.md
++++ b/CHANGELOG.md
+@@ -1,5 +1,19 @@
+ # Changelog
+ 
++## 2026-10-11 — [Codex] Cody, Engineer — APBM_000 AddMember test repair 001
++
++- Changed only `src/__tests__/admin/AddMemberForm.test.tsx` source: replaced the loading timer with a controlled, awaited deferred submission; stable toast/local mock resets and terminal-outcome waits retain all seven tests and prior assertions.
++- Source confirms the incomplete pending-submission lifecycle; the historical unexpected callback was not conclusively traced. Original failures/diagnostic evidence preserved.
++- Restored committed dependency verification, each once offline: complete file 7/7, full maintained Jest 290/290 (40 suites), typecheck exit 0. No retries or browser run; production/workspace/dependency/QA instruments unchanged.
++- Recorded Architect authorization, return, new QAM evidence/diff/hashes/staging list and updated canonical handoff. Uncommitted; Gate Q pending; no waiver, independent QA execution or closeout.
++
++## 2026-10-08 — [Codex] Cody, Engineer — APBM_000 dependency reconciliation 001
++
++- Installed and read the supplied Q2 Lead disposition and companion records under module `QAM/HANDOFFS/`; source/member hashes verified, no conflicts or new QA authorization.
++- Preserved the inherited lockfile and exact HEAD diff as dated QAM evidence, restored only the active lockfile from committed HEAD, and installed 782 matching packages using offline `npm ci`; no package.json, product, maintained assertion or Git index changes.
++- Reverification on committed dependencies: focused 64/64, typecheck exit 0, same offline engineering browser 27/27; full Jest 289 passed / 1 failed, exit 1 (unchanged AddMemberForm error-path redirect assertion). No rerun, unrelated fix or waiver.
++- Added dependency-reconciliation return/evidence and updated canonical QA handoff/staging guidance. F01–F04/local Inter and all earlier evidence preserved; independent production build/acceptance remain with Claudy/Lead. Gate Q pending.
++
+ ## 2026-10-04 09:32 UTC — [Codex] Cody, Engineer
+ 
+ - **Created:** `agent_docs/RESPONSES/response_2026-10-04_153205_designer-theme-source-report.md` — mirrored Designer theme-source report, artifact links and next move, saved before display.
+@@ -145,3 +159,12 @@
+ - Appended an Astra-only discovery pointer to shared RECOVERY; preserved existing history and all QA records.
+ - Saved `agent_docs/RESPONSES/response_2026-10-08_090910_astra-reboot-checkpoint.md` before display; no staging performed.
+ - Director clarified the remote-roster assignment belonged to QA/Claudy. Astra will not resume it. Repository package CRC/hash verified; old Downloads copy currently absent; no replacement export or tests run.
++
++## 2026-10-08 05:09 UTC — [Codex] Cody, Engineer — APBM_000 repair 001
++
++- **Repaired:** entry sign-out after real-store persistence failures; visible current drawer-return focus; mobile breadcrumb 44px minimum; independent v1/v2-local URL-env assertions.
++- **Added:** real-store maintained sign-out tests and isolated engineering browser regressions/config; seven exact Inter WOFF2, original OFL/provenance and ordinary CSS font wiring. Root providers/metadata/unrelated behavior preserved.
++- **Recorded:** verbatim Architect instruction, canonical handoff, repair return, commands/exits, font hashes, protected equality, patches/inventory and explicit staging list under QAM. Existing lockfile diff preserved.
++- **Verified:** focused 64/64; full maintained Jest 290/290 (40 suites); typecheck exit 0; offline engineering browser 27/27. Baseline-only AddMemberForm failure and setup iterations retained; no old storage waiver reinstated.
++- **Pending:** missing post-Q2 Lead disposition and next approved independent normal offline build/output separation proof. Gate Q pending; no Q5/closeout. No Git/dependency/backend/API/schema/roster changes by Engineer.
++- **Reason:** Tony's explicit Architect-authorized bounded repair instruction of 8 October 2026.
+diff --git a/agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/HANDOFFS/QA_HANDOFF.md b/agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/HANDOFFS/QA_HANDOFF.md
+index fa405a8..49386c6 100644
+--- a/agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/HANDOFFS/QA_HANDOFF.md
++++ b/agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/HANDOFFS/QA_HANDOFF.md
+@@ -1,3 +1,49 @@
++# Current engineering handoff — AddMember maintained-test repair 001, 11 October 2026
++
++Latest return: [ADDMEMBER_TEST_REPAIR_001_RETURN.md](ADDMEMBER_TEST_REPAIR_001_RETURN.md), authorized by [Architect instruction](ARCHITECT_ADDMEMBER_TEST_REPAIR_001_2026-10-11.md). Only new source delta: `src/__tests__/admin/AddMemberForm.test.tsx`. Branch `qa/frontend-apbm-000`, full HEAD/repair parent `9c50884d4c4513b6969311d5be7c05828104ed3d`; candidate remains **UNCOMMITTED**.
++
++The source-confirmed pending-submission defect is repaired with a controlled deferred loading action that resolves/settles before teardown, explicit terminal success/error waits, stable toast mock and local mock resets. All seven tests and existing assertions/order remain. Historical unexpected callback origin remains untraced; earlier failure/diagnostic evidence is preserved.
++
++On restored committed dependencies, each authorized check ran once: **complete AddMemberForm file 7/7**, then **full maintained Jest 290/290 (40 suites)** and **typecheck exit 0**, with established network denial. No browser rerun was needed. Test-only diff SHA-256 `891ea17411a49f152d73a53ff3bf4d472045359ff85c42c6a9b2f6173cdd300d`; after-test SHA-256 `7464084c92123346d6b123347f3951952ee6585e85119b5391e257718f3629c3`. New results/inventory and [updated staging list](../evidence/addmember-test-repair-001/2026-10-11_134025_BDT/staging-paths.txt) live in `QAM/evidence/addmember-test-repair-001/2026-10-11_134025_BDT/`.
++
++F01–F04/local Inter, production form, global Jest config/setup, dependencies and independent QA instruments are unchanged. No waiver or certificate is issued by these Engineer results. Tony controls commits; Architect/QA Lead must bind the actual candidate/next plan. Claudy retains independent acceptance and the normal installed offline production build/output separation scan. **Gate Q pending; D4 ALLOW/D7 OMIT; no independent attempt, Q5 or closeout.**
++
++---
++
++## Historical dependency reconciliation 001 handoff — preserved
++
++The latest return is [DEPENDENCY_RECONCILIATION_001_RETURN.md](DEPENDENCY_RECONCILIATION_001_RETURN.md). Branch `qa/frontend-apbm-000`, current full HEAD/repair parent `9c50884d4c4513b6969311d5be7c05828104ed3d`; repairs remain **UNCOMMITTED**, with unchanged product patch SHA-256 `fac3f21262dca396f5c7b7d71143bbfff1a0f21a809f0278315f1d4d7beebaaa`.
++
++The supplied [Lead disposition](LEAD_Q2_DISPOSITION_2026-10-07.md) is now installed and read, SHA-256 `d5b120e87fd56b214a7cf32b64433b7c6f8b0f608c2e16937e33052eccc6b94a`. It returns bounded repair/evidence work, invalidates the old F01 waiver and **does not approve a new QA attempt**. Earlier missing-record statements below are historical snapshots.
++
++Tony authorized return to committed dependencies. The inherited lockfile is backed up as evidence (SHA-256 `c62a48123a50b5289a6179ebafb1a13960f1c3636992ddcc0df0b435ebf556eb`). Only `package-lock.json` was restored from HEAD; active SHA-256 `f81ea7545863bf12dcb33912a8d43d042abe06aa7b95ff8831af647cdaaeae49`, unchanged by successful offline `npm ci`. Node v24.15.0 / npm 11.12.1; actual Next 16.2.6, Jest 30.0.5, TypeScript 5.5.4, Playwright 1.59.1, Zustand 4.5.4. No package.json/index/product/test-assertion changes.
++
++**Current reverification:** focused **64/64**, typecheck **exit 0**, same engineering offline browser **27/27**; full maintained Jest **289 passed / 1 failed / 290**, exit **1**. Failure: unchanged `AddMemberForm does not redirect when addMember returns an error`, unexpected `/admin-portal` push. Pending asynchronous test work is a likely but unconfirmed mechanism. This failure is not waived; no rerun or unrelated fix occurred. Full-suite acceptance remains unresolved.
++
++New evidence and [updated explicit staging list](../evidence/dependency-reconciliation-001/2026-10-08_124256_BDT/staging-paths.txt): `QAM/evidence/dependency-reconciliation-001/2026-10-08_124256_BDT/`. All earlier results and original Q2 evidence are preserved. The active lockfile is clean against HEAD; backups are QAM evidence. Archives, caches, credentials and RESPONSES are excluded from staging.
++
++Claudy/Lead retain independent instrument corrections, next-candidate/plan approval, acceptance execution and normal offline production build/output identity/separation scan. **Gate Q pending; no certification, Q5 or closeout. D4 ALLOW, D7 OMIT retained.**
++
++---
++
++## Historical bounded repair 001 handoff — preserved
++
++Cody's authorized F01–F04 and exact local-Inter repair is complete and **UNCOMMITTED** on `qa/frontend-apbm-000`, parent/current HEAD `9c50884d4c4513b6969311d5be7c05828104ed3d`. Full mechanisms, exact changed-file list, font provenance, commands/exits, limitations and independent next work: [ENGINEERING_REPAIR_001_RETURN.md](ENGINEERING_REPAIR_001_RETURN.md).
++
++Repair identity: [product.patch](../evidence/engineering-repair-001/product.patch) SHA-256 `fac3f21262dca396f5c7b7d71143bbfff1a0f21a809f0278315f1d4d7beebaaa`; final [repair-identity.json](../evidence/engineering-repair-001/repair-identity.json). Review the explicit [staging list](../evidence/engineering-repair-001/staging-paths.txt). Pre-existing `package-lock.json` change is preserved and excluded. Tony has not committed this repair; no repaired SHA exists.
++
++Final self-checks: focused maintained Jest **64/64**, full maintained Jest **290/290** (40 suites), typecheck **exit 0**, offline engineering browser **27/27** (18 render combinations). Original Q2 findings/evidence and independent QA assertions/instruments are unchanged. Real-store tests prove in-memory user/chat/draft/demo clearing and navigation under blocked storage; mocked logout does not prove server logout/token revocation. Both literal bundle/env mappings and remote roster remain intact.
++
++Seven Inter binaries/source CSS match original Q2 hashes; license/provenance are in product paths. Seven ranges, 100–900 normal/swap and current fallback metrics retained. Offline loaded/fallback root typography metrics match prior declarations. Normal production build/output identity/separation scan are **NOT RUN here**, owned by the next Lead-approved QA attempt with network denied and no QA font hook.
++
++The post-Q2 7 October QA Lead disposition is missing; installed 7 October roster approval is not that later disposition. [Missing evidence audit](../evidence/engineering-repair-001/MISSING_EVIDENCE.md). Architect's recorded instruction authorizes repair, not independent retest or certification. QA must repin Tony's actual repair commit and obtain a next-attempt approval. **Gate Q pending; no Q5/closeout. D4 ALLOW, D7 OMIT retained.**
++
++---
++
++## Historical 4 October engineering return — preserved verbatim
++
++The following candidate/status/test counts are historical; current repair routing is supplied above. Original evidence is preserved.
++
+ # APBM_000 — factual engineering handoff, engineering attempt 001 / corrected return 002
+ 
+ Tony: review this uncommitted candidate and its 37 individually documented inherited test failures. Selectively commit the reviewed candidate, then hand independent QA the committed identity on intended `qa/frontend-apbm-000` for Q1 intake via `../AGENTS.md`. QA Lead must adjudicate retained failures; Q2 needs its own approved plan and Director release. **No Gate Q certificate is issued.**
+diff --git a/agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/HANDOFFS/ADDMEMBER_TEST_REPAIR_001_RETURN.md b/agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/HANDOFFS/ADDMEMBER_TEST_REPAIR_001_RETURN.md
+new file mode 100644
+index 0000000..571c930
+--- /dev/null
++++ b/agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/HANDOFFS/ADDMEMBER_TEST_REPAIR_001_RETURN.md
+@@ -0,0 +1,57 @@
++# APBM_000 — AddMember maintained-test repair 001 return
++
++Cody, Engineer · 11 October 2026 · **Authorized test repair complete, uncommitted. File 7/7, full Jest 290/290, typecheck exit 0. Gate Q pending.**
++
++## Authority, scope and checkout
++
++[Architect authorization](ARCHITECT_ADDMEMBER_TEST_REPAIR_001_2026-10-11.md) records Tony's instruction verbatim. The only edited source file is **`src/__tests__/admin/AddMemberForm.test.tsx`**. The production form, global Jest setup/config, dependencies, independent QA instruments and completed F01–F04/local Inter repair are unchanged.
++
++Starting/current branch: **`qa/frontend-apbm-000`**. Actual starting/current full HEAD and repair parent: **`9c50884d4c4513b6969311d5be7c05828104ed3d`**. The prior repairs and evidence were already dirty/untracked; full entry status and their hashes are in `entry-state.json`. No index change, branch switch, commit, push or merge occurred. There is no repaired commit SHA. Final working status, cumulative product/test diff and inventory hash identify this uncommitted candidate.
++
++Evidence prefix: `QAM/evidence/addmember-test-repair-001/2026-10-11_134025_BDT/`.
++
++## Source-confirmed defect and repair
++
++The original loading test started a 100ms success promise, asserted the disabled button and ended without awaiting the submission. Its pending action could survive unmount and later use the captured shared router mock. Clearing mock history did not complete or cancel that action. This **incomplete test-submission lifecycle is source-confirmed**. The historical unexpected `/admin-portal` callback was **not conclusively traced**; matching failure signatures and the isolated diagnostic pass did not establish its origin.
++
++The bounded repair:
++
++- Replaces the loading timer with a controlled deferred action. It asserts disabled/loading text and no toast/navigation while unresolved, then explicitly resolves the action inside awaited `act`. A `finally` block settles it even if a loading assertion fails; the test awaits successful navigation and the re-enabled button before finishing.
++- Keeps the correct-data assertion and adds that submission's completed navigation/enabled-state checks. The successful-navigation test likewise waits for its completed enabled state.
++- Uses a stable toast mock, waits for the exact error toast and re-enabled button, then retains the zero-navigation assertion. Each test resets the local action/router/toast mock implementation and history before installing its router mock.
++- Retains all **seven test names, order and original behavior assertions**. Validation tests still await their validation errors and assert no action call. No test was removed, filtered or skipped; no sleeps, increased timeouts, error suppression or assertion weakening were added.
++
++Exact source diff: [test-only.patch](../evidence/addmember-test-repair-001/2026-10-11_134025_BDT/test-only.patch).
++Source hashes:
++
++| Input | SHA-256 |
++| --- | --- |
++| Test before repair | `3b0b12f283c31dc28de3025b6e1ea20b0d6994693a1087d2f0e4aacdbf132761` |
++| Test after repair | `7464084c92123346d6b123347f3951952ee6585e85119b5391e257718f3629c3` |
++| Exact test-only diff | `891ea17411a49f152d73a53ff3bf4d472045359ff85c42c6a9b2f6173cdd300d` |
++| Unchanged production form | `b89690cdb0f50937d6b51a6a902448cc851ffc29bb3552efe8072560b5f19e0a` |
++| Restored active lockfile, matching HEAD | `f81ea7545863bf12dcb33912a8d43d042abe06aa7b95ff8831af647cdaaeae49` |
++
++`source-change.json`, before/after test snapshots and `protected-source-hashes.json` record exact identities. The original workspace repair patch remains `fac3f21262dca396f5c7b7d71143bbfff1a0f21a809f0278315f1d4d7beebaaa`; the new cumulative patch adds this maintained-test delta without altering those 18 prior product/test files.
++
++## Verification — each check once
++
++Actual restored toolchain: **Node v24.15.0, npm 11.12.1, Next 16.2.6, Jest 30.0.5, jest-environment-jsdom 30.3.0, TypeScript 5.5.4, React 19.2.4, Testing Library React 16.3.2**. Installed key versions were verified against the committed lock at entry; no installation or dependency change occurred in this repair. Actual versions are in `entry-state.json`.
++
++| Command inside networkless namespace | Exit | Result / new evidence |
++| --- | ---: | --- |
++| `npm test -- --runInBand --runTestsByPath src/__tests__/admin/AddMemberForm.test.tsx --json --outputFile=<new>/addmember.json` | 0 | **7 passed / 0 failed / 0 skipped**, one complete file run; `addmember-command.json`, `addmember.log`, `addmember.json`. |
++| `npm test -- --runInBand --json --outputFile=<new>/full.json` | 0 | After file pass: **40 suites, 290 passed / 0 failed / 0 skipped**, one full run; `full-command.json`, `full.log`, `full.json`. |
++| `npx --no-install tsc --noEmit` | 0 | After file pass: `typecheck-command.json`, `typecheck.log`, one invocation. |
++
++All commands used the established **`unshare -rn` network denial**, sanitized environment, installed tools and no QA font hook/live service access. Complete argument arrays, timestamps, durations/exits and one-run ledgers are in `*-command.json` and `*-invocation.json`. The runner gates full/typecheck on the file's seven passing tests and prevents repeating an invocation in this evidence folder. No retries, browser rerun, production build or independent QA execution occurred.
++
++Every new result is preserved here. The earlier baseline and restored full-suite failures, diagnostic, isolated-pass evidence and review ZIPs retain their original bytes/results. This passing maintained suite follows an authorized test repair; it does not waive or overwrite the historical failures, certify the product or prove callback attribution.
++
++## Staging and next decision
++
++Updated explicit list: [staging-paths.txt](../evidence/addmember-test-repair-001/2026-10-11_134025_BDT/staging-paths.txt). It carries forward the prior repaired product/safe records, includes the diagnostic and this source change, authorization, return and new evidence, and updates the canonical handoff/changelog. Active `package-lock.json` is excluded because it matches HEAD. Archives, caches, credentials, `.env`, node_modules, RESPONSES and disposable font copies are excluded. All retained backups are labeled evidence under QAM; verified product fonts remain intentional assets. No stage command was executed.
++
++The evidence inventory/identity pins the current source/record diff and staging list without recursive self-hashes. Any generated review ZIP/delivery receipt is an export artifact and is excluded from this proposal; earlier records remain historical snapshots.
++
++Tony reviews and commits selected paths. Architect/QA Lead then bind the actual committed candidate and next retest plan, including the maintained-test delta. Claudy retains independent instrument corrections, acceptance execution and normal installed offline production build/output identity/separation scan after approval. **D4 ALLOW and D7 OMIT remain. Gate Q pending; no waiver, independent attempt, certification, Q5 or closeout.**
+diff --git a/agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/HANDOFFS/ARCHITECT_ADDMEMBER_TEST_REPAIR_001_2026-10-11.md b/agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/HANDOFFS/ARCHITECT_ADDMEMBER_TEST_REPAIR_001_2026-10-11.md
+new file mode 100644
+index 0000000..837637d
+--- /dev/null
++++ b/agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/HANDOFFS/ARCHITECT_ADDMEMBER_TEST_REPAIR_001_2026-10-11.md
+@@ -0,0 +1,51 @@
++# Architect authorization — AddMember maintained-test repair 001
++
++Recorded 2026-10-11T13:40:25.268802+06:00. Tony supplied this explicit bounded authorization; no additional approval requested. Engineer writer ownership retains Tony’s prior confirmation.
++
++## Instruction (verbatim)
++
++Cody — Architect authorizes a bounded maintained-test lifecycle repair.
++
++Read:
++QAM/HANDOFFS/ADDMEMBERFORM_FAILURE_DIAGNOSTIC_001_2026-10-08.md
++
++Authorized source edit ONLY:
++src/__tests__/admin/AddMemberForm.test.tsx
++
++1. Replace the loading test’s 100ms success timer with a controlled
++   deferred promise.
++   - Assert the disabled/loading state while unresolved.
++   - Explicitly resolve it.
++   - Await the completed successful submission before the test ends.
++
++2. Ensure each submission test awaits its own terminal outcome.
++   - Preserve correct-data assertions.
++   - Preserve successful navigation assertions.
++   - Use a stable toast mock to observe the error outcome before
++     asserting that navigation never occurred.
++   - Reset local mock implementations/history appropriately.
++   - Ensure no pending submission survives teardown.
++
++Do not weaken, skip or remove assertions. Do not add arbitrary sleeps,
++increase timeouts, reorder tests to hide the failure, or suppress errors.
++
++Do not edit the production form, global Jest setup/config, dependencies,
++independent QA instruments or the completed workspace repairs.
++
++Verification on the restored committed dependencies:
++- Run the complete AddMemberForm test file once.
++- If it passes, run the full maintained Jest suite once and typecheck.
++- Preserve every result. If a check fails, report it without further
++  retries or scope expansion.
++- No browser rerun is needed for this test-only change.
++
++Record this authorization and the return under QAM/HANDOFFS/.
++Save new evidence under QAM/evidence/addmember-test-repair-001/.
++Include exact diff, commands/results, source hashes and updated staging
++list. Preserve the original failures and diagnostic evidence.
++
++Describe the pending-submission defect as source-confirmed; do not claim
++the historical unexpected callback was conclusively traced.
++
++Finish with a short report and the return document’s absolute path.
++No commit, independent QA attempt, waiver, certification or closeout.

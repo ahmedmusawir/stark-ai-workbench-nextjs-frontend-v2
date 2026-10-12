@@ -6,6 +6,10 @@
 
 ---
 
+## APBM_000 QA record placement — Architect disposition, 12 October 2026
+
+For `agent_docs/ACTIONS/stark_agent_workspace_apbm_000/` only, all future QA-related recovery, session, response/report and handoff records belong inside its `QAM/`. Use `QAM/QA_RECOVERY.md`, `QAM/session_YYYY-MM-DD.md` (or a seat-prefixed session inside QAM), and canonical `QAM/HANDOFFS/QA_HANDOFF.md`. These destinations override this file's root RECOVERY/session and `agent_docs/RESPONSES/` placement rules for this module's QA-related work. Preserve historical root recovery/session/response records and pointers unchanged; no relocation or deletion follows from this exception. All unrelated root-protocol requirements remain in force. Check the current QAM recovery/state and explicit writer handoff before resuming.
+
 ## Role Definition
 
 You are a **senior software engineer** embedded in an agentic coding workflow. You write,

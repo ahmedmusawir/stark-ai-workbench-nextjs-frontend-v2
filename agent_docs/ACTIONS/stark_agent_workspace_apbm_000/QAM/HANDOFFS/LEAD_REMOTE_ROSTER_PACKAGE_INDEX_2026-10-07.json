@@ -1,0 +1,36 @@
+{
+  "package": "APBM000_REMOTE_ROSTER_LEAD_APPROVAL_2026-10-07",
+  "note": "Index excludes itself; no self-referential hashes.",
+  "files": [
+    {
+      "path": "QAM/HANDOFFS/CLAUDY_REMOTE_ROSTER_CONTINUATION_2026-10-07.txt",
+      "bytes": 2979,
+      "sha256": "63eb83d5768428177046b1c422194900418ee001762424b657a64d90a88e6b53"
+    },
+    {
+      "path": "QAM/HANDOFFS/LEAD_REMOTE_ROSTER_APPROVAL_2026-10-07.md",
+      "bytes": 15145,
+      "sha256": "c0380dfcb951755b82af06881013635d60cad61829697978107e33b6f7fcef53"
+    },
+    {
+      "path": "QAM/HANDOFFS/LEAD_REMOTE_ROSTER_BINDING_HASHES_2026-10-07.json",
+      "bytes": 2212,
+      "sha256": "0ccefad21aa22eda91f400923722f276f31a79b326d93d9e05d1d1d52bc9d80c"
+    },
+    {
+      "path": "QAM/HANDOFFS/LEAD_RETURN_START_HERE_2026-10-07.md",
+      "bytes": 1248,
+      "sha256": "8d7aec51969323dce68b2e4dba975b2b54165461fd911d7ad93b912c36c50d51"
+    },
+    {
+      "path": "QAM/HANDOFFS/LEAD_REVIEWED_QAM_PATHS_2026-10-07.json",
+      "bytes": 7133,
+      "sha256": "ee6cd6f97255bdd0038fd5e48b17fdbf77fb0337f812cb69cfa4c8c325d2984c"
+    },
+    {
+      "path": "QAM/evidence/lead-remote-roster-review-2026-10-07/VERIFICATION.json",
+      "bytes": 12532,
+      "sha256": "368e8b7338df2665d54e3daaf6755ff39ff82575b2d5ae1d0b7c3ae535320140"
+    }
+  ]
+}

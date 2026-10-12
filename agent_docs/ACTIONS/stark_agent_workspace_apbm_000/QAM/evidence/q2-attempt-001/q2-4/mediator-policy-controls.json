@@ -1,0 +1,79 @@
+{
+  "css_url": "https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap",
+  "results": {
+    "other_css_query": "DENIED",
+    "other_googleapis_path": "DENIED",
+    "other_host": "DENIED",
+    "subdomain": "DENIED",
+    "gstatic_other_family": "DENIED",
+    "gstatic_query": "DENIED",
+    "http_downgrade": "DENIED",
+    "ip_literal": "DENIED",
+    "userinfo": "DENIED",
+    "port_8443": "DENIED",
+    "allowed_css_url_passes_policy": true,
+    "all_controls_denied": true
+  },
+  "log": [
+    {
+      "url": "https://fonts.googleapis.com/css2",
+      "method": "GET",
+      "allowed": false,
+      "reason": "css-path-or-query-not-allowlisted"
+    },
+    {
+      "url": "https://fonts.googleapis.com/icon",
+      "method": "GET",
+      "allowed": false,
+      "reason": "css-path-or-query-not-allowlisted"
+    },
+    {
+      "url": "https://example.invalid/s/inter/v1/a.woff2",
+      "method": "GET",
+      "allowed": false,
+      "reason": "host-not-allowlisted"
+    },
+    {
+      "url": "https://evil.fonts.gstatic.com/s/inter/v1/a.woff2",
+      "method": "GET",
+      "allowed": false,
+      "reason": "host-not-allowlisted"
+    },
+    {
+      "url": "https://fonts.gstatic.com/s/roboto/v1/a.woff2",
+      "method": "GET",
+      "allowed": false,
+      "reason": "gstatic-path-not-allowlisted"
+    },
+    {
+      "url": "https://fonts.gstatic.com/s/inter/v1/a.woff2",
+      "method": "GET",
+      "allowed": false,
+      "reason": "gstatic-path-not-allowlisted"
+    },
+    {
+      "url": "http://fonts.gstatic.com/s/inter/v1/a.woff2",
+      "method": "GET",
+      "allowed": false,
+      "reason": "scheme"
+    },
+    {
+      "url": "https://142.250.0.1/s/inter/v1/a.woff2",
+      "method": "GET",
+      "allowed": false,
+      "reason": "ip-literal"
+    },
+    {
+      "url": "https://fonts.gstatic.com/s/inter/v1/a.woff2",
+      "method": "GET",
+      "allowed": false,
+      "reason": "userinfo"
+    },
+    {
+      "url": "https://fonts.gstatic.com:8443/s/inter/v1/a.woff2",
+      "method": "GET",
+      "allowed": false,
+      "reason": "port"
+    }
+  ]
+}

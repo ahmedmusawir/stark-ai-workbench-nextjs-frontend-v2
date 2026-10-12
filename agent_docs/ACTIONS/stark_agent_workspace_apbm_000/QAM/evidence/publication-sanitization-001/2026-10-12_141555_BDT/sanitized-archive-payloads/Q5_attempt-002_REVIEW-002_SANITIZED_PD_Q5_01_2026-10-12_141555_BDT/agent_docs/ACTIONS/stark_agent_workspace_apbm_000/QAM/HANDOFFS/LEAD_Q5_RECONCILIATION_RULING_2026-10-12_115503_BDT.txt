@@ -1,0 +1,52 @@
+Claudy — QA Lead ruling:
+
+Your preflight stop was correct.
+
+Treat the reported post-cleanup state as expected under the
+11 October Q5 authorization. Do not repeat sections 2–3,
+restore deleted caches, or recreate the root prepend/pointer.
+
+Yesterday’s authorized actions may satisfy sections 2–3.
+Final acceptance depends on review of the original action log,
+before/after evidence and preservation checks in your return.
+
+Proceed with evidence reconciliation and packaging only:
+
+1. Preserve and include yesterday’s Q5 authorization, action log,
+   original inventories, gate results and any package receipt.
+   Preserve today’s instruction and preflight-stop record.
+
+2. Reuse existing before/after inventories. If an original
+   inventory is missing, identify the exact gap. Do not present
+   a newly reconstructed inventory as a contemporaneous record.
+
+3. Verify the current root-file and five-cache postconditions.
+   Verify retained evidence and instruments against existing
+   pre-cleanup hashes, freezes and package indexes. Clearly
+   distinguish fresh hashes from historical preservation proof.
+   Account separately for authorized QA record updates.
+
+4. Preserve PD-002-01 as proceeding after GATE_STOP without
+   the required ruling; no future gate override is authorized.
+   Retain font-fallback qualifications, the live-persistence
+   limitation and DIRECTOR-OBS-001 as UNTRIAGED-live.
+
+5. Account for the new QAM records in the gate inventory without
+   weakening checks. Run a fresh identity gate and capture actual
+   Git status. Stop on any new unexplained discrepancy.
+
+Exact candidate/HEAD:
+8eb5789d9021ad06c15db36db74419a2b5c68fc5
+Branch: qa/frontend-apbm-000
+
+6. Produce an indexed Q5 completion package with a receipt and
+   full SHA-256. Preserve it under QAM and deliver a byte-identical
+   copy to Downloads. Identify it as the current review package;
+   preserve any earlier package unchanged.
+
+All QA records stay inside QAM.
+D4 ALLOW; D7 OMIT. Gate Q remains PENDING QA Lead review.
+No cleanup repetition, full retest, rebuild, product change,
+Git mutation or closeout. Cody remains paused.
+
+Return the package to QA Lead through Tony.

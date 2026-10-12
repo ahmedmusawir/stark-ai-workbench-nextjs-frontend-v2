@@ -1,0 +1,186 @@
+{
+  "recorded_at": "2026-10-11T16:23:34.774377+06:00",
+  "candidate_sha": "8eb5789d9021ad06c15db36db74419a2b5c68fc5",
+  "branch": "qa/frontend-apbm-000",
+  "parent_sha": "9c50884d4c4513b6969311d5be7c05828104ed3d",
+  "zip_checks": [
+    {
+      "path": "/home/moose/nextjs/10XLAB/stark-ai-workbench-nextjs-frontend-v2/agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/HANDOFFS/APBM000_QA_LEAD_INTAKE_8eb5789d9021_2026-10-11_161409_BDT.zip",
+      "crc": "PASS",
+      "inventory_hashes": "PASS",
+      "payload_members": 575
+    },
+    {
+      "path": "/home/moose/Downloads/APBM000_QA_LEAD_INTAKE_8eb5789d9021_2026-10-11_161409_BDT.zip",
+      "crc": "PASS",
+      "inventory_hashes": "PASS",
+      "payload_members": 575
+    }
+  ],
+  "downloads_identical": true,
+  "head_reviewed_blobs_unchanged": true,
+  "preserved_unrelated_files_unchanged": true,
+  "index_empty": true,
+  "tracked_working_tree_clean": true,
+  "remaining_work": [
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/HANDOFFS/APBM000_ADDMEMBER_TEST_REPAIR_001_REVIEW_2026-10-11_134025_BDT.zip"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/HANDOFFS/APBM000_DEPENDENCY_DIAGNOSTIC_REVIEW_2026-10-08_131602_BDT.zip"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/HANDOFFS/APBM000_ENGINEERING_REPAIR_001_REVIEW_2026-10-08_112512_BDT.zip"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/HANDOFFS/APBM000_QA_LEAD_INTAKE_8eb5789d9021_2026-10-11_161409_BDT.zip"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/HANDOFFS/REPAIRED_CANDIDATE_001_POST_COMMIT_RECEIPT.md"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/HANDOFFS/REVIEW_START_HERE.md"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/addmember-test-repair-001/2026-10-11_134025_BDT/EXPORT_RECEIPT.json"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/dependency-reconciliation-001/2026-10-08_124256_BDT/browser-artifacts/.last-run.json"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/engineering-repair-001/browser-artifacts/.last-run.json"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/local-candidate-commit-001/2026-10-11_161409_BDT/EXPORT_RECEIPT.json"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/local-candidate-commit-001/2026-10-11_161409_BDT/FILE_INDEX.json"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/local-candidate-commit-001/2026-10-11_161409_BDT/SESSION.md"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/local-candidate-commit-001/2026-10-11_161409_BDT/TONY_LOCAL_COMMIT_AND_QA_LEAD_PACKAGE_AUTHORIZATION.md"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/local-candidate-commit-001/2026-10-11_161409_BDT/approved-staging-paths.txt"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/local-candidate-commit-001/2026-10-11_161409_BDT/commit-summary.txt"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/local-candidate-commit-001/2026-10-11_161409_BDT/committed-candidate-validation.json"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/local-candidate-commit-001/2026-10-11_161409_BDT/committed-complete.patch"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/local-candidate-commit-001/2026-10-11_161409_BDT/committed-product-test.patch"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/local-candidate-commit-001/2026-10-11_161409_BDT/committed-scope.txt"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/local-candidate-commit-001/2026-10-11_161409_BDT/export-scope-scan.json"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/local-candidate-commit-001/2026-10-11_161409_BDT/postcommit-git-status.txt"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/local-candidate-commit-001/2026-10-11_161409_BDT/precommit-validation.json"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/local-candidate-commit-001/2026-10-11_161409_BDT/reviewed-cumulative-product-test.patch"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/local-candidate-commit-001/2026-10-11_161409_BDT/staged-complete.patch"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/local-candidate-commit-001/2026-10-11_161409_BDT/staged-name-status.txt"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/local-candidate-commit-001/2026-10-11_161409_BDT/staged-stat.txt"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/local-candidate-commit-001/2026-10-11_161409_BDT/staged-validation.json"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/local-candidate-commit-001/2026-10-11_161409_BDT/staged-whitespace-check.log"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/local-candidate-commit-001/2026-10-11_161409_BDT/starting-git-status.txt"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/local-candidate-commit-001/2026-10-11_161409_BDT/validate_package.py"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/selective-commit-preparation-001/2026-10-11_150835_BDT/SESSION.md"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/selective-commit-preparation-001/2026-10-11_150835_BDT/TONY_GIT_COMMANDS.md"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/selective-commit-preparation-001/2026-10-11_150835_BDT/entry-state.json"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/selective-commit-preparation-001/2026-10-11_150835_BDT/final-validation.json"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/selective-commit-preparation-001/2026-10-11_150835_BDT/preflight-validation.json"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/selective-commit-preparation-001/2026-10-11_150835_BDT/reviewed-staging-before.txt"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/selective-commit-preparation-001/2026-10-11_150835_BDT/staging-amendment.json"
+    }
+  ],
+  "remaining_counts": {
+    "archive": 4,
+    "QAM handoff/preparation/evidence record": 31,
+    "cache": 2
+  },
+  "affects_qa_execution": false,
+  "tests_rerun": false,
+  "independent_qa_started": false,
+  "gate_q": "PENDING",
+  "D4": "ALLOW",
+  "D7": "OMIT"
+}

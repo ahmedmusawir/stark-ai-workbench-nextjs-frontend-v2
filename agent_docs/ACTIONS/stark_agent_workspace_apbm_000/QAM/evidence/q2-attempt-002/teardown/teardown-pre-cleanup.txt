@@ -1,0 +1,26 @@
+teardown_at=2026-10-11T18:08:19+06:00
+--- QA-owned processes (harness/playwright/next/jest/chrome-for-testing launched by QA):
+none
+--- chrome processes started in the last 40 min (QA-launched would be children of playwright):
+3
+--- listeners on QA ports 43181/43182/43183/43176/3000:
+none
+--- run-owned TMPDIRs before cleanup:
+A-ns-escape
+A-policy-controls
+B-tsc
+C-jest-maintained
+D-jest-qa
+E-build
+E-ns-escape
+F-audit
+gate-controls
+G-browser
+G-diag-s20-fontconfig
+H1-workspace-copy
+H2-repair-copy
+54M
+removed /tmp/claude-1000/qa-a2-tmp
+removed scratch package extraction
+chrome processes (comm=chrome) with --remote-debugging-pipe: 0; node QA harness/runner processes: 0
+note: the earlier count of 3 matched the inspecting shell's own command line (verified by parent chain to the claude session), not Chrome.

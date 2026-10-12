@@ -1,0 +1,3032 @@
+{
+  "gate": "q2a2_gate.py",
+  "started": "2026-10-11T19:26:15+06:00",
+  "verdict": "GATE_PASS",
+  "error": null,
+  "meta": {
+    "binding_sha256": "06aed917a0b22d804ad7d0c0cb5f2421821b28f75fc95ff40ba43bc66d551939",
+    "approved_sha256": "cab289dfc347833171c583051f9eef5d0639156014de1733838b8318f137c745",
+    "freeze_sha256": "6f5126eaac71850d2f2e4a09ee27757d3ecbbc2a446bea734c79b89bec133da7",
+    "candidate": "8eb5789d9021ad06c15db36db74419a2b5c68fc5",
+    "parent": "9c50884d4c4513b6969311d5be7c05828104ed3d",
+    "head": "8eb5789d9021ad06c15db36db74419a2b5c68fc5",
+    "branch": "qa/frontend-apbm-000"
+  },
+  "tools": {
+    "node": "v24.15.0",
+    "npm": "11.12.1",
+    "next": "16.2.6",
+    "jest": "30.0.5",
+    "typescript": "5.5.4",
+    "@playwright/test": "1.59.1",
+    "chrome": "Google Chrome 150.0.7871.114"
+  },
+  "failed": [],
+  "checks": [
+    {
+      "id": "B0 binding identity",
+      "result": "PASS",
+      "detail": {
+        "binding_candidate": "8eb5789d9021ad06c15db36db74419a2b5c68fc5",
+        "binding_parent": "9c50884d4c4513b6969311d5be7c05828104ed3d"
+      }
+    },
+    {
+      "id": "G1 branch",
+      "result": "PASS",
+      "detail": {
+        "branch": "qa/frontend-apbm-000",
+        "expected": "qa/frontend-apbm-000"
+      }
+    },
+    {
+      "id": "G2 HEAD is candidate or QAM-only descendant",
+      "result": "PASS",
+      "detail": {
+        "head": "8eb5789d9021ad06c15db36db74419a2b5c68fc5",
+        "candidate_is_ancestor": true,
+        "descendant_paths": [],
+        "non_qam": []
+      }
+    },
+    {
+      "id": "G3 candidate parent",
+      "result": "PASS",
+      "detail": {
+        "parents": [
+          "9c50884d4c4513b6969311d5be7c05828104ed3d"
+        ]
+      }
+    },
+    {
+      "id": "G4 candidate-parent delta = 269 reviewed paths (19/1/249)",
+      "result": "PASS",
+      "detail": {
+        "count": 269,
+        "product_test": 19,
+        "qam": 249,
+        "statuses": [
+          "A",
+          "M"
+        ],
+        "missing": [],
+        "extra": []
+      }
+    },
+    {
+      "id": "G5 candidate blobs = binding hashes",
+      "result": "PASS",
+      "detail": {
+        "checked": 269,
+        "mismatch": [],
+        "not_in_binding": []
+      }
+    },
+    {
+      "id": "G6 product + complete patch hashes reproduced from real Git (semantic blob check recorded)",
+      "result": "PASS",
+      "detail": {
+        "git_product_patch_sha256": "5a07022fca3eb577884b3c418bb3b6789ce6069144771420c3048f6cd545ae59",
+        "binding": "5a07022fca3eb577884b3c418bb3b6789ce6069144771420c3048f6cd545ae59",
+        "git_complete_patch_sha256": "ea9f58cac6f47d4296ad0e912bd96ae28016884acb7bec3b6756b0160166f6e5",
+        "binding_complete": "ea9f58cac6f47d4296ad0e912bd96ae28016884acb7bec3b6756b0160166f6e5",
+        "semantic": {
+          "supplied_patch_sha256": "5a07022fca3eb577884b3c418bb3b6789ce6069144771420c3048f6cd545ae59",
+          "paths_compared": 19,
+          "blob_id_differences": {},
+          "equal": true
+        }
+      }
+    },
+    {
+      "id": "G7 previous candidate -> parent: no product drift",
+      "result": "PASS",
+      "detail": {
+        "commits": [
+          "a4abd2a9e4d9675a41653fdb66f3456feb11457a",
+          "c4ed7042fa05fa638bdc6d4327ecba3448d44cef",
+          "24ccf307ba04460f0d9663e4ce1c71984d58e369",
+          "9c50884d4c4513b6969311d5be7c05828104ed3d"
+        ],
+        "paths": 336,
+        "product_paths": [],
+        "non_qam_paths": [
+          "CHANGELOG.md",
+          "RECOVERY.md",
+          "\"agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-001/q2-6/run1/artifacts/s01_04_directory_nav_recen-76761-ack\\303\\2273-Forward\\303\\2273-encoded-IDs/error-context.md\"",
+          "agent_docs/RESPONSES/response_2026-10-05_193516_apbm-000-q2-held-ruling-request.md",
+          "agent_docs/RESPONSES/response_2026-10-07_184448_apbm-000-q2-hold-lead-files-missing.md",
+          "agent_docs/RESPONSES/response_2026-10-07_185841_apbm-000-lead-approval-installed-commit-list.md",
+          "agent_docs/RESPONSES/response_2026-10-08_090910_astra-reboot-checkpoint.md",
+          "astra_RECOVERY.md",
+          "astra_session_2026-10-08.md",
+          "session_2026-10-08.md"
+        ]
+      }
+    },
+    {
+      "id": "G8 protected product delta since previous candidate = exactly the 19 authorized repairs",
+      "result": "PASS",
+      "detail": {
+        "product_delta": [
+          "src/__tests__/admin/AddMemberForm.test.tsx",
+          "src/__tests__/config/manifest.test.ts",
+          "src/__tests__/workspace/signout.test.tsx",
+          "src/app/(cyberize)/chat/workspace.scss",
+          "src/app/fonts/inter.css",
+          "src/app/fonts/inter/OFL.txt",
+          "src/app/fonts/inter/PROVENANCE.json",
+          "src/app/fonts/inter/inter-cyrillic-ext.woff2",
+          "src/app/fonts/inter/inter-cyrillic.woff2",
+          "src/app/fonts/inter/inter-greek-ext.woff2",
+          "src/app/fonts/inter/inter-greek.woff2",
+          "src/app/fonts/inter/inter-latin-ext.woff2",
+          "src/app/fonts/inter/inter-latin.woff2",
+          "src/app/fonts/inter/inter-vietnamese.woff2",
+          "src/app/layout.tsx",
+          "src/components/workspace/Workspace.tsx",
+          "src/components/workspace/WorkspaceEntry.tsx",
+          "tests/workspace/repair.config.ts",
+          "tests/workspace/repair.spec.ts"
+        ]
+      }
+    },
+    {
+      "id": "G9 working tree/index: no product drift, staged, untracked or ignored source inputs",
+      "result": "PASS",
+      "detail": {
+        "worktree_vs_candidate": "",
+        "staged": "",
+        "untracked_product": [],
+        "ignored_source": [],
+        "root_ignored": {
+          ".env.local": "private env (D4: presence only, never read by QA)",
+          ".next/": "generated build/dev output",
+          "next-env.d.ts": "tracked-name ignored copy",
+          "node_modules/": "installed dependencies (verified against lock)",
+          "tsconfig.tsbuildinfo": "tsc incremental cache"
+        }
+      }
+    },
+    {
+      "id": "G10 pinned contract/roster/lock/font/OFL/provenance bytes",
+      "result": "PASS",
+      "detail": {
+        "pins": {
+          "ACCEPTANCE_SPEC": {
+            "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/ACCEPTANCE_SPEC.md",
+            "expected": "57f8d9f4dec8ca826326067254b0916ef65ccd51b635a8ac6ead73e8ab469fcc",
+            "worktree": "57f8d9f4dec8ca826326067254b0916ef65ccd51b635a8ac6ead73e8ab469fcc",
+            "candidate": "57f8d9f4dec8ca826326067254b0916ef65ccd51b635a8ac6ead73e8ab469fcc"
+          },
+          "RULINGS_ADDENDUM": {
+            "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/RULINGS_ADDENDUM.md",
+            "expected": "99d4c40f7094106f4386d4d8ff5535228feb653dcbe0fd948a14a0ff1ec3b36f",
+            "worktree": "99d4c40f7094106f4386d4d8ff5535228feb653dcbe0fd948a14a0ff1ec3b36f",
+            "candidate": "99d4c40f7094106f4386d4d8ff5535228feb653dcbe0fd948a14a0ff1ec3b36f"
+          },
+          "roster": {
+            "path": "config/agents.manifest.json",
+            "expected": "6c27f420127db7125a43ddba6347470b19d3be39769b44bb2b85bd6d9526b6d9",
+            "worktree": "6c27f420127db7125a43ddba6347470b19d3be39769b44bb2b85bd6d9526b6d9",
+            "candidate": "6c27f420127db7125a43ddba6347470b19d3be39769b44bb2b85bd6d9526b6d9"
+          },
+          "lock": {
+            "path": "package-lock.json",
+            "expected": "f81ea7545863bf12dcb33912a8d43d042abe06aa7b95ff8831af647cdaaeae49",
+            "worktree": "f81ea7545863bf12dcb33912a8d43d042abe06aa7b95ff8831af647cdaaeae49",
+            "candidate": "f81ea7545863bf12dcb33912a8d43d042abe06aa7b95ff8831af647cdaaeae49"
+          },
+          "src/app/fonts/inter.css": {
+            "path": "src/app/fonts/inter.css",
+            "expected": "d938dbdef3cf817e1c17cb1ed1f1509ce1f0d2c40e147534754ada14a9edbf93",
+            "worktree": "d938dbdef3cf817e1c17cb1ed1f1509ce1f0d2c40e147534754ada14a9edbf93",
+            "candidate": "d938dbdef3cf817e1c17cb1ed1f1509ce1f0d2c40e147534754ada14a9edbf93"
+          },
+          "src/app/fonts/inter/OFL.txt": {
+            "path": "src/app/fonts/inter/OFL.txt",
+            "expected": "5b9321a4298cfeb6b34354164a1c3afc3db114569984c502b9b35d988fd58c57",
+            "worktree": "5b9321a4298cfeb6b34354164a1c3afc3db114569984c502b9b35d988fd58c57",
+            "candidate": "5b9321a4298cfeb6b34354164a1c3afc3db114569984c502b9b35d988fd58c57"
+          },
+          "src/app/fonts/inter/PROVENANCE.json": {
+            "path": "src/app/fonts/inter/PROVENANCE.json",
+            "expected": "e869422eeae3aa9821f90f0a8be3f2f7fdaa4760b6f816f29275abf18674a8f7",
+            "worktree": "e869422eeae3aa9821f90f0a8be3f2f7fdaa4760b6f816f29275abf18674a8f7",
+            "candidate": "e869422eeae3aa9821f90f0a8be3f2f7fdaa4760b6f816f29275abf18674a8f7"
+          },
+          "src/app/fonts/inter/inter-cyrillic-ext.woff2": {
+            "path": "src/app/fonts/inter/inter-cyrillic-ext.woff2",
+            "expected": "fccca918fea40089dacadc7045861314d1a6bc91f1f323cc1eeb22ebcdb321b5",
+            "worktree": "fccca918fea40089dacadc7045861314d1a6bc91f1f323cc1eeb22ebcdb321b5",
+            "candidate": "fccca918fea40089dacadc7045861314d1a6bc91f1f323cc1eeb22ebcdb321b5"
+          },
+          "src/app/fonts/inter/inter-cyrillic.woff2": {
+            "path": "src/app/fonts/inter/inter-cyrillic.woff2",
+            "expected": "aebf2ab4a4ce6810d73c1ac7be7cafb4e5ec4cee2d6db5fb3e09691747ec4bd6",
+            "worktree": "aebf2ab4a4ce6810d73c1ac7be7cafb4e5ec4cee2d6db5fb3e09691747ec4bd6",
+            "candidate": "aebf2ab4a4ce6810d73c1ac7be7cafb4e5ec4cee2d6db5fb3e09691747ec4bd6"
+          },
+          "src/app/fonts/inter/inter-greek-ext.woff2": {
+            "path": "src/app/fonts/inter/inter-greek-ext.woff2",
+            "expected": "a2e2c783ca6f9c20486e81e72a279203e86730bbf8f01ff6a5ee9dbd09e1c271",
+            "worktree": "a2e2c783ca6f9c20486e81e72a279203e86730bbf8f01ff6a5ee9dbd09e1c271",
+            "candidate": "a2e2c783ca6f9c20486e81e72a279203e86730bbf8f01ff6a5ee9dbd09e1c271"
+          },
+          "src/app/fonts/inter/inter-greek.woff2": {
+            "path": "src/app/fonts/inter/inter-greek.woff2",
+            "expected": "46dd4cdca58c26ae87cc6927657bf83b2e8abfc39ffd0ab176e301a8d28d22bf",
+            "worktree": "46dd4cdca58c26ae87cc6927657bf83b2e8abfc39ffd0ab176e301a8d28d22bf",
+            "candidate": "46dd4cdca58c26ae87cc6927657bf83b2e8abfc39ffd0ab176e301a8d28d22bf"
+          },
+          "src/app/fonts/inter/inter-latin-ext.woff2": {
+            "path": "src/app/fonts/inter/inter-latin-ext.woff2",
+            "expected": "a28eb6d3ccb534ae0c94ca999371df024aab60b08c3c8a5720ee9e32fa0faaa2",
+            "worktree": "a28eb6d3ccb534ae0c94ca999371df024aab60b08c3c8a5720ee9e32fa0faaa2",
+            "candidate": "a28eb6d3ccb534ae0c94ca999371df024aab60b08c3c8a5720ee9e32fa0faaa2"
+          },
+          "src/app/fonts/inter/inter-latin.woff2": {
+            "path": "src/app/fonts/inter/inter-latin.woff2",
+            "expected": "c940764593d0fe5d596be327ca7558855e018039fb78509aa21921fd3644c3e4",
+            "worktree": "c940764593d0fe5d596be327ca7558855e018039fb78509aa21921fd3644c3e4",
+            "candidate": "c940764593d0fe5d596be327ca7558855e018039fb78509aa21921fd3644c3e4"
+          },
+          "src/app/fonts/inter/inter-vietnamese.woff2": {
+            "path": "src/app/fonts/inter/inter-vietnamese.woff2",
+            "expected": "8db00ff46c67b22cda8bed865acf7077651cac8d2841d5b40980556b48961931",
+            "worktree": "8db00ff46c67b22cda8bed865acf7077651cac8d2841d5b40980556b48961931",
+            "candidate": "8db00ff46c67b22cda8bed865acf7077651cac8d2841d5b40980556b48961931"
+          }
+        }
+      }
+    },
+    {
+      "id": "G10b next-env.d.ts is one of the two binding-pinned variants",
+      "result": "PASS",
+      "detail": {
+        "next_env": "7b550dda9686c16f36a17bf9051d5dbf31e98555b30d114ac49fc49a1e712651",
+        "allowed_next_env": [
+          "7b550dda9686c16f36a17bf9051d5dbf31e98555b30d114ac49fc49a1e712651",
+          "7ad303e40d4fddf44f156129e397511953a71481c5cfd86b1862649aaaf240cc"
+        ],
+        "content": "/// <reference types=\"next\" />\n/// <reference types=\"next/image-types/global\" />\nimport \"./.next/types/routes.d.ts\";\n\n// NOTE: This file should not be edited\n// see https://nextjs.org/docs/app/api-reference/config/typescript for more information.\n"
+      }
+    },
+    {
+      "id": "G11 roster semantics: six agents all v1; v1/v2-local urlEnv mappings",
+      "result": "PASS",
+      "detail": {
+        "agents": [
+          [
+            null,
+            "v1"
+          ],
+          [
+            null,
+            "v1"
+          ],
+          [
+            null,
+            "v1"
+          ],
+          [
+            null,
+            "v1"
+          ],
+          [
+            null,
+            "v1"
+          ],
+          [
+            null,
+            "v1"
+          ]
+        ],
+        "bundles": [
+          [
+            "v1",
+            "ADK_BUNDLE_URL_V1"
+          ],
+          [
+            "v2-local",
+            "ADK_BUNDLE_URL_V2_LOCAL"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "G12 contracts/design unchanged since previous candidate (incl. working tree)",
+      "result": "PASS",
+      "detail": {
+        "changed": []
+      }
+    },
+    {
+      "id": "G13 installed packages = committed lock (no mismatch, no missing required)",
+      "result": "PASS",
+      "detail": {
+        "lock_entries": 832,
+        "mismatch": [],
+        "missing_required": [],
+        "optional_platform_missing": 50,
+        "extraneous_top_level": [],
+        "tools": {
+          "node": "v24.15.0",
+          "npm": "11.12.1",
+          "next": "16.2.6",
+          "jest": "30.0.5",
+          "typescript": "5.5.4",
+          "@playwright/test": "1.59.1",
+          "chrome": "Google Chrome 150.0.7871.114"
+        }
+      }
+    },
+    {
+      "id": "G14 QAM/non-product inventory: every difference classified",
+      "result": "PASS",
+      "detail": {
+        "entries": 532,
+        "by_class": {
+          "Executor session/recovery document (non-executable)": 68,
+          "attempt-002 evidence (non-executable data)": 346,
+          "frozen attempt-002 instrument": 29,
+          "inert pre-correction instrument copy (evidence), hash-matched": 40,
+          "installed Lead delivery, hash-matched": 9,
+          "pre-existing untracked record (Cody commit/package step), hash-matched": 40
+        },
+        "anomalies": []
+      }
+    },
+    {
+      "id": "G15 instrument freeze: every changed/new AUTOMATION file frozen and every frozen hash on disk",
+      "result": "PASS",
+      "detail": {
+        "frozen": 29,
+        "unfrozen_changed": [],
+        "stale_or_tampered": []
+      }
+    }
+  ],
+  "inventory": [
+    {
+      "status": " M",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/AUTOMATION/jest/qa_entry_props.test.tsx",
+      "class": "frozen attempt-002 instrument"
+    },
+    {
+      "status": " M",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/AUTOMATION/playwright.qa.config.ts",
+      "class": "frozen attempt-002 instrument"
+    },
+    {
+      "status": " M",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/AUTOMATION/qa-harness.cjs",
+      "class": "frozen attempt-002 instrument"
+    },
+    {
+      "status": " M",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/AUTOMATION/specs/_qa.ts",
+      "class": "frozen attempt-002 instrument"
+    },
+    {
+      "status": " M",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/AUTOMATION/specs/s12_16_demo_theme_render.spec.ts",
+      "class": "frozen attempt-002 instrument"
+    },
+    {
+      "status": " M",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/AUTOMATION/specs/s17_19_a11y_copy_obs.spec.ts",
+      "class": "frozen attempt-002 instrument"
+    },
+    {
+      "status": " M",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/FINDINGS/Q2-F01_signout_storage_unavailable.md",
+      "class": "Executor session/recovery document (non-executable)"
+    },
+    {
+      "status": " M",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/FINDINGS/Q2-F02_drawer_breakpoint_focus_target.md",
+      "class": "Executor session/recovery document (non-executable)"
+    },
+    {
+      "status": " M",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/FINDINGS/Q2-F03_breadcrumb_target_size.md",
+      "class": "Executor session/recovery document (non-executable)"
+    },
+    {
+      "status": " M",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/FINDINGS/Q2-F04_manifest_test_bundle_coverage.md",
+      "class": "Executor session/recovery document (non-executable)"
+    },
+    {
+      "status": " M",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/QAM_CHECKPOINTS.md",
+      "class": "Executor session/recovery document (non-executable)"
+    },
+    {
+      "status": " M",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/QAM_MANIFEST.md",
+      "class": "Executor session/recovery document (non-executable)"
+    },
+    {
+      "status": " M",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/QAM_STATE.json",
+      "class": "Executor session/recovery document (non-executable)"
+    },
+    {
+      "status": " M",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/QAM_TEST_PLAN.md",
+      "class": "installed Lead delivery, hash-matched"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/AUTOMATION/a2_gate_controls.sh",
+      "class": "frozen attempt-002 instrument"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/AUTOMATION/a2_output_audit.py",
+      "class": "frozen attempt-002 instrument"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/AUTOMATION/a2_prepare_records.py",
+      "class": "frozen attempt-002 instrument"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/AUTOMATION/a2_q5_execute.py",
+      "class": "frozen attempt-002 instrument"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/AUTOMATION/a2_q5_proposal.py",
+      "class": "frozen attempt-002 instrument"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/AUTOMATION/a2_run.sh",
+      "class": "frozen attempt-002 instrument"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/AUTOMATION/fontconfig-hide-system-inter.conf",
+      "class": "frozen attempt-002 instrument"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/AUTOMATION/jest/qa_f01_realstore.test.tsx",
+      "class": "frozen attempt-002 instrument"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/AUTOMATION/negative/seeded_allowed_twin_entry.tsx",
+      "class": "frozen attempt-002 instrument"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/AUTOMATION/q2a2_addendum_export.py",
+      "class": "frozen attempt-002 instrument"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/AUTOMATION/q2a2_export.py",
+      "class": "frozen attempt-002 instrument"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/AUTOMATION/q2a2_gate.py",
+      "class": "frozen attempt-002 instrument"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/AUTOMATION/q5_export.py",
+      "class": "frozen attempt-002 instrument"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/AUTOMATION/repair-harness/browser_harness.cjs",
+      "class": "frozen attempt-002 instrument"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/AUTOMATION/repair-harness/font-before.css",
+      "class": "frozen attempt-002 instrument"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/AUTOMATION/repair-harness/font-cache-matches.json",
+      "class": "frozen attempt-002 instrument"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/AUTOMATION/secondary-a2/_policy_wrap.ts",
+      "class": "frozen attempt-002 instrument"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/AUTOMATION/secondary-a2/playwright.repair-copy.config.ts",
+      "class": "frozen attempt-002 instrument"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/AUTOMATION/secondary-a2/playwright.workspace-copy.config.ts",
+      "class": "frozen attempt-002 instrument"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/AUTOMATION/secondary-a2/repair.spec.ts",
+      "class": "frozen attempt-002 instrument"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/AUTOMATION/secondary-a2/workspace.spec.ts",
+      "class": "frozen attempt-002 instrument"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/AUTOMATION/specs/s00_policy_controls.spec.ts",
+      "class": "frozen attempt-002 instrument"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/AUTOMATION/specs/s20_root_font_collateral.spec.ts",
+      "class": "frozen attempt-002 instrument"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/FINDINGS/DIRECTOR-OBS-001_EXECUTOR-ADDENDUM-003.md",
+      "class": "Executor session/recovery document (non-executable)"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/FINDINGS/Q2-F01_RETEST-002.md",
+      "class": "Executor session/recovery document (non-executable)"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/FINDINGS/Q2-F02_RETEST-002.md",
+      "class": "Executor session/recovery document (non-executable)"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/FINDINGS/Q2-F03_RETEST-002.md",
+      "class": "Executor session/recovery document (non-executable)"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/FINDINGS/Q2-F04_RETEST-002.md",
+      "class": "Executor session/recovery document (non-executable)"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/HANDOFFS/APBM000_ADDMEMBER_TEST_REPAIR_001_REVIEW_2026-10-11_134025_BDT.zip",
+      "class": "pre-existing untracked record (Cody commit/package step), hash-matched"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/HANDOFFS/APBM000_DEPENDENCY_DIAGNOSTIC_REVIEW_2026-10-08_131602_BDT.zip",
+      "class": "pre-existing untracked record (Cody commit/package step), hash-matched"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/HANDOFFS/APBM000_ENGINEERING_REPAIR_001_REVIEW_2026-10-08_112512_BDT.zip",
+      "class": "pre-existing untracked record (Cody commit/package step), hash-matched"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/HANDOFFS/APBM000_QA_LEAD_INTAKE_8eb5789d9021_2026-10-11_161409_BDT.zip",
+      "class": "pre-existing untracked record (Cody commit/package step), hash-matched"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/HANDOFFS/CLAUDY_RETEST_002_PROMPT.txt",
+      "class": "installed Lead delivery, hash-matched"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/HANDOFFS/DIRECTOR_Q2_RELEASE_002_2026-10-11_174045_BDT.txt",
+      "class": "Executor session/recovery document (non-executable)"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/HANDOFFS/DIRECTOR_Q2_RELEASE_002_BINDING_2026-10-11.json",
+      "class": "Executor session/recovery document (non-executable)"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/HANDOFFS/DIRECTOR_RELEASE_002_DRAFT.txt",
+      "class": "installed Lead delivery, hash-matched"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/HANDOFFS/LEAD_INTAKE_VERIFICATION_2026-10-11.json",
+      "class": "installed Lead delivery, hash-matched"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/HANDOFFS/LEAD_Q2_ATTEMPT_002_DISPOSITION_ADDENDUM_INSTRUCTION_2026-10-11_182616_BDT.txt",
+      "class": "Executor session/recovery document (non-executable)"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/HANDOFFS/LEAD_Q2_ATTEMPT_002_DISPOSITION_ADDENDUM_INSTRUCTION_2026-10-11_182616_BDT_BINDING.json",
+      "class": "Executor session/recovery document (non-executable)"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/HANDOFFS/LEAD_Q5_AUTHORIZATION_2026-10-11_192313_BDT.txt",
+      "class": "Executor session/recovery document (non-executable)"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/HANDOFFS/LEAD_Q5_AUTHORIZATION_2026-10-11_192313_BDT_BINDING.json",
+      "class": "Executor session/recovery document (non-executable)"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/HANDOFFS/LEAD_RETEST_002_APPROVAL_2026-10-11.md",
+      "class": "installed Lead delivery, hash-matched"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/HANDOFFS/LEAD_RETEST_002_BINDING_2026-10-11.json",
+      "class": "installed Lead delivery, hash-matched"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/HANDOFFS/Q2_attempt-002.zip",
+      "class": "Executor session/recovery document (non-executable)"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/HANDOFFS/Q2_attempt-002_ADDENDUM-001.zip",
+      "class": "Executor session/recovery document (non-executable)"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/HANDOFFS/Q2_attempt-002_ADDENDUM-001_RECEIPT.json",
+      "class": "Executor session/recovery document (non-executable)"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/HANDOFFS/Q2_attempt-002_ADDENDUM-001_REVIEW_START_HERE.md",
+      "class": "Executor session/recovery document (non-executable)"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/HANDOFFS/Q2_attempt-002_RECEIPT.json",
+      "class": "Executor session/recovery document (non-executable)"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/HANDOFFS/Q2_attempt-002_REVIEW_START_HERE.md",
+      "class": "Executor session/recovery document (non-executable)"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/HANDOFFS/Q5_attempt-002.zip",
+      "class": "Executor session/recovery document (non-executable)"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/HANDOFFS/Q5_attempt-002_RECEIPT.json",
+      "class": "Executor session/recovery document (non-executable)"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/HANDOFFS/Q5_attempt-002_REVIEW_START_HERE.md",
+      "class": "Executor session/recovery document (non-executable)"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/HANDOFFS/QAM_TEST_PLAN_v0.2_PRESERVED_2026-10-11.md",
+      "class": "installed Lead delivery, hash-matched"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/HANDOFFS/REPAIRED_CANDIDATE_001_POST_COMMIT_RECEIPT.md",
+      "class": "pre-existing untracked record (Cody commit/package step), hash-matched"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/HANDOFFS/RETEST_002_FILE_INDEX.json",
+      "class": "installed Lead delivery, hash-matched"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/HANDOFFS/RETEST_002_START_HERE.md",
+      "class": "installed Lead delivery, hash-matched"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/HANDOFFS/REVIEW_START_HERE.md",
+      "class": "pre-existing untracked record (Cody commit/package step), hash-matched"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/QA_RECOVERY.md",
+      "class": "Executor session/recovery document (non-executable)"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/addmember-test-repair-001/2026-10-11_134025_BDT/EXPORT_RECEIPT.json",
+      "class": "pre-existing untracked record (Cody commit/package step), hash-matched"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/dependency-reconciliation-001/2026-10-08_124256_BDT/browser-artifacts/.last-run.json",
+      "class": "pre-existing untracked record (Cody commit/package step), hash-matched"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/engineering-repair-001/browser-artifacts/.last-run.json",
+      "class": "pre-existing untracked record (Cody commit/package step), hash-matched"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/local-candidate-commit-001/2026-10-11_161409_BDT/COMPLETION.md",
+      "class": "pre-existing untracked record (Cody commit/package step), hash-matched"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/local-candidate-commit-001/2026-10-11_161409_BDT/EXPORT_RECEIPT.json",
+      "class": "pre-existing untracked record (Cody commit/package step), hash-matched"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/local-candidate-commit-001/2026-10-11_161409_BDT/FILE_INDEX.json",
+      "class": "pre-existing untracked record (Cody commit/package step), hash-matched"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/local-candidate-commit-001/2026-10-11_161409_BDT/SESSION.md",
+      "class": "pre-existing untracked record (Cody commit/package step), hash-matched"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/local-candidate-commit-001/2026-10-11_161409_BDT/TONY_LOCAL_COMMIT_AND_QA_LEAD_PACKAGE_AUTHORIZATION.md",
+      "class": "pre-existing untracked record (Cody commit/package step), hash-matched"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/local-candidate-commit-001/2026-10-11_161409_BDT/approved-staging-paths.txt",
+      "class": "pre-existing untracked record (Cody commit/package step), hash-matched"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/local-candidate-commit-001/2026-10-11_161409_BDT/commit-summary.txt",
+      "class": "pre-existing untracked record (Cody commit/package step), hash-matched"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/local-candidate-commit-001/2026-10-11_161409_BDT/committed-candidate-validation.json",
+      "class": "pre-existing untracked record (Cody commit/package step), hash-matched"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/local-candidate-commit-001/2026-10-11_161409_BDT/committed-complete.patch",
+      "class": "pre-existing untracked record (Cody commit/package step), hash-matched"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/local-candidate-commit-001/2026-10-11_161409_BDT/committed-product-test.patch",
+      "class": "pre-existing untracked record (Cody commit/package step), hash-matched"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/local-candidate-commit-001/2026-10-11_161409_BDT/committed-scope.txt",
+      "class": "pre-existing untracked record (Cody commit/package step), hash-matched"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/local-candidate-commit-001/2026-10-11_161409_BDT/export-scope-scan.json",
+      "class": "pre-existing untracked record (Cody commit/package step), hash-matched"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/local-candidate-commit-001/2026-10-11_161409_BDT/final-git-status.txt",
+      "class": "pre-existing untracked record (Cody commit/package step), hash-matched"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/local-candidate-commit-001/2026-10-11_161409_BDT/final-handoff-validation.json",
+      "class": "pre-existing untracked record (Cody commit/package step), hash-matched"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/local-candidate-commit-001/2026-10-11_161409_BDT/postcommit-git-status.txt",
+      "class": "pre-existing untracked record (Cody commit/package step), hash-matched"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/local-candidate-commit-001/2026-10-11_161409_BDT/precommit-validation.json",
+      "class": "pre-existing untracked record (Cody commit/package step), hash-matched"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/local-candidate-commit-001/2026-10-11_161409_BDT/reviewed-cumulative-product-test.patch",
+      "class": "pre-existing untracked record (Cody commit/package step), hash-matched"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/local-candidate-commit-001/2026-10-11_161409_BDT/staged-complete.patch",
+      "class": "pre-existing untracked record (Cody commit/package step), hash-matched"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/local-candidate-commit-001/2026-10-11_161409_BDT/staged-name-status.txt",
+      "class": "pre-existing untracked record (Cody commit/package step), hash-matched"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/local-candidate-commit-001/2026-10-11_161409_BDT/staged-stat.txt",
+      "class": "pre-existing untracked record (Cody commit/package step), hash-matched"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/local-candidate-commit-001/2026-10-11_161409_BDT/staged-validation.json",
+      "class": "pre-existing untracked record (Cody commit/package step), hash-matched"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/local-candidate-commit-001/2026-10-11_161409_BDT/staged-whitespace-check.log",
+      "class": "pre-existing untracked record (Cody commit/package step), hash-matched"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/local-candidate-commit-001/2026-10-11_161409_BDT/starting-git-status.txt",
+      "class": "pre-existing untracked record (Cody commit/package step), hash-matched"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/local-candidate-commit-001/2026-10-11_161409_BDT/validate_package.py",
+      "class": "pre-existing untracked record (Cody commit/package step), hash-matched"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002-addendum-001/ADDENDUM_INDEX.md",
+      "class": "Executor session/recovery document (non-executable)"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002-addendum-001/APPROVED_INVENTORY.addendum.json",
+      "class": "Executor session/recovery document (non-executable)"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002-addendum-001/INSTRUMENT_FREEZE.r8.json",
+      "class": "Executor session/recovery document (non-executable)"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002-addendum-001/INSTRUMENT_FREEZE.r9.json",
+      "class": "Executor session/recovery document (non-executable)"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002-addendum-001/INSTRUMENT_FREEZE_RECEIPT.r8.json",
+      "class": "Executor session/recovery document (non-executable)"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002-addendum-001/INSTRUMENT_FREEZE_RECEIPT.r9.json",
+      "class": "Executor session/recovery document (non-executable)"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002-addendum-001/PROCESS_DEVIATION_AND_QUALIFICATIONS.md",
+      "class": "Executor session/recovery document (non-executable)"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002-addendum-001/findings-pre-append.sha256",
+      "class": "Executor session/recovery document (non-executable)"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002-addendum-001/forbidden-import-control/CONTROL_RESULT.json",
+      "class": "Executor session/recovery document (non-executable)"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002-addendum-001/forbidden-import-control/NEG-seeded-forbidden.cmd.json",
+      "class": "Executor session/recovery document (non-executable)"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002-addendum-001/forbidden-import-control/NEG-seeded-forbidden.log",
+      "class": "Executor session/recovery document (non-executable)"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002-addendum-001/forbidden-import-control/POS-allowed-twin.cmd.json",
+      "class": "Executor session/recovery document (non-executable)"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002-addendum-001/forbidden-import-control/POS-allowed-twin.log",
+      "class": "Executor session/recovery document (non-executable)"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002-addendum-001/forbidden-import-control/source-hashes.sha256",
+      "class": "Executor session/recovery document (non-executable)"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002-addendum-001/gate-post-addendum.json",
+      "class": "Executor session/recovery document (non-executable)"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002-addendum-001/gate-post-addendum.run1-STOP-unlisted-own-inputs.json",
+      "class": "Executor session/recovery document (non-executable)"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002-addendum-001/gate-post-addendum.run2-r8.json",
+      "class": "Executor session/recovery document (non-executable)"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002-addendum-001/q5-proposal/Q5_PROPOSAL.md",
+      "class": "Executor session/recovery document (non-executable)"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002-addendum-001/q5-proposal/Q5_PROPOSAL_PATHS.json",
+      "class": "Executor session/recovery document (non-executable)"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002-addendum-001/root-files/PLACEMENT_CORRECTION_PROPOSAL.md",
+      "class": "Executor session/recovery document (non-executable)"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002-addendum-001/root-files/RECOVERY.md.HEAD.txt",
+      "class": "Executor session/recovery document (non-executable)"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002-addendum-001/root-files/RECOVERY.md.diff.txt",
+      "class": "Executor session/recovery document (non-executable)"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002-addendum-001/root-files/RECOVERY_1758_BLOCK_RECONSTRUCTED.txt",
+      "class": "Executor session/recovery document (non-executable)"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002-addendum-001/root-files/ROOT_FILES_ACCOUNT.json",
+      "class": "Executor session/recovery document (non-executable)"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002-addendum-001/root-files/root-session_2026-10-11.md.txt",
+      "class": "Executor session/recovery document (non-executable)"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002-addendum-001/seeded-entry-vs-twin.diff",
+      "class": "Executor session/recovery document (non-executable)"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002/AC_MATRIX.md",
+      "class": "attempt-002 evidence (non-executable data)"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002/EXECUTION_REPORT.md",
+      "class": "attempt-002 evidence (non-executable data)"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002/INDEX.md",
+      "class": "attempt-002 evidence (non-executable data)"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002/INSTRUMENT_RETRY_LEDGER.md",
+      "class": "attempt-002 evidence (non-executable data)"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002/acceptance/B/B-tsc.cmd.json",
+      "class": "attempt-002 evidence (non-executable data)"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002/acceptance/B/B-tsc.log",
+      "class": "attempt-002 evidence (non-executable data)"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002/acceptance/C/C-jest-maintained.cmd.json",
+      "class": "attempt-002 evidence (non-executable data)"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002/acceptance/C/C-jest-maintained.log",
+      "class": "attempt-002 evidence (non-executable data)"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002/acceptance/C/F04-maintained-assertions.txt",
+      "class": "attempt-002 evidence (non-executable data)"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002/acceptance/C/count-drift-check.json",
+      "class": "attempt-002 evidence (non-executable data)"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002/acceptance/C/maintained.json",
+      "class": "attempt-002 evidence (non-executable data)"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002/acceptance/D/D-jest-qa.cmd.json",
+      "class": "attempt-002 evidence (non-executable data)"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002/acceptance/D/D-jest-qa.log",
+      "class": "attempt-002 evidence (non-executable data)"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002/acceptance/D/qa-jest.json",
+      "class": "attempt-002 evidence (non-executable data)"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002/acceptance/E/E-build.cmd.json",
+      "class": "attempt-002 evidence (non-executable data)"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002/acceptance/E/E-build.log",
+      "class": "attempt-002 evidence (non-executable data)"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002/acceptance/E/E-ns-escape.cmd.json",
+      "class": "attempt-002 evidence (non-executable data)"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002/acceptance/E/E-ns-escape.log",
+      "class": "attempt-002 evidence (non-executable data)"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002/acceptance/F/chat-auth-relation.txt",
+      "class": "attempt-002 evidence (non-executable data)"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002/acceptance/F/output-audit.json",
+      "class": "attempt-002 evidence (non-executable data)"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002/acceptance/F/static-audit.json",
+      "class": "attempt-002 evidence (non-executable data)"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002/acceptance/G-diag-s20/G-diag-s20-fontconfig.cmd.json",
+      "class": "attempt-002 evidence (non-executable data)"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002/acceptance/G-diag-s20/G-diag-s20-fontconfig.log",
+      "class": "attempt-002 evidence (non-executable data)"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002/acceptance/G-diag-s20/ledgers/S-20_root_font_collateral_committed_subsets_load_and_match_bytes_blocked_fonts_fall_back_without_overflow_both_themes_at_375_1280.json",
+      "class": "attempt-002 evidence (non-executable data)"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002/acceptance/G-diag-s20/playwright-results.json",
+      "class": "attempt-002 evidence (non-executable data)"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002/acceptance/G-diag-s20/records/s20-root-font-collateral.json",
+      "class": "attempt-002 evidence (non-executable data)"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002/acceptance/G-diag-s20/screens/s20-collateral-blocked-dark-1280.png",
+      "class": "attempt-002 evidence (non-executable data)"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002/acceptance/G-diag-s20/screens/s20-collateral-blocked-dark-375.png",
+      "class": "attempt-002 evidence (non-executable data)"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002/acceptance/G-diag-s20/screens/s20-collateral-blocked-light-1280.png",
+      "class": "attempt-002 evidence (non-executable data)"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002/acceptance/G-diag-s20/screens/s20-collateral-blocked-light-375.png",
+      "class": "attempt-002 evidence (non-executable data)"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002/acceptance/G-diag-s20/screens/s20-collateral-loaded-dark-1280.png",
+      "class": "attempt-002 evidence (non-executable data)"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002/acceptance/G-diag-s20/screens/s20-collateral-loaded-dark-375.png",
+      "class": "attempt-002 evidence (non-executable data)"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002/acceptance/G-diag-s20/screens/s20-collateral-loaded-light-1280.png",
+      "class": "attempt-002 evidence (non-executable data)"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002/acceptance/G-diag-s20/screens/s20-collateral-loaded-light-375.png",
+      "class": "attempt-002 evidence (non-executable data)"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002/acceptance/G/G-browser.cmd.json",
+      "class": "attempt-002 evidence (non-executable data)"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002/acceptance/G/G-browser.log",
+      "class": "attempt-002 evidence (non-executable data)"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002/acceptance/G/artifacts/s00_policy_controls-C-04-a-697b7--the-test-expected-failure-/error-context.md",
+      "class": "attempt-002 evidence (non-executable data)"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002/acceptance/G/ledgers/C-01_off-origin_request_is_aborted_and_logged_by_the_browser_interceptor_in_default_manual_newPage_and_popup_contexts.json",
+      "class": "attempt-002 evidence (non-executable data)"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002/acceptance/G/ledgers/C-02_page_errors_are_captured_from_every_page_and_only_the_labelled_synthetic_is_consumed.json",
+      "class": "attempt-002 evidence (non-executable data)"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002/acceptance/G/ledgers/C-03_WebSocket_transport_is_intercepted_and_closed.json",
+      "class": "attempt-002 evidence (non-executable data)"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002/acceptance/G/ledgers/C-04_an_unconsumed_policy_event_fails_the_test_expected_failure_.json",
+      "class": "attempt-002 evidence (non-executable data)"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002/acceptance/G/ledgers/DIRECTOR-OBS-001_11.3_browser_A_B_two_successful_new_chats_both_stay_in_recents_reopening_A_shows_only_A_no_hidden_archive_delete_recreate.json",
+      "class": "attempt-002 evidence (non-executable data)"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002/acceptance/G/ledgers/S-01_directory_filter_is_local_case-insensitive_over_name_description_distinct_no-results_no_service_calls.json",
+      "class": "attempt-002 evidence (non-executable data)"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002/acceptance/G/ledgers/S-01_empty_loading_unavailable_roster_are_distinct_and_fabricate_nothing.json",
+      "class": "attempt-002 evidence (non-executable data)"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002/acceptance/G/ledgers/S-02_alternate_rosters_use_the_same_components_neutral_fallbacks_approved_roster_renders_exactly.json",
+      "class": "attempt-002 evidence (non-executable data)"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002/acceptance/G/ledgers/S-03_invalid_contradictory_selectors_safe_unavailable_state_zero_service_calls.json",
+      "class": "attempt-002 evidence (non-executable data)"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002/acceptance/G/ledgers/S-03_view_identity_directory_workspace_conversation_draft_Back_3_Forward_3_encoded_IDs.json",
+      "class": "attempt-002 evidence (non-executable data)"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002/acceptance/G/ledgers/S-04_recents_ready_empty_loading_unavailable_partial_recovered_are_distinct_retry_and_recovery_make_no_writes.json",
+      "class": "attempt-002 evidence (non-executable data)"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002/acceptance/G/ledgers/S-05_transcript_markdown_GFM_code_render_no_injected_markup_executes_long_content_scrolls_in_its_own_region.json",
+      "class": "attempt-002 evidence (non-executable data)"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002/acceptance/G/ledgers/S-06_composer_stays_reachable_at_375_with_a_long_thread.json",
+      "class": "attempt-002 evidence (non-executable data)"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002/acceptance/G/ledgers/S-06_composer_whitespace_rejected_single_send_on_Enter_repeat_blocked_while_pending_Shift_Enter_newline_IME_Enter_ignored.json",
+      "class": "attempt-002 evidence (non-executable data)"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002/acceptance/G/ledgers/S-07_New_Chat_fresh_local_draft_clears_old_draft_no_create_run_before_send_returned_ID_binds_once_late_result_never_hijacks.json",
+      "class": "attempt-002 evidence (non-executable data)"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002/acceptance/G/ledgers/S-08_missing_unavailable_access-unavailable_are_distinct_from_empty_with_constrained_actions.json",
+      "class": "attempt-002 evidence (non-executable data)"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002/acceptance/G/ledgers/S-09_confirmed_not-sent_keeps_an_editable_draft_and_requires_deliberate_send.json",
+      "class": "attempt-002 evidence (non-executable data)"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002/acceptance/G/ledgers/S-09_unknown_outcome_pending-35s-then-timeout_send_paused_attempted_text_visible_only_history_inspection_never_not_sent_.json",
+      "class": "attempt-002 evidence (non-executable data)"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002/acceptance/G/ledgers/S-09_unknown_outcome_rejected-throw_send_paused_attempted_text_visible_only_history_inspection_never_not_sent_.json",
+      "class": "attempt-002 evidence (non-executable data)"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002/acceptance/G/ledgers/S-09_unknown_outcome_resolved-uncertain_send_paused_attempted_text_visible_only_history_inspection_never_not_sent_.json",
+      "class": "attempt-002 evidence (non-executable data)"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002/acceptance/G/ledgers/S-10_late_history_cannot_paint_another_session_identity_switch_mid-flight_cannot_surface_prior-user_content.json",
+      "class": "attempt-002 evidence (non-executable data)"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002/acceptance/G/ledgers/S-10_pending_status_metadata_warning_keeps_ID_transcript_and_offers_list_read_only.json",
+      "class": "attempt-002 evidence (non-executable data)"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002/acceptance/G/ledgers/S-11_rename_archive_whitespace_rejected_literal_punctuation_failure_retention_archive_hides_only_focus_destinations.json",
+      "class": "attempt-002 evidence (non-executable data)"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002/acceptance/G/ledgers/S-12_demo_context_permanent_disclosure_edit_add_preview_remove_make_no_network_upload_or_service_calls.json",
+      "class": "attempt-002 evidence (non-executable data)"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002/acceptance/G/ledgers/S-13_demo_state_is_per_agent_and_per_identity_reload_reset_clear_it_never_persisted.json",
+      "class": "attempt-002 evidence (non-executable data)"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002/acceptance/G/ledgers/S-14_theme_dark_when_unset_either_OS_scheme_saved_light_honored_saved_system_not_rewritten_tokens_match_design.json",
+      "class": "attempt-002 evidence (non-executable data)"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002/acceptance/G/ledgers/S-15_scope_sibling_styles_unchanged_by_workspace_CSS_dialogs_themed_on_first_visible_frame_portal_listener_teardown.json",
+      "class": "attempt-002 evidence (non-executable data)"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002/acceptance/G/ledgers/S-16_render_matrix_3_views_2_themes_375_768_1280_1023_1024_1025_DPR2_spot_check.json",
+      "class": "attempt-002 evidence (non-executable data)"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002/acceptance/G/ledgers/S-17_context_dialog_1280_light_and_nested_demo_dialog_768_dark_containment_nested_Escape_restore.json",
+      "class": "attempt-002 evidence (non-executable data)"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002/acceptance/G/ledgers/S-17_controls_accessible_names_and_44_44_targets_hidden_desktop_mobile_copies_unfocusable.json",
+      "class": "attempt-002 evidence (non-executable data)"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002/acceptance/G/ledgers/S-17_drawer_375_dark_focus_contained_background_inert_Escape_backdrop_Close_dismiss_and_restore_breakpoint_crossing_closes_and_focuses_visible_nav.json",
+      "class": "attempt-002 evidence (non-executable data)"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002/acceptance/G/ledgers/S-18_disclosure_by_breakpoint_resize_focus_rescue_keyboard_skip_link_single_aria-current_readable_pending_status_real_theme_measured_focus_contrast.json",
+      "class": "attempt-002 evidence (non-executable data)"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002/acceptance/G/ledgers/S-19_copy_payloads_blocked_clipboard_fallback_speech_lifecycle_unavailable_explanation_no_autoplay.json",
+      "class": "attempt-002 evidence (non-executable data)"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002/acceptance/G/ledgers/S-20_root_font_collateral_committed_subsets_load_and_match_bytes_blocked_fonts_fall_back_without_overflow_both_themes_at_375_1280.json",
+      "class": "attempt-002 evidence (non-executable data)"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002/acceptance/G/playwright-results.json",
+      "class": "attempt-002 evidence (non-executable data)"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002/acceptance/G/records/c01-interceptor-control.json",
+      "class": "attempt-002 evidence (non-executable data)"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002/acceptance/G/records/c02-pageerror-control.json",
+      "class": "attempt-002 evidence (non-executable data)"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002/acceptance/G/records/c03-websocket-control.json",
+      "class": "attempt-002 evidence (non-executable data)"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002/acceptance/G/records/f02-breakpoint-focus.json",
+      "class": "attempt-002 evidence (non-executable data)"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002/acceptance/G/records/obs001-fresh-mount-ledger.json",
+      "class": "attempt-002 evidence (non-executable data)"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002/acceptance/G/records/obs001-in-session-ledger.json",
+      "class": "attempt-002 evidence (non-executable data)"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002/acceptance/G/records/s01-roster-states.json",
+      "class": "attempt-002 evidence (non-executable data)"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002/acceptance/G/records/s02-approved-roster-render.json",
+      "class": "attempt-002 evidence (non-executable data)"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002/acceptance/G/records/s03-history-steps.json",
+      "class": "attempt-002 evidence (non-executable data)"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002/acceptance/G/records/s03-invalid.json",
+      "class": "attempt-002 evidence (non-executable data)"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002/acceptance/G/records/s05-transcript-metrics.json",
+      "class": "attempt-002 evidence (non-executable data)"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002/acceptance/G/records/s07-ledger.json",
+      "class": "attempt-002 evidence (non-executable data)"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002/acceptance/G/records/s09-pending-35s-then-timeout.json",
+      "class": "attempt-002 evidence (non-executable data)"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002/acceptance/G/records/s09-rejected-throw.json",
+      "class": "attempt-002 evidence (non-executable data)"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002/acceptance/G/records/s09-resolved-uncertain.json",
+      "class": "attempt-002 evidence (non-executable data)"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002/acceptance/G/records/s11-ledger.json",
+      "class": "attempt-002 evidence (non-executable data)"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002/acceptance/G/records/s12-requests.json",
+      "class": "attempt-002 evidence (non-executable data)"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002/acceptance/G/records/s14-theme.json",
+      "class": "attempt-002 evidence (non-executable data)"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002/acceptance/G/records/s15-scope.json",
+      "class": "attempt-002 evidence (non-executable data)"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002/acceptance/G/records/s16-render-metrics.json",
+      "class": "attempt-002 evidence (non-executable data)"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002/acceptance/G/records/s17-names-targets.json",
+      "class": "attempt-002 evidence (non-executable data)"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002/acceptance/G/records/s18-disclosure-status-focus.json",
+      "class": "attempt-002 evidence (non-executable data)"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002/acceptance/G/records/s20-root-font-collateral.json",
+      "class": "attempt-002 evidence (non-executable data)"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002/acceptance/G/screens/obs001-reopen-A.png",
+      "class": "attempt-002 evidence (non-executable data)"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002/acceptance/G/screens/render-conversation-dark-1023.png",
+      "class": "attempt-002 evidence (non-executable data)"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002/acceptance/G/screens/render-conversation-dark-1024.png",
+      "class": "attempt-002 evidence (non-executable data)"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002/acceptance/G/screens/render-conversation-dark-1025.png",
+      "class": "attempt-002 evidence (non-executable data)"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002/acceptance/G/screens/render-conversation-dark-1280.png",
+      "class": "attempt-002 evidence (non-executable data)"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002/acceptance/G/screens/render-conversation-dark-375-dpr2.png",
+      "class": "attempt-002 evidence (non-executable data)"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002/acceptance/G/screens/render-conversation-dark-375.png",
+      "class": "attempt-002 evidence (non-executable data)"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002/acceptance/G/screens/render-conversation-dark-768.png",
+      "class": "attempt-002 evidence (non-executable data)"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002/acceptance/G/screens/render-conversation-light-1280.png",
+      "class": "attempt-002 evidence (non-executable data)"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002/acceptance/G/screens/render-conversation-light-375.png",
+      "class": "attempt-002 evidence (non-executable data)"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002/acceptance/G/screens/render-conversation-light-768.png",
+      "class": "attempt-002 evidence (non-executable data)"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002/acceptance/G/screens/render-directory-dark-1023.png",
+      "class": "attempt-002 evidence (non-executable data)"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002/acceptance/G/screens/render-directory-dark-1024.png",
+      "class": "attempt-002 evidence (non-executable data)"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002/acceptance/G/screens/render-directory-dark-1025.png",
+      "class": "attempt-002 evidence (non-executable data)"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002/acceptance/G/screens/render-directory-dark-1280.png",
+      "class": "attempt-002 evidence (non-executable data)"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002/acceptance/G/screens/render-directory-dark-375.png",
+      "class": "attempt-002 evidence (non-executable data)"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002/acceptance/G/screens/render-directory-dark-768.png",
+      "class": "attempt-002 evidence (non-executable data)"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002/acceptance/G/screens/render-directory-light-1280.png",
+      "class": "attempt-002 evidence (non-executable data)"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002/acceptance/G/screens/render-directory-light-375.png",
+      "class": "attempt-002 evidence (non-executable data)"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002/acceptance/G/screens/render-directory-light-768.png",
+      "class": "attempt-002 evidence (non-executable data)"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002/acceptance/G/screens/render-workspace-dark-1280.png",
+      "class": "attempt-002 evidence (non-executable data)"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002/acceptance/G/screens/render-workspace-dark-375.png",
+      "class": "attempt-002 evidence (non-executable data)"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002/acceptance/G/screens/render-workspace-dark-768.png",
+      "class": "attempt-002 evidence (non-executable data)"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002/acceptance/G/screens/render-workspace-light-1280.png",
+      "class": "attempt-002 evidence (non-executable data)"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002/acceptance/G/screens/render-workspace-light-375.png",
+      "class": "attempt-002 evidence (non-executable data)"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002/acceptance/G/screens/render-workspace-light-768.png",
+      "class": "attempt-002 evidence (non-executable data)"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002/acceptance/G/screens/s01-directory-dark-1280.png",
+      "class": "attempt-002 evidence (non-executable data)"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002/acceptance/G/screens/s01-directory-light-1280.png",
+      "class": "attempt-002 evidence (non-executable data)"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002/acceptance/G/screens/s02-approved-roster-directory-dark-1280.png",
+      "class": "attempt-002 evidence (non-executable data)"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002/acceptance/G/screens/s04-recents-empty.png",
+      "class": "attempt-002 evidence (non-executable data)"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002/acceptance/G/screens/s04-recents-partial.png",
+      "class": "attempt-002 evidence (non-executable data)"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002/acceptance/G/screens/s04-recents-ready.png",
+      "class": "attempt-002 evidence (non-executable data)"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002/acceptance/G/screens/s04-recents-recovered.png",
+      "class": "attempt-002 evidence (non-executable data)"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002/acceptance/G/screens/s04-recents-unavailable.png",
+      "class": "attempt-002 evidence (non-executable data)"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002/acceptance/G/screens/s07-after-late-result.png",
+      "class": "attempt-002 evidence (non-executable data)"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002/acceptance/G/screens/s08-access.png",
+      "class": "attempt-002 evidence (non-executable data)"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002/acceptance/G/screens/s08-empty.png",
+      "class": "attempt-002 evidence (non-executable data)"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002/acceptance/G/screens/s08-missing.png",
+      "class": "attempt-002 evidence (non-executable data)"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002/acceptance/G/screens/s08-unavailable.png",
+      "class": "attempt-002 evidence (non-executable data)"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002/acceptance/G/screens/s11-after-mutations.png",
+      "class": "attempt-002 evidence (non-executable data)"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002/acceptance/G/screens/s19-fallbacks.png",
+      "class": "attempt-002 evidence (non-executable data)"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002/acceptance/G/screens/s20-collateral-blocked-dark-1280.png",
+      "class": "attempt-002 evidence (non-executable data)"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002/acceptance/G/screens/s20-collateral-blocked-dark-375.png",
+      "class": "attempt-002 evidence (non-executable data)"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002/acceptance/G/screens/s20-collateral-blocked-light-1280.png",
+      "class": "attempt-002 evidence (non-executable data)"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002/acceptance/G/screens/s20-collateral-blocked-light-375.png",
+      "class": "attempt-002 evidence (non-executable data)"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002/acceptance/G/screens/s20-collateral-loaded-dark-1280.png",
+      "class": "attempt-002 evidence (non-executable data)"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002/acceptance/G/screens/s20-collateral-loaded-dark-375.png",
+      "class": "attempt-002 evidence (non-executable data)"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002/acceptance/G/screens/s20-collateral-loaded-light-1280.png",
+      "class": "attempt-002 evidence (non-executable data)"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002/acceptance/G/screens/s20-collateral-loaded-light-375.png",
+      "class": "attempt-002 evidence (non-executable data)"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002/acceptance/H/H1-workspace-copy.cmd.json",
+      "class": "attempt-002 evidence (non-executable data)"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002/acceptance/H/H1-workspace-copy.log",
+      "class": "attempt-002 evidence (non-executable data)"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002/acceptance/H/H2-repair-copy.cmd.json",
+      "class": "attempt-002 evidence (non-executable data)"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002/acceptance/H/H2-repair-copy.log",
+      "class": "attempt-002 evidence (non-executable data)"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002/acceptance/H/repair-copy-out/conversation-dark-1280-metrics.json",
+      "class": "attempt-002 evidence (non-executable data)"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002/acceptance/H/repair-copy-out/conversation-dark-375-metrics.json",
+      "class": "attempt-002 evidence (non-executable data)"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002/acceptance/H/repair-copy-out/conversation-dark-768-metrics.json",
+      "class": "attempt-002 evidence (non-executable data)"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002/acceptance/H/repair-copy-out/conversation-light-1280-metrics.json",
+      "class": "attempt-002 evidence (non-executable data)"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002/acceptance/H/repair-copy-out/conversation-light-375-metrics.json",
+      "class": "attempt-002 evidence (non-executable data)"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002/acceptance/H/repair-copy-out/conversation-light-768-metrics.json",
+      "class": "attempt-002 evidence (non-executable data)"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002/acceptance/H/repair-copy-out/directory-dark-1280-metrics.json",
+      "class": "attempt-002 evidence (non-executable data)"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002/acceptance/H/repair-copy-out/directory-dark-375-metrics.json",
+      "class": "attempt-002 evidence (non-executable data)"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002/acceptance/H/repair-copy-out/directory-dark-768-metrics.json",
+      "class": "attempt-002 evidence (non-executable data)"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002/acceptance/H/repair-copy-out/directory-light-1280-metrics.json",
+      "class": "attempt-002 evidence (non-executable data)"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002/acceptance/H/repair-copy-out/directory-light-375-metrics.json",
+      "class": "attempt-002 evidence (non-executable data)"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002/acceptance/H/repair-copy-out/directory-light-768-metrics.json",
+      "class": "attempt-002 evidence (non-executable data)"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002/acceptance/H/repair-copy-out/screens/conversation-dark-1280.png",
+      "class": "attempt-002 evidence (non-executable data)"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002/acceptance/H/repair-copy-out/screens/conversation-dark-375.png",
+      "class": "attempt-002 evidence (non-executable data)"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002/acceptance/H/repair-copy-out/screens/conversation-dark-768.png",
+      "class": "attempt-002 evidence (non-executable data)"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002/acceptance/H/repair-copy-out/screens/conversation-light-1280.png",
+      "class": "attempt-002 evidence (non-executable data)"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002/acceptance/H/repair-copy-out/screens/conversation-light-375.png",
+      "class": "attempt-002 evidence (non-executable data)"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002/acceptance/H/repair-copy-out/screens/conversation-light-768.png",
+      "class": "attempt-002 evidence (non-executable data)"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002/acceptance/H/repair-copy-out/screens/directory-dark-1280.png",
+      "class": "attempt-002 evidence (non-executable data)"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002/acceptance/H/repair-copy-out/screens/directory-dark-375.png",
+      "class": "attempt-002 evidence (non-executable data)"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002/acceptance/H/repair-copy-out/screens/directory-dark-768.png",
+      "class": "attempt-002 evidence (non-executable data)"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002/acceptance/H/repair-copy-out/screens/directory-light-1280.png",
+      "class": "attempt-002 evidence (non-executable data)"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002/acceptance/H/repair-copy-out/screens/directory-light-375.png",
+      "class": "attempt-002 evidence (non-executable data)"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002/acceptance/H/repair-copy-out/screens/directory-light-768.png",
+      "class": "attempt-002 evidence (non-executable data)"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002/acceptance/H/repair-copy-out/screens/workspace-dark-1280.png",
+      "class": "attempt-002 evidence (non-executable data)"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002/acceptance/H/repair-copy-out/screens/workspace-dark-375.png",
+      "class": "attempt-002 evidence (non-executable data)"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002/acceptance/H/repair-copy-out/screens/workspace-dark-768.png",
+      "class": "attempt-002 evidence (non-executable data)"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002/acceptance/H/repair-copy-out/screens/workspace-light-1280.png",
+      "class": "attempt-002 evidence (non-executable data)"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002/acceptance/H/repair-copy-out/screens/workspace-light-375.png",
+      "class": "attempt-002 evidence (non-executable data)"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002/acceptance/H/repair-copy-out/screens/workspace-light-768.png",
+      "class": "attempt-002 evidence (non-executable data)"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002/acceptance/H/repair-copy-out/typography-1280-fallback.json",
+      "class": "attempt-002 evidence (non-executable data)"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002/acceptance/H/repair-copy-out/typography-1280-loaded.json",
+      "class": "attempt-002 evidence (non-executable data)"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002/acceptance/H/repair-copy-out/typography-375-fallback.json",
+      "class": "attempt-002 evidence (non-executable data)"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002/acceptance/H/repair-copy-out/typography-375-loaded.json",
+      "class": "attempt-002 evidence (non-executable data)"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002/acceptance/H/repair-copy-out/workspace-dark-1280-metrics.json",
+      "class": "attempt-002 evidence (non-executable data)"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002/acceptance/H/repair-copy-out/workspace-dark-375-metrics.json",
+      "class": "attempt-002 evidence (non-executable data)"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002/acceptance/H/repair-copy-out/workspace-dark-768-metrics.json",
+      "class": "attempt-002 evidence (non-executable data)"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002/acceptance/H/repair-copy-out/workspace-light-1280-metrics.json",
+      "class": "attempt-002 evidence (non-executable data)"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002/acceptance/H/repair-copy-out/workspace-light-375-metrics.json",
+      "class": "attempt-002 evidence (non-executable data)"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002/acceptance/H/repair-copy-out/workspace-light-768-metrics.json",
+      "class": "attempt-002 evidence (non-executable data)"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002/acceptance/H/repair-copy/browser-results.json",
+      "class": "attempt-002 evidence (non-executable data)"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002/acceptance/H/repair-copy/ledgers/F02_breakpoint_teardown_keeps_focus_on_the_visible_current_item_after_close_callbacks_settle.json",
+      "class": "attempt-002 evidence (non-executable data)"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002/acceptance/H/repair-copy/ledgers/F02_no_visible_current_item_falls_back_to_visible_All_agents.json",
+      "class": "attempt-002 evidence (non-executable data)"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002/acceptance/H/repair-copy/ledgers/F02_normal_mobile_Close_still_restores_the_menu_trigger.json",
+      "class": "attempt-002 evidence (non-executable data)"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002/acceptance/H/repair-copy/ledgers/F02_normal_mobile_Escape_still_restores_the_menu_trigger.json",
+      "class": "attempt-002 evidence (non-executable data)"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002/acceptance/H/repair-copy/ledgers/F02_normal_mobile_backdrop_still_restores_the_menu_trigger.json",
+      "class": "attempt-002 evidence (non-executable data)"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002/acceptance/H/repair-copy/ledgers/F03_fonts_conversation_dark_1280_has_no_page_overflow.json",
+      "class": "attempt-002 evidence (non-executable data)"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002/acceptance/H/repair-copy/ledgers/F03_fonts_conversation_dark_375_has_no_page_overflow.json",
+      "class": "attempt-002 evidence (non-executable data)"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002/acceptance/H/repair-copy/ledgers/F03_fonts_conversation_dark_768_has_no_page_overflow.json",
+      "class": "attempt-002 evidence (non-executable data)"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002/acceptance/H/repair-copy/ledgers/F03_fonts_conversation_light_1280_has_no_page_overflow.json",
+      "class": "attempt-002 evidence (non-executable data)"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002/acceptance/H/repair-copy/ledgers/F03_fonts_conversation_light_375_has_no_page_overflow.json",
+      "class": "attempt-002 evidence (non-executable data)"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002/acceptance/H/repair-copy/ledgers/F03_fonts_conversation_light_768_has_no_page_overflow.json",
+      "class": "attempt-002 evidence (non-executable data)"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002/acceptance/H/repair-copy/ledgers/F03_fonts_directory_dark_1280_has_no_page_overflow.json",
+      "class": "attempt-002 evidence (non-executable data)"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002/acceptance/H/repair-copy/ledgers/F03_fonts_directory_dark_375_has_no_page_overflow.json",
+      "class": "attempt-002 evidence (non-executable data)"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002/acceptance/H/repair-copy/ledgers/F03_fonts_directory_dark_768_has_no_page_overflow.json",
+      "class": "attempt-002 evidence (non-executable data)"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002/acceptance/H/repair-copy/ledgers/F03_fonts_directory_light_1280_has_no_page_overflow.json",
+      "class": "attempt-002 evidence (non-executable data)"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002/acceptance/H/repair-copy/ledgers/F03_fonts_directory_light_375_has_no_page_overflow.json",
+      "class": "attempt-002 evidence (non-executable data)"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002/acceptance/H/repair-copy/ledgers/F03_fonts_directory_light_768_has_no_page_overflow.json",
+      "class": "attempt-002 evidence (non-executable data)"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002/acceptance/H/repair-copy/ledgers/F03_fonts_workspace_dark_1280_has_no_page_overflow.json",
+      "class": "attempt-002 evidence (non-executable data)"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002/acceptance/H/repair-copy/ledgers/F03_fonts_workspace_dark_375_has_no_page_overflow.json",
+      "class": "attempt-002 evidence (non-executable data)"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002/acceptance/H/repair-copy/ledgers/F03_fonts_workspace_dark_768_has_no_page_overflow.json",
+      "class": "attempt-002 evidence (non-executable data)"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002/acceptance/H/repair-copy/ledgers/F03_fonts_workspace_light_1280_has_no_page_overflow.json",
+      "class": "attempt-002 evidence (non-executable data)"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002/acceptance/H/repair-copy/ledgers/F03_fonts_workspace_light_375_has_no_page_overflow.json",
+      "class": "attempt-002 evidence (non-executable data)"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002/acceptance/H/repair-copy/ledgers/F03_fonts_workspace_light_768_has_no_page_overflow.json",
+      "class": "attempt-002 evidence (non-executable data)"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002/acceptance/H/repair-copy/ledgers/root_typography_1280_prior_local_declarations_match_with_fonts_blocked.json",
+      "class": "attempt-002 evidence (non-executable data)"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002/acceptance/H/repair-copy/ledgers/root_typography_1280_prior_local_declarations_match_with_fonts_loaded.json",
+      "class": "attempt-002 evidence (non-executable data)"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002/acceptance/H/repair-copy/ledgers/root_typography_375_prior_local_declarations_match_with_fonts_blocked.json",
+      "class": "attempt-002 evidence (non-executable data)"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002/acceptance/H/repair-copy/ledgers/root_typography_375_prior_local_declarations_match_with_fonts_loaded.json",
+      "class": "attempt-002 evidence (non-executable data)"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002/acceptance/H/workspace-copy-out/screenshots/conversation-dark-1280.png",
+      "class": "attempt-002 evidence (non-executable data)"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002/acceptance/H/workspace-copy-out/screenshots/conversation-dark-375.png",
+      "class": "attempt-002 evidence (non-executable data)"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002/acceptance/H/workspace-copy-out/screenshots/conversation-dark-768.png",
+      "class": "attempt-002 evidence (non-executable data)"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002/acceptance/H/workspace-copy-out/screenshots/conversation-light-1280.png",
+      "class": "attempt-002 evidence (non-executable data)"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002/acceptance/H/workspace-copy-out/screenshots/conversation-light-375.png",
+      "class": "attempt-002 evidence (non-executable data)"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002/acceptance/H/workspace-copy-out/screenshots/conversation-light-768.png",
+      "class": "attempt-002 evidence (non-executable data)"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002/acceptance/H/workspace-copy-out/screenshots/directory-dark-1280.png",
+      "class": "attempt-002 evidence (non-executable data)"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002/acceptance/H/workspace-copy-out/screenshots/directory-dark-375.png",
+      "class": "attempt-002 evidence (non-executable data)"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002/acceptance/H/workspace-copy-out/screenshots/directory-dark-768.png",
+      "class": "attempt-002 evidence (non-executable data)"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002/acceptance/H/workspace-copy-out/screenshots/directory-light-1280.png",
+      "class": "attempt-002 evidence (non-executable data)"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002/acceptance/H/workspace-copy-out/screenshots/directory-light-375.png",
+      "class": "attempt-002 evidence (non-executable data)"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002/acceptance/H/workspace-copy-out/screenshots/directory-light-768.png",
+      "class": "attempt-002 evidence (non-executable data)"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002/acceptance/H/workspace-copy-out/screenshots/workspace-dark-1280.png",
+      "class": "attempt-002 evidence (non-executable data)"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002/acceptance/H/workspace-copy-out/screenshots/workspace-dark-375.png",
+      "class": "attempt-002 evidence (non-executable data)"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002/acceptance/H/workspace-copy-out/screenshots/workspace-dark-768.png",
+      "class": "attempt-002 evidence (non-executable data)"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002/acceptance/H/workspace-copy-out/screenshots/workspace-light-1280.png",
+      "class": "attempt-002 evidence (non-executable data)"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002/acceptance/H/workspace-copy-out/screenshots/workspace-light-375.png",
+      "class": "attempt-002 evidence (non-executable data)"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002/acceptance/H/workspace-copy-out/screenshots/workspace-light-768.png",
+      "class": "attempt-002 evidence (non-executable data)"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002/acceptance/H/workspace-copy/ledgers/context_disclosure_and_nested_dialogs_isolate_edits_by_agent_user_and_reset_on_reload.json",
+      "class": "attempt-002 evidence (non-executable data)"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002/acceptance/H/workspace-copy/ledgers/context_focus_gets_safe_destination_when_narrow_resize_hides_content.json",
+      "class": "attempt-002 evidence (non-executable data)"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002/acceptance/H/workspace-copy/ledgers/default_dark_saved_light_and_legacy_system_are_preserved.json",
+      "class": "attempt-002 evidence (non-executable data)"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002/acceptance/H/workspace-copy/ledgers/directory_filter_neutral_alternate_roster_and_safe_navigation_back.json",
+      "class": "attempt-002 evidence (non-executable data)"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002/acceptance/H/workspace-copy/ledgers/fresh_drafts_whitespace_IME_and_double-submit_guard_durable_returned_ID_binds_once.json",
+      "class": "attempt-002 evidence (non-executable data)"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002/acceptance/H/workspace-copy/ledgers/invalid_query_cannot_invoke_services_empty_loading_unavailable_roster_distinct.json",
+      "class": "attempt-002 evidence (non-executable data)"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002/acceptance/H/workspace-copy/ledgers/late_history_cannot_paint_another_session_clipboard_fallback_and_no_raw_HTML.json",
+      "class": "attempt-002 evidence (non-executable data)"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002/acceptance/H/workspace-copy/ledgers/metadata-warning_successful_send_keeps_returned_ID_and_repeats_only_deliberate_sends.json",
+      "class": "attempt-002 evidence (non-executable data)"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002/acceptance/H/workspace-copy/ledgers/missing_unavailable_access_uncertain_pending_failed_metadata_states_constrain_callbacks.json",
+      "class": "attempt-002 evidence (non-executable data)"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002/acceptance/H/workspace-copy/ledgers/modal_background_inert_backdrop_dismissal_and_listener_portal_cleanup.json",
+      "class": "attempt-002 evidence (non-executable data)"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002/acceptance/H/workspace-copy/ledgers/navigation_drawer_traps_focus_restores_opener_closes_at_breakpoint_and_portal_cleans_up.json",
+      "class": "attempt-002 evidence (non-executable data)"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002/acceptance/H/workspace-copy/ledgers/partial_recents_recover_explicitly_without_writes_and_send_failures_preserve_the_draft.json",
+      "class": "attempt-002 evidence (non-executable data)"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002/acceptance/H/workspace-copy/ledgers/portal_light_dark_tokens_present_on_first_visible_frame_and_modal_Escape_restores_trigger.json",
+      "class": "attempt-002 evidence (non-executable data)"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002/acceptance/H/workspace-copy/ledgers/real_copy_payloads_and_speech_lifecycle_with_explicit_browser_doubles.json",
+      "class": "attempt-002 evidence (non-executable data)"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002/acceptance/H/workspace-copy/ledgers/recents_partial_recovered_states_and_safe_literal_metadata_actions_with_failure_retention.json",
+      "class": "attempt-002 evidence (non-executable data)"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002/acceptance/H/workspace-copy/ledgers/render_conversation_dark_1280.json",
+      "class": "attempt-002 evidence (non-executable data)"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002/acceptance/H/workspace-copy/ledgers/render_conversation_dark_375.json",
+      "class": "attempt-002 evidence (non-executable data)"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002/acceptance/H/workspace-copy/ledgers/render_conversation_dark_768.json",
+      "class": "attempt-002 evidence (non-executable data)"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002/acceptance/H/workspace-copy/ledgers/render_conversation_light_1280.json",
+      "class": "attempt-002 evidence (non-executable data)"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002/acceptance/H/workspace-copy/ledgers/render_conversation_light_375.json",
+      "class": "attempt-002 evidence (non-executable data)"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002/acceptance/H/workspace-copy/ledgers/render_conversation_light_768.json",
+      "class": "attempt-002 evidence (non-executable data)"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002/acceptance/H/workspace-copy/ledgers/render_directory_dark_1280.json",
+      "class": "attempt-002 evidence (non-executable data)"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002/acceptance/H/workspace-copy/ledgers/render_directory_dark_375.json",
+      "class": "attempt-002 evidence (non-executable data)"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002/acceptance/H/workspace-copy/ledgers/render_directory_dark_768.json",
+      "class": "attempt-002 evidence (non-executable data)"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002/acceptance/H/workspace-copy/ledgers/render_directory_light_1280.json",
+      "class": "attempt-002 evidence (non-executable data)"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002/acceptance/H/workspace-copy/ledgers/render_directory_light_375.json",
+      "class": "attempt-002 evidence (non-executable data)"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002/acceptance/H/workspace-copy/ledgers/render_directory_light_768.json",
+      "class": "attempt-002 evidence (non-executable data)"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002/acceptance/H/workspace-copy/ledgers/render_workspace_dark_1280.json",
+      "class": "attempt-002 evidence (non-executable data)"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002/acceptance/H/workspace-copy/ledgers/render_workspace_dark_375.json",
+      "class": "attempt-002 evidence (non-executable data)"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002/acceptance/H/workspace-copy/ledgers/render_workspace_dark_768.json",
+      "class": "attempt-002 evidence (non-executable data)"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002/acceptance/H/workspace-copy/ledgers/render_workspace_light_1280.json",
+      "class": "attempt-002 evidence (non-executable data)"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002/acceptance/H/workspace-copy/ledgers/render_workspace_light_375.json",
+      "class": "attempt-002 evidence (non-executable data)"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002/acceptance/H/workspace-copy/ledgers/render_workspace_light_768.json",
+      "class": "attempt-002 evidence (non-executable data)"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002/acceptance/H/workspace-copy/playwright-results.json",
+      "class": "attempt-002 evidence (non-executable data)"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002/preparation/APPROVED_INVENTORY.json",
+      "class": "attempt-002 evidence (non-executable data)"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002/preparation/APPROVED_INVENTORY.postrun.json",
+      "class": "attempt-002 evidence (non-executable data)"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002/preparation/INSTALL_RECORD.json",
+      "class": "attempt-002 evidence (non-executable data)"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002/preparation/INSTRUMENT_FREEZE.json",
+      "class": "attempt-002 evidence (non-executable data)"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002/preparation/INSTRUMENT_FREEZE.r1.json",
+      "class": "attempt-002 evidence (non-executable data)"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002/preparation/INSTRUMENT_FREEZE.r2.json",
+      "class": "attempt-002 evidence (non-executable data)"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002/preparation/INSTRUMENT_FREEZE.r3.json",
+      "class": "attempt-002 evidence (non-executable data)"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002/preparation/INSTRUMENT_FREEZE.r4.json",
+      "class": "attempt-002 evidence (non-executable data)"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002/preparation/INSTRUMENT_FREEZE.r5.json",
+      "class": "attempt-002 evidence (non-executable data)"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002/preparation/INSTRUMENT_FREEZE.r6.json",
+      "class": "attempt-002 evidence (non-executable data)"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002/preparation/INSTRUMENT_FREEZE_RECEIPT.json",
+      "class": "attempt-002 evidence (non-executable data)"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002/preparation/INSTRUMENT_FREEZE_RECEIPT.r1.json",
+      "class": "attempt-002 evidence (non-executable data)"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002/preparation/INSTRUMENT_FREEZE_RECEIPT.r2.json",
+      "class": "attempt-002 evidence (non-executable data)"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002/preparation/INSTRUMENT_FREEZE_RECEIPT.r3.json",
+      "class": "attempt-002 evidence (non-executable data)"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002/preparation/INSTRUMENT_FREEZE_RECEIPT.r4.json",
+      "class": "attempt-002 evidence (non-executable data)"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002/preparation/INSTRUMENT_FREEZE_RECEIPT.r5.json",
+      "class": "attempt-002 evidence (non-executable data)"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002/preparation/INSTRUMENT_FREEZE_RECEIPT.r6.json",
+      "class": "attempt-002 evidence (non-executable data)"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002/preparation/NEXT_ENV_DISPOSITION.md",
+      "class": "attempt-002 evidence (non-executable data)"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002/preparation/PREBUILD_NEXT.json",
+      "class": "attempt-002 evidence (non-executable data)"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002/preparation/gate-controls/C0-mirror-baseline.json",
+      "class": "attempt-002 evidence (non-executable data)"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002/preparation/gate-controls/C0-mirror-baseline.out",
+      "class": "attempt-002 evidence (non-executable data)"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002/preparation/gate-controls/C0b-mirror-restored.json",
+      "class": "attempt-002 evidence (non-executable data)"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002/preparation/gate-controls/C0b-mirror-restored.out",
+      "class": "attempt-002 evidence (non-executable data)"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002/preparation/gate-controls/CONTROLS_SUMMARY.json",
+      "class": "attempt-002 evidence (non-executable data)"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002/preparation/gate-controls/NC1-tampered-binding-hash.json",
+      "class": "attempt-002 evidence (non-executable data)"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002/preparation/gate-controls/NC1-tampered-binding-hash.out",
+      "class": "attempt-002 evidence (non-executable data)"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002/preparation/gate-controls/NC2-unauthorized-source-addition.json",
+      "class": "attempt-002 evidence (non-executable data)"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002/preparation/gate-controls/NC2-unauthorized-source-addition.out",
+      "class": "attempt-002 evidence (non-executable data)"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002/preparation/gate-controls/NC3-changed-source.json",
+      "class": "attempt-002 evidence (non-executable data)"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002/preparation/gate-controls/NC3-changed-source.out",
+      "class": "attempt-002 evidence (non-executable data)"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002/preparation/gate-controls/NC4-non-ancestor-head.json",
+      "class": "attempt-002 evidence (non-executable data)"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002/preparation/gate-controls/NC4-non-ancestor-head.out",
+      "class": "attempt-002 evidence (non-executable data)"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002/preparation/gate-controls/NC5-unapproved-instrument-hash.json",
+      "class": "attempt-002 evidence (non-executable data)"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002/preparation/gate-controls/NC5-unapproved-instrument-hash.out",
+      "class": "attempt-002 evidence (non-executable data)"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002/preparation/gate-controls/NC6-unfrozen-executable.json",
+      "class": "attempt-002 evidence (non-executable data)"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002/preparation/gate-controls/NC6-unfrozen-executable.out",
+      "class": "attempt-002 evidence (non-executable data)"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002/preparation/gate-controls/exits.txt",
+      "class": "attempt-002 evidence (non-executable data)"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002/preparation/gate-fix-1.diff",
+      "class": "attempt-002 evidence (non-executable data)"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002/preparation/gate-postbuild.json",
+      "class": "attempt-002 evidence (non-executable data)"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002/preparation/gate-preflight.run1.json",
+      "class": "attempt-002 evidence (non-executable data)"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002/preparation/gate-preflight.run2.json",
+      "class": "attempt-002 evidence (non-executable data)"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002/preparation/instrument-baseline.sha256",
+      "class": "attempt-002 evidence (non-executable data)"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002/preparation/instrument-baseline/AUTOMATION/README.md",
+      "class": "inert pre-correction instrument copy (evidence), hash-matched"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002/preparation/instrument-baseline/AUTOMATION/engineer-spec-copy/workspace.spec.ts",
+      "class": "inert pre-correction instrument copy (evidence), hash-matched"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002/preparation/instrument-baseline/AUTOMATION/font_mediator.cjs",
+      "class": "inert pre-correction instrument copy (evidence), hash-matched"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002/preparation/instrument-baseline/AUTOMATION/jest.qa.config.js",
+      "class": "inert pre-correction instrument copy (evidence), hash-matched"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002/preparation/instrument-baseline/AUTOMATION/jest/qa_adapter.test.ts",
+      "class": "inert pre-correction instrument copy (evidence), hash-matched"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002/preparation/instrument-baseline/AUTOMATION/jest/qa_entry_props.test.tsx",
+      "class": "inert pre-correction instrument copy (evidence), hash-matched"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002/preparation/instrument-baseline/AUTOMATION/jest/qa_entry_render.test.tsx",
+      "class": "inert pre-correction instrument copy (evidence), hash-matched"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002/preparation/instrument-baseline/AUTOMATION/jest/qa_entry_ssr.test.tsx",
+      "class": "inert pre-correction instrument copy (evidence), hash-matched"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002/preparation/instrument-baseline/AUTOMATION/jest/qa_navigation_manifest.test.ts",
+      "class": "inert pre-correction instrument copy (evidence), hash-matched"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002/preparation/instrument-baseline/AUTOMATION/negative/seeded_forbidden_entry.tsx",
+      "class": "inert pre-correction instrument copy (evidence), hash-matched"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002/preparation/instrument-baseline/AUTOMATION/negative/seeded_global_leak.scss",
+      "class": "inert pre-correction instrument copy (evidence), hash-matched"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002/preparation/instrument-baseline/AUTOMATION/negative/seeded_hardcoded_agent.tsx",
+      "class": "inert pre-correction instrument copy (evidence), hash-matched"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002/preparation/instrument-baseline/AUTOMATION/negative/seeded_instructions_import.ts",
+      "class": "inert pre-correction instrument copy (evidence), hash-matched"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002/preparation/instrument-baseline/AUTOMATION/negative/seeded_marker.js",
+      "class": "inert pre-correction instrument copy (evidence), hash-matched"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002/preparation/instrument-baseline/AUTOMATION/netns_escape_controls.cjs",
+      "class": "inert pre-correction instrument copy (evidence), hash-matched"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002/preparation/instrument-baseline/AUTOMATION/playwright.engcopy.config.ts",
+      "class": "inert pre-correction instrument copy (evidence), hash-matched"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002/preparation/instrument-baseline/AUTOMATION/playwright.qa.config.ts",
+      "class": "inert pre-correction instrument copy (evidence), hash-matched"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002/preparation/instrument-baseline/AUTOMATION/q1_candidate_identity.py",
+      "class": "inert pre-correction instrument copy (evidence), hash-matched"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002/preparation/instrument-baseline/AUTOMATION/q1_export.py",
+      "class": "inert pre-correction instrument copy (evidence), hash-matched"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002/preparation/instrument-baseline/AUTOMATION/q1_jest_compare.py",
+      "class": "inert pre-correction instrument copy (evidence), hash-matched"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002/preparation/instrument-baseline/AUTOMATION/q2_approved_qam_records.json",
+      "class": "inert pre-correction instrument copy (evidence), hash-matched"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002/preparation/instrument-baseline/AUTOMATION/q2_export.py",
+      "class": "inert pre-correction instrument copy (evidence), hash-matched"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002/preparation/instrument-baseline/AUTOMATION/q2_gate.py",
+      "class": "inert pre-correction instrument copy (evidence), hash-matched"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002/preparation/instrument-baseline/AUTOMATION/q2_identity.py",
+      "class": "inert pre-correction instrument copy (evidence), hash-matched"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002/preparation/instrument-baseline/AUTOMATION/q2_identity_v2.py",
+      "class": "inert pre-correction instrument copy (evidence), hash-matched"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002/preparation/instrument-baseline/AUTOMATION/q2_qam_records_2026-10-07.json",
+      "class": "inert pre-correction instrument copy (evidence), hash-matched"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002/preparation/instrument-baseline/AUTOMATION/qa-fixture-entry.tsx",
+      "class": "inert pre-correction instrument copy (evidence), hash-matched"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002/preparation/instrument-baseline/AUTOMATION/qa-harness.cjs",
+      "class": "inert pre-correction instrument copy (evidence), hash-matched"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002/preparation/instrument-baseline/AUTOMATION/qa-ts-loader.cjs",
+      "class": "inert pre-correction instrument copy (evidence), hash-matched"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002/preparation/instrument-baseline/AUTOMATION/rebind_evidence.py",
+      "class": "inert pre-correction instrument copy (evidence), hash-matched"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002/preparation/instrument-baseline/AUTOMATION/rebind_export.py",
+      "class": "inert pre-correction instrument copy (evidence), hash-matched"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002/preparation/instrument-baseline/AUTOMATION/roster_amendment_2026-10-05.json",
+      "class": "inert pre-correction instrument copy (evidence), hash-matched"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002/preparation/instrument-baseline/AUTOMATION/specs/_qa.ts",
+      "class": "inert pre-correction instrument copy (evidence), hash-matched"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002/preparation/instrument-baseline/AUTOMATION/specs/diag_run2.spec.ts",
+      "class": "inert pre-correction instrument copy (evidence), hash-matched"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002/preparation/instrument-baseline/AUTOMATION/specs/s01_04_directory_nav_recents.spec.ts",
+      "class": "inert pre-correction instrument copy (evidence), hash-matched"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002/preparation/instrument-baseline/AUTOMATION/specs/s05_07_transcript_composer_draft.spec.ts",
+      "class": "inert pre-correction instrument copy (evidence), hash-matched"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002/preparation/instrument-baseline/AUTOMATION/specs/s08_11_states_mutations.spec.ts",
+      "class": "inert pre-correction instrument copy (evidence), hash-matched"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002/preparation/instrument-baseline/AUTOMATION/specs/s12_16_demo_theme_render.spec.ts",
+      "class": "inert pre-correction instrument copy (evidence), hash-matched"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002/preparation/instrument-baseline/AUTOMATION/specs/s17_19_a11y_copy_obs.spec.ts",
+      "class": "inert pre-correction instrument copy (evidence), hash-matched"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002/preparation/instrument-baseline/AUTOMATION/static_audit.cjs",
+      "class": "inert pre-correction instrument copy (evidence), hash-matched"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002/preparation/namespace-controls/A-ns-escape.cmd.json",
+      "class": "attempt-002 evidence (non-executable data)"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002/preparation/namespace-controls/A-ns-escape.log",
+      "class": "attempt-002 evidence (non-executable data)"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002/preparation/policy-controls.run1/A-policy-controls.cmd.json",
+      "class": "attempt-002 evidence (non-executable data)"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002/preparation/policy-controls.run1/A-policy-controls.log",
+      "class": "attempt-002 evidence (non-executable data)"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002/preparation/policy-controls.run1/artifacts/.last-run.json",
+      "class": "attempt-002 evidence (non-executable data)"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002/preparation/policy-controls.run1/artifacts/s00_policy_controls-C-01-o-5eb20--newPage-and-popup-contexts/error-context.md",
+      "class": "attempt-002 evidence (non-executable data)"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002/preparation/policy-controls.run1/artifacts/s00_policy_controls-C-04-a-697b7--the-test-expected-failure-/error-context.md",
+      "class": "attempt-002 evidence (non-executable data)"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002/preparation/policy-controls.run1/ledgers/C-01_off-origin_request_is_aborted_and_logged_by_the_browser_interceptor_in_default_manual_newPage_and_popup_contexts.json",
+      "class": "attempt-002 evidence (non-executable data)"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002/preparation/policy-controls.run1/ledgers/C-02_page_errors_are_captured_from_every_page_and_only_the_labelled_synthetic_is_consumed.json",
+      "class": "attempt-002 evidence (non-executable data)"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002/preparation/policy-controls.run1/ledgers/C-03_WebSocket_transport_is_intercepted_and_closed.json",
+      "class": "attempt-002 evidence (non-executable data)"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002/preparation/policy-controls.run1/ledgers/C-04_an_unconsumed_policy_event_fails_the_test_expected_failure_.json",
+      "class": "attempt-002 evidence (non-executable data)"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002/preparation/policy-controls.run1/playwright-results.json",
+      "class": "attempt-002 evidence (non-executable data)"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002/preparation/policy-controls.run1/records/c02-pageerror-control.json",
+      "class": "attempt-002 evidence (non-executable data)"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002/preparation/policy-controls.run1/records/c03-websocket-control.json",
+      "class": "attempt-002 evidence (non-executable data)"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002/preparation/policy-controls/A-policy-controls.cmd.json",
+      "class": "attempt-002 evidence (non-executable data)"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002/preparation/policy-controls/A-policy-controls.log",
+      "class": "attempt-002 evidence (non-executable data)"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002/preparation/policy-controls/artifacts/s00_policy_controls-C-04-a-697b7--the-test-expected-failure-/error-context.md",
+      "class": "attempt-002 evidence (non-executable data)"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002/preparation/policy-controls/ledgers/C-01_off-origin_request_is_aborted_and_logged_by_the_browser_interceptor_in_default_manual_newPage_and_popup_contexts.json",
+      "class": "attempt-002 evidence (non-executable data)"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002/preparation/policy-controls/ledgers/C-02_page_errors_are_captured_from_every_page_and_only_the_labelled_synthetic_is_consumed.json",
+      "class": "attempt-002 evidence (non-executable data)"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002/preparation/policy-controls/ledgers/C-03_WebSocket_transport_is_intercepted_and_closed.json",
+      "class": "attempt-002 evidence (non-executable data)"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002/preparation/policy-controls/ledgers/C-04_an_unconsumed_policy_event_fails_the_test_expected_failure_.json",
+      "class": "attempt-002 evidence (non-executable data)"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002/preparation/policy-controls/playwright-results.json",
+      "class": "attempt-002 evidence (non-executable data)"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002/preparation/policy-controls/records/c01-interceptor-control.json",
+      "class": "attempt-002 evidence (non-executable data)"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002/preparation/policy-controls/records/c02-pageerror-control.json",
+      "class": "attempt-002 evidence (non-executable data)"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002/preparation/policy-controls/records/c03-websocket-control.json",
+      "class": "attempt-002 evidence (non-executable data)"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002/preparation/q2a2_gate.r1.py.txt",
+      "class": "attempt-002 evidence (non-executable data)"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002/preparation/s00-fix-1.diff",
+      "class": "attempt-002 evidence (non-executable data)"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002/preparation/s00_policy_controls.r1.spec.ts.txt",
+      "class": "attempt-002 evidence (non-executable data)"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002/preparation/s20-fix-1.diff",
+      "class": "attempt-002 evidence (non-executable data)"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002/preparation/s20_root_font_collateral.r1.spec.ts.txt",
+      "class": "attempt-002 evidence (non-executable data)"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002/preparation/secondary-copies/COPY_RECORD.json",
+      "class": "attempt-002 evidence (non-executable data)"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002/teardown/TEARDOWN.md",
+      "class": "attempt-002 evidence (non-executable data)"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002/teardown/gate-postrun.json",
+      "class": "attempt-002 evidence (non-executable data)"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002/teardown/gate-postrun.r6.json",
+      "class": "attempt-002 evidence (non-executable data)"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002/teardown/modified-since-session-start.txt",
+      "class": "attempt-002 evidence (non-executable data)"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q2-attempt-002/teardown/teardown-pre-cleanup.txt",
+      "class": "attempt-002 evidence (non-executable data)"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q5-attempt-002/APPROVED_INVENTORY.q5-post.json",
+      "class": "Executor session/recovery document (non-executable)"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q5-attempt-002/APPROVED_INVENTORY.q5-postexport.json",
+      "class": "Executor session/recovery document (non-executable)"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q5-attempt-002/APPROVED_INVENTORY.q5-pre.json",
+      "class": "Executor session/recovery document (non-executable)"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q5-attempt-002/INSTRUMENT_FREEZE.r10.json",
+      "class": "Executor session/recovery document (non-executable)"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q5-attempt-002/INSTRUMENT_FREEZE_RECEIPT.r10.json",
+      "class": "Executor session/recovery document (non-executable)"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q5-attempt-002/POST_Q5_INVENTORY.json",
+      "class": "Executor session/recovery document (non-executable)"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q5-attempt-002/Q5_ACTIONS.json",
+      "class": "Executor session/recovery document (non-executable)"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q5-attempt-002/Q5_AMENDED_DISPOSITION.md",
+      "class": "Executor session/recovery document (non-executable)"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q5-attempt-002/Q5_STATUS.md",
+      "class": "Executor session/recovery document (non-executable)"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q5-attempt-002/gate-post-q5.json",
+      "class": "Executor session/recovery document (non-executable)"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q5-attempt-002/gate-pre-q5.json",
+      "class": "Executor session/recovery document (non-executable)"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q5-attempt-002/state-after.txt",
+      "class": "Executor session/recovery document (non-executable)"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/q5-attempt-002/state-before.txt",
+      "class": "Executor session/recovery document (non-executable)"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/selective-commit-preparation-001/2026-10-11_150835_BDT/SESSION.md",
+      "class": "pre-existing untracked record (Cody commit/package step), hash-matched"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/selective-commit-preparation-001/2026-10-11_150835_BDT/TONY_GIT_COMMANDS.md",
+      "class": "pre-existing untracked record (Cody commit/package step), hash-matched"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/selective-commit-preparation-001/2026-10-11_150835_BDT/entry-state.json",
+      "class": "pre-existing untracked record (Cody commit/package step), hash-matched"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/selective-commit-preparation-001/2026-10-11_150835_BDT/final-validation.json",
+      "class": "pre-existing untracked record (Cody commit/package step), hash-matched"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/selective-commit-preparation-001/2026-10-11_150835_BDT/preflight-validation.json",
+      "class": "pre-existing untracked record (Cody commit/package step), hash-matched"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/selective-commit-preparation-001/2026-10-11_150835_BDT/reviewed-staging-before.txt",
+      "class": "pre-existing untracked record (Cody commit/package step), hash-matched"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/evidence/selective-commit-preparation-001/2026-10-11_150835_BDT/staging-amendment.json",
+      "class": "pre-existing untracked record (Cody commit/package step), hash-matched"
+    },
+    {
+      "status": "??",
+      "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/session_2026-10-11.md",
+      "class": "Executor session/recovery document (non-executable)"
+    }
+  ]
+}
