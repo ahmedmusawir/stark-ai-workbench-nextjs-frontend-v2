@@ -1,0 +1,41 @@
+{
+  "tool": "apbm001_live_walk.cjs",
+  "status": "STOP-AUTH",
+  "started": "2026-10-14T13:25:53.721Z",
+  "finished": "2026-10-14T13:25:53.722Z",
+  "base": "http://127.0.0.1:43191",
+  "target": {
+    "agent": "greeting_agent",
+    "expectedBackendKey": "6b99771174a0f203",
+    "supabaseRef": "rwosuvbufaqwbaukohkk"
+  },
+  "account": "qa-account-1 (pseudonym)",
+  "budget": {
+    "login": 2,
+    "create": 2,
+    "run": 3,
+    "read": 30,
+    "roster": 4
+  },
+  "used": {
+    "login": 0,
+    "create": 0,
+    "run": 0,
+    "read": 0,
+    "descriptor": 0,
+    "roster": 0
+  },
+  "steps": [
+    {
+      "id": "STOP",
+      "result": "STOP",
+      "at": "2026-10-14T13:25:53.721Z",
+      "note": "STOP-AUTH: no .env.qa.local credential file and no interactive login in this run; zero requests made"
+    }
+  ],
+  "ledger": [],
+  "stop": {
+    "code": "STOP-AUTH",
+    "reason": "no .env.qa.local credential file and no interactive login in this run; zero requests made"
+  }
+}

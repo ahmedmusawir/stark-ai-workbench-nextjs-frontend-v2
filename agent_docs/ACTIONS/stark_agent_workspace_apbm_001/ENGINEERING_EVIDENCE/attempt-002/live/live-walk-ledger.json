@@ -1,0 +1,383 @@
+{
+  "tool": "apbm001_live_walk.cjs",
+  "status": "PASS",
+  "started": "2026-10-15T04:22:13.440Z",
+  "finished": "2026-10-15T04:22:56.480Z",
+  "base": "http://127.0.0.1:43191",
+  "target": {
+    "agent": "greeting_agent",
+    "expectedBackendKey": "6b99771174a0f203",
+    "supabaseRef": "rwosuvbufaqwbaukohkk"
+  },
+  "account": "qa-account-1 (pseudonym)",
+  "budget": {
+    "login": 2,
+    "create": 2,
+    "run": 3,
+    "read": 30,
+    "roster": 4
+  },
+  "used": {
+    "login": 2,
+    "create": 2,
+    "run": 3,
+    "read": 10,
+    "descriptor": 10,
+    "supabaseAuth": 0,
+    "roster": 2
+  },
+  "steps": [
+    {
+      "id": "credential-file",
+      "result": "PASS",
+      "at": "2026-10-15T04:22:13.447Z",
+      "note": "ignored, untracked, schema valid (values not read into evidence)"
+    },
+    {
+      "id": "login-1",
+      "result": "PASS",
+      "at": "2026-10-15T04:22:19.282Z"
+    },
+    {
+      "id": "target-identity",
+      "result": "PASS",
+      "at": "2026-10-15T04:22:20.566Z",
+      "note": "{\"mode\":\"live\",\"supabaseRef\":\"rwosuvbufaqwbaukohkk\",\"greetingKeyMatches\":true,\"greetingAvailability\":\"available\",\"moose\":\"unavailable\"}"
+    },
+    {
+      "id": "AC005-unavailable-agent",
+      "result": "PASS",
+      "at": "2026-10-15T04:22:22.907Z",
+      "note": "MOOSE CRM Agent card shows unavailable (manifest unchanged)"
+    },
+    {
+      "id": "send-A",
+      "result": "PASS",
+      "at": "2026-10-15T04:22:28.354Z",
+      "note": "reply carried marker A"
+    },
+    {
+      "id": "send-B",
+      "result": "PASS",
+      "at": "2026-10-15T04:22:32.850Z",
+      "note": "reply carried marker B"
+    },
+    {
+      "id": "AC008-uuid-ids",
+      "result": "PASS",
+      "at": "2026-10-15T04:22:32.850Z"
+    },
+    {
+      "id": "AC011-switch-twice",
+      "result": "PASS",
+      "at": "2026-10-15T04:22:36.153Z",
+      "note": "A/B transcripts separate across two switches (sidebar links by first-message title)"
+    },
+    {
+      "id": "AC012-reload-B",
+      "result": "PASS",
+      "at": "2026-10-15T04:22:39.535Z",
+      "note": "2 turns from ADK history; states []"
+    },
+    {
+      "id": "AC012-reopen-tab-A",
+      "result": "PASS",
+      "at": "2026-10-15T04:22:43.009Z",
+      "note": "2 turns"
+    },
+    {
+      "id": "AC012-continue-A",
+      "result": "PASS",
+      "at": "2026-10-15T04:22:45.356Z",
+      "note": "continuation reply recalls marker A; earlier turns intact"
+    },
+    {
+      "id": "AC003-logout-invalidates",
+      "result": "PASS",
+      "at": "2026-10-15T04:22:46.402Z",
+      "note": "descriptor after sign-out → 401"
+    },
+    {
+      "id": "login-2",
+      "result": "PASS",
+      "at": "2026-10-15T04:22:48.658Z"
+    },
+    {
+      "id": "AC003-same-user",
+      "result": "PASS",
+      "at": "2026-10-15T04:22:49.380Z",
+      "note": "pseudonymous equality only"
+    },
+    {
+      "id": "AC012-reopen-after-relogin",
+      "result": "PASS",
+      "at": "2026-10-15T04:22:52.834Z",
+      "note": "4 turns from ADK history"
+    },
+    {
+      "id": "AC006-AC007-list",
+      "result": "PASS",
+      "at": "2026-10-15T04:22:56.479Z",
+      "note": "A and B listed with first-message titles; B (newer-created) before A; 4 rows in total (other titles not recorded)"
+    }
+  ],
+  "ledger": [
+    {
+      "at": "2026-10-15T04:22:17.949Z",
+      "method": "POST",
+      "path": "/api/auth/login",
+      "kind": "login",
+      "status": 200,
+      "ms": 1415
+    },
+    {
+      "at": "2026-10-15T04:22:20.551Z",
+      "method": "GET",
+      "path": "/api/agent/workspace",
+      "kind": "descriptor",
+      "status": 200,
+      "ms": 1263,
+      "rosterCheckedAt": "2026-10-15T04:22:20.545Z"
+    },
+    {
+      "at": "2026-10-15T04:22:20.558Z",
+      "method": "GET",
+      "path": "/api/agent/workspace",
+      "kind": "descriptor",
+      "status": 200,
+      "ms": 1268,
+      "rosterCheckedAt": "2026-10-15T04:22:20.549Z"
+    },
+    {
+      "at": "2026-10-15T04:22:22.840Z",
+      "method": "GET",
+      "path": "/api/agent/workspace",
+      "kind": "descriptor",
+      "status": 200,
+      "ms": 735,
+      "rosterCheckedAt": "2026-10-15T04:22:20.549Z"
+    },
+    {
+      "at": "2026-10-15T04:22:24.465Z",
+      "method": "GET",
+      "path": "/api/agent/sessions",
+      "kind": "read",
+      "status": 200,
+      "ms": 1162
+    },
+    {
+      "at": "2026-10-15T04:22:25.391Z",
+      "method": "POST",
+      "path": "/api/agent/sessions",
+      "kind": "create",
+      "status": 200,
+      "ms": 1218
+    },
+    {
+      "at": "2026-10-15T04:22:27.511Z",
+      "method": "GET",
+      "path": "/api/agent/sessions",
+      "kind": "read",
+      "status": 200,
+      "ms": 2114
+    },
+    {
+      "at": "2026-10-15T04:22:28.332Z",
+      "method": "POST",
+      "path": "/api/agent/run",
+      "kind": "run",
+      "status": 200,
+      "ms": 2939
+    },
+    {
+      "at": "2026-10-15T04:22:30.175Z",
+      "method": "POST",
+      "path": "/api/agent/sessions",
+      "kind": "create",
+      "status": 200,
+      "ms": 1386
+    },
+    {
+      "at": "2026-10-15T04:22:31.405Z",
+      "method": "GET",
+      "path": "/api/agent/sessions",
+      "kind": "read",
+      "status": 200,
+      "ms": 1225
+    },
+    {
+      "at": "2026-10-15T04:22:32.838Z",
+      "method": "POST",
+      "path": "/api/agent/run",
+      "kind": "run",
+      "status": 200,
+      "ms": 2661
+    },
+    {
+      "at": "2026-10-15T04:22:38.165Z",
+      "method": "GET",
+      "path": "/api/agent/workspace",
+      "kind": "descriptor",
+      "status": 200,
+      "ms": 775,
+      "rosterCheckedAt": "2026-10-15T04:22:20.549Z"
+    },
+    {
+      "at": "2026-10-15T04:22:39.493Z",
+      "method": "GET",
+      "path": "/api/agent/sessions",
+      "kind": "read",
+      "status": 200,
+      "ms": 1309
+    },
+    {
+      "at": "2026-10-15T04:22:39.502Z",
+      "method": "POST",
+      "path": "/api/agent/history",
+      "kind": "read",
+      "status": 200,
+      "ms": 1317
+    },
+    {
+      "at": "2026-10-15T04:22:41.773Z",
+      "method": "GET",
+      "path": "/api/agent/workspace",
+      "kind": "descriptor",
+      "status": 200,
+      "ms": 739,
+      "rosterCheckedAt": "2026-10-15T04:22:20.549Z"
+    },
+    {
+      "at": "2026-10-15T04:22:42.974Z",
+      "method": "POST",
+      "path": "/api/agent/history",
+      "kind": "read",
+      "status": 200,
+      "ms": 1180
+    },
+    {
+      "at": "2026-10-15T04:22:43.058Z",
+      "method": "GET",
+      "path": "/api/agent/sessions",
+      "kind": "read",
+      "status": 200,
+      "ms": 1265
+    },
+    {
+      "at": "2026-10-15T04:22:45.330Z",
+      "method": "POST",
+      "path": "/api/agent/run",
+      "kind": "run",
+      "status": 200,
+      "ms": 2274
+    },
+    {
+      "at": "2026-10-15T04:22:46.360Z",
+      "method": "POST",
+      "path": "/api/auth/logout",
+      "kind": "other",
+      "status": 200,
+      "ms": 857
+    },
+    {
+      "at": "2026-10-15T04:22:46.413Z",
+      "method": "GET",
+      "path": "/api/agent/workspace",
+      "kind": "descriptor",
+      "failed": "net::ERR_ABORTED",
+      "ms": 18
+    },
+    {
+      "at": "2026-10-15T04:22:46.413Z",
+      "method": "POST",
+      "path": "/api/auth/logout",
+      "kind": "other",
+      "failed": "net::ERR_ABORTED",
+      "ms": 909
+    },
+    {
+      "at": "2026-10-15T04:22:46.401Z",
+      "method": "GET",
+      "path": "/api/agent/workspace",
+      "kind": "descriptor",
+      "status": 401,
+      "ms": 6
+    },
+    {
+      "at": "2026-10-15T04:22:47.380Z",
+      "method": "POST",
+      "path": "/api/auth/login",
+      "kind": "login",
+      "status": 200,
+      "ms": 859
+    },
+    {
+      "at": "2026-10-15T04:22:49.359Z",
+      "method": "GET",
+      "path": "/api/agent/workspace",
+      "kind": "descriptor",
+      "status": 200,
+      "ms": 693,
+      "rosterCheckedAt": "2026-10-15T04:22:20.549Z"
+    },
+    {
+      "at": "2026-10-15T04:22:49.367Z",
+      "method": "GET",
+      "path": "/api/agent/workspace",
+      "kind": "descriptor",
+      "status": 200,
+      "ms": 700,
+      "rosterCheckedAt": "2026-10-15T04:22:20.549Z"
+    },
+    {
+      "at": "2026-10-15T04:22:51.380Z",
+      "method": "GET",
+      "path": "/api/agent/workspace",
+      "kind": "descriptor",
+      "status": 200,
+      "ms": 684,
+      "rosterCheckedAt": "2026-10-15T04:22:20.549Z"
+    },
+    {
+      "at": "2026-10-15T04:22:52.588Z",
+      "method": "GET",
+      "path": "/api/agent/sessions",
+      "kind": "read",
+      "status": 200,
+      "ms": 1194
+    },
+    {
+      "at": "2026-10-15T04:22:52.804Z",
+      "method": "POST",
+      "path": "/api/agent/history",
+      "kind": "read",
+      "status": 200,
+      "ms": 1409
+    },
+    {
+      "at": "2026-10-15T04:22:54.958Z",
+      "method": "GET",
+      "path": "/api/agent/workspace",
+      "kind": "descriptor",
+      "status": 200,
+      "ms": 820,
+      "rosterCheckedAt": "2026-10-15T04:22:20.549Z"
+    },
+    {
+      "at": "2026-10-15T04:22:56.080Z",
+      "method": "GET",
+      "path": "/api/agent/sessions",
+      "kind": "read",
+      "status": 200,
+      "ms": 1106
+    }
+  ],
+  "sessions": {
+    "A": "d22f9aff-4df6-4f3d-9a76-ea79000e7ac8",
+    "B": "7adcba92-ff0a-4707-aae4-b15a81801d42"
+  },
+  "markers": {
+    "A": "apbm001-eng-a-6ee1f8",
+    "B": "apbm001-eng-b-6ee1f8"
+  }
+}

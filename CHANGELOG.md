@@ -1,5 +1,72 @@
 # Changelog
 
+## 2026-10-15 07:09 UTC — [CC] Claudy, Engineer — review 004 report in Tony's footer layout
+
+- **Updated:** `agent_docs/RESPONSES/response_2026-10-15_130935_apbm001-engineering-review-004-reissue.md` (new), `session_2026-10-15.md`, `RECOVERY.md`: details stay up top; the report ends with Response file, Location, ZIP, Receipt.
+- **Reason:** Tony's direction on where the ZIP and receipt locations go.
+
+## 2026-10-15 07:07 UTC — [CC] Claudy, Engineer — review 004 ZIP location as a full path
+
+- **Updated:** `agent_docs/RESPONSES/response_2026-10-15_130746_apbm001-review-004-zip-location.md` (new), `session_2026-10-15.md`, `RECOVERY.md`: footer paths are now written in full, one per line, ZIP first.
+- **Reason:** Tony could not find the ZIP location in the 13:06 footer.
+
+## 2026-10-15 07:06 UTC — [CC] Claudy, Engineer — review 004 report re-issued with file locations
+
+- **Updated:** `agent_docs/RESPONSES/response_2026-10-15_130609_apbm001-review-004-file-locations.md` (new), `session_2026-10-15.md`, `RECOVERY.md`: the report now ends with every file location, then the response-file footer.
+- **Reason:** Tony asked again for the response file and all other file locations at the bottom of each screen report.
+
+## 2026-10-15 06:04 UTC — [CC] Claudy, Engineer — APBM001 Architect correction (AC025) and review 004
+
+- **Updated:** `src/app/api/agent/_lib/context.ts`, a server-owned full-origin allowlist (no Host/X-Forwarded-* authority). Tests: `agent-boundary.test.ts`, `instructions-route.test.ts`. Instrument: `tests/workspace/apbm001.config.ts` (`APBM001_ATTEMPT`).
+- **Updated:** the APBM001 Engineer records now open with a current-status block (ENGINEERING_REPORT, EXECUTION_LOG, QAM_STATE, QAM_MANIFEST, ENGINEERING_HANDOFF, evidence README), followed by the correction addendum, dispositions and RETROSPECTIVE. **Added:** `ENGINEERING_EVIDENCE/attempt-003/`, `REVIEW_START_HERE_ENGINEERING_004.md`, review 004 ZIP plus receipt.
+- **Updated:** `session_2026-10-15.md`, `RECOVERY.md`. **Added:** `agent_docs/RESPONSES/response_2026-10-15_120352_apbm001-engineering-review-004.md`.
+- **Reason:** the Architect's review of review 003 required this bounded correction before Tony commits. Nothing is committed.
+
+## 2026-10-15 04:26 UTC — [CC] Claudy, Engineer — APBM001 engineering live walk
+
+- **Updated:** `ENGINEERING_EVIDENCE/tools/apbm001_live_walk.cjs`, hardened before first live use. **Added:** `ENGINEERING_EVIDENCE/attempt-002/` (live walk 16/16 PASS).
+- **Updated:** the APBM001 Engineer records (EXECUTION_LOG, ENGINEERING_REPORT live addendum, RETROSPECTIVE, QAM_STATE → ENGINEERING_COMPLETE, QAM_MANIFEST, ENGINEERING_HANDOFF, evidence README). **Added:** `REVIEW_START_HERE_ENGINEERING_003.md` and review 003 ZIP plus receipt.
+- **Created:** `session_2026-10-15.md`. **Updated:** `RECOVERY.md` and `agent_docs/RESPONSES/response_2026-10-15_102656_apbm001-engineering-live-walk.md`.
+- **Reason:** Tony supplied `.env.qa.local` and instructed the blocked live walk. Product and test code are unchanged; nothing is committed.
+
+## 2026-10-14 13:36 UTC — [CC] Claudy, Engineer — APBM001 engineering pass 2
+
+- **Added:** `agent_docs/ACTIONS/stark_agent_workspace_apbm_001/`, the installed issued pack v1.0. Engineer records filled: `EXECUTION_LOG.md`, `ENGINEERING_REPORT.md`, `RETROSPECTIVE.md`, `QAM/QAM_MANIFEST.md`, `QAM/HANDOFFS/ENGINEERING_HANDOFF.md`, `QAM/QAM_STATE.md`, plus `ENGINEERING_EVIDENCE/` and the review ZIPs 001/002 with receipts.
+- **Updated:** product and tests per `ENGINEERING_EVIDENCE/attempt-001/changed-paths.json`. That covers the ADK-backed catalogue and history, server identity, explicit outcomes, uncertain-send recovery, sidebar and navigation fixes, and deferred rename/archive.
+- **Updated:** `session_2026-10-14.md`, `RECOVERY.md` and `agent_docs/RESPONSES/response_2026-10-14_193700_apbm001-engineering-pass2.md`, the pass-2 record.
+- **Reason:** Tony approved APBM001 and relayed the launch prompt at 18:47 Asia/Dhaka. The live walk is blocked (STOP-AUTH); nothing is committed (Tony owns Git).
+
+## 2026-10-14 07:07 UTC — [CC] Claudy, Engineer — APBM001 bounded ADK capability test
+
+- **Created:** `agent_docs/RESPONSES/response_2026-10-14_130354_apbm001-adk-live-capability-test.md` and its `_evidence/` folder. Contents: the request ledger, analysis, sanitized summaries and the new-namespace raw bodies.
+- **Created:** the display summary `agent_docs/RESPONSES/response_2026-10-14_130713_apbm001-adk-live-capability-test-summary.md`. **Updated:** `RECOVERY.md` (prepended) and `session_2026-10-14.md`.
+- **Reason:** Architect-authorized direct-API test: 10 GET, 2 creates and 3 camelCase runs on `greeting_agent` in a new namespace. No retries, deletes, DB, deploy, login, product or test changes; `.env.local` was not read.
+
+## 2026-10-14 06:42 UTC — [CC] Claudy, Engineer — APBM001 ADK session discovery
+
+- **Created:** `agent_docs/RESPONSES/response_2026-10-14_123729_apbm001-adk-session-discovery.md` and its `_evidence/` folder. Contents:
+  - the advertised vs tested ADK session contracts;
+  - the frontend user-ID and history trace;
+  - the smallest ADK-backed change set;
+  - the metadata-storage answer;
+  - unresolved questions;
+  - a proposed two-conversation live test.
+- **Created:** the display summary `agent_docs/RESPONSES/response_2026-10-14_124213_apbm001-adk-session-discovery-summary.md`. **Updated:** `RECOVERY.md` (prepended) and `session_2026-10-14.md`.
+- **Reason:** Architect instruction to continue the APBM001 recon. Only 2 unauthenticated GETs were made (`/openapi.json`, `/list-apps`). No sessions, messages, DB, login, config, product or test changes; `.env.local` was not read.
+
+## 2026-10-14 03:15 UTC — [CC] Claudy, Engineer — APBM_001 P0 addendum
+
+- **Created:** `agent_docs/RECON/RECON_stark-agent-workspace_APBM001-P0-addendum_2026-10-14.md` and `_evidence/`: record-derived ADK/Supabase target facts, the access determination, and a read-only owner-run kit (P0-1 identity, P0-2 catalog SQL, P0-3 Cloud Run metadata, P0-4 bundle scan) with its offline self-test.
+- **Created:** `agent_docs/RESPONSES/response_2026-10-14_090926_apbm001-p0-addendum.md`, `session_2026-10-14.md`; **Updated:** `RECOVERY.md` (prepended).
+- **Reason:** Architect P0 instruction. No cloud/DB calls (no authorized access), no `.env` reads, no product/test/config changes, P1–P5 not run.
+
+## 2026-10-12 11:55 UTC — [CC] Claudy, Engineer — APBM_001 preparation recon
+
+- **Created:** `agent_docs/RECON/RECON_stark-agent-workspace_APBM001-prep_2026-10-12.md` and its `_evidence/` folder: an evidence-labeled affected-area recon (identity, catalogue, errors, races, backend switching, DIRECTOR-OBS-001, probe budget, draft ACs).
+- **Created:** `agent_docs/RESPONSES/response_2026-10-12_175032_apbm001-prep-recon.md`: short summary saved before display.
+- **Created:** `session_2026-10-12.md`; **Updated:** `RECOVERY.md`: new current block prepended, history preserved.
+- **Reason:** Architect assignment (via Tony) for APBM_001 preparation recon. No product, test, config, dependency or Git changes; no builds, suites or live calls.
+
 ## 2026-10-11 — [Codex] Cody, Engineer — APBM_000 AddMember test repair 001
 
 - Changed only `src/__tests__/admin/AddMemberForm.test.tsx` source: replaced the loading timer with a controlled, awaited deferred submission; stable toast/local mock resets and terminal-outcome waits retain all seven tests and prior assertions.

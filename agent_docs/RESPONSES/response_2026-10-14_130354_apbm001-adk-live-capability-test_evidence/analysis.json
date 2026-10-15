@@ -1,0 +1,280 @@
+{
+  "totals": {
+    "GET": 10,
+    "CREATE": 2,
+    "RUN": 3,
+    "retries": 0,
+    "transport_errors": 0,
+    "completed": true,
+    "stopped": null
+  },
+  "checks": {
+    "1_old_list": {
+      "status": 200,
+      "row_ids": [
+        "session-a",
+        "session-b"
+      ]
+    },
+    "1_old_session-a": {
+      "status": 200,
+      "result": "retained",
+      "event_count": 4,
+      "marker_present": true,
+      "first_event_local": "2026-10-04T11:37:26.599+06:00",
+      "lastUpdateTime_local": "2026-10-04T11:34:46.997+06:00"
+    },
+    "1_old_session-b": {
+      "status": 200,
+      "result": "retained",
+      "event_count": 4,
+      "marker_present": true,
+      "first_event_local": "2026-10-04T11:38:51.987+06:00",
+      "lastUpdateTime_local": "2026-10-04T11:36:01.803+06:00"
+    },
+    "2_new_list_empty": {
+      "status": 200,
+      "row_count": 0
+    },
+    "3_create_a": {
+      "status": 200,
+      "id_matches": true,
+      "returned_keys": [
+        "appName",
+        "events",
+        "id",
+        "lastUpdateTime",
+        "state",
+        "userId"
+      ],
+      "returned_state": {
+        "title": "APBM001 LT conversation A"
+      },
+      "title_echoed": true,
+      "lastUpdateTime_local": "2026-10-14T13:03:31.947+06:00",
+      "event_count": 0
+    },
+    "3_create_b": {
+      "status": 200,
+      "id_matches": true,
+      "returned_keys": [
+        "appName",
+        "events",
+        "id",
+        "lastUpdateTime",
+        "state",
+        "userId"
+      ],
+      "returned_state": {
+        "title": "APBM001 LT conversation B"
+      },
+      "title_echoed": true,
+      "lastUpdateTime_local": "2026-10-14T13:03:32.588+06:00",
+      "event_count": 0
+    },
+    "run_run-a-marker": {
+      "status": 200,
+      "elapsed_seconds": 2.032,
+      "event_count": 1,
+      "authors": [
+        "greeting_agent"
+      ],
+      "model_texts": [
+        "ACK cobalt-heron-5b31"
+      ],
+      "marker_in_reply": true,
+      "function_calls": [],
+      "invocationIds": [
+        "e-a1fc6fd8-8466-4747-87ac-1ee93efd5012"
+      ]
+    },
+    "run_run-b-marker": {
+      "status": 200,
+      "elapsed_seconds": 1.88,
+      "event_count": 1,
+      "authors": [
+        "greeting_agent"
+      ],
+      "model_texts": [
+        "ACK maple-quartz-7222"
+      ],
+      "marker_in_reply": true,
+      "function_calls": [],
+      "invocationIds": [
+        "e-7917b64e-b8aa-45b0-a2c2-c2d5f0010bf7"
+      ]
+    },
+    "run_run-a-continue": {
+      "status": 200,
+      "elapsed_seconds": 2.075,
+      "event_count": 1,
+      "authors": [
+        "greeting_agent"
+      ],
+      "model_texts": [
+        "cobalt-heron-5b31"
+      ],
+      "marker_in_reply": true,
+      "function_calls": [],
+      "invocationIds": [
+        "e-1191d53e-4967-4d31-88ef-868681082257"
+      ]
+    },
+    "5_list": {
+      "status": 200,
+      "row_count": 2,
+      "ids_in_returned_order": [
+        "bcfb8bb9-8da3-4176-aff5-db6727303ad0",
+        "ff40bf3a-cf0d-45fa-8298-df618135878a"
+      ],
+      "exactly_a_and_b": true,
+      "row_keys": [
+        "appName",
+        "events",
+        "id",
+        "lastUpdateTime",
+        "state",
+        "userId"
+      ],
+      "row_state": {
+        "bcfb8bb9-8da3-4176-aff5-db6727303ad0": {
+          "title": "APBM001 LT conversation A"
+        },
+        "ff40bf3a-cf0d-45fa-8298-df618135878a": {
+          "title": "APBM001 LT conversation B"
+        }
+      },
+      "row_title": {
+        "bcfb8bb9-8da3-4176-aff5-db6727303ad0": "APBM001 LT conversation A",
+        "ff40bf3a-cf0d-45fa-8298-df618135878a": "APBM001 LT conversation B"
+      },
+      "row_event_count": {
+        "bcfb8bb9-8da3-4176-aff5-db6727303ad0": 0,
+        "ff40bf3a-cf0d-45fa-8298-df618135878a": 0
+      },
+      "row_lastUpdateTime_local": {
+        "bcfb8bb9-8da3-4176-aff5-db6727303ad0": "2026-10-14T13:03:31.947+06:00",
+        "ff40bf3a-cf0d-45fa-8298-df618135878a": "2026-10-14T13:03:32.588+06:00"
+      },
+      "returned_order_is_newest_first": false,
+      "returned_order_is_oldest_first": true,
+      "a_after_b": false,
+      "a_time_advanced_vs_previous": null
+    },
+    "5_get_a": {
+      "status": 200,
+      "event_count": 2,
+      "own_marker_present": true,
+      "other_marker_absent": true,
+      "state": {
+        "title": "APBM001 LT conversation A"
+      },
+      "lastUpdateTime_local": "2026-10-14T13:03:31.947+06:00",
+      "last_event_local": "2026-10-14T13:03:33.709+06:00",
+      "user_event_stateDelta": [
+        {}
+      ],
+      "op_marker_in_user_event": false,
+      "op_marker_in_session_state": false,
+      "op_marker_on_any_event": [],
+      "event_ids": [
+        "48b0eb0a-11d3-4d5b-80a6-69f34aec59c4",
+        "5bbfb305-ef51-4d8f-9ab5-90a9a1aff112"
+      ],
+      "invocationIds": [
+        "e-a1fc6fd8-8466-4747-87ac-1ee93efd5012",
+        "e-a1fc6fd8-8466-4747-87ac-1ee93efd5012"
+      ]
+    },
+    "5_get_b": {
+      "status": 200,
+      "event_count": 2,
+      "own_marker_present": true,
+      "other_marker_absent": true,
+      "state": {
+        "title": "APBM001 LT conversation B"
+      },
+      "lastUpdateTime_local": "2026-10-14T13:03:32.588+06:00",
+      "last_event_local": "2026-10-14T13:03:35.627+06:00",
+      "user_event_stateDelta": [
+        {}
+      ],
+      "op_marker_in_user_event": false,
+      "op_marker_in_session_state": false,
+      "op_marker_on_any_event": [],
+      "event_ids": [
+        "fcd35280-c64a-4b1d-8469-427e4474e669",
+        "4b87f496-e594-4905-8e9b-34d3c562c4db"
+      ],
+      "invocationIds": [
+        "e-7917b64e-b8aa-45b0-a2c2-c2d5f0010bf7",
+        "e-7917b64e-b8aa-45b0-a2c2-c2d5f0010bf7"
+      ]
+    },
+    "7_list": {
+      "status": 200,
+      "row_count": 2,
+      "ids_in_returned_order": [
+        "bcfb8bb9-8da3-4176-aff5-db6727303ad0",
+        "ff40bf3a-cf0d-45fa-8298-df618135878a"
+      ],
+      "exactly_a_and_b": true,
+      "row_keys": [
+        "appName",
+        "events",
+        "id",
+        "lastUpdateTime",
+        "state",
+        "userId"
+      ],
+      "row_state": {
+        "bcfb8bb9-8da3-4176-aff5-db6727303ad0": {
+          "title": "APBM001 LT conversation A"
+        },
+        "ff40bf3a-cf0d-45fa-8298-df618135878a": {
+          "title": "APBM001 LT conversation B"
+        }
+      },
+      "row_title": {
+        "bcfb8bb9-8da3-4176-aff5-db6727303ad0": "APBM001 LT conversation A",
+        "ff40bf3a-cf0d-45fa-8298-df618135878a": "APBM001 LT conversation B"
+      },
+      "row_event_count": {
+        "bcfb8bb9-8da3-4176-aff5-db6727303ad0": 0,
+        "ff40bf3a-cf0d-45fa-8298-df618135878a": 0
+      },
+      "row_lastUpdateTime_local": {
+        "bcfb8bb9-8da3-4176-aff5-db6727303ad0": "2026-10-14T13:03:31.947+06:00",
+        "ff40bf3a-cf0d-45fa-8298-df618135878a": "2026-10-14T13:03:32.588+06:00"
+      },
+      "returned_order_is_newest_first": false,
+      "returned_order_is_oldest_first": true,
+      "a_after_b": false,
+      "a_time_advanced_vs_previous": false
+    },
+    "7_get_a": {
+      "status": 200,
+      "event_count": 4,
+      "prefix_preserved": true,
+      "marker_a_present": true,
+      "marker_b_absent": true,
+      "texts": [
+        "Remember this test marker for this conversation: cobalt-heron-5b31. Reply only with ACK followed by the marker. Do not use tools or take any external action.",
+        "ACK cobalt-heron-5b31",
+        "What test marker did I give you earlier in this conversation? Reply only with the marker. Do not use tools or take any external action.",
+        "cobalt-heron-5b31"
+      ],
+      "state": {
+        "title": "APBM001 LT conversation A"
+      },
+      "lastUpdateTime_local": "2026-10-14T13:03:31.947+06:00",
+      "last_event_local": "2026-10-14T13:03:39.002+06:00"
+    },
+    "8_nonexistent": {
+      "status": 404,
+      "body": {
+        "detail": "Session not found"
+      }
+    }
+  }
+}

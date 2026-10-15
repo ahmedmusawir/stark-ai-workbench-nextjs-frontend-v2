@@ -147,3 +147,59 @@ export const historyEmptySession = {
   user_id: 'u-1',
   events: [],
 };
+
+// --- APBM001 fixtures (shapes observed 14 October 2026; synthetic IDs) ----
+
+/** A Gemini thought part must never reach the transcript. */
+export const thoughtPartRun = [
+  {
+    id: 'ev-t1',
+    invocationId: 'e-thought',
+    author: 'greeting_agent',
+    content: {
+      role: 'model',
+      parts: [
+        { text: 'internal reasoning', thought: true },
+        { text: 'Visible reply', thoughtSignature: 'opaque-signature' },
+      ],
+    },
+  },
+];
+
+/** Session[] list rows: titles in state, events always [], lastUpdateTime = creation. */
+export const sessionListRows = [
+  {
+    id: 'aaaaaaaa-1111-4111-8111-111111111111',
+    appName: 'greeting_agent',
+    userId: 'user-verified-1',
+    state: { title: 'Older titled conversation' },
+    events: [],
+    lastUpdateTime: 1791961400.5,
+  },
+  {
+    id: 'cccccccc-3333-4333-8333-333333333333',
+    appName: 'greeting_agent',
+    userId: 'user-verified-1',
+    state: {},
+    events: [],
+    lastUpdateTime: 1791961412.25,
+  },
+  {
+    id: 'bbbbbbbb-2222-4222-8222-222222222222',
+    appName: 'greeting_agent',
+    userId: 'user-verified-1',
+    state: { title: '  Newest   created\n title  ' },
+    events: [],
+    lastUpdateTime: 1791961412.25,
+  },
+];
+
+/** Create-with-ID echo. */
+export const createdSession = (id: string, title: string) => ({
+  id,
+  appName: 'greeting_agent',
+  userId: 'user-verified-1',
+  state: { title },
+  events: [],
+  lastUpdateTime: 1791961411.947805,
+});

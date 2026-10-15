@@ -1,0 +1,49 @@
+# Final state — read-only Git + preservation checks (captured 2026-10-14T09:10:24+0600)
+# Written after all other repo writes; FILE_INDEX.md is created after this capture.
+branch: frontend-apbm-0001
+HEAD: f0fbf2282737ea3a63fc78d553cd31fc570821d5
+HEAD unchanged: yes
+staged: 0
+tracked modified (expected CHANGELOG.md, RECOVERY.md):
+CHANGELOG.md
+RECOVERY.md
+product/test/config/dependency/supabase/ACTIONS tracked changes (expected none):
+  (end)
+untracked under agent_docs/ACTIONS (expected none): 0
+
+## 10-12 recon deliverables vs their FILE_INDEX (SHA-256)
+UNCHANGED agent_docs/RECON/RECON_stark-agent-workspace_APBM001-prep_2026-10-12.md
+UNCHANGED agent_docs/RESPONSES/response_2026-10-12_175032_apbm001-prep-recon.md
+UNCHANGED agent_docs/RECON/RECON_stark-agent-workspace_APBM001-prep_2026-10-12_evidence/baseline-git.txt
+UNCHANGED agent_docs/RECON/RECON_stark-agent-workspace_APBM001-prep_2026-10-12_evidence/source-anchors.txt
+UNCHANGED agent_docs/RECON/RECON_stark-agent-workspace_APBM001-prep_2026-10-12_evidence/day0-sweep.txt
+UNCHANGED agent_docs/RECON/RECON_stark-agent-workspace_APBM001-prep_2026-10-12_evidence/test-inventory.txt
+UNCHANGED agent_docs/RECON/RECON_stark-agent-workspace_APBM001-prep_2026-10-12_evidence/final-state.txt
+UNCHANGED /home/moose/Downloads/APBM001_PREP_RECON_2026-10-12_175032_BDT.zip
+summary: 7/7 indexed 10-12 files unchanged
+
+--- status --porcelain=v1 -uall ---
+ M CHANGELOG.md
+ M RECOVERY.md
+?? agent_docs/RECON/RECON_stark-agent-workspace_APBM001-P0-addendum_2026-10-14.md
+?? agent_docs/RECON/RECON_stark-agent-workspace_APBM001-P0-addendum_2026-10-14_evidence/baseline-git.txt
+?? agent_docs/RECON/RECON_stark-agent-workspace_APBM001-P0-addendum_2026-10-14_evidence/environment-access.txt
+?? agent_docs/RECON/RECON_stark-agent-workspace_APBM001-P0-addendum_2026-10-14_evidence/final-state.txt
+?? agent_docs/RECON/RECON_stark-agent-workspace_APBM001-P0-addendum_2026-10-14_evidence/p0_1_frontend_target_identity.py
+?? agent_docs/RECON/RECON_stark-agent-workspace_APBM001-P0-addendum_2026-10-14_evidence/p0_2_supabase_chat_sessions_readonly.sql
+?? agent_docs/RECON/RECON_stark-agent-workspace_APBM001-P0-addendum_2026-10-14_evidence/p0_3_adk_cloud_run_metadata.sh
+?? agent_docs/RECON/RECON_stark-agent-workspace_APBM001-P0-addendum_2026-10-14_evidence/p0_4_adk_bundle_source_scan.sh
+?? agent_docs/RECON/RECON_stark-agent-workspace_APBM001-P0-addendum_2026-10-14_evidence/records-scan.txt
+?? agent_docs/RECON/RECON_stark-agent-workspace_APBM001-P0-addendum_2026-10-14_evidence/selftest.txt
+?? agent_docs/RECON/RECON_stark-agent-workspace_APBM001-prep_2026-10-12.md
+?? agent_docs/RECON/RECON_stark-agent-workspace_APBM001-prep_2026-10-12_evidence/FILE_INDEX.md
+?? agent_docs/RECON/RECON_stark-agent-workspace_APBM001-prep_2026-10-12_evidence/baseline-git.txt
+?? agent_docs/RECON/RECON_stark-agent-workspace_APBM001-prep_2026-10-12_evidence/day0-sweep.txt
+?? agent_docs/RECON/RECON_stark-agent-workspace_APBM001-prep_2026-10-12_evidence/final-state.txt
+?? agent_docs/RECON/RECON_stark-agent-workspace_APBM001-prep_2026-10-12_evidence/source-anchors.txt
+?? agent_docs/RECON/RECON_stark-agent-workspace_APBM001-prep_2026-10-12_evidence/test-inventory.txt
+?? agent_docs/RESPONSES/response_2026-10-12_173300_session-start.md
+?? agent_docs/RESPONSES/response_2026-10-12_175032_apbm001-prep-recon.md
+?? agent_docs/RESPONSES/response_2026-10-14_090926_apbm001-p0-addendum.md
+?? session_2026-10-12.md
+?? session_2026-10-14.md

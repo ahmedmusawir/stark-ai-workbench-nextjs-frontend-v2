@@ -1,0 +1,28 @@
+# Non-secret records scan for P0 target identity (2026-10-14)
+# Scope: repository text records; excluded .env*, *.zip, Q5_PROPOSAL_PATHS.json, POST_Q5_INVENTORY.json,
+# node_modules, .next, .git, private retention (outside the repo). No cloud or database access used.
+
+## ADK / Google Cloud
+- agent_docs/RECON/RECON_ADK_CONTINUATION_20261004-115739.md:50 — Director-authorized 10-04 probe target
+  https://adk-bundle-prod-v2-952978338090.us-east1.run.app  (labelled there "supplied target identity", not an env export)
+  Derived (Cloud Run deterministic URL format <service>-<project-number>.<region>.run.app):
+  service=adk-bundle-prod-v2  project_number=952978338090  region=us-east1   [EVIDENCE of record; INFERENCE of mapping]
+- Same project/region, retired wrapper: adk-wrapper-prod-v2-952978338090.us-east1.run.app
+  (agent_docs/CURRENT_APP/BIM000/STAGE_B_DATA_CONTRACT_AMENDMENT.md:79; _extraction/02-ARCHITECTURE-MAP.md:357; paused at BIM-002 N11, July)
+- Predecessor Streamlit frontend deploy record: _extraction/00-REPO-PROFILE.md:131 (gcloud run deploy adk-streamlit-frontend-v2) — not the ADK bundle.
+- Which service ADK_BUNDLE_URL_V1 points to TODAY: NOT IN ANY RECORD (10-03 recon: loopback; Tony 10-05: "remote cloud ADK bundle" [CLAIM]).
+- Deployed revision, image, scaling, ingress, invoker IAM: NOT IN ANY RECORD.
+- Session storage implementation / persistence configuration: NOT IN ANY RECORD.
+  CLAIM: kickoff (agent_docs/PLANNING/STARK_AGENT_WORKSPACE_KICKOFF_v0_1.md:12) "existing Google Cloud ADK v1 deployment, with its existing Supabase-backed history".
+  OBSERVED (persistence over seconds-minutes, not restart durability):
+    - BIM-002 N7, July: native GET returned events seconds after a live reply (agent_docs/CURRENT_APP/BIM002/RETROSPECTIVE.md:37-41).
+    - 10-04 probe: two sessions listed; stored events read back and appended across ~3 minutes (RECON_ADK_CONTINUATION §3-§4).
+
+## Supabase
+- Only project identifier in records: zldxzlbkoayhyhzxpjrq.supabase.co, from the PREDECESSOR Streamlit app extraction
+  (_extraction/00-REPO-PROFILE.md:148; 02-ARCHITECTURE-MAP.md:358 "Auth + adk_n8n_hybrid_profiles table"; 07-GUARDRAILS-AND-SANDBOXING.md:103).
+  No record ties it to this Next.js app → CANDIDATE ONLY; P0-1 resolves the actual project ref without exposing secrets.
+- chat_sessions provisioning: checked-in DDL supabase/chat_sessions_setup.sql (blob d5899da9…); run step recorded as PENDING in July
+  (RECOVERY.md historical block "Live-QA pre-steps … run supabase/chat_sessions_setup.sql"); BIM-004 spec predicts empty panel without it
+  (agent_docs/CURRENT_APP/BIM004/ACCEPTANCE_SPEC.md:26-28). No later execution record found.
+- Kickoff §2: the clone shares database/credentials with the original frontend [CLAIM].

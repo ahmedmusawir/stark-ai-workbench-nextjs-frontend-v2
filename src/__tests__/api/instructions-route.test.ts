@@ -4,7 +4,11 @@
  * env var / 502 GCS fault) and THE BACKUP LAW — backup happens BEFORE the
  * write, a failed backup means ZERO writes, and only a clean not-found
  * skips the backup. GCS fully mocked.
+ * APBM001 (AC002): a verified signed-in user is required first, and PUT is
+ * same-origin only — both rejections happen before any GCS access.
  */
+
+jest.mock('@/utils/supabase/server', () => ({ createClient: jest.fn() }));
 
 const copyMock = jest.fn();
 const saveMock = jest.fn();
@@ -21,6 +25,11 @@ jest.mock('@google-cloud/storage', () => ({
 }));
 
 import { GET, PUT } from '@/app/api/agent/instructions/route';
+import { Storage } from '@google-cloud/storage';
+
+import { createClient } from '@/utils/supabase/server';
+
+import { APP_ORIGIN, signIn, signOut } from './fixtures/route-harness';
 
 const BUCKET = 'test-bucket';
 const BASE = 'agent-instructions';
@@ -31,10 +40,14 @@ function getRequest(agent: string | null) {
   return new Request(url);
 }
 
-function putRequest(body: Record<string, unknown>) {
+function putRequest(
+  body: Record<string, unknown>,
+  origin = APP_ORIGIN,
+  headers: Record<string, string> = {},
+) {
   return new Request('http://localhost/api/agent/instructions', {
     method: 'PUT',
-    headers: { 'Content-Type': 'application/json' },
+    headers: { 'Content-Type': 'application/json', host: 'localhost', origin, ...headers },
     body: JSON.stringify(body),
   });
 }
@@ -52,6 +65,35 @@ describe('/api/agent/instructions', () => {
     fileMock.mockClear();
     process.env.GCS_BUCKET = BUCKET;
     process.env.GCS_BASE_FOLDER = BASE;
+    process.env.NEXT_PUBLIC_SITE_URL = APP_ORIGIN;
+    signIn();
+  });
+
+  describe('APBM001 authentication boundary', () => {
+    it('401 without a verified user on GET and PUT — zero GCS clients created', async () => {
+      signOut();
+      expect((await GET(getRequest('jarvis_agent'))).status).toBe(401);
+      expect((await PUT(putRequest({ agent_name: 'jarvis_agent', content: 'x' }))).status).toBe(401);
+      expect(Storage).not.toHaveBeenCalled();
+    });
+
+    it('403 for a cross-origin PUT — zero GCS clients created', async () => {
+      const res = await PUT(putRequest({ agent_name: 'jarvis_agent', content: 'x' }, 'https://evil.example'));
+      expect(res.status).toBe(403);
+      expect(Storage).not.toHaveBeenCalled();
+      expect(saveMock).not.toHaveBeenCalled();
+    });
+
+    it.each([
+      ['the wrong scheme with a matching Host', 'https://localhost:3000', { host: 'localhost:3000' }],
+      ['the wrong port with a matching Host', 'http://localhost:3001', { host: 'localhost:3001' }],
+      ['a foreign Origin matched by a spoofed X-Forwarded-Host', 'https://evil.example', { 'x-forwarded-host': 'evil.example' }],
+    ])('403 for %s on PUT — before auth and GCS', async (_label, origin, headers) => {
+      const res = await PUT(putRequest({ agent_name: 'jarvis_agent', content: 'x' }, origin, headers));
+      expect(res.status).toBe(403);
+      expect(createClient).not.toHaveBeenCalled();
+      expect(Storage).not.toHaveBeenCalled();
+    });
   });
 
   afterAll(() => {

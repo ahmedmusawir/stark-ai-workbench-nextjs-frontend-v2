@@ -1,150 +1,107 @@
 /**
- * Unit tests for POST /api/agent/history (BIM-002 native connector).
- * Intent (Rule K9): the route GETs the native session and returns the
- * normalized `{ history }` — the EXTERNAL contract is frozen (service still
- * unwraps `.history`); 500 config fault, 502 upstream fault, Authorization
- * pass-through (R2). BIM-001's proxy-protocol assertions replaced per FLAG-2.
+ * Unit tests for POST /api/agent/history (BIM-002 native connector, APBM001).
+ * Intent (Rule K9): the route GETs the native session under the VERIFIED
+ * server user and normalizes its events. APBM001 (R001-05) deliberately
+ * SUPERSEDES the frozen A1 failure shape: there is no error-to-[] collapse —
+ * valid zero events is `empty`, session 404 is `session-missing`, upstream
+ * auth is `upstream-access`, and timeout/5xx/malformed are unavailable.
+ * Shared pre-upstream negatives live in agent-boundary.test.ts.
  */
 
+jest.mock('@/utils/supabase/server', () => ({ createClient: jest.fn() }));
+
 import { POST } from '@/app/api/agent/history/route';
+import { resetRosterCacheForTests } from '@/app/api/agent/_lib/context';
 
 import {
   historyEmptySession,
   historySession,
   historySessionExpected,
+  sessionNotFound404,
 } from './fixtures/adk-events';
-
-const BUNDLE = 'https://bundle.example.test';
+import { BUNDLE, USER_ID, errorCodeOf, jsonResponse, liveEnv, post, signIn } from './fixtures/route-harness';
 
 const fetchMock = jest.fn();
-
-function makeRequest(
-  body: Record<string, unknown>,
-  headers: Record<string, string> = {},
-) {
-  return new Request('http://localhost/api/agent/history', {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json', ...headers },
-    body: JSON.stringify(body),
-  });
-}
-
-const HISTORY_BODY = {
-  agent_name: 'jarvis_agent',
-  user_id: 'u-1',
-  session_id: 'session-42',
-};
+const body = (sessionId = historySession.id) => ({ agent_name: 'jarvis_agent', session_id: sessionId });
+const request = (sessionId?: string, headers?: Record<string, string>) =>
+  POST(post('/api/agent/history', body(sessionId), headers));
 
 describe('POST /api/agent/history', () => {
   const originalFetch = global.fetch;
-  const originalEnv = process.env.ADK_BUNDLE_URL_V1;
+  const env = { ...process.env };
 
   beforeEach(() => {
     global.fetch = fetchMock as unknown as typeof fetch;
-    process.env.ADK_BUNDLE_URL_V1 = BUNDLE;
+    fetchMock.mockReset();
+    resetRosterCacheForTests();
+    liveEnv();
+    signIn();
   });
 
   afterAll(() => {
     global.fetch = originalFetch;
-    if (originalEnv === undefined) delete process.env.ADK_BUNDLE_URL_V1;
-    else process.env.ADK_BUNDLE_URL_V1 = originalEnv;
+    process.env = env;
   });
 
-  it('GETs the native session path with a timeout signal', async () => {
-    fetchMock.mockResolvedValueOnce(
-      new Response(JSON.stringify(historySession), { status: 200 }),
-    );
-
-    await POST(makeRequest(HISTORY_BODY));
-
+  it('GETs the native session path for the server user with a timeout signal', async () => {
+    fetchMock.mockResolvedValueOnce(jsonResponse(historySession));
+    await request();
     expect(fetchMock).toHaveBeenCalledTimes(1);
     const [url, init] = fetchMock.mock.calls[0];
-    expect(url).toBe(
-      `${BUNDLE}/apps/jarvis_agent/users/u-1/sessions/session-42`,
-    );
+    expect(url).toBe(`${BUNDLE}/apps/jarvis_agent/users/${USER_ID}/sessions/${historySession.id}`);
     expect(init.method).toBe('GET');
     expect(init.signal).toBeInstanceOf(AbortSignal);
   });
 
-  it('normalizes session events to { history: Message[] } (roles mapped, non-text skipped)', async () => {
-    fetchMock.mockResolvedValueOnce(
-      new Response(JSON.stringify(historySession), { status: 200 }),
-    );
-
-    const res = await POST(makeRequest(HISTORY_BODY));
-
+  it('normalizes session events to { status: ready, history } (roles mapped, non-text skipped)', async () => {
+    fetchMock.mockResolvedValueOnce(jsonResponse(historySession));
+    const res = await request();
     expect(res.status).toBe(200);
-    await expect(res.json()).resolves.toEqual({
-      history: historySessionExpected,
-    });
+    await expect(res.json()).resolves.toEqual({ status: 'ready', history: historySessionExpected });
   });
 
-  it('returns { history: [] } for a valid session with empty events (the N7 shape)', async () => {
-    fetchMock.mockResolvedValueOnce(
-      new Response(JSON.stringify(historyEmptySession), { status: 200 }),
-    );
-
-    const res = await POST(makeRequest(HISTORY_BODY));
-
+  it('a valid session with zero events is empty — a success, distinct from every failure', async () => {
+    fetchMock.mockResolvedValueOnce(jsonResponse(historyEmptySession));
+    const res = await request(historyEmptySession.id);
     expect(res.status).toBe(200);
-    await expect(res.json()).resolves.toEqual({ history: [] });
+    await expect(res.json()).resolves.toEqual({ status: 'empty', history: [] });
   });
 
-  it('passes through the Authorization header when present (R2)', async () => {
-    fetchMock.mockResolvedValueOnce(
-      new Response(JSON.stringify(historyEmptySession), { status: 200 }),
-    );
-
-    await POST(makeRequest(HISTORY_BODY, { Authorization: 'Bearer tok-123' }));
-
-    const [, init] = fetchMock.mock.calls[0];
-    expect(init.headers.Authorization).toBe('Bearer tok-123');
+  it('does not forward a browser Authorization header (R001-11 supersedes the R2 pass-through)', async () => {
+    fetchMock.mockResolvedValueOnce(jsonResponse(historySession));
+    await request(undefined, { Authorization: 'Bearer browser-token' });
+    expect(fetchMock.mock.calls[0][1].headers?.Authorization).toBeUndefined();
   });
 
-  it('returns 502 { error } when the upstream responds non-OK', async () => {
-    fetchMock.mockResolvedValueOnce(
-      new Response('{"detail":"Session not found"}', { status: 404 }),
-    );
+  it.each([
+    ['session 404', () => jsonResponse(sessionNotFound404, 404), 404, 'session-missing'],
+    ['agent-level 404', () => jsonResponse({ detail: 'Not Found' }, 404), 502, 'upstream-unavailable'],
+    ['upstream 401', () => jsonResponse({ detail: 'no' }, 401), 502, 'upstream-access'],
+    ['upstream 500', () => jsonResponse({ detail: 'boom' }, 500), 502, 'upstream-unavailable'],
+    ['malformed 200', () => jsonResponse({ id: historySession.id, events: 'nope' }), 502, 'upstream-malformed'],
+  ])('%s → %i %s, never an empty history', async (_label, response, status, code) => {
+    fetchMock.mockResolvedValueOnce(response());
+    const res = await request();
+    expect(res.status).toBe(status);
+    const payload = await res.clone().json();
+    expect(payload.history).toBeUndefined();
+    await expect(errorCodeOf(res)).resolves.toBe(code);
+  });
 
-    const res = await POST(makeRequest(HISTORY_BODY));
-
+  it('timeout → 504 upstream-timeout; unreachable bundle → 502 without the cause text', async () => {
+    fetchMock.mockRejectedValueOnce(Object.assign(new Error('x'), { name: 'TimeoutError' }));
+    const timedOut = await request();
+    expect(timedOut.status).toBe(504);
+    await expect(errorCodeOf(timedOut)).resolves.toBe('upstream-timeout');
+    fetchMock.mockRejectedValueOnce(new TypeError('fetch failed: getaddrinfo ENOTFOUND'));
+    const res = await request();
     expect(res.status).toBe(502);
-    await expect(res.json()).resolves.toEqual({
-      error: 'History fetch failed: 404',
-    });
+    expect(JSON.stringify(await res.json())).not.toMatch(/ENOTFOUND|getaddrinfo/);
   });
 
-  it('returns 502 { error } when the bundle is unreachable', async () => {
-    fetchMock.mockRejectedValue(new Error('fetch failed'));
-
-    const res = await POST(makeRequest(HISTORY_BODY));
-
-    expect(res.status).toBe(502);
-    const json = await res.json();
-    expect(typeof json.error).toBe('string');
-  });
-
-  it('returns 500 { error } and makes zero HTTP calls when ADK_BUNDLE_URL_V1 is unset', async () => {
-    delete process.env.ADK_BUNDLE_URL_V1;
-
-    const res = await POST(makeRequest(HISTORY_BODY));
-
-    expect(res.status).toBe(500);
-    await expect(res.json()).resolves.toEqual({
-      error: 'ADK_BUNDLE_URL_V1 is not configured',
-    });
-    expect(fetchMock).not.toHaveBeenCalled();
-  });
-
-  it('returns 400 { error } and zero HTTP calls for an agent not in the manifest (M-G4)', async () => {
-    const res = await POST(
-      makeRequest({ ...HISTORY_BODY, agent_name: 'ghost_agent' }),
-    );
-
-    expect(res.status).toBe(400);
-    await expect(res.json()).resolves.toEqual({
-      error: 'Unknown agent: ghost_agent',
-    });
-    expect(fetchMock).not.toHaveBeenCalled();
+  it('accepts wrapper-era session IDs for existing conversations', async () => {
+    fetchMock.mockResolvedValueOnce(jsonResponse({ ...historyEmptySession, id: 'session-1759000000000' }));
+    const res = await request('session-1759000000000');
+    expect(res.status).toBe(200);
   });
 });

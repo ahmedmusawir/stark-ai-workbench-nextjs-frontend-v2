@@ -1,0 +1,50 @@
+[
+  {
+    "number": 1,
+    "method": "GET",
+    "url": "https://adk-bundle-prod-v2-952978338090.us-east1.run.app/openapi.json",
+    "started_utc": "2026-10-14T06:32:31Z",
+    "request_headers_sent": {
+      "Accept": "application/json"
+    },
+    "credentials_sent": "none (no Authorization, no cookies, no API key)",
+    "status_line": "HTTP/2 200",
+    "http_code": 200,
+    "bytes": 195000,
+    "time_total_seconds": 25.995378,
+    "response_headers_kept": {
+      "content-type": "application/json",
+      "date": "Wed, 14 Oct 2026 06:32:56 GMT",
+      "server": "Google Frontend",
+      "content-length": "195000"
+    },
+    "response_headers_dropped": "x-cloud-trace-context, alt-svc (not needed)",
+    "body_sha256": "4db73a7f7a3174bdc4e321a57b25ea9f396b5105e395d0e26db0cb1d26977dae",
+    "body_file": "openapi.json",
+    "automatic_retries": 0
+  },
+  {
+    "number": 2,
+    "method": "GET",
+    "url": "https://adk-bundle-prod-v2-952978338090.us-east1.run.app/list-apps",
+    "started_utc": "2026-10-14T06:32:57Z",
+    "request_headers_sent": {
+      "Accept": "application/json"
+    },
+    "credentials_sent": "none (no Authorization, no cookies, no API key)",
+    "status_line": "HTTP/2 200",
+    "http_code": 200,
+    "bytes": 86,
+    "time_total_seconds": 0.468324,
+    "response_headers_kept": {
+      "content-type": "application/json",
+      "date": "Wed, 14 Oct 2026 06:32:57 GMT",
+      "server": "Google Frontend",
+      "content-length": "86"
+    },
+    "response_headers_dropped": "x-cloud-trace-context, alt-svc (not needed)",
+    "body_sha256": "0cf1db92bd30998286955b7f8a61115820e1189a6377af340dc60d747410660f",
+    "body_file": "list-apps.json",
+    "automatic_retries": 0
+  }
+]

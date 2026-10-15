@@ -1,0 +1,69 @@
+{
+  "reviewed_baseline": "f0fbf2282737ea3a63fc78d553cd31fc570821d5",
+  "sources": [
+    {
+      "source_archive": "APBM001_PREP_RECON_2026-10-12_175032_BDT.zip",
+      "source_sha256": "6cf8f4e86fa231e0164fc9a58c540d791f28450c7cea5388753296a109734b26",
+      "source_bytes": 38195,
+      "selected_members": [
+        "APBM001_PREP_RECON_2026-10-12_175032_BDT/FILE_INDEX.md",
+        "APBM001_PREP_RECON_2026-10-12_175032_BDT/RECON_stark-agent-workspace_APBM001-prep_2026-10-12.md",
+        "APBM001_PREP_RECON_2026-10-12_175032_BDT/response_2026-10-12_175032_apbm001-prep-recon.md"
+      ],
+      "note": "Historical evidence; read as evidence, not current authority. Original index covers source archive, not this selected subset."
+    },
+    {
+      "source_archive": "APBM001_P0_ADDENDUM_2026-10-14_090926_BDT.zip",
+      "source_sha256": "851e76944045b4de627566d3f2e1392aa0787669169f6011286fa609301a1ac1",
+      "source_bytes": 24622,
+      "selected_members": [
+        "APBM001_P0_ADDENDUM_2026-10-14_090926_BDT/FILE_INDEX.md",
+        "APBM001_P0_ADDENDUM_2026-10-14_090926_BDT/RECON_stark-agent-workspace_APBM001-P0-addendum_2026-10-14.md",
+        "APBM001_P0_ADDENDUM_2026-10-14_090926_BDT/response_2026-10-14_090926_apbm001-p0-addendum.md"
+      ],
+      "note": "Historical evidence; read as evidence, not current authority. Original index covers source archive, not this selected subset."
+    },
+    {
+      "source_archive": "APBM001_ADK_SESSION_DISCOVERY_2026-10-14_123729_BDT.zip",
+      "source_sha256": "3005e68fded3a20893d83c2b11062d944caaf0295b74a0329c634fd3e5a79666",
+      "source_bytes": 47457,
+      "selected_members": [
+        "response_2026-10-14_123729_apbm001-adk-session-discovery.md",
+        "evidence/http-requests.json",
+        "evidence/openapi.json",
+        "evidence/openapi-session-contracts.json",
+        "evidence/list-apps.json",
+        "evidence/source-anchors.txt",
+        "evidence/records-anchors.txt",
+        "FILE_INDEX.md"
+      ],
+      "note": "Historical evidence; read as evidence, not current authority. Original index covers source archive, not this selected subset."
+    },
+    {
+      "source_archive": "APBM001_ADK_LIVE_CAPABILITY_TEST_2026-10-14_130354_BDT.zip",
+      "source_sha256": "ca9134486ab161765f03321db97a07600fe1c03f6450cd7711b9106fc6559578",
+      "source_bytes": 21442,
+      "selected_members": [
+        "response_2026-10-14_130354_apbm001-adk-live-capability-test.md",
+        "evidence/request-ledger.json",
+        "evidence/analysis.json",
+        "evidence/responses-summary.json",
+        "evidence/console.txt",
+        "evidence/raw/04-new-list-empty.json",
+        "evidence/raw/05-create-a.json",
+        "evidence/raw/06-create-b.json",
+        "evidence/raw/07-run-a-marker.json",
+        "evidence/raw/08-run-b-marker.json",
+        "evidence/raw/09-list-after-markers.json",
+        "evidence/raw/10-get-a-after-marker.json",
+        "evidence/raw/11-get-b-after-marker.json",
+        "evidence/raw/12-run-a-continue.json",
+        "evidence/raw/13-list-after-continue.json",
+        "evidence/raw/14-get-a-after-continue.json",
+        "evidence/raw/15-get-nonexistent.json",
+        "FILE_INDEX.md"
+      ],
+      "note": "Historical evidence; read as evidence, not current authority. Original index covers source archive, not this selected subset."
+    }
+  ]
+}

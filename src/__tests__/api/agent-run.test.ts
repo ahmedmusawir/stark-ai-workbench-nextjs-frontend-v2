@@ -1,195 +1,120 @@
 /**
- * Unit tests for POST /api/agent/run (BIM-002 native connector).
- * Intent (Rule K9): the route speaks native ADK api_server protocol while the
- * EXTERNAL contract stays frozen — `{response, session_id}` out, 500 config
- * fault, 502 upstream fault, Authorization pass-through (R2). Overlapping
- * guarantees from the BIM-001 suite are preserved; the retired proxy protocol
- * assertions are replaced per the FLAG-2 ruling.
+ * Unit tests for POST /api/agent/run (BIM-002 native connector, APBM001).
+ * Intent (Rule K9): continuation only — exactly one camelCase upstream /run
+ * under the VERIFIED server user. APBM001 (R001-06) deliberately SUPERSEDES
+ * the null-session bootstrap (N5) and the not-found→create→retry loop (N6):
+ * a missing session is `session-missing` with no create and no resend, and
+ * a request without a session ID is invalid. Shared pre-upstream negatives
+ * live in agent-boundary.test.ts.
  */
 
+jest.mock('@/utils/supabase/server', () => ({ createClient: jest.fn() }));
+
 import { POST } from '@/app/api/agent/run/route';
+import { resetRosterCacheForTests } from '@/app/api/agent/_lib/context';
 
 import {
+  emptyEvents,
   happyPathEvents,
   happyPathExpected,
+  multiEventExpected,
+  multiEventRun,
   sessionNotFound404,
 } from './fixtures/adk-events';
-
-const BUNDLE = 'https://bundle.example.test';
+import { BUNDLE, USER_ID, errorCodeOf, jsonResponse, liveEnv, post, signIn } from './fixtures/route-harness';
 
 const fetchMock = jest.fn();
-
-function makeRequest(
-  body: Record<string, unknown>,
-  headers: Record<string, string> = {},
-) {
-  return new Request('http://localhost/api/agent/run', {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json', ...headers },
-    body: JSON.stringify(body),
-  });
-}
-
-const RUN_BODY = {
-  agent_name: 'jarvis_agent',
-  message: 'hello',
-  user_id: 'u-1',
-  session_id: 'session-42',
-};
-
-const okRun = () =>
-  new Response(JSON.stringify(happyPathEvents), { status: 200 });
-const okCreate = () => new Response('{}', { status: 200 });
+const RUN_BODY = { agent_name: 'jarvis_agent', message: 'hello', session_id: 'session-42' };
+const run = (body: Record<string, unknown> = RUN_BODY, headers?: Record<string, string>) =>
+  POST(post('/api/agent/run', body, headers));
 
 describe('POST /api/agent/run', () => {
   const originalFetch = global.fetch;
-  const originalEnv = process.env.ADK_BUNDLE_URL_V1;
+  const env = { ...process.env };
 
   beforeEach(() => {
     global.fetch = fetchMock as unknown as typeof fetch;
-    process.env.ADK_BUNDLE_URL_V1 = BUNDLE;
+    fetchMock.mockReset();
+    resetRosterCacheForTests();
+    liveEnv();
+    signIn();
   });
 
   afterAll(() => {
     global.fetch = originalFetch;
-    if (originalEnv === undefined) delete process.env.ADK_BUNDLE_URL_V1;
-    else process.env.ADK_BUNDLE_URL_V1 = originalEnv;
+    process.env = env;
   });
 
-  it('existing session: single native /run call with the ADK payload and a timeout signal', async () => {
-    fetchMock.mockResolvedValueOnce(okRun());
-
-    const res = await POST(makeRequest(RUN_BODY));
-
+  it('existing session: single camelCase /run for the server user, with a timeout signal', async () => {
+    fetchMock.mockResolvedValueOnce(jsonResponse(happyPathEvents));
+    const res = await run();
     expect(fetchMock).toHaveBeenCalledTimes(1);
     const [url, init] = fetchMock.mock.calls[0];
     expect(url).toBe(`${BUNDLE}/run`);
     expect(init.method).toBe('POST');
     expect(JSON.parse(init.body)).toEqual({
-      app_name: 'jarvis_agent',
-      user_id: 'u-1',
-      session_id: 'session-42',
-      new_message: { role: 'user', parts: [{ text: 'hello' }] },
+      appName: 'jarvis_agent',
+      userId: USER_ID,
+      sessionId: 'session-42',
+      newMessage: { role: 'user', parts: [{ text: 'hello' }] },
     });
     expect(init.headers['Content-Type']).toBe('application/json');
     expect(init.signal).toBeInstanceOf(AbortSignal);
     expect(res.status).toBe(200);
     await expect(res.json()).resolves.toEqual({
+      status: 'sent',
       response: happyPathExpected,
       session_id: 'session-42',
+      event_ids: ['ev-1', 'ev-2'],
+      invocation_id: null,
     });
   });
 
-  it('null session (N5): creates session-${Date.now()} then runs; returns the generated id', async () => {
-    fetchMock.mockResolvedValueOnce(okCreate()).mockResolvedValueOnce(okRun());
-
-    const res = await POST(makeRequest({ ...RUN_BODY, session_id: null }));
-
-    expect(fetchMock).toHaveBeenCalledTimes(2);
-    expect(fetchMock.mock.calls[0][0]).toMatch(
-      new RegExp(`^${BUNDLE}/apps/jarvis_agent/users/u-1/sessions/session-\\d+$`),
-    );
-    expect(fetchMock.mock.calls[1][0]).toBe(`${BUNDLE}/run`);
-    expect(res.status).toBe(200);
-    const json = await res.json();
-    expect(json.response).toBe(happyPathExpected);
-    expect(json.session_id).toMatch(/^session-\d+$/);
+  it('selects the LAST model text of a multi-event run', async () => {
+    fetchMock.mockResolvedValueOnce(jsonResponse(multiEventRun));
+    const res = await run();
+    expect((await res.json()).response).toBe(multiEventExpected);
   });
 
-  it('session-not-found (N6): create + retry exactly once, then success', async () => {
-    fetchMock
-      .mockResolvedValueOnce(
-        new Response(JSON.stringify(sessionNotFound404), { status: 404 }),
-      )
-      .mockResolvedValueOnce(okCreate())
-      .mockResolvedValueOnce(okRun());
-
-    const res = await POST(makeRequest(RUN_BODY));
-
-    expect(fetchMock).toHaveBeenCalledTimes(3);
-    expect(res.status).toBe(200);
-    await expect(res.json()).resolves.toEqual({
-      response: happyPathExpected,
-      session_id: 'session-42',
-    });
-  });
-
-  it('retry failure (N6): second run failure → 502 { error }', async () => {
-    fetchMock
-      .mockResolvedValueOnce(
-        new Response(JSON.stringify(sessionNotFound404), { status: 404 }),
-      )
-      .mockResolvedValueOnce(okCreate())
-      .mockResolvedValueOnce(new Response('{"detail":"boom"}', { status: 500 }));
-
-    const res = await POST(makeRequest(RUN_BODY));
-
-    expect(res.status).toBe(502);
-    const json = await res.json();
-    expect(typeof json.error).toBe('string');
-  });
-
-  it('run succeeds with no model text → 502 "No model response in events"', async () => {
-    fetchMock.mockResolvedValueOnce(new Response('[]', { status: 200 }));
-
-    const res = await POST(makeRequest(RUN_BODY));
-
-    expect(res.status).toBe(502);
-    await expect(res.json()).resolves.toEqual({
-      error: 'No model response in events',
-    });
-  });
-
-  it('passes through the Authorization header when present (R2)', async () => {
-    fetchMock.mockResolvedValueOnce(okRun());
-
-    await POST(makeRequest(RUN_BODY, { Authorization: 'Bearer tok-123' }));
-
-    const [, init] = fetchMock.mock.calls[0];
-    expect(init.headers.Authorization).toBe('Bearer tok-123');
-  });
-
-  it('omits the Authorization header when absent', async () => {
-    fetchMock.mockResolvedValueOnce(okRun());
-
-    await POST(makeRequest(RUN_BODY));
-
-    const [, init] = fetchMock.mock.calls[0];
-    expect(init.headers).not.toHaveProperty('Authorization');
-  });
-
-  it('returns 502 { error } when the bundle is unreachable', async () => {
-    fetchMock.mockRejectedValue(new Error('connect ECONNREFUSED'));
-
-    const res = await POST(makeRequest(RUN_BODY));
-
-    expect(res.status).toBe(502);
-    const json = await res.json();
-    expect(typeof json.error).toBe('string');
-    expect(json.error).toContain('ECONNREFUSED');
-  });
-
-  it('returns 500 { error } and makes zero HTTP calls when ADK_BUNDLE_URL_V1 is unset', async () => {
-    delete process.env.ADK_BUNDLE_URL_V1;
-
-    const res = await POST(makeRequest(RUN_BODY));
-
-    expect(res.status).toBe(500);
-    await expect(res.json()).resolves.toEqual({
-      error: 'ADK_BUNDLE_URL_V1 is not configured',
-    });
-    expect(fetchMock).not.toHaveBeenCalled();
-  });
-
-  it('returns 400 { error } and zero HTTP calls for an agent not in the manifest (M-G4)', async () => {
-    const res = await POST(
-      makeRequest({ ...RUN_BODY, agent_name: 'ghost_agent' }),
-    );
-
+  it('SUPERSEDED N5: a request without session_id is invalid — the run route never creates', async () => {
+    const res = await run({ agent_name: 'jarvis_agent', message: 'hello', session_id: null });
     expect(res.status).toBe(400);
-    await expect(res.json()).resolves.toEqual({
-      error: 'Unknown agent: ghost_agent',
-    });
     expect(fetchMock).not.toHaveBeenCalled();
+  });
+
+  it('SUPERSEDED N6: session-not-found → 404 session-missing; no create, no retry, no resend', async () => {
+    fetchMock.mockResolvedValueOnce(jsonResponse(sessionNotFound404, 404));
+    const res = await run();
+    expect(res.status).toBe(404);
+    await expect(errorCodeOf(res)).resolves.toBe('session-missing');
+    expect(fetchMock).toHaveBeenCalledTimes(1);
+    expect(fetchMock.mock.calls[0][0]).toBe(`${BUNDLE}/run`);
+  });
+
+  it('run succeeds with no model text → 502 upstream-malformed (the client treats it as uncertain)', async () => {
+    fetchMock.mockResolvedValueOnce(jsonResponse(emptyEvents));
+    const res = await run();
+    expect(res.status).toBe(502);
+    await expect(errorCodeOf(res)).resolves.toBe('upstream-malformed');
+  });
+
+  it('does not forward a browser Authorization header (R001-11 supersedes R2)', async () => {
+    fetchMock.mockResolvedValueOnce(jsonResponse(happyPathEvents));
+    await run(RUN_BODY, { Authorization: 'Bearer browser-token' });
+    expect(fetchMock.mock.calls[0][1].headers.Authorization).toBeUndefined();
+  });
+
+  it('timeout → 504 upstream-timeout after exactly one attempt', async () => {
+    fetchMock.mockRejectedValueOnce(Object.assign(new Error('x'), { name: 'TimeoutError' }));
+    const res = await run();
+    expect(res.status).toBe(504);
+    await expect(errorCodeOf(res)).resolves.toBe('upstream-timeout');
+    expect(fetchMock).toHaveBeenCalledTimes(1);
+  });
+
+  it('upstream validation rejection → upstream-rejected (definitively not sent)', async () => {
+    fetchMock.mockResolvedValueOnce(jsonResponse({ detail: [{ msg: 'field required' }] }, 422));
+    const res = await run();
+    await expect(errorCodeOf(res)).resolves.toBe('upstream-rejected');
   });
 });

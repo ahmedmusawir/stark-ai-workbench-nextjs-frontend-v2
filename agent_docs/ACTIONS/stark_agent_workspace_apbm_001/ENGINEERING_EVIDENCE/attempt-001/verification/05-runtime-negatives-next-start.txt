@@ -1,0 +1,10 @@
+## runtime negatives (no cookies, no credentials) 2026-10-14 19:23:34 +0600
+GET /api/agent/workspace (no session) -> 401 0.022099s {"error":{"code":"unauthenticated","message":"Sign in to continue"}}
+GET /api/agent/sessions (no session) -> 401 0.005850s {"error":{"code":"unauthenticated","message":"Sign in to continue"}}
+POST /api/agent/run same-origin (no session) -> 401 0.008314s {"error":{"code":"unauthenticated","message":"Sign in to continue"}}
+POST /api/agent/run foreign origin -> 403 0.006614s {"error":{"code":"origin-rejected","message":"Cross-origin request rejected"}}
+POST /api/agent/sessions no Origin -> 403 0.006081s {"error":{"code":"origin-rejected","message":"Cross-origin request rejected"}}
+POST /api/agent/history cross-site metadata -> 403 0.005066s {"error":{"code":"origin-rejected","message":"Cross-origin request rejected"}}
+PUT /api/agent/instructions foreign origin -> 403 0.007452s {"error":"Cross-origin request rejected"}
+GET /api/agent/instructions (no session) -> 401 0.006331s {"error":"Sign in to continue"}
+GET /chat (no session) -> 307 0.084994s <!DOCTYPE html><html id="__next_error__"><head><meta charSet="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/><link rel="preload" as="script" fetchPriority="low" href="/_n

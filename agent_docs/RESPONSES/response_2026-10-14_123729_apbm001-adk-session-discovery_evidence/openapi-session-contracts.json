@@ -1,0 +1,417 @@
+{
+  "source": "https://adk-bundle-prod-v2-952978338090.us-east1.run.app/openapi.json",
+  "openapi": "3.1.0",
+  "info": {
+    "title": "FastAPI",
+    "version": "0.1.0"
+  },
+  "security_schemes": null,
+  "top_level_security": null,
+  "operations_with_security": 0,
+  "path_table": [
+    "GET /list-apps  |  List Apps",
+    "GET /debug/trace/{event_id}  |  Get Trace Dict",
+    "GET /debug/trace/session/{session_id}  |  Get Session Trace",
+    "GET /apps/{app_name}/users/{user_id}/sessions/{session_id}  |  Get Session",
+    "POST /apps/{app_name}/users/{user_id}/sessions/{session_id}  |  Create Session With Id",
+    "DELETE /apps/{app_name}/users/{user_id}/sessions/{session_id}  |  Delete Session",
+    "GET /apps/{app_name}/users/{user_id}/sessions  |  List Sessions",
+    "POST /apps/{app_name}/users/{user_id}/sessions  |  Create Session",
+    "POST /apps/{app_name}/eval-sets  |  Create Eval Set",
+    "GET /apps/{app_name}/eval-sets  |  List Eval Sets",
+    "POST /apps/{app_name}/eval_sets/{eval_set_id}  |  Create Eval Set Legacy",
+    "GET /apps/{app_name}/eval_sets  |  List Eval Sets Legacy",
+    "POST /apps/{app_name}/eval_sets/{eval_set_id}/add_session  |  Add Session To Eval Set",
+    "POST /apps/{app_name}/eval-sets/{eval_set_id}/add-session  |  Add Session To Eval Set",
+    "GET /apps/{app_name}/eval_sets/{eval_set_id}/evals  |  List Evals In Eval Set",
+    "GET /apps/{app_name}/eval_sets/{eval_set_id}/evals/{eval_case_id}  |  Get Eval",
+    "PUT /apps/{app_name}/eval_sets/{eval_set_id}/evals/{eval_case_id}  |  Update Eval",
+    "DELETE /apps/{app_name}/eval_sets/{eval_set_id}/evals/{eval_case_id}  |  Delete Eval",
+    "GET /apps/{app_name}/eval-sets/{eval_set_id}/eval-cases/{eval_case_id}  |  Get Eval",
+    "PUT /apps/{app_name}/eval-sets/{eval_set_id}/eval-cases/{eval_case_id}  |  Update Eval",
+    "DELETE /apps/{app_name}/eval-sets/{eval_set_id}/eval-cases/{eval_case_id}  |  Delete Eval",
+    "POST /apps/{app_name}/eval_sets/{eval_set_id}/run_eval  |  Run Eval Legacy",
+    "POST /apps/{app_name}/eval-sets/{eval_set_id}/run  |  Run Eval",
+    "GET /apps/{app_name}/eval-results/{eval_result_id}  |  Get Eval Result",
+    "GET /apps/{app_name}/eval_results/{eval_result_id}  |  Get Eval Result Legacy",
+    "GET /apps/{app_name}/eval-results  |  List Eval Results",
+    "GET /apps/{app_name}/eval_results  |  List Eval Results Legacy",
+    "GET /apps/{app_name}/metrics-info  |  List Metrics Info",
+    "GET /apps/{app_name}/users/{user_id}/sessions/{session_id}/artifacts/{artifact_name}  |  Load Artifact",
+    "DELETE /apps/{app_name}/users/{user_id}/sessions/{session_id}/artifacts/{artifact_name}  |  Delete Artifact",
+    "GET /apps/{app_name}/users/{user_id}/sessions/{session_id}/artifacts/{artifact_name}/versions/{version_id}  |  Load Artifact Version",
+    "GET /apps/{app_name}/users/{user_id}/sessions/{session_id}/artifacts  |  List Artifact Names",
+    "GET /apps/{app_name}/users/{user_id}/sessions/{session_id}/artifacts/{artifact_name}/versions  |  List Artifact Versions",
+    "POST /run  |  Run Agent",
+    "POST /run_sse  |  Run Agent Sse",
+    "GET /apps/{app_name}/users/{user_id}/sessions/{session_id}/events/{event_id}/graph  |  Get Event Graph",
+    "POST /builder/save  |  Builder Build",
+    "GET /builder/app/{app_name}  |  Get Agent Builder"
+  ],
+  "session_and_run_operations": {
+    "GET /list-apps": {
+      "summary": "List Apps",
+      "path_or_query_params": [],
+      "request_body": null,
+      "responses_declared": {
+        "200": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array",
+          "title": "Response List Apps List Apps Get"
+        }
+      }
+    },
+    "GET /apps/{app_name}/users/{user_id}/sessions": {
+      "summary": "List Sessions",
+      "path_or_query_params": [
+        [
+          "app_name",
+          "path",
+          true
+        ],
+        [
+          "user_id",
+          "path",
+          true
+        ]
+      ],
+      "request_body": null,
+      "responses_declared": {
+        "200": {
+          "type": "array",
+          "items": {
+            "$ref": "#/components/schemas/Session"
+          },
+          "title": "Response List Sessions Apps  App Name  Users  User Id  Sessions Get"
+        },
+        "422": {
+          "$ref": "#/components/schemas/HTTPValidationError"
+        }
+      }
+    },
+    "POST /apps/{app_name}/users/{user_id}/sessions": {
+      "summary": "Create Session",
+      "path_or_query_params": [
+        [
+          "app_name",
+          "path",
+          true
+        ],
+        [
+          "user_id",
+          "path",
+          true
+        ]
+      ],
+      "request_body": {
+        "application/json": {
+          "$ref": "#/components/schemas/Body_create_session_apps__app_name__users__user_id__sessions_post"
+        }
+      },
+      "responses_declared": {
+        "200": {
+          "$ref": "#/components/schemas/Session"
+        },
+        "422": {
+          "$ref": "#/components/schemas/HTTPValidationError"
+        }
+      }
+    },
+    "GET /apps/{app_name}/users/{user_id}/sessions/{session_id}": {
+      "summary": "Get Session",
+      "path_or_query_params": [
+        [
+          "app_name",
+          "path",
+          true
+        ],
+        [
+          "user_id",
+          "path",
+          true
+        ],
+        [
+          "session_id",
+          "path",
+          true
+        ]
+      ],
+      "request_body": null,
+      "responses_declared": {
+        "200": {
+          "$ref": "#/components/schemas/Session"
+        },
+        "422": {
+          "$ref": "#/components/schemas/HTTPValidationError"
+        }
+      }
+    },
+    "POST /apps/{app_name}/users/{user_id}/sessions/{session_id}": {
+      "summary": "Create Session With Id",
+      "path_or_query_params": [
+        [
+          "app_name",
+          "path",
+          true
+        ],
+        [
+          "user_id",
+          "path",
+          true
+        ],
+        [
+          "session_id",
+          "path",
+          true
+        ]
+      ],
+      "request_body": {
+        "application/json": {
+          "anyOf": [
+            {
+              "type": "object",
+              "additionalProperties": true
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "State"
+        }
+      },
+      "responses_declared": {
+        "200": {
+          "$ref": "#/components/schemas/Session"
+        },
+        "422": {
+          "$ref": "#/components/schemas/HTTPValidationError"
+        }
+      }
+    },
+    "DELETE /apps/{app_name}/users/{user_id}/sessions/{session_id}": {
+      "summary": "Delete Session",
+      "path_or_query_params": [
+        [
+          "app_name",
+          "path",
+          true
+        ],
+        [
+          "user_id",
+          "path",
+          true
+        ],
+        [
+          "session_id",
+          "path",
+          true
+        ]
+      ],
+      "request_body": null,
+      "responses_declared": {
+        "200": {
+          "type": "null",
+          "title": "Response Delete Session Apps  App Name  Users  User Id  Sessions  Session Id  Delete"
+        },
+        "422": {
+          "$ref": "#/components/schemas/HTTPValidationError"
+        }
+      }
+    },
+    "POST /run": {
+      "summary": "Run Agent",
+      "path_or_query_params": [],
+      "request_body": {
+        "application/json": {
+          "$ref": "#/components/schemas/RunAgentRequest"
+        }
+      },
+      "responses_declared": {
+        "200": {
+          "items": {
+            "$ref": "#/components/schemas/Event-Output"
+          },
+          "type": "array",
+          "title": "Response Run Agent Run Post"
+        },
+        "422": {
+          "$ref": "#/components/schemas/HTTPValidationError"
+        }
+      }
+    },
+    "POST /run_sse": {
+      "summary": "Run Agent Sse",
+      "path_or_query_params": [],
+      "request_body": {
+        "application/json": {
+          "$ref": "#/components/schemas/RunAgentRequest"
+        }
+      },
+      "responses_declared": {
+        "200": {},
+        "422": {
+          "$ref": "#/components/schemas/HTTPValidationError"
+        }
+      }
+    }
+  },
+  "advertised_absent": {
+    "PATCH session (state update)": true,
+    "RunAgentRequest.invocationId (request-level resume)": true,
+    "/list-apps detailed query param": true,
+    "404 declared on any session operation": true
+  },
+  "schemas": {
+    "Session": {
+      "properties": {
+        "id": {
+          "type": "string",
+          "title": "Id"
+        },
+        "appName": {
+          "type": "string",
+          "title": "Appname"
+        },
+        "userId": {
+          "type": "string",
+          "title": "Userid"
+        },
+        "state": {
+          "additionalProperties": true,
+          "type": "object",
+          "title": "State"
+        },
+        "events": {
+          "items": {
+            "$ref": "#/components/schemas/Event-Output"
+          },
+          "type": "array",
+          "title": "Events"
+        },
+        "lastUpdateTime": {
+          "type": "number",
+          "title": "Lastupdatetime",
+          "default": 0.0
+        }
+      },
+      "additionalProperties": false,
+      "type": "object",
+      "required": [
+        "id",
+        "appName",
+        "userId"
+      ],
+      "title": "Session",
+      "description": "Represents a series of interactions between a user and agents.\n\nAttributes:\n  id: The unique identifier of the session.\n  app_name: The name of the app.\n  user_id: The id of the user.\n  state: The state of the session.\n  events: The events of the session, e.g. user input, model response, function\n    call/response, etc.\n  last_update_time: The last update time of the session."
+    },
+    "Body_create_session (POST .../sessions)": {
+      "properties": {
+        "state": {
+          "anyOf": [
+            {
+              "additionalProperties": true,
+              "type": "object"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "State"
+        },
+        "events": {
+          "anyOf": [
+            {
+              "items": {
+                "$ref": "#/components/schemas/Event-Input"
+              },
+              "type": "array"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Events"
+        }
+      },
+      "type": "object",
+      "title": "Body_create_session_apps__app_name__users__user_id__sessions_post"
+    },
+    "RunAgentRequest": {
+      "properties": {
+        "appName": {
+          "type": "string",
+          "title": "Appname"
+        },
+        "userId": {
+          "type": "string",
+          "title": "Userid"
+        },
+        "sessionId": {
+          "type": "string",
+          "title": "Sessionid"
+        },
+        "newMessage": {
+          "$ref": "#/components/schemas/Content-Input"
+        },
+        "streaming": {
+          "type": "boolean",
+          "title": "Streaming",
+          "default": false
+        },
+        "stateDelta": {
+          "anyOf": [
+            {
+              "additionalProperties": true,
+              "type": "object"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Statedelta"
+        }
+      },
+      "type": "object",
+      "required": [
+        "appName",
+        "userId",
+        "sessionId",
+        "newMessage"
+      ],
+      "title": "RunAgentRequest"
+    },
+    "Event-Output.fields": [
+      "content",
+      "groundingMetadata",
+      "partial",
+      "turnComplete",
+      "finishReason",
+      "errorCode",
+      "errorMessage",
+      "interrupted",
+      "customMetadata",
+      "usageMetadata",
+      "liveSessionResumptionUpdate",
+      "inputTranscription",
+      "outputTranscription",
+      "invocationId",
+      "author",
+      "actions",
+      "longRunningToolIds",
+      "branch",
+      "id",
+      "timestamp"
+    ],
+    "EventActions-Output.fields": [
+      "skipSummarization",
+      "stateDelta",
+      "artifactDelta",
+      "transferToAgent",
+      "escalate",
+      "requestedAuthConfigs"
+    ]
+  },
+  "secret_scan_note": "Raw schema contains only upstream docstring placeholders: a PEM private-key header followed by '...', an elided service-account email ('...@....iam.gserviceaccount.com'), example.com/acme.com and Google documentation URLs. No project credential, key, token or Supabase URL."
+}

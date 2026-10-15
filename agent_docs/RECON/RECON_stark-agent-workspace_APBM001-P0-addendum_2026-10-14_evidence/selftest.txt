@@ -1,0 +1,34 @@
+# Offline self-test of the owner-run kit — run 2026-10-14T09:08:14+0600; synthetic fixtures only
+# No real environment, cloud or database was touched. Fixtures (scratchpad, not packaged) were a fake .env,
+# fake Cloud Run service/revision/IAM JSON and a fake bundle repo, seeded with marker strings (fake keys, passwords,
+# an API key, a personal email, and a .env file inside the repo) that must never appear in any output.
+# The SQL could not be executed (no PostgreSQL available locally): static read-only checks plus manual review only.
+# Script SHA-256 at test time:
+#   d9e6495976d075a4725320ee50e2654279bc281a2ca8e34cd88b036acb2e5acf  p0_1_frontend_target_identity.py
+#   4bc8b3aeed390b0f4ac7883100a9c0008f0445cea6e1b13426d3608fcb2fd75a  p0_2_supabase_chat_sessions_readonly.sql
+#   b05e29429d7981a44a74635b5a5ac3fab064977e31c741297745cce062631ae0  p0_3_adk_cloud_run_metadata.sh
+#   d1334cc50ec3e8f51f507f5e2bde70f75fb7a77646f5a1eeae9cf919b68d2ef6  p0_4_adk_bundle_source_scan.sh
+
+PASS  P0-1: no fake secret/credential/personal marker printed
+PASS  P0-3: no fake secret/credential/personal marker printed
+PASS  P0-4: no fake secret/credential/personal marker printed
+PASS  P0-1: supabase ref derived
+PASS  P0-1: V1 classified cloud-run service/region/project
+PASS  P0-1: V2 loopback + credentials flagged without value
+PASS  P0-1: chat_mode live
+PASS  P0-3: ingress reported
+PASS  P0-3: serving revision described
+PASS  P0-3: session flag detected as supabase-direct + ref
+PASS  P0-3: DATABASE_URL reduced to pooler class + ref
+PASS  P0-3: non-URI literal value not printed
+PASS  P0-3: secret shown as reference name only
+PASS  P0-3: args masked (URI + api_key)
+PASS  P0-3: public invoker detected; user email redacted
+PASS  P0-4: masked session lines + adk version found
+PASS  P0-4: .env file inside the scanned repo not read
+PASS  P0-2: balanced parentheses
+PASS  P0-2: exactly one statement
+PASS  P0-2: no DML/DDL/DCL/utility keywords outside strings
+PASS  P0-2: never reads public.chat_sessions rows (no FROM/JOIN of it)
+PASS  P0-2: only catalog/info-schema relations in FROM/JOIN
+SUMMARY: ALL PASS (22 checks)

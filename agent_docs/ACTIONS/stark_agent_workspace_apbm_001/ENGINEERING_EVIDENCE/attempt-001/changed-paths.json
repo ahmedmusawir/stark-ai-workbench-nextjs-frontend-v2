@@ -1,0 +1,1646 @@
+{
+ "repo_root": "/home/moose/nextjs/10XLAB/stark-ai-workbench-nextjs-frontend-v2",
+ "branch": "frontend-apbm-0001",
+ "head": "f0fbf2282737ea3a63fc78d553cd31fc570821d5",
+ "baseline": "f0fbf2282737ea3a63fc78d553cd31fc570821d5",
+ "head_equals_baseline": true,
+ "note": "Working-tree candidate before Tony's commit; hashes are of bytes at packaging time. Excludes this file itself and the review ZIP/receipt written afterwards. QA pins the committed SHA.",
+ "counts_by_role": {
+  "root-log/doc": 3,
+  "test": 20,
+  "product": 16,
+  "module-doc": 79,
+  "engineering-evidence": 61,
+  "pre-existing-recon-doc (before pass 2)": 54
+ },
+ "paths": [
+  {
+   "path": "CHANGELOG.md",
+   "git": "M",
+   "role": "root-log/doc",
+   "note": "root session/RECOVERY/CHANGELOG logs are updated after packaging (they cite the receipt); not hashed here"
+  },
+  {
+   "path": "RECOVERY.md",
+   "git": "M",
+   "role": "root-log/doc",
+   "note": "root session/RECOVERY/CHANGELOG logs are updated after packaging (they cite the receipt); not hashed here"
+  },
+  {
+   "path": "src/__tests__/api/adk-lib.test.ts",
+   "git": "M",
+   "role": "test",
+   "bytes": 11904,
+   "sha256": "a14548500d35bd1a4db1568fe8f3a2109965ffec48fffd3fccd77ad21f1eff28"
+  },
+  {
+   "path": "src/__tests__/api/agent-history.test.ts",
+   "git": "M",
+   "role": "test",
+   "bytes": 4894,
+   "sha256": "242ca8e344078ed0d8b50c8895db944937d3f8e8eb062d1a1e3adc5dc3a85688"
+  },
+  {
+   "path": "src/__tests__/api/agent-run.test.ts",
+   "git": "M",
+   "role": "test",
+   "bytes": 4824,
+   "sha256": "54cc82961560aa7fff77712f38694b1ef9f9aa5001fabda0109932a9a7752b11"
+  },
+  {
+   "path": "src/__tests__/api/fixtures/adk-events.ts",
+   "git": "M",
+   "role": "test",
+   "bytes": 5582,
+   "sha256": "4a91b327f164efda1a54990ce30e2a01dd1e278f106c9a87d73b045b7517e256"
+  },
+  {
+   "path": "src/__tests__/api/instructions-route.test.ts",
+   "git": "M",
+   "role": "test",
+   "bytes": 7337,
+   "sha256": "3f6cb888097216fcda7bfcb0cfe82448be5563749d6587d7ddc651275c081b59"
+  },
+  {
+   "path": "src/__tests__/chat/ChatPageContent.hydration.test.tsx",
+   "git": "M",
+   "role": "test",
+   "bytes": 3330,
+   "sha256": "d1ba852e0fd7dc0c7362b6233912790803232246a3aa7dcfca1b5ebd6243df51"
+  },
+  {
+   "path": "src/__tests__/services/chatService.live.test.ts",
+   "git": "M",
+   "role": "test",
+   "bytes": 12330,
+   "sha256": "b4d2dc32355ebb6ff2afb442b0f07303e6dbf54c154b7de5e811b93c2f02283f"
+  },
+  {
+   "path": "src/__tests__/services/services.contract.test.ts",
+   "git": "M",
+   "role": "test",
+   "bytes": 2918,
+   "sha256": "383683370947c5b3ff737913c50a4e98d033cf69d521e324f605257ec2f71b18"
+  },
+  {
+   "path": "src/__tests__/workspace/navigation.test.ts",
+   "git": "M",
+   "role": "test",
+   "bytes": 1989,
+   "sha256": "450d1f427ca10dfa3cd95ddb6c3b9977aed826452928ef27f9fb75fd0f275dad"
+  },
+  {
+   "path": "src/__tests__/workspace/productionAdapter.test.ts",
+   "git": "M",
+   "role": "test",
+   "bytes": 4657,
+   "sha256": "ed038340af7bbd8d91bc373f02f6ca02a5209ad30ea433da6299994b0f2cc1d6"
+  },
+  {
+   "path": "src/__tests__/workspace/signout.test.tsx",
+   "git": "M",
+   "role": "test",
+   "bytes": 7689,
+   "sha256": "412109d2619013ec90aa16d3d985d2ca5db4fd1e285c983f8a7ca67359967788"
+  },
+  {
+   "path": "src/app/(cyberize)/chat/ChatPageContent.tsx",
+   "git": "M",
+   "role": "product",
+   "bytes": 11213,
+   "sha256": "042f5eb66af0024e943bdfc455a69b9a917b5ac8128935b1ba27a44ae04ebfee"
+  },
+  {
+   "path": "src/app/api/agent/_lib/adk.ts",
+   "git": "M",
+   "role": "product",
+   "bytes": 10878,
+   "sha256": "8983aebef68af498ac3c1a3c6d0015e9f4a14752f9b0d0ec069c2976cc0764ab"
+  },
+  {
+   "path": "src/app/api/agent/history/route.ts",
+   "git": "M",
+   "role": "product",
+   "bytes": 1649,
+   "sha256": "dd42d0bdb3a1efcdea1fe4e1f24cacfa9569e3837d13706c3aec39ca8a23ccd6"
+  },
+  {
+   "path": "src/app/api/agent/instructions/route.ts",
+   "git": "M",
+   "role": "product",
+   "bytes": 3929,
+   "sha256": "492c03856c60d287a2031dea40040af90a1c6c1a55cfa15a9100bd9f518f8aeb"
+  },
+  {
+   "path": "src/app/api/agent/run/route.ts",
+   "git": "M",
+   "role": "product",
+   "bytes": 1863,
+   "sha256": "09476c74cf919c8353692c77f8776e0151441d3428db52c440cb11a63477e420"
+  },
+  {
+   "path": "src/components/workspace/Workspace.tsx",
+   "git": "M",
+   "role": "product",
+   "bytes": 28672,
+   "sha256": "c39298ecf63c74e36c630e8f0bba1795ae0beca2caca5fe52662b88bfae80d86"
+  },
+  {
+   "path": "src/components/workspace/WorkspaceEntry.tsx",
+   "git": "M",
+   "role": "product",
+   "bytes": 3541,
+   "sha256": "70dd140a8bb0cc5f021be025ecdb03357eaf9c0d89d5eeb64707232b8210d5e9"
+  },
+  {
+   "path": "src/components/workspace/navigation.ts",
+   "git": "M",
+   "role": "product",
+   "bytes": 1974,
+   "sha256": "5aba9329b221ed1b29563c2639731ad4b7e0a05cd0cefec86760dc823c38774f"
+  },
+  {
+   "path": "src/components/workspace/productionAdapter.ts",
+   "git": "M",
+   "role": "product",
+   "bytes": 2640,
+   "sha256": "b63643e3e90985d0b1559ebda920dfe17b2f9906d345242d4327346b4ad35332"
+  },
+  {
+   "path": "src/components/workspace/types.ts",
+   "git": "M",
+   "role": "product",
+   "bytes": 2122,
+   "sha256": "bf1afaf3b57cc673804165a2798bc8054df60d2c7d63738b08a1afb3929ef069"
+  },
+  {
+   "path": "src/services/chatService.ts",
+   "git": "M",
+   "role": "product",
+   "bytes": 14986,
+   "sha256": "f71a9991043f3a747bec6d104603e6ad22fe3f5d7849f6d5f8609f8160cb201b"
+  },
+  {
+   "path": "src/types/index.ts",
+   "git": "M",
+   "role": "product",
+   "bytes": 9283,
+   "sha256": "a4442d861a1606ae3160092dd6ea8aa5eb073bf676eec70c765eb99483a31771"
+  },
+  {
+   "path": "tests/workspace/fixture-entry.tsx",
+   "git": "M",
+   "role": "test",
+   "bytes": 5750,
+   "sha256": "9187d7f600440d5414fb6361c39556d9e080e2444c544b3b9f9e223aba6330da"
+  },
+  {
+   "path": "tests/workspace/workspace.spec.ts",
+   "git": "M",
+   "role": "test",
+   "bytes": 19022,
+   "sha256": "8239a91046b290ef69356029e2689a33a91971be8bb8f2a0629e0571a01160e2"
+  },
+  {
+   "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_001/ACCEPTANCE_SPEC.md",
+   "git": "??",
+   "role": "module-doc",
+   "bytes": 8610,
+   "sha256": "000490c59efd2a63b24c90f10e60b95cfb87545750420121595f25983d7ec5bf"
+  },
+  {
+   "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_001/AGENTS.md",
+   "git": "??",
+   "role": "module-doc",
+   "bytes": 375,
+   "sha256": "f31834cee398e688101c02862b120b7ed6ef232a52c7a6c0a659b41561fcbb5f"
+  },
+  {
+   "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_001/APP_BRIEF.md",
+   "git": "??",
+   "role": "module-doc",
+   "bytes": 2334,
+   "sha256": "00ce38347dc2d615b7f870512d10ba9ddfd5c4282ab5ee97e7bcb9c449a02ffd"
+  },
+  {
+   "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_001/BUILD_PLAN.md",
+   "git": "??",
+   "role": "module-doc",
+   "bytes": 2824,
+   "sha256": "4fb7a86e4094943ee816b7fe6221158cb4f07cdee7b842687e48fe77f25fb8c2"
+  },
+  {
+   "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_001/CLAUDE.md",
+   "git": "??",
+   "role": "module-doc",
+   "bytes": 375,
+   "sha256": "f31834cee398e688101c02862b120b7ed6ef232a52c7a6c0a659b41561fcbb5f"
+  },
+  {
+   "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_001/CLOSEOUT_RULES.md",
+   "git": "??",
+   "role": "module-doc",
+   "bytes": 1312,
+   "sha256": "4f73854f7c23e92ba6f663150c268d1416d1a5fc41abdad469ccf0fb1f31bd23"
+  },
+  {
+   "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_001/DATA_CONTRACT.md",
+   "git": "??",
+   "role": "module-doc",
+   "bytes": 9169,
+   "sha256": "90c70687e790c9005a0ced629d953dca774c09559e00e3a29b137ad5c807abcb"
+  },
+  {
+   "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_001/ENGINEERING_ENTRY.md",
+   "git": "??",
+   "role": "module-doc",
+   "bytes": 1767,
+   "sha256": "2b7e9167912ca76400c8ba7b380a1d2e73a78e6377ef9441538bb27d846d7181"
+  },
+  {
+   "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_001/ENGINEERING_EVIDENCE/README.md",
+   "git": "??",
+   "role": "engineering-evidence",
+   "bytes": 834,
+   "sha256": "ac050bdec49f013360152594275d02569f0b8f8e26d67343432b64ceb1bde233"
+  },
+  {
+   "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_001/ENGINEERING_EVIDENCE/attempt-001/browser/artifacts/.last-run.json",
+   "git": "??",
+   "role": "engineering-evidence",
+   "bytes": 45,
+   "sha256": "91d1c43004802cd49950d78eb11c8fa7d05da8ffffe219a8b13b2f561bc00903"
+  },
+  {
+   "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_001/ENGINEERING_EVIDENCE/attempt-001/browser/playwright-results.json",
+   "git": "??",
+   "role": "engineering-evidence",
+   "bytes": 54580,
+   "sha256": "c88b66eb21a984ee7fdedd90afd64ad0f93d74400e20fbac0f5f0c6f9cb7960a"
+  },
+  {
+   "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_001/ENGINEERING_EVIDENCE/attempt-001/browser/screenshots/ac005-agent-unavailable.png",
+   "git": "??",
+   "role": "engineering-evidence",
+   "bytes": 97354,
+   "sha256": "e166aa739412d36c057a6aebf6d683096575b98be65228ad64fe5d90b5a4c5a7"
+  },
+  {
+   "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_001/ENGINEERING_EVIDENCE/attempt-001/browser/screenshots/ac013-desktop-conversation-sidebar.png",
+   "git": "??",
+   "role": "engineering-evidence",
+   "bytes": 56484,
+   "sha256": "bd1c4e9d090c66f8e4f6634dc949368b9efed0f720ac779b7fdccdba37cf0856"
+  },
+  {
+   "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_001/ENGINEERING_EVIDENCE/attempt-001/browser/screenshots/ac013-mobile-drawer-during-draft.png",
+   "git": "??",
+   "role": "engineering-evidence",
+   "bytes": 33560,
+   "sha256": "0a55ca58e7c12d5d7f43ff71d0e7344750088dbd1941e0e1e1b1a209d55c2c95"
+  },
+  {
+   "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_001/ENGINEERING_EVIDENCE/attempt-001/browser/screenshots/ac018-uncertain-after-reload.png",
+   "git": "??",
+   "role": "engineering-evidence",
+   "bytes": 132333,
+   "sha256": "c7f08462f2259aac9ee90ad9ad397ef96f696f03488b453d742778f0d78e50fa"
+  },
+  {
+   "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_001/ENGINEERING_EVIDENCE/attempt-001/browser/screenshots/conversation-dark-1023.png",
+   "git": "??",
+   "role": "engineering-evidence",
+   "bytes": 88760,
+   "sha256": "148c4c3e4464f20586e3dd6b3a6a702dd4c1b0c403eb86e2a494ab0c7d9fc44d"
+  },
+  {
+   "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_001/ENGINEERING_EVIDENCE/attempt-001/browser/screenshots/conversation-dark-1024.png",
+   "git": "??",
+   "role": "engineering-evidence",
+   "bytes": 120135,
+   "sha256": "6f38fc77a47a313d0535370b48411503db8dec6d92035897e025b37853e2c047"
+  },
+  {
+   "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_001/ENGINEERING_EVIDENCE/attempt-001/browser/screenshots/conversation-dark-1280.png",
+   "git": "??",
+   "role": "engineering-evidence",
+   "bytes": 122410,
+   "sha256": "9c35118ac8810af6c3bce1851b10826eea27a59bc43f2bd420b56c9e95e8a4a8"
+  },
+  {
+   "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_001/ENGINEERING_EVIDENCE/attempt-001/browser/screenshots/conversation-dark-1440.png",
+   "git": "??",
+   "role": "engineering-evidence",
+   "bytes": 123676,
+   "sha256": "02422f78d650581c8c59334c571969798a556b799ce0dfe81e722bd3ed6ee06a"
+  },
+  {
+   "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_001/ENGINEERING_EVIDENCE/attempt-001/browser/screenshots/conversation-dark-375.png",
+   "git": "??",
+   "role": "engineering-evidence",
+   "bytes": 58824,
+   "sha256": "6a0278b2a71cb2371124619ecc62b252bb53f6d33b3addca966139d0b0c18850"
+  },
+  {
+   "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_001/ENGINEERING_EVIDENCE/attempt-001/browser/screenshots/conversation-dark-390.png",
+   "git": "??",
+   "role": "engineering-evidence",
+   "bytes": 58547,
+   "sha256": "a5a4e7c4246e61943e32f890e3108efc1416ff89cfd4af97c487a88a5adfcecf"
+  },
+  {
+   "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_001/ENGINEERING_EVIDENCE/attempt-001/browser/screenshots/conversation-dark-768.png",
+   "git": "??",
+   "role": "engineering-evidence",
+   "bytes": 87159,
+   "sha256": "19a95c316155b6ee7ecd2c1325f6e657d61fb62a44481916f8bc30c107bb06c6"
+  },
+  {
+   "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_001/ENGINEERING_EVIDENCE/attempt-001/browser/screenshots/conversation-light-1023.png",
+   "git": "??",
+   "role": "engineering-evidence",
+   "bytes": 83603,
+   "sha256": "ba985c3a808886271b5090a128708857ef7adadda682b4b1ad68bc696bb646eb"
+  },
+  {
+   "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_001/ENGINEERING_EVIDENCE/attempt-001/browser/screenshots/conversation-light-1024.png",
+   "git": "??",
+   "role": "engineering-evidence",
+   "bytes": 114322,
+   "sha256": "a50837345de18d578f55f99e45d77511d9dc9aed65a0df959834240b6308f5d0"
+  },
+  {
+   "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_001/ENGINEERING_EVIDENCE/attempt-001/browser/screenshots/conversation-light-1280.png",
+   "git": "??",
+   "role": "engineering-evidence",
+   "bytes": 116660,
+   "sha256": "79972c13c9e9fe51861070155bfd41c59c05c75d2bea95920db3b534b70b1b40"
+  },
+  {
+   "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_001/ENGINEERING_EVIDENCE/attempt-001/browser/screenshots/conversation-light-1440.png",
+   "git": "??",
+   "role": "engineering-evidence",
+   "bytes": 118089,
+   "sha256": "d5fb3ee605a42b271cbc9e2f93d1c648d84662a96d87787d09eda3a859da26dd"
+  },
+  {
+   "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_001/ENGINEERING_EVIDENCE/attempt-001/browser/screenshots/conversation-light-375.png",
+   "git": "??",
+   "role": "engineering-evidence",
+   "bytes": 55309,
+   "sha256": "eb3b83118b33fcd2d1381fffc16b2c9392850cedfc24ecbfca24ac43ca35f02f"
+  },
+  {
+   "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_001/ENGINEERING_EVIDENCE/attempt-001/browser/screenshots/conversation-light-390.png",
+   "git": "??",
+   "role": "engineering-evidence",
+   "bytes": 55092,
+   "sha256": "0657b7ba7c31fd69602b9fd2088fa7273e70749b5dc28eb724d23b75f9568fac"
+  },
+  {
+   "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_001/ENGINEERING_EVIDENCE/attempt-001/browser/screenshots/conversation-light-768.png",
+   "git": "??",
+   "role": "engineering-evidence",
+   "bytes": 82338,
+   "sha256": "16d076ef7951a46e8c58d25a2de03e9fac566ee88bdc360a257aeed03a718274"
+  },
+  {
+   "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_001/ENGINEERING_EVIDENCE/attempt-001/browser/screenshots/directory-dark-1023.png",
+   "git": "??",
+   "role": "engineering-evidence",
+   "bytes": 53262,
+   "sha256": "db5f2c44c7adc1ee389bb5b65bc16926525c63ff9a015515abce96cd7626b01a"
+  },
+  {
+   "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_001/ENGINEERING_EVIDENCE/attempt-001/browser/screenshots/directory-dark-1024.png",
+   "git": "??",
+   "role": "engineering-evidence",
+   "bytes": 66094,
+   "sha256": "0db124634e4bcd70391b09c32de830e06674e576a7e9f07d3b3966bc982c55c7"
+  },
+  {
+   "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_001/ENGINEERING_EVIDENCE/attempt-001/browser/screenshots/directory-dark-1280.png",
+   "git": "??",
+   "role": "engineering-evidence",
+   "bytes": 67416,
+   "sha256": "90fcd792ca6e5e5bbede617b327529655dda4e1558920015fa554dfe431bdef5"
+  },
+  {
+   "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_001/ENGINEERING_EVIDENCE/attempt-001/browser/screenshots/directory-dark-1440.png",
+   "git": "??",
+   "role": "engineering-evidence",
+   "bytes": 68157,
+   "sha256": "c121e4f9f211163f0b914e49b9c60582c1444e5bcd20d55b81fba5c4e3b8ada0"
+  },
+  {
+   "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_001/ENGINEERING_EVIDENCE/attempt-001/browser/screenshots/directory-dark-375.png",
+   "git": "??",
+   "role": "engineering-evidence",
+   "bytes": 55246,
+   "sha256": "bc09bc1efa77c4a149b4e1f46a08a7ed95668890f8128afbc722148c5cecdfbd"
+  },
+  {
+   "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_001/ENGINEERING_EVIDENCE/attempt-001/browser/screenshots/directory-dark-390.png",
+   "git": "??",
+   "role": "engineering-evidence",
+   "bytes": 45180,
+   "sha256": "29d737005ae2f8dd6e45140f7d5bec9997e99abd6856e3b97a25163a6ab35db4"
+  },
+  {
+   "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_001/ENGINEERING_EVIDENCE/attempt-001/browser/screenshots/directory-dark-768.png",
+   "git": "??",
+   "role": "engineering-evidence",
+   "bytes": 52356,
+   "sha256": "5947a515c9de4e90168279b444c2d6cdf231555648cb0b3b5e1b19d301b4708a"
+  },
+  {
+   "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_001/ENGINEERING_EVIDENCE/attempt-001/browser/screenshots/directory-light-1023.png",
+   "git": "??",
+   "role": "engineering-evidence",
+   "bytes": 52701,
+   "sha256": "d646f7a70f8fd206fb4c705463716e24a3407872667ddb6471ced7214decd977"
+  },
+  {
+   "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_001/ENGINEERING_EVIDENCE/attempt-001/browser/screenshots/directory-light-1024.png",
+   "git": "??",
+   "role": "engineering-evidence",
+   "bytes": 65548,
+   "sha256": "ec32532ed6a6582edcce3ab2c49fb99fe77fa814ea4357b56f8dfde3aa1faf91"
+  },
+  {
+   "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_001/ENGINEERING_EVIDENCE/attempt-001/browser/screenshots/directory-light-1280.png",
+   "git": "??",
+   "role": "engineering-evidence",
+   "bytes": 66925,
+   "sha256": "ed23c8627f59a6bce8ea45c3e3314b2b4dcce18bad1c6e7d2463e1110f0d102d"
+  },
+  {
+   "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_001/ENGINEERING_EVIDENCE/attempt-001/browser/screenshots/directory-light-1440.png",
+   "git": "??",
+   "role": "engineering-evidence",
+   "bytes": 67741,
+   "sha256": "80663aed962f594a62909156b649187afa7efdea65ea483b8c62dcb4325f0884"
+  },
+  {
+   "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_001/ENGINEERING_EVIDENCE/attempt-001/browser/screenshots/directory-light-375.png",
+   "git": "??",
+   "role": "engineering-evidence",
+   "bytes": 54570,
+   "sha256": "00b68f1ec93a5ed49cbf2829436900d7ce5f06308b7be9194d69e212bfe01463"
+  },
+  {
+   "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_001/ENGINEERING_EVIDENCE/attempt-001/browser/screenshots/directory-light-390.png",
+   "git": "??",
+   "role": "engineering-evidence",
+   "bytes": 44705,
+   "sha256": "34b0623a6e4818a5ebf07a4179aaffc75e5a11d2c510eeaae9ca19f3306ddf75"
+  },
+  {
+   "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_001/ENGINEERING_EVIDENCE/attempt-001/browser/screenshots/directory-light-768.png",
+   "git": "??",
+   "role": "engineering-evidence",
+   "bytes": 51952,
+   "sha256": "7bbc61253b81b1c3fec97b5948f994b2f038699cbe5c70b36a9255ba4a977075"
+  },
+  {
+   "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_001/ENGINEERING_EVIDENCE/attempt-001/browser/screenshots/draft-dark-1023.png",
+   "git": "??",
+   "role": "engineering-evidence",
+   "bytes": 30423,
+   "sha256": "1433e01d18dcfb463fab624961ca5ef0f78e7cf80915418852e553e0e587420e"
+  },
+  {
+   "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_001/ENGINEERING_EVIDENCE/attempt-001/browser/screenshots/draft-dark-1024.png",
+   "git": "??",
+   "role": "engineering-evidence",
+   "bytes": 53399,
+   "sha256": "3b39b1e2eed6fbf4cfaf010dcb80d447782f14cdd4e1e22525eb72ffcb14688f"
+  },
+  {
+   "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_001/ENGINEERING_EVIDENCE/attempt-001/browser/screenshots/draft-dark-1440.png",
+   "git": "??",
+   "role": "engineering-evidence",
+   "bytes": 55335,
+   "sha256": "2a4318b45dde7ac67e275677881fc3a4cbf8ec52b4da92120f6f9aae10c28049"
+  },
+  {
+   "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_001/ENGINEERING_EVIDENCE/attempt-001/browser/screenshots/draft-dark-390.png",
+   "git": "??",
+   "role": "engineering-evidence",
+   "bytes": 25784,
+   "sha256": "bad1600c100f974d2dc2e62bb8d74fa1278201d0139119f88f67b866a6dec33d"
+  },
+  {
+   "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_001/ENGINEERING_EVIDENCE/attempt-001/browser/screenshots/draft-dark-768.png",
+   "git": "??",
+   "role": "engineering-evidence",
+   "bytes": 29314,
+   "sha256": "d4985d03faacd46827486de76907c87e419f8d17efae2d1c96787b3082f4fff8"
+  },
+  {
+   "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_001/ENGINEERING_EVIDENCE/attempt-001/browser/screenshots/draft-light-1023.png",
+   "git": "??",
+   "role": "engineering-evidence",
+   "bytes": 29775,
+   "sha256": "6cd5175f18a88966e88164680b4858ae34b8fec622367f7c9c558f4d5aea4eaa"
+  },
+  {
+   "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_001/ENGINEERING_EVIDENCE/attempt-001/browser/screenshots/draft-light-1024.png",
+   "git": "??",
+   "role": "engineering-evidence",
+   "bytes": 52591,
+   "sha256": "a7f5e112a35d15f9b7525598f43a8c633d71e1eaba94d4beacad407a99ff5311"
+  },
+  {
+   "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_001/ENGINEERING_EVIDENCE/attempt-001/browser/screenshots/draft-light-1440.png",
+   "git": "??",
+   "role": "engineering-evidence",
+   "bytes": 54500,
+   "sha256": "bc684795e4f7f7384880315b1c0d9a2bc7618d20be114dfa765f0c72c05bae33"
+  },
+  {
+   "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_001/ENGINEERING_EVIDENCE/attempt-001/browser/screenshots/draft-light-390.png",
+   "git": "??",
+   "role": "engineering-evidence",
+   "bytes": 25444,
+   "sha256": "c77620416e7b2323a3077059b08a41e9183632a6a877e1ab0ee0bfdc40717bfd"
+  },
+  {
+   "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_001/ENGINEERING_EVIDENCE/attempt-001/browser/screenshots/draft-light-768.png",
+   "git": "??",
+   "role": "engineering-evidence",
+   "bytes": 28808,
+   "sha256": "25bd21bc33a1a461139cbb0dea3094dad67e43162f391fdaa70fc2aec1273097"
+  },
+  {
+   "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_001/ENGINEERING_EVIDENCE/attempt-001/browser/screenshots/workspace-dark-1280.png",
+   "git": "??",
+   "role": "engineering-evidence",
+   "bytes": 102151,
+   "sha256": "62722cda06644276c599c7a328db7cf5dffac9a115f2fb01eae3bddc1dcb5e7a"
+  },
+  {
+   "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_001/ENGINEERING_EVIDENCE/attempt-001/browser/screenshots/workspace-dark-375.png",
+   "git": "??",
+   "role": "engineering-evidence",
+   "bytes": 48080,
+   "sha256": "98946314e3bab447ece456bb5706090ade86d234a2bd4ab83d09a64cd2b4c0ab"
+  },
+  {
+   "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_001/ENGINEERING_EVIDENCE/attempt-001/browser/screenshots/workspace-dark-768.png",
+   "git": "??",
+   "role": "engineering-evidence",
+   "bytes": 54134,
+   "sha256": "d046fd5e477e4035cafb89e020d76e469709708b3bbf288824becccbcffe73bf"
+  },
+  {
+   "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_001/ENGINEERING_EVIDENCE/attempt-001/browser/screenshots/workspace-light-1280.png",
+   "git": "??",
+   "role": "engineering-evidence",
+   "bytes": 101018,
+   "sha256": "ce0c46621c5e8921a61a423ebd8bb325f500c3715131344db9e985bb2f9b804a"
+  },
+  {
+   "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_001/ENGINEERING_EVIDENCE/attempt-001/browser/screenshots/workspace-light-375.png",
+   "git": "??",
+   "role": "engineering-evidence",
+   "bytes": 47052,
+   "sha256": "b5581bda4cb48034b4d68fed71b1ef60b08d8f2bb658ecf73855aaefdefb45d0"
+  },
+  {
+   "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_001/ENGINEERING_EVIDENCE/attempt-001/browser/screenshots/workspace-light-768.png",
+   "git": "??",
+   "role": "engineering-evidence",
+   "bytes": 53140,
+   "sha256": "f88f18a11ffca9d28faa852d076a8255a20021fd3b403e56ea8460acf983500d"
+  },
+  {
+   "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_001/ENGINEERING_EVIDENCE/attempt-001/candidate.patch",
+   "git": "??",
+   "role": "engineering-evidence",
+   "bytes": 296564,
+   "sha256": "c315ca3ff2ad9404597e5ac39a38b2d3de8198fdf483d6d905e3cb857bbb2ea5"
+  },
+  {
+   "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_001/ENGINEERING_EVIDENCE/attempt-001/live/live-walk-ledger.json",
+   "git": "??",
+   "role": "engineering-evidence",
+   "bytes": 970,
+   "sha256": "3a4d4affc6d4caf44efb281d37cf7ac1326b6eb3a32bace11c1345f1438fb834"
+  },
+  {
+   "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_001/ENGINEERING_EVIDENCE/attempt-001/verification/00-baseline-jest-tsc-at-f0fbf22.txt",
+   "git": "??",
+   "role": "engineering-evidence",
+   "bytes": 4035,
+   "sha256": "e61e5e535916a0dc6439f177e4c75d068a4d6862ac06448275a42eac8c5cf259"
+  },
+  {
+   "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_001/ENGINEERING_EVIDENCE/attempt-001/verification/01-jest-full.txt",
+   "git": "??",
+   "role": "engineering-evidence",
+   "bytes": 12588,
+   "sha256": "fa7cfe6ad6b646f7276bda0fada35eca21967b4c3d820c769d6a389e835d49eb"
+  },
+  {
+   "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_001/ENGINEERING_EVIDENCE/attempt-001/verification/02-typecheck.txt",
+   "git": "??",
+   "role": "engineering-evidence",
+   "bytes": 0,
+   "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+   "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_001/ENGINEERING_EVIDENCE/attempt-001/verification/03-build.txt",
+   "git": "??",
+   "role": "engineering-evidence",
+   "bytes": 1579,
+   "sha256": "a8ee4ea57a2641986d58ac151d3b17d334522c618cd3f916ecb344e2e66d4c43"
+  },
+  {
+   "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_001/ENGINEERING_EVIDENCE/attempt-001/verification/04-playwright-fixture.txt",
+   "git": "??",
+   "role": "engineering-evidence",
+   "bytes": 5860,
+   "sha256": "afceaa7900568e6a6591cdc0876e91b86e7b2445d584e993eda76dc79a7aa88f"
+  },
+  {
+   "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_001/ENGINEERING_EVIDENCE/attempt-001/verification/05-runtime-negatives-next-start.txt",
+   "git": "??",
+   "role": "engineering-evidence",
+   "bytes": 1289,
+   "sha256": "84d73ec8ba01703309b3cf98253af4a46054459c4a739cd27780c713bf1462bb"
+  },
+  {
+   "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_001/ENGINEERING_EVIDENCE/attempt-001/verification/SUMMARY.txt",
+   "git": "??",
+   "role": "engineering-evidence",
+   "bytes": 347,
+   "sha256": "cf4041c379e85ec0da0f6bd865f33e8c46ed660c63a5be1c3dba22adb36fdbf2"
+  },
+  {
+   "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_001/ENGINEERING_EVIDENCE/tools/apbm001_live_walk.cjs",
+   "git": "??",
+   "role": "engineering-evidence",
+   "bytes": 16955,
+   "sha256": "0d951306044e6c8a9c96f7e79d2e987da903622f250de6ce04fb41e174a64a88"
+  },
+  {
+   "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_001/ENGINEERING_REPORT.md",
+   "git": "??",
+   "role": "module-doc",
+   "bytes": 22814,
+   "sha256": "ef14067cd4fca413d35afc82e64f9c265a99b952182b063d7bb11d41b5f16306"
+  },
+  {
+   "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_001/ENVIRONMENT_AND_EFFECTS.md",
+   "git": "??",
+   "role": "module-doc",
+   "bytes": 5272,
+   "sha256": "331a088ebfaff3c808eaebf71ede93f28a12e93863980a96b441d65cc7ee2668"
+  },
+  {
+   "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_001/EVIDENCE/DISCOVERY/FILE_INDEX.md",
+   "git": "??",
+   "role": "module-doc",
+   "bytes": 3517,
+   "sha256": "0adaddc8b2e53c2c17552300271c8574e48bf86f64ca279f4579998070837135"
+  },
+  {
+   "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_001/EVIDENCE/DISCOVERY/evidence/http-requests.json",
+   "git": "??",
+   "role": "module-doc",
+   "bytes": 1703,
+   "sha256": "1cf1f103b0bc59a59d8bebfbf9ac61390a117cb38d037ce0a6aa910da2c98263"
+  },
+  {
+   "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_001/EVIDENCE/DISCOVERY/evidence/list-apps.json",
+   "git": "??",
+   "role": "module-doc",
+   "bytes": 86,
+   "sha256": "0cf1db92bd30998286955b7f8a61115820e1189a6377af340dc60d747410660f"
+  },
+  {
+   "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_001/EVIDENCE/DISCOVERY/evidence/openapi-session-contracts.json",
+   "git": "??",
+   "role": "module-doc",
+   "bytes": 12380,
+   "sha256": "99bf35f7d7501330246e766cc2b225fcc4dcfbe39e02e743b5c7fa33f932e1a7"
+  },
+  {
+   "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_001/EVIDENCE/DISCOVERY/evidence/openapi.json",
+   "git": "??",
+   "role": "module-doc",
+   "bytes": 195000,
+   "sha256": "4db73a7f7a3174bdc4e321a57b25ea9f396b5105e395d0e26db0cb1d26977dae"
+  },
+  {
+   "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_001/EVIDENCE/DISCOVERY/evidence/records-anchors.txt",
+   "git": "??",
+   "role": "module-doc",
+   "bytes": 3422,
+   "sha256": "d42688b28e763d082cb2d7f32f0a7a682e80fbb26d0fb8228d76208f0bb5bdee"
+  },
+  {
+   "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_001/EVIDENCE/DISCOVERY/evidence/source-anchors.txt",
+   "git": "??",
+   "role": "module-doc",
+   "bytes": 10232,
+   "sha256": "4af1b975725a3fb90b4a383b02edfb2eab9839853e65869910b2aaa9aac86c3b"
+  },
+  {
+   "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_001/EVIDENCE/DISCOVERY/response_2026-10-14_123729_apbm001-adk-session-discovery.md",
+   "git": "??",
+   "role": "module-doc",
+   "bytes": 15502,
+   "sha256": "17540159651606189a06c9cddf3b2a4c5a0be8a7e31d1713a76369cf6e5fd5e3"
+  },
+  {
+   "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_001/EVIDENCE/LIVE/FILE_INDEX.md",
+   "git": "??",
+   "role": "module-doc",
+   "bytes": 6618,
+   "sha256": "375b646d9178e1c405d91fee5f88cc3eae4665f7f5e6baa3ab687017db1607aa"
+  },
+  {
+   "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_001/EVIDENCE/LIVE/evidence/analysis.json",
+   "git": "??",
+   "role": "module-doc",
+   "bytes": 7811,
+   "sha256": "895b540203cda10e7c12e27973afd697b8edefe6b83559880ab1ec01648a20c0"
+  },
+  {
+   "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_001/EVIDENCE/LIVE/evidence/console.txt",
+   "git": "??",
+   "role": "module-doc",
+   "bytes": 816,
+   "sha256": "2be264b1ea36b54d60b1be7167e5773f683bb539d4b8c5430d34dd5c8d137264"
+  },
+  {
+   "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_001/EVIDENCE/LIVE/evidence/raw/04-new-list-empty.json",
+   "git": "??",
+   "role": "module-doc",
+   "bytes": 2,
+   "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+  },
+  {
+   "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_001/EVIDENCE/LIVE/evidence/raw/05-create-a.json",
+   "git": "??",
+   "role": "module-doc",
+   "bytes": 211,
+   "sha256": "1adbfad09a4a03ec339725bd6d83d55f75d96bf507ac7812946dbf300af384c4"
+  },
+  {
+   "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_001/EVIDENCE/LIVE/evidence/raw/06-create-b.json",
+   "git": "??",
+   "role": "module-doc",
+   "bytes": 211,
+   "sha256": "d3daa9cbd68b26e172439ce8c7a614d8ee9fa9ff10b96c07a030d355782c2cc7"
+  },
+  {
+   "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_001/EVIDENCE/LIVE/evidence/raw/07-run-a-marker.json",
+   "git": "??",
+   "role": "module-doc",
+   "bytes": 564,
+   "sha256": "3b95172369f5897d5e730c188b19e8b42125a58d7bfb9dcf10a1d3a495ea01e6"
+  },
+  {
+   "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_001/EVIDENCE/LIVE/evidence/raw/08-run-b-marker.json",
+   "git": "??",
+   "role": "module-doc",
+   "bytes": 652,
+   "sha256": "1c3acd336e046499d9cd02272838710550db240e31750e1285fafeeeb3ca572b"
+  },
+  {
+   "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_001/EVIDENCE/LIVE/evidence/raw/09-list-after-markers.json",
+   "git": "??",
+   "role": "module-doc",
+   "bytes": 425,
+   "sha256": "484964cc4daf334260c2c3e09a6f1ae696448e7a05570785d1a012411e5fc6b1"
+  },
+  {
+   "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_001/EVIDENCE/LIVE/evidence/raw/10-get-a-after-marker.json",
+   "git": "??",
+   "role": "module-doc",
+   "bytes": 985,
+   "sha256": "8a5ae6249c20562f06c132f00194f4a628792f15097704ec406b61c8723a35e9"
+  },
+  {
+   "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_001/EVIDENCE/LIVE/evidence/raw/11-get-b-after-marker.json",
+   "git": "??",
+   "role": "module-doc",
+   "bytes": 1051,
+   "sha256": "5fe637f3d72939643230575753d905b2f2d9c80eb4f57e3282455ddd4472a907"
+  },
+  {
+   "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_001/EVIDENCE/LIVE/evidence/raw/12-run-a-continue.json",
+   "git": "??",
+   "role": "module-doc",
+   "bytes": 559,
+   "sha256": "04cf3fe567eca1c98ab4dd3354d5240c39b6f1b368a3d8078345355e76e66525"
+  },
+  {
+   "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_001/EVIDENCE/LIVE/evidence/raw/13-list-after-continue.json",
+   "git": "??",
+   "role": "module-doc",
+   "bytes": 425,
+   "sha256": "484964cc4daf334260c2c3e09a6f1ae696448e7a05570785d1a012411e5fc6b1"
+  },
+  {
+   "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_001/EVIDENCE/LIVE/evidence/raw/14-get-a-after-continue.json",
+   "git": "??",
+   "role": "module-doc",
+   "bytes": 1733,
+   "sha256": "f885722605300f48b1035da56bfb79da9cb3af5574fbd72b4914afeb7e864d0a"
+  },
+  {
+   "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_001/EVIDENCE/LIVE/evidence/raw/15-get-nonexistent.json",
+   "git": "??",
+   "role": "module-doc",
+   "bytes": 30,
+   "sha256": "f73c5f28972bdfde85349f9f011ace1fecbccc980719c4bbca03959f922e9834"
+  },
+  {
+   "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_001/EVIDENCE/LIVE/evidence/request-ledger.json",
+   "git": "??",
+   "role": "module-doc",
+   "bytes": 12571,
+   "sha256": "4d524ee8aa668147a38b377eda58ecf28960c3dba2904d3a6a2737fe4962944f"
+  },
+  {
+   "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_001/EVIDENCE/LIVE/evidence/responses-summary.json",
+   "git": "??",
+   "role": "module-doc",
+   "bytes": 25838,
+   "sha256": "f41e78c1f11c2ad725e542215464d509d26ae2697dd1ee195054c20a6cc6512c"
+  },
+  {
+   "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_001/EVIDENCE/LIVE/response_2026-10-14_130354_apbm001-adk-live-capability-test.md",
+   "git": "??",
+   "role": "module-doc",
+   "bytes": 9464,
+   "sha256": "be184e36906e2ff16d26bf165e53656555337b8525a352859ee17f60bf2afdc4"
+  },
+  {
+   "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_001/EVIDENCE/P0/APBM001_P0_ADDENDUM_2026-10-14_090926_BDT/FILE_INDEX.md",
+   "git": "??",
+   "role": "module-doc",
+   "bytes": 3715,
+   "sha256": "e64ce1fb6f95d176cea54603cfd64cbc581536895c7a7185c6e3edbc3e1f8a46"
+  },
+  {
+   "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_001/EVIDENCE/P0/APBM001_P0_ADDENDUM_2026-10-14_090926_BDT/RECON_stark-agent-workspace_APBM001-P0-addendum_2026-10-14.md",
+   "git": "??",
+   "role": "module-doc",
+   "bytes": 10109,
+   "sha256": "fc63e2ef58cbead77327098ef2d2fdf806b8e9661c408c4d1b7bb16e4a4700ee"
+  },
+  {
+   "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_001/EVIDENCE/P0/APBM001_P0_ADDENDUM_2026-10-14_090926_BDT/response_2026-10-14_090926_apbm001-p0-addendum.md",
+   "git": "??",
+   "role": "module-doc",
+   "bytes": 2845,
+   "sha256": "2611c772a9f0c06842ab5b2f4e4cd1c4dfc262ce582f88acdd665991b9de809c"
+  },
+  {
+   "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_001/EVIDENCE/PREP/APBM001_PREP_RECON_2026-10-12_175032_BDT/FILE_INDEX.md",
+   "git": "??",
+   "role": "module-doc",
+   "bytes": 2403,
+   "sha256": "6a8cc4028e10247c4b46572a914efdc7a48f4e3d259df8b3a41f2ff01e84a716"
+  },
+  {
+   "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_001/EVIDENCE/PREP/APBM001_PREP_RECON_2026-10-12_175032_BDT/RECON_stark-agent-workspace_APBM001-prep_2026-10-12.md",
+   "git": "??",
+   "role": "module-doc",
+   "bytes": 51494,
+   "sha256": "f9546f964e7a13540cb10491b19ec67ba3f94ee401d3013503e356d42970c5e7"
+  },
+  {
+   "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_001/EVIDENCE/PREP/APBM001_PREP_RECON_2026-10-12_175032_BDT/response_2026-10-12_175032_apbm001-prep-recon.md",
+   "git": "??",
+   "role": "module-doc",
+   "bytes": 3767,
+   "sha256": "2311160b96051aed45b94033dc730d3cc9ae71c2ef75b1166e184c1857103bfa"
+  },
+  {
+   "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_001/EVIDENCE/PROVENANCE.json",
+   "git": "??",
+   "role": "module-doc",
+   "bytes": 3359,
+   "sha256": "b66df59b2d3687ef8e472b68d71e51b22b829da6ba6fd98016b1921e88ba1344"
+  },
+  {
+   "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_001/EVIDENCE/README.md",
+   "git": "??",
+   "role": "module-doc",
+   "bytes": 878,
+   "sha256": "46b4f9cbd6f08571b44a18fb9eafc7f63f5b0a5b28e091b9ba7e50701a11d0f9"
+  },
+  {
+   "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_001/EXECUTION_LOG.md",
+   "git": "??",
+   "role": "module-doc",
+   "bytes": 5275,
+   "sha256": "774a58b7760f4dc67f6d26d5fa2f2ab069d578d4b693a261bfdd9ac7e466552a"
+  },
+  {
+   "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_001/FILE_SCOPE.md",
+   "git": "??",
+   "role": "module-doc",
+   "bytes": 2291,
+   "sha256": "c5a842a340088ceb168b574f66adcc267d85cf658bd6a473c0e6e024ced07527"
+  },
+  {
+   "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_001/GOVERNANCE.md",
+   "git": "??",
+   "role": "module-doc",
+   "bytes": 3201,
+   "sha256": "53d4f5d511d64798673d261f572bd6ae121f01e7f5ba20a0ada5fd11c404a403"
+  },
+  {
+   "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_001/KNOWN_LIMITS.md",
+   "git": "??",
+   "role": "module-doc",
+   "bytes": 1928,
+   "sha256": "ec3e9462e90b1b52db9974fb60904decdaf8ae12ece49cb47028771f36b03cd4"
+  },
+  {
+   "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_001/PACKAGING.md",
+   "git": "??",
+   "role": "module-doc",
+   "bytes": 2131,
+   "sha256": "a627b6ab43fec57b5ef99d704aa3ab20e4db71462f09550e251fcaeece9c8e5d"
+  },
+  {
+   "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_001/PHASE_MAP.md",
+   "git": "??",
+   "role": "module-doc",
+   "bytes": 1438,
+   "sha256": "e489cf09fa47a57d6e79b6f847ac49a047b5721ad3c88196619d82e1471f6035"
+  },
+  {
+   "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_001/QAM/AC_EVIDENCE_MATRIX.md",
+   "git": "??",
+   "role": "module-doc",
+   "bytes": 2026,
+   "sha256": "e908ca90d1b39b96efb8479ba1dee922b83107b694b5e0a39a33f983a8c94bfd"
+  },
+  {
+   "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_001/QAM/AGENTS.md",
+   "git": "??",
+   "role": "module-doc",
+   "bytes": 375,
+   "sha256": "97dd752543c198a08bac98f9cd99239301d84edb45b886f42cfc2b9b679be2d3"
+  },
+  {
+   "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_001/QAM/AUTOMATION/README.md",
+   "git": "??",
+   "role": "module-doc",
+   "bytes": 463,
+   "sha256": "98f9e5feb5b93cf8357f16cb74d6950be4163ccf26156fdc6e03ff12dc4ecce1"
+  },
+  {
+   "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_001/QAM/CLAUDE.md",
+   "git": "??",
+   "role": "module-doc",
+   "bytes": 375,
+   "sha256": "97dd752543c198a08bac98f9cd99239301d84edb45b886f42cfc2b9b679be2d3"
+  },
+  {
+   "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_001/QAM/FINDINGS.md",
+   "git": "??",
+   "role": "module-doc",
+   "bytes": 716,
+   "sha256": "b2fa368427680d955d507a780661dd43eb3772972690ffe63230f5143f49f2ed"
+  },
+  {
+   "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_001/QAM/GOVERNING/PROVENANCE.md",
+   "git": "??",
+   "role": "module-doc",
+   "bytes": 864,
+   "sha256": "f7d3eb23dd8ae8704a89a0e933b5434194c49b51e302fdb58184a519515b698e"
+  },
+  {
+   "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_001/QAM/GOVERNING/QAM_PLAYBOOK_v1_0.md",
+   "git": "??",
+   "role": "module-doc",
+   "bytes": 30650,
+   "sha256": "97e111e2a495f9a3fe65f50213e6f2ba68c8e5e963f3d23493b1ee99ad35c897"
+  },
+  {
+   "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_001/QAM/GOVERNING/QA_PLAYBOOK_v1_1.md",
+   "git": "??",
+   "role": "module-doc",
+   "bytes": 40940,
+   "sha256": "b6c70f14af18bb187ca7980954317af486e43b682821245d9911f2160d5198a5"
+  },
+  {
+   "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_001/QAM/HANDOFFS/APBM001_ENGINEERING_REVIEW_001.zip",
+   "git": "??",
+   "role": "module-doc",
+   "bytes": 3114738,
+   "sha256": "cb6e34e3076f30136ec67e26c455f32c3ded4b7e950672299e5116f0a0fc086b"
+  },
+  {
+   "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_001/QAM/HANDOFFS/APBM001_ENGINEERING_REVIEW_001_RECEIPT.txt",
+   "git": "??",
+   "role": "module-doc",
+   "bytes": 1059,
+   "sha256": "d6707448d4caac51488c7f87ceffd85778f8482631f5bd0ab4ded470b3c42c60"
+  },
+  {
+   "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_001/QAM/HANDOFFS/ENGINEERING_HANDOFF.md",
+   "git": "??",
+   "role": "module-doc",
+   "bytes": 4152,
+   "sha256": "a8cc0e8ec0cebf5ec8a753e81787a01981b8c58ae52def5ea7cc31cd083ae8df"
+  },
+  {
+   "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_001/QAM/HANDOFFS/REVIEW_START_HERE_ENGINEERING_001.md",
+   "git": "??",
+   "role": "module-doc",
+   "bytes": 3731,
+   "sha256": "e59a91bf3514a8dfaec1276d9f140a15cb8ea466d8bea7f5741bcae11a7e656d"
+  },
+  {
+   "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_001/QAM/HANDOFFS/REVIEW_START_HERE_ENGINEERING_002.md",
+   "git": "??",
+   "role": "module-doc",
+   "bytes": 3879,
+   "sha256": "19c1f94d92768450babf17c1fdbd2a6017f7411c351ecaeca6482c3407255a86"
+  },
+  {
+   "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_001/QAM/QAM_APPROVAL.md",
+   "git": "??",
+   "role": "module-doc",
+   "bytes": 597,
+   "sha256": "e9596c98b5468002ea54df3772cb0c13f0b98e777ddb8240e37623e2ec2af172"
+  },
+  {
+   "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_001/QAM/QAM_CERTIFICATION.md",
+   "git": "??",
+   "role": "module-doc",
+   "bytes": 545,
+   "sha256": "82c8975a00486bab5e6904ffbd15e0490c410ae2bff6e9facd2833a95c9c356d"
+  },
+  {
+   "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_001/QAM/QAM_CLEANUP_REPORT.md",
+   "git": "??",
+   "role": "module-doc",
+   "bytes": 790,
+   "sha256": "b8f9acfd10a699f7e8f1d88ce5f9cdfa76e7c24e014f86a612487d12d59b249f"
+  },
+  {
+   "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_001/QAM/QAM_ENTRY.md",
+   "git": "??",
+   "role": "module-doc",
+   "bytes": 2834,
+   "sha256": "dce51d77ad82ecd9e0b987be5bb7c27aefad58c65db9a9b30c4c848d629f0def"
+  },
+  {
+   "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_001/QAM/QAM_EXECUTION_REPORT.md",
+   "git": "??",
+   "role": "module-doc",
+   "bytes": 389,
+   "sha256": "958f407e7a13c5a484f51f3e372f571dabf03acca0490584b111f59daee4c1a1"
+  },
+  {
+   "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_001/QAM/QAM_MANIFEST.md",
+   "git": "??",
+   "role": "module-doc",
+   "bytes": 4397,
+   "sha256": "a0f920c00c80f8bd2712be7d1c71d0dd70c0d9db69390c2774dbec556b7f3d62"
+  },
+  {
+   "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_001/QAM/QAM_PREFLIGHT.md",
+   "git": "??",
+   "role": "module-doc",
+   "bytes": 3170,
+   "sha256": "0a73f27bf54ba18b797ba4497cd7a90641da692477f4181b31b6703a9b1c33fc"
+  },
+  {
+   "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_001/QAM/QAM_RECON_REPORT.md",
+   "git": "??",
+   "role": "module-doc",
+   "bytes": 444,
+   "sha256": "22d4f2e504d337f13e553e6e5467ba8c526d5a1d4ccf9e75d5bd0dcda6e037e3"
+  },
+  {
+   "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_001/QAM/QAM_RISK_REQUIREMENTS.md",
+   "git": "??",
+   "role": "module-doc",
+   "bytes": 2097,
+   "sha256": "d6f2cd40c80440bddbd9eec063a42c71a556ebd52ba21566f910935e1567cf79"
+  },
+  {
+   "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_001/QAM/QAM_STATE.md",
+   "git": "??",
+   "role": "module-doc",
+   "bytes": 2465,
+   "sha256": "a3e0f165f867f0267eaae430e6475523bff99842dcbee724a993cbc0e1b5d169"
+  },
+  {
+   "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_001/QAM/QAM_TEST_PLAN.md",
+   "git": "??",
+   "role": "module-doc",
+   "bytes": 927,
+   "sha256": "044d60ea08985bd6a515cc9a30574cbd0dbcdec0c812f9c9fa547c686041de88"
+  },
+  {
+   "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_001/QAM/QA_RECOVERY.md",
+   "git": "??",
+   "role": "module-doc",
+   "bytes": 299,
+   "sha256": "ce457e21df7fd11ac9446965235808e016684839d994648f6492a4f9386df562"
+  },
+  {
+   "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_001/QAM/evidence/README.md",
+   "git": "??",
+   "role": "module-doc",
+   "bytes": 358,
+   "sha256": "dc42594b32da15317dea212a05bbed78ae9fcd91808437286819c177dc9ec95e"
+  },
+  {
+   "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_001/RETROSPECTIVE.md",
+   "git": "??",
+   "role": "module-doc",
+   "bytes": 2847,
+   "sha256": "6f456185beea9dee5c55bc941ab46cb74201486a47d5e7c7e9834da164ac6b6f"
+  },
+  {
+   "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_001/RULINGS_ADDENDUM.md",
+   "git": "??",
+   "role": "module-doc",
+   "bytes": 3003,
+   "sha256": "39e10aadacb08784416a7fba252e62749fa16c1c4931718eadba26a939c6a8d4"
+  },
+  {
+   "path": "agent_docs/ACTIONS/stark_agent_workspace_apbm_001/START_HERE.md",
+   "git": "??",
+   "role": "module-doc",
+   "bytes": 2046,
+   "sha256": "e4807eec3c81d3a83fa74d1165201a564eb5922492b2df57a75d3fac6622edfb"
+  },
+  {
+   "path": "agent_docs/RECON/RECON_stark-agent-workspace_APBM001-P0-addendum_2026-10-14.md",
+   "git": "??",
+   "role": "pre-existing-recon-doc (before pass 2)",
+   "bytes": 10109,
+   "sha256": "fc63e2ef58cbead77327098ef2d2fdf806b8e9661c408c4d1b7bb16e4a4700ee"
+  },
+  {
+   "path": "agent_docs/RECON/RECON_stark-agent-workspace_APBM001-P0-addendum_2026-10-14_evidence/FILE_INDEX.md",
+   "git": "??",
+   "role": "pre-existing-recon-doc (before pass 2)",
+   "bytes": 3715,
+   "sha256": "e64ce1fb6f95d176cea54603cfd64cbc581536895c7a7185c6e3edbc3e1f8a46"
+  },
+  {
+   "path": "agent_docs/RECON/RECON_stark-agent-workspace_APBM001-P0-addendum_2026-10-14_evidence/baseline-git.txt",
+   "git": "??",
+   "role": "pre-existing-recon-doc (before pass 2)",
+   "bytes": 1895,
+   "sha256": "951fc534f3c7f7984a4e84af4e1df5b975fe9958205ba00585470c2d35929142"
+  },
+  {
+   "path": "agent_docs/RECON/RECON_stark-agent-workspace_APBM001-P0-addendum_2026-10-14_evidence/environment-access.txt",
+   "git": "??",
+   "role": "pre-existing-recon-doc (before pass 2)",
+   "bytes": 961,
+   "sha256": "93c4bbf38782af300598e4f86a9a5affd3cbc9512695118747d3912c4e1a012b"
+  },
+  {
+   "path": "agent_docs/RECON/RECON_stark-agent-workspace_APBM001-P0-addendum_2026-10-14_evidence/final-state.txt",
+   "git": "??",
+   "role": "pre-existing-recon-doc (before pass 2)",
+   "bytes": 3458,
+   "sha256": "68df97ea34f4cb2d1acb71031ae88f4c01308c42c7233f7de09c20cf65584b71"
+  },
+  {
+   "path": "agent_docs/RECON/RECON_stark-agent-workspace_APBM001-P0-addendum_2026-10-14_evidence/p0_1_frontend_target_identity.py",
+   "git": "??",
+   "role": "pre-existing-recon-doc (before pass 2)",
+   "bytes": 3846,
+   "sha256": "d9e6495976d075a4725320ee50e2654279bc281a2ca8e34cd88b036acb2e5acf"
+  },
+  {
+   "path": "agent_docs/RECON/RECON_stark-agent-workspace_APBM001-P0-addendum_2026-10-14_evidence/p0_2_supabase_chat_sessions_readonly.sql",
+   "git": "??",
+   "role": "pre-existing-recon-doc (before pass 2)",
+   "bytes": 5694,
+   "sha256": "4bc8b3aeed390b0f4ac7883100a9c0008f0445cea6e1b13426d3608fcb2fd75a"
+  },
+  {
+   "path": "agent_docs/RECON/RECON_stark-agent-workspace_APBM001-P0-addendum_2026-10-14_evidence/p0_3_adk_cloud_run_metadata.sh",
+   "git": "??",
+   "role": "pre-existing-recon-doc (before pass 2)",
+   "bytes": 11516,
+   "sha256": "b05e29429d7981a44a74635b5a5ac3fab064977e31c741297745cce062631ae0"
+  },
+  {
+   "path": "agent_docs/RECON/RECON_stark-agent-workspace_APBM001-P0-addendum_2026-10-14_evidence/p0_4_adk_bundle_source_scan.sh",
+   "git": "??",
+   "role": "pre-existing-recon-doc (before pass 2)",
+   "bytes": 2133,
+   "sha256": "d1334cc50ec3e8f51f507f5e2bde70f75fb7a77646f5a1eeae9cf919b68d2ef6"
+  },
+  {
+   "path": "agent_docs/RECON/RECON_stark-agent-workspace_APBM001-P0-addendum_2026-10-14_evidence/records-scan.txt",
+   "git": "??",
+   "role": "pre-existing-recon-doc (before pass 2)",
+   "bytes": 2772,
+   "sha256": "092956bb2f775d53f0d69d0ec63fbacb680c932b8889b0c5d824f2ef755b8256"
+  },
+  {
+   "path": "agent_docs/RECON/RECON_stark-agent-workspace_APBM001-P0-addendum_2026-10-14_evidence/selftest.txt",
+   "git": "??",
+   "role": "pre-existing-recon-doc (before pass 2)",
+   "bytes": 2125,
+   "sha256": "96f6cc0928f4dda558ed80ecec0c067d2190245ad2da48c786cc8a1e9d120e47"
+  },
+  {
+   "path": "agent_docs/RECON/RECON_stark-agent-workspace_APBM001-prep_2026-10-12.md",
+   "git": "??",
+   "role": "pre-existing-recon-doc (before pass 2)",
+   "bytes": 51494,
+   "sha256": "f9546f964e7a13540cb10491b19ec67ba3f94ee401d3013503e356d42970c5e7"
+  },
+  {
+   "path": "agent_docs/RECON/RECON_stark-agent-workspace_APBM001-prep_2026-10-12_evidence/FILE_INDEX.md",
+   "git": "??",
+   "role": "pre-existing-recon-doc (before pass 2)",
+   "bytes": 2403,
+   "sha256": "6a8cc4028e10247c4b46572a914efdc7a48f4e3d259df8b3a41f2ff01e84a716"
+  },
+  {
+   "path": "agent_docs/RECON/RECON_stark-agent-workspace_APBM001-prep_2026-10-12_evidence/baseline-git.txt",
+   "git": "??",
+   "role": "pre-existing-recon-doc (before pass 2)",
+   "bytes": 1029,
+   "sha256": "23ab82074c1a7857d791fcfeb4a236a47eba1d375ef84c21dd8f9ce1f668cc9e"
+  },
+  {
+   "path": "agent_docs/RECON/RECON_stark-agent-workspace_APBM001-prep_2026-10-12_evidence/day0-sweep.txt",
+   "git": "??",
+   "role": "pre-existing-recon-doc (before pass 2)",
+   "bytes": 2792,
+   "sha256": "57d806f1b01b424ad1956e0069a2b94288cca0a46d9850d2a3c1b903137c43a2"
+  },
+  {
+   "path": "agent_docs/RECON/RECON_stark-agent-workspace_APBM001-prep_2026-10-12_evidence/final-state.txt",
+   "git": "??",
+   "role": "pre-existing-recon-doc (before pass 2)",
+   "bytes": 1265,
+   "sha256": "ab24f1a752ec14e2744e2934f6774395954fa4464a6ffe8e2b54d2f8a0148f64"
+  },
+  {
+   "path": "agent_docs/RECON/RECON_stark-agent-workspace_APBM001-prep_2026-10-12_evidence/source-anchors.txt",
+   "git": "??",
+   "role": "pre-existing-recon-doc (before pass 2)",
+   "bytes": 15915,
+   "sha256": "f89211ec2bb06bc8dd812f15027d3ff59863a3e3ccd01326ff81c0fee407baf0"
+  },
+  {
+   "path": "agent_docs/RECON/RECON_stark-agent-workspace_APBM001-prep_2026-10-12_evidence/test-inventory.txt",
+   "git": "??",
+   "role": "pre-existing-recon-doc (before pass 2)",
+   "bytes": 13817,
+   "sha256": "3c4ada7c7a8e2099077c5f9b4d57861b7eee76112cc3edd2f239adcab631b62f"
+  },
+  {
+   "path": "agent_docs/RESPONSES/response_2026-10-12_173300_session-start.md",
+   "git": "??",
+   "role": "pre-existing-recon-doc (before pass 2)",
+   "bytes": 1670,
+   "sha256": "ec13e3c3b511f121758c84f06779d2c22e5674ecc917d5c56ab1a3d47676a6b8"
+  },
+  {
+   "path": "agent_docs/RESPONSES/response_2026-10-12_175032_apbm001-prep-recon.md",
+   "git": "??",
+   "role": "pre-existing-recon-doc (before pass 2)",
+   "bytes": 3767,
+   "sha256": "2311160b96051aed45b94033dc730d3cc9ae71c2ef75b1166e184c1857103bfa"
+  },
+  {
+   "path": "agent_docs/RESPONSES/response_2026-10-14_090926_apbm001-p0-addendum.md",
+   "git": "??",
+   "role": "pre-existing-recon-doc (before pass 2)",
+   "bytes": 2845,
+   "sha256": "2611c772a9f0c06842ab5b2f4e4cd1c4dfc262ce582f88acdd665991b9de809c"
+  },
+  {
+   "path": "agent_docs/RESPONSES/response_2026-10-14_123729_apbm001-adk-session-discovery.md",
+   "git": "??",
+   "role": "pre-existing-recon-doc (before pass 2)",
+   "bytes": 15502,
+   "sha256": "17540159651606189a06c9cddf3b2a4c5a0be8a7e31d1713a76369cf6e5fd5e3"
+  },
+  {
+   "path": "agent_docs/RESPONSES/response_2026-10-14_123729_apbm001-adk-session-discovery_evidence/FILE_INDEX.md",
+   "git": "??",
+   "role": "pre-existing-recon-doc (before pass 2)",
+   "bytes": 3517,
+   "sha256": "0adaddc8b2e53c2c17552300271c8574e48bf86f64ca279f4579998070837135"
+  },
+  {
+   "path": "agent_docs/RESPONSES/response_2026-10-14_123729_apbm001-adk-session-discovery_evidence/baseline-git.txt",
+   "git": "??",
+   "role": "pre-existing-recon-doc (before pass 2)",
+   "bytes": 951,
+   "sha256": "f4c8df929f103ba5fec5684252f77a27918b3ae38722ed0df44a5828fb0a6eb2"
+  },
+  {
+   "path": "agent_docs/RESPONSES/response_2026-10-14_123729_apbm001-adk-session-discovery_evidence/final-state.txt",
+   "git": "??",
+   "role": "pre-existing-recon-doc (before pass 2)",
+   "bytes": 6489,
+   "sha256": "bd514f834ae42ee4fc459eb6bedad9562d0bb7b98b9ed2362ae0ecf34a39797c"
+  },
+  {
+   "path": "agent_docs/RESPONSES/response_2026-10-14_123729_apbm001-adk-session-discovery_evidence/http-requests.json",
+   "git": "??",
+   "role": "pre-existing-recon-doc (before pass 2)",
+   "bytes": 1703,
+   "sha256": "1cf1f103b0bc59a59d8bebfbf9ac61390a117cb38d037ce0a6aa910da2c98263"
+  },
+  {
+   "path": "agent_docs/RESPONSES/response_2026-10-14_123729_apbm001-adk-session-discovery_evidence/list-apps.json",
+   "git": "??",
+   "role": "pre-existing-recon-doc (before pass 2)",
+   "bytes": 86,
+   "sha256": "0cf1db92bd30998286955b7f8a61115820e1189a6377af340dc60d747410660f"
+  },
+  {
+   "path": "agent_docs/RESPONSES/response_2026-10-14_123729_apbm001-adk-session-discovery_evidence/openapi-session-contracts.json",
+   "git": "??",
+   "role": "pre-existing-recon-doc (before pass 2)",
+   "bytes": 12380,
+   "sha256": "99bf35f7d7501330246e766cc2b225fcc4dcfbe39e02e743b5c7fa33f932e1a7"
+  },
+  {
+   "path": "agent_docs/RESPONSES/response_2026-10-14_123729_apbm001-adk-session-discovery_evidence/openapi.json",
+   "git": "??",
+   "role": "pre-existing-recon-doc (before pass 2)",
+   "bytes": 195000,
+   "sha256": "4db73a7f7a3174bdc4e321a57b25ea9f396b5105e395d0e26db0cb1d26977dae"
+  },
+  {
+   "path": "agent_docs/RESPONSES/response_2026-10-14_123729_apbm001-adk-session-discovery_evidence/records-anchors.txt",
+   "git": "??",
+   "role": "pre-existing-recon-doc (before pass 2)",
+   "bytes": 3422,
+   "sha256": "d42688b28e763d082cb2d7f32f0a7a682e80fbb26d0fb8228d76208f0bb5bdee"
+  },
+  {
+   "path": "agent_docs/RESPONSES/response_2026-10-14_123729_apbm001-adk-session-discovery_evidence/source-anchors.txt",
+   "git": "??",
+   "role": "pre-existing-recon-doc (before pass 2)",
+   "bytes": 10232,
+   "sha256": "4af1b975725a3fb90b4a383b02edfb2eab9839853e65869910b2aaa9aac86c3b"
+  },
+  {
+   "path": "agent_docs/RESPONSES/response_2026-10-14_124213_apbm001-adk-session-discovery-summary.md",
+   "git": "??",
+   "role": "pre-existing-recon-doc (before pass 2)",
+   "bytes": 3045,
+   "sha256": "660d4046669ecb5b98974d5b3ec85176e12c1c606219d8b13846ed0e0cba69df"
+  },
+  {
+   "path": "agent_docs/RESPONSES/response_2026-10-14_130354_apbm001-adk-live-capability-test.md",
+   "git": "??",
+   "role": "pre-existing-recon-doc (before pass 2)",
+   "bytes": 9464,
+   "sha256": "be184e36906e2ff16d26bf165e53656555337b8525a352859ee17f60bf2afdc4"
+  },
+  {
+   "path": "agent_docs/RESPONSES/response_2026-10-14_130354_apbm001-adk-live-capability-test_evidence/FILE_INDEX.md",
+   "git": "??",
+   "role": "pre-existing-recon-doc (before pass 2)",
+   "bytes": 6618,
+   "sha256": "375b646d9178e1c405d91fee5f88cc3eae4665f7f5e6baa3ab687017db1607aa"
+  },
+  {
+   "path": "agent_docs/RESPONSES/response_2026-10-14_130354_apbm001-adk-live-capability-test_evidence/analysis.json",
+   "git": "??",
+   "role": "pre-existing-recon-doc (before pass 2)",
+   "bytes": 7811,
+   "sha256": "895b540203cda10e7c12e27973afd697b8edefe6b83559880ab1ec01648a20c0"
+  },
+  {
+   "path": "agent_docs/RESPONSES/response_2026-10-14_130354_apbm001-adk-live-capability-test_evidence/baseline-git.txt",
+   "git": "??",
+   "role": "pre-existing-recon-doc (before pass 2)",
+   "bytes": 1221,
+   "sha256": "60ae73f4c4929c245ef12e90a0c825a78454ef15cdbcc167a814ef9dac93e2a1"
+  },
+  {
+   "path": "agent_docs/RESPONSES/response_2026-10-14_130354_apbm001-adk-live-capability-test_evidence/console.txt",
+   "git": "??",
+   "role": "pre-existing-recon-doc (before pass 2)",
+   "bytes": 816,
+   "sha256": "2be264b1ea36b54d60b1be7167e5773f683bb539d4b8c5430d34dd5c8d137264"
+  },
+  {
+   "path": "agent_docs/RESPONSES/response_2026-10-14_130354_apbm001-adk-live-capability-test_evidence/final-state.txt",
+   "git": "??",
+   "role": "pre-existing-recon-doc (before pass 2)",
+   "bytes": 10421,
+   "sha256": "1ada5cae1dcf3d524e693adac9752f27f5a1be08824d533346e2e1bbcda65504"
+  },
+  {
+   "path": "agent_docs/RESPONSES/response_2026-10-14_130354_apbm001-adk-live-capability-test_evidence/raw/04-new-list-empty.json",
+   "git": "??",
+   "role": "pre-existing-recon-doc (before pass 2)",
+   "bytes": 2,
+   "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+  },
+  {
+   "path": "agent_docs/RESPONSES/response_2026-10-14_130354_apbm001-adk-live-capability-test_evidence/raw/05-create-a.json",
+   "git": "??",
+   "role": "pre-existing-recon-doc (before pass 2)",
+   "bytes": 211,
+   "sha256": "1adbfad09a4a03ec339725bd6d83d55f75d96bf507ac7812946dbf300af384c4"
+  },
+  {
+   "path": "agent_docs/RESPONSES/response_2026-10-14_130354_apbm001-adk-live-capability-test_evidence/raw/06-create-b.json",
+   "git": "??",
+   "role": "pre-existing-recon-doc (before pass 2)",
+   "bytes": 211,
+   "sha256": "d3daa9cbd68b26e172439ce8c7a614d8ee9fa9ff10b96c07a030d355782c2cc7"
+  },
+  {
+   "path": "agent_docs/RESPONSES/response_2026-10-14_130354_apbm001-adk-live-capability-test_evidence/raw/07-run-a-marker.json",
+   "git": "??",
+   "role": "pre-existing-recon-doc (before pass 2)",
+   "bytes": 564,
+   "sha256": "3b95172369f5897d5e730c188b19e8b42125a58d7bfb9dcf10a1d3a495ea01e6"
+  },
+  {
+   "path": "agent_docs/RESPONSES/response_2026-10-14_130354_apbm001-adk-live-capability-test_evidence/raw/08-run-b-marker.json",
+   "git": "??",
+   "role": "pre-existing-recon-doc (before pass 2)",
+   "bytes": 652,
+   "sha256": "1c3acd336e046499d9cd02272838710550db240e31750e1285fafeeeb3ca572b"
+  },
+  {
+   "path": "agent_docs/RESPONSES/response_2026-10-14_130354_apbm001-adk-live-capability-test_evidence/raw/09-list-after-markers.json",
+   "git": "??",
+   "role": "pre-existing-recon-doc (before pass 2)",
+   "bytes": 425,
+   "sha256": "484964cc4daf334260c2c3e09a6f1ae696448e7a05570785d1a012411e5fc6b1"
+  },
+  {
+   "path": "agent_docs/RESPONSES/response_2026-10-14_130354_apbm001-adk-live-capability-test_evidence/raw/10-get-a-after-marker.json",
+   "git": "??",
+   "role": "pre-existing-recon-doc (before pass 2)",
+   "bytes": 985,
+   "sha256": "8a5ae6249c20562f06c132f00194f4a628792f15097704ec406b61c8723a35e9"
+  },
+  {
+   "path": "agent_docs/RESPONSES/response_2026-10-14_130354_apbm001-adk-live-capability-test_evidence/raw/11-get-b-after-marker.json",
+   "git": "??",
+   "role": "pre-existing-recon-doc (before pass 2)",
+   "bytes": 1051,
+   "sha256": "5fe637f3d72939643230575753d905b2f2d9c80eb4f57e3282455ddd4472a907"
+  },
+  {
+   "path": "agent_docs/RESPONSES/response_2026-10-14_130354_apbm001-adk-live-capability-test_evidence/raw/12-run-a-continue.json",
+   "git": "??",
+   "role": "pre-existing-recon-doc (before pass 2)",
+   "bytes": 559,
+   "sha256": "04cf3fe567eca1c98ab4dd3354d5240c39b6f1b368a3d8078345355e76e66525"
+  },
+  {
+   "path": "agent_docs/RESPONSES/response_2026-10-14_130354_apbm001-adk-live-capability-test_evidence/raw/13-list-after-continue.json",
+   "git": "??",
+   "role": "pre-existing-recon-doc (before pass 2)",
+   "bytes": 425,
+   "sha256": "484964cc4daf334260c2c3e09a6f1ae696448e7a05570785d1a012411e5fc6b1"
+  },
+  {
+   "path": "agent_docs/RESPONSES/response_2026-10-14_130354_apbm001-adk-live-capability-test_evidence/raw/14-get-a-after-continue.json",
+   "git": "??",
+   "role": "pre-existing-recon-doc (before pass 2)",
+   "bytes": 1733,
+   "sha256": "f885722605300f48b1035da56bfb79da9cb3af5574fbd72b4914afeb7e864d0a"
+  },
+  {
+   "path": "agent_docs/RESPONSES/response_2026-10-14_130354_apbm001-adk-live-capability-test_evidence/raw/15-get-nonexistent.json",
+   "git": "??",
+   "role": "pre-existing-recon-doc (before pass 2)",
+   "bytes": 30,
+   "sha256": "f73c5f28972bdfde85349f9f011ace1fecbccc980719c4bbca03959f922e9834"
+  },
+  {
+   "path": "agent_docs/RESPONSES/response_2026-10-14_130354_apbm001-adk-live-capability-test_evidence/request-ledger.json",
+   "git": "??",
+   "role": "pre-existing-recon-doc (before pass 2)",
+   "bytes": 12571,
+   "sha256": "4d524ee8aa668147a38b377eda58ecf28960c3dba2904d3a6a2737fe4962944f"
+  },
+  {
+   "path": "agent_docs/RESPONSES/response_2026-10-14_130354_apbm001-adk-live-capability-test_evidence/responses-summary.json",
+   "git": "??",
+   "role": "pre-existing-recon-doc (before pass 2)",
+   "bytes": 25838,
+   "sha256": "f41e78c1f11c2ad725e542215464d509d26ae2697dd1ee195054c20a6cc6512c"
+  },
+  {
+   "path": "agent_docs/RESPONSES/response_2026-10-14_130713_apbm001-adk-live-capability-test-summary.md",
+   "git": "??",
+   "role": "pre-existing-recon-doc (before pass 2)",
+   "bytes": 2624,
+   "sha256": "dedebe63919aa001f522fbb89aad0e2958ca124ba1407abaa3e7601e4a881f0d"
+  },
+  {
+   "path": "session_2026-10-12.md",
+   "git": "??",
+   "role": "pre-existing-recon-doc (before pass 2)",
+   "bytes": 6985,
+   "sha256": "ae7e8362d60b87bd1bc9d22144d03f9fdf9334245e85819f28e21e4ce0398caf"
+  },
+  {
+   "path": "session_2026-10-14.md",
+   "git": "??",
+   "role": "root-log/doc",
+   "note": "root session/RECOVERY/CHANGELOG logs are updated after packaging (they cite the receipt); not hashed here"
+  },
+  {
+   "path": "src/__tests__/api/agent-boundary.test.ts",
+   "git": "??",
+   "role": "test",
+   "bytes": 12315,
+   "sha256": "11779effff6192a8843df9084e287d6696a3ff75f1028b576be763c4314a3491"
+  },
+  {
+   "path": "src/__tests__/api/agent-sessions.test.ts",
+   "git": "??",
+   "role": "test",
+   "bytes": 5595,
+   "sha256": "031654c2af03d0522e9f3561ef12849cb071716b340d38f8e08699e0f575a7ef"
+  },
+  {
+   "path": "src/__tests__/api/fixtures/route-harness.ts",
+   "git": "??",
+   "role": "test",
+   "bytes": 1933,
+   "sha256": "2e232feec0ea26137df8a67ebac9306679af2903fc15623f175860d4c7b4d39f"
+  },
+  {
+   "path": "src/__tests__/workspace/recoveryJournal.test.ts",
+   "git": "??",
+   "role": "test",
+   "bytes": 3701,
+   "sha256": "06bac88cdcb6c8781681e9125cf09d325cfa6fc1b02ac07b287473f97dfda9ef"
+  },
+  {
+   "path": "src/__tests__/workspace/workspace.flow.test.tsx",
+   "git": "??",
+   "role": "test",
+   "bytes": 20050,
+   "sha256": "0000c9f4420f5df1efec76c113386685fb2f0ba0e48605fb398d9c90431fe35a"
+  },
+  {
+   "path": "src/app/api/agent/_lib/context.ts",
+   "git": "??",
+   "role": "product",
+   "bytes": 11077,
+   "sha256": "2757c485146c069e21e81ce132985719847bfa9ecf41c8d0ff91a56e20796f8f"
+  },
+  {
+   "path": "src/app/api/agent/sessions/route.ts",
+   "git": "??",
+   "role": "product",
+   "bytes": 2516,
+   "sha256": "51546927b8c95832131726f899599f617682147536387d3855f07b12f1644888"
+  },
+  {
+   "path": "src/app/api/agent/workspace/route.ts",
+   "git": "??",
+   "role": "product",
+   "bytes": 2527,
+   "sha256": "7f3b601d852098f5e28e37841929e0d5bfb248842982799c56a235f631bc5984"
+  },
+  {
+   "path": "src/components/workspace/recoveryJournal.ts",
+   "git": "??",
+   "role": "product",
+   "bytes": 5095,
+   "sha256": "daecc15fd9ea47f261fd80c474ea45799e45ebf84f112a0943b0a0888962ed37"
+  },
+  {
+   "path": "tests/workspace/apbm001.config.ts",
+   "git": "??",
+   "role": "test",
+   "bytes": 1509,
+   "sha256": "dccdee48667d3913c0e080ab5483f3c022791b23a4bf18fb4a6fcec7268954ba"
+  },
+  {
+   "path": "tests/workspace/apbm001.spec.ts",
+   "git": "??",
+   "role": "test",
+   "bytes": 11853,
+   "sha256": "d9dc061f62ce1f5e47ed2cc15ba04366482b10d48efb61246266e92ad05f6ac6"
+  }
+ ]
+}

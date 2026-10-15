@@ -1,0 +1,111 @@
+# Final state — read-only Git + preservation checks (captured 2026-10-14T13:06:45+06:00)
+# Written after the report and evidence; FILE_INDEX.md is created after this capture.
+branch: frontend-apbm-0001
+HEAD: f0fbf2282737ea3a63fc78d553cd31fc570821d5
+HEAD unchanged: yes
+staged: 0
+tracked modified (expected CHANGELOG.md, RECOVERY.md, session file untracked):
+CHANGELOG.md
+RECOVERY.md
+product/test/config/dependency/supabase/ACTIONS tracked changes (expected none):
+  (end)
+untracked or changed under agent_docs/ACTIONS (expected none): 0
+config/agents.manifest*.json (config/agents.manifest-hermes.json, config/agents.manifest.json) git status entries (expected none): 0
+10-04 probe evidence (agent_docs/RESPONSES/response_2026-10-04_115739_adk-capability-continuation_evidence) git status entries (read only; expected none): 0
+
+## 10-12 recon deliverables vs agent_docs/RECON/RECON_stark-agent-workspace_APBM001-prep_2026-10-12_evidence/FILE_INDEX.md (SHA-256)
+UNCHANGED agent_docs/RECON/RECON_stark-agent-workspace_APBM001-prep_2026-10-12.md
+UNCHANGED agent_docs/RESPONSES/response_2026-10-12_175032_apbm001-prep-recon.md
+UNCHANGED agent_docs/RECON/RECON_stark-agent-workspace_APBM001-prep_2026-10-12_evidence/baseline-git.txt
+UNCHANGED agent_docs/RECON/RECON_stark-agent-workspace_APBM001-prep_2026-10-12_evidence/source-anchors.txt
+UNCHANGED agent_docs/RECON/RECON_stark-agent-workspace_APBM001-prep_2026-10-12_evidence/day0-sweep.txt
+UNCHANGED agent_docs/RECON/RECON_stark-agent-workspace_APBM001-prep_2026-10-12_evidence/test-inventory.txt
+UNCHANGED agent_docs/RECON/RECON_stark-agent-workspace_APBM001-prep_2026-10-12_evidence/final-state.txt
+summary: 7/7 indexed files unchanged
+
+## 10-14 P0 addendum deliverables vs agent_docs/RECON/RECON_stark-agent-workspace_APBM001-P0-addendum_2026-10-14_evidence/FILE_INDEX.md (SHA-256)
+UNCHANGED agent_docs/RECON/RECON_stark-agent-workspace_APBM001-P0-addendum_2026-10-14.md
+UNCHANGED agent_docs/RESPONSES/response_2026-10-14_090926_apbm001-p0-addendum.md
+UNCHANGED agent_docs/RECON/RECON_stark-agent-workspace_APBM001-P0-addendum_2026-10-14_evidence/p0_1_frontend_target_identity.py
+UNCHANGED agent_docs/RECON/RECON_stark-agent-workspace_APBM001-P0-addendum_2026-10-14_evidence/p0_2_supabase_chat_sessions_readonly.sql
+UNCHANGED agent_docs/RECON/RECON_stark-agent-workspace_APBM001-P0-addendum_2026-10-14_evidence/p0_3_adk_cloud_run_metadata.sh
+UNCHANGED agent_docs/RECON/RECON_stark-agent-workspace_APBM001-P0-addendum_2026-10-14_evidence/p0_4_adk_bundle_source_scan.sh
+UNCHANGED agent_docs/RECON/RECON_stark-agent-workspace_APBM001-P0-addendum_2026-10-14_evidence/records-scan.txt
+UNCHANGED agent_docs/RECON/RECON_stark-agent-workspace_APBM001-P0-addendum_2026-10-14_evidence/environment-access.txt
+UNCHANGED agent_docs/RECON/RECON_stark-agent-workspace_APBM001-P0-addendum_2026-10-14_evidence/selftest.txt
+UNCHANGED agent_docs/RECON/RECON_stark-agent-workspace_APBM001-P0-addendum_2026-10-14_evidence/baseline-git.txt
+UNCHANGED agent_docs/RECON/RECON_stark-agent-workspace_APBM001-P0-addendum_2026-10-14_evidence/final-state.txt
+summary: 11/11 indexed files unchanged
+
+## 10-14 ADK discovery deliverables vs agent_docs/RESPONSES/response_2026-10-14_123729_apbm001-adk-session-discovery_evidence/FILE_INDEX.md (SHA-256)
+UNCHANGED agent_docs/RESPONSES/response_2026-10-14_123729_apbm001-adk-session-discovery.md
+UNCHANGED agent_docs/RESPONSES/response_2026-10-14_123729_apbm001-adk-session-discovery_evidence/http-requests.json
+UNCHANGED agent_docs/RESPONSES/response_2026-10-14_123729_apbm001-adk-session-discovery_evidence/openapi.json
+UNCHANGED agent_docs/RESPONSES/response_2026-10-14_123729_apbm001-adk-session-discovery_evidence/openapi-session-contracts.json
+UNCHANGED agent_docs/RESPONSES/response_2026-10-14_123729_apbm001-adk-session-discovery_evidence/list-apps.json
+UNCHANGED agent_docs/RESPONSES/response_2026-10-14_123729_apbm001-adk-session-discovery_evidence/source-anchors.txt
+UNCHANGED agent_docs/RESPONSES/response_2026-10-14_123729_apbm001-adk-session-discovery_evidence/records-anchors.txt
+UNCHANGED agent_docs/RESPONSES/response_2026-10-14_123729_apbm001-adk-session-discovery_evidence/baseline-git.txt
+UNCHANGED agent_docs/RESPONSES/response_2026-10-14_123729_apbm001-adk-session-discovery_evidence/final-state.txt
+summary: 9/9 indexed files unchanged
+
+## Earlier Downloads packages vs their receipts
+UNCHANGED ~/Downloads/ARCHIVE/APBM001_PREP_RECON_2026-10-12_175032_BDT.zip sha256 6cf8f4e86fa231e0164fc9a58c540d791f28450c7cea5388753296a109734b26 (found in ~/Downloads/ARCHIVE; not moved by this seat)
+UNCHANGED ~/Downloads/ARCHIVE/APBM001_P0_ADDENDUM_2026-10-14_090926_BDT.zip sha256 851e76944045b4de627566d3f2e1392aa0787669169f6011286fa609301a1ac1 (found in ~/Downloads/ARCHIVE; not moved by this seat)
+UNCHANGED ~/Downloads/ARCHIVE/APBM001_ADK_SESSION_DISCOVERY_2026-10-14_123729_BDT.zip sha256 3005e68fded3a20893d83c2b11062d944caaf0295b74a0329c634fd3e5a79666 (found in ~/Downloads/ARCHIVE; not moved by this seat)
+
+--- status --porcelain=v1 -uall ---
+ M CHANGELOG.md
+ M RECOVERY.md
+?? agent_docs/RECON/RECON_stark-agent-workspace_APBM001-P0-addendum_2026-10-14.md
+?? agent_docs/RECON/RECON_stark-agent-workspace_APBM001-P0-addendum_2026-10-14_evidence/FILE_INDEX.md
+?? agent_docs/RECON/RECON_stark-agent-workspace_APBM001-P0-addendum_2026-10-14_evidence/baseline-git.txt
+?? agent_docs/RECON/RECON_stark-agent-workspace_APBM001-P0-addendum_2026-10-14_evidence/environment-access.txt
+?? agent_docs/RECON/RECON_stark-agent-workspace_APBM001-P0-addendum_2026-10-14_evidence/final-state.txt
+?? agent_docs/RECON/RECON_stark-agent-workspace_APBM001-P0-addendum_2026-10-14_evidence/p0_1_frontend_target_identity.py
+?? agent_docs/RECON/RECON_stark-agent-workspace_APBM001-P0-addendum_2026-10-14_evidence/p0_2_supabase_chat_sessions_readonly.sql
+?? agent_docs/RECON/RECON_stark-agent-workspace_APBM001-P0-addendum_2026-10-14_evidence/p0_3_adk_cloud_run_metadata.sh
+?? agent_docs/RECON/RECON_stark-agent-workspace_APBM001-P0-addendum_2026-10-14_evidence/p0_4_adk_bundle_source_scan.sh
+?? agent_docs/RECON/RECON_stark-agent-workspace_APBM001-P0-addendum_2026-10-14_evidence/records-scan.txt
+?? agent_docs/RECON/RECON_stark-agent-workspace_APBM001-P0-addendum_2026-10-14_evidence/selftest.txt
+?? agent_docs/RECON/RECON_stark-agent-workspace_APBM001-prep_2026-10-12.md
+?? agent_docs/RECON/RECON_stark-agent-workspace_APBM001-prep_2026-10-12_evidence/FILE_INDEX.md
+?? agent_docs/RECON/RECON_stark-agent-workspace_APBM001-prep_2026-10-12_evidence/baseline-git.txt
+?? agent_docs/RECON/RECON_stark-agent-workspace_APBM001-prep_2026-10-12_evidence/day0-sweep.txt
+?? agent_docs/RECON/RECON_stark-agent-workspace_APBM001-prep_2026-10-12_evidence/final-state.txt
+?? agent_docs/RECON/RECON_stark-agent-workspace_APBM001-prep_2026-10-12_evidence/source-anchors.txt
+?? agent_docs/RECON/RECON_stark-agent-workspace_APBM001-prep_2026-10-12_evidence/test-inventory.txt
+?? agent_docs/RESPONSES/response_2026-10-12_173300_session-start.md
+?? agent_docs/RESPONSES/response_2026-10-12_175032_apbm001-prep-recon.md
+?? agent_docs/RESPONSES/response_2026-10-14_090926_apbm001-p0-addendum.md
+?? agent_docs/RESPONSES/response_2026-10-14_123729_apbm001-adk-session-discovery.md
+?? agent_docs/RESPONSES/response_2026-10-14_123729_apbm001-adk-session-discovery_evidence/FILE_INDEX.md
+?? agent_docs/RESPONSES/response_2026-10-14_123729_apbm001-adk-session-discovery_evidence/baseline-git.txt
+?? agent_docs/RESPONSES/response_2026-10-14_123729_apbm001-adk-session-discovery_evidence/final-state.txt
+?? agent_docs/RESPONSES/response_2026-10-14_123729_apbm001-adk-session-discovery_evidence/http-requests.json
+?? agent_docs/RESPONSES/response_2026-10-14_123729_apbm001-adk-session-discovery_evidence/list-apps.json
+?? agent_docs/RESPONSES/response_2026-10-14_123729_apbm001-adk-session-discovery_evidence/openapi-session-contracts.json
+?? agent_docs/RESPONSES/response_2026-10-14_123729_apbm001-adk-session-discovery_evidence/openapi.json
+?? agent_docs/RESPONSES/response_2026-10-14_123729_apbm001-adk-session-discovery_evidence/records-anchors.txt
+?? agent_docs/RESPONSES/response_2026-10-14_123729_apbm001-adk-session-discovery_evidence/source-anchors.txt
+?? agent_docs/RESPONSES/response_2026-10-14_124213_apbm001-adk-session-discovery-summary.md
+?? agent_docs/RESPONSES/response_2026-10-14_130354_apbm001-adk-live-capability-test.md
+?? agent_docs/RESPONSES/response_2026-10-14_130354_apbm001-adk-live-capability-test_evidence/analysis.json
+?? agent_docs/RESPONSES/response_2026-10-14_130354_apbm001-adk-live-capability-test_evidence/baseline-git.txt
+?? agent_docs/RESPONSES/response_2026-10-14_130354_apbm001-adk-live-capability-test_evidence/console.txt
+?? agent_docs/RESPONSES/response_2026-10-14_130354_apbm001-adk-live-capability-test_evidence/raw/04-new-list-empty.json
+?? agent_docs/RESPONSES/response_2026-10-14_130354_apbm001-adk-live-capability-test_evidence/raw/05-create-a.json
+?? agent_docs/RESPONSES/response_2026-10-14_130354_apbm001-adk-live-capability-test_evidence/raw/06-create-b.json
+?? agent_docs/RESPONSES/response_2026-10-14_130354_apbm001-adk-live-capability-test_evidence/raw/07-run-a-marker.json
+?? agent_docs/RESPONSES/response_2026-10-14_130354_apbm001-adk-live-capability-test_evidence/raw/08-run-b-marker.json
+?? agent_docs/RESPONSES/response_2026-10-14_130354_apbm001-adk-live-capability-test_evidence/raw/09-list-after-markers.json
+?? agent_docs/RESPONSES/response_2026-10-14_130354_apbm001-adk-live-capability-test_evidence/raw/10-get-a-after-marker.json
+?? agent_docs/RESPONSES/response_2026-10-14_130354_apbm001-adk-live-capability-test_evidence/raw/11-get-b-after-marker.json
+?? agent_docs/RESPONSES/response_2026-10-14_130354_apbm001-adk-live-capability-test_evidence/raw/12-run-a-continue.json
+?? agent_docs/RESPONSES/response_2026-10-14_130354_apbm001-adk-live-capability-test_evidence/raw/13-list-after-continue.json
+?? agent_docs/RESPONSES/response_2026-10-14_130354_apbm001-adk-live-capability-test_evidence/raw/14-get-a-after-continue.json
+?? agent_docs/RESPONSES/response_2026-10-14_130354_apbm001-adk-live-capability-test_evidence/raw/15-get-nonexistent.json
+?? agent_docs/RESPONSES/response_2026-10-14_130354_apbm001-adk-live-capability-test_evidence/request-ledger.json
+?? agent_docs/RESPONSES/response_2026-10-14_130354_apbm001-adk-live-capability-test_evidence/responses-summary.json
+?? session_2026-10-12.md
+?? session_2026-10-14.md

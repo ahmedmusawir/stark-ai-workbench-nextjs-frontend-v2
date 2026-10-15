@@ -1,25 +1,33 @@
 /**
- * Unit tests for the native ADK connector lib (BIM-002).
- * Intent (Rule K9): the ported jewels behave byte-equivalently to the wrapper
- * oracle — response selection (reversed scan), history normalization, the
- * not-found→create→retry-ONCE loop, and session-id bootstrap — against
- * realistic fixtures in both author styles (FLAG-1 ruling).
+ * Unit tests for the native ADK connector lib (BIM-002, reworked APBM001).
+ * Intent (Rule K9): response selection (reversed scan) and history
+ * normalization still match the wrapper oracle in both author styles
+ * (FLAG-1). APBM001 deliberately SUPERSEDES the wrapper-era session
+ * bootstrap, `session-${Date.now()}` IDs and the not-found→create→retry loop
+ * (R001-06): those tests are replaced by their opposites — one camelCase run
+ * attempt, a 404 is `session-missing`, never a create.
  */
 
 import {
-  ConnectorError,
+  createSession,
   extractResponseText,
+  fallbackTitle,
+  getSessionHistory,
   isSessionNotFound,
-  newSessionId,
+  listSessions,
   normalizeHistory,
-  runAgentFlow,
+  normalizeSessionList,
+  normalizeTitle,
+  runRequestBody,
+  runTurn,
   sessionUrl,
 } from '@/app/api/agent/_lib/adk';
-import type { RunAgentRequest } from '@/types';
+import type { AgentTarget } from '@/app/api/agent/_lib/context';
 
 import {
   authorModelStyleEvents,
   authorModelStyleExpected,
+  createdSession,
   emptyEvents,
   happyPathEvents,
   happyPathExpected,
@@ -29,10 +37,21 @@ import {
   malformedEvents,
   multiEventExpected,
   multiEventRun,
+  sessionListRows,
   sessionNotFound404,
+  thoughtPartRun,
 } from './fixtures/adk-events';
 
 const BUNDLE = 'https://bundle.example.test';
+const TARGET: AgentTarget = {
+  agent: 'greeting_agent',
+  bundleId: 'v1',
+  baseUrl: BUNDLE,
+  backendKey: '0123456789abcdef',
+};
+const USER = 'user-verified-1';
+const json = (body: unknown, status = 200) =>
+  new Response(JSON.stringify(body), { status });
 
 describe('extractResponseText (R5 response selection)', () => {
   it('selects the model text from a happy-path run (canonical author style)', () => {
@@ -61,67 +80,114 @@ describe('extractResponseText (R5 response selection)', () => {
     expect(extractResponseText({ detail: 'oops' })).toBeNull();
     expect(extractResponseText(null)).toBeNull();
   });
+
+  it('excludes thought parts and never surfaces thoughtSignature data', () => {
+    expect(extractResponseText(thoughtPartRun)).toBe('Visible reply');
+  });
 });
 
-describe('normalizeHistory (A2.3 §4)', () => {
+describe('normalizeHistory (A2.3 §4, APBM001 explicit malformed)', () => {
   it('maps mixed turns to Message[], skipping non-text events, order preserved', () => {
     expect(normalizeHistory(historySession)).toEqual(historySessionExpected);
   });
 
-  it('normalizes an empty-events session to [] (the N7 shape)', () => {
+  it('normalizes a valid empty-events session to [] (the N7 shape)', () => {
     expect(normalizeHistory(historyEmptySession)).toEqual([]);
   });
 
-  it('degrades to [] for malformed sessions, never crashes', () => {
-    expect(normalizeHistory(null)).toEqual([]);
-    expect(normalizeHistory({})).toEqual([]);
-    expect(normalizeHistory({ events: 'nope' })).toEqual([]);
+  it('SUPERSEDED degrade-to-[]: a session without an events array is malformed (null)', () => {
+    expect(normalizeHistory(null)).toBeNull();
+    expect(normalizeHistory({})).toBeNull();
+    expect(normalizeHistory({ events: 'nope' })).toBeNull();
+  });
+
+  it('valid events with no visible text still normalize to []', () => {
     expect(normalizeHistory({ events: malformedEvents })).toEqual([]);
   });
-});
 
-describe('isSessionNotFound', () => {
-  it('matches 404 status', () => {
-    expect(isSessionNotFound(404, '')).toBe(true);
-  });
-
-  it('matches the detail text regardless of status', () => {
-    expect(
-      isSessionNotFound(500, JSON.stringify(sessionNotFound404)),
-    ).toBe(true);
-  });
-
-  it('does not match other failures', () => {
-    expect(isSessionNotFound(500, '{"detail":"boom"}')).toBe(false);
-    expect(isSessionNotFound(422, 'validation error')).toBe(false);
+  it('drops thought parts from transcript messages', () => {
+    expect(normalizeHistory({ events: thoughtPartRun })).toEqual([
+      { role: 'assistant', content: 'Visible reply' },
+    ]);
   });
 });
 
-describe('newSessionId (R4)', () => {
-  it("preserves the wrapper's session-${Date.now()} convention", () => {
-    expect(newSessionId()).toMatch(/^session-\d+$/);
+describe('isSessionNotFound (APBM001: explicit 404 detail only)', () => {
+  it('matches the observed 404 Session not found body', () => {
+    expect(isSessionNotFound(404, JSON.stringify(sessionNotFound404))).toBe(true);
+  });
+
+  it('an agent-level or bare 404 is NOT a missing conversation', () => {
+    expect(isSessionNotFound(404, '')).toBe(false);
+    expect(isSessionNotFound(404, '{"detail":"App not found"}')).toBe(false);
+  });
+
+  it('SUPERSEDED detail-regardless-of-status: a 500 mentioning the text is not missing', () => {
+    expect(isSessionNotFound(500, JSON.stringify(sessionNotFound404))).toBe(false);
   });
 });
 
-describe('sessionUrl', () => {
+describe('titles and session list normalization', () => {
+  it('collapses whitespace, trims and caps titles at 80 characters', () => {
+    expect(normalizeTitle('  hello \n\t world  ')).toBe('hello world');
+    expect(normalizeTitle('x'.repeat(200))).toHaveLength(80);
+    expect(normalizeTitle(42)).toBe('');
+  });
+
+  it('sorts newest-created first with a deterministic ID tie-break and stable fallback titles', () => {
+    expect(normalizeSessionList(sessionListRows, USER)).toEqual([
+      {
+        session_id: 'bbbbbbbb-2222-4222-8222-222222222222',
+        title: 'Newest created title',
+        title_source: 'stored',
+        created_at: new Date(1791961412250).toISOString(),
+      },
+      {
+        session_id: 'cccccccc-3333-4333-8333-333333333333',
+        title: fallbackTitle('cccccccc-3333-4333-8333-333333333333'),
+        title_source: 'fallback',
+        created_at: new Date(1791961412250).toISOString(),
+      },
+      {
+        session_id: 'aaaaaaaa-1111-4111-8111-111111111111',
+        title: 'Older titled conversation',
+        title_source: 'stored',
+        created_at: new Date(1791961400500).toISOString(),
+      },
+    ]);
+    expect(fallbackTitle('cccccccc-3333')).toBe('Conversation cccccccc');
+  });
+
+  it('treats non-arrays, rows without IDs and rows for another user as malformed', () => {
+    expect(normalizeSessionList({ sessions: [] }, USER)).toBeNull();
+    expect(normalizeSessionList([{ state: {} }], USER)).toBeNull();
+    expect(normalizeSessionList([{ id: 'x', userId: 'someone-else' }], USER)).toBeNull();
+    expect(normalizeSessionList([], USER)).toEqual([]);
+  });
+});
+
+describe('URLs and wire body', () => {
   it('builds the native path with encoded segments', () => {
     expect(sessionUrl(BUNDLE, 'jarvis_agent', 'u/1', 'session-1')).toBe(
       `${BUNDLE}/apps/jarvis_agent/users/u%2F1/sessions/session-1`,
     );
   });
+
+  it('uses the tested camelCase RunAgentRequest, never snake_case', () => {
+    const body = runRequestBody('greeting_agent', USER, 's-1', 'hi');
+    expect(body).toEqual({
+      appName: 'greeting_agent',
+      userId: USER,
+      sessionId: 's-1',
+      newMessage: { role: 'user', parts: [{ text: 'hi' }] },
+    });
+    expect(JSON.stringify(body)).not.toMatch(/app_name|user_id|session_id|new_message/);
+  });
 });
 
-describe('runAgentFlow (session bootstrap + retry-once)', () => {
+describe('upstream calls: exactly one attempt each, sanitized classification', () => {
   const fetchMock = jest.fn();
   const originalFetch = global.fetch;
-  const ctx = { baseUrl: BUNDLE, auth: null };
-
-  const REQ: RunAgentRequest = {
-    agent_name: 'jarvis_agent',
-    message: 'status report',
-    user_id: 'u-1',
-    session_id: 'session-42',
-  };
 
   beforeEach(() => {
     global.fetch = fetchMock as unknown as typeof fetch;
@@ -131,115 +197,95 @@ describe('runAgentFlow (session bootstrap + retry-once)', () => {
     global.fetch = originalFetch;
   });
 
-  const okRun = () =>
-    new Response(JSON.stringify(happyPathEvents), { status: 200 });
-  const okCreate = () => new Response('{}', { status: 200 });
-  const notFound = () =>
-    new Response(JSON.stringify(sessionNotFound404), { status: 404 });
+  const codeOf = async (promise: Promise<unknown>) => {
+    try {
+      await promise;
+    } catch (e) {
+      return { status: (e as { status: number }).status, code: (e as { code: string }).code, message: (e as Error).message };
+    }
+    throw new Error('expected rejection');
+  };
 
-  it('existing session: exactly one /run call, correct native payload', async () => {
-    fetchMock.mockResolvedValueOnce(okRun());
-
-    const result = await runAgentFlow(ctx, REQ);
-
+  it('runTurn: one camelCase /run, returns reply, event IDs and invocation ID, no Authorization', async () => {
+    fetchMock.mockResolvedValueOnce(
+      json([{ ...happyPathEvents[1], invocationId: 'e-1' }]),
+    );
+    await expect(runTurn(TARGET, USER, 's-1', 'hello')).resolves.toEqual({
+      reply: happyPathExpected,
+      eventIds: ['ev-2'],
+      invocationId: 'e-1',
+    });
     expect(fetchMock).toHaveBeenCalledTimes(1);
     const [url, init] = fetchMock.mock.calls[0];
     expect(url).toBe(`${BUNDLE}/run`);
-    expect(JSON.parse(init.body)).toEqual({
-      app_name: 'jarvis_agent',
-      user_id: 'u-1',
-      session_id: 'session-42',
-      new_message: { role: 'user', parts: [{ text: 'status report' }] },
-    });
+    expect(JSON.parse(init.body)).toEqual(runRequestBody('greeting_agent', USER, 's-1', 'hello'));
+    expect(init.headers.Authorization).toBeUndefined();
     expect(init.signal).toBeInstanceOf(AbortSignal);
-    expect(result).toEqual({
-      response: happyPathExpected,
-      session_id: 'session-42',
-    });
   });
 
-  it('null session (N5): generates session-${Date.now()}, creates, then runs', async () => {
-    fetchMock.mockResolvedValueOnce(okCreate()).mockResolvedValueOnce(okRun());
-
-    const result = await runAgentFlow(ctx, { ...REQ, session_id: null });
-
-    expect(fetchMock).toHaveBeenCalledTimes(2);
-    const [createUrl, createInit] = fetchMock.mock.calls[0];
-    expect(createUrl).toMatch(
-      new RegExp(`^${BUNDLE}/apps/jarvis_agent/users/u-1/sessions/session-\\d+$`),
-    );
-    expect(createInit.method).toBe('POST');
-    expect(createInit.body).toBe('{}');
-    const [runUrl] = fetchMock.mock.calls[1];
-    expect(runUrl).toBe(`${BUNDLE}/run`);
-    expect(result.session_id).toMatch(/^session-\d+$/);
-    expect(result.response).toBe(happyPathExpected);
-  });
-
-  it('session-not-found (N6): exactly one create + one retry, then success', async () => {
-    fetchMock
-      .mockResolvedValueOnce(notFound()) // run #1 → 404
-      .mockResolvedValueOnce(okCreate()) // create
-      .mockResolvedValueOnce(okRun()); // run #2 → 200
-
-    const result = await runAgentFlow(ctx, REQ);
-
-    expect(fetchMock).toHaveBeenCalledTimes(3);
-    expect(fetchMock.mock.calls[0][0]).toBe(`${BUNDLE}/run`);
-    expect(fetchMock.mock.calls[1][0]).toBe(
-      `${BUNDLE}/apps/jarvis_agent/users/u-1/sessions/session-42`,
-    );
-    expect(fetchMock.mock.calls[2][0]).toBe(`${BUNDLE}/run`);
-    expect(result).toEqual({
-      response: happyPathExpected,
-      session_id: 'session-42',
-    });
-  });
-
-  it('retry failure (N6): second run failure → ConnectorError 502, no third run', async () => {
-    fetchMock
-      .mockResolvedValueOnce(notFound())
-      .mockResolvedValueOnce(okCreate())
-      .mockResolvedValueOnce(
-        new Response('{"detail":"boom"}', { status: 500 }),
-      );
-
-    await expect(runAgentFlow(ctx, REQ)).rejects.toMatchObject({
-      status: 502,
-    });
-    expect(fetchMock).toHaveBeenCalledTimes(3);
-  });
-
-  it('non-not-found run failure → 502 with NO retry', async () => {
-    fetchMock.mockResolvedValueOnce(
-      new Response('{"detail":"internal"}', { status: 500 }),
-    );
-
-    await expect(runAgentFlow(ctx, REQ)).rejects.toBeInstanceOf(ConnectorError);
+  it('SUPERSEDED retry-once: a 404 Session not found is session-missing with NO create and NO second run', async () => {
+    fetchMock.mockResolvedValueOnce(json(sessionNotFound404, 404));
+    await expect(codeOf(runTurn(TARGET, USER, 's-gone', 'x'))).resolves.toMatchObject({ status: 404, code: 'session-missing' });
     expect(fetchMock).toHaveBeenCalledTimes(1);
   });
 
-  it('run succeeds but no model text in events → 502 "No model response in events"', async () => {
-    fetchMock.mockResolvedValueOnce(
-      new Response(JSON.stringify(emptyEvents), { status: 200 }),
-    );
-
-    await expect(runAgentFlow(ctx, REQ)).rejects.toMatchObject({
-      status: 502,
-      message: 'No model response in events',
-    });
+  it('a 200 run without model text is malformed (uncertain to the client), never a crash', async () => {
+    fetchMock.mockResolvedValueOnce(json(emptyEvents));
+    await expect(codeOf(runTurn(TARGET, USER, 's-1', 'x'))).resolves.toMatchObject({ code: 'upstream-malformed' });
   });
 
-  it('forwards the Authorization header on create AND run (R2)', async () => {
-    fetchMock.mockResolvedValueOnce(okCreate()).mockResolvedValueOnce(okRun());
+  it.each([
+    [401, 'upstream-access'],
+    [403, 'upstream-access'],
+    [422, 'upstream-rejected'],
+    [500, 'upstream-unavailable'],
+    [503, 'upstream-unavailable'],
+  ])('upstream %i → %s, with the upstream body never echoed', async (status, code) => {
+    fetchMock.mockResolvedValueOnce(json({ detail: 'SECRET internal stack' }, status));
+    const result = await codeOf(runTurn(TARGET, USER, 's-1', 'x'));
+    expect(result.code).toBe(code);
+    expect(result.message).not.toMatch(/SECRET|stack/);
+    expect(fetchMock).toHaveBeenCalledTimes(1);
+  });
 
-    await runAgentFlow(
-      { baseUrl: BUNDLE, auth: 'Bearer tok-123' },
-      { ...REQ, session_id: null },
-    );
+  it('timeouts and transport failures are classified without leaking the cause', async () => {
+    fetchMock.mockRejectedValueOnce(Object.assign(new Error('t'), { name: 'TimeoutError' }));
+    await expect(codeOf(runTurn(TARGET, USER, 's-1', 'x'))).resolves.toMatchObject({ status: 504, code: 'upstream-timeout' });
+    fetchMock.mockRejectedValueOnce(new TypeError('connect ECONNREFUSED 10.0.0.1'));
+    const transport = await codeOf(listSessions(TARGET, USER));
+    expect(transport).toMatchObject({ code: 'upstream-unavailable' });
+    expect(transport.message).not.toMatch(/ECONNREFUSED|10\.0/);
+  });
 
-    for (const [, init] of fetchMock.mock.calls) {
-      expect(init.headers.Authorization).toBe('Bearer tok-123');
-    }
+  it('createSession: POST to the UUID path with the title as initial state; echo must match', async () => {
+    const id = 'dddddddd-4444-4444-8444-444444444444';
+    fetchMock.mockResolvedValueOnce(json(createdSession(id, 'My title')));
+    await expect(createSession(TARGET, USER, id, 'My title')).resolves.toEqual({
+      createdAt: new Date(1791961411947.805).toISOString(),
+    });
+    const [url, init] = fetchMock.mock.calls[0];
+    expect(url).toBe(sessionUrl(BUNDLE, 'greeting_agent', USER, id));
+    expect(init.method).toBe('POST');
+    expect(JSON.parse(init.body)).toEqual({ title: 'My title' });
+    fetchMock.mockResolvedValueOnce(json(createdSession('other-id', 'My title')));
+    await expect(codeOf(createSession(TARGET, USER, id, 'My title'))).resolves.toMatchObject({ code: 'upstream-malformed' });
+  });
+
+  it('getSessionHistory: empty events is [], 404 is missing, malformed/ID mismatch is unavailable', async () => {
+    fetchMock.mockResolvedValueOnce(json(historyEmptySession));
+    await expect(getSessionHistory(TARGET, USER, historyEmptySession.id)).resolves.toEqual([]);
+    fetchMock.mockResolvedValueOnce(json(sessionNotFound404, 404));
+    await expect(codeOf(getSessionHistory(TARGET, USER, 'gone'))).resolves.toMatchObject({ code: 'session-missing' });
+    fetchMock.mockResolvedValueOnce(json({ id: 'x' }));
+    await expect(codeOf(getSessionHistory(TARGET, USER, 'x'))).resolves.toMatchObject({ code: 'upstream-malformed' });
+    fetchMock.mockResolvedValueOnce(json(historySession));
+    await expect(codeOf(getSessionHistory(TARGET, USER, 'another-id'))).resolves.toMatchObject({ code: 'upstream-malformed' });
+    fetchMock.mockResolvedValueOnce(new Response('<html>not json</html>', { status: 200 }));
+    await expect(codeOf(getSessionHistory(TARGET, USER, 'x'))).resolves.toMatchObject({ code: 'upstream-malformed' });
+  });
+
+  it('listSessions: a non-session 404 (agent level) is unavailable, not empty', async () => {
+    fetchMock.mockResolvedValueOnce(json({ detail: 'Not Found' }, 404));
+    await expect(codeOf(listSessions(TARGET, USER))).resolves.toMatchObject({ code: 'upstream-unavailable' });
   });
 });

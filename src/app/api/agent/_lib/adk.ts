@@ -1,28 +1,33 @@
 /**
- * Native ADK connector — the wrapper's brains, ported home (BIM-002).
+ * Native ADK connector (BIM-002, reworked APBM001).
  *
- * Talks directly to the ADK bundle's `api_server` API. Ports the wrapper's
- * three jewels: session creation, the not-found→create→retry-once loop, and
- * event-array response parsing. Pure parsing/normalizing functions are
- * fixture-testable without HTTP.
+ * Talks directly to the ADK bundle's `api_server` using the contract observed
+ * on 14 October 2026: list/get/create-with-ID sessions and camelCase `/run`.
+ * APBM001 supersedes the wrapper-era session bootstrap and the
+ * not-found→create→retry loop (R001-06): a continuation never creates, and
+ * every mutation is exactly one upstream attempt. Pure parsing functions are
+ * fixture-testable without HTTP; malformed successful payloads are failures,
+ * never empty results.
  *
  * Model-authored predicate (Architect FLAG-1 ruling): an event is a model
  * response iff `content.role === "model"` with a text part — real ADK events
  * carry `author: "<agent_name>"`, so author is never used for detection.
  *
- * @see agent_docs/CURRENT_APP/BIM002/DATA_CONTRACT_AMENDMENT_A2.md
+ * @see agent_docs/ACTIONS/stark_agent_workspace_apbm_001/DATA_CONTRACT.md
  */
 
-import type { Message, RunAgentRequest, RunAgentResponse } from '@/types';
+import type { ConversationRowWire, Message } from '@/types';
 
-// Run path shares one 90s deadline across create + run + retry (A2.3 §5);
-// per-call caps keep a hung create from eating the whole budget.
-const RUN_TOTAL_MS = 90_000;
-const RUN_CALL_CAP_MS = 75_000;
-const CREATE_CALL_CAP_MS = 10_000;
+import { RouteError, withDeadline, type AgentTarget } from './context';
+
+export const READ_TIMEOUT_MS = 60_000;
+export const CREATE_TIMEOUT_MS = 60_000;
+export const RUN_TIMEOUT_MS = 90_000;
+export const TITLE_MAX_CHARS = 80;
 
 interface AdkPart {
   text?: unknown;
+  thought?: unknown;
 }
 
 interface AdkContent {
@@ -31,95 +36,126 @@ interface AdkContent {
 }
 
 interface AdkEvent {
-  author?: unknown;
+  id?: unknown;
+  invocationId?: unknown;
   content?: AdkContent;
 }
 
-interface AdkSession {
-  events?: unknown;
-}
-
-/** Upstream/config fault carrying the HTTP status the route should return. */
-export class ConnectorError extends Error {
-  readonly status: number;
-
-  constructor(status: number, message: string) {
-    super(message);
-    this.status = status;
-  }
-}
-
-/** R4: preserve the wrapper's session-id convention this module. */
-export const newSessionId = (): string => `session-${Date.now()}`;
-
-/** The wrapper's session-not-found signature: 404 or the detail text. */
+/** Only an explicit 404 whose detail names the session is a missing conversation. */
 export function isSessionNotFound(status: number, bodyText: string): boolean {
-  return status === 404 || /session not found/i.test(bodyText);
+  return status === 404 && /session not found/i.test(bodyText);
+}
+
+/** Visible text of an event: non-thought text parts only (no thought/tool data). */
+function eventText(event: AdkEvent, role: 'user' | 'model'): string | null {
+  if (event?.content?.role !== role) return null;
+  const parts = event.content.parts;
+  if (!Array.isArray(parts)) return null;
+  const texts = parts
+    .filter((part: AdkPart) => part?.thought !== true)
+    .map((part: AdkPart) => part?.text)
+    .filter((text): text is string => typeof text === 'string' && text.length > 0);
+  return texts.length ? texts.join('') : null;
 }
 
 /**
- * Reversed scan of a run's event array for the LAST model-authored text part
- * (wrapper-equivalent response selection). Returns null when no event
- * qualifies — callers surface that as a 502, never a crash.
+ * Reversed scan of a run's event array for the LAST model-authored text.
+ * Returns null when no event qualifies.
  */
 export function extractResponseText(events: unknown): string | null {
   if (!Array.isArray(events)) return null;
   for (let i = events.length - 1; i >= 0; i--) {
-    const text = firstTextPart(events[i] as AdkEvent, 'model');
+    const text = eventText(events[i] as AdkEvent, 'model');
     if (text !== null) return text;
   }
   return null;
 }
 
 /**
- * Session events → the contract's `Message[]` (A2.3 §4): role "model" →
- * assistant, "user" → user; text parts only; everything else skipped.
- * Order preserved oldest→newest. Malformed input degrades to [].
+ * Session events → `Message[]`: role "model" → assistant, "user" → user;
+ * visible text only, order preserved. A session without an events array is
+ * malformed (null), which callers report as unavailable — never as empty.
  */
-export function normalizeHistory(session: unknown): Message[] {
-  const events = (session as AdkSession | null)?.events;
-  if (!Array.isArray(events)) return [];
+export function normalizeHistory(session: unknown): Message[] | null {
+  const events = (session as { events?: unknown } | null)?.events;
+  if (!Array.isArray(events)) return null;
   const history: Message[] = [];
   for (const raw of events) {
     const event = raw as AdkEvent;
     const role = event?.content?.role;
     if (role !== 'user' && role !== 'model') continue;
-    const text = firstTextPart(event, role);
+    const text = eventText(event, role);
     if (text === null) continue;
-    history.push({
-      role: role === 'model' ? 'assistant' : 'user',
-      content: text,
-    });
+    history.push({ role: role === 'model' ? 'assistant' : 'user', content: text });
   }
   return history;
 }
 
-function firstTextPart(event: AdkEvent, role: 'user' | 'model'): string | null {
-  if (event?.content?.role !== role) return null;
-  const parts = event.content.parts;
-  if (!Array.isArray(parts)) return null;
-  for (const part of parts) {
-    const text = (part as AdkPart)?.text;
-    if (typeof text === 'string' && text.length > 0) return text;
+/** Initial title: whitespace collapsed, trimmed, at most 80 characters. */
+export function normalizeTitle(raw: unknown): string {
+  if (typeof raw !== 'string') return '';
+  return Array.from(raw.replace(/\s+/g, ' ').trim())
+    .slice(0, TITLE_MAX_CHARS)
+    .join('')
+    .trim();
+}
+
+/** Stable readable fallback for older untitled sessions. */
+export const fallbackTitle = (sessionId: string): string =>
+  `Conversation ${sessionId.slice(0, 8)}`;
+
+/** ADK lastUpdateTime (epoch seconds) → ISO, or null when absent/invalid. */
+function isoFromEpochSeconds(value: unknown): string | null {
+  if (typeof value !== 'number' || !Number.isFinite(value) || value <= 0) {
+    return null;
   }
-  return null;
+  const date = new Date(value * 1000);
+  return Number.isNaN(date.getTime()) ? null : date.toISOString();
 }
 
-export interface ConnectorContext {
-  baseUrl: string;
-  /** R2: reserved auth slot — forwarded verbatim on every native call. */
-  auth: string | null;
+/**
+ * Session[] → rows sorted newest-created first with a session-ID tie-break.
+ * On this target lastUpdateTime stays at creation, so it is creation order,
+ * never last activity. Any malformed row makes the whole list malformed.
+ */
+export function normalizeSessionList(
+  payload: unknown,
+  userId: string,
+): ConversationRowWire[] | null {
+  if (!Array.isArray(payload)) return null;
+  const rows: Array<ConversationRowWire & { sortKey: number }> = [];
+  for (const raw of payload) {
+    const row = raw as {
+      id?: unknown;
+      userId?: unknown;
+      state?: { title?: unknown } | null;
+      lastUpdateTime?: unknown;
+    } | null;
+    if (!row || typeof row.id !== 'string' || !row.id) return null;
+    if (typeof row.userId === 'string' && row.userId !== userId) return null;
+    const stored = normalizeTitle(row.state?.title);
+    const createdAt = isoFromEpochSeconds(row.lastUpdateTime);
+    rows.push({
+      session_id: row.id,
+      title: stored || fallbackTitle(row.id),
+      title_source: stored ? 'stored' : 'fallback',
+      created_at: createdAt,
+      sortKey: createdAt ? (row.lastUpdateTime as number) : -Infinity,
+    });
+  }
+  rows.sort(
+    (a, b) =>
+      b.sortKey - a.sortKey ||
+      (a.session_id < b.session_id ? -1 : a.session_id > b.session_id ? 1 : 0),
+  );
+  return rows.map(({ sortKey: _sortKey, ...row }) => row);
 }
 
-function callHeaders(auth: string | null): Record<string, string> {
-  return {
-    'Content-Type': 'application/json',
-    ...(auth ? { Authorization: auth } : {}),
-  };
-}
+const enc = encodeURIComponent;
 
-const remainingMs = (deadline: number, cap: number): number =>
-  Math.max(1, Math.min(cap, deadline - Date.now()));
+export function sessionsUrl(baseUrl: string, agentName: string, userId: string): string {
+  return `${baseUrl}/apps/${enc(agentName)}/users/${enc(userId)}/sessions`;
+}
 
 export function sessionUrl(
   baseUrl: string,
@@ -127,92 +163,165 @@ export function sessionUrl(
   userId: string,
   sessionId: string,
 ): string {
-  return `${baseUrl}/apps/${encodeURIComponent(agentName)}/users/${encodeURIComponent(
-    userId,
-  )}/sessions/${encodeURIComponent(sessionId)}`;
+  return `${sessionsUrl(baseUrl, agentName, userId)}/${enc(sessionId)}`;
 }
 
-async function createSession(
-  ctx: ConnectorContext,
+/** The tested camelCase RunAgentRequest — never snake_case upstream. */
+export function runRequestBody(
   agentName: string,
   userId: string,
   sessionId: string,
-  deadline: number,
-): Promise<void> {
-  const res = await fetch(sessionUrl(ctx.baseUrl, agentName, userId, sessionId), {
-    method: 'POST',
-    headers: callHeaders(ctx.auth),
-    body: '{}',
-    signal: AbortSignal.timeout(remainingMs(deadline, CREATE_CALL_CAP_MS)),
-  });
-  if (!res.ok) {
-    throw new ConnectorError(
-      502,
-      `Create session failed: ${res.status} ${await res.text()}`,
-    );
+  message: string,
+) {
+  return {
+    appName: agentName,
+    userId,
+    sessionId,
+    newMessage: { role: 'user', parts: [{ text: message }] },
+  };
+}
+
+// --- Upstream calls (one attempt each) -----------------------------------
+
+const JSON_HEADERS = { 'Content-Type': 'application/json' };
+
+/** Transport/timeout failure → sanitized code; the cause text never leaves the server. */
+function transportFailure(e: unknown): RouteError {
+  if (e instanceof Error && e.name === 'TimeoutError') {
+    return new RouteError(504, 'upstream-timeout', 'Agent service timed out');
+  }
+  return new RouteError(502, 'upstream-unavailable', 'Agent service unavailable');
+}
+
+/** Non-2xx upstream status → sanitized code (body inspected, never echoed). */
+async function statusFailure(
+  res: Response,
+  options: { sessionScoped: boolean },
+): Promise<RouteError> {
+  const bodyText = await res.text().catch(() => '');
+  if (options.sessionScoped && isSessionNotFound(res.status, bodyText)) {
+    return new RouteError(404, 'session-missing', 'Conversation not found');
+  }
+  if (res.status === 401 || res.status === 403) {
+    return new RouteError(502, 'upstream-access', 'Agent service refused access');
+  }
+  if (res.status === 400 || res.status === 409 || res.status === 422) {
+    return new RouteError(502, 'upstream-rejected', 'Agent service rejected the request');
+  }
+  return new RouteError(502, 'upstream-unavailable', 'Agent service unavailable');
+}
+
+const malformed = () =>
+  new RouteError(502, 'upstream-malformed', 'Agent service returned an unexpected response');
+
+async function call(
+  url: string,
+  init: RequestInit,
+  timeoutMs: number,
+  signal: AbortSignal | undefined,
+  options: { sessionScoped: boolean },
+): Promise<unknown> {
+  let res: Response;
+  try {
+    res = await fetch(url, { ...init, signal: withDeadline(timeoutMs, signal) });
+  } catch (e) {
+    throw transportFailure(e);
+  }
+  if (!res.ok) throw await statusFailure(res, options);
+  try {
+    return await res.json();
+  } catch (e) {
+    if (e instanceof Error && (e.name === 'TimeoutError' || e.name === 'AbortError')) {
+      throw transportFailure(e);
+    }
+    throw malformed();
   }
 }
 
-async function runOnce(
-  ctx: ConnectorContext,
-  input: { agentName: string; userId: string; sessionId: string; message: string },
-  deadline: number,
-): Promise<Response> {
-  return fetch(`${ctx.baseUrl}/run`, {
-    method: 'POST',
-    headers: callHeaders(ctx.auth),
-    body: JSON.stringify({
-      app_name: input.agentName,
-      user_id: input.userId,
-      session_id: input.sessionId,
-      new_message: { role: 'user', parts: [{ text: input.message }] },
-    }),
-    signal: AbortSignal.timeout(remainingMs(deadline, RUN_CALL_CAP_MS)),
-  });
+export async function listSessions(
+  target: AgentTarget,
+  userId: string,
+  signal?: AbortSignal,
+): Promise<ConversationRowWire[]> {
+  const payload = await call(
+    sessionsUrl(target.baseUrl, target.agent, userId),
+    { method: 'GET' },
+    READ_TIMEOUT_MS,
+    signal,
+    { sessionScoped: false },
+  );
+  const rows = normalizeSessionList(payload, userId);
+  if (!rows) throw malformed();
+  return rows;
 }
 
-/**
- * The full run flow (A2.3 §1–3): bootstrap session when the request carries
- * none; run; on the session-not-found signature create + retry EXACTLY once;
- * reversed-scan the events for the response text. Throws ConnectorError for
- * upstream faults; network-level rejections propagate for the route's catch.
- */
-export async function runAgentFlow(
-  ctx: ConnectorContext,
-  request: RunAgentRequest,
-): Promise<RunAgentResponse> {
-  const deadline = Date.now() + RUN_TOTAL_MS;
-  const { agent_name: agentName, user_id: userId, message } = request;
+export async function getSessionHistory(
+  target: AgentTarget,
+  userId: string,
+  sessionId: string,
+  signal?: AbortSignal,
+): Promise<Message[]> {
+  const payload = await call(
+    sessionUrl(target.baseUrl, target.agent, userId, sessionId),
+    { method: 'GET' },
+    READ_TIMEOUT_MS,
+    signal,
+    { sessionScoped: true },
+  );
+  const history = normalizeHistory(payload);
+  if (!history || (payload as { id?: unknown }).id !== sessionId) throw malformed();
+  return history;
+}
 
-  let sessionId = request.session_id;
-  if (!sessionId) {
-    sessionId = newSessionId();
-    await createSession(ctx, agentName, userId, sessionId, deadline);
-  }
+/** Create-with-ID: the request body is the initial session state. */
+export async function createSession(
+  target: AgentTarget,
+  userId: string,
+  sessionId: string,
+  title: string,
+  signal?: AbortSignal,
+): Promise<{ createdAt: string | null }> {
+  const payload = await call(
+    sessionUrl(target.baseUrl, target.agent, userId, sessionId),
+    { method: 'POST', headers: JSON_HEADERS, body: JSON.stringify({ title }) },
+    CREATE_TIMEOUT_MS,
+    signal,
+    { sessionScoped: false },
+  );
+  const session = payload as { id?: unknown; lastUpdateTime?: unknown } | null;
+  if (!session || session.id !== sessionId) throw malformed();
+  return { createdAt: isoFromEpochSeconds(session.lastUpdateTime) };
+}
 
-  const runInput = { agentName, userId, sessionId, message };
-  let res = await runOnce(ctx, runInput, deadline);
-
-  if (!res.ok) {
-    const bodyText = await res.text();
-    if (!isSessionNotFound(res.status, bodyText)) {
-      throw new ConnectorError(502, `Run failed: ${res.status} ${bodyText}`);
-    }
-    // The ported retry-once loop: create, retry, never loop again.
-    await createSession(ctx, agentName, userId, sessionId, deadline);
-    res = await runOnce(ctx, runInput, deadline);
-    if (!res.ok) {
-      throw new ConnectorError(
-        502,
-        `Run failed after session create: ${res.status} ${await res.text()}`,
-      );
-    }
-  }
-
-  const events: unknown = await res.json();
-  const responseText = extractResponseText(events);
-  if (responseText === null) {
-    throw new ConnectorError(502, 'No model response in events');
-  }
-  return { response: responseText, session_id: sessionId };
+/** One camelCase /run on an existing session. 404 is missing — never recreated. */
+export async function runTurn(
+  target: AgentTarget,
+  userId: string,
+  sessionId: string,
+  message: string,
+  signal?: AbortSignal,
+): Promise<{ reply: string; eventIds: string[]; invocationId: string | null }> {
+  const events = await call(
+    `${target.baseUrl}/run`,
+    {
+      method: 'POST',
+      headers: JSON_HEADERS,
+      body: JSON.stringify(runRequestBody(target.agent, userId, sessionId, message)),
+    },
+    RUN_TIMEOUT_MS,
+    signal,
+    { sessionScoped: true },
+  );
+  const reply = extractResponseText(events);
+  if (reply === null) throw malformed();
+  const list = events as AdkEvent[];
+  const eventIds = list
+    .map((event) => event?.id)
+    .filter((id): id is string => typeof id === 'string');
+  const invocation = list.find((event) => typeof event?.invocationId === 'string');
+  return {
+    reply,
+    eventIds,
+    invocationId: (invocation?.invocationId as string | undefined) ?? null,
+  };
 }

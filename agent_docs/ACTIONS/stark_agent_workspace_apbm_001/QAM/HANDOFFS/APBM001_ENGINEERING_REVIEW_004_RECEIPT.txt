@@ -1,0 +1,13 @@
+APBM001 engineering review 004 — receipt
+Created: 2026-10-15T12:02:48+06:00 (Asia/Dhaka)
+ZIP: /home/moose/nextjs/10XLAB/stark-ai-workbench-nextjs-frontend-v2/agent_docs/ACTIONS/stark_agent_workspace_apbm_001/QAM/HANDOFFS/APBM001_ENGINEERING_REVIEW_004.zip
+Downloads copy: /home/moose/Downloads/APBM001_ENGINEERING_REVIEW_004.zip
+Bytes: 6279458
+Members: 161 (FILE_INDEX.json + 160 indexed files)
+SHA-256: 4d02b2630596b9725d487a6b6b581e3acc262312723a8490b9e73680b4d8f90d
+State: ENGINEERING_COMPLETE — Architect AC025 origin correction applied (engineering attempt 003); Jest 44/479, tsc 0, build 0, Playwright 50/50; no live walk (attempt-002 evidence is tied to the review-003 candidate)
+Supersedes: APBM001_ENGINEERING_REVIEW_003.zip (SHA-256 56cef7f843f01f778df368d79a9447ec3a56db78472d4f0b72598ade309c0f63), kept unchanged; vs 003 changed: src/app/api/agent/_lib/context.ts (product), agent-boundary.test.ts, instructions-route.test.ts, tests/workspace/apbm001.config.ts
+Baseline/HEAD: f0fbf2282737ea3a63fc78d553cd31fc570821d5 (candidate pending Tony commit)
+Verification: CRC OK; exact membership; per-member bytes+SHA-256; safe unique paths; no symlinks; no nested ZIPs
+Privacy: 0 unreviewed pattern hits (1 reviewed synthetic literal, see FILE_INDEX.json); synthetic positive/negative controls passed; value-based scan NOT re-run (credential file not read) — 91 members byte-identical to review 003's value-scanned members, 69 new/changed members from attempt 003 (no credential source loaded)
+QA plan/approval/certification: NOT ISSUED (QA lane untouched)

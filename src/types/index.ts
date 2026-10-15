@@ -93,17 +93,183 @@ export interface RunAgentResponse {
   session_id: string;
 }
 
-/** @see DATA_CONTRACT.md §1.6 — outgoing payload for /get_history */
+/** @see DATA_CONTRACT.md §1.6 — outgoing payload for /get_history (APBM001 adds backend_key) */
 export interface GetHistoryRequest {
   agent_name: AgentName;
   user_id: string;
   session_id: string;
+  backend_key?: string;
 }
 
 /** @see DATA_CONTRACT.md §1.7 — incoming response from /get_history */
 export interface GetHistoryResponse {
   history: Message[];
 }
+
+// =============================================================================
+// APBM001 — ADK-backed workspace wire shapes (snake_case preserved)
+// =============================================================================
+
+/**
+ * Structured, sanitized error codes for /api/agent/* (APBM001 DATA_CONTRACT).
+ * Pre-upstream codes guarantee zero upstream contact; upstream codes describe
+ * what the ADK bundle answered without echoing its body.
+ */
+export type AgentErrorCode =
+  | 'invalid-request'
+  | 'invalid-agent'
+  | 'unauthenticated'
+  | 'auth-unavailable'
+  | 'identity-mismatch'
+  | 'origin-rejected'
+  | 'backend-changed'
+  | 'config-unavailable'
+  | 'agent-unavailable'
+  | 'session-missing'
+  | 'upstream-access'
+  | 'upstream-rejected'
+  | 'upstream-unavailable'
+  | 'upstream-timeout'
+  | 'upstream-malformed';
+
+/** Every non-2xx /api/agent/* body. */
+export interface AgentErrorBody {
+  error: { code: AgentErrorCode; message: string };
+}
+
+/** One ADK session row. created_at is ADK lastUpdateTime, which this target keeps at creation. */
+export interface ConversationRowWire {
+  session_id: string;
+  title: string;
+  title_source: 'stored' | 'fallback';
+  created_at: string | null;
+}
+
+/** GET /api/agent/sessions → 200 */
+export interface ListSessionsResponse {
+  status: 'ready' | 'empty';
+  sessions: ConversationRowWire[];
+  backend_key: string;
+}
+
+/** POST /api/agent/sessions → explicit create of a client-allocated UUID */
+export interface CreateSessionRequest {
+  agent_name: AgentName;
+  session_id: string;
+  title: string;
+  backend_key?: string;
+  user_id?: string;
+}
+
+/** POST /api/agent/sessions → 200 */
+export interface CreateSessionResponse {
+  status: 'created';
+  session_id: string;
+  title: string;
+  created_at: string | null;
+}
+
+/** POST /api/agent/history → 200 (successful zero events is `empty`, never a failure) */
+export interface HistoryResponseWire {
+  status: 'ready' | 'empty';
+  history: Message[];
+}
+
+/** POST /api/agent/run → continuation only; never creates or recreates a session */
+export interface RunTurnRequest {
+  agent_name: AgentName;
+  session_id: string;
+  message: string;
+  backend_key?: string;
+  user_id?: string;
+}
+
+/** POST /api/agent/run → 200 */
+export interface RunTurnResponse {
+  status: 'sent';
+  response: string;
+  session_id: string;
+  event_ids: string[];
+  invocation_id: string | null;
+}
+
+export type AgentAvailability =
+  | 'available'
+  | 'unavailable'
+  | 'unknown'
+  | 'config-unavailable';
+
+/** GET /api/agent/workspace → non-secret identity/config descriptor */
+export interface WorkspaceDescriptor {
+  user: { id: string; email: string | null };
+  mode: 'live' | 'mock';
+  supabase_ref: string | null;
+  agents: Array<{
+    agent_name: AgentName;
+    backend_key: string | null;
+    availability: AgentAvailability;
+  }>;
+  roster_checked_at: string | null;
+}
+
+// =============================================================================
+// APBM001 — chatService explicit outcomes (UI-internal camelCase)
+// =============================================================================
+
+export interface ConversationSummary {
+  sessionId: string;
+  title: string;
+  titleSource: 'stored' | 'fallback';
+  /** Creation order on this target — never presented as last activity. */
+  createdAt: string | null;
+}
+
+/** Failures a read can report; none of them is an empty result. */
+export type ReadFailureStatus =
+  | 'unavailable'
+  | 'access-unavailable'
+  | 'agent-unavailable'
+  | 'backend-changed';
+
+export type ListConversationsResult =
+  | { status: 'ready' | 'empty'; conversations: ConversationSummary[] }
+  | { status: ReadFailureStatus; conversations: [] };
+
+/** R001-05: replaces the old error-to-[] history contract. */
+export interface HistoryResult {
+  status: 'ready' | 'empty' | 'missing' | ReadFailureStatus;
+  messages: Message[];
+}
+
+/**
+ * Write failures. `not-sent` = definitively not delivered (rejected before or
+ * by upstream validation); `uncertain` = dispatched with unknown outcome.
+ */
+export type WriteFailureStatus =
+  | 'not-sent'
+  | 'uncertain'
+  | 'missing'
+  | 'access-unavailable'
+  | 'agent-unavailable'
+  | 'backend-changed';
+
+export type CreateConversationResult =
+  | { status: 'created'; sessionId: string; title: string; createdAt: string | null }
+  | { status: WriteFailureStatus; code: AgentErrorCode | null };
+
+export type RunTurnResult =
+  | {
+      status: 'sent';
+      sessionId: string;
+      reply: string;
+      eventIds: string[];
+      invocationId: string | null;
+    }
+  | { status: WriteFailureStatus; code: AgentErrorCode | null };
+
+export type WorkspaceDescriptorResult =
+  | { status: 'ready'; descriptor: WorkspaceDescriptor }
+  | { status: 'unauthenticated' | 'unavailable' };
 
 // =============================================================================
 // Auth — Supabase shapes

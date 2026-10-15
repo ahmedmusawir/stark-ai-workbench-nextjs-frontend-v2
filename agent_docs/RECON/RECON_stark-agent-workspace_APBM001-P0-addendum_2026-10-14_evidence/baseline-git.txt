@@ -1,0 +1,29 @@
+# Baseline — read-only Git (captured 2026-10-14T09:07:53+0600)
+branch: frontend-apbm-0001
+HEAD: f0fbf2282737ea3a63fc78d553cd31fc570821d5
+main: f0fbf2282737ea3a63fc78d553cd31fc570821d5  origin/main: f0fbf2282737ea3a63fc78d553cd31fc570821d5
+staged: 0
+tracked modified:
+CHANGELOG.md
+RECOVERY.md
+product/test/config/dependency/supabase/ACTIONS tracked changes (expected none):
+  (end)
+--- status --porcelain=v1 -uall ---
+ M CHANGELOG.md
+ M RECOVERY.md
+?? agent_docs/RECON/RECON_stark-agent-workspace_APBM001-P0-addendum_2026-10-14_evidence/baseline-git.txt
+?? agent_docs/RECON/RECON_stark-agent-workspace_APBM001-P0-addendum_2026-10-14_evidence/p0_1_frontend_target_identity.py
+?? agent_docs/RECON/RECON_stark-agent-workspace_APBM001-P0-addendum_2026-10-14_evidence/p0_2_supabase_chat_sessions_readonly.sql
+?? agent_docs/RECON/RECON_stark-agent-workspace_APBM001-P0-addendum_2026-10-14_evidence/p0_3_adk_cloud_run_metadata.sh
+?? agent_docs/RECON/RECON_stark-agent-workspace_APBM001-P0-addendum_2026-10-14_evidence/p0_4_adk_bundle_source_scan.sh
+?? agent_docs/RECON/RECON_stark-agent-workspace_APBM001-prep_2026-10-12.md
+?? agent_docs/RECON/RECON_stark-agent-workspace_APBM001-prep_2026-10-12_evidence/FILE_INDEX.md
+?? agent_docs/RECON/RECON_stark-agent-workspace_APBM001-prep_2026-10-12_evidence/baseline-git.txt
+?? agent_docs/RECON/RECON_stark-agent-workspace_APBM001-prep_2026-10-12_evidence/day0-sweep.txt
+?? agent_docs/RECON/RECON_stark-agent-workspace_APBM001-prep_2026-10-12_evidence/final-state.txt
+?? agent_docs/RECON/RECON_stark-agent-workspace_APBM001-prep_2026-10-12_evidence/source-anchors.txt
+?? agent_docs/RECON/RECON_stark-agent-workspace_APBM001-prep_2026-10-12_evidence/test-inventory.txt
+?? agent_docs/RESPONSES/response_2026-10-12_173300_session-start.md
+?? agent_docs/RESPONSES/response_2026-10-12_175032_apbm001-prep-recon.md
+?? session_2026-10-12.md
+?? session_2026-10-14.md

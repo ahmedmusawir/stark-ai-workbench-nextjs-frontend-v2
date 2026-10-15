@@ -8,7 +8,9 @@
  * client — the client sends manifest-validated agent NAMES, nothing else.
  * Error surface: unknown agent → 400 · unset env → 500 naming the var ·
  * GCS/backup failure → 502. Backup-before-write is enforced by the lib (I3).
- * Auth posture unchanged this module (I7 — tracked risk, BIM-006 territory).
+ * APBM001 (AC002): a verified signed-in user is required before any GCS
+ * access (401 otherwise), and PUT also requires a same-origin browser
+ * request (403). Role-level authorization is unchanged (I7, BIM-006).
  *
  * @see agent_docs/CURRENT_APP/BIM005/CLAUDE.md
  */
@@ -18,6 +20,7 @@ import { Storage } from '@google-cloud/storage';
 
 import { KNOWN_AGENTS } from '@/config/manifest';
 
+import { RouteError, assertSameOrigin, requireUser } from '../_lib/context';
 import { readInstructions, saveWithBackup } from './_lib/gcsInstructions';
 
 interface GcsEnv {
@@ -53,7 +56,21 @@ function requireKnownAgent(agentName: unknown): string | NextResponse {
   return agentName;
 }
 
+/** Auth/origin rejections keep this route's existing `{ error: string }` shape. */
+async function requireSignedIn(req: Request, mutation: boolean): Promise<NextResponse | null> {
+  try {
+    if (mutation) assertSameOrigin(req);
+    await requireUser();
+    return null;
+  } catch (e) {
+    const err = e instanceof RouteError ? e : new RouteError(401, 'unauthenticated', 'Sign in to continue');
+    return NextResponse.json({ error: err.message }, { status: err.status });
+  }
+}
+
 export async function GET(req: Request) {
+  const denied = await requireSignedIn(req, false);
+  if (denied) return denied;
   const agent = requireKnownAgent(new URL(req.url).searchParams.get('agent'));
   if (agent instanceof NextResponse) return agent;
   const env = requireEnv();
@@ -73,6 +90,8 @@ export async function GET(req: Request) {
 }
 
 export async function PUT(req: Request) {
+  const denied = await requireSignedIn(req, true);
+  if (denied) return denied;
   try {
     const body = (await req.json()) as {
       agent_name?: unknown;

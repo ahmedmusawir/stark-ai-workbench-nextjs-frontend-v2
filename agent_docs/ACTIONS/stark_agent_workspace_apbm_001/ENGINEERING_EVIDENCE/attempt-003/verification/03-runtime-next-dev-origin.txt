@@ -1,0 +1,35 @@
+## next dev origin probes (signed out: no cookies, no credentials) — started 2026-10-15 11:52:50 +0600
+## server: next dev -H 127.0.0.1 -p 43192 (owned, isolated process env):
+##   NEXT_PUBLIC_SITE_URL=https://app.example.test (overrides any .env file value for this process; .env.local not read by this seat)
+##   NODE_OPTIONS=--require=./tests/workspace/network-guard.cjs (denies and logs any non-loopback Node traffic); NEXT_TELEMETRY_DISABLED=1
+## expected trust under next dev: https://app.example.test, http://localhost:43192, http://127.0.0.1:43192
+warm-up GET /api/agent/workspace -> 401 (0.206823s, includes first compile)
+trusted: dev loopback localhost at own port | POST /api/agent/run | Origin=http://localhost:43192  -> 401 {"error":{"code":"unauthenticated","message":"Sign in to continue"}}
+trusted: dev loopback 127.0.0.1 at own port | POST /api/agent/run | Origin=http://127.0.0.1:43192  -> 401 {"error":{"code":"unauthenticated","message":"Sign in to continue"}}
+trusted: configured site origin | POST /api/agent/sessions | Origin=https://app.example.test Host: internal:3000 -> 401 {"error":{"code":"unauthenticated","message":"Sign in to continue"}}
+reject: loopback wrong port | POST /api/agent/run | Origin=http://localhost:43193 Host: localhost:43193 -> 403 {"error":{"code":"origin-rejected","message":"Cross-origin request rejected"}}
+reject: loopback wrong scheme, matching Host | POST /api/agent/run | Origin=https://localhost:43192 Host: localhost:43192 -> 403 {"error":{"code":"origin-rejected","message":"Cross-origin request rejected"}}
+reject: site wrong scheme, matching Host | POST /api/agent/history | Origin=http://app.example.test Host: app.example.test -> 403 {"error":{"code":"origin-rejected","message":"Cross-origin request rejected"}}
+reject: foreign Origin + spoofed X-Forwarded-Host | POST /api/agent/history | Origin=https://evil.example X-Forwarded-Host: evil.example X-Forwarded-Proto: https -> 403 {"error":{"code":"origin-rejected","message":"Cross-origin request rejected"}}
+reject: missing Origin | POST /api/agent/sessions | Origin=-  -> 403 {"error":{"code":"origin-rejected","message":"Cross-origin request rejected"}}
+trusted: instructions PUT, dev loopback | PUT /api/agent/instructions | Origin=http://localhost:43192  -> 401 {"error":"Sign in to continue"}
+reject: instructions PUT, spoofed Host | PUT /api/agent/instructions | Origin=https://evil.example Host: evil.example -> 403 {"error":"Cross-origin request rejected"}
+## server stopped 11:52:52; network-guard blocks logged: 0
+## port 43192 STILL LISTENING
+## 11:53:04 stop correction: `setsid` had forked, so `$!` was not the server's process group and the group kill above missed.
+##   The owned dev server (process group 215207: `next dev` + `next-server`) was then stopped with SIGTERM to that group.
+##   Port 43192 free and no 43192 process left (checked 11:53:04 and again afterwards). No other process was touched.
+## Server log (owned, scratch) request lines: every response above matched; 0 network-guard blocks (no non-loopback Node traffic).
+## Filtered server log (status lines only):
+#   ✓ Ready in 236ms
+#    GET /api/agent/workspace 401 in 198ms (next.js: 64ms, proxy.ts: 115ms, application-code: 19ms)
+#    POST /api/agent/run 401 in 153ms (next.js: 140ms, proxy.ts: 4ms, application-code: 8ms)
+#    POST /api/agent/run 401 in 10ms (next.js: 1871µs, proxy.ts: 3ms, application-code: 5ms)
+#    POST /api/agent/sessions 401 in 108ms (next.js: 100ms, proxy.ts: 3ms, application-code: 5ms)
+#    POST /api/agent/run 403 in 15ms (next.js: 1810µs, proxy.ts: 11ms, application-code: 3ms)
+#    POST /api/agent/run 403 in 6ms (next.js: 1201µs, proxy.ts: 3ms, application-code: 1938µs)
+#    POST /api/agent/history 403 in 131ms (next.js: 124ms, proxy.ts: 4ms, application-code: 3ms)
+#    POST /api/agent/history 403 in 10ms (next.js: 3ms, proxy.ts: 5ms, application-code: 3ms)
+#    POST /api/agent/sessions 403 in 9ms (next.js: 2ms, proxy.ts: 4ms, application-code: 2ms)
+#    PUT /api/agent/instructions 401 in 418ms (next.js: 407ms, proxy.ts: 5ms, application-code: 6ms)
+#    PUT /api/agent/instructions 403 in 6ms (next.js: 1583µs, proxy.ts: 2ms, application-code: 1663µs)

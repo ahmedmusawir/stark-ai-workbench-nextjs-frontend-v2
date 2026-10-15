@@ -1,0 +1,23 @@
+# Final state — read-only Git (captured 2026-10-12T17:51:29+0600)
+# Written after all other repo writes; this file and FILE_INDEX.md are created after this capture.
+branch: frontend-apbm-0001
+HEAD: f0fbf2282737ea3a63fc78d553cd31fc570821d5
+HEAD unchanged from baseline: yes
+index_staged_entries: 0
+tracked_modified (expected: CHANGELOG.md, RECOVERY.md only):
+CHANGELOG.md
+RECOVERY.md
+product/test/config/dependency/supabase tracked changes (expected none):
+  (end)
+--- status --porcelain=v1 -uall ---
+ M CHANGELOG.md
+ M RECOVERY.md
+?? agent_docs/RECON/RECON_stark-agent-workspace_APBM001-prep_2026-10-12.md
+?? agent_docs/RECON/RECON_stark-agent-workspace_APBM001-prep_2026-10-12_evidence/baseline-git.txt
+?? agent_docs/RECON/RECON_stark-agent-workspace_APBM001-prep_2026-10-12_evidence/day0-sweep.txt
+?? agent_docs/RECON/RECON_stark-agent-workspace_APBM001-prep_2026-10-12_evidence/final-state.txt
+?? agent_docs/RECON/RECON_stark-agent-workspace_APBM001-prep_2026-10-12_evidence/source-anchors.txt
+?? agent_docs/RECON/RECON_stark-agent-workspace_APBM001-prep_2026-10-12_evidence/test-inventory.txt
+?? agent_docs/RESPONSES/response_2026-10-12_173300_session-start.md
+?? agent_docs/RESPONSES/response_2026-10-12_175032_apbm001-prep-recon.md
+?? session_2026-10-12.md

@@ -1,0 +1,12 @@
+APBM001 engineering review 001 — receipt
+Created: 2026-10-14T19:33:25+06:00 (Asia/Dhaka)
+ZIP: /home/moose/nextjs/10XLAB/stark-ai-workbench-nextjs-frontend-v2/agent_docs/ACTIONS/stark_agent_workspace_apbm_001/QAM/HANDOFFS/APBM001_ENGINEERING_REVIEW_001.zip
+Downloads copy: /home/moose/Downloads/APBM001_ENGINEERING_REVIEW_001.zip
+Bytes: 3114738
+Members: 93 (FILE_INDEX.json + 92 indexed files)
+SHA-256: cb6e34e3076f30136ec67e26c455f32c3ded4b7e950672299e5116f0a0fc086b
+State: ENGINEERING_BLOCKED — live walk only (STOP-AUTH); implementation and fixture self-verification complete
+Baseline/HEAD: f0fbf2282737ea3a63fc78d553cd31fc570821d5 (candidate pending Tony commit)
+Verification: CRC OK; exact membership; per-member bytes+SHA-256; safe unique paths; no symlinks; no nested ZIPs
+Privacy: 0 unreviewed pattern hits over all non-image members (1 reviewed synthetic literal, see FILE_INDEX.json); synthetic positive/negative controls passed; no value-based scan (no credential source available)
+QA plan/approval/certification: NOT ISSUED (QA lane untouched)

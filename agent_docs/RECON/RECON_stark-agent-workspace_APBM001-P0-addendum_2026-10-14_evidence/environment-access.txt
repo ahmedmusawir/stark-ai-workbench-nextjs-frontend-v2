@@ -1,0 +1,8 @@
+# Access determination for P0 (2026-10-14) — what this seat may use
+Local tooling (presence check only via `command -v`; nothing was invoked against any cloud or database):
+  gcloud: absent   supabase CLI: absent   psql: absent   bq: absent   docker/postgres: absent   python3 3.12.3: present
+Repository has no supabase/config.toml or linked-project marker (supabase/ holds only two hand-run SQL files + CLAUDE.md).
+Authorization search (RECON, RESPONSES, PLANNING, APBM_000 module root, RECOVERY, session logs): no record grants the Engineer seat
+cloud-console, gcloud, Supabase dashboard/SQL or database access. The 10-04 direct-HTTP probe was a one-off Director authorization to Cody.
+Conclusion: no existing authorized access is available to this seat → no cloud/database call made; owner-run kit supplied (P0-1…P0-4).
+Not done by design: no .env read/hash, no env dump, no secret retrieval, no application-row read, no restart/deploy/invoke/session.

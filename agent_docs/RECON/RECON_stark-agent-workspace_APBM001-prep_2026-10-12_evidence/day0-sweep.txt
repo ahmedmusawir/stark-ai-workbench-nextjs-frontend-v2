@@ -1,0 +1,71 @@
+# Day-0 affected-area sweep (read-only; no build, no audit, no .env read)
+## S0.3 forbidden-zone (src, non-test)
+dangerouslySetInnerHTML: 0
+user_metadata.(is_|role): 0
+explicit any (non-test):
+src/store/useAuthStore.ts:6:  user: any | null;
+src/utils/supabase/server.ts:6:  const cookieStore = (await cookies()) as any
+src/app/(cyberize)/chat/MessageBubble.tsx:91:              style={codeTheme as any}
+src/components/ui/command.tsx:35:          {children as any}
+## S0.5 test runner
+10:    "test": "jest",
+11:    "test:integration": "jest --testPathPatterns=__tests__/api",
+12:    "test:e2e": "playwright test",
+13:    "test:e2e:ui": "playwright test --ui",
+14:    "test:workspace": "playwright test --config playwright.workspace.config.ts"
+53:    "@playwright/test": "^1.59.1",
+64:    "jest": "^30.0.5",
+## S0.6 env NAMES referenced by code (values never read)
+     10 process.env.ADK_BUNDLE_URL_V1
+      6 process.env.GCS_BASE_FOLDER
+      7 process.env.GCS_BUCKET
+     21 process.env.NEXT_PUBLIC_CHAT_MODE
+      3 process.env.NEXT_PUBLIC_SITE_URL
+      5 process.env.NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY
+      6 process.env.NEXT_PUBLIC_SUPABASE_URL
+      3 process.env.SUPABASE_SECRET_KEY
+dynamic env lookup (route uses manifest urlEnv):
+src/app/api/agent/history/route.ts:36:    const baseUrl = process.env[urlEnv];
+src/app/api/agent/run/route.ts:39:    const baseUrl = process.env[urlEnv];
+manifest urlEnv names:
+"urlEnv": "ADK_BUNDLE_URL_V1"
+"urlEnv": "ADK_BUNDLE_URL_V2_LOCAL"
+## S0.7 route surface (filesystem; build NOT run per assignment)
+src/app/api/agent/history/route.ts
+src/app/api/agent/instructions/route.ts
+src/app/api/agent/run/route.ts
+src/app/api/auth/confirm/route.ts
+src/app/api/auth/login/route.ts
+src/app/api/auth/logout/route.ts
+src/app/api/auth/signup/route.ts
+src/app/api/auth/superadmin-add-user/route.ts
+src/app/(admin)/admin-portal/add-member/page.tsx
+src/app/(admin)/admin-portal/edit/[id]/page.tsx
+src/app/(admin)/admin-portal/page.tsx
+src/app/(admin)/profile/page.tsx
+src/app/(auth)/auth/page.tsx
+src/app/(cyberize)/chat/page.tsx
+src/app/(cyberize)/mission-control/page.tsx
+src/app/error/page.tsx
+src/app/(members)/members-portal/page.tsx
+src/app/(members)/members-portal/profile/page.tsx
+src/app/(public)/demo/page.tsx
+src/app/(public)/page.tsx
+src/app/(superadmin)/superadmin-portal/add-user/page.tsx
+src/app/(superadmin)/superadmin-portal/edit/[id]/page.tsx
+src/app/(superadmin)/superadmin-portal/page.tsx
+src/app/template/page.tsx
+## S9 packaging
+39:  "exclude": [
+40-    "node_modules",
+41-    "agent_docs/**"
+42-  ]
+19:  roots: ['<rootDir>/src'],
+21:  // The testMatch patterns Jest uses to detect test files
+22:  testMatch: [
+40:  testPathIgnorePatterns: [
+## Supabase SQL inventory
+chat_sessions_setup.sql
+CLAUDE.md
+setup.sql
+migrations dir: absent

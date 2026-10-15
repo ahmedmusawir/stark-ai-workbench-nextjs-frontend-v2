@@ -1,5 +1,116 @@
 # Recovery State
 
+**CURRENT — 2026-10-15 12:04 Asia/Dhaka: APBM001 ENGINEERING_COMPLETE with the Architect's AC025 origin correction applied (review 004). Candidate NOT committed (Tony owns Git).**
+
+Seat: Claudy, Engineer and checkout owner. Branch `frontend-apbm-0001` @ `f0fbf22…` (= baseline); the candidate is the working tree (`agent_docs/ACTIONS/stark_agent_workspace_apbm_001/ENGINEERING_EVIDENCE/attempt-003/changed-paths.json`). Versus review 003: `src/app/api/agent/_lib/context.ts` plus 3 test files.
+Package: `~/Downloads/APBM001_ENGINEERING_REVIEW_004.zip` (SHA-256 `4d02b2630596b9725d487a6b6b581e3acc262312723a8490b9e73680b4d8f90d`, plus receipt). Reviews 001–003 kept.
+Verification: red 36 fail on the old code → Jest 44/479 · tsc 0 · build 0 · Playwright 50/50 · `next dev`/`next start` origin probes OK · 0 live requests.
+Origin policy: `NEXT_PUBLIC_SITE_URL` (exact), optional `AGENT_TRUSTED_ORIGINS`, and `next dev` loopback at its own port. A local `next start` needs `AGENT_TRUSTED_ORIGINS=http://127.0.0.1:<port>`.
+Live budget (engineering): exhausted for logins/creates/runs; not repeated. Review 003's live evidence is tied to its own candidate; Q2 validates the revised one.
+Pending:
+1. Architect: review 004.
+2. Tony: commit, then `qa/frontend-apbm-0001`. Claudy then records the checkout release; Cody starts Q1.
+3. Release prerequisite: verify the `agent_docs/` and credential-file exclusion in the actual deployment input/artifact.
+4. Tony: test sessions A/B; optionally `chmod 600 .env.qa.local`.
+
+Architect dispositions: `GetHistoryResponse` unchanged (deferred); roster double-read unchanged (deferred).
+ZIP: `/home/moose/Downloads/APBM001_ENGINEERING_REVIEW_004.zip`. Full report (latest): `agent_docs/RESPONSES/response_2026-10-15_130935_apbm001-engineering-review-004-reissue.md`. Earlier issues: `response_2026-10-15_130746_apbm001-review-004-zip-location.md`, `response_2026-10-15_130609_apbm001-review-004-file-locations.md` (13:06 re-issue with all file locations; first issue `response_2026-10-15_120352_apbm001-engineering-review-004.md`). No process of this seat is running.
+
+--- Previous recovery record (2026-10-15 10:26) preserved below. ---
+
+# Recovery State
+
+**CURRENT — 2026-10-15 10:26 Asia/Dhaka: APBM001 ENGINEERING_COMPLETE. Live walk 16/16 PASS. Candidate NOT committed (Tony owns Git).**
+
+Seat: Claudy, Engineer and checkout owner. Branch `frontend-apbm-0001` @ `f0fbf22…` (= baseline); the candidate is the working tree (`agent_docs/ACTIONS/stark_agent_workspace_apbm_001/ENGINEERING_EVIDENCE/attempt-002/changed-paths.json`; product+test identical to review 002).
+Package: `~/Downloads/APBM001_ENGINEERING_REVIEW_003.zip` (SHA-256 `56cef7f843f01f778df368d79a9447ec3a56db78472d4f0b72598ade309c0f63`, plus receipt). Reviews 001/002 superseded and kept.
+Live budget (engineering): logins 2/2, creates 2/2, runs 3/3, reads 10/30, roster 2/4. Exhausted for writes; not renewable. Q2 budget untouched.
+Remote state: test sessions A `d22f9aff-4df6-4f3d-9a76-ea79000e7ac8` (4 events) and B `7adcba92-ff0a-4707-aae4-b15a81801d42` (2 events) in Tony's greeting_agent namespace, left intact.
+Pending (Tony):
+1. Commit the candidate, then create `qa/frontend-apbm-0001`. Claudy then records the checkout release; Cody starts Q1.
+2. Dispose of test sessions A/B.
+3. Optionally `chmod 600 .env.qa.local`.
+
+Pending (Architect): agent_docs packaging boundary; unused `GetHistoryResponse`; optional roster in-flight de-duplication.
+No process of this seat is running.
+
+--- Previous recovery record (2026-10-14 19:36) preserved below. ---
+
+# Recovery State
+
+**CURRENT — 2026-10-14 19:36 Asia/Dhaka: APBM001 engineering pass 2 — implementation and fixture verification COMPLETE; live walk BLOCKED (STOP-AUTH). Candidate NOT committed (Tony owns Git).**
+
+Seat: Claudy, Engineer and checkout owner. Branch `frontend-apbm-0001` @ `f0fbf22…` (= baseline); the candidate is the working tree (`agent_docs/ACTIONS/stark_agent_workspace_apbm_001/ENGINEERING_EVIDENCE/attempt-001/changed-paths.json`).
+Module: `agent_docs/ACTIONS/stark_agent_workspace_apbm_001/` (installed 18:48:49). Report: `…/ENGINEERING_REPORT.md`. QAM state: ENGINEERING_BLOCKED (live walk only).
+Verification: Jest 44/422 · tsc 0 · build 0 · Playwright fixtures 50/50 · runtime negatives OK · live requests 0.
+Package: `~/Downloads/APBM001_ENGINEERING_REVIEW_002.zip` (SHA-256 `b49a30ff5bfdc19d671aa14deb286c4717a1fab42e559a9e1b6fd08bfc624311`, plus receipt). Review 001 is superseded but kept (timestamps only).
+Pending (Tony):
+1. Login path for the engineering live walk: `.env.qa.local` with `APBM001_QA_EMAIL`/`APBM001_QA_PASSWORD`, or `--interactive yes`. Then Claudy runs `node agent_docs/ACTIONS/stark_agent_workspace_apbm_001/ENGINEERING_EVIDENCE/tools/apbm001_live_walk.cjs` once and exports review 003.
+2. Commit the candidate, then create `qa/frontend-apbm-0001`.
+
+Cody: Q1 not started. No process of this seat is running.
+
+--- Previous recovery record (2026-10-14 13:07) preserved below. ---
+
+# Recovery State
+
+**CURRENT — 2026-10-14 13:07 Asia/Dhaka: APBM001 bounded ADK capability test COMPLETE (Architect-authorized). Waiting for Architect rulings B1–B3. APBM_001 NOT LAUNCHED.**
+
+Seat: Claudy, Engineer and checkout owner. Tony keeps Git. Branch `frontend-apbm-0001` @ `f0fbf22…` (unchanged).
+Report: `agent_docs/RESPONSES/response_2026-10-14_130354_apbm001-adk-live-capability-test.md` (+ `_evidence/`). Summary: `…_130713_…-summary.md`. Package: `~/Downloads/APBM001_ADK_LIVE_CAPABILITY_TEST_2026-10-14_130354_BDT.zip` (+ `_RECEIPT.txt`, PASS).
+Remote state left: namespace `stark-apbm001-lt-20261014-5b317222` on `greeting_agent` holds A `bcfb8bb9…` (4 events) and B `ff40bf3a…` (2 events). Both are intact for Tony's disposition; the 10-04 namespace was read only.
+Key results:
+- Titles come back via `state`.
+- `lastUpdateTime` is the creation time, so the list can't give recency by activity.
+- The `stateDelta` marker is not persisted.
+- An unknown session returns 404 "Session not found".
+- Retention was observed; restart durability is unproven.
+
+Pending: rulings on B1 (recency rule), B2 (uncertain-send mechanism) and B3 (rename/archive storage or deferral), then the APBM001 package/launch. Earlier ZIPs are now in `~/Downloads/ARCHIVE/` (not moved by this seat).
+
+--- Previous recovery record (2026-10-14 12:42) preserved below. ---
+
+# Recovery State
+
+**CURRENT — 2026-10-14 12:42 Asia/Dhaka: APBM001 ADK session discovery COMPLETE. Recommendation: ADK serves as both catalogue and history; the server derives the user ID; metadata storage only for rename/archive. Waiting for Architect review. APBM_001 NOT LAUNCHED.**
+
+Seat: Claudy, Engineer and checkout owner. Tony keeps Git. Branch `frontend-apbm-0001` @ `f0fbf22…` (unchanged).
+Report: `agent_docs/RESPONSES/response_2026-10-14_123729_apbm001-adk-session-discovery.md` (+ `_evidence/`). Summary: `…_124213_apbm001-adk-session-discovery-summary.md`. Package: `~/Downloads/APBM001_ADK_SESSION_DISCOVERY_2026-10-14_123729_BDT.zip` (+ `_RECEIPT.txt`, PASS).
+Remote calls made: only `GET /openapi.json` and `GET /list-apps` on `adk-bundle-prod-v2` (both 200, unauthenticated).
+Pending:
+- Architect/Director rulings Q1–Q9.
+- Tony's authorization of the proposed two-conversation test. Step 0, a single read of the 10-04 sessions, decides durability.
+- P0-2 matters only if a metadata overlay is chosen.
+
+Uncommitted: all 10-12/10-14 recon deliverables, session files, `RECOVERY.md`, `CHANGELOG.md`.
+
+--- Previous recovery record (2026-10-14 09:15) preserved below. ---
+
+# Recovery State
+
+**CURRENT — 2026-10-14 09:15 Asia/Dhaka: APBM_001 P0 addendum COMPLETE (owner-run kit ready). Waiting for Tony's P0 outputs and the Architect's package. APBM_001 NOT LAUNCHED.**
+
+Seat: Claudy, Engineer and checkout owner; Tony keeps Git. Branch `frontend-apbm-0001` @ `f0fbf22…` (unchanged).
+Addendum: `agent_docs/RECON/RECON_stark-agent-workspace_APBM001-P0-addendum_2026-10-14.md` (+ `_evidence/` with kit P0-1…P0-4, self-test 22/22). Summary: `agent_docs/RESPONSES/response_2026-10-14_090926_apbm001-p0-addendum.md`. Package: `~/Downloads/APBM001_P0_ADDENDUM_2026-10-14_090926_BDT.zip` (+ `_RECEIPT.txt`).
+Pending: Tony runs P0-1 (local), P0-2 (Supabase SQL Editor), P0-3 (Cloud Shell), and P0-4 only if needed, then pastes the outputs; Claudy records them. P1–P5 NOT run. This seat has no cloud/DB access (no gcloud/psql/supabase CLI; none authorized).
+Uncommitted: the 10-12 and 10-14 recon deliverables, session files, `RECOVERY.md`, `CHANGELOG.md`.
+
+--- Previous recovery record (2026-10-12) preserved below. ---
+
+# Recovery State
+
+**CURRENT — 2026-10-12 17:55 Asia/Dhaka: APBM_001 preparation recon COMPLETE. Waiting for the Architect to assemble and release APBM_001. APBM_001 NOT LAUNCHED.**
+
+Seat: Claudy, Engineer. Tony handed over checkout ownership from Cody; Cody becomes QA Executor; Tony keeps all Git operations. Branch `frontend-apbm-0001` @ `f0fbf2282737ea3a63fc78d553cd31fc570821d5` (= main = origin/main; APBM_000 merged, scoped Gate Q PASS, process NONCOMPLIANT).
+Report: `agent_docs/RECON/RECON_stark-agent-workspace_APBM001-prep_2026-10-12.md` (+ `_evidence/`). Summary: `agent_docs/RESPONSES/response_2026-10-12_175032_apbm001-prep-recon.md`. Package: `~/Downloads/APBM001_PREP_RECON_2026-10-12_175032_BDT.zip` (+ `_RECEIPT.txt`).
+Pending: Architect contracts (identity, history errors, catalogue recovery, backend namespace) and rulings; Tony's authorization of live probes P0→P2 (≤3 sessions / ≤5 submissions). DIRECTOR-OBS-001 remains UNTRIAGED-live.
+Standing rules: never touch `config/agents.manifest*.json`; no product edits until APBM_001 is released; APBM_000 QA records stay inside QAM.
+Uncommitted: this recon's report, evidence, response files, `session_2026-10-12.md`, and this file plus `CHANGELOG.md`.
+
+--- Previous recovery records preserved below. The 2026-10-08 block is superseded by the APBM_000 merge `f0fbf22`; current APBM_000 QA truth lives in `agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/QA_RECOVERY.md`. ---
+
+# Recovery State
+
 **CURRENT — 2026-10-08 09:10 Asia/Dhaka: APBM_000 Q2 attempt 001 DONE; waiting for QA Lead adjudication / Architect close-out.**
 
 Seat on reboot: independent QA Executor (Claudy). Enter via `agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/CLAUDE.md` → `QAM_ENTRY.md`; read `QAM/QAM_STATE.json`, `QAM/HANDOFFS/Q2_attempt-001_REVIEW_START_HERE.md`, `QAM/AC_EVIDENCE_MATRIX.md`.

@@ -60,10 +60,14 @@ import { ChatPageContent } from "@/app/(cyberize)/chat/ChatPageContent";
 
 describe("ChatPageContent hydration gate (FIX-003)", () => {
   beforeEach(() => {
-    mockGetHistory.mockResolvedValue([
-      { role: "user", content: "status report" },
-      { role: "assistant", content: "All systems nominal." },
-    ]);
+    // APBM001 (R001-05): getHistory resolves to an explicit HistoryResult.
+    mockGetHistory.mockResolvedValue({
+      status: "ready",
+      messages: [
+        { role: "user", content: "status report" },
+        { role: "assistant", content: "All systems nominal." },
+      ],
+    });
     mockListSessions.mockResolvedValue([]);
   });
 

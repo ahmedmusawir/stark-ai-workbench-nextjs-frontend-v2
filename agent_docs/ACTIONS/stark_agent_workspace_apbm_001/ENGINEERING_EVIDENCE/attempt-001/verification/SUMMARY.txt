@@ -1,0 +1,12 @@
+cwd: /home/moose/nextjs/10XLAB/stark-ai-workbench-nextjs-frontend-v2
+node v24.15.0 npm 11.12.1
+start 2026-10-14 19:27:27 +0600
+$ npx jest --ci
+jest exit 0
+$ npx tsc --noEmit --incremental false
+tsc exit 0
+$ npm run build
+build exit 0
+$ npx playwright test --config tests/workspace/apbm001.config.ts
+playwright exit 0
+end 2026-10-14 19:28:36 +0600

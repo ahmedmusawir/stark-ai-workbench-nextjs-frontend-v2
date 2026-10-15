@@ -9,7 +9,7 @@ import {
   sessionIndexService,
   titleFromMessage,
 } from "@/services/sessionIndexService";
-import type { AgentName } from "@/types";
+import type { AgentName, HistoryResult } from "@/types";
 
 import { ChatInput } from "./ChatInput";
 import { MessageList } from "./MessageList";
@@ -29,6 +29,18 @@ export const ChatPageContent = () => {
   const setLoading = useChatStore((s) => s.setLoading);
   const setHistoryLoading = useChatStore((s) => s.setHistoryLoading);
   const setError = useChatStore((s) => s.setError);
+  // APBM001 (R001-05): a failed history read is reported, never shown as an
+  // empty conversation. Successful empty history stays silent.
+  const applyHistory = (agent: AgentName, history: HistoryResult) => {
+    setMessagesForAgent(agent, history.messages);
+    if (history.status !== "ready" && history.status !== "empty") {
+      setError(
+        history.status === "missing"
+          ? "This conversation was not found. It has not been recreated."
+          : "Conversation history is unavailable right now. It has not been deleted.",
+      );
+    }
+  };
   // FIX-003 (F06): nothing agent-specific renders or fetches until the
   // persisted selection has hydrated — no wrong-agent flash, no wrong fetch.
   const ready = useHydrationReady();
@@ -82,7 +94,7 @@ export const ChatPageContent = () => {
             user_id: userId,
             session_id: sessionId,
           });
-          setMessagesForAgent(selectedAgent, history);
+          applyHistory(selectedAgent, history);
         } finally {
           setHistoryLoading(false);
         }
@@ -121,7 +133,7 @@ export const ChatPageContent = () => {
         user_id: userId,
         session_id: sessionId,
       })
-      .then((history) => setMessagesForAgent(selectedAgent, history))
+      .then((history) => applyHistory(selectedAgent, history))
       .finally(() => setHistoryLoading(false));
     // loadSessionListFor is stable-per-render plumbing, not a reactive input.
     // eslint-disable-next-line react-hooks/exhaustive-deps

@@ -1,0 +1,23 @@
+cwd: /home/moose/nextjs/10XLAB/stark-ai-workbench-nextjs-frontend-v2
+node v24.15.0 npm 11.12.1
+start 2026-10-15 11:51:45 +0600
+$ npx jest --ci
+jest exit 0
+$ npx tsc --noEmit --incremental false
+tsc exit 0
+$ npm run build
+build start 11:53:28
+build exit 0 (end 11:53:35)
+$ APBM001_ATTEMPT=attempt-003 npx playwright test --config tests/workspace/apbm001.config.ts
+playwright start 11:54:23
+playwright exit 0 (end 11:55:18)
+
+## Attempt 003 (Architect correction, AC025 origin policy) — files in run order, actual times (Asia/Dhaka, 2026-10-15)
+00 11:50:15  red run: new regressions vs UNCHANGED review-003 product code -> 36 FAIL / 95 pass (expected; reproduces both Architect findings)
+01 11:51:45  npx jest --ci (fixed candidate) -> 44 suites / 479 tests passed (review 003: 44 / 422; +57 origin regressions)
+02 (after 01, before 11:52:50; exact start not logged) npx tsc --noEmit --incremental false -> exit 0 (empty output)
+03 11:52:50  next dev 127.0.0.1:43192 signed-out probes -> 10/10 as expected; 0 network-guard blocks; stop step missed once (setsid), corrected 11:53:04
+04 11:53:28  npm run build -> exit 0
+05 11:54:03  next start 127.0.0.1:43190 signed-out probes -> 17/17 + 2 reads as expected; 0 network-guard blocks; stopped 11:54:05
+06 11:54:23  fixture Playwright (APBM001_ATTEMPT=attempt-003) -> 50/50 passed; attempt-001/002/tools evidence byte-identical before/after (66 files)
+No live walk, no sign-in, no ADK request, no credential file read in this attempt. Owned servers stopped; ports 43190/43192 free.

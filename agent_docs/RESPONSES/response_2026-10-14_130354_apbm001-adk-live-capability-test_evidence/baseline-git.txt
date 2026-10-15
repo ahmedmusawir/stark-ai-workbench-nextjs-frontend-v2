@@ -1,0 +1,21 @@
+# Baseline (read-only git, --no-optional-locks) 2026-10-14 13:05:39 +0600
+f0fbf2282737ea3a63fc78d553cd31fc570821d5
+frontend-apbm-0001
+f0fbf2282737ea3a63fc78d553cd31fc570821d5
+f0fbf2282737ea3a63fc78d553cd31fc570821d5
+status --porcelain:
+ M CHANGELOG.md
+ M RECOVERY.md
+?? agent_docs/RECON/RECON_stark-agent-workspace_APBM001-P0-addendum_2026-10-14.md
+?? agent_docs/RECON/RECON_stark-agent-workspace_APBM001-P0-addendum_2026-10-14_evidence/
+?? agent_docs/RECON/RECON_stark-agent-workspace_APBM001-prep_2026-10-12.md
+?? agent_docs/RECON/RECON_stark-agent-workspace_APBM001-prep_2026-10-12_evidence/
+?? agent_docs/RESPONSES/response_2026-10-12_173300_session-start.md
+?? agent_docs/RESPONSES/response_2026-10-12_175032_apbm001-prep-recon.md
+?? agent_docs/RESPONSES/response_2026-10-14_090926_apbm001-p0-addendum.md
+?? agent_docs/RESPONSES/response_2026-10-14_123729_apbm001-adk-session-discovery.md
+?? agent_docs/RESPONSES/response_2026-10-14_123729_apbm001-adk-session-discovery_evidence/
+?? agent_docs/RESPONSES/response_2026-10-14_124213_apbm001-adk-session-discovery-summary.md
+?? agent_docs/RESPONSES/response_2026-10-14_130354_apbm001-adk-live-capability-test_evidence/
+?? session_2026-10-12.md
+?? session_2026-10-14.md

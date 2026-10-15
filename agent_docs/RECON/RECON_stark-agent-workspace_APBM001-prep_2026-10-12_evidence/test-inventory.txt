@@ -1,0 +1,184 @@
+# Test inventory relevant to APBM_001 focus (titles only, read-only; NO suites run in this recon)
+# Last accepted results (CLAIM from Gate Q certificate, candidate 8eb5789): maintained Jest 290/290; QA Jest 31/31; browser 33+1 control; secondary 33/33, 27/27.
+
+== src/__tests__/workspace/components.test.tsx
+8: test('composer has label, rejects whitespace, honors IME and Shift+Enter',()=>{
+15: test('blocked clipboard exposes exact selectable Markdown without HTML injection',async()=>{
+19: test('demo defaults return independent mutable copies and permanent disclosure is explicit',()=>{
+26: test('workbench route releases inherited shell scroll lock; other routes retain their shell',()=>{
+
+== src/__tests__/workspace/navigation.test.ts
+3: describe('workspace URL identity',()=>{
+4: test('encodes stable IDs and restores each view',()=>{
+10: test.each(['agent=unknown','session=a','new=1','agent=alpha%2F%CE%B2&new=0','agent=alpha%2F%CE%B2&session=','agent=alpha%2F%CE%B2&session=a&new=1','agent=alpha%2F%CE%B2&agent=a
+11: test('empty roster never fabricates a default',()=>expect(parseWorkspaceView('agent=alpha',[])).toEqual({kind:'invalid'}));
+
+== src/__tests__/workspace/productionAdapter.test.ts
+9: test('projection retains configured identities without URL/env names and permits neutral fields',()=>{
+12: test('creation occurs only after explicit send returns a durable ID, then uses existing metadata binding once',async()=>{
+18: test('existing session reuses ID and touch binding without create',async()=>{
+22: test('legacy sentinel and absent ID are uncertain, never not-sent or successful transcript',async()=>{
+25: test('history/list retain inherited empty outcome without invented missing distinction',async()=>{
+29: test('rename and archive call existing operations with literal title and no transcript delete',async()=>{
+32: test('missing user context prevents every existing-service call',async()=>{
+36: test('metadata rejection never discards a confirmed ADK ID and reply',async()=>{
+
+== src/__tests__/workspace/signout.test.tsx
+20: describe('WorkspaceEntry sign-out with the real auth and chat stores', () => {
+
+== src/__tests__/api/adk-lib.test.ts
+37: describe('extractResponseText (R5 response selection)', () => {
+38: it('selects the model text from a happy-path run (canonical author style)', () => {
+42: it('reversed scan selects the LAST model text in a multi-event run', () => {
+46: it('parses the author:"model" style identically (FLAG-1 dual-style)', () => {
+52: it('returns null for an empty event array', () => {
+56: it('returns null for malformed events without crashing', () => {
+60: it('returns null for non-array input', () => {
+66: describe('normalizeHistory (A2.3 §4)', () => {
+67: it('maps mixed turns to Message[], skipping non-text events, order preserved', () => {
+71: it('normalizes an empty-events session to [] (the N7 shape)', () => {
+75: it('degrades to [] for malformed sessions, never crashes', () => {
+83: describe('isSessionNotFound', () => {
+84: it('matches 404 status', () => {
+88: it('matches the detail text regardless of status', () => {
+94: it('does not match other failures', () => {
+100: describe('newSessionId (R4)', () => {
+101: it("preserves the wrapper's session-${Date.now()} convention", () => {
+106: describe('sessionUrl', () => {
+107: it('builds the native path with encoded segments', () => {
+114: describe('runAgentFlow (session bootstrap + retry-once)', () => {
+140: it('existing session: exactly one /run call, correct native payload', async () => {
+161: it('null session (N5): generates session-${Date.now()}, creates, then runs', async () => {
+179: it('session-not-found (N6): exactly one create + one retry, then success', async () => {
+199: it('retry failure (N6): second run failure → ConnectorError 502, no third run', async () => {
+213: it('non-not-found run failure → 502 with NO retry', async () => {
+222: it('run succeeds but no model text in events → 502 "No model response in events"', async () => {
+233: it('forwards the Authorization header on create AND run (R2)', async () => {
+
+== src/__tests__/api/agent-run.test.ts
+44: describe('POST /api/agent/run', () => {
+59: it('existing session: single native /run call with the ADK payload and a timeout signal', async () => {
+83: it('null session (N5): creates session-${Date.now()} then runs; returns the generated id', async () => {
+99: it('session-not-found (N6): create + retry exactly once, then success', async () => {
+117: it('retry failure (N6): second run failure → 502 { error }', async () => {
+132: it('run succeeds with no model text → 502 "No model response in events"', async () => {
+143: it('passes through the Authorization header when present (R2)', async () => {
+152: it('omits the Authorization header when absent', async () => {
+161: it('returns 502 { error } when the bundle is unreachable', async () => {
+172: it('returns 500 { error } and makes zero HTTP calls when ADK_BUNDLE_URL_V1 is unset', async () => {
+184: it('returns 400 { error } and zero HTTP calls for an agent not in the manifest (M-G4)', async () => {
+
+== src/__tests__/api/agent-history.test.ts
+38: describe('POST /api/agent/history', () => {
+53: it('GETs the native session path with a timeout signal', async () => {
+69: it('normalizes session events to { history: Message[] } (roles mapped, non-text skipped)', async () => {
+82: it('returns { history: [] } for a valid session with empty events (the N7 shape)', async () => {
+93: it('passes through the Authorization header when present (R2)', async () => {
+104: it('returns 502 { error } when the upstream responds non-OK', async () => {
+117: it('returns 502 { error } when the bundle is unreachable', async () => {
+127: it('returns 500 { error } and makes zero HTTP calls when ADK_BUNDLE_URL_V1 is unset', async () => {
+139: it('returns 400 { error } and zero HTTP calls for an agent not in the manifest (M-G4)', async () => {
+
+== src/__tests__/services/chatService.live.test.ts
+34: describe('chatService live mode', () => {
+49: describe('mode flag (G3 — fail-safe default)', () => {
+50: it('unset flag → mock path, zero fetch calls', async () => {
+60: it('unrecognized flag value → mock path, zero fetch calls', async () => {
+70: describe('sendMessage', () => {
+71: it('POSTs the request to /api/agent/run and returns the wrapper response', async () => {
+90: it('defaults `response` to "Error: No response content." when missing from body', async () => {
+99: it('G8: fetch rejection → resolves with sentinel echoing the request session_id', async () => {
+111: it('G8 (D1b): sentinel session_id is "" when the request had session_id null', async () => {
+122: it('G8: non-ok HTTP status (route 502) → sentinel, not a throw', async () => {
+139: describe('getHistory', () => {
+140: it('G7: falsy session_id → [] with zero HTTP calls', async () => {
+150: it('POSTs to /api/agent/history and unwraps .history', async () => {
+167: it('failure → console.error + [] (history never blocks chat)', async () => {
+180: it('non-ok HTTP status → [] rather than a throw', async () => {
+
+== src/__tests__/services/sessionIndexService.test.ts
+17: describe('titleFromMessage (D3)', () => {
+18: it('passes short messages through', () => {
+22: it('truncates ~50 chars with an ellipsis', () => {
+31: it('collapses whitespace and falls back for empty input', () => {
+37: describe('sessionIndexService (mock mode)', () => {
+42: it('lists only the agent’s non-archived sessions, newest-first', async () => {
+51: it('createSession births a row with the given title (D2)', async () => {
+64: it('touchSession bumps updated_at', async () => {
+78: it('renameSession changes the title', async () => {
+89: it('archiveSession hides the row from the default list (P-G3)', async () => {
+102: it('P-G5: rows carry index fields ONLY — never message content', async () => {
+
+== src/__tests__/proxy.test.ts
+10: describe('proxy', () => {
+15: it('delegates standard routes to updateSession', async () => {
+24: it('uses a matcher that excludes static assets and images', () => {
+
+== tests/workspace/workspace.spec.ts
+23: test('directory filter, neutral alternate roster and safe navigation/back',async({page})=>{
+26: test('default dark, saved light and legacy system are preserved',async({page})=>{
+29: test('invalid query cannot invoke services; empty/loading/unavailable roster distinct',async({page})=>{
+33: test('fresh drafts, whitespace/IME and double-submit guard; durable returned ID binds once',async({page})=>{
+36: test('navigation drawer traps focus, restores opener, closes at breakpoint and portal cleans up',async({page})=>{
+39: test('context disclosure and nested dialogs isolate edits by agent/user and reset on reload',async({page})=>{
+43: test('context focus gets safe destination when narrow resize hides content',async({page})=>{
+46: test('missing/unavailable/access/uncertain/pending/failed/metadata states constrain callbacks',async({page})=>{
+57: test('recents partial/recovered states and safe literal metadata actions with failure retention',async({page})=>{
+62: test('late history cannot paint another session; clipboard fallback and no raw HTML',async({page})=>{
+66: test('portal light/dark tokens present on first visible frame and modal Escape restores trigger',async({page})=>{
+70: test('modal background inert, backdrop dismissal and listener/portal cleanup',async({page})=>{
+73: test('real copy payloads and speech lifecycle with explicit browser doubles',async({page})=>{
+81: test('metadata-warning successful send keeps returned ID and repeats only deliberate sends',async({page})=>{
+85: test('partial recents recover explicitly without writes and send failures preserve the draft',async({page})=>{
+
+== tests/workspace/repair.spec.ts
+16: test('F02: breakpoint teardown keeps focus on the visible current item, after close callbacks settle', async ({ page }) => {
+33: test('F02: no visible current item falls back to visible All agents', async ({ page }) => {
+58: test(`F03/fonts: ${view} ${theme} ${width} has no page overflow`, async ({ page }) => {
+77: test(`root typography ${width}: prior/local declarations match with fonts ${blocked ? 'blocked' : 'loaded'}`, async ({ page }) => {
+
+== agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/AUTOMATION/jest/qa_adapter.test.ts
+16: describe('J-09 send outcome classification', () => {
+26: test('transport rejection propagates (Workspace maps rejection to uncertain; never not-sent)', async () => {
+33: describe('J-10 metadata outcomes keep the confirmed ID', () => {
+34: test('create returns false -> sent + metadataWarning, id preserved, exactly one create', async () => {
+40: test('create throws -> sent + metadataWarning, id preserved', async () => {
+44: test('existing session: list + touch matching row only, no create; unknown row -> no touch, no warning', async () => {
+55: describe('J-21 exact existing-service bindings', () => {
+56: test('history/list/rename/archive call existing operations with exact args only', async () => {
+67: test('no user -> every operation rejects before any service call', async () => {
+75: describe('DIRECTOR-OBS-001 §11.3 adapter seam: sequential A then B with an authoritative mocked index', () => {
+76: test('two new-chat sends create A and B; list returns both; reopening A reads A only; no archive/delete/recreate', async () => {
+
+== agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/AUTOMATION/specs/s17_19_a11y_copy_obs.spec.ts
+8: test('S-17 drawer (375 dark): focus contained, background inert, Escape/backdrop/Close dismiss and restore; breakpoint crossing closes and focuses visible nav', async ({ page })
+34: test('S-17 context dialog (1280 light) and nested demo dialog (768 dark): containment, nested Escape, restore', async ({ page }) => {
+46: test('S-17 controls: accessible names and ≥44×44 targets; hidden desktop/mobile copies unfocusable', async ({ page }) => {
+89: test('S-18 disclosure by breakpoint, resize focus rescue, keyboard skip link, single aria-current, readable pending status, real theme, measured focus contrast', async ({ page 
+147: test('S-19 copy payloads, blocked clipboard fallback, speech lifecycle, unavailable explanation, no autoplay', async ({ browser }) => {
+173: test('DIRECTOR-OBS-001 §11.3 browser A+B: two successful new chats both stay in recents; reopening A shows only A; no hidden archive/delete/recreate', async ({ page }) => {
+
+== agent_docs/ACTIONS/stark_agent_workspace_apbm_000/QAM/AUTOMATION/specs/s08_11_states_mutations.spec.ts
+8: test('S-08 missing / unavailable / access-unavailable are distinct from empty with constrained actions', async ({ page }) => {
+27: test(`S-09 unknown outcome (${mode}): send paused, attempted text visible, only history inspection, never "not sent"`, async ({ page }) => {
+49: test('S-09 confirmed not-sent keeps an editable draft and requires deliberate send', async ({ page }) => {
+57: test('S-10 pending status; metadata warning keeps ID/transcript and offers list read only', async ({ page }) => {
+68: test('S-10 late history cannot paint another session; identity switch mid-flight cannot surface prior-user content', async ({ page }) => {
+88: test('S-11 rename/archive: whitespace rejected, literal punctuation, failure retention, archive hides only, focus destinations', async ({ page }) => {
+
+== legacy (not on /chat path since APBM_000; still compiled): chatStore.*, ChatPageContent*, SessionPanel, AgentSwitcher, MessageList.loading, ChatInput
+AgentSwitcher.test.tsx
+ChatInput.test.tsx
+ChatPageContent.hydration.test.tsx
+ChatPageContent.test.tsx
+chatStore.modeSplit.test.ts
+chatStore.persist.test.ts
+chatStore.sessions.test.ts
+MessageActions.readaloud.test.tsx
+MessageActions.test.tsx
+MessageBubble.test.tsx
+MessageList.loading.test.tsx
+SessionPanel.test.tsx
+
+== production AbortController/req.signal usage (non-test):
+none

@@ -1,39 +1,42 @@
-jest.mock('@/services/chatService',()=>({chatService:{sendMessage:jest.fn(),getHistory:jest.fn()}}));
-jest.mock('@/services/sessionIndexService',()=>({sessionIndexService:{listSessions:jest.fn(),createSession:jest.fn(),touchSession:jest.fn(),renameSession:jest.fn(),archiveSession:jest.fn()},titleFromMessage:(text:string)=>text}));
+jest.mock('@/services/chatService',()=>({chatService:{listConversations:jest.fn(),getHistory:jest.fn(),createConversation:jest.fn(),runTurn:jest.fn(),getWorkspace:jest.fn()},conversationTitle:(text:string)=>text.trim().slice(0,80)}));
+jest.mock('@/services/sessionIndexService',()=>{throw Error('APBM001: the workspace adapter must not load the chat_sessions index');});
 import { chatService } from '@/services/chatService';
-import { sessionIndexService } from '@/services/sessionIndexService';
-import { createProductionWorkspaceServices } from '@/components/workspace/productionAdapter';
+import { createProductionWorkspaceServices, workspaceAgentsFor } from '@/components/workspace/productionAdapter';
 import { workspaceAgentsForUi, MANIFEST } from '@/config/manifest';
-const chat=jest.mocked(chatService), index=jest.mocked(sessionIndexService);
+import type { WorkspaceDescriptor } from '@/types';
+const chat=jest.mocked(chatService);
+const KEY='0123456789abcdef';
+const descriptor:WorkspaceDescriptor={user:{id:'server-user',email:null},mode:'live',supabase_ref:null,roster_checked_at:null,agents:[{agent_name:'greeting_agent',backend_key:KEY,availability:'available'},{agent_name:'moose_mcp_agent',backend_key:KEY,availability:'unavailable'}]};
 beforeEach(()=>jest.resetAllMocks());
 test('projection retains configured identities without URL/env names and permits neutral fields',()=>{
  const a=workspaceAgentsForUi();expect(a.map(x=>x.id)).toEqual(MANIFEST.agents.map(x=>x.name));expect(a.map(x=>x.backendId)).toEqual(MANIFEST.agents.map(x=>x.bundle));expect(JSON.stringify(a)).not.toMatch(/urlEnv|ADK_BUNDLE|https?:/);
 });
-test('creation occurs only after explicit send returns a durable ID, then uses existing metadata binding once',async()=>{
- const api=createProductionWorkspaceServices('fixture-user');expect(chat.sendMessage).not.toHaveBeenCalled();expect(index.createSession).not.toHaveBeenCalled();
- chat.sendMessage.mockResolvedValue({session_id:'durable-a',response:'Reply'});index.createSession.mockResolvedValue(null);
- expect(await api.send('configured-a',null,'Hello')).toEqual({status:'sent',sessionId:'durable-a',reply:'Reply',metadataWarning:true});
- expect(chat.sendMessage).toHaveBeenCalledWith({agent_name:'configured-a',user_id:'fixture-user',session_id:null,message:'Hello'});expect(index.createSession).toHaveBeenCalledTimes(1);
+test('descriptor adds key and honest availability; the manifest roster is never filtered or rewritten',()=>{
+ const agents=workspaceAgentsFor(descriptor);expect(agents.map(a=>a.id)).toEqual(MANIFEST.agents.map(x=>x.name));
+ expect(agents.find(a=>a.id==='moose_mcp_agent')).toMatchObject({availability:'unavailable',backendKey:KEY});expect(agents.find(a=>a.id==='jarvis_agent')?.availability).toBeUndefined();
+ expect(workspaceAgentsFor(null).every(a=>a.backendKey===undefined)).toBe(true);
 });
-test('existing session reuses ID and touch binding without create',async()=>{
- const api=createProductionWorkspaceServices('fixture-user');chat.sendMessage.mockResolvedValue({session_id:'a',response:'Reply'});index.listSessions.mockResolvedValue([{id:'row-a',adk_session_id:'a'} as never]);
- await api.send('configured-a','a','Again');expect(index.createSession).not.toHaveBeenCalled();expect(index.touchSession).toHaveBeenCalledWith('row-a');
+test('list maps the ADK catalogue with scoped row keys and the server identity/backend key',async()=>{
+ chat.listConversations.mockResolvedValue({status:'ready',conversations:[{sessionId:'s1',title:'T',titleSource:'stored',createdAt:'2026-10-14T00:00:00.000Z'}]});
+ const api=createProductionWorkspaceServices(descriptor);
+ expect(await api.list('greeting_agent')).toEqual({status:'ready',rows:[{id:`${KEY}:s1`,sessionId:'s1',title:'T',createdAt:'2026-10-14T00:00:00.000Z'}]});
+ expect(chat.listConversations).toHaveBeenCalledWith('greeting_agent',{backendKey:KEY,userId:'server-user'},undefined);
 });
-test('legacy sentinel and absent ID are uncertain, never not-sent or successful transcript',async()=>{
- const api=createProductionWorkspaceServices('fixture-user');chat.sendMessage.mockResolvedValue({session_id:'a',response:'Error: Could not reach Agent Service. Details: timeout'});expect(await api.send('a','a','x')).toEqual({status:'uncertain'});expect(index.createSession).not.toHaveBeenCalled();
+test('list/history failures stay explicit (R001-05 supersedes the inherited empty-on-error limit)',async()=>{
+ const api=createProductionWorkspaceServices(descriptor);chat.listConversations.mockResolvedValue({status:'unavailable',conversations:[]});chat.getHistory.mockResolvedValue({status:'missing',messages:[]});
+ expect(await api.list('greeting_agent')).toEqual({status:'unavailable',rows:[]});expect(await api.history('greeting_agent','s')).toEqual({status:'missing',messages:[]});
+ expect(chat.getHistory).toHaveBeenCalledWith({agent_name:'greeting_agent',user_id:'server-user',session_id:'s',backend_key:KEY},undefined);
 });
-test('history/list retain inherited empty outcome without invented missing distinction',async()=>{
- const api=createProductionWorkspaceServices('fixture-user');chat.getHistory.mockResolvedValue([]);index.listSessions.mockResolvedValue([]);
- expect(await api.history('a','s')).toEqual({status:'empty',messages:[]});expect(await api.list('a')).toEqual({status:'empty',rows:[]});
+test('create carries the first-message title; send is one continuation run; nothing writes metadata',async()=>{
+ const api=createProductionWorkspaceServices(descriptor);chat.createConversation.mockResolvedValue({status:'created',sessionId:'u1',title:'Hello',createdAt:null});chat.runTurn.mockResolvedValue({status:'sent',sessionId:'u1',reply:'Reply',eventIds:[],invocationId:null});
+ expect(await api.create('greeting_agent','u1','  Hello  ')).toEqual({status:'created'});expect(chat.createConversation).toHaveBeenCalledWith('greeting_agent','u1','Hello',{backendKey:KEY,userId:'server-user'});
+ expect(await api.send('greeting_agent','u1','Again')).toEqual({status:'sent',reply:'Reply'});expect(chat.runTurn).toHaveBeenCalledTimes(1);
 });
-test('rename and archive call existing operations with literal title and no transcript delete',async()=>{
- const api=createProductionWorkspaceServices('fixture-user'),row={id:'row',sessionId:'s',title:'Before'};await api.rename(row,'<literal> & punctuation');await api.archive(row);expect(index.renameSession).toHaveBeenCalledWith('row','<literal> & punctuation');expect(index.archiveSession).toHaveBeenCalledWith('row');
+test('write failures pass through unchanged; uncertain is never upgraded to sent or not-sent',async()=>{
+ const api=createProductionWorkspaceServices(descriptor);
+ for(const status of ['uncertain','not-sent','missing','access-unavailable'] as const){chat.runTurn.mockResolvedValueOnce({status,code:null});expect(await api.send('greeting_agent','s','x')).toEqual({status});}
+ chat.createConversation.mockResolvedValueOnce({status:'uncertain',code:null});expect(await api.create('greeting_agent','u','x')).toEqual({status:'uncertain'});
 });
-test('missing user context prevents every existing-service call',async()=>{
- const api=createProductionWorkspaceServices('');await expect(api.list('a')).rejects.toThrow('User context unavailable');await expect(api.send('a',null,'x')).rejects.toThrow();expect(chat.sendMessage).not.toHaveBeenCalled();expect(index.listSessions).not.toHaveBeenCalled();
-});
-
-test('metadata rejection never discards a confirmed ADK ID and reply',async()=>{
- const api=createProductionWorkspaceServices('fixture-user');chat.sendMessage.mockResolvedValue({session_id:'confirmed-id',response:'Confirmed reply'});index.createSession.mockRejectedValue(Error('metadata unavailable'));
- expect(await api.send('a',null,'Hello')).toEqual({status:'sent',sessionId:'confirmed-id',reply:'Confirmed reply',metadataWarning:true});expect(chat.sendMessage).toHaveBeenCalledTimes(1);
+test('APBM001 deferral: the adapter exposes no rename/archive/delete operations',()=>{
+ const api=createProductionWorkspaceServices(descriptor) as unknown as Record<string,unknown>;expect(Object.keys(api).sort()).toEqual(['create','history','list','send']);
 });

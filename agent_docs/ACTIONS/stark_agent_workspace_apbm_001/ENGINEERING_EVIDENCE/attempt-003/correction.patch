@@ -1,0 +1,337 @@
+diff --git a/src/app/api/agent/_lib/context.ts b/src/app/api/agent/_lib/context.ts
+index 114d1cf..7f5aa55 100644
+--- a/src/app/api/agent/_lib/context.ts
++++ b/src/app/api/agent/_lib/context.ts
+@@ -46,38 +46,61 @@ export type ChatMode = 'live' | 'mock';
+ export const chatMode = (): ChatMode =>
+   process.env.NEXT_PUBLIC_CHAT_MODE === 'live' ? 'live' : 'mock';
+ 
++/** A configured value's full origin; anything but plain http(s) grants nothing. */
++function originOf(value: string | undefined): string | null {
++  if (!value?.trim()) return null;
++  try {
++    const url = new URL(value.trim());
++    if (url.protocol !== 'https:' && url.protocol !== 'http:') return null;
++    if (url.username || url.password) return null;
++    return url.origin;
++  } catch {
++    return null;
++  }
++}
++
++/**
++ * Server-owned allowlist of full origins (scheme, hostname, port) for
++ * state-changing browser routes (AC025). Nothing comes from the request:
++ * Host, X-Forwarded-* and Forwarded are never read, so no proxy is trusted.
++ * A proxied deployment names its public origin in NEXT_PUBLIC_SITE_URL.
++ * - NEXT_PUBLIC_SITE_URL: the configured deployment origin;
++ * - AGENT_TRUSTED_ORIGINS: optional comma-separated extra origins, read at
++ *   runtime (e.g. a local `next start` test server on its own port);
++ * - `next dev` only: http://localhost and http://127.0.0.1 at PORT, the port
++ *   Next itself is listening on.
++ */
++export function trustedOrigins(): Set<string> {
++  const origins = new Set<string>();
++  const add = (value: string | undefined) => {
++    const origin = originOf(value);
++    if (origin) origins.add(origin);
++  };
++  add(process.env.NEXT_PUBLIC_SITE_URL);
++  for (const entry of (process.env.AGENT_TRUSTED_ORIGINS ?? '').split(',')) add(entry);
++  const port = process.env.PORT;
++  if (process.env.NODE_ENV === 'development' && port && /^\d+$/.test(port)) {
++    add(`http://localhost:${port}`);
++    add(`http://127.0.0.1:${port}`);
++  }
++  return origins;
++}
++
+ /**
+  * Same-origin policy for state-changing browser routes (AC025). The Origin
+- * must equal the host this server is answering (proxy-forwarded host when
+- * present) or the configured NEXT_PUBLIC_SITE_URL origin. Browsers cannot
+- * forge Origin, and a cross-site page cannot add x-forwarded-host without a
+- * CORS preflight these routes never approve.
++ * header must exactly equal a trusted origin's serialized form, which is the
++ * form browsers send; anything else (missing, "null", malformed, a path,
++ * other case) is refused. Runs before auth, body parsing and upstream contact.
+  */
+ export function assertSameOrigin(req: Request): void {
+-  const reject = () => {
+-    throw new RouteError(403, 'origin-rejected', 'Cross-origin request rejected');
+-  };
+-  if (req.headers.get('sec-fetch-site') === 'cross-site') reject();
+   const origin = req.headers.get('origin');
+-  if (!origin) return reject();
+-  let originUrl: URL;
+-  try {
+-    originUrl = new URL(origin);
+-  } catch {
+-    return reject();
+-  }
+-  const servedHost =
+-    req.headers.get('x-forwarded-host') ?? req.headers.get('host');
+-  if (servedHost && originUrl.host === servedHost) return;
+-  const site = process.env.NEXT_PUBLIC_SITE_URL;
+-  if (site) {
+-    try {
+-      if (new URL(site).origin === originUrl.origin) return;
+-    } catch {
+-      // A malformed site URL grants nothing.
+-    }
++  if (
++    req.headers.get('sec-fetch-site') === 'cross-site' ||
++    !origin ||
++    !trustedOrigins().has(origin)
++  ) {
++    throw new RouteError(403, 'origin-rejected', 'Cross-origin request rejected');
+   }
+-  reject();
+ }
+ 
+ export interface VerifiedUser {
+diff --git a/src/__tests__/api/agent-boundary.test.ts b/src/__tests__/api/agent-boundary.test.ts
+index 0aec7cb..11d2f05 100644
+--- a/src/__tests__/api/agent-boundary.test.ts
++++ b/src/__tests__/api/agent-boundary.test.ts
+@@ -4,7 +4,8 @@
+  * cross-origin state changes (403), invalid input (400), stale backend keys
+  * (409) and missing/invalid live configuration (503) — each with ZERO
+  * upstream traffic. The verified server user, not the browser, selects the
+- * ADK namespace.
++ * ADK namespace. State changes need an Origin that exactly equals a
++ * server-configured origin; request headers never extend that allowlist.
+  */
+ 
+ jest.mock('@/utils/supabase/server', () => ({ createClient: jest.fn() }));
+@@ -19,9 +20,11 @@ import {
+   normalizeEndpoint,
+   resetRosterCacheForTests,
+   resolveAgentTarget,
++  trustedOrigins,
+ } from '@/app/api/agent/_lib/context';
+ 
+ import {
++  APP_ORIGIN,
+   BUNDLE,
+   USER_ID,
+   authOutage,
+@@ -39,12 +42,21 @@ const fetchMock = jest.fn();
+ const originalFetch = global.fetch;
+ const env = { ...process.env };
+ 
++// NODE_ENV is typed read-only; the origin policy reads it per request.
++const setNodeEnv = (value: string) => {
++  (process.env as Record<string, string | undefined>).NODE_ENV = value;
++};
++
+ beforeEach(() => {
+   global.fetch = fetchMock as unknown as typeof fetch;
+   fetchMock.mockReset();
+   resetRosterCacheForTests();
+   liveEnv();
+   signIn();
++  process.env.NEXT_PUBLIC_SITE_URL = APP_ORIGIN;
++  delete process.env.AGENT_TRUSTED_ORIGINS;
++  delete process.env.PORT;
++  setNodeEnv('test');
+ });
+ 
+ afterAll(() => {
+@@ -130,25 +142,108 @@ describe.each(Object.entries(routes))('%s pre-upstream gate', (_name, call) => {
+   });
+ });
+ 
+-describe.each(Object.entries(routes).filter(([name]) => name.startsWith('POST')))('%s same-origin policy', (_name, call) => {
+-  it.each([
+-    ['foreign Origin', { origin: 'https://evil.example' }],
+-    ['missing Origin', { origin: '' }],
+-    ['cross-site fetch metadata', { 'sec-fetch-site': 'cross-site' }],
+-  ])('403 origin-rejected for %s, zero upstream and no auth lookup', async (_label, headers) => {
+-    const res = await call({}, headers as Record<string, string>);
+-    expect(res.status).toBe(403);
+-    await expect(errorCodeOf(res)).resolves.toBe('origin-rejected');
+-    expect(fetchMock).not.toHaveBeenCalled();
+-    expect(createClient).not.toHaveBeenCalled();
++const SITE = 'https://app.example.test';
++const none = () => undefined;
++const devServerOn4300 = () => {
++  setNodeEnv('development');
++  process.env.PORT = '4300';
++};
++
++describe('trusted origins come from server configuration only (AC025)', () => {
++  it('normalizes the configured site and AGENT_TRUSTED_ORIGINS; malformed entries grant nothing', () => {
++    process.env.NEXT_PUBLIC_SITE_URL = 'https://App.Example.test/workspace/';
++    process.env.AGENT_TRUSTED_ORIGINS =
++      ' http://127.0.0.1:43190 , https://user:pw@creds.example.test, ftp://files.example.test, not a url,,';
++    expect([...trustedOrigins()]).toEqual([SITE, 'http://127.0.0.1:43190']);
++  });
++
++  it('trusts loopback at the port Next listens on under next dev only', () => {
++    process.env.NEXT_PUBLIC_SITE_URL = SITE;
++    devServerOn4300();
++    expect(trustedOrigins()).toEqual(new Set([SITE, 'http://localhost:4300', 'http://127.0.0.1:4300']));
++    setNodeEnv('production');
++    expect(trustedOrigins()).toEqual(new Set([SITE]));
++    setNodeEnv('test');
++    expect(trustedOrigins()).toEqual(new Set([SITE]));
+   });
+ 
+-  it('accepts the configured site origin behind a different host header', async () => {
+-    process.env.NEXT_PUBLIC_SITE_URL = 'https://app.example.test';
++  it('an unset or malformed site URL grants nothing', () => {
++    delete process.env.NEXT_PUBLIC_SITE_URL;
++    expect(trustedOrigins().size).toBe(0);
++    process.env.NEXT_PUBLIC_SITE_URL = 'app.example.test';
++    expect(trustedOrigins().size).toBe(0);
++    process.env.NEXT_PUBLIC_SITE_URL = 'localhost:3000';
++    expect(trustedOrigins().size).toBe(0);
++  });
++});
++
++describe.each(Object.entries(routes).filter(([name]) => name.startsWith('POST')))('%s same-origin policy (AC025)', (_name, call) => {
++  beforeEach(() => {
++    process.env.NEXT_PUBLIC_SITE_URL = SITE;
++  });
++
++  it.each<[string, () => void, Record<string, string>]>([
++    ['the configured site origin behind an internal Host', none, { origin: SITE, host: 'internal:3000' }],
++    [
++      'an explicitly configured test-server origin',
++      () => {
++        process.env.AGENT_TRUSTED_ORIGINS = 'http://127.0.0.1:43190';
++      },
++      { origin: 'http://127.0.0.1:43190', host: '127.0.0.1:43190' },
++    ],
++    ['next dev loopback at its own port', devServerOn4300, { origin: 'http://localhost:4300', host: 'localhost:4300' }],
++  ])('accepts %s and reaches upstream', async (_label, configure, headers) => {
++    configure();
+     fetchMock.mockResolvedValue(jsonResponse({ detail: 'Session not found' }, 404));
+-    const res = await call({}, { origin: 'https://app.example.test', host: 'internal:3000' });
++    const res = await call({}, headers);
+     expect(res.status).not.toBe(403);
+-    delete process.env.NEXT_PUBLIC_SITE_URL;
++    expect(createClient).toHaveBeenCalled();
++    expect(fetchMock).toHaveBeenCalledTimes(1);
++  });
++
++  it.each<[string, () => void, Record<string, string>]>([
++    ['wrong scheme with a matching Host', none, { origin: 'http://app.example.test', host: 'app.example.test' }],
++    ['wrong port with a matching Host', none, { origin: 'https://app.example.test:8443', host: 'app.example.test:8443' }],
++    ['a foreign Origin', none, { origin: 'https://evil.example' }],
++    [
++      'a foreign Origin matched by a spoofed X-Forwarded-Host',
++      none,
++      { origin: 'https://evil.example', 'x-forwarded-host': 'evil.example', 'x-forwarded-proto': 'https' },
++    ],
++    ['a foreign Origin matched by a spoofed Host', none, { origin: 'https://evil.example', host: 'evil.example' }],
++    ['a foreign Origin matched by a spoofed Forwarded header', none, { origin: 'https://evil.example', forwarded: 'host=evil.example;proto=https' }],
++    ['a sibling subdomain', none, { origin: 'https://evil.app.example.test' }],
++    ['a look-alike suffix', none, { origin: 'https://app.example.test.evil.example' }],
++    ['a missing Origin', none, { origin: '' }],
++    ['an opaque "null" Origin', none, { origin: 'null' }],
++    ['a malformed Origin', none, { origin: 'not a url' }],
++    ['an Origin carrying a path', none, { origin: 'https://app.example.test/chat' }],
++    ['an Origin carrying userinfo', none, { origin: 'https://user@app.example.test' }],
++    ['a non-canonical Origin', none, { origin: 'HTTPS://APP.EXAMPLE.TEST' }],
++    ['cross-site fetch metadata, even with the trusted Origin', none, { origin: SITE, 'sec-fetch-site': 'cross-site' }],
++    ['loopback on another port under next dev', devServerOn4300, { origin: 'http://localhost:4301', host: 'localhost:4301' }],
++    [
++      'loopback under a production server',
++      () => {
++        setNodeEnv('production');
++        process.env.PORT = '4300';
++      },
++      { origin: 'http://localhost:4300', host: 'localhost:4300' },
++    ],
++    [
++      'any Origin when no trusted origin is configured',
++      () => {
++        delete process.env.NEXT_PUBLIC_SITE_URL;
++      },
++      { origin: APP_ORIGIN, host: 'localhost:3000' },
++    ],
++  ])('403 origin-rejected for %s — zero upstream and no auth lookup', async (_label, configure, headers) => {
++    configure();
++    const res = await call({}, headers);
++    expect(res.status).toBe(403);
++    await expect(errorCodeOf(res)).resolves.toBe('origin-rejected');
++    expect(fetchMock).not.toHaveBeenCalled();
++    expect(createClient).not.toHaveBeenCalled();
+   });
+ });
+ 
+diff --git a/src/__tests__/api/instructions-route.test.ts b/src/__tests__/api/instructions-route.test.ts
+index ef871d0..58981c8 100644
+--- a/src/__tests__/api/instructions-route.test.ts
++++ b/src/__tests__/api/instructions-route.test.ts
+@@ -27,7 +27,9 @@ jest.mock('@google-cloud/storage', () => ({
+ import { GET, PUT } from '@/app/api/agent/instructions/route';
+ import { Storage } from '@google-cloud/storage';
+ 
+-import { signIn, signOut } from './fixtures/route-harness';
++import { createClient } from '@/utils/supabase/server';
++
++import { APP_ORIGIN, signIn, signOut } from './fixtures/route-harness';
+ 
+ const BUCKET = 'test-bucket';
+ const BASE = 'agent-instructions';
+@@ -38,10 +40,14 @@ function getRequest(agent: string | null) {
+   return new Request(url);
+ }
+ 
+-function putRequest(body: Record<string, unknown>, origin = 'http://localhost') {
++function putRequest(
++  body: Record<string, unknown>,
++  origin = APP_ORIGIN,
++  headers: Record<string, string> = {},
++) {
+   return new Request('http://localhost/api/agent/instructions', {
+     method: 'PUT',
+-    headers: { 'Content-Type': 'application/json', host: 'localhost', origin },
++    headers: { 'Content-Type': 'application/json', host: 'localhost', origin, ...headers },
+     body: JSON.stringify(body),
+   });
+ }
+@@ -59,6 +65,7 @@ describe('/api/agent/instructions', () => {
+     fileMock.mockClear();
+     process.env.GCS_BUCKET = BUCKET;
+     process.env.GCS_BASE_FOLDER = BASE;
++    process.env.NEXT_PUBLIC_SITE_URL = APP_ORIGIN;
+     signIn();
+   });
+ 
+@@ -76,6 +83,17 @@ describe('/api/agent/instructions', () => {
+       expect(Storage).not.toHaveBeenCalled();
+       expect(saveMock).not.toHaveBeenCalled();
+     });
++
++    it.each([
++      ['the wrong scheme with a matching Host', 'https://localhost:3000', { host: 'localhost:3000' }],
++      ['the wrong port with a matching Host', 'http://localhost:3001', { host: 'localhost:3001' }],
++      ['a foreign Origin matched by a spoofed X-Forwarded-Host', 'https://evil.example', { 'x-forwarded-host': 'evil.example' }],
++    ])('403 for %s on PUT — before auth and GCS', async (_label, origin, headers) => {
++      const res = await PUT(putRequest({ agent_name: 'jarvis_agent', content: 'x' }, origin, headers));
++      expect(res.status).toBe(403);
++      expect(createClient).not.toHaveBeenCalled();
++      expect(Storage).not.toHaveBeenCalled();
++    });
+   });
+ 
+   afterAll(() => {
+diff --git a/tests/workspace/apbm001.config.ts b/tests/workspace/apbm001.config.ts
+index 76b9dce..447db58 100644
+--- a/tests/workspace/apbm001.config.ts
++++ b/tests/workspace/apbm001.config.ts
+@@ -3,7 +3,9 @@ import path from 'node:path';
+ // APBM001 engineering self-verification: the existing workspace regression plus APBM001 browser
+ // checks against the isolated synthetic fixture. All output stays inside the APBM001 module so
+ // APBM000 evidence is never rewritten; the APBM000 configs remain untouched and reproducible.
+-const evidence = path.resolve('agent_docs/ACTIONS/stark_agent_workspace_apbm_001/ENGINEERING_EVIDENCE/attempt-001/browser');
++// Each attempt keeps its own folder (Playwright clears outputDir per run); default = attempt-001.
++const attempt = /^attempt-\d{3}$/.test(process.env.APBM001_ATTEMPT ?? '') ? process.env.APBM001_ATTEMPT! : 'attempt-001';
++const evidence = path.resolve('agent_docs/ACTIONS/stark_agent_workspace_apbm_001/ENGINEERING_EVIDENCE', attempt, 'browser');
+ const port = 43181;
+ process.env.WORKSPACE_EVIDENCE_DIR = evidence;
+ process.env.WORKSPACE_BASE_URL = `http://127.0.0.1:${port}`;

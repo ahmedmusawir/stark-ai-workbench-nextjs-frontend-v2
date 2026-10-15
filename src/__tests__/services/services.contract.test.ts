@@ -31,13 +31,22 @@ describe('chatService contract', () => {
     expect(typeof result.session_id).toBe('string');
   });
 
-  it('getHistory resolves to a Message[] (array, possibly empty)', async () => {
+  // APBM001 (R001-05): SUPERSEDES "getHistory resolves to a Message[]" —
+  // history is an explicit outcome carrying its messages.
+  it('getHistory resolves to an explicit HistoryResult (status + Message[])', async () => {
     const result = await chatService.getHistory({
       agent_name: AGENT,
       user_id: USER_ID,
       session_id: 'test-session',
     });
-    expect(Array.isArray(result)).toBe(true);
+    expect(['ready', 'empty']).toContain(result.status);
+    expect(Array.isArray(result.messages)).toBe(true);
+  });
+
+  it('listConversations resolves to an explicit catalogue outcome (mock index)', async () => {
+    const result = await chatService.listConversations(AGENT);
+    expect(['ready', 'empty']).toContain(result.status);
+    expect(Array.isArray(result.conversations)).toBe(true);
   });
 });
 

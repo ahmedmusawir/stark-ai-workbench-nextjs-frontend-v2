@@ -1,0 +1,51 @@
+# Red run: new AC025 regressions against the UNCHANGED review-003 product code
+# started 2026-10-15 11:50:15 +0600  cwd=/home/moose/nextjs/10XLAB/stark-ai-workbench-nextjs-frontend-v2
+# context.ts sha256 2757c485146c069e21e81ce132985719847bfa9ecf41c8d0ff91a56e20796f8f (= review 003)
+# config: repository jest.config.js with ts-jest diagnostics off (trustedOrigins not yet exported)
+$ npx jest --ci -c <scratch>/jest.red.config.js src/__tests__/api/agent-boundary.test.ts src/__tests__/api/instructions-route.test.ts
+Test Suites: 2 failed, 2 total
+Tests:       36 failed, 95 passed, 131 total
+# exit 1  finished 11:50:16
+
+# Failing tests (expected: the old policy accepted these, or trustedOrigins did not exist):
+FAIL /api/agent/instructions › APBM001 authentication boundary › 403 for the wrong scheme with a matching Host on PUT — before auth and GCS
+FAIL /api/agent/instructions › APBM001 authentication boundary › 403 for the wrong port with a matching Host on PUT — before auth and GCS
+FAIL /api/agent/instructions › APBM001 authentication boundary › 403 for a foreign Origin matched by a spoofed X-Forwarded-Host on PUT — before auth and GCS
+FAIL trusted origins come from server configuration only (AC025) › normalizes the configured site and AGENT_TRUSTED_ORIGINS; malformed entries grant nothing
+FAIL trusted origins come from server configuration only (AC025) › trusts loopback at the port Next listens on under next dev only
+FAIL trusted origins come from server configuration only (AC025) › an unset or malformed site URL grants nothing
+FAIL POST sessions same-origin policy (AC025) › 403 origin-rejected for wrong scheme with a matching Host — zero upstream and no auth lookup
+FAIL POST sessions same-origin policy (AC025) › 403 origin-rejected for wrong port with a matching Host — zero upstream and no auth lookup
+FAIL POST sessions same-origin policy (AC025) › 403 origin-rejected for a foreign Origin matched by a spoofed X-Forwarded-Host — zero upstream and no auth lookup
+FAIL POST sessions same-origin policy (AC025) › 403 origin-rejected for a foreign Origin matched by a spoofed Host — zero upstream and no auth lookup
+FAIL POST sessions same-origin policy (AC025) › 403 origin-rejected for an Origin carrying a path — zero upstream and no auth lookup
+FAIL POST sessions same-origin policy (AC025) › 403 origin-rejected for an Origin carrying userinfo — zero upstream and no auth lookup
+FAIL POST sessions same-origin policy (AC025) › 403 origin-rejected for a non-canonical Origin — zero upstream and no auth lookup
+FAIL POST sessions same-origin policy (AC025) › 403 origin-rejected for loopback on another port under next dev — zero upstream and no auth lookup
+FAIL POST sessions same-origin policy (AC025) › 403 origin-rejected for loopback under a production server — zero upstream and no auth lookup
+FAIL POST sessions same-origin policy (AC025) › 403 origin-rejected for any Origin when no trusted origin is configured — zero upstream and no auth lookup
+FAIL POST history same-origin policy (AC025) › 403 origin-rejected for wrong scheme with a matching Host — zero upstream and no auth lookup
+FAIL POST history same-origin policy (AC025) › 403 origin-rejected for wrong port with a matching Host — zero upstream and no auth lookup
+FAIL POST history same-origin policy (AC025) › 403 origin-rejected for a foreign Origin matched by a spoofed X-Forwarded-Host — zero upstream and no auth lookup
+FAIL POST history same-origin policy (AC025) › 403 origin-rejected for a foreign Origin matched by a spoofed Host — zero upstream and no auth lookup
+FAIL POST history same-origin policy (AC025) › 403 origin-rejected for an Origin carrying a path — zero upstream and no auth lookup
+FAIL POST history same-origin policy (AC025) › 403 origin-rejected for an Origin carrying userinfo — zero upstream and no auth lookup
+FAIL POST history same-origin policy (AC025) › 403 origin-rejected for a non-canonical Origin — zero upstream and no auth lookup
+FAIL POST history same-origin policy (AC025) › 403 origin-rejected for loopback on another port under next dev — zero upstream and no auth lookup
+FAIL POST history same-origin policy (AC025) › 403 origin-rejected for loopback under a production server — zero upstream and no auth lookup
+FAIL POST history same-origin policy (AC025) › 403 origin-rejected for any Origin when no trusted origin is configured — zero upstream and no auth lookup
+FAIL POST run same-origin policy (AC025) › 403 origin-rejected for wrong scheme with a matching Host — zero upstream and no auth lookup
+FAIL POST run same-origin policy (AC025) › 403 origin-rejected for wrong port with a matching Host — zero upstream and no auth lookup
+FAIL POST run same-origin policy (AC025) › 403 origin-rejected for a foreign Origin matched by a spoofed X-Forwarded-Host — zero upstream and no auth lookup
+FAIL POST run same-origin policy (AC025) › 403 origin-rejected for a foreign Origin matched by a spoofed Host — zero upstream and no auth lookup
+FAIL POST run same-origin policy (AC025) › 403 origin-rejected for an Origin carrying a path — zero upstream and no auth lookup
+FAIL POST run same-origin policy (AC025) › 403 origin-rejected for an Origin carrying userinfo — zero upstream and no auth lookup
+FAIL POST run same-origin policy (AC025) › 403 origin-rejected for a non-canonical Origin — zero upstream and no auth lookup
+FAIL POST run same-origin policy (AC025) › 403 origin-rejected for loopback on another port under next dev — zero upstream and no auth lookup
+FAIL POST run same-origin policy (AC025) › 403 origin-rejected for loopback under a production server — zero upstream and no auth lookup
+FAIL POST run same-origin policy (AC025) › 403 origin-rejected for any Origin when no trusted origin is configured — zero upstream and no auth lookup
+
+# Of these, the Architect's two reproductions:
+#  - 'wrong scheme with a matching Host' (http://app.example.test, Host app.example.test, site https://app.example.test): ACCEPTED by review-003 code on all 3 POST routes + instructions PUT
+#  - 'a foreign Origin matched by a spoofed X-Forwarded-Host': ACCEPTED by review-003 code on all 3 POST routes + instructions PUT
+# The 3 state-changing agent POST routes are sessions, history and run; 10 cases x 3 routes + 3 PUT + 3 unit = 36.

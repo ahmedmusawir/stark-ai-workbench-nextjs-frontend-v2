@@ -1,0 +1,32 @@
+## next start origin probes (signed out: no cookies, no credentials) — started 2026-10-15 11:54:03 +0600
+## server: next start -H 127.0.0.1 -p 43190 on the 11:53 build (owned, production mode). Isolated process env:
+##   AGENT_TRUSTED_ORIGINS=http://127.0.0.1:43190 (the only test origin; NEXT_PUBLIC_SITE_URL is whatever the build inlined — not read, not probed)
+##   NODE_OPTIONS=--require=./tests/workspace/network-guard.cjs; NEXT_TELEMETRY_DISABLED=1
+warm-up GET /api/agent/workspace -> 401 (0.055618s)
+trusted: explicitly configured test origin | POST /api/agent/run | Origin=http://127.0.0.1:43190  -> 401 {"error":{"code":"unauthenticated","message":"Sign in to continue"}}
+trusted: explicitly configured test origin | POST /api/agent/sessions | Origin=http://127.0.0.1:43190  -> 401 {"error":{"code":"unauthenticated","message":"Sign in to continue"}}
+trusted: explicitly configured test origin | POST /api/agent/history | Origin=http://127.0.0.1:43190  -> 401 {"error":{"code":"unauthenticated","message":"Sign in to continue"}}
+reject: loopback alias not configured (production) | POST /api/agent/run | Origin=http://localhost:43190 Host: localhost:43190 -> 403 {"error":{"code":"origin-rejected","message":"Cross-origin request rejected"}}
+reject: wrong scheme, matching Host | POST /api/agent/run | Origin=https://127.0.0.1:43190 Host: 127.0.0.1:43190 -> 403 {"error":{"code":"origin-rejected","message":"Cross-origin request rejected"}}
+reject: wrong port, matching Host | POST /api/agent/sessions | Origin=http://127.0.0.1:43191 Host: 127.0.0.1:43191 -> 403 {"error":{"code":"origin-rejected","message":"Cross-origin request rejected"}}
+reject: foreign Origin + spoofed X-Forwarded-Host | POST /api/agent/run | Origin=https://evil.example X-Forwarded-Host: evil.example X-Forwarded-Proto: https -> 403 {"error":{"code":"origin-rejected","message":"Cross-origin request rejected"}}
+reject: foreign Origin + spoofed Host | POST /api/agent/history | Origin=https://evil.example Host: evil.example -> 403 {"error":{"code":"origin-rejected","message":"Cross-origin request rejected"}}
+reject: foreign Origin + spoofed Forwarded | POST /api/agent/sessions | Origin=https://evil.example Forwarded: host=evil.example proto=https -> 403 {"error":{"code":"origin-rejected","message":"Cross-origin request rejected"}}
+reject: opaque null Origin | POST /api/agent/history | Origin=null  -> 403 {"error":{"code":"origin-rejected","message":"Cross-origin request rejected"}}
+reject: malformed Origin | POST /api/agent/run | Origin=not a url  -> 403 {"error":{"code":"origin-rejected","message":"Cross-origin request rejected"}}
+reject: Origin with a path | POST /api/agent/run | Origin=http://127.0.0.1:43190/chat  -> 403 {"error":{"code":"origin-rejected","message":"Cross-origin request rejected"}}
+reject: missing Origin | POST /api/agent/sessions | Origin=-  -> 403 {"error":{"code":"origin-rejected","message":"Cross-origin request rejected"}}
+reject: cross-site fetch metadata with the trusted Origin | POST /api/agent/run | Origin=http://127.0.0.1:43190 Sec-Fetch-Site: cross-site -> 403 {"error":{"code":"origin-rejected","message":"Cross-origin request rejected"}}
+trusted: instructions PUT | PUT /api/agent/instructions | Origin=http://127.0.0.1:43190  -> 401 {"error":"Sign in to continue"}
+reject: instructions PUT wrong scheme | PUT /api/agent/instructions | Origin=https://127.0.0.1:43190 Host: 127.0.0.1:43190 -> 403 {"error":"Cross-origin request rejected"}
+reject: instructions PUT spoofed X-Forwarded-Host | PUT /api/agent/instructions | Origin=https://evil.example X-Forwarded-Host: evil.example -> 403 {"error":"Cross-origin request rejected"}
+read: GET /api/agent/workspace (no session) -> 401 {"error":{"code":"unauthenticated","message":"Sign in to continue"}}
+read: GET /api/agent/sessions?agent_name=greeting_agent (no session) -> 401 {"error":{"code":"unauthenticated","message":"Sign in to continue"}}
+## server (process group 215780) stopped 11:54:05; network-guard blocks logged: 0
+## port 43190 free
+## Filtered server log:
+#   ▲ Next.js 16.2.6
+#   - Local:         http://127.0.0.1:43190
+#   - Network:       http://127.0.0.1:43190
+#   ✓ Ready in 82ms
+## Note: the probe script splits extra headers on ';', so the 'spoofed Forwarded' case sent 'Forwarded: host=evil.example' (the proto part was dropped). It is still a spoofed forwarded authority, and the Jest suite covers the full 'host=evil.example;proto=https' value.

@@ -1,0 +1,11 @@
+# Authorized implementation boundary
+
+Owned changes: src/app/api/agent/**; src/components/workspace/**; src/services/chatService.ts; src/services/sessionIndexService.ts only for bounded callsite compatibility/deactivation; related request/response types; existing /chat page; narrow auth-store/UI synchronization needed for verified identity and signout; scoped workspace styles; workspace navigation helpers. New small helpers belong with these owners, not an unrelated framework.
+
+Tests: affected src/__tests__/api, services, workspace and nearest legacy chat consumers; tests/workspace; new module-local engineering evidence. QAM automation is for QA Executor once its lane starts. Update tests for deliberately superseded history/fallback semantics and record old/new contract mapping. The old failure contract is not regression protection for the new contract.
+
+Documentation: this new module, scoped agent_docs/RESPONSES records and repository-required root session/RECOVERY/CHANGELOG logging under existing ownership rules. Do not overwrite an existing module or erase earlier logs. A narrow module-routing pointer may be appended to root CLAUDE.md/AGENTS.md only if needed for entry discovery; preserve unrelated instructions and document the diff. Engineering does not edit QA Lead approval/certification or historical APBM000 QAM records.
+
+Protected: config/agents.manifest*.json byte-for-byte; Supabase SQL/schema; package/lock versions; authentication project/provider settings; cloud ADK bundle/IAM/GCS; unrelated portal pages; APBM000 historical evidence/certificates/deviations/private retention. No .env.local read/copy/hash/edit by the agent. Tony handles env updates if a runtime check shows a mismatch. New tests may use sanitized process-level overrides in isolated processes without altering the real .env.
+
+A required shared-service consumer change is permitted only after mapping why it is affected and recording its path. Broader auth redesign, framework upgrades, unrelated portal repairs and cleanup require an explicit scoped ruling. Exclude agent_docs from deployment artifacts using the existing packaging boundary; if that boundary is absent or wrong, report it for a separate bounded packaging decision rather than claiming evidence is automatically excluded.

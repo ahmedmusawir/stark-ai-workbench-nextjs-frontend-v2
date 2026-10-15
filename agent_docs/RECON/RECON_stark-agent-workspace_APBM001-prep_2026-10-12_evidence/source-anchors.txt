@@ -1,0 +1,255 @@
+# Source anchors at HEAD f0fbf2282737ea3a63fc78d553cd31fc570821d5 — read-only grep -n; no .env read
+
+## Blob identities of inspected affected-area files (git ls-tree HEAD)
+100644 blob aa1f157764f770b3aaea92dc783a5cf87bdb1dcf	config/agents.manifest-hermes.json
+100644 blob 3e658837a4966a404404ae8e150e9db1bc6278b0	config/agents.manifest.json
+100644 blob 5e218a3d8021b07ce7c006093bbfb65143febba7	src/app/(cyberize)/chat/page.tsx
+100644 blob f7d85a2b9ab12595c1b173f1432e32858c893a78	src/app/(cyberize)/layout.tsx
+100644 blob 29fdbe13224be8971d6bc22f80ebfdf51a6a64f3	src/app/api/agent/_lib/adk.ts
+100644 blob 1f11012d48361f2d7a1f76e02c927745e2345613	src/app/api/agent/history/route.ts
+100644 blob 8f370a3243cd7ed10ac9f5e1540d2852d0a9418e	src/app/api/agent/run/route.ts
+100644 blob ce6636cfbb97acdf02037affa30bf67f4442edb3	src/components/chat/SessionPanel.tsx
+100644 blob 6ba29d1885ce160c67827e10667c0a4c9abe4701	src/components/common/AppShellPage.tsx
+100644 blob abd7673b7315dd4bdb56e04702e32b76be30d692	src/components/layout/CyberizeSidebar.tsx
+100644 blob 8cb38c97ae7b034184db1576ff8c42d70c813369	src/components/workspace/Workspace.tsx
+100644 blob ef5702c70141b6bc04df4739c15e067c3b8a680d	src/components/workspace/WorkspaceEntry.tsx
+100644 blob 0410a9ef3882d06c6e0534216212594e2daca949	src/components/workspace/navigation.ts
+100644 blob 86805f4f6add4000fbf47b3d6b35a1096ffe764d	src/components/workspace/productionAdapter.ts
+100644 blob 09173e609bfdc5f837fe15a941e0ff7b6520ee9f	src/components/workspace/types.ts
+100644 blob 52e6e20fd81b984ab8833a3e3cb7c7a0f2298171	src/config/manifest.ts
+100644 blob 11fe7a1e78da5f0bca2ec3770e61e13852eead8e	src/proxy.ts
+100644 blob df3843d62b1aa44e60b657d19168d42bc5a5e599	src/services/chatService.ts
+100644 blob 4bc017d680cdc6a5b87352582bea1a0c550cb147	src/services/sessionIndexService.ts
+100644 blob 40dcec30c06ff1024f67dd3d6492133ac62bb078	src/store/chatStore.ts
+100644 blob 6dde785b80a888c2f8e9e501be5e2771eefde151	src/store/useAuthStore.ts
+100644 blob 124409c2092bc09588b749fdbf94be7ea17147af	src/types/index.ts
+100644 blob 889176395be04be2772b7322b09a5f5a0f76055c	src/utils/supabase/middleware.ts
+100644 blob d5899da95e480a692927804e2305497093b503da	supabase/chat_sessions_setup.sql
+100644 blob 52180893ceba2fa35c1499c3ed72d4c16f1a3425	supabase/setup.sql
+
+## Data-flow drift since OBS-001-era candidate 22ce03b (diff --stat, affected area)
+ config/agents.manifest copy.json            | 14 --------------
+ config/agents.manifest-hermes.json          | 13 +++++++++++++
+ config/agents.manifest.json                 | 11 ++++++-----
+ src/app/(cyberize)/chat/workspace.scss      |  2 +-
+ src/components/workspace/Workspace.tsx      |  9 +++++++--
+ src/components/workspace/WorkspaceEntry.tsx | 11 ++++++++++-
+ 6 files changed, 37 insertions(+), 23 deletions(-)
+
+## Anchors
+### src/components/workspace/WorkspaceEntry.tsx
+7:import { createProductionWorkspaceServices } from './productionAdapter';
+12:  const userId = user && typeof user === 'object' && 'id' in user ? String(user.id ?? '') : '';
+13:  const services = useMemo(() => createProductionWorkspaceServices(userId), [userId]);
+14:  const identityKey = JSON.stringify([userId, process.env.NEXT_PUBLIC_CHAT_MODE === 'live' ? 'live' : 'mock', agents.map(a => [a.id,a.backendId])]);
+15:  const finishSignOut = () => {
+24:  return <Workspace identityKey={identityKey} canOperate={!!userId} agents={agents} services={services} query={query.toString()} navigate={next => router.push('/chat' + (next ? '?' + next : ''))} o
+
+### src/components/workspace/productionAdapter.ts
+11:      const rows = await sessionIndexService.listSessions(agentId);
+12:      return { status: rows.length ? 'ready' : 'empty', rows: rows.map(row => ({ id: row.id, sessionId: row.adk_session_id, title: row.title, updatedAt: row.updated_at })) };
+16:      const messages = await chatService.getHistory({ agent_name: agentId, user_id: userId, session_id: sessionId });
+18:      return { status: messages.length ? 'ready' : 'empty', messages };
+22:      const result = await chatService.sendMessage({ agent_name: agentId, user_id: userId, session_id: sessionId, message });
+23:      // Known legacy sentinel is conservatively uncertain, never "not sent" or an assistant success.
+24:      if (!result.session_id || result.response.startsWith('Error: Could not reach Agent Service.') || result.response === 'Error: No response content.') return { status: 'uncertain' };
+25:      let metadataWarning = false;
+27:      if (!sessionId) metadataWarning = !(await sessionIndexService.createSession(agentId, result.session_id, titleFromMessage(message)));
+29:        const rows = await sessionIndexService.listSessions(agentId);
+31:        if (row) await sessionIndexService.touchSession(row.id);
+33:      } catch { metadataWarning = true; } // The confirmed ADK result survives a metadata failure.
+34:      return { status: 'sent', sessionId: result.session_id, reply: result.response, metadataWarning };
+
+### src/components/workspace/Workspace.tsx
+31:  const [draftNumber, setDraftNumber] = useState(0);
+32:  const viewKey = agentId + ':' + (view.kind === 'conversation' ? view.sessionId : `${view.kind}-${draftNumber}`);
+33:  const activeKey = useRef(viewKey); activeKey.current = viewKey;
+34:  const alive = useRef(true); useEffect(() => { alive.current = true; return () => { alive.current = false; }; }, []);
+37:  const [listGeneration, setListGeneration] = useState(0);
+39:  const threadCache = useRef<Record<string,Thread>>({});
+40:  const setThread = (key: string, data: Thread) => { threadCache.current[key] = data; setThreads(old => ({ ...old, [key]: data })); };
+42:  const [historyGeneration, setHistoryGeneration] = useState(0);
+62:    services.list(agentId).then(data => { if (current) setCatalogue({ agent: agentId, data }); }).catch(() => { if (current) setCatalogue({ agent: agentId, data: { status: 'unavailable', rows: [] }
+69:    if (!historyGeneration && threadCache.current[viewKey]) return;
+70:    const previous = threadCache.current[viewKey];
+72:    services.history(view.agentId, view.sessionId).then(data => {
+82:  }, [viewKey, canOperate, services, historyGeneration]);
+85:  const blocked = !['ready','empty','not-sent','metadata-warning'].includes(thread.status);
+91:    if (!agent || blocked || !draft.trim() || sending.current.has(viewKey)) return;
+93:    const previous = thread.messages; sending.current.add(key); followEnd.current = true;
+97:      const result = await services.send(id, session, text);
+98:      if (!alive.current) return;
+102:        if (activeKey.current === key) { setHistoryGeneration(0); go(workspaceQuery(id, result.sessionId)); }
+103:        setListGeneration(n => n + 1);
+108:    } catch { if (alive.current) setThread(key, { status: 'uncertain', messages: [...previous, { role: 'user', content: text }], attemptedText: text }); }
+109:    finally { sending.current.delete(key); }
+115:    {view.kind === 'conversation' && <div><p className="ws-eyebrow">Conversations</p>{rows.rows.map(row => <div key={row.id}>{navLink(row.title || 'Untitled conversation', workspaceQuery(agentId, 
+129:      if (!alive.current) return;
+148:          {!canOperate ? <p role="status">User context unavailable. Sign in to load conversations.</p> : rows.status === 'loading' ? <div role="status">Loading conversations…<div className="ws-s
+161:            {thread.status === 'uncertain' && view.kind === 'conversation' && <button onClick={() => setHistoryGeneration(n => n + 1)}>Check history</button>}
+162:            {thread.status === 'uncertain' && view.kind !== 'conversation' && <p>No confirmed conversation ID is available for a history read. No resend is offered.</p>}
+163:            {thread.status === 'metadata-warning' && <button onClick={() => setListGeneration(n => n + 1)}>Check conversation list</button>}
+
+### src/components/workspace/navigation.ts
+2:export type WorkspaceView = { kind: 'directory' } | { kind: 'invalid' } | { kind: 'workspace' | 'draft'; agentId: string } | { kind: 'conversation'; agentId: string; sessionId: string };
+6:  if ([...p.keys()].some(k => !['agent', 'new', 'session'].includes(k)) || ['agent','new','session'].some(k => p.getAll(k).length > 1)) return { kind: 'invalid' };
+8:  if (!agentId) return p.size ? { kind: 'invalid' } : { kind: 'directory' };
+9:  if (!agents.some(a => a.id === agentId)) return { kind: 'invalid' };
+10:  if (p.has('new') && p.has('session')) return { kind: 'invalid' };
+11:  if (p.has('new')) return p.get('new') === '1' ? { kind: 'draft', agentId } : { kind: 'invalid' };
+12:  if (p.has('session')) return p.get('session')?.trim() ? { kind: 'conversation', agentId, sessionId: p.get('session')! } : { kind: 'invalid' };
+13:  return { kind: 'workspace', agentId };
+15:export function workspaceQuery(agentId?: string, sessionId?: string, draft = false) {
+
+### src/services/sessionIndexService.ts
+15:  mockSessionIndex,
+23:const isLive = () => process.env.NEXT_PUBLIC_CHAT_MODE === 'live';
+36:  const { data, error } = await createClient().auth.getUser();
+37:  if (error || !data.user) return null;
+47:    if (isLive()) {
+54:          .eq('agent_name', agentName)
+55:          .eq('archived', false)
+61:        return [];
+65:    return mockSessionIndex
+79:    if (isLive()) {
+85:          .insert({
+99:        return null;
+112:    mockSessionIndex.push(entry);
+118:    if (isLive()) {
+123:          .eq('id', id);
+131:    const row = mockSessionIndex.find((r) => r.id === id);
+136:    if (isLive()) {
+141:          .eq('id', id);
+149:    const row = mockSessionIndex.find((r) => r.id === id);
+158:    if (isLive()) {
+163:          .eq('id', id);
+171:    const row = mockSessionIndex.find((r) => r.id === id);
+
+### src/services/chatService.ts
+31:const isLive = () => process.env.NEXT_PUBLIC_CHAT_MODE === 'live';
+41:    if (isLive()) {
+47:          signal: AbortSignal.timeout(SEND_TIMEOUT_MS),
+52:          response: data.response ?? 'Error: No response content.',
+53:          session_id: data.session_id ?? input.session_id ?? '',
+57:          response: `Error: Could not reach Agent Service. Details: ${e}`,
+58:          session_id: input.session_id ?? '',
+79:    if (isLive()) {
+80:      if (!input.session_id) return [];
+86:          signal: AbortSignal.timeout(HISTORY_TIMEOUT_MS),
+93:        return [];
+113: * getHistory   | POST /api/agent/history     | 30s     | Client-side guard: if session_id falsy, no HTTP call, return []
+117: *     { response: "Error: Could not reach Agent Service. Details: <e>",
+118: *       session_id: <request's session_id ?? ''> }
+119: *   `response` defaults to "Error: No response content." if missing from response body.
+
+### src/app/api/agent/_lib/adk.ts
+20:const RUN_TOTAL_MS = 90_000;
+21:const RUN_CALL_CAP_MS = 75_000;
+22:const CREATE_CALL_CAP_MS = 10_000;
+53:export const newSessionId = (): string => `session-${Date.now()}`;
+56:export function isSessionNotFound(status: number, bodyText: string): boolean {
+146:    signal: AbortSignal.timeout(remainingMs(deadline, CREATE_CALL_CAP_MS)),
+165:      app_name: input.agentName,
+166:      user_id: input.userId,
+167:      session_id: input.sessionId,
+170:    signal: AbortSignal.timeout(remainingMs(deadline, RUN_CALL_CAP_MS)),
+184:  const deadline = Date.now() + RUN_TOTAL_MS;
+185:  const { agent_name: agentName, user_id: userId, message } = request;
+187:  let sessionId = request.session_id;
+189:    sessionId = newSessionId();
+190:    await createSession(ctx, agentName, userId, sessionId, deadline);
+194:  let res = await runOnce(ctx, runInput, deadline);
+198:    if (!isSessionNotFound(res.status, bodyText)) {
+202:    await createSession(ctx, agentName, userId, sessionId, deadline);
+203:    res = await runOnce(ctx, runInput, deadline);
+217:  return { response: responseText, session_id: sessionId };
+
+### src/app/api/agent/run/route.ts
+16:import { resolveBundleEnvVar } from '@/config/manifest';
+19:import { ConnectorError, runAgentFlow } from '../_lib/adk';
+26:  const auth = req.headers.get('authorization'); // reserved auth slot (R2)
+29:    const body = (await req.json()) as RunAgentRequest;
+32:    const urlEnv = resolveBundleEnvVar(body.agent_name);
+36:        { status: 400 },
+39:    const baseUrl = process.env[urlEnv];
+43:        { status: 500 },
+47:    const result = await runAgentFlow({ baseUrl, auth }, body);
+48:    return NextResponse.json(result, { status: 200 });
+51:      return NextResponse.json({ error: e.message }, { status: e.status });
+53:    return NextResponse.json({ error: String(e) }, { status: 502 });
+
+### src/app/api/agent/history/route.ts
+18:import { normalizeHistory, sessionUrl } from '../_lib/adk';
+23:  const auth = req.headers.get('authorization'); // reserved auth slot (R2)
+26:    const body = (await req.json()) as GetHistoryRequest;
+45:      sessionUrl(baseUrl, body.agent_name, body.user_id, body.session_id),
+52:    if (!upstream.ok) {
+55:        { status: 502 },
+60:      { history: normalizeHistory(session) },
+64:    return NextResponse.json({ error: String(e) }, { status: 502 });
+
+### src/config/manifest.ts
+14:import manifestJson from '../../config/agents.manifest.json';
+101:export const DEFAULT_AGENT: string = MANIFEST.agents[0].name;
+126:export function resolveBundleEnvVar(agentName: string): string | null {
+131:export function workspaceAgentsForUi() {
+135:    backendId: agent.bundle,
+
+### src/components/common/AppShellPage.tsx
+159:  const usesWorkbench = workbenchRoute && pathname === "/chat";
+163:    if (!sidebarOpen || usesWorkbench) return;
+169:  }, [sidebarOpen, usesWorkbench]);
+174:    if (sidebarOpen && !usesWorkbench) {
+181:  }, [sidebarOpen, usesWorkbench]);
+183:  if (usesWorkbench) return <>{children}</>;
+
+### src/components/chat/SessionPanel.tsx
+31:  const activateSession = useChatStore((s) => s.activateSession);
+32:  const startNewChat = useChatStore((s) => s.startNewChat);
+45:    if (!pathname.startsWith("/chat")) router.push("/chat");
+49:    startNewChat(selectedAgent);
+54:    activateSession(selectedAgent, entry.adk_session_id);
+67:    void sessionIndexService.renameSession(entry.id, title);
+76:    void sessionIndexService.archiveSession(entry.id);
+80:      startNewChat(selectedAgent);
+
+### src/store/chatStore.ts
+39:const PERSIST_KEY = `adk-session-map-${PERSIST_MODE}`;
+40:const LEGACY_PERSIST_KEY = "adk-session-map";
+48:    const legacy = window.localStorage.getItem(LEGACY_PERSIST_KEY);
+49:    if (legacy !== null && window.localStorage.getItem(PERSIST_KEY) === null) {
+50:      window.localStorage.setItem(PERSIST_KEY, legacy);
+105:  reset: () => void;
+195:      reset: () => set(INITIAL_STATE),
+198:      name: PERSIST_KEY, // FIX-003 (F09): mode-namespaced
+
+### src/store/useAuthStore.ts
+2:import { persist } from "zustand/middleware";
+6:  user: any | null;
+15:  persist(
+63:      name: "auth-store",
+
+### src/utils/supabase/middleware.ts
+33:  // supabase.auth.getUser(). A simple mistake could make it very hard to debug
+36:  // Refresh the session but don't redirect - let layouts handle auth
+37:  await supabase.auth.getUser();
+
+### supabase/chat_sessions_setup.sql
+8:-- exist (owner, agent, ADK session id, title, timestamps, archived) — NEVER
+13:CREATE TABLE public.chat_sessions (
+15:  user_id        uuid NOT NULL REFERENCES auth.users (id) ON DELETE CASCADE,
+21:  archived       boolean NOT NULL DEFAULT false,
+22:  UNIQUE (user_id, agent_name, adk_session_id)
+28:CREATE POLICY "Users can read their own chat sessions"
+30:  FOR SELECT
+32:  USING (auth.uid() = user_id);
+34:CREATE POLICY "Users can insert their own chat sessions"
+36:  FOR INSERT
+38:  WITH CHECK (auth.uid() = user_id);
+40:CREATE POLICY "Users can update their own chat sessions"
+42:  FOR UPDATE
+44:  USING (auth.uid() = user_id);
+46:-- No DELETE policy in v1 — sessions are archived, not deleted. Retention /
+47:-- purge jobs are a later module; the archived flag + timestamps are their
+52:  ON public.chat_sessions (user_id, agent_name, archived, updated_at DESC);
+

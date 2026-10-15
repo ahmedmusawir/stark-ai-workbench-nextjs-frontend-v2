@@ -1,0 +1,29 @@
+# Records anchors — prior TESTED behavior on this same ADK service (read from disk; nothing re-run)
+# Source: agent_docs/RECON/RECON_ADK_CONTINUATION_20261004-115739.md + agent_docs/RESPONSES/response_2026-10-04_115739_adk-capability-continuation_evidence/
+
+RECON_ADK_CONTINUATION_20261004-115739.md:15:- **Limit:** This proves the tested direct-API history/list/resume case with Director-created sessions. It does not certify frontend behavior, user authorization, a Supabase implementation, or restart durability.
+RECON_ADK_CONTINUATION_20261004-115739.md:52:Agent: `greeting_agent`. Test user: `stark-apbm-probe-20261004-7c7e479f`.
+RECON_ADK_CONTINUATION_20261004-115739.md:99:For B, only `sessionId` changed to `session-b`. Both responses were arrays containing one model event. CamelCase succeeds in this tested deployment. Snake_case was not tested; no incompatibility conclusion is justified.
+RECON_ADK_CONTINUATION_20261004-115739.md:146:- Final remote state observed: `session-a` and `session-b` remain under the authorized namespace, each with four events. No new sessions or deletions; one resumed user/model exchange added per existing session. Leave these identifiable for Tony's disposition.
+
+## Timeline (event timestamps converted to Asia/Dhaka; ledger times as recorded)
+get-a-before.json: user            event ts 2026-10-04T11:37:26+06:00  invocationId=e-3cbc1653… id=bbc51928…
+get-a-before.json: greeting_agent  event ts 2026-10-04T11:37:26+06:00  invocationId=e-3cbc1653… id=2e833e12…
+get-b-before.json: user            event ts 2026-10-04T11:38:51+06:00  invocationId=e-4464bb3b… id=13264de3…
+get-b-before.json: greeting_agent  event ts 2026-10-04T11:38:52+06:00  invocationId=e-4464bb3b… id=753d9bd5…
+ledger #1: GET get-a-before  started 11:58:16  status=None  elapsed=0.004s  <urlopen error [Errno -3] Temporary failure in name resolution>
+ledger #2: GET get-a-before  started 11:58:28  status=None  elapsed=25.201s  The read operation timed out
+ledger #3: GET get-b-before  started 12:00:01  status=200  elapsed=2.594s  
+ledger #4: GET get-a-before  started 12:00:35  status=200  elapsed=0.571s  
+ledger #5: GET list          started 12:00:47  status=200  elapsed=0.566s  
+ledger #6: POST resume-a      started 12:00:56  status=200  elapsed=1.773s  
+ledger #7: POST resume-b      started 12:01:12  status=200  elapsed=1.475s  
+ledger #8: GET get-a-after   started 12:01:24  status=200  elapsed=0.524s  
+ledger #9: GET get-b-after   started 12:01:33  status=200  elapsed=0.575s  
+list.json (sanitized at capture): {"shape": "array", "top_level_keys": [], "row_count": 2, "matching_sessions": [{"id": "session-a"}, {"id": "session-b"}], "checks": {"both_discoverable": true}}
+
+## Reading
+- TESTED (10-04): create (Director carry-in), list (ids), get (events with id/invocationId/timestamp), resume via POST /run with camelCase body; two sessions separated.
+- NOT captured on 10-04: which fields a LIST row carries (state? events? lastUpdateTime?) — list.json kept ids only.
+- NOT tested on 10-04: snake_case /run body (the app's wire format, adk.ts:165-168); 404 on unknown session; duplicate create; restart durability.
+- Timing hint only (INFERENCE, not proof): sessions created 11:37-11:38; first GET at 11:58 timed out at 25 s (cold-start-like); GETs from 12:00 returned both sessions with original events. Today's first GET (/openapi.json) also took ~26 s, the next 0.47 s.

@@ -1,0 +1,19 @@
+# Baseline identity — read-only Git (captured 2026-10-12T17:44:59+0600)
+repo_root: /home/moose/nextjs/10XLAB/stark-ai-workbench-nextjs-frontend-v2
+origin (sanitized): https://github.com/ahmedmusawir/stark-ai-workbench-nextjs-frontend-v2.git
+branch: frontend-apbm-0001
+HEAD: f0fbf2282737ea3a63fc78d553cd31fc570821d5
+main: f0fbf2282737ea3a63fc78d553cd31fc570821d5
+origin/main: f0fbf2282737ea3a63fc78d553cd31fc570821d5
+upstream_of_branch: none
+HEAD_subject: Merge APBM-000: certified workspace and engineering closeout
+merge_parents: 20ef380bdd6eed5e111d953d6404992add7a88a6 50fd9dfb682ceecf6198c6e1e685f05226fb5480
+index_staged_entries: 0
+tracked_modified_entries: 0
+stash_entries: 0
+worktrees:
+/home/moose/nextjs/10XLAB/stark-ai-workbench-nextjs-frontend-v2  f0fbf22 [frontend-apbm-0001]
+--- status --porcelain=v1 -uall (at capture) ---
+?? agent_docs/RECON/RECON_stark-agent-workspace_APBM001-prep_2026-10-12_evidence/baseline-git.txt
+?? agent_docs/RESPONSES/response_2026-10-12_173300_session-start.md
+?? session_2026-10-12.md

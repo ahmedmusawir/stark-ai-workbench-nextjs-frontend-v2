@@ -1,66 +1,49 @@
 /**
- * POST /api/agent/history — native ADK connector (BIM-002; upstream is now
- * the ADK bundle's api_server directly — the Python wrapper is retired).
+ * POST /api/agent/history — native ADK connector (BIM-002, APBM001).
  *
- * External contract FROZEN and identical to A1: accepts GetHistoryRequest →
- * `{ history: Message[] }` (the service unwraps `.history`, unchanged);
- * 500 config fault, 502 upstream fault; Authorization passed through (R2).
- * Internals GET the native session and normalize its events per A2.3 §4.
+ * Accepts `{ agent_name, session_id, backend_key?, user_id? }` →
+ * `{ status: 'ready' | 'empty', history: Message[] }`.
+ * APBM001 (R001-05) supersedes the frozen A1 error shape: failures are
+ * structured `{ error: { code, message } }` — session 404 `session-missing`,
+ * upstream auth `upstream-access`, timeout/5xx/malformed unavailable — so no
+ * caller can mistake a failure for an empty conversation. The verified server
+ * user selects the ADK namespace; browser Authorization is not forwarded.
  *
- * @see agent_docs/CURRENT_APP/BIM002/DATA_CONTRACT_AMENDMENT_A2.md
+ * @see agent_docs/ACTIONS/stark_agent_workspace_apbm_001/DATA_CONTRACT.md
  */
 
 import { NextResponse } from 'next/server';
 
-import { resolveBundleEnvVar } from '@/config/manifest';
-import type { GetHistoryRequest } from '@/types';
+import type { HistoryResponseWire } from '@/types';
 
-import { normalizeHistory, sessionUrl } from '../_lib/adk';
+import { getSessionHistory } from '../_lib/adk';
+import {
+  assertSameOrigin,
+  authorizeAgentRequest,
+  errorResponse,
+  readJsonObject,
+  requireSessionId,
+} from '../_lib/context';
 
-const HISTORY_TIMEOUT_MS = 30_000;
+export const maxDuration = 65;
 
 export async function POST(req: Request) {
-  const auth = req.headers.get('authorization'); // reserved auth slot (R2)
-
   try {
-    const body = (await req.json()) as GetHistoryRequest;
-
-    // BIM-003 (M3): the manifest decides which bundle serves this agent.
-    const urlEnv = resolveBundleEnvVar(body.agent_name);
-    if (!urlEnv) {
-      return NextResponse.json(
-        { error: `Unknown agent: ${body.agent_name}` },
-        { status: 400 },
-      );
-    }
-    const baseUrl = process.env[urlEnv];
-    if (!baseUrl) {
-      return NextResponse.json(
-        { error: `${urlEnv} is not configured` },
-        { status: 500 },
-      );
-    }
-
-    const upstream = await fetch(
-      sessionUrl(baseUrl, body.agent_name, body.user_id, body.session_id),
-      {
-        method: 'GET',
-        headers: { ...(auth ? { Authorization: auth } : {}) },
-        signal: AbortSignal.timeout(HISTORY_TIMEOUT_MS),
-      },
-    );
-    if (!upstream.ok) {
-      return NextResponse.json(
-        { error: `History fetch failed: ${upstream.status}` },
-        { status: 502 },
-      );
-    }
-    const session: unknown = await upstream.json();
-    return NextResponse.json(
-      { history: normalizeHistory(session) },
-      { status: 200 },
-    );
+    assertSameOrigin(req);
+    const body = await readJsonObject(req);
+    const sessionId = requireSessionId(body.session_id, { uuid: false });
+    const { user, target } = await authorizeAgentRequest({
+      agent: body.agent_name,
+      userId: body.user_id,
+      backendKey: body.backend_key,
+    });
+    const history = await getSessionHistory(target, user.id, sessionId, req.signal);
+    const result: HistoryResponseWire = {
+      status: history.length ? 'ready' : 'empty',
+      history,
+    };
+    return NextResponse.json(result, { status: 200 });
   } catch (e) {
-    return NextResponse.json({ error: String(e) }, { status: 502 });
+    return errorResponse(e);
   }
 }

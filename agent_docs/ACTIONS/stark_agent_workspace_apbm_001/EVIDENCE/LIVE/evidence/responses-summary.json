@@ -1,0 +1,907 @@
+[
+  {
+    "number": 1,
+    "step": 1,
+    "action": "old-list",
+    "method": "GET",
+    "path": "/apps/greeting_agent/users/stark-apbm-probe-20261004-7c7e479f/sessions",
+    "status": 200,
+    "elapsed_seconds": 23.908,
+    "error": null,
+    "summary": {
+      "row_count": 2,
+      "rows": [
+        {
+          "keys": [
+            "appName",
+            "events",
+            "id",
+            "lastUpdateTime",
+            "state",
+            "userId"
+          ],
+          "id": "session-a",
+          "appName": "greeting_agent",
+          "userId": "stark-apbm-probe-20261004-7c7e479f",
+          "state": {},
+          "lastUpdateTime": 1791092086.99712,
+          "lastUpdateTime_local": "2026-10-04T11:34:46.997+06:00",
+          "event_count": 0,
+          "events": []
+        },
+        {
+          "keys": [
+            "appName",
+            "events",
+            "id",
+            "lastUpdateTime",
+            "state",
+            "userId"
+          ],
+          "id": "session-b",
+          "appName": "greeting_agent",
+          "userId": "stark-apbm-probe-20261004-7c7e479f",
+          "state": {},
+          "lastUpdateTime": 1791092161.803371,
+          "lastUpdateTime_local": "2026-10-04T11:36:01.803+06:00",
+          "event_count": 0,
+          "events": []
+        }
+      ]
+    }
+  },
+  {
+    "number": 2,
+    "step": 1,
+    "action": "old-get-session-a",
+    "method": "GET",
+    "path": "/apps/greeting_agent/users/stark-apbm-probe-20261004-7c7e479f/sessions/session-a",
+    "status": 200,
+    "elapsed_seconds": 0.637,
+    "error": null,
+    "summary": {
+      "keys": [
+        "appName",
+        "events",
+        "id",
+        "lastUpdateTime",
+        "state",
+        "userId"
+      ],
+      "id": "session-a",
+      "appName": "greeting_agent",
+      "userId": "stark-apbm-probe-20261004-7c7e479f",
+      "state": {},
+      "lastUpdateTime": 1791092086.99712,
+      "lastUpdateTime_local": "2026-10-04T11:34:46.997+06:00",
+      "event_count": 4,
+      "events": [
+        {
+          "keys": [
+            "actions",
+            "author",
+            "content",
+            "id",
+            "invocationId",
+            "longRunningToolIds",
+            "timestamp"
+          ],
+          "id": "bbc51928-2578-4bb4-ae6b-ebca942075b0",
+          "author": "user",
+          "role": "user",
+          "timestamp": 1791092246.599098,
+          "timestamp_local": "2026-10-04T11:37:26.599+06:00",
+          "invocationId": "e-3cbc1653-9054-4554-9a13-1c68208183e5",
+          "texts": [
+            "Remember this test marker for this conversation: amber-lantern-7c7e. Reply only with ACK followed by the marker. No tools or context lookup are needed."
+          ],
+          "function_calls": [],
+          "actions_stateDelta": {},
+          "customMetadata": null,
+          "errorCode": null
+        },
+        {
+          "keys": [
+            "actions",
+            "author",
+            "content",
+            "id",
+            "invocationId",
+            "longRunningToolIds",
+            "timestamp"
+          ],
+          "id": "2e833e12-c623-498a-99f8-01b016b729c0",
+          "author": "greeting_agent",
+          "role": "model",
+          "timestamp": 1791092246.856506,
+          "timestamp_local": "2026-10-04T11:37:26.856+06:00",
+          "invocationId": "e-3cbc1653-9054-4554-9a13-1c68208183e5",
+          "texts": [
+            "ACK amber-lantern-7c7e"
+          ],
+          "function_calls": [],
+          "actions_stateDelta": {},
+          "customMetadata": null,
+          "errorCode": null
+        },
+        {
+          "keys": [
+            "actions",
+            "author",
+            "content",
+            "id",
+            "invocationId",
+            "longRunningToolIds",
+            "timestamp"
+          ],
+          "id": "195afd32-1b3b-41f8-be1c-3ef9e167c296",
+          "author": "user",
+          "role": "user",
+          "timestamp": 1791093657.037685,
+          "timestamp_local": "2026-10-04T12:00:57.037+06:00",
+          "invocationId": "e-f05257e4-b92a-45f2-a902-6f1cc9e691c4",
+          "texts": [
+            "What test marker did I give you earlier in this conversation? Reply only with the marker. No tools or context lookup are needed."
+          ],
+          "function_calls": [],
+          "actions_stateDelta": {},
+          "customMetadata": null,
+          "errorCode": null
+        },
+        {
+          "keys": [
+            "actions",
+            "author",
+            "content",
+            "id",
+            "invocationId",
+            "longRunningToolIds",
+            "timestamp"
+          ],
+          "id": "72daecf2-b7de-438f-a1e8-55b1f6d11449",
+          "author": "greeting_agent",
+          "role": "model",
+          "timestamp": 1791093657.30992,
+          "timestamp_local": "2026-10-04T12:00:57.309+06:00",
+          "invocationId": "e-f05257e4-b92a-45f2-a902-6f1cc9e691c4",
+          "texts": [
+            "amber-lantern-7c7e"
+          ],
+          "function_calls": [],
+          "actions_stateDelta": {},
+          "customMetadata": null,
+          "errorCode": null
+        }
+      ]
+    }
+  },
+  {
+    "number": 3,
+    "step": 1,
+    "action": "old-get-session-b",
+    "method": "GET",
+    "path": "/apps/greeting_agent/users/stark-apbm-probe-20261004-7c7e479f/sessions/session-b",
+    "status": 200,
+    "elapsed_seconds": 0.522,
+    "error": null,
+    "summary": {
+      "keys": [
+        "appName",
+        "events",
+        "id",
+        "lastUpdateTime",
+        "state",
+        "userId"
+      ],
+      "id": "session-b",
+      "appName": "greeting_agent",
+      "userId": "stark-apbm-probe-20261004-7c7e479f",
+      "state": {},
+      "lastUpdateTime": 1791092161.803371,
+      "lastUpdateTime_local": "2026-10-04T11:36:01.803+06:00",
+      "event_count": 4,
+      "events": [
+        {
+          "keys": [
+            "actions",
+            "author",
+            "content",
+            "id",
+            "invocationId",
+            "longRunningToolIds",
+            "timestamp"
+          ],
+          "id": "13264de3-f4a8-456c-bc76-ee8eea627b51",
+          "author": "user",
+          "role": "user",
+          "timestamp": 1791092331.987793,
+          "timestamp_local": "2026-10-04T11:38:51.987+06:00",
+          "invocationId": "e-4464bb3b-a86c-47ec-970c-029dd4a15138",
+          "texts": [
+            "Remember this test marker for this conversation: blue-orbit-479f. Reply only with ACK followed by the marker. No tools or context lookup are needed."
+          ],
+          "function_calls": [],
+          "actions_stateDelta": {},
+          "customMetadata": null,
+          "errorCode": null
+        },
+        {
+          "keys": [
+            "actions",
+            "author",
+            "content",
+            "id",
+            "invocationId",
+            "longRunningToolIds",
+            "timestamp"
+          ],
+          "id": "753d9bd5-42e3-4933-9da9-503a4c6c2090",
+          "author": "greeting_agent",
+          "role": "model",
+          "timestamp": 1791092332.201325,
+          "timestamp_local": "2026-10-04T11:38:52.201+06:00",
+          "invocationId": "e-4464bb3b-a86c-47ec-970c-029dd4a15138",
+          "texts": [
+            "ACK blue-orbit-479f"
+          ],
+          "function_calls": [],
+          "actions_stateDelta": {},
+          "customMetadata": null,
+          "errorCode": null
+        },
+        {
+          "keys": [
+            "actions",
+            "author",
+            "content",
+            "id",
+            "invocationId",
+            "longRunningToolIds",
+            "timestamp"
+          ],
+          "id": "7fa190f8-5ad9-4f8a-b50b-60175b61a6bc",
+          "author": "user",
+          "role": "user",
+          "timestamp": 1791093672.905556,
+          "timestamp_local": "2026-10-04T12:01:12.905+06:00",
+          "invocationId": "e-69356225-1f3e-4514-8b5c-0bf7c8f0513a",
+          "texts": [
+            "What test marker did I give you earlier in this conversation? Reply only with the marker. No tools or context lookup are needed."
+          ],
+          "function_calls": [],
+          "actions_stateDelta": {},
+          "customMetadata": null,
+          "errorCode": null
+        },
+        {
+          "keys": [
+            "actions",
+            "author",
+            "content",
+            "id",
+            "invocationId",
+            "longRunningToolIds",
+            "timestamp"
+          ],
+          "id": "207715aa-0270-4293-8d6d-5fe50af31410",
+          "author": "greeting_agent",
+          "role": "model",
+          "timestamp": 1791093673.109811,
+          "timestamp_local": "2026-10-04T12:01:13.109+06:00",
+          "invocationId": "e-69356225-1f3e-4514-8b5c-0bf7c8f0513a",
+          "texts": [
+            "blue-orbit-479f"
+          ],
+          "function_calls": [],
+          "actions_stateDelta": {},
+          "customMetadata": null,
+          "errorCode": null
+        }
+      ]
+    }
+  },
+  {
+    "number": 4,
+    "step": 2,
+    "action": "new-list-empty",
+    "method": "GET",
+    "path": "/apps/greeting_agent/users/stark-apbm001-lt-20261014-5b317222/sessions",
+    "status": 200,
+    "elapsed_seconds": 0.498,
+    "error": null,
+    "summary": {
+      "row_count": 0,
+      "rows": []
+    }
+  },
+  {
+    "number": 5,
+    "step": 3,
+    "action": "create-a",
+    "method": "POST",
+    "path": "/apps/greeting_agent/users/stark-apbm001-lt-20261014-5b317222/sessions/bcfb8bb9-8da3-4176-aff5-db6727303ad0",
+    "status": 200,
+    "elapsed_seconds": 0.66,
+    "error": null,
+    "summary": {
+      "keys": [
+        "appName",
+        "events",
+        "id",
+        "lastUpdateTime",
+        "state",
+        "userId"
+      ],
+      "id": "bcfb8bb9-8da3-4176-aff5-db6727303ad0",
+      "appName": "greeting_agent",
+      "userId": "stark-apbm001-lt-20261014-5b317222",
+      "state": {
+        "title": "APBM001 LT conversation A"
+      },
+      "lastUpdateTime": 1791961411.947805,
+      "lastUpdateTime_local": "2026-10-14T13:03:31.947+06:00",
+      "event_count": 0,
+      "events": []
+    }
+  },
+  {
+    "number": 6,
+    "step": 3,
+    "action": "create-b",
+    "method": "POST",
+    "path": "/apps/greeting_agent/users/stark-apbm001-lt-20261014-5b317222/sessions/ff40bf3a-cf0d-45fa-8298-df618135878a",
+    "status": 200,
+    "elapsed_seconds": 0.606,
+    "error": null,
+    "summary": {
+      "keys": [
+        "appName",
+        "events",
+        "id",
+        "lastUpdateTime",
+        "state",
+        "userId"
+      ],
+      "id": "ff40bf3a-cf0d-45fa-8298-df618135878a",
+      "appName": "greeting_agent",
+      "userId": "stark-apbm001-lt-20261014-5b317222",
+      "state": {
+        "title": "APBM001 LT conversation B"
+      },
+      "lastUpdateTime": 1791961412.588473,
+      "lastUpdateTime_local": "2026-10-14T13:03:32.588+06:00",
+      "event_count": 0,
+      "events": []
+    }
+  },
+  {
+    "number": 7,
+    "step": 4,
+    "action": "run-a-marker",
+    "method": "POST",
+    "path": "/run",
+    "status": 200,
+    "elapsed_seconds": 2.032,
+    "error": null,
+    "summary": {
+      "event_count": 1,
+      "events": [
+        {
+          "keys": [
+            "actions",
+            "author",
+            "content",
+            "finishReason",
+            "id",
+            "invocationId",
+            "timestamp",
+            "usageMetadata"
+          ],
+          "id": "5bbfb305-ef51-4d8f-9ab5-90a9a1aff112",
+          "author": "greeting_agent",
+          "role": "model",
+          "timestamp": 1791961413.709265,
+          "timestamp_local": "2026-10-14T13:03:33.709+06:00",
+          "invocationId": "e-a1fc6fd8-8466-4747-87ac-1ee93efd5012",
+          "texts": [
+            "ACK cobalt-heron-5b31"
+          ],
+          "function_calls": [],
+          "actions_stateDelta": {},
+          "customMetadata": null,
+          "errorCode": null
+        }
+      ]
+    }
+  },
+  {
+    "number": 8,
+    "step": 4,
+    "action": "run-b-marker",
+    "method": "POST",
+    "path": "/run",
+    "status": 200,
+    "elapsed_seconds": 1.88,
+    "error": null,
+    "summary": {
+      "event_count": 1,
+      "events": [
+        {
+          "keys": [
+            "actions",
+            "author",
+            "content",
+            "finishReason",
+            "id",
+            "invocationId",
+            "timestamp",
+            "usageMetadata"
+          ],
+          "id": "4b87f496-e594-4905-8e9b-34d3c562c4db",
+          "author": "greeting_agent",
+          "role": "model",
+          "timestamp": 1791961415.6273,
+          "timestamp_local": "2026-10-14T13:03:35.627+06:00",
+          "invocationId": "e-7917b64e-b8aa-45b0-a2c2-c2d5f0010bf7",
+          "texts": [
+            "ACK maple-quartz-7222"
+          ],
+          "function_calls": [],
+          "actions_stateDelta": {},
+          "customMetadata": null,
+          "errorCode": null
+        }
+      ]
+    }
+  },
+  {
+    "number": 9,
+    "step": 5,
+    "action": "list-after-markers",
+    "method": "GET",
+    "path": "/apps/greeting_agent/users/stark-apbm001-lt-20261014-5b317222/sessions",
+    "status": 200,
+    "elapsed_seconds": 0.518,
+    "error": null,
+    "summary": {
+      "row_count": 2,
+      "rows": [
+        {
+          "keys": [
+            "appName",
+            "events",
+            "id",
+            "lastUpdateTime",
+            "state",
+            "userId"
+          ],
+          "id": "bcfb8bb9-8da3-4176-aff5-db6727303ad0",
+          "appName": "greeting_agent",
+          "userId": "stark-apbm001-lt-20261014-5b317222",
+          "state": {
+            "title": "APBM001 LT conversation A"
+          },
+          "lastUpdateTime": 1791961411.947805,
+          "lastUpdateTime_local": "2026-10-14T13:03:31.947+06:00",
+          "event_count": 0,
+          "events": []
+        },
+        {
+          "keys": [
+            "appName",
+            "events",
+            "id",
+            "lastUpdateTime",
+            "state",
+            "userId"
+          ],
+          "id": "ff40bf3a-cf0d-45fa-8298-df618135878a",
+          "appName": "greeting_agent",
+          "userId": "stark-apbm001-lt-20261014-5b317222",
+          "state": {
+            "title": "APBM001 LT conversation B"
+          },
+          "lastUpdateTime": 1791961412.588473,
+          "lastUpdateTime_local": "2026-10-14T13:03:32.588+06:00",
+          "event_count": 0,
+          "events": []
+        }
+      ]
+    }
+  },
+  {
+    "number": 10,
+    "step": 5,
+    "action": "get-a-after-marker",
+    "method": "GET",
+    "path": "/apps/greeting_agent/users/stark-apbm001-lt-20261014-5b317222/sessions/bcfb8bb9-8da3-4176-aff5-db6727303ad0",
+    "status": 200,
+    "elapsed_seconds": 0.491,
+    "error": null,
+    "summary": {
+      "keys": [
+        "appName",
+        "events",
+        "id",
+        "lastUpdateTime",
+        "state",
+        "userId"
+      ],
+      "id": "bcfb8bb9-8da3-4176-aff5-db6727303ad0",
+      "appName": "greeting_agent",
+      "userId": "stark-apbm001-lt-20261014-5b317222",
+      "state": {
+        "title": "APBM001 LT conversation A"
+      },
+      "lastUpdateTime": 1791961411.947805,
+      "lastUpdateTime_local": "2026-10-14T13:03:31.947+06:00",
+      "event_count": 2,
+      "events": [
+        {
+          "keys": [
+            "actions",
+            "author",
+            "content",
+            "id",
+            "invocationId",
+            "longRunningToolIds",
+            "timestamp"
+          ],
+          "id": "48b0eb0a-11d3-4d5b-80a6-69f34aec59c4",
+          "author": "user",
+          "role": "user",
+          "timestamp": 1791961413.394365,
+          "timestamp_local": "2026-10-14T13:03:33.394+06:00",
+          "invocationId": "e-a1fc6fd8-8466-4747-87ac-1ee93efd5012",
+          "texts": [
+            "Remember this test marker for this conversation: cobalt-heron-5b31. Reply only with ACK followed by the marker. Do not use tools or take any external action."
+          ],
+          "function_calls": [],
+          "actions_stateDelta": {},
+          "customMetadata": null,
+          "errorCode": null
+        },
+        {
+          "keys": [
+            "actions",
+            "author",
+            "content",
+            "id",
+            "invocationId",
+            "longRunningToolIds",
+            "timestamp"
+          ],
+          "id": "5bbfb305-ef51-4d8f-9ab5-90a9a1aff112",
+          "author": "greeting_agent",
+          "role": "model",
+          "timestamp": 1791961413.709265,
+          "timestamp_local": "2026-10-14T13:03:33.709+06:00",
+          "invocationId": "e-a1fc6fd8-8466-4747-87ac-1ee93efd5012",
+          "texts": [
+            "ACK cobalt-heron-5b31"
+          ],
+          "function_calls": [],
+          "actions_stateDelta": {},
+          "customMetadata": null,
+          "errorCode": null
+        }
+      ]
+    }
+  },
+  {
+    "number": 11,
+    "step": 5,
+    "action": "get-b-after-marker",
+    "method": "GET",
+    "path": "/apps/greeting_agent/users/stark-apbm001-lt-20261014-5b317222/sessions/ff40bf3a-cf0d-45fa-8298-df618135878a",
+    "status": 200,
+    "elapsed_seconds": 0.491,
+    "error": null,
+    "summary": {
+      "keys": [
+        "appName",
+        "events",
+        "id",
+        "lastUpdateTime",
+        "state",
+        "userId"
+      ],
+      "id": "ff40bf3a-cf0d-45fa-8298-df618135878a",
+      "appName": "greeting_agent",
+      "userId": "stark-apbm001-lt-20261014-5b317222",
+      "state": {
+        "title": "APBM001 LT conversation B"
+      },
+      "lastUpdateTime": 1791961412.588473,
+      "lastUpdateTime_local": "2026-10-14T13:03:32.588+06:00",
+      "event_count": 2,
+      "events": [
+        {
+          "keys": [
+            "actions",
+            "author",
+            "content",
+            "id",
+            "invocationId",
+            "longRunningToolIds",
+            "timestamp"
+          ],
+          "id": "fcd35280-c64a-4b1d-8469-427e4474e669",
+          "author": "user",
+          "role": "user",
+          "timestamp": 1791961415.388122,
+          "timestamp_local": "2026-10-14T13:03:35.388+06:00",
+          "invocationId": "e-7917b64e-b8aa-45b0-a2c2-c2d5f0010bf7",
+          "texts": [
+            "Remember this test marker for this conversation: maple-quartz-7222. Reply only with ACK followed by the marker. Do not use tools or take any external action."
+          ],
+          "function_calls": [],
+          "actions_stateDelta": {},
+          "customMetadata": null,
+          "errorCode": null
+        },
+        {
+          "keys": [
+            "actions",
+            "author",
+            "content",
+            "id",
+            "invocationId",
+            "longRunningToolIds",
+            "timestamp"
+          ],
+          "id": "4b87f496-e594-4905-8e9b-34d3c562c4db",
+          "author": "greeting_agent",
+          "role": "model",
+          "timestamp": 1791961415.6273,
+          "timestamp_local": "2026-10-14T13:03:35.627+06:00",
+          "invocationId": "e-7917b64e-b8aa-45b0-a2c2-c2d5f0010bf7",
+          "texts": [
+            "ACK maple-quartz-7222"
+          ],
+          "function_calls": [],
+          "actions_stateDelta": {},
+          "customMetadata": null,
+          "errorCode": null
+        }
+      ]
+    }
+  },
+  {
+    "number": 12,
+    "step": 6,
+    "action": "run-a-continue",
+    "method": "POST",
+    "path": "/run",
+    "status": 200,
+    "elapsed_seconds": 2.075,
+    "error": null,
+    "summary": {
+      "event_count": 1,
+      "events": [
+        {
+          "keys": [
+            "actions",
+            "author",
+            "content",
+            "finishReason",
+            "id",
+            "invocationId",
+            "timestamp",
+            "usageMetadata"
+          ],
+          "id": "64d28174-3d7d-491b-aacd-e8d0e32923cd",
+          "author": "greeting_agent",
+          "role": "model",
+          "timestamp": 1791961419.00209,
+          "timestamp_local": "2026-10-14T13:03:39.002+06:00",
+          "invocationId": "e-1191d53e-4967-4d31-88ef-868681082257",
+          "texts": [
+            "cobalt-heron-5b31"
+          ],
+          "function_calls": [],
+          "actions_stateDelta": {},
+          "customMetadata": null,
+          "errorCode": null
+        }
+      ]
+    }
+  },
+  {
+    "number": 13,
+    "step": 7,
+    "action": "list-after-continue",
+    "method": "GET",
+    "path": "/apps/greeting_agent/users/stark-apbm001-lt-20261014-5b317222/sessions",
+    "status": 200,
+    "elapsed_seconds": 0.493,
+    "error": null,
+    "summary": {
+      "row_count": 2,
+      "rows": [
+        {
+          "keys": [
+            "appName",
+            "events",
+            "id",
+            "lastUpdateTime",
+            "state",
+            "userId"
+          ],
+          "id": "bcfb8bb9-8da3-4176-aff5-db6727303ad0",
+          "appName": "greeting_agent",
+          "userId": "stark-apbm001-lt-20261014-5b317222",
+          "state": {
+            "title": "APBM001 LT conversation A"
+          },
+          "lastUpdateTime": 1791961411.947805,
+          "lastUpdateTime_local": "2026-10-14T13:03:31.947+06:00",
+          "event_count": 0,
+          "events": []
+        },
+        {
+          "keys": [
+            "appName",
+            "events",
+            "id",
+            "lastUpdateTime",
+            "state",
+            "userId"
+          ],
+          "id": "ff40bf3a-cf0d-45fa-8298-df618135878a",
+          "appName": "greeting_agent",
+          "userId": "stark-apbm001-lt-20261014-5b317222",
+          "state": {
+            "title": "APBM001 LT conversation B"
+          },
+          "lastUpdateTime": 1791961412.588473,
+          "lastUpdateTime_local": "2026-10-14T13:03:32.588+06:00",
+          "event_count": 0,
+          "events": []
+        }
+      ]
+    }
+  },
+  {
+    "number": 14,
+    "step": 7,
+    "action": "get-a-after-continue",
+    "method": "GET",
+    "path": "/apps/greeting_agent/users/stark-apbm001-lt-20261014-5b317222/sessions/bcfb8bb9-8da3-4176-aff5-db6727303ad0",
+    "status": 200,
+    "elapsed_seconds": 0.533,
+    "error": null,
+    "summary": {
+      "keys": [
+        "appName",
+        "events",
+        "id",
+        "lastUpdateTime",
+        "state",
+        "userId"
+      ],
+      "id": "bcfb8bb9-8da3-4176-aff5-db6727303ad0",
+      "appName": "greeting_agent",
+      "userId": "stark-apbm001-lt-20261014-5b317222",
+      "state": {
+        "title": "APBM001 LT conversation A"
+      },
+      "lastUpdateTime": 1791961411.947805,
+      "lastUpdateTime_local": "2026-10-14T13:03:31.947+06:00",
+      "event_count": 4,
+      "events": [
+        {
+          "keys": [
+            "actions",
+            "author",
+            "content",
+            "id",
+            "invocationId",
+            "longRunningToolIds",
+            "timestamp"
+          ],
+          "id": "48b0eb0a-11d3-4d5b-80a6-69f34aec59c4",
+          "author": "user",
+          "role": "user",
+          "timestamp": 1791961413.394365,
+          "timestamp_local": "2026-10-14T13:03:33.394+06:00",
+          "invocationId": "e-a1fc6fd8-8466-4747-87ac-1ee93efd5012",
+          "texts": [
+            "Remember this test marker for this conversation: cobalt-heron-5b31. Reply only with ACK followed by the marker. Do not use tools or take any external action."
+          ],
+          "function_calls": [],
+          "actions_stateDelta": {},
+          "customMetadata": null,
+          "errorCode": null
+        },
+        {
+          "keys": [
+            "actions",
+            "author",
+            "content",
+            "id",
+            "invocationId",
+            "longRunningToolIds",
+            "timestamp"
+          ],
+          "id": "5bbfb305-ef51-4d8f-9ab5-90a9a1aff112",
+          "author": "greeting_agent",
+          "role": "model",
+          "timestamp": 1791961413.709265,
+          "timestamp_local": "2026-10-14T13:03:33.709+06:00",
+          "invocationId": "e-a1fc6fd8-8466-4747-87ac-1ee93efd5012",
+          "texts": [
+            "ACK cobalt-heron-5b31"
+          ],
+          "function_calls": [],
+          "actions_stateDelta": {},
+          "customMetadata": null,
+          "errorCode": null
+        },
+        {
+          "keys": [
+            "actions",
+            "author",
+            "content",
+            "id",
+            "invocationId",
+            "longRunningToolIds",
+            "timestamp"
+          ],
+          "id": "e4f27564-ca80-4f8a-a02f-130bc05be111",
+          "author": "user",
+          "role": "user",
+          "timestamp": 1791961418.784575,
+          "timestamp_local": "2026-10-14T13:03:38.784+06:00",
+          "invocationId": "e-1191d53e-4967-4d31-88ef-868681082257",
+          "texts": [
+            "What test marker did I give you earlier in this conversation? Reply only with the marker. Do not use tools or take any external action."
+          ],
+          "function_calls": [],
+          "actions_stateDelta": {},
+          "customMetadata": null,
+          "errorCode": null
+        },
+        {
+          "keys": [
+            "actions",
+            "author",
+            "content",
+            "id",
+            "invocationId",
+            "longRunningToolIds",
+            "timestamp"
+          ],
+          "id": "64d28174-3d7d-491b-aacd-e8d0e32923cd",
+          "author": "greeting_agent",
+          "role": "model",
+          "timestamp": 1791961419.00209,
+          "timestamp_local": "2026-10-14T13:03:39.002+06:00",
+          "invocationId": "e-1191d53e-4967-4d31-88ef-868681082257",
+          "texts": [
+            "cobalt-heron-5b31"
+          ],
+          "function_calls": [],
+          "actions_stateDelta": {},
+          "customMetadata": null,
+          "errorCode": null
+        }
+      ]
+    }
+  },
+  {
+    "number": 15,
+    "step": 8,
+    "action": "get-nonexistent",
+    "method": "GET",
+    "path": "/apps/greeting_agent/users/stark-apbm001-lt-20261014-5b317222/sessions/e4478117-3739-43c6-9fa3-8f5a2867cd4b",
+    "status": 404,
+    "elapsed_seconds": 0.554,
+    "error": null,
+    "summary": {
+      "body": {
+        "detail": "Session not found"
+      }
+    }
+  }
+]

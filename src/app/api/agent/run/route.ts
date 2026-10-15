@@ -1,55 +1,55 @@
 /**
- * POST /api/agent/run — native ADK connector (BIM-002; upstream is now the
- * ADK bundle's api_server directly — the Python wrapper is retired).
+ * POST /api/agent/run — native ADK connector (BIM-002, APBM001).
  *
- * External contract FROZEN and identical to A1: accepts RunAgentRequest →
- * `{ response, session_id }`; 500 config fault, 502 upstream/parse fault;
- * optional Authorization passed through (reserved slot, R2). Internals port
- * the wrapper's session bootstrap, not-found→create→retry-once loop, and
- * reversed-event-scan response selection.
+ * Continuation only: `{ agent_name, session_id, message, backend_key?,
+ * user_id? }` → `{ status: 'sent', response, session_id, event_ids,
+ * invocation_id }`. One camelCase upstream `/run` attempt. APBM001 (R001-06)
+ * retires the null-session bootstrap and the not-found→create→retry loop:
+ * a missing session is `session-missing` (404) and is never recreated or
+ * resent. New conversations are created explicitly via /api/agent/sessions.
  *
- * @see agent_docs/CURRENT_APP/BIM002/DATA_CONTRACT_AMENDMENT_A2.md
+ * @see agent_docs/ACTIONS/stark_agent_workspace_apbm_001/DATA_CONTRACT.md
  */
 
 import { NextResponse } from 'next/server';
 
-import { resolveBundleEnvVar } from '@/config/manifest';
-import type { RunAgentRequest } from '@/types';
+import type { RunTurnResponse } from '@/types';
 
-import { ConnectorError, runAgentFlow } from '../_lib/adk';
+import { runTurn } from '../_lib/adk';
+import {
+  assertSameOrigin,
+  authorizeAgentRequest,
+  errorResponse,
+  readJsonObject,
+  requireMessage,
+  requireSessionId,
+} from '../_lib/context';
 
-// Create + run + retry share a 90s budget (A2.3 §5); maxDuration keeps a
-// future serverless host from imposing a shorter default.
-export const maxDuration = 90;
+// 90s upstream run budget plus a small margin; a host with a shorter limit
+// is a deployment incompatibility to report, not to widen silently.
+export const maxDuration = 95;
 
 export async function POST(req: Request) {
-  const auth = req.headers.get('authorization'); // reserved auth slot (R2)
-
   try {
-    const body = (await req.json()) as RunAgentRequest;
-
-    // BIM-003 (M3): the manifest decides which bundle serves this agent.
-    const urlEnv = resolveBundleEnvVar(body.agent_name);
-    if (!urlEnv) {
-      return NextResponse.json(
-        { error: `Unknown agent: ${body.agent_name}` },
-        { status: 400 },
-      );
-    }
-    const baseUrl = process.env[urlEnv];
-    if (!baseUrl) {
-      return NextResponse.json(
-        { error: `${urlEnv} is not configured` },
-        { status: 500 },
-      );
-    }
-
-    const result = await runAgentFlow({ baseUrl, auth }, body);
+    assertSameOrigin(req);
+    const body = await readJsonObject(req);
+    const sessionId = requireSessionId(body.session_id, { uuid: false });
+    const message = requireMessage(body.message);
+    const { user, target } = await authorizeAgentRequest({
+      agent: body.agent_name,
+      userId: body.user_id,
+      backendKey: body.backend_key,
+    });
+    const turn = await runTurn(target, user.id, sessionId, message, req.signal);
+    const result: RunTurnResponse = {
+      status: 'sent',
+      response: turn.reply,
+      session_id: sessionId,
+      event_ids: turn.eventIds,
+      invocation_id: turn.invocationId,
+    };
     return NextResponse.json(result, { status: 200 });
   } catch (e) {
-    if (e instanceof ConnectorError) {
-      return NextResponse.json({ error: e.message }, { status: e.status });
-    }
-    return NextResponse.json({ error: String(e) }, { status: 502 });
+    return errorResponse(e);
   }
 }
